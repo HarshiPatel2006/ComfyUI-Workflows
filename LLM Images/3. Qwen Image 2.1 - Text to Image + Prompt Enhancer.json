@@ -1,0 +1,1072 @@
+{
+ "revision": 0,
+ "last_node_id": 17,
+ "last_link_id": 14,
+ "nodes": [
+  {
+   "id": 1,
+   "type": "UNETLoader",
+   "pos": [
+    -1032,
+    218
+   ],
+   "size": [
+    496,
+    82
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      14
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.37.2",
+    "Node name for S&R": "UNETLoader"
+   },
+   "widgets_values": [
+    "qwen\\qwen_image_2.1_int8_convrot.safetensors",
+    "default"
+   ],
+   "widgets_values_named": {
+    "unet_name": "qwen\\qwen_image_2.1_int8_convrot.safetensors",
+    "weight_dtype": "default"
+   },
+   "color": "#f66744",
+   "bgcolor": "#2a2a2a"
+  },
+  {
+   "id": 2,
+   "type": "CLIPLoader",
+   "pos": [
+    -1032,
+    356
+   ],
+   "size": [
+    496,
+    106
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "CLIP",
+     "type": "CLIP",
+     "links": [
+      2,
+      3
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.37.2",
+    "Node name for S&R": "CLIPLoader"
+   },
+   "widgets_values": [
+    "qwen3vl_8b_int8_convrot.safetensors",
+    "qwen_image",
+    "default"
+   ],
+   "widgets_values_named": {
+    "clip_name": "qwen3vl_8b_int8_convrot.safetensors",
+    "type": "qwen_image",
+    "device": "default"
+   },
+   "color": "#f66744",
+   "bgcolor": "#2a2a2a"
+  },
+  {
+   "id": 3,
+   "type": "VAELoader",
+   "pos": [
+    -1032,
+    518
+   ],
+   "size": [
+    496,
+    58
+   ],
+   "flags": {},
+   "order": 2,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "VAE",
+     "type": "VAE",
+     "links": [
+      12
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.37.2",
+    "Node name for S&R": "VAELoader"
+   },
+   "widgets_values": [
+    "qwen_image_2.1_vae_bf16.safetensors"
+   ],
+   "widgets_values_named": {
+    "vae_name": "qwen_image_2.1_vae_bf16.safetensors"
+   },
+   "color": "#f66744",
+   "bgcolor": "#2a2a2a"
+  },
+  {
+   "id": 4,
+   "type": "PixaromaSizes",
+   "pos": [
+    -500,
+    218
+   ],
+   "size": [
+    240,
+    444
+   ],
+   "flags": {},
+   "order": 3,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "width",
+     "type": "INT",
+     "links": [
+      5
+     ]
+    },
+    {
+     "name": "height",
+     "type": "INT",
+     "links": [
+      6
+     ]
+    }
+   ],
+   "title": "1. Pick Orientation and Size",
+   "properties": {
+    "cnr_id": "ComfyUI-Pixaroma",
+    "ver": "7a1cf573034fe14e29c1200d884531231a003e2e",
+    "Node name for S&R": "PixaromaSizes",
+    "sizesState": "{\"version\":1,\"sizes\":[[1024,1024],[1152,864],[1248,832],[1376,768],[1920,1088],[1536,1536],[2560,1440],[2048,2048],[2400,1792],[2528,1696],[2752,1536]],\"selected\":2,\"orientation\":\"portrait\",\"snap\":32,\"accent\":null,\"collapsed\":false,\"starred\":[\"2048x2048\",\"1792x2400\",\"1696x2528\",\"1536x2752\"],\"w\":832,\"h\":1248}"
+   },
+   "widgets_values": [
+    {
+     "version": 1,
+     "sizes": [
+      [
+       1024,
+       1024
+      ],
+      [
+       1152,
+       864
+      ],
+      [
+       1248,
+       832
+      ],
+      [
+       1376,
+       768
+      ],
+      [
+       1920,
+       1088
+      ],
+      [
+       1536,
+       1536
+      ],
+      [
+       2560,
+       1440
+      ],
+      [
+       2048,
+       2048
+      ],
+      [
+       2400,
+       1792
+      ],
+      [
+       2528,
+       1696
+      ],
+      [
+       2752,
+       1536
+      ]
+     ],
+     "selected": 2,
+     "orientation": "portrait",
+     "snap": 32,
+     "accent": null,
+     "collapsed": false,
+     "starred": [
+      "2048x2048",
+      "1792x2400",
+      "1696x2528",
+      "1536x2752"
+     ],
+     "w": 832,
+     "h": 1248
+    }
+   ],
+   "widgets_values_named": {
+    "sizes_ui": {
+     "version": 1,
+     "sizes": [
+      [
+       1024,
+       1024
+      ],
+      [
+       1152,
+       864
+      ],
+      [
+       1248,
+       832
+      ],
+      [
+       1376,
+       768
+      ],
+      [
+       1920,
+       1088
+      ],
+      [
+       1536,
+       1536
+      ],
+      [
+       2560,
+       1440
+      ],
+      [
+       2048,
+       2048
+      ],
+      [
+       2400,
+       1792
+      ],
+      [
+       2528,
+       1696
+      ],
+      [
+       2752,
+       1536
+      ]
+     ],
+     "selected": 2,
+     "orientation": "portrait",
+     "snap": 32,
+     "accent": null,
+     "collapsed": false,
+     "starred": [
+      "2048x2048",
+      "1792x2400",
+      "1696x2528",
+      "1536x2752"
+     ],
+     "w": 832,
+     "h": 1248
+    }
+   },
+   "color": "#14436c",
+   "bgcolor": "#2a2a2a"
+  },
+  {
+   "id": 5,
+   "type": "PixaromaAIPrompt",
+   "pos": [
+    -224,
+    218
+   ],
+   "size": [
+    496,
+    560
+   ],
+   "flags": {},
+   "order": 11,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "clip",
+     "shape": 7,
+     "type": "CLIP",
+     "link": 3
+    },
+    {
+     "name": "image",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "name": "video",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "name": "audio",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": null
+    },
+    {
+     "name": "text",
+     "shape": 7,
+     "type": "STRING",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "text",
+     "type": "STRING",
+     "links": [
+      4
+     ]
+    }
+   ],
+   "title": "2. Write your idea",
+   "properties": {
+    "cnr_id": "ComfyUI-Pixaroma",
+    "ver": "7a1cf573034fe14e29c1200d884531231a003e2e",
+    "Node name for S&R": "PixaromaAIPrompt",
+    "aiPromptState": {
+     "idea": "close-up portrait of a cute cartoon 3D bunny with big eyes and rosy cheeks, orange hoodie with \"PIXA\" on the chest, warm window light, cozy room softly blurred behind",
+     "formula": "You are an image prompt writer for the Qwen Image 2.1 model. Turn the request below into one long English paragraph that describes the finished image as if you were looking at it. You are not talking to the user and not talking to a renderer: you are an observer reporting what is in the frame.\n\nWork through these steps in order. Each step commits one decision, and later steps never revise an earlier one.\n\n1. Read the request and split it in two. Fixed, and it must survive unchanged: every string of text the user wants shown, every named object, every count, every stated colour, every stated position, and the role each piece of text plays, so a title stays a title and a small line at the bottom stays a small line at the bottom of the design. Copy their text strings character for character, in their own script, including punctuation. Open, and you must decide it: everything they did not mention. A three-word request and a three-hundred-word request both become a description of the same size, so a short request means you are inventing most of the frame, not writing less. If the request carries an instruction about the job rather than about the picture, such as asking for sharp text or a high resolution, obey it silently where it applies and never echo it.\n\n2. Decide the medium and the style from the request itself. The medium is the kind of picture being asked for, and you name it with the request's own word for it whenever the request gives one. A request for a cartoon, anime or animated-film look is never a photograph, and a request for a poster, a logo or a sticker stays exactly that. Only when the request gives no hint of a medium at all, make it a realistic photograph.\n\n3. Write the opening sentence, around twenty words, in the shape: The image is a ⟨style⟩ ⟨medium⟩ of ⟨subject⟩, ⟨the background and its palette⟩. The medium noun is never left out. Mention the orientation of the frame only if the request states one, because the size of the picture is chosen elsewhere.\n\n4. Before writing more, decide every element that will appear and where it sits in the frame: upper-left, across the top, on the far right, in the lower third, in the centre, in front of, behind, tucked into a corner. Use eight to fourteen such positional phrases, and let them reach the corners, the edges and the centre instead of clustering in the middle. Also decide every piece of text that will be legible, in reading order.\n\n5. Walk the frame. If the frame is divided into regions, such as a poster, a page, an interface or a wide scene with several things in it, describe the background first, then the top band, then down and across the body from left to centre to right, then the bottom band. If one subject fills the frame, such as a portrait, a close-up or a single object, describe the background and how far it falls off, then the subject's pose and placement, then the head and face, then the body and each garment or surface, then what is held, then what is left at the edges. Open roughly a third of your sentences on the positional phrase itself.\n\n6. Set every piece of text the request asks for, in reading order: where it sits, what it looks like and what it says, with the string in straight double quotes, in its own script, and its weight, colour, case and relative size. When the request asks for no text, leave the subject of text out of the paragraph entirely: no sign, plaque, banner, label, screen or clothing print carries words, and nothing is described as illegible or faint lettering, because Qwen Image 2.1 turns made-up words into scrambled letters.\n\n7. Give the lighting its own sentence in the shape: The lighting is ⟨the source, its direction, its quality, and the shadows and highlights it leaves⟩.\n\n8. End on one sentence that steps back and covers the balance, the palette, the style and the mood, in the shape: The overall composition ⟨...⟩. Write exactly one such sentence and nothing after it.\n\nThroughout:\n- About twenty separate sentences, each ending with a full stop, and four to five hundred words, whatever the length of the request. Quoted words from the request go inside a sentence; they never turn the paragraph into one long sentence.\n- Present tense, third person, declarative. Never address anyone, never give orders, and never add quality boosters such as masterpiece, 8K, highly detailed or award-winning.\n- Hedge what you cannot be certain of, with \"appears to be\", \"likely\", or a pair of possibilities. Be flatly definite only about what the request fixed.\n- Name every colour with a modifier rather than bare.\n- Give each surface its material, not just its noun.\n- Enumerate, never summarise: say what each thing is, and write small counts as words.\n- People get their observable surface: build, posture, gaze, expression, hair, and each garment with its colour and material, plain or patterned but never printed with words. Give an age as a life stage or a decade, never a number of years. Skin colour and heritage come only from the request.\n- Left and right always mean the picture's left and right, so a person facing the camera has their right hand on the left side of the picture.\n- A selfie is the picture the phone takes, seen from the phone at arm's length: a close shot of the person from the waist up, looking into the lens, and the arm holding the phone reaches toward the lens and leaves the frame at the lower corner on its own side, a right arm at the lower-left corner and a left arm at the lower-right corner. The phone itself is never described. When several people share a selfie, the one on the left of the picture holds it with their right arm.\n- Name objects by their class, not by a brand, unless the request named the brand.\n- Everything holds together physically: shadows fall away from the light and neighbouring things keep a consistent scale.\n- Write the description in English whatever language the request is in. Only text shown inside the picture stays in its own script.\n\nReturn only the paragraph: no title, no preamble, no notes, no list, no aspect ratio.\n\nREQUEST:\n",
+     "model": "",
+     "clip_type": "minimax",
+     "order": "idea",
+     "sep": "newline",
+     "seed": 1,
+     "temperature": 0.3,
+     "max_length": 1024,
+     "top_k": 64,
+     "top_p": 0.95,
+     "min_p": 0.05,
+     "repetition_penalty": 1.05,
+     "presence_penalty": 0,
+     "do_sample": true,
+     "thinking": false,
+     "use_default_template": true,
+     "release_model": false,
+     "seed_mode": "fixed",
+     "idea_share": 0.22
+    }
+   },
+   "widgets_values": [],
+   "widgets_values_named": {},
+   "color": "#14436c",
+   "bgcolor": "#2a2a2a"
+  },
+  {
+   "id": 6,
+   "type": "PixaromaSeed",
+   "pos": [
+    -224,
+    834
+   ],
+   "size": [
+    496,
+    86
+   ],
+   "flags": {},
+   "order": 4,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "seed",
+     "type": "INT",
+     "links": [
+      7
+     ]
+    }
+   ],
+   "title": "3. Seed Random/Fixed?",
+   "properties": {
+    "cnr_id": "ComfyUI-Pixaroma",
+    "ver": "7a1cf573034fe14e29c1200d884531231a003e2e",
+    "Node name for S&R": "PixaromaSeed",
+    "seedState": "{\"seed\":2026,\"mode\":\"random\",\"compact\":true,\"digits\":16}"
+   },
+   "widgets_values": [
+    {
+     "seed": 2026,
+     "mode": "random",
+     "compact": true,
+     "digits": 16
+    }
+   ],
+   "widgets_values_named": {
+    "seed_ui": {
+     "seed": 2026,
+     "mode": "random",
+     "compact": true,
+     "digits": 16
+    }
+   },
+   "color": "#14436c",
+   "bgcolor": "#2a2a2a"
+  },
+  {
+   "id": 7,
+   "type": "TextEncodeQwenImage21",
+   "pos": [
+    308,
+    218
+   ],
+   "size": [
+    400,
+    206
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "clip",
+     "type": "CLIP",
+     "link": 2
+    },
+    {
+     "name": "images.image_1",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": null
+    },
+    {
+     "name": "vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": null
+    },
+    {
+     "name": "prompt",
+     "type": "STRING",
+     "widget": {
+      "name": "prompt"
+     },
+     "link": 4
+    }
+   ],
+   "outputs": [
+    {
+     "name": "positive",
+     "type": "CONDITIONING",
+     "links": [
+      8
+     ]
+    },
+    {
+     "name": "negative",
+     "type": "CONDITIONING",
+     "links": [
+      9
+     ]
+    },
+    {
+     "name": "latent",
+     "type": "LATENT",
+     "links": null
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.37.2",
+    "Node name for S&R": "TextEncodeQwenImage21"
+   },
+   "widgets_values": [
+    "",
+    "",
+    1024
+   ],
+   "widgets_values_named": {
+    "prompt": "",
+    "negative_prompt": "",
+    "resolution": 1024
+   },
+   "color": "#254f27",
+   "bgcolor": "#2a2a2a"
+  },
+  {
+   "id": 8,
+   "type": "EmptyLatentImage",
+   "pos": [
+    308,
+    480
+   ],
+   "size": [
+    400,
+    106
+   ],
+   "flags": {},
+   "order": 12,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "width",
+     "type": "INT",
+     "widget": {
+      "name": "width"
+     },
+     "link": 5
+    },
+    {
+     "name": "height",
+     "type": "INT",
+     "widget": {
+      "name": "height"
+     },
+     "link": 6
+    }
+   ],
+   "outputs": [
+    {
+     "name": "LATENT",
+     "type": "LATENT",
+     "links": [
+      10
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.37.2",
+    "Node name for S&R": "EmptyLatentImage"
+   },
+   "widgets_values": [
+    832,
+    1248,
+    1
+   ],
+   "widgets_values_named": {
+    "width": 832,
+    "height": 1248,
+    "batch_size": 1
+   },
+   "color": "#254f27",
+   "bgcolor": "#2a2a2a"
+  },
+  {
+   "id": 9,
+   "type": "KSampler",
+   "pos": [
+    308,
+    642
+   ],
+   "size": [
+    400,
+    262
+   ],
+   "flags": {},
+   "order": 14,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 1
+    },
+    {
+     "name": "positive",
+     "type": "CONDITIONING",
+     "link": 8
+    },
+    {
+     "name": "negative",
+     "type": "CONDITIONING",
+     "link": 9
+    },
+    {
+     "name": "latent_image",
+     "type": "LATENT",
+     "link": 10
+    },
+    {
+     "name": "seed",
+     "type": "INT",
+     "widget": {
+      "name": "seed"
+     },
+     "link": 7
+    }
+   ],
+   "outputs": [
+    {
+     "name": "LATENT",
+     "type": "LATENT",
+     "links": [
+      11
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.37.2",
+    "Node name for S&R": "KSampler"
+   },
+   "widgets_values": [
+    0,
+    "randomize",
+    25,
+    1,
+    "euler",
+    "simple",
+    1
+   ],
+   "widgets_values_named": {
+    "seed": 0,
+    "control_after_generate": "randomize",
+    "steps": 25,
+    "cfg": 1,
+    "sampler_name": "euler",
+    "scheduler": "simple",
+    "denoise": 1
+   },
+   "color": "#254f27",
+   "bgcolor": "#2a2a2a"
+  },
+  {
+   "id": 10,
+   "type": "VAEDecode",
+   "pos": [
+    308,
+    960
+   ],
+   "size": [
+    400,
+    46
+   ],
+   "flags": {},
+   "order": 15,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "samples",
+     "type": "LATENT",
+     "link": 11
+    },
+    {
+     "name": "vae",
+     "type": "VAE",
+     "link": 12
+    }
+   ],
+   "outputs": [
+    {
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      13
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.37.2",
+    "Node name for S&R": "VAEDecode"
+   },
+   "color": "#254f27",
+   "bgcolor": "#2a2a2a"
+  },
+  {
+   "id": 11,
+   "type": "PixaromaPreview",
+   "pos": [
+    744,
+    218
+   ],
+   "size": [
+    480,
+    560
+   ],
+   "flags": {},
+   "order": 16,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "image",
+     "type": "IMAGE",
+     "link": 13
+    }
+   ],
+   "outputs": [
+    {
+     "name": "image",
+     "type": "IMAGE",
+     "links": null
+    }
+   ],
+   "properties": {
+    "cnr_id": "ComfyUI-Pixaroma",
+    "ver": "7a1cf573034fe14e29c1200d884531231a003e2e",
+    "Node name for S&R": "PixaromaPreview"
+   },
+   "widgets_values": [
+    "img",
+    "save"
+   ],
+   "widgets_values_named": {
+    "filename_prefix": "img",
+    "save_mode": "save"
+   },
+   "color": "#4f2525",
+   "bgcolor": "#2a2a2a"
+  },
+  {
+   "id": 12,
+   "type": "PixaromaRunTimer",
+   "pos": [
+    1083,
+    110
+   ],
+   "size": [
+    141,
+    50
+   ],
+   "flags": {
+    "no_title": true
+   },
+   "order": 5,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {
+    "cnr_id": "ComfyUI-Pixaroma",
+    "ver": "7a1cf573034fe14e29c1200d884531231a003e2e",
+    "Node name for S&R": "PixaromaRunTimer"
+   },
+   "color": "#1d1d1d",
+   "bgcolor": "#2a2a2a"
+  },
+  {
+   "id": 13,
+   "type": "PixaromaLabel",
+   "pos": [
+    -1611,
+    98
+   ],
+   "size": [
+    741,
+    51
+   ],
+   "flags": {
+    "no_title": true
+   },
+   "order": 6,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {
+    "cnr_id": "ComfyUI-Pixaroma",
+    "ver": "80b307e8d1882fd933959cb0ea94a26d143557b5",
+    "Node name for S&R": "PixaromaLabel",
+    "aux_id": "pixaroma/ComfyUI-Pixaroma"
+   },
+   "widgets_values": [
+    "{\"text\":\"Qwen Image 2.1 - Text to Image + Prompt Enhancer\",\"fontSize\":31,\"fontFamily\":\"Arial\",\"fontColor\":\"#ffffff\",\"textAlign\":\"left\",\"backgroundColor\":\"#f66744\",\"padding\":10,\"borderRadius\":0,\"opacity\":1,\"fontWeight\":\"normal\",\"lineHeight\":1}"
+   ],
+   "widgets_values_named": {
+    "label_json": "{\"text\":\"Qwen Image 2.1 - Text to Image + Prompt Enhancer\",\"fontSize\":31,\"fontFamily\":\"Arial\",\"fontColor\":\"#ffffff\",\"textAlign\":\"left\",\"backgroundColor\":\"#f66744\",\"padding\":10,\"borderRadius\":0,\"opacity\":1,\"fontWeight\":\"normal\",\"lineHeight\":1}"
+   },
+   "color": "rgba(0,0,0,0)",
+   "bgcolor": "rgba(0,0,0,0)"
+  },
+  {
+   "id": 14,
+   "type": "PixaromaNote",
+   "pos": [
+    -1611,
+    218
+   ],
+   "size": [
+    552,
+    1088
+   ],
+   "flags": {},
+   "order": 7,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {
+    "cnr_id": "ComfyUI-Pixaroma",
+    "ver": "1227d9898f9d5137533df750611ca97e8c738f3d",
+    "Node name for S&R": "PixaromaNote"
+   },
+   "widgets_values": [
+    "{\"version\": 1, \"content\": \"<h1>MODELS AND NODES USED IN THIS WORKFLOW</h1><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load Diffusion Model</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/diffusion_models/qwen_image_2.1_int8_convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download qwen_image_2.1_int8_convrot.safetensors<span class=\\\"pix-note-btnsize\\\">6.76 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/diffusion_models/qwen</div><p>\\n\\n</p><p>Create the <code>qwen</code> folder if it does not exist.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/Qwen-Image-2.1/tree/main/diffusion_models\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">More versions</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Qwen/Qwen-Image-2.1\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Qwen Image 2.1 model card</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"CLIP\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load CLIP</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/text_encoders/qwen3vl_8b_int8_convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download qwen3vl_8b_int8_convrot.safetensors<span class=\\\"pix-note-btnsize\\\">8.71 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/text_encoders</div><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"VAE\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load VAE</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/vae/qwen_image_2.1_vae_bf16.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download qwen_image_2.1_vae_bf16.safetensors<span class=\\\"pix-note-btnsize\\\">644 MB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/vae</div><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"ai-brain\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Google Gemini Free Prompting Gem</h2><p>\\n\\n</p><p>Want the prompt written by a bigger model? Type your idea into the Gem and it writes the long, detailed prompt that Qwen Image 2.1 works best with. Paste it into the Text to Image workflow in this folder, which renders a finished prompt as it is. It is free with a Google account.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://gemini.google.com/gem/1E8HAcT9e3tJ1d_7ntg2chmU54p_zSGt1?usp=sharing\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Qwen Image 2.1 Prompt Writer</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v2\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;License: non-commercial use only</h2><p>\\n\\n</p><p>Qwen Image 2.1 is released under the <b>Qwen Research License</b>. It allows <b>non-commercial use only</b>, which the license defines as research or evaluation. Commercial use is not included: for that you need a separate license from Qwen.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Qwen/Qwen-Image-2.1/blob/main/LICENSE\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">READ LICENSE</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;After placing the files, restart ComfyUI or refresh model lists using the <b>R</b> shortcut.</p><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Needs <b>ComfyUI 0.37.0 or newer</b>, the first version with the Qwen Image 2.1 nodes. If <b>Text Encode Qwen Image 2.1</b> shows up red, update ComfyUI.</p><p>\\n\\n</p><h2><span data-ic=\\\"nodes-installed\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Nodes Installed from Manager</h2><p>\\n\\n</p><ul><li>Pixaroma</li></ul><p>\\n\\n</p><p><b>How to update Pixaroma nodes:</b> the help page has the steps for every kind of install, in the <b>Update the nodes</b> part.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/#update\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">How to update Pixaroma</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"pixaroma\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Resources</h2><p>\\n\\n</p><p>\\n  <a class=\\\"pix-note-discord\\\" href=\\\"https://discord.com/invite/gggpkVgBf3\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Join Discord</a>&nbsp;\\n  <a class=\\\"pix-note-yt\\\" href=\\\"https://www.youtube.com/@pixaroma\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Pixaroma YouTube Channel</a>&nbsp;\\n</p>\", \"buttonColor\": \"#f66744\", \"lineColor\": \"#f66744\", \"width\": 552, \"height\": 1088, \"backgroundColor\": \"#2a2a2a\"}",
+    ""
+   ],
+   "widgets_values_named": {
+    "note_json": "{\"version\": 1, \"content\": \"<h1>MODELS AND NODES USED IN THIS WORKFLOW</h1><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load Diffusion Model</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/diffusion_models/qwen_image_2.1_int8_convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download qwen_image_2.1_int8_convrot.safetensors<span class=\\\"pix-note-btnsize\\\">6.76 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/diffusion_models/qwen</div><p>\\n\\n</p><p>Create the <code>qwen</code> folder if it does not exist.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/Qwen-Image-2.1/tree/main/diffusion_models\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">More versions</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Qwen/Qwen-Image-2.1\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Qwen Image 2.1 model card</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"CLIP\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load CLIP</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/text_encoders/qwen3vl_8b_int8_convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download qwen3vl_8b_int8_convrot.safetensors<span class=\\\"pix-note-btnsize\\\">8.71 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/text_encoders</div><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"VAE\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load VAE</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/Qwen-Image-2.1/resolve/main/vae/qwen_image_2.1_vae_bf16.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download qwen_image_2.1_vae_bf16.safetensors<span class=\\\"pix-note-btnsize\\\">644 MB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/vae</div><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"ai-brain\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Google Gemini Free Prompting Gem</h2><p>\\n\\n</p><p>Want the prompt written by a bigger model? Type your idea into the Gem and it writes the long, detailed prompt that Qwen Image 2.1 works best with. Paste it into the Text to Image workflow in this folder, which renders a finished prompt as it is. It is free with a Google account.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://gemini.google.com/gem/1E8HAcT9e3tJ1d_7ntg2chmU54p_zSGt1?usp=sharing\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Qwen Image 2.1 Prompt Writer</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v2\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;License: non-commercial use only</h2><p>\\n\\n</p><p>Qwen Image 2.1 is released under the <b>Qwen Research License</b>. It allows <b>non-commercial use only</b>, which the license defines as research or evaluation. Commercial use is not included: for that you need a separate license from Qwen.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Qwen/Qwen-Image-2.1/blob/main/LICENSE\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">READ LICENSE</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;After placing the files, restart ComfyUI or refresh model lists using the <b>R</b> shortcut.</p><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Needs <b>ComfyUI 0.37.0 or newer</b>, the first version with the Qwen Image 2.1 nodes. If <b>Text Encode Qwen Image 2.1</b> shows up red, update ComfyUI.</p><p>\\n\\n</p><h2><span data-ic=\\\"nodes-installed\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Nodes Installed from Manager</h2><p>\\n\\n</p><ul><li>Pixaroma</li></ul><p>\\n\\n</p><p><b>How to update Pixaroma nodes:</b> the help page has the steps for every kind of install, in the <b>Update the nodes</b> part.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/#update\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">How to update Pixaroma</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"pixaroma\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Resources</h2><p>\\n\\n</p><p>\\n  <a class=\\\"pix-note-discord\\\" href=\\\"https://discord.com/invite/gggpkVgBf3\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Join Discord</a>&nbsp;\\n  <a class=\\\"pix-note-yt\\\" href=\\\"https://www.youtube.com/@pixaroma\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Pixaroma YouTube Channel</a>&nbsp;\\n</p>\", \"buttonColor\": \"#f66744\", \"lineColor\": \"#f66744\", \"width\": 552, \"height\": 1088, \"backgroundColor\": \"#2a2a2a\"}",
+    "note_dom": ""
+   },
+   "color": "#1d1d1d",
+   "bgcolor": "#2a2a2a"
+  },
+  {
+   "id": 15,
+   "type": "PixaromaNote",
+   "pos": [
+    -1611,
+    1366
+   ],
+   "size": [
+    720,
+    1413
+   ],
+   "flags": {},
+   "order": 8,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {
+    "cnr_id": "ComfyUI-Pixaroma",
+    "ver": "1227d9898f9d5137533df750611ca97e8c738f3d",
+    "Node name for S&R": "PixaromaNote"
+   },
+   "widgets_values": [
+    "{\"version\": 1, \"content\": \"<h1>WHAT EACH NODE DOES</h1><p>\\n\\n</p><p>The colour of a node tells you what kind of node it is. Nothing here needs changing except the blue ones.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Models to download</h2><p>\\n\\n</p><p>Orange. Each one needs a file from the list in the note above.</p><p>\\n\\n</p><ul><li><b>Load Diffusion Model (Qwen Image 2.1)</b> - The image model itself, 7B, from Alibaba's Qwen team.</li><li><b>Load CLIP (Qwen3-VL 8B)</b> - Reads your prompt. It is also wired into AI Prompt, which uses the same model to write the prompt, so nothing extra is downloaded or loaded.</li><li><b>Load VAE</b> - Turns the finished render into a picture. It works with four channels, red, green, blue and transparency, which is how this model can make transparent pictures.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The speed node</h2><p>\\n\\n</p><p>Teal, above the graph.</p><p>\\n\\n</p><ul><li><b>Model Attention Backend</b> - Set to <b>comfy kitchen attention</b>, a faster way to do the model's attention maths. It changes the speed, not the picture. On a graphics card that cannot use it, ComfyUI falls back to normal attention by itself.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The numbers you set</h2><p>\\n\\n</p><p>Blue, and numbered. These are the only nodes you have to touch.</p><p>\\n\\n</p><ul><li><b>1. Pick Orientation and Size</b> - The size of the picture. The starred sizes are the native 2K sizes Qwen lists for this model; the others are smaller and much faster. For video, 1920 x 1088 is Full HD (the model works in steps of 16 pixels, so 1080 becomes 1088) and 2560 x 1440 is 1440p.</li><li><b>2. Write your idea</b> - Type a short idea in the top box. The node writes the long, detailed prompt Qwen Image 2.1 likes and shows it in the box underneath, and that finished prompt is what goes to the render. Put any words you want written in the picture in quotes.</li><li><b>3. Seed Random/Fixed?</b> - Fixed repeats the same picture, Random rolls a new one each Run.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"ai-brain\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The prompt enhancer (AI Prompt Pixaroma)</h2><p>\\n\\n</p><p>The instructions it follows are saved on the node itself, so the workflow works as it is. Newer Pixaroma versions also list them as presets under the gear on the node:</p><p>\\n\\n</p><ul><li><b>Qwen Image 2.1 - prompt from an idea</b> - the one set up here.</li><li><b>Qwen Image 2.1 - transparent picture from an idea</b> - a subject on a transparent background. The note on the right has more.</li></ul><p>\\n\\n</p><p>It has a seed of its own, set to <b>Fixed</b>, so the same input always gives the same prompt, and a Run where only the picture seed changed skips the writing and reuses it. That seed is the small number at the top of AI Prompt, with an <b>F</b> beside it. It is separate from the <b>Seed</b> node, which is the picture's seed.</p><p>\\n\\n</p><p><b>Not happy with the prompt?</b></p><p>\\n\\n</p><ul><li><b>Re-roll</b>, at the bottom of AI Prompt, picks a new seed and Runs again. The new seed stays, so the new prompt stays too, and the Run makes a new picture from it. Here it keeps the first sentence and rewrites the rest: in two tests about half the words changed.</li><li><b>To go back to an earlier prompt</b>, note its seed number, then click the number and type it back.</li><li><b>Click the F</b> to switch it to <b>R</b>, Random: a new seed on every Run, so it writes again each time. Switching back to F returns to the number it had before, so note the number of a prompt you want to keep.</li><li><b>For a really different prompt, change your idea.</b> The writer follows the idea, so a new idea always gives a new prompt.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The render</h2><p>\\n\\n</p><p>Green. These run by themselves.</p><p>\\n\\n</p><ul><li><b>Text Encode Qwen Image 2.1</b> - Reads the prompt AI Prompt wrote. Its negative prompt box does nothing at CFG 1, the setting this model is made for, so leave it empty.</li><li><b>Empty Latent Image</b> - The blank canvas, at the size you picked.</li><li><b>KSampler</b> - The render: 25 steps, euler, simple, CFG 1, the settings from ComfyUI's own template.</li><li><b>VAE Decode</b> - Turns the finished render into a picture.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The result</h2><p>\\n\\n</p><p>Dark red, at the end.</p><p>\\n\\n</p><ul><li><b>Preview Image Pixaroma</b> - Shows the picture and saves it to your output folder as a PNG. PNG keeps transparency, so a transparent picture stays transparent.</li></ul><p>\\n\\n</p><p>The dark <b>Run Timer</b> above it shows how long the last Run took.</p>\", \"buttonColor\": \"#f66744\", \"lineColor\": \"#f66744\", \"width\": 720, \"height\": 1413, \"backgroundColor\": \"#2a2a2a\"}",
+    ""
+   ],
+   "widgets_values_named": {
+    "note_json": "{\"version\": 1, \"content\": \"<h1>WHAT EACH NODE DOES</h1><p>\\n\\n</p><p>The colour of a node tells you what kind of node it is. Nothing here needs changing except the blue ones.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Models to download</h2><p>\\n\\n</p><p>Orange. Each one needs a file from the list in the note above.</p><p>\\n\\n</p><ul><li><b>Load Diffusion Model (Qwen Image 2.1)</b> - The image model itself, 7B, from Alibaba's Qwen team.</li><li><b>Load CLIP (Qwen3-VL 8B)</b> - Reads your prompt. It is also wired into AI Prompt, which uses the same model to write the prompt, so nothing extra is downloaded or loaded.</li><li><b>Load VAE</b> - Turns the finished render into a picture. It works with four channels, red, green, blue and transparency, which is how this model can make transparent pictures.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The speed node</h2><p>\\n\\n</p><p>Teal, above the graph.</p><p>\\n\\n</p><ul><li><b>Model Attention Backend</b> - Set to <b>comfy kitchen attention</b>, a faster way to do the model's attention maths. It changes the speed, not the picture. On a graphics card that cannot use it, ComfyUI falls back to normal attention by itself.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The numbers you set</h2><p>\\n\\n</p><p>Blue, and numbered. These are the only nodes you have to touch.</p><p>\\n\\n</p><ul><li><b>1. Pick Orientation and Size</b> - The size of the picture. The starred sizes are the native 2K sizes Qwen lists for this model; the others are smaller and much faster. For video, 1920 x 1088 is Full HD (the model works in steps of 16 pixels, so 1080 becomes 1088) and 2560 x 1440 is 1440p.</li><li><b>2. Write your idea</b> - Type a short idea in the top box. The node writes the long, detailed prompt Qwen Image 2.1 likes and shows it in the box underneath, and that finished prompt is what goes to the render. Put any words you want written in the picture in quotes.</li><li><b>3. Seed Random/Fixed?</b> - Fixed repeats the same picture, Random rolls a new one each Run.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"ai-brain\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The prompt enhancer (AI Prompt Pixaroma)</h2><p>\\n\\n</p><p>The instructions it follows are saved on the node itself, so the workflow works as it is. Newer Pixaroma versions also list them as presets under the gear on the node:</p><p>\\n\\n</p><ul><li><b>Qwen Image 2.1 - prompt from an idea</b> - the one set up here.</li><li><b>Qwen Image 2.1 - transparent picture from an idea</b> - a subject on a transparent background. The note on the right has more.</li></ul><p>\\n\\n</p><p>It has a seed of its own, set to <b>Fixed</b>, so the same input always gives the same prompt, and a Run where only the picture seed changed skips the writing and reuses it. That seed is the small number at the top of AI Prompt, with an <b>F</b> beside it. It is separate from the <b>Seed</b> node, which is the picture's seed.</p><p>\\n\\n</p><p><b>Not happy with the prompt?</b></p><p>\\n\\n</p><ul><li><b>Re-roll</b>, at the bottom of AI Prompt, picks a new seed and Runs again. The new seed stays, so the new prompt stays too, and the Run makes a new picture from it. Here it keeps the first sentence and rewrites the rest: in two tests about half the words changed.</li><li><b>To go back to an earlier prompt</b>, note its seed number, then click the number and type it back.</li><li><b>Click the F</b> to switch it to <b>R</b>, Random: a new seed on every Run, so it writes again each time. Switching back to F returns to the number it had before, so note the number of a prompt you want to keep.</li><li><b>For a really different prompt, change your idea.</b> The writer follows the idea, so a new idea always gives a new prompt.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The render</h2><p>\\n\\n</p><p>Green. These run by themselves.</p><p>\\n\\n</p><ul><li><b>Text Encode Qwen Image 2.1</b> - Reads the prompt AI Prompt wrote. Its negative prompt box does nothing at CFG 1, the setting this model is made for, so leave it empty.</li><li><b>Empty Latent Image</b> - The blank canvas, at the size you picked.</li><li><b>KSampler</b> - The render: 25 steps, euler, simple, CFG 1, the settings from ComfyUI's own template.</li><li><b>VAE Decode</b> - Turns the finished render into a picture.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The result</h2><p>\\n\\n</p><p>Dark red, at the end.</p><p>\\n\\n</p><ul><li><b>Preview Image Pixaroma</b> - Shows the picture and saves it to your output folder as a PNG. PNG keeps transparency, so a transparent picture stays transparent.</li></ul><p>\\n\\n</p><p>The dark <b>Run Timer</b> above it shows how long the last Run took.</p>\", \"buttonColor\": \"#f66744\", \"lineColor\": \"#f66744\", \"width\": 720, \"height\": 1413, \"backgroundColor\": \"#2a2a2a\"}",
+    "note_dom": ""
+   },
+   "color": "#1d1d1d",
+   "bgcolor": "#2a2a2a"
+  },
+  {
+   "id": 16,
+   "type": "PixaromaNote",
+   "pos": [
+    1260,
+    218
+   ],
+   "size": [
+    810,
+    1132
+   ],
+   "flags": {},
+   "order": 9,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {
+    "cnr_id": "ComfyUI-Pixaroma",
+    "ver": "1227d9898f9d5137533df750611ca97e8c738f3d",
+    "Node name for S&R": "PixaromaNote"
+   },
+   "widgets_values": [
+    "{\"version\": 1, \"content\": \"<h1>SETTINGS AND RUN TIME</h1><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;What this workflow makes</h2><p>\\n\\n</p><p>The same pictures as the Text to Image workflow, from a short idea instead of a full prompt. AI Prompt Pixaroma turns your idea into a detailed prompt with the Qwen3-VL 8B text encoder that Qwen Image 2.1 already loads, so there is nothing extra to download and nothing extra in memory.</p><p>\\n\\n</p><p>Every number below was measured on a <b>24 GB RTX 4090</b> with this workflow and its own settings, each run on a fresh seed with the models already loaded. A different card gives different numbers, but the shape holds: the cost goes up with the pixels.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"ai-brain\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;How Qwen Image 2.1 likes its prompts</h2><p>\\n\\n</p><p>Qwen trained this model on long, detailed descriptions, and ships its own prompt rewriter for it, a separate 9B model. The enhancer here follows that rewriter's rules, on the model this workflow already has loaded:</p><p>\\n\\n</p><ul><li>It opens by naming the style and the medium, like <code>The image is a Pixar-style 3D render of ...</code>. Ask for a cartoon, an anime frame or a poster and it stays exactly that; only an idea with no hint of a medium becomes a photograph.</li><li>It places everything in the frame: what is across the top, in the corners, in the centre, in front and behind.</li><li>Words you want written in the picture are copied exactly, in quotes.</li><li>It gives the lighting a sentence of its own and ends on one sentence about the whole picture.</li><li>It writes about 400 to 500 words however short your idea is, which is the length Qwen's own rewriter aims for.</li><li>It never writes a size or an aspect ratio into the prompt. The size comes from step 1.</li></ul><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Qwen/Qwen-Image-2.1-PE-T2I\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Qwen's own rewriter</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;What it changed in testing</h2><p>\\n\\n</p><p>The same seed and size, the short idea against the enhanced prompt:</p><p>\\n\\n</p><ul><li>The demo idea puts PIXA in quotes, and the enhanced prompt kept it whole and readable on all 3 test seeds; the short idea framed tighter, and the bottom edge cut the word off on 1 of 3. An earlier idea with a sign reading QWEN IMAGE 2.1, written without quotes, came back as <b>QWEN IMAGE 21</b>, with the dot missing.</li><li>The enhanced pictures had fuller scenes: more depth in the background, light from a clear direction, more going on at the edges.</li><li>The style held: an anime idea stayed anime, a logo stayed a flat logo and a poster stayed a poster.</li></ul><p>\\n\\n</p><p>A short prompt works well with this model too, as long as the words you want written are in quotes. The enhancer adds detail and atmosphere; it is not something the model needs.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;How long a Run takes</h2><p>\\n\\n</p><table class=\\\"pix-note-grid\\\" style=\\\"--pix-note-grid-border: #f66744; --pix-note-grid-header-bg: #1a1a1a\\\"><thead><tr><th>What changed</th><th>832 x 1248</th></tr></thead><tbody><tr><td>A new idea: the prompt is written, then the picture</td><td>10 s</td></tr><tr><td>Only the picture seed: the written prompt is reused</td><td>5 s</td></tr></tbody></table><p>\\n\\n</p><p>Writing the prompt adds the same few seconds at any size. For how the size itself changes the time, see the table in the Text to Image workflow.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Transparent pictures</h2><p>\\n\\n</p><p>Click the gear on AI Prompt and load <b>Qwen Image 2.1 - transparent picture from an idea</b>. It wraps your idea in the exact words Qwen Image 2.1 needs for a transparent background, and describes only the subject.</p><p>\\n\\n</p><p>Tested on three ideas, a fox sticker, a mug and a robot: typed plainly, they came back on solid backgrounds, with at most 0 percent of the picture transparent. With this preset, <b>56 to 76 percent</b> of each picture came back transparent, with the subject cut out cleanly.</p><p>\\n\\n</p><p>Preview Image Pixaroma saves a PNG, which keeps the transparency. Under the transparent part the picture is a flat <b>purple</b>. You never see it in a PNG, but anything that throws the transparency away, like saving as JPG, will show it.</p>\", \"buttonColor\": \"#f66744\", \"lineColor\": \"#f66744\", \"width\": 810, \"height\": 1132, \"backgroundColor\": \"#2a2a2a\"}",
+    ""
+   ],
+   "widgets_values_named": {
+    "note_json": "{\"version\": 1, \"content\": \"<h1>SETTINGS AND RUN TIME</h1><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;What this workflow makes</h2><p>\\n\\n</p><p>The same pictures as the Text to Image workflow, from a short idea instead of a full prompt. AI Prompt Pixaroma turns your idea into a detailed prompt with the Qwen3-VL 8B text encoder that Qwen Image 2.1 already loads, so there is nothing extra to download and nothing extra in memory.</p><p>\\n\\n</p><p>Every number below was measured on a <b>24 GB RTX 4090</b> with this workflow and its own settings, each run on a fresh seed with the models already loaded. A different card gives different numbers, but the shape holds: the cost goes up with the pixels.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"ai-brain\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;How Qwen Image 2.1 likes its prompts</h2><p>\\n\\n</p><p>Qwen trained this model on long, detailed descriptions, and ships its own prompt rewriter for it, a separate 9B model. The enhancer here follows that rewriter's rules, on the model this workflow already has loaded:</p><p>\\n\\n</p><ul><li>It opens by naming the style and the medium, like <code>The image is a Pixar-style 3D render of ...</code>. Ask for a cartoon, an anime frame or a poster and it stays exactly that; only an idea with no hint of a medium becomes a photograph.</li><li>It places everything in the frame: what is across the top, in the corners, in the centre, in front and behind.</li><li>Words you want written in the picture are copied exactly, in quotes.</li><li>It gives the lighting a sentence of its own and ends on one sentence about the whole picture.</li><li>It writes about 400 to 500 words however short your idea is, which is the length Qwen's own rewriter aims for.</li><li>It never writes a size or an aspect ratio into the prompt. The size comes from step 1.</li></ul><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Qwen/Qwen-Image-2.1-PE-T2I\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Qwen's own rewriter</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;What it changed in testing</h2><p>\\n\\n</p><p>The same seed and size, the short idea against the enhanced prompt:</p><p>\\n\\n</p><ul><li>The demo idea puts PIXA in quotes, and the enhanced prompt kept it whole and readable on all 3 test seeds; the short idea framed tighter, and the bottom edge cut the word off on 1 of 3. An earlier idea with a sign reading QWEN IMAGE 2.1, written without quotes, came back as <b>QWEN IMAGE 21</b>, with the dot missing.</li><li>The enhanced pictures had fuller scenes: more depth in the background, light from a clear direction, more going on at the edges.</li><li>The style held: an anime idea stayed anime, a logo stayed a flat logo and a poster stayed a poster.</li></ul><p>\\n\\n</p><p>A short prompt works well with this model too, as long as the words you want written are in quotes. The enhancer adds detail and atmosphere; it is not something the model needs.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;How long a Run takes</h2><p>\\n\\n</p><table class=\\\"pix-note-grid\\\" style=\\\"--pix-note-grid-border: #f66744; --pix-note-grid-header-bg: #1a1a1a\\\"><thead><tr><th>What changed</th><th>832 x 1248</th></tr></thead><tbody><tr><td>A new idea: the prompt is written, then the picture</td><td>10 s</td></tr><tr><td>Only the picture seed: the written prompt is reused</td><td>5 s</td></tr></tbody></table><p>\\n\\n</p><p>Writing the prompt adds the same few seconds at any size. For how the size itself changes the time, see the table in the Text to Image workflow.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Transparent pictures</h2><p>\\n\\n</p><p>Click the gear on AI Prompt and load <b>Qwen Image 2.1 - transparent picture from an idea</b>. It wraps your idea in the exact words Qwen Image 2.1 needs for a transparent background, and describes only the subject.</p><p>\\n\\n</p><p>Tested on three ideas, a fox sticker, a mug and a robot: typed plainly, they came back on solid backgrounds, with at most 0 percent of the picture transparent. With this preset, <b>56 to 76 percent</b> of each picture came back transparent, with the subject cut out cleanly.</p><p>\\n\\n</p><p>Preview Image Pixaroma saves a PNG, which keeps the transparency. Under the transparent part the picture is a flat <b>purple</b>. You never see it in a PNG, but anything that throws the transparency away, like saving as JPG, will show it.</p>\", \"buttonColor\": \"#f66744\", \"lineColor\": \"#f66744\", \"width\": 810, \"height\": 1132, \"backgroundColor\": \"#2a2a2a\"}",
+    "note_dom": ""
+   },
+   "color": "#1d1d1d",
+   "bgcolor": "#2a2a2a"
+  },
+  {
+   "id": 17,
+   "type": "ModelAttentionBackend",
+   "pos": [
+    -224,
+    94
+   ],
+   "size": [
+    300,
+    58
+   ],
+   "flags": {},
+   "order": 10,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "link": 14
+    }
+   ],
+   "outputs": [
+    {
+     "name": "model",
+     "type": "MODEL",
+     "slot_index": 0,
+     "links": [
+      1
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.37.2",
+    "Node name for S&R": "ModelAttentionBackend"
+   },
+   "widgets_values": [
+    "comfy kitchen attention"
+   ],
+   "widgets_values_named": {
+    "attention": "comfy kitchen attention"
+   },
+   "color": "#25494f",
+   "bgcolor": "#2a2a2a"
+  }
+ ],
+ "links": [
+  [
+   1,
+   17,
+   0,
+   9,
+   0,
+   "MODEL"
+  ],
+  [
+   2,
+   2,
+   0,
+   7,
+   0,
+   "CLIP"
+  ],
+  [
+   3,
+   2,
+   0,
+   5,
+   0,
+   "CLIP"
+  ],
+  [
+   4,
+   5,
+   0,
+   7,
+   3,
+   "STRING"
+  ],
+  [
+   5,
+   4,
+   0,
+   8,
+   0,
+   "INT"
+  ],
+  [
+   6,
+   4,
+   1,
+   8,
+   1,
+   "INT"
+  ],
+  [
+   7,
+   6,
+   0,
+   9,
+   4,
+   "INT"
+  ],
+  [
+   8,
+   7,
+   0,
+   9,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   9,
+   7,
+   1,
+   9,
+   2,
+   "CONDITIONING"
+  ],
+  [
+   10,
+   8,
+   0,
+   9,
+   3,
+   "LATENT"
+  ],
+  [
+   11,
+   9,
+   0,
+   10,
+   0,
+   "LATENT"
+  ],
+  [
+   12,
+   3,
+   0,
+   10,
+   1,
+   "VAE"
+  ],
+  [
+   13,
+   10,
+   0,
+   11,
+   0,
+   "IMAGE"
+  ],
+  [
+   14,
+   1,
+   0,
+   17,
+   0,
+   "MODEL"
+  ]
+ ],
+ "groups": [],
+ "config": {},
+ "extra": {
+  "ds": {
+   "scale": 0.4053,
+   "offset": [
+    1833.03,
+    182.7
+   ]
+  },
+  "frontendVersion": "1.52.7",
+  "VHS_latentpreview": false,
+  "VHS_latentpreviewrate": 0,
+  "VHS_MetadataImage": true,
+  "VHS_KeepIntermediate": true
+ },
+ "version": 0.4,
+ "id": "1d81e936-57dc-57c6-9813-4b13a47c3be3"
+}
