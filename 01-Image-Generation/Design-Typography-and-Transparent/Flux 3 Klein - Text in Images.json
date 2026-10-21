@@ -1,0 +1,1207 @@
+{
+  "revision": 0,
+  "last_node_id": 19,
+  "last_link_id": 14,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UNETLoader",
+      "pos": [
+        0,
+        218
+      ],
+      "size": [
+        420,
+        82
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "unet_name",
+          "name": "unet_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "unet_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "weight_dtype",
+          "name": "weight_dtype",
+          "type": "COMBO",
+          "widget": {
+            "name": "weight_dtype"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "MODEL",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "title": "Load Diffusion Model (FLUX 3 Klein, distilled)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.1",
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "flux3\\flux3-image-klein-int8-convrot.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "flux3\\flux3-image-klein-int8-convrot.safetensors",
+        "weight_dtype": "default"
+      },
+      "color": "#f66744",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 2,
+      "type": "CLIPLoader",
+      "pos": [
+        0,
+        356
+      ],
+      "size": [
+        420,
+        106
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip_name",
+          "name": "clip_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "type",
+          "name": "type",
+          "type": "COMBO",
+          "widget": {
+            "name": "type"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "device",
+          "name": "device",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "title": "Load CLIP (Qwen3-VL 4B, reads the prompt)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.1",
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "qwen3vl_4b_int8_convrot.safetensors",
+        "flux3",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3vl_4b_int8_convrot.safetensors",
+        "type": "flux3",
+        "device": "default"
+      },
+      "color": "#f66744",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 3,
+      "type": "VAELoader",
+      "pos": [
+        0,
+        518
+      ],
+      "size": [
+        420,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "vae_name",
+          "name": "vae_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "title": "Load VAE (Flux 2 VAE)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.1",
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "flux2-vae.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "flux2-vae.safetensors"
+      },
+      "color": "#f66744",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 4,
+      "type": "PixaromaFindReplace",
+      "pos": [
+        460,
+        218
+      ],
+      "size": [
+        700,
+        310
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "text",
+          "name": "text",
+          "type": "STRING",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "text",
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "title": "Find and Replace Pixaroma (1. the words on the label)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaFindReplace",
+        "findReplaceState": {
+          "version": 1,
+          "caseSensitive": false,
+          "wholeWord": false,
+          "regex": false,
+          "tidy": false,
+          "rules": [
+            {
+              "id": "fr_r1",
+              "enabled": true,
+              "find": "[NAME]",
+              "replace": "PIXAROMA"
+            },
+            {
+              "id": "fr_r2",
+              "enabled": true,
+              "find": "[SECOND LINE]",
+              "replace": "WILDFLOWER HONEY"
+            }
+          ]
+        }
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "findreplace": ""
+      },
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 5,
+      "type": "PixaromaPrompt",
+      "pos": [
+        460,
+        606
+      ],
+      "size": [
+        560,
+        560
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "text",
+          "localized_name": "text_in",
+          "name": "text_in",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "text",
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "title": "Prompt Pixaroma (2. the picture around the words)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaPrompt",
+        "promptState": {
+          "text": "A hero product photograph of a round glass jar of honey on a pale oak kitchen table by a window. The jar is about 10 cm tall, filled to the shoulder with golden amber honey that glows where the light passes through it, and closed with a matte black metal lid. A cream paper label wraps the front of the jar and carries the word \"[NAME]\" in bold dark brown serif capitals across its middle, with the words \"[SECOND LINE]\" in small black sans-serif capitals on one line below it. A wooden honey dipper rests on a small plain white saucer at the right, a thin drip of honey on its tip, and three dried lavender stems lie on the table at the left. Clear morning daylight from a window at camera-left lights the jar from the side, drawing a long bright highlight down the glass and a soft shadow to the right. Behind it, a plain sage green painted wall stays slightly soft. Shot at eye level, front-on, with a 90mm lens at f/8, the label sharp and centred in the frame. True-to-life colour, the crisp texture of the paper label and the glass, a little fine grain.",
+          "order": "mine",
+          "sep": ", ",
+          "accent": null,
+          "showExpanded": false
+        }
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "pix_prompt_ui": ""
+      },
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 6,
+      "type": "PixaromaSizes",
+      "pos": [
+        1200,
+        218
+      ],
+      "size": [
+        292,
+        344
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "links": [
+            11
+          ]
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "links": [
+            12
+          ]
+        },
+        {
+          "localized_name": "latent",
+          "name": "latent",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "title": "Sizes Pixaroma (3. picture size)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaSizes",
+        "sizesState": "{\"version\":1,\"sizes\":[[1024,1024],[1280,1024],[1216,832],[1344,768],[1536,1536],[1920,1088],[2560,1440]],\"selected\":1,\"orientation\":\"portrait\",\"snap\":16,\"accent\":null,\"collapsed\":false,\"starred\":[],\"w\":1024,\"h\":1280}"
+      },
+      "widgets_values": [
+        {
+          "version": 1,
+          "sizes": [
+            [
+              1024,
+              1024
+            ],
+            [
+              1280,
+              1024
+            ],
+            [
+              1216,
+              832
+            ],
+            [
+              1344,
+              768
+            ],
+            [
+              1536,
+              1536
+            ],
+            [
+              1920,
+              1088
+            ],
+            [
+              2560,
+              1440
+            ]
+          ],
+          "selected": 1,
+          "orientation": "portrait",
+          "snap": 16,
+          "accent": null,
+          "collapsed": false,
+          "starred": [],
+          "w": 1024,
+          "h": 1280
+        }
+      ],
+      "widgets_values_named": {
+        "sizes_ui": {
+          "version": 1,
+          "sizes": [
+            [
+              1024,
+              1024
+            ],
+            [
+              1280,
+              1024
+            ],
+            [
+              1216,
+              832
+            ],
+            [
+              1344,
+              768
+            ],
+            [
+              1536,
+              1536
+            ],
+            [
+              1920,
+              1088
+            ],
+            [
+              2560,
+              1440
+            ]
+          ],
+          "selected": 1,
+          "orientation": "portrait",
+          "snap": 16,
+          "accent": null,
+          "collapsed": false,
+          "starred": [],
+          "w": 1024,
+          "h": 1280
+        }
+      },
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 7,
+      "type": "PixaromaSeed",
+      "pos": [
+        1200,
+        640
+      ],
+      "size": [
+        320,
+        86
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "title": "Seed Pixaroma (4. fixed or random)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaSeed",
+        "seedState": "{\"seed\":3,\"mode\":\"fixed\",\"compact\":true,\"digits\":16}"
+      },
+      "widgets_values": [
+        {
+          "seed": 3,
+          "mode": "fixed",
+          "compact": true,
+          "digits": 16
+        }
+      ],
+      "widgets_values_named": {
+        "seed_ui": {
+          "seed": 3,
+          "mode": "fixed",
+          "compact": true,
+          "digits": 16
+        }
+      },
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 8,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1560,
+        218
+      ],
+      "size": [
+        400,
+        88
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1
+        },
+        {
+          "localized_name": "text",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            2,
+            4
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (reads the prompt)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.1",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "text": ""
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 9,
+      "type": "ConditioningZeroOut",
+      "pos": [
+        1560,
+        362
+      ],
+      "size": [
+        338,
+        26
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "conditioning",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "title": "ConditioningZeroOut (empty negative)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.1",
+        "Node name for S&R": "ConditioningZeroOut"
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 10,
+      "type": "EmptyFlux2LatentImage",
+      "pos": [
+        1560,
+        444
+      ],
+      "size": [
+        317,
+        106
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 11
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 12
+        },
+        {
+          "localized_name": "batch_size",
+          "name": "batch_size",
+          "type": "INT",
+          "widget": {
+            "name": "batch_size"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "LATENT",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "title": "Empty Flux 2 Latent (blank canvas)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.1",
+        "Node name for S&R": "EmptyFlux2LatentImage"
+      },
+      "widgets_values": [
+        1024,
+        1024,
+        1
+      ],
+      "widgets_values_named": {
+        "width": 1024,
+        "height": 1024,
+        "batch_size": 1
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 11,
+      "type": "KSampler",
+      "pos": [
+        1560,
+        606
+      ],
+      "size": [
+        270,
+        262
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 3
+        },
+        {
+          "localized_name": "positive",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 4
+        },
+        {
+          "localized_name": "negative",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 5
+        },
+        {
+          "localized_name": "latent_image",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 6
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 13
+        },
+        {
+          "localized_name": "steps",
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "sampler_name",
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "scheduler",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "denoise",
+          "name": "denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "denoise"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "LATENT",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "title": "KSampler (15 steps)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.1",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "fixed",
+        15,
+        1,
+        "euler",
+        "simple",
+        1
+      ],
+      "widgets_values_named": {
+        "seed": 0,
+        "control_after_generate": "fixed",
+        "steps": 15,
+        "cfg": 1,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "denoise": 1
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 12,
+      "type": "VAEDecode",
+      "pos": [
+        1560,
+        924
+      ],
+      "size": [
+        284,
+        46
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "samples",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 7
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "title": "VAE Decode (latent to picture)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.1",
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 13,
+      "type": "PixaromaSaveImage",
+      "pos": [
+        2000,
+        218
+      ],
+      "size": [
+        474,
+        924
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 14
+        },
+        {
+          "localized_name": "name",
+          "name": "name",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "title": "Save Image Pixaroma (saves the picture)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaSaveImage",
+        "saveImageState": "{\"version\":1,\"folder\":\"\",\"pattern\":\"Flux 3 Klein Text/image_%counter%\",\"format\":\"png\",\"quality\":100,\"embedWorkflow\":true,\"civitaiMeta\":false,\"saveOnRun\":true,\"dateStyle\":\"yyyy-MM-dd\",\"counterDigits\":3,\"folded\":false,\"hideBarWhenFolded\":false,\"webpLossless\":false,\"inputSubfolders\":false,\"showOpen\":true,\"showCopy\":true,\"showFolder\":true,\"showPng\":true,\"showJpg\":true,\"showWebp\":true}"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "pixaroma_save_image": ""
+      },
+      "color": "#4f2525",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 14,
+      "type": "PixaromaLabel",
+      "pos": [
+        -289,
+        98
+      ],
+      "size": [
+        412,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaLabel"
+      },
+      "widgets_values": [
+        "{\"text\":\"Flux 3 Klein - Text in Images\",\"fontSize\":31,\"fontFamily\":\"Arial\",\"fontColor\":\"#ffffff\",\"textAlign\":\"left\",\"backgroundColor\":\"#f66744\",\"padding\":10,\"borderRadius\":0,\"opacity\":1,\"fontWeight\":\"normal\",\"lineHeight\":1}"
+      ],
+      "widgets_values_named": {
+        "label_json": "{\"text\":\"Flux 3 Klein - Text in Images\",\"fontSize\":31,\"fontFamily\":\"Arial\",\"fontColor\":\"#ffffff\",\"textAlign\":\"left\",\"backgroundColor\":\"#f66744\",\"padding\":10,\"borderRadius\":0,\"opacity\":1,\"fontWeight\":\"normal\",\"lineHeight\":1}"
+      },
+      "color": "rgba(0,0,0,0)",
+      "bgcolor": "rgba(0,0,0,0)"
+    },
+    {
+      "id": 15,
+      "type": "PixaromaInfo",
+      "pos": [
+        -289,
+        189
+      ],
+      "size": [
+        249,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>MODELS AND NODES USED IN THIS WORKFLOW</h1><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;FLUX 3 needs <b>ComfyUI 0.41.0 or newer</b>, the first version with FLUX 3. On an older ComfyUI, Load CLIP has no <b>flux3</b> type and some nodes show red: update ComfyUI first.</p><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;FLUX 3 needs a free approval first (one time only)</h2><p>\\n\\n</p><p>Black Forest Labs keeps the FLUX 3 files behind a short approval on Hugging Face. Until you do it, every FLUX 3 download link below answers <i>\\\"Access to model ... is restricted ... Please log in\\\"</i>.</p><p>\\n\\n</p><ol><li>Log in to Hugging Face (a free account).</li><li>Open the FLUX 3 model page with the button below and click <b>Agree and access repository</b>. Access is given at once.</li><li>Now the download links below work, in the same browser.</li></ol><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">FLUX 3 Klein on Hugging Face</a></span>&nbsp;</p><p>\\n\\n</p><p><span data-ic=\\\"idea\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Downloading with ComfyUI-Manager or a script needs a Hugging Face token as well (<code>hf auth login</code>). In the browser, being logged in is enough.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load Diffusion Model</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy/resolve/main/diffusion_models/flux3-image-klein-int8-convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download flux3-image-klein-int8-convrot.safetensors<span class=\\\"pix-note-btnsize\\\">5.83 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/diffusion_models/flux3</div><p>\\n\\n</p><p>Create the <code>flux3</code> folder if it does not exist.</p><p>\\n\\n</p><p>Take the file WITHOUT <code>base</code> in its name: that is the <b>distilled</b> (fast) model these workflows use. The files with <code>base</code> in the name are the <b>base</b> model, made for training LoRAs: it needs CFG 3.5 and 25 to 50 steps, and at the settings here (15 or 16 steps, CFG 1) its pictures come out smeared and broken.</p><p>\\n\\n</p><p>Already have <code>flux3_image_klein_sd_int8_convrot.safetensors</code>? That is the same file under its first name (ComfyUI's own template used it at launch). Pick it in this node instead of downloading it again.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"CLIP\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load CLIP</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy/resolve/main/text_encoders/qwen3vl_4b_int8_convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download qwen3vl_4b_int8_convrot.safetensors<span class=\\\"pix-note-btnsize\\\">4.86 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/text_encoders</div><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"VAE\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load VAE</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy/resolve/main/vae/flux2-vae.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download flux2-vae.safetensors<span class=\\\"pix-note-btnsize\\\">336 MB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/vae</div><p>\\n\\n</p><p>The same file as Flux 2 Klein: if you have it, skip this one.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"ai-brain\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Google Gemini Free Prompting Gem</h2><p>\\n\\n</p><p>Type your idea into the Gem with the words you want in the picture in double quotes, and it writes the long prompt with the lettering described. Paste it into <b>2. the picture around the words</b>, words included: the word boxes then have nothing to fill and pass it on as it is.</p><p>\\n\\n</p><p>Tip: start your message with <i>write the prompt:</i> so Gemini writes a prompt and does not try to make the picture itself. It is free with a Google account.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://gemini.google.com/gem/1cZ_yE3HxY9M31gufN8He60Nf-wgcDmlF?usp=sharing\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">FLUX 3 Prompt Writer</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;License</h2><p>\\n\\n</p><p>FLUX 3 Image Klein is released under the <b>FLUX Kommunity License</b>. You may use the pictures commercially only while your yearly revenue (all the money coming in, before costs), together with any company you belong to, is <b>under US$5 million</b>. Read it before you use the model for paid work.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">FLUX 3 Klein model page</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;After placing the files, restart ComfyUI or refresh model lists using the <b>R</b> shortcut.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"nodes-installed\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Nodes Installed from Manager</h2><p>\\n\\n</p><ul><li>Pixaroma: <b>update to the latest version</b> (these workflows need at least <b>1.4.183</b>). A node shows red or missing? Update Pixaroma.</li></ul><p>\\n\\n</p><p><b>Which version is the newest?</b> The <b>Latest Pixaroma version</b> button shows it and what is new in it. The help page has the update steps for every kind of install.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/latest/?need=1.4.183\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Latest Pixaroma version</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/#update\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">How to update Pixaroma</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"puzzle\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Something missing?</h2><p>\\n\\n</p><p>Each button opens a short video that shows the fix, with the steps written under it.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/missing-nodes/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Red or missing nodes</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/missing-models/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">A model file is missing</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/refresh/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Buttons missing after an update</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"pixaroma\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Resources</h2><p>\\n\\n</p><p>\\n  <a class=\\\"pix-note-discord\\\" href=\\\"https://discord.com/invite/gggpkVgBf3\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Join Discord</a>&nbsp;\\n  <a class=\\\"pix-note-yt\\\" href=\\\"https://www.youtube.com/@pixaroma\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Pixaroma YouTube Channel</a>&nbsp;\\n  <span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/report/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Ask for help</a></span>&nbsp;\\n</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Download Models\",\"icon\":\"download-model\",\"color\":\"#f66744\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>MODELS AND NODES USED IN THIS WORKFLOW</h1><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;FLUX 3 needs <b>ComfyUI 0.41.0 or newer</b>, the first version with FLUX 3. On an older ComfyUI, Load CLIP has no <b>flux3</b> type and some nodes show red: update ComfyUI first.</p><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;FLUX 3 needs a free approval first (one time only)</h2><p>\\n\\n</p><p>Black Forest Labs keeps the FLUX 3 files behind a short approval on Hugging Face. Until you do it, every FLUX 3 download link below answers <i>\\\"Access to model ... is restricted ... Please log in\\\"</i>.</p><p>\\n\\n</p><ol><li>Log in to Hugging Face (a free account).</li><li>Open the FLUX 3 model page with the button below and click <b>Agree and access repository</b>. Access is given at once.</li><li>Now the download links below work, in the same browser.</li></ol><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">FLUX 3 Klein on Hugging Face</a></span>&nbsp;</p><p>\\n\\n</p><p><span data-ic=\\\"idea\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Downloading with ComfyUI-Manager or a script needs a Hugging Face token as well (<code>hf auth login</code>). In the browser, being logged in is enough.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load Diffusion Model</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy/resolve/main/diffusion_models/flux3-image-klein-int8-convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download flux3-image-klein-int8-convrot.safetensors<span class=\\\"pix-note-btnsize\\\">5.83 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/diffusion_models/flux3</div><p>\\n\\n</p><p>Create the <code>flux3</code> folder if it does not exist.</p><p>\\n\\n</p><p>Take the file WITHOUT <code>base</code> in its name: that is the <b>distilled</b> (fast) model these workflows use. The files with <code>base</code> in the name are the <b>base</b> model, made for training LoRAs: it needs CFG 3.5 and 25 to 50 steps, and at the settings here (15 or 16 steps, CFG 1) its pictures come out smeared and broken.</p><p>\\n\\n</p><p>Already have <code>flux3_image_klein_sd_int8_convrot.safetensors</code>? That is the same file under its first name (ComfyUI's own template used it at launch). Pick it in this node instead of downloading it again.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"CLIP\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load CLIP</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy/resolve/main/text_encoders/qwen3vl_4b_int8_convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download qwen3vl_4b_int8_convrot.safetensors<span class=\\\"pix-note-btnsize\\\">4.86 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/text_encoders</div><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"VAE\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load VAE</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy/resolve/main/vae/flux2-vae.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download flux2-vae.safetensors<span class=\\\"pix-note-btnsize\\\">336 MB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/vae</div><p>\\n\\n</p><p>The same file as Flux 2 Klein: if you have it, skip this one.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"ai-brain\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Google Gemini Free Prompting Gem</h2><p>\\n\\n</p><p>Type your idea into the Gem with the words you want in the picture in double quotes, and it writes the long prompt with the lettering described. Paste it into <b>2. the picture around the words</b>, words included: the word boxes then have nothing to fill and pass it on as it is.</p><p>\\n\\n</p><p>Tip: start your message with <i>write the prompt:</i> so Gemini writes a prompt and does not try to make the picture itself. It is free with a Google account.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://gemini.google.com/gem/1cZ_yE3HxY9M31gufN8He60Nf-wgcDmlF?usp=sharing\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">FLUX 3 Prompt Writer</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;License</h2><p>\\n\\n</p><p>FLUX 3 Image Klein is released under the <b>FLUX Kommunity License</b>. You may use the pictures commercially only while your yearly revenue (all the money coming in, before costs), together with any company you belong to, is <b>under US$5 million</b>. Read it before you use the model for paid work.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">FLUX 3 Klein model page</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;After placing the files, restart ComfyUI or refresh model lists using the <b>R</b> shortcut.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"nodes-installed\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Nodes Installed from Manager</h2><p>\\n\\n</p><ul><li>Pixaroma: <b>update to the latest version</b> (these workflows need at least <b>1.4.183</b>). A node shows red or missing? Update Pixaroma.</li></ul><p>\\n\\n</p><p><b>Which version is the newest?</b> The <b>Latest Pixaroma version</b> button shows it and what is new in it. The help page has the update steps for every kind of install.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/latest/?need=1.4.183\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Latest Pixaroma version</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/#update\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">How to update Pixaroma</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"puzzle\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Something missing?</h2><p>\\n\\n</p><p>Each button opens a short video that shows the fix, with the steps written under it.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/missing-nodes/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Red or missing nodes</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/missing-models/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">A model file is missing</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/refresh/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Buttons missing after an update</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"pixaroma\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Resources</h2><p>\\n\\n</p><p>\\n  <a class=\\\"pix-note-discord\\\" href=\\\"https://discord.com/invite/gggpkVgBf3\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Join Discord</a>&nbsp;\\n  <a class=\\\"pix-note-yt\\\" href=\\\"https://www.youtube.com/@pixaroma\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Pixaroma YouTube Channel</a>&nbsp;\\n  <span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/report/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Ask for help</a></span>&nbsp;\\n</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Download Models\",\"icon\":\"download-model\",\"color\":\"#f66744\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 16,
+      "type": "PixaromaInfo",
+      "pos": [
+        -289,
+        270
+      ],
+      "size": [
+        191,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>HOW TO USE</h1><p>\\n\\n</p><p>FLUX 3 Klein writes words into a picture: labels, signs, book covers, cakes, t-shirts. Here the words sit in their own boxes, so you can make a new label by changing only the words, while the rest of the prompt stays as it is.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"to-do\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Steps</h2><p>\\n\\n</p><ol><li>In <b>Find and Replace Pixaroma</b>, type your words in the right-hand boxes: the big name in the first row, the small line in the second.</li><li>Change the picture in <b>Prompt Pixaroma</b> if you like. Keep <b>[NAME]</b> and <b>[SECOND LINE]</b> where the words go.</li><li>Pick a size on <b>Sizes Pixaroma</b>.</li><li>Leave the seed on <b>F</b> to repeat a picture, or switch it to <b>R</b> for a new one every Run.</li><li>Press <b>Run</b>, then check every word.</li></ol><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"prompt\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Writing words into a picture</h2><p>\\n\\n</p><ol><li>Put each word holder in <b>double quotes</b>, once: <i>the word \\\"[NAME]\\\"</i>.</li><li>Say how the letters look and their colour: <i>bold dark brown serif capitals</i>, <i>rounded cream-white capitals with a thin outline</i>.</li><li>Say where they sit: <i>across the middle of the label</i>, <i>along the top of the cover</i>.</li><li>Call everything else that could carry writing <b>plain</b> (a plain white saucer, a plain wall). Bottles, boxes, books and signs get made-up letters when the prompt leaves them open.</li></ol><p>\\n\\n</p><p><span data-ic=\\\"idea\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;CAPITAL letters are the most reliable. A handwritten script font can change the letters, for example a capital turning small.</p><p>\\n\\n</p><p><span data-ic=\\\"idea\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;One line only? Delete the sentence with <b>[SECOND LINE]</b> from the prompt. Switching its row off in Find and Replace is not enough: the holder then stays in the prompt and the label prints <b>[SECOND LINE]</b> as words. More lines? Add a holder like <b>[TAGLINE]</b> to the prompt and a row for it in Find and Replace.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;What it is not good at (yet)</h2><p>\\n\\n</p><ul><li><b>Check every word</b>: in our tests a name and a short second line came out right 12 times out of 12, but longer text was not tested here. A wrong letter? Try another seed.</li><li><b>The font you name is a style, not an exact font</b>: one of our 4 seeds drew sans-serif letters where we asked for serif.</li><li><b>Small words far away</b> get soft. Keep the text big in the frame, or pick <b>Full HD</b> or <b>2K</b>.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"question-mark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Something not working?</h2><p>\\n\\n</p><p>Each button opens the answer on the Pixaroma help page.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/faq/#q-save-other-folder\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Save to your own folder</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/look/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Nodes look different from the video</a></span>&nbsp;</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"How to Use\",\"icon\":\"to-do\",\"color\":\"#2a9d8f\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>HOW TO USE</h1><p>\\n\\n</p><p>FLUX 3 Klein writes words into a picture: labels, signs, book covers, cakes, t-shirts. Here the words sit in their own boxes, so you can make a new label by changing only the words, while the rest of the prompt stays as it is.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"to-do\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Steps</h2><p>\\n\\n</p><ol><li>In <b>Find and Replace Pixaroma</b>, type your words in the right-hand boxes: the big name in the first row, the small line in the second.</li><li>Change the picture in <b>Prompt Pixaroma</b> if you like. Keep <b>[NAME]</b> and <b>[SECOND LINE]</b> where the words go.</li><li>Pick a size on <b>Sizes Pixaroma</b>.</li><li>Leave the seed on <b>F</b> to repeat a picture, or switch it to <b>R</b> for a new one every Run.</li><li>Press <b>Run</b>, then check every word.</li></ol><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"prompt\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Writing words into a picture</h2><p>\\n\\n</p><ol><li>Put each word holder in <b>double quotes</b>, once: <i>the word \\\"[NAME]\\\"</i>.</li><li>Say how the letters look and their colour: <i>bold dark brown serif capitals</i>, <i>rounded cream-white capitals with a thin outline</i>.</li><li>Say where they sit: <i>across the middle of the label</i>, <i>along the top of the cover</i>.</li><li>Call everything else that could carry writing <b>plain</b> (a plain white saucer, a plain wall). Bottles, boxes, books and signs get made-up letters when the prompt leaves them open.</li></ol><p>\\n\\n</p><p><span data-ic=\\\"idea\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;CAPITAL letters are the most reliable. A handwritten script font can change the letters, for example a capital turning small.</p><p>\\n\\n</p><p><span data-ic=\\\"idea\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;One line only? Delete the sentence with <b>[SECOND LINE]</b> from the prompt. Switching its row off in Find and Replace is not enough: the holder then stays in the prompt and the label prints <b>[SECOND LINE]</b> as words. More lines? Add a holder like <b>[TAGLINE]</b> to the prompt and a row for it in Find and Replace.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;What it is not good at (yet)</h2><p>\\n\\n</p><ul><li><b>Check every word</b>: in our tests a name and a short second line came out right 12 times out of 12, but longer text was not tested here. A wrong letter? Try another seed.</li><li><b>The font you name is a style, not an exact font</b>: one of our 4 seeds drew sans-serif letters where we asked for serif.</li><li><b>Small words far away</b> get soft. Keep the text big in the frame, or pick <b>Full HD</b> or <b>2K</b>.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"question-mark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Something not working?</h2><p>\\n\\n</p><p>Each button opens the answer on the Pixaroma help page.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/faq/#q-save-other-folder\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Save to your own folder</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/look/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Nodes look different from the video</a></span>&nbsp;</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"How to Use\",\"icon\":\"to-do\",\"color\":\"#2a9d8f\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 17,
+      "type": "PixaromaInfo",
+      "pos": [
+        -289,
+        351
+      ],
+      "size": [
+        186,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>WHAT EACH NODE DOES</h1><p>\\n\\n</p><p>The colour of a node tells you what kind of node it is. Nothing here needs changing except the blue ones.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Models to download</h2><p>\\n\\n</p><p>Orange. Each one needs a file from the <b>Download Models</b> note.</p><p>\\n\\n</p><ul><li><b>Load Diffusion Model (FLUX 3 Klein, distilled)</b> - The image model, <b>FLUX 3 Image Klein</b> from Black Forest Labs, the <b>distilled</b> version (no <code>base</code> in the file name): 15 steps, CFG 1. It makes a picture from words AND changes a picture you give it.</li><li><b>Load CLIP (Qwen3-VL 4B, reads the prompt)</b> - Reads your prompt and turns the words into something FLUX 3 understands. The type must be <b>flux3</b>.</li><li><b>Load VAE (Flux 2 VAE)</b> - Turns the finished render into a picture. FLUX 3 uses the same VAE as Flux 2.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The steps you set</h2><p>\\n\\n</p><p>Blue, and numbered. These are the only nodes you need to touch.</p><p>\\n\\n</p><ul><li><b>Find and Replace Pixaroma (1. the words on the label)</b> - Your words go here. Each row swaps a word holder in the prompt for the words in its right-hand box: <b>[NAME]</b> becomes the big name, <b>[SECOND LINE]</b> the small line under it. Change only these to make a new label; the preview on the node shows the finished prompt.</li><li><b>Prompt Pixaroma (2. the picture around the words)</b> - The picture: a product photo of a honey jar. <b>[NAME]</b> and <b>[SECOND LINE]</b> mark where the words go, each in double quotes with its lettering, colour and place (see How to Use). Change the scene here; change the words in Find and Replace Pixaroma.</li><li><b>Sizes Pixaroma (3. picture size)</b> - The picture size. Click a size; the Portrait / Landscape switch turns it on its side. The demo is <b>1024 x 1280</b>. <b>Full HD</b> and <b>2K</b> give more detail and take longer (see Run Times).</li><li><b>Seed Pixaroma (4. fixed or random)</b> - The seed. <b>F</b> (fixed) gives the same picture every Run, <b>R</b> (random) a new one each Run. The demo uses seed <b>3</b>.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The work</h2><p>\\n\\n</p><p>Green. They run by themselves.</p><p>\\n\\n</p><ul><li><b>CLIP Text Encode (reads the prompt)</b> - Reads the prompt through the text encoder.</li><li><b>ConditioningZeroOut (empty negative)</b> - An empty negative prompt. FLUX 3 distilled runs at CFG 1, where the negative does nothing, but the KSampler still needs one plugged in.</li><li><b>Empty Flux 2 Latent (blank canvas)</b> - The blank canvas the picture is painted on, at the size it receives.</li><li><b>KSampler (15 steps)</b> - The render: 15 steps, CFG 1, euler, simple. Black Forest Labs' own workflow uses 16 steps. In our tests 8 steps gave nearly the same picture in about half the time; more than 16 steps made skin smoother and more waxy.</li><li><b>VAE Decode (latent to picture)</b> - Turns the finished render into a picture.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The result</h2><p>\\n\\n</p><p>Dark red, at the end.</p><p>\\n\\n</p><ul><li><b>Save Image Pixaroma (saves the picture)</b> - Saves each picture as PNG into <code>ComfyUI/output/Flux 3 Klein Text</code> and shows it on the node.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"info\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Readouts</h2><p>\\n\\n</p><p>Dark. Nothing to set: they show you what happened.</p><p>\\n\\n</p><ul><li><b>Run Timer</b> - The dark clock above the result shows how long the last Run took.</li></ul><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Nodes Info\",\"icon\":\"node-v5\",\"color\":\"#3d7cc9\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>WHAT EACH NODE DOES</h1><p>\\n\\n</p><p>The colour of a node tells you what kind of node it is. Nothing here needs changing except the blue ones.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Models to download</h2><p>\\n\\n</p><p>Orange. Each one needs a file from the <b>Download Models</b> note.</p><p>\\n\\n</p><ul><li><b>Load Diffusion Model (FLUX 3 Klein, distilled)</b> - The image model, <b>FLUX 3 Image Klein</b> from Black Forest Labs, the <b>distilled</b> version (no <code>base</code> in the file name): 15 steps, CFG 1. It makes a picture from words AND changes a picture you give it.</li><li><b>Load CLIP (Qwen3-VL 4B, reads the prompt)</b> - Reads your prompt and turns the words into something FLUX 3 understands. The type must be <b>flux3</b>.</li><li><b>Load VAE (Flux 2 VAE)</b> - Turns the finished render into a picture. FLUX 3 uses the same VAE as Flux 2.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The steps you set</h2><p>\\n\\n</p><p>Blue, and numbered. These are the only nodes you need to touch.</p><p>\\n\\n</p><ul><li><b>Find and Replace Pixaroma (1. the words on the label)</b> - Your words go here. Each row swaps a word holder in the prompt for the words in its right-hand box: <b>[NAME]</b> becomes the big name, <b>[SECOND LINE]</b> the small line under it. Change only these to make a new label; the preview on the node shows the finished prompt.</li><li><b>Prompt Pixaroma (2. the picture around the words)</b> - The picture: a product photo of a honey jar. <b>[NAME]</b> and <b>[SECOND LINE]</b> mark where the words go, each in double quotes with its lettering, colour and place (see How to Use). Change the scene here; change the words in Find and Replace Pixaroma.</li><li><b>Sizes Pixaroma (3. picture size)</b> - The picture size. Click a size; the Portrait / Landscape switch turns it on its side. The demo is <b>1024 x 1280</b>. <b>Full HD</b> and <b>2K</b> give more detail and take longer (see Run Times).</li><li><b>Seed Pixaroma (4. fixed or random)</b> - The seed. <b>F</b> (fixed) gives the same picture every Run, <b>R</b> (random) a new one each Run. The demo uses seed <b>3</b>.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The work</h2><p>\\n\\n</p><p>Green. They run by themselves.</p><p>\\n\\n</p><ul><li><b>CLIP Text Encode (reads the prompt)</b> - Reads the prompt through the text encoder.</li><li><b>ConditioningZeroOut (empty negative)</b> - An empty negative prompt. FLUX 3 distilled runs at CFG 1, where the negative does nothing, but the KSampler still needs one plugged in.</li><li><b>Empty Flux 2 Latent (blank canvas)</b> - The blank canvas the picture is painted on, at the size it receives.</li><li><b>KSampler (15 steps)</b> - The render: 15 steps, CFG 1, euler, simple. Black Forest Labs' own workflow uses 16 steps. In our tests 8 steps gave nearly the same picture in about half the time; more than 16 steps made skin smoother and more waxy.</li><li><b>VAE Decode (latent to picture)</b> - Turns the finished render into a picture.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The result</h2><p>\\n\\n</p><p>Dark red, at the end.</p><p>\\n\\n</p><ul><li><b>Save Image Pixaroma (saves the picture)</b> - Saves each picture as PNG into <code>ComfyUI/output/Flux 3 Klein Text</code> and shows it on the node.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"info\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Readouts</h2><p>\\n\\n</p><p>Dark. Nothing to set: they show you what happened.</p><p>\\n\\n</p><ul><li><b>Run Timer</b> - The dark clock above the result shows how long the last Run took.</li></ul><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Nodes Info\",\"icon\":\"node-v5\",\"color\":\"#3d7cc9\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 18,
+      "type": "PixaromaInfo",
+      "pos": [
+        -289,
+        432
+      ],
+      "size": [
+        180,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>RUN TIMES</h1><p>\\n\\n</p><p>Measured on a <b>24 GB RTX 4090</b> with this workflow, with the models already loaded. A different card gives different numbers, but the shape holds: the time grows with the number of pictures and their size.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><table class=\\\"pix-note-grid\\\" style=\\\"--pix-note-grid-border: #f66744; --pix-note-grid-header-bg: #1a1a1a\\\"><thead><tr><th>Size</th><th>Time</th></tr></thead><tbody><tr><td>1024 x 1024</td><td>about 2 s</td></tr><tr><td>1024 x 1280 (the demo)</td><td>about 3 s</td></tr><tr><td>Full HD, 1088 x 1920</td><td>about 5 s</td></tr><tr><td>2K, 1440 x 2560</td><td>about 9 s</td></tr></tbody></table><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The first Run of the session</h2><p>\\n\\n</p><p>The first Run after starting ComfyUI also has to load the models from disk (FLUX 3 and its text encoder, about 11 GB together), so it takes longer. After that they stay loaded.</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Run Times\",\"icon\":\"run-timer\",\"color\":\"#3f9a4f\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>RUN TIMES</h1><p>\\n\\n</p><p>Measured on a <b>24 GB RTX 4090</b> with this workflow, with the models already loaded. A different card gives different numbers, but the shape holds: the time grows with the number of pictures and their size.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><table class=\\\"pix-note-grid\\\" style=\\\"--pix-note-grid-border: #f66744; --pix-note-grid-header-bg: #1a1a1a\\\"><thead><tr><th>Size</th><th>Time</th></tr></thead><tbody><tr><td>1024 x 1024</td><td>about 2 s</td></tr><tr><td>1024 x 1280 (the demo)</td><td>about 3 s</td></tr><tr><td>Full HD, 1088 x 1920</td><td>about 5 s</td></tr><tr><td>2K, 1440 x 2560</td><td>about 9 s</td></tr></tbody></table><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The first Run of the session</h2><p>\\n\\n</p><p>The first Run after starting ComfyUI also has to load the models from disk (FLUX 3 and its text encoder, about 11 GB together), so it takes longer. After that they stay loaded.</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Run Times\",\"icon\":\"run-timer\",\"color\":\"#3f9a4f\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 19,
+      "type": "PixaromaRunTimer",
+      "pos": [
+        2333,
+        110
+      ],
+      "size": [
+        141,
+        50
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaRunTimer"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      8,
+      0,
+      "CLIP"
+    ],
+    [
+      2,
+      8,
+      0,
+      9,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      3,
+      1,
+      0,
+      11,
+      0,
+      "MODEL"
+    ],
+    [
+      4,
+      8,
+      0,
+      11,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      5,
+      9,
+      0,
+      11,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      6,
+      10,
+      0,
+      11,
+      3,
+      "LATENT"
+    ],
+    [
+      7,
+      11,
+      0,
+      12,
+      0,
+      "LATENT"
+    ],
+    [
+      8,
+      3,
+      0,
+      12,
+      1,
+      "VAE"
+    ],
+    [
+      9,
+      5,
+      0,
+      4,
+      0,
+      "STRING"
+    ],
+    [
+      10,
+      4,
+      0,
+      8,
+      1,
+      "STRING"
+    ],
+    [
+      11,
+      6,
+      0,
+      10,
+      0,
+      "INT"
+    ],
+    [
+      12,
+      6,
+      1,
+      10,
+      1,
+      "INT"
+    ],
+    [
+      13,
+      7,
+      0,
+      11,
+      4,
+      "INT"
+    ],
+    [
+      14,
+      12,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.65,
+      "offset": [
+        458.2307692307692,
+        147.3846153846154
+      ]
+    }
+  },
+  "version": 0.4
+}

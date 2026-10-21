@@ -1,0 +1,113 @@
+QUADS PIXAROMA
+Version 2.0.0 | Pixaroma Studio
+Blender 4.2+ extension format; tested with Blender 5.2.2 LTS
+Package: pixaroma_quads.zip
+
+INSTALL
+
+1. Open Blender Preferences > Get Extensions.
+2. Open the menu and choose Install from Disk.
+3. Select pixaroma_quads.zip and enable Quads Pixaroma if necessary.
+4. In the 3D Viewport, press N and open the Quads Pixaroma tab.
+5. If an older version is loaded, restart Blender after updating.
+
+The internal extension ID remains pixaroma_quads for update compatibility.
+The displayed addon name is Quads Pixaroma.
+
+QUICK START
+
+Select one mesh in Object Mode.
+
+1. ANALYZE
+   Click Analyze Mesh for a topology snapshot. Open loops are counted as loops,
+   not individual edges. Branched boundaries and non-manifold junctions are
+   listed separately. Refresh after manual edits.
+   Inspect Open Edges enters Edit Mode and selects problematic edges.
+   Return to Object Mode before processing.
+
+2. REPAIR
+   Preserve surface:
+   Keeps the existing surface, uses conservative seam welding, removes
+   degenerate/loose geometry, fixes winding and fills suitable boundary loops.
+   Max hole size (%) limits the opening size relative to the model.
+   The default is 10%; 100% attempts all simple loops, including intentional
+   openings. Invalid, overlapping, branched or flat slit-shaped caps are
+   skipped rather than forced. Remaining issues appear under Analyze.
+   UVs on existing faces remain; new caps may need UV editing.
+
+   Rebuild surface:
+   Reconstructs a dense closed surface for damaged scans and AI-generated
+   meshes. Detail resolution controls density across the longest dimension.
+   Start at 256; use 128-160 for a quick preview and 320-384 for fine detail.
+   Reconstruction can merge nearby parts, close intentional openings and lose
+   thin features. Inspect the result. Original UVs need rebuilding.
+
+3. QUADS
+   Detail grid (default):
+   Rebuilds a dense, mostly quad surface. This favors detail over a low face
+   count and is the recommended starting point for difficult imported models.
+   Face count follows resolution, not a target number.
+
+   Flow quads:
+   Uses the selected repair method, then generates a lower face-count layout.
+   Start around 20,000 faces for detailed models. Target count is approximate.
+   Automatic retries may increase it to obtain a valid result.
+   Fine grooves, small parts and deformation-ready edge flow need inspection.
+   Preserve sharp edges is optional and can be very slow on noisy geometry.
+   If repeated flow attempts fail on a rebuilt surface, a valid dense grid may
+   be kept instead. The panel explicitly reports that the target was not met.
+
+Every successful operation creates a result object and hides the original
+in the viewport and renders. The original mesh is not overwritten.
+Use Undo or unhide the original in the Outliner to compare. For renders,
+also re-enable the original object's camera visibility.
+
+BACKGROUND PROCESSING
+
+Button operations run in a separate local Blender process. Progress appears
+at the top of the panel. Press Esc to cancel. Keep Blender open until it ends.
+Work is based on a snapshot of the selected mesh; avoid editing that source
+while the job is running. Temporary files are removed when the job completes
+or is cancelled. No model files are uploaded.
+
+ADVANCED
+
+Smooth shading:
+Changes shading only, with sharp normal breaks at 35 degrees.
+
+Weld distance / size:
+Merge tolerance relative to model size. Small values protect fine details.
+Unsafe merges that would introduce non-manifold junctions are rejected.
+
+Project surface detail:
+Optional, bounded projection back to the source. Off by default because
+projection can distort close or thin surfaces. An invalid projection is
+discarded. Projection does not restore detail absent from the new topology.
+
+Join Triangles:
+Pairs compatible triangles while respecting UV seams, materials, colors and
+sharp edges. Does not guarantee an all-quad result.
+
+Symmetry:
+Flow-quads option only. Uses the object's local axes and origin.
+Center the origin on the intended symmetry plane first.
+
+LIMITS AND TROUBLESHOOTING
+
+- The addon processes the active mesh, not every selected object.
+- Apply modifiers, shape keys, constraints or animation to a separate copy
+  before running the background operation.
+- Analysis and topology checks do not certify absence of self-intersections,
+  printability, wall thickness or animation-ready edge flow.
+- No automatic remesher can infer the intended design of every damaged model.
+  Use Preserve surface for gentle repairs, Detail grid for reconstruction,
+  and Flow quads when a lower face count is more important.
+- Small triangular caps may remain after repairing solver defects. The actual
+  quad percentage is shown; the addon does not claim 100% unless measured.
+- Orange (#f66744) and gray branding are used for addon icons. Standard button
+  and panel backgrounds follow Blender's theme; this addon does not change it.
+
+DEVELOPMENT
+
+Edit the extracted source, then run pack_extension.py with Python or Blender's
+Python to rebuild the installation ZIP. Reinstall the ZIP and restart Blender.

@@ -1,0 +1,1518 @@
+{
+  "revision": 0,
+  "last_node_id": 21,
+  "last_link_id": 22,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UNETLoader",
+      "pos": [
+        0,
+        218
+      ],
+      "size": [
+        420,
+        82
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "unet_name",
+          "name": "unet_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "unet_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "weight_dtype",
+          "name": "weight_dtype",
+          "type": "COMBO",
+          "widget": {
+            "name": "weight_dtype"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "MODEL",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "title": "Load Diffusion Model (FLUX 3 Klein, distilled)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.1",
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "flux3\\flux3-image-klein-int8-convrot.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "flux3\\flux3-image-klein-int8-convrot.safetensors",
+        "weight_dtype": "default"
+      },
+      "color": "#f66744",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 2,
+      "type": "CLIPLoader",
+      "pos": [
+        0,
+        356
+      ],
+      "size": [
+        420,
+        106
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip_name",
+          "name": "clip_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "type",
+          "name": "type",
+          "type": "COMBO",
+          "widget": {
+            "name": "type"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "device",
+          "name": "device",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "title": "Load CLIP (Qwen3-VL 4B, reads the prompt)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.1",
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "qwen3vl_4b_int8_convrot.safetensors",
+        "flux3",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3vl_4b_int8_convrot.safetensors",
+        "type": "flux3",
+        "device": "default"
+      },
+      "color": "#f66744",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 3,
+      "type": "VAELoader",
+      "pos": [
+        0,
+        518
+      ],
+      "size": [
+        420,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "vae_name",
+          "name": "vae_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            5,
+            10
+          ]
+        }
+      ],
+      "title": "Load VAE (Flux 2 VAE)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.1",
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "flux2-vae.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "flux2-vae.safetensors"
+      },
+      "color": "#f66744",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 4,
+      "type": "PixaromaLoadImageMini",
+      "pos": [
+        460,
+        218
+      ],
+      "size": [
+        366,
+        420
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            12,
+            13,
+            21
+          ]
+        },
+        {
+          "localized_name": "image_info",
+          "name": "image_info",
+          "type": "PIX_IMAGE_INFO",
+          "links": null
+        }
+      ],
+      "title": "Load Image Mini Pixaroma (1. your picture)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaLoadImageMini"
+      },
+      "widgets_values": [
+        "Ep39 Room.jpg",
+        "image",
+        ""
+      ],
+      "widgets_values_named": {
+        "image": "Ep39 Room.jpg",
+        "upload": "image",
+        "pixaroma_load_image_mini_ui": ""
+      },
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 5,
+      "type": "PixaromaSketch",
+      "pos": [
+        866,
+        218
+      ],
+      "size": [
+        720,
+        900
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "localized_name": "prompt",
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            16
+          ]
+        },
+        {
+          "localized_name": "mask",
+          "name": "mask",
+          "type": "MASK",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "title": "Sketch Pixaroma (2. draw a box, write the change)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaSketch",
+        "sketchState": {
+          "v": 1,
+          "marks": [
+            {
+              "type": "box",
+              "color": "red",
+              "w": "M",
+              "pts": [
+                [
+                  0.05,
+                  0.57
+                ],
+                [
+                  0.42,
+                  0.97
+                ]
+              ],
+              "note": "replace the wicker armchair with a dark green leather armchair with rounded arms, a deep buttoned back and short dark wooden legs"
+            }
+          ],
+          "removeMarks": true,
+          "picAspect": 1
+        }
+      },
+      "widgets_values": [],
+      "widgets_values_named": {},
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 6,
+      "type": "PixaromaSeed",
+      "pos": [
+        460,
+        716
+      ],
+      "size": [
+        320,
+        86
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "title": "Seed Pixaroma (3. fixed or random)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaSeed",
+        "seedState": "{\"seed\":2,\"mode\":\"fixed\",\"compact\":true,\"digits\":16}"
+      },
+      "widgets_values": [
+        {
+          "seed": 2,
+          "mode": "fixed",
+          "compact": true,
+          "digits": 16
+        }
+      ],
+      "widgets_values_named": {
+        "seed_ui": {
+          "seed": 2,
+          "mode": "fixed",
+          "compact": true,
+          "digits": 16
+        }
+      },
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 7,
+      "type": "PixaromaInpaintCrop",
+      "pos": [
+        1626,
+        218
+      ],
+      "size": [
+        384,
+        558
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 13
+        },
+        {
+          "localized_name": "mask",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": 14
+        },
+        {
+          "localized_name": "size_mode",
+          "name": "size_mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "size_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "target",
+          "name": "target",
+          "type": "INT",
+          "widget": {
+            "name": "target"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "multiple",
+          "name": "multiple",
+          "type": "COMBO",
+          "widget": {
+            "name": "multiple"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "context_px",
+          "name": "context_px",
+          "type": "INT",
+          "widget": {
+            "name": "context_px"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "mask_grow",
+          "name": "mask_grow",
+          "type": "INT",
+          "widget": {
+            "name": "mask_grow"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "mask_blur",
+          "name": "mask_blur",
+          "type": "INT",
+          "widget": {
+            "name": "mask_blur"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "softness",
+          "name": "softness",
+          "type": "INT",
+          "widget": {
+            "name": "softness"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "blend_mode",
+          "name": "blend_mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "blend_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "invert_mask",
+          "name": "invert_mask",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "invert_mask"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            15
+          ]
+        },
+        {
+          "localized_name": "mask",
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        },
+        {
+          "localized_name": "crop_info",
+          "name": "crop_info",
+          "type": "PIXAROMA_CROP_INFO",
+          "links": [
+            19
+          ]
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "title": "Inpaint Crop Pixaroma (cuts out the box area)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaInpaintCrop"
+      },
+      "widgets_values": [
+        "keep shape (long side)",
+        1024,
+        8,
+        96,
+        8,
+        4,
+        16,
+        "mask",
+        false,
+        null,
+        {
+          "state_json": "{}"
+        }
+      ],
+      "widgets_values_named": {
+        "size_mode": "keep shape (long side)",
+        "target": 1024,
+        "multiple": 8,
+        "context_px": 96,
+        "mask_grow": 8,
+        "mask_blur": 4,
+        "softness": 16,
+        "blend_mode": "mask",
+        "invert_mask": false,
+        "Open mask editor": null,
+        "InpaintCropWidget": {
+          "state_json": "{}"
+        }
+      },
+      "color": "#40254f",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 8,
+      "type": "CLIPTextEncode",
+      "pos": [
+        2050,
+        218
+      ],
+      "size": [
+        400,
+        88
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1
+        },
+        {
+          "localized_name": "text",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            2,
+            3
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (reads the edit prompt)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.1",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "text": ""
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 9,
+      "type": "ConditioningZeroOut",
+      "pos": [
+        2050,
+        362
+      ],
+      "size": [
+        338,
+        26
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "conditioning",
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "title": "ConditioningZeroOut (empty negative)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.1",
+        "Node name for S&R": "ConditioningZeroOut"
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 10,
+      "type": "ReferenceMultiLatent",
+      "pos": [
+        2050,
+        444
+      ],
+      "size": [
+        380,
+        162
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "positive",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 3
+        },
+        {
+          "localized_name": "negative",
+          "name": "negative",
+          "shape": 7,
+          "type": "CONDITIONING",
+          "link": 4
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 5
+        },
+        {
+          "localized_name": "image0",
+          "name": "images.image0",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 15
+        },
+        {
+          "localized_name": "image1",
+          "name": "images.image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "resolution",
+          "name": "resolution",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "resolution"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "megapixels",
+          "name": "resolution.megapixels",
+          "type": "FLOAT",
+          "widget": {
+            "name": "resolution.megapixels"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "positive",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            7
+          ]
+        },
+        {
+          "localized_name": "negative",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            8
+          ]
+        },
+        {
+          "localized_name": "empty_latent",
+          "name": "empty_latent",
+          "type": "LATENT",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "title": "Set Reference Multi Latent (the cut-out area)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.1",
+        "Node name for S&R": "ReferenceMultiLatent"
+      },
+      "widgets_values": [
+        "resize",
+        1
+      ],
+      "widgets_values_named": {
+        "resolution": "resize",
+        "resolution.megapixels": 1
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 11,
+      "type": "KSampler",
+      "pos": [
+        2050,
+        662
+      ],
+      "size": [
+        270,
+        262
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 6
+        },
+        {
+          "localized_name": "positive",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 7
+        },
+        {
+          "localized_name": "negative",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 8
+        },
+        {
+          "localized_name": "latent_image",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 11
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 17
+        },
+        {
+          "localized_name": "steps",
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "sampler_name",
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "scheduler",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "denoise",
+          "name": "denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "denoise"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "LATENT",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "title": "KSampler (16 steps)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.1",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "fixed",
+        16,
+        1,
+        "euler",
+        "simple",
+        1
+      ],
+      "widgets_values_named": {
+        "seed": 0,
+        "control_after_generate": "fixed",
+        "steps": 16,
+        "cfg": 1,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "denoise": 1
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 12,
+      "type": "VAEDecode",
+      "pos": [
+        2050,
+        980
+      ],
+      "size": [
+        284,
+        46
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "samples",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 9
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "title": "VAE Decode (latent to picture)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.41.1",
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 13,
+      "type": "PixaromaInpaintStitch",
+      "pos": [
+        2050,
+        1104
+      ],
+      "size": [
+        342,
+        146
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 18
+        },
+        {
+          "localized_name": "mask",
+          "name": "mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "localized_name": "crop_info",
+          "name": "crop_info",
+          "shape": 7,
+          "type": "PIXAROMA_CROP_INFO",
+          "link": 19
+        },
+        {
+          "localized_name": "softness",
+          "name": "softness",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "softness"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "blend_mode",
+          "name": "blend_mode",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "blend_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "color_match",
+          "name": "color_match",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "color_match"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            20,
+            22
+          ]
+        },
+        {
+          "localized_name": "original",
+          "name": "original",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "Inpaint Stitch Pixaroma (pastes it back)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaInpaintStitch"
+      },
+      "widgets_values": [
+        96,
+        "from crop",
+        "off"
+      ],
+      "widgets_values_named": {
+        "softness": 96,
+        "blend_mode": "from crop",
+        "color_match": "off"
+      },
+      "color": "#40254f",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 14,
+      "type": "PixaromaSaveImage",
+      "pos": [
+        2490,
+        218
+      ],
+      "size": [
+        474,
+        820
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 20
+        },
+        {
+          "localized_name": "name",
+          "name": "name",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "title": "Save Image Pixaroma (saves the result)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaSaveImage",
+        "saveImageState": "{\"version\":1,\"folder\":\"\",\"pattern\":\"Flux 3 Klein Box Edit/image_%counter%\",\"format\":\"png\",\"quality\":100,\"embedWorkflow\":true,\"civitaiMeta\":false,\"saveOnRun\":true,\"dateStyle\":\"yyyy-MM-dd\",\"counterDigits\":3,\"folded\":false,\"hideBarWhenFolded\":false,\"webpLossless\":false,\"inputSubfolders\":false,\"showOpen\":true,\"showCopy\":true,\"showFolder\":true,\"showPng\":true,\"showJpg\":true,\"showWebp\":true}"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "pixaroma_save_image": ""
+      },
+      "color": "#4f2525",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 15,
+      "type": "PixaromaCompare",
+      "pos": [
+        3004,
+        218
+      ],
+      "size": [
+        474,
+        540
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "image1",
+          "name": "image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 21
+        },
+        {
+          "localized_name": "image2",
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 22
+        }
+      ],
+      "outputs": [],
+      "title": "Image Compare Pixaroma (before and after, drag across it)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaCompare",
+        "compareState": {
+          "mode": 0,
+          "showWhich": 0,
+          "opacity": 0.5,
+          "images": []
+        }
+      },
+      "color": "#4f2525",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 16,
+      "type": "PixaromaLabel",
+      "pos": [
+        -289,
+        98
+      ],
+      "size": [
+        443,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaLabel"
+      },
+      "widgets_values": [
+        "{\"text\":\"Flux 3 Klein - Edit inside a Box\",\"fontSize\":31,\"fontFamily\":\"Arial\",\"fontColor\":\"#ffffff\",\"textAlign\":\"left\",\"backgroundColor\":\"#f66744\",\"padding\":10,\"borderRadius\":0,\"opacity\":1,\"fontWeight\":\"normal\",\"lineHeight\":1}"
+      ],
+      "widgets_values_named": {
+        "label_json": "{\"text\":\"Flux 3 Klein - Edit inside a Box\",\"fontSize\":31,\"fontFamily\":\"Arial\",\"fontColor\":\"#ffffff\",\"textAlign\":\"left\",\"backgroundColor\":\"#f66744\",\"padding\":10,\"borderRadius\":0,\"opacity\":1,\"fontWeight\":\"normal\",\"lineHeight\":1}"
+      },
+      "color": "rgba(0,0,0,0)",
+      "bgcolor": "rgba(0,0,0,0)"
+    },
+    {
+      "id": 17,
+      "type": "PixaromaInfo",
+      "pos": [
+        -289,
+        189
+      ],
+      "size": [
+        249,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>MODELS AND NODES USED IN THIS WORKFLOW</h1><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;FLUX 3 needs <b>ComfyUI 0.41.0 or newer</b>, the first version with FLUX 3. On an older ComfyUI, Load CLIP has no <b>flux3</b> type and some nodes show red: update ComfyUI first.</p><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;FLUX 3 needs a free approval first (one time only)</h2><p>\\n\\n</p><p>Black Forest Labs keeps the FLUX 3 files behind a short approval on Hugging Face. Until you do it, every FLUX 3 download link below answers <i>\\\"Access to model ... is restricted ... Please log in\\\"</i>.</p><p>\\n\\n</p><ol><li>Log in to Hugging Face (a free account).</li><li>Open the FLUX 3 model page with the button below and click <b>Agree and access repository</b>. Access is given at once.</li><li>Now the download links below work, in the same browser.</li></ol><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">FLUX 3 Klein on Hugging Face</a></span>&nbsp;</p><p>\\n\\n</p><p><span data-ic=\\\"idea\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Downloading with ComfyUI-Manager or a script needs a Hugging Face token as well (<code>hf auth login</code>). In the browser, being logged in is enough.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load Diffusion Model</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy/resolve/main/diffusion_models/flux3-image-klein-int8-convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download flux3-image-klein-int8-convrot.safetensors<span class=\\\"pix-note-btnsize\\\">5.83 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/diffusion_models/flux3</div><p>\\n\\n</p><p>Create the <code>flux3</code> folder if it does not exist.</p><p>\\n\\n</p><p>Take the file WITHOUT <code>base</code> in its name: that is the <b>distilled</b> (fast) model these workflows use. The files with <code>base</code> in the name are the <b>base</b> model, made for training LoRAs: it needs CFG 3.5 and 25 to 50 steps, and at the settings here (15 or 16 steps, CFG 1) its pictures come out smeared and broken.</p><p>\\n\\n</p><p>Already have <code>flux3_image_klein_sd_int8_convrot.safetensors</code>? That is the same file under its first name (ComfyUI's own template used it at launch). Pick it in this node instead of downloading it again.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"CLIP\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load CLIP</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy/resolve/main/text_encoders/qwen3vl_4b_int8_convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download qwen3vl_4b_int8_convrot.safetensors<span class=\\\"pix-note-btnsize\\\">4.86 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/text_encoders</div><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"VAE\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load VAE</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy/resolve/main/vae/flux2-vae.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download flux2-vae.safetensors<span class=\\\"pix-note-btnsize\\\">336 MB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/vae</div><p>\\n\\n</p><p>The same file as Flux 2 Klein: if you have it, skip this one.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;License</h2><p>\\n\\n</p><p>FLUX 3 Image Klein is released under the <b>FLUX Kommunity License</b>. You may use the pictures commercially only while your yearly revenue (all the money coming in, before costs), together with any company you belong to, is <b>under US$5 million</b>. Read it before you use the model for paid work.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">FLUX 3 Klein model page</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;After placing the files, restart ComfyUI or refresh model lists using the <b>R</b> shortcut.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"nodes-installed\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Nodes Installed from Manager</h2><p>\\n\\n</p><ul><li>Pixaroma: <b>update to the latest version</b> (these workflows need at least <b>1.4.183</b>). A node shows red or missing? Update Pixaroma.</li></ul><p>\\n\\n</p><p><b>Which version is the newest?</b> The <b>Latest Pixaroma version</b> button shows it and what is new in it. The help page has the update steps for every kind of install.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/latest/?need=1.4.183\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Latest Pixaroma version</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/#update\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">How to update Pixaroma</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"puzzle\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Something missing?</h2><p>\\n\\n</p><p>Each button opens a short video that shows the fix, with the steps written under it.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/missing-nodes/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Red or missing nodes</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/missing-models/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">A model file is missing</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/refresh/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Buttons missing after an update</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"pixaroma\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Resources</h2><p>\\n\\n</p><p>\\n  <a class=\\\"pix-note-discord\\\" href=\\\"https://discord.com/invite/gggpkVgBf3\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Join Discord</a>&nbsp;\\n  <a class=\\\"pix-note-yt\\\" href=\\\"https://www.youtube.com/@pixaroma\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Pixaroma YouTube Channel</a>&nbsp;\\n  <span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/report/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Ask for help</a></span>&nbsp;\\n</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Download Models\",\"icon\":\"download-model\",\"color\":\"#f66744\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>MODELS AND NODES USED IN THIS WORKFLOW</h1><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;FLUX 3 needs <b>ComfyUI 0.41.0 or newer</b>, the first version with FLUX 3. On an older ComfyUI, Load CLIP has no <b>flux3</b> type and some nodes show red: update ComfyUI first.</p><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;FLUX 3 needs a free approval first (one time only)</h2><p>\\n\\n</p><p>Black Forest Labs keeps the FLUX 3 files behind a short approval on Hugging Face. Until you do it, every FLUX 3 download link below answers <i>\\\"Access to model ... is restricted ... Please log in\\\"</i>.</p><p>\\n\\n</p><ol><li>Log in to Hugging Face (a free account).</li><li>Open the FLUX 3 model page with the button below and click <b>Agree and access repository</b>. Access is given at once.</li><li>Now the download links below work, in the same browser.</li></ol><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">FLUX 3 Klein on Hugging Face</a></span>&nbsp;</p><p>\\n\\n</p><p><span data-ic=\\\"idea\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Downloading with ComfyUI-Manager or a script needs a Hugging Face token as well (<code>hf auth login</code>). In the browser, being logged in is enough.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load Diffusion Model</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy/resolve/main/diffusion_models/flux3-image-klein-int8-convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download flux3-image-klein-int8-convrot.safetensors<span class=\\\"pix-note-btnsize\\\">5.83 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/diffusion_models/flux3</div><p>\\n\\n</p><p>Create the <code>flux3</code> folder if it does not exist.</p><p>\\n\\n</p><p>Take the file WITHOUT <code>base</code> in its name: that is the <b>distilled</b> (fast) model these workflows use. The files with <code>base</code> in the name are the <b>base</b> model, made for training LoRAs: it needs CFG 3.5 and 25 to 50 steps, and at the settings here (15 or 16 steps, CFG 1) its pictures come out smeared and broken.</p><p>\\n\\n</p><p>Already have <code>flux3_image_klein_sd_int8_convrot.safetensors</code>? That is the same file under its first name (ComfyUI's own template used it at launch). Pick it in this node instead of downloading it again.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"CLIP\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load CLIP</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy/resolve/main/text_encoders/qwen3vl_4b_int8_convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download qwen3vl_4b_int8_convrot.safetensors<span class=\\\"pix-note-btnsize\\\">4.86 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/text_encoders</div><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"VAE\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load VAE</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy/resolve/main/vae/flux2-vae.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download flux2-vae.safetensors<span class=\\\"pix-note-btnsize\\\">336 MB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/vae</div><p>\\n\\n</p><p>The same file as Flux 2 Klein: if you have it, skip this one.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;License</h2><p>\\n\\n</p><p>FLUX 3 Image Klein is released under the <b>FLUX Kommunity License</b>. You may use the pictures commercially only while your yearly revenue (all the money coming in, before costs), together with any company you belong to, is <b>under US$5 million</b>. Read it before you use the model for paid work.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">FLUX 3 Klein model page</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;After placing the files, restart ComfyUI or refresh model lists using the <b>R</b> shortcut.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"nodes-installed\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Nodes Installed from Manager</h2><p>\\n\\n</p><ul><li>Pixaroma: <b>update to the latest version</b> (these workflows need at least <b>1.4.183</b>). A node shows red or missing? Update Pixaroma.</li></ul><p>\\n\\n</p><p><b>Which version is the newest?</b> The <b>Latest Pixaroma version</b> button shows it and what is new in it. The help page has the update steps for every kind of install.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/latest/?need=1.4.183\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Latest Pixaroma version</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/#update\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">How to update Pixaroma</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"puzzle\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Something missing?</h2><p>\\n\\n</p><p>Each button opens a short video that shows the fix, with the steps written under it.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/missing-nodes/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Red or missing nodes</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/missing-models/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">A model file is missing</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/refresh/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Buttons missing after an update</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"pixaroma\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Resources</h2><p>\\n\\n</p><p>\\n  <a class=\\\"pix-note-discord\\\" href=\\\"https://discord.com/invite/gggpkVgBf3\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Join Discord</a>&nbsp;\\n  <a class=\\\"pix-note-yt\\\" href=\\\"https://www.youtube.com/@pixaroma\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Pixaroma YouTube Channel</a>&nbsp;\\n  <span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/report/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Ask for help</a></span>&nbsp;\\n</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Download Models\",\"icon\":\"download-model\",\"color\":\"#f66744\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 18,
+      "type": "PixaromaInfo",
+      "pos": [
+        -289,
+        270
+      ],
+      "size": [
+        191,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>HOW TO USE</h1><p>\\n\\n</p><p>Draw a box on your picture and write what goes in it. FLUX 3 changes only the box area: apart from a soft edge of about 110 px around the box, everything stays exactly your picture. The demo swaps the wicker armchair for a green leather one.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"to-do\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Steps</h2><p>\\n\\n</p><ol><li>Load your picture in <b>Load Image Mini Pixaroma</b>.</li><li>On <b>Sketch Pixaroma</b>, delete the demo box, pick the <b>box</b> tool and drag a box around what to change, or around an empty spot where something should go. Make the box the size you want the new thing to be, then type the change in its note: <i>replace the wicker armchair with ...</i> or <i>add a framed painting of ...</i></li><li>Leave the seed on <b>F</b> to repeat a result, or switch it to <b>R</b> to try a new one every Run.</li><li>Press <b>Run</b>. Drag across <b>Image Compare Pixaroma</b> to see before and after.</li></ol><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"prompt\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Writing the note</h2><p>\\n\\n</p><ul><li>Write it as an instruction, with colour, material and shape: <i>replace the wicker armchair with a dark green leather armchair with rounded arms, a deep buttoned back and short dark wooden legs</i>.</li><li>Sketch turns the note into the prompt (you can read it on the node): <i>Inside the red box: ... Remove all the colored marks ...</i>. FLUX 3 never sees the red box, only the cut-out area, and in our tests that sentence worked exactly as well as a plain prompt.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"workflow-v3\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;How it works</h2><p>\\n\\n</p><ul><li>The box becomes a <b>mask</b>. <b>Inpaint Crop</b> cuts out the box with some of the picture around it and makes it bigger, FLUX 3 changes only that piece, and <b>Inpaint Stitch</b> pastes it back with a soft edge.</li><li>Why not give FLUX 3 the picture with the red box drawn on it? We tried: it kept the red box in the result every time.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Good to know</h2><p>\\n\\n</p><ul><li>In our tests both jobs worked on every seed: <b>replacing</b> the armchair and <b>adding</b> a painting to the empty wall. The painting often came out a little smaller than its box.</li><li>On a plain wall the redrawn area can come out a little lighter or warmer and show as a faint patch. This workflow sets <b>softness</b> on Inpaint Stitch to <b>96</b>, a wide soft edge that hid it in our tests. If a patch still shows, raise the softness, try <b>color_match</b> <i>subtle</i>, or a new seed.</li><li>Tested with one box per Run.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"question-mark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Something not working?</h2><p>\\n\\n</p><p>Each button opens the answer on the Pixaroma help page.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/faq/#q-save-other-folder\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Save to your own folder</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/look/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Nodes look different from the video</a></span>&nbsp;</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"How to Use\",\"icon\":\"to-do\",\"color\":\"#2a9d8f\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>HOW TO USE</h1><p>\\n\\n</p><p>Draw a box on your picture and write what goes in it. FLUX 3 changes only the box area: apart from a soft edge of about 110 px around the box, everything stays exactly your picture. The demo swaps the wicker armchair for a green leather one.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"to-do\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Steps</h2><p>\\n\\n</p><ol><li>Load your picture in <b>Load Image Mini Pixaroma</b>.</li><li>On <b>Sketch Pixaroma</b>, delete the demo box, pick the <b>box</b> tool and drag a box around what to change, or around an empty spot where something should go. Make the box the size you want the new thing to be, then type the change in its note: <i>replace the wicker armchair with ...</i> or <i>add a framed painting of ...</i></li><li>Leave the seed on <b>F</b> to repeat a result, or switch it to <b>R</b> to try a new one every Run.</li><li>Press <b>Run</b>. Drag across <b>Image Compare Pixaroma</b> to see before and after.</li></ol><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"prompt\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Writing the note</h2><p>\\n\\n</p><ul><li>Write it as an instruction, with colour, material and shape: <i>replace the wicker armchair with a dark green leather armchair with rounded arms, a deep buttoned back and short dark wooden legs</i>.</li><li>Sketch turns the note into the prompt (you can read it on the node): <i>Inside the red box: ... Remove all the colored marks ...</i>. FLUX 3 never sees the red box, only the cut-out area, and in our tests that sentence worked exactly as well as a plain prompt.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"workflow-v3\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;How it works</h2><p>\\n\\n</p><ul><li>The box becomes a <b>mask</b>. <b>Inpaint Crop</b> cuts out the box with some of the picture around it and makes it bigger, FLUX 3 changes only that piece, and <b>Inpaint Stitch</b> pastes it back with a soft edge.</li><li>Why not give FLUX 3 the picture with the red box drawn on it? We tried: it kept the red box in the result every time.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Good to know</h2><p>\\n\\n</p><ul><li>In our tests both jobs worked on every seed: <b>replacing</b> the armchair and <b>adding</b> a painting to the empty wall. The painting often came out a little smaller than its box.</li><li>On a plain wall the redrawn area can come out a little lighter or warmer and show as a faint patch. This workflow sets <b>softness</b> on Inpaint Stitch to <b>96</b>, a wide soft edge that hid it in our tests. If a patch still shows, raise the softness, try <b>color_match</b> <i>subtle</i>, or a new seed.</li><li>Tested with one box per Run.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"question-mark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Something not working?</h2><p>\\n\\n</p><p>Each button opens the answer on the Pixaroma help page.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/faq/#q-save-other-folder\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Save to your own folder</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/look/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Nodes look different from the video</a></span>&nbsp;</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"How to Use\",\"icon\":\"to-do\",\"color\":\"#2a9d8f\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 19,
+      "type": "PixaromaInfo",
+      "pos": [
+        -289,
+        351
+      ],
+      "size": [
+        186,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>WHAT EACH NODE DOES</h1><p>\\n\\n</p><p>The colour of a node tells you what kind of node it is. Nothing here needs changing except the blue ones.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Models to download</h2><p>\\n\\n</p><p>Orange. Each one needs a file from the <b>Download Models</b> note.</p><p>\\n\\n</p><ul><li><b>Load Diffusion Model (FLUX 3 Klein, distilled)</b> - The image model, <b>FLUX 3 Image Klein</b> from Black Forest Labs, the <b>distilled</b> version (no <code>base</code> in the file name): 16 steps for an edit, CFG 1. It makes a picture from words AND changes a picture you give it.</li><li><b>Load CLIP (Qwen3-VL 4B, reads the prompt)</b> - Reads your prompt and turns the words into something FLUX 3 understands. The type must be <b>flux3</b>.</li><li><b>Load VAE (Flux 2 VAE)</b> - Turns the finished render into a picture. FLUX 3 uses the same VAE as Flux 2.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The steps you set</h2><p>\\n\\n</p><p>Blue, and numbered. These are the only nodes you need to touch.</p><p>\\n\\n</p><ul><li><b>Load Image Mini Pixaroma (1. your picture)</b> - The picture to change. Click it to upload your own, or pick one from the list.</li><li><b>Sketch Pixaroma (2. draw a box, write the change)</b> - Draw a box around what to change, or around an empty spot where something should go, and write the change in the box's note. Only the box area changes. Its <b>mask</b> output tells Inpaint Crop where the box is; its <b>prompt</b> output is the note, written as an instruction for FLUX 3.</li><li><b>Seed Pixaroma (3. fixed or random)</b> - The seed. <b>F</b> (fixed) repeats the result, <b>R</b> (random) tries a new one every Run. The demo uses seed <b>2</b>.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The helpers</h2><p>\\n\\n</p><p>Purple. They run by themselves and do the small jobs between the steps.</p><p>\\n\\n</p><ul><li><b>Inpaint Crop Pixaroma (cuts out the box area)</b> - Cuts out the box with <b>96 px</b> of the picture around it, so FLUX 3 sees what surrounds it, and enlarges it to 1024 px on its long side. Leave it as it is. Do not paint in its own mask editor: a mask painted there replaces the box from Sketch.</li><li><b>Inpaint Stitch Pixaroma (pastes it back)</b> - Pastes the changed area back into your picture with a wide soft edge (<b>softness 96</b>), so it blends into a plain wall. The soft edge reaches about 110 px past the box; everything farther out is your original picture, pixel for pixel. If a faint patch still shows, raise <b>softness</b>, try <b>color_match</b> <i>subtle</i>, or a new seed.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The work</h2><p>\\n\\n</p><p>Green. They run by themselves.</p><p>\\n\\n</p><ul><li><b>CLIP Text Encode (reads the edit prompt)</b> - Reads the prompt through the text encoder.</li><li><b>ConditioningZeroOut (empty negative)</b> - An empty negative prompt. FLUX 3 distilled runs at CFG 1, where the negative does nothing, but the KSampler still needs one plugged in.</li><li><b>Set Reference Multi Latent (the cut-out area)</b> - Hands the cut-out area to FLUX 3 as the picture to change, for the prompt and for the empty negative. Set to <b>resize, 1 megapixel</b>. It also gives the KSampler its blank canvas, the shape of the cut-out area.</li><li><b>KSampler (16 steps)</b> - The edit: 16 steps, CFG 1, euler, simple, the settings of Black Forest Labs' own FLUX 3 Klein distilled edit workflow.</li><li><b>VAE Decode (latent to picture)</b> - Turns the finished render into a picture.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The result</h2><p>\\n\\n</p><p>Dark red, at the end.</p><p>\\n\\n</p><ul><li><b>Save Image Pixaroma (saves the result)</b> - Saves each result as PNG into <code>ComfyUI/output/Flux 3 Klein Box Edit</code> and shows it on the node.</li><li><b>Image Compare Pixaroma (before and after, drag across it)</b> - Your picture and the result on top of each other. Drag across it: only the box area changes.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"info\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Readouts</h2><p>\\n\\n</p><p>Dark. Nothing to set: they show you what happened.</p><p>\\n\\n</p><ul><li><b>Run Timer</b> - The dark clock above the result shows how long the last Run took.</li></ul><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Nodes Info\",\"icon\":\"node-v5\",\"color\":\"#3d7cc9\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>WHAT EACH NODE DOES</h1><p>\\n\\n</p><p>The colour of a node tells you what kind of node it is. Nothing here needs changing except the blue ones.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Models to download</h2><p>\\n\\n</p><p>Orange. Each one needs a file from the <b>Download Models</b> note.</p><p>\\n\\n</p><ul><li><b>Load Diffusion Model (FLUX 3 Klein, distilled)</b> - The image model, <b>FLUX 3 Image Klein</b> from Black Forest Labs, the <b>distilled</b> version (no <code>base</code> in the file name): 16 steps for an edit, CFG 1. It makes a picture from words AND changes a picture you give it.</li><li><b>Load CLIP (Qwen3-VL 4B, reads the prompt)</b> - Reads your prompt and turns the words into something FLUX 3 understands. The type must be <b>flux3</b>.</li><li><b>Load VAE (Flux 2 VAE)</b> - Turns the finished render into a picture. FLUX 3 uses the same VAE as Flux 2.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The steps you set</h2><p>\\n\\n</p><p>Blue, and numbered. These are the only nodes you need to touch.</p><p>\\n\\n</p><ul><li><b>Load Image Mini Pixaroma (1. your picture)</b> - The picture to change. Click it to upload your own, or pick one from the list.</li><li><b>Sketch Pixaroma (2. draw a box, write the change)</b> - Draw a box around what to change, or around an empty spot where something should go, and write the change in the box's note. Only the box area changes. Its <b>mask</b> output tells Inpaint Crop where the box is; its <b>prompt</b> output is the note, written as an instruction for FLUX 3.</li><li><b>Seed Pixaroma (3. fixed or random)</b> - The seed. <b>F</b> (fixed) repeats the result, <b>R</b> (random) tries a new one every Run. The demo uses seed <b>2</b>.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The helpers</h2><p>\\n\\n</p><p>Purple. They run by themselves and do the small jobs between the steps.</p><p>\\n\\n</p><ul><li><b>Inpaint Crop Pixaroma (cuts out the box area)</b> - Cuts out the box with <b>96 px</b> of the picture around it, so FLUX 3 sees what surrounds it, and enlarges it to 1024 px on its long side. Leave it as it is. Do not paint in its own mask editor: a mask painted there replaces the box from Sketch.</li><li><b>Inpaint Stitch Pixaroma (pastes it back)</b> - Pastes the changed area back into your picture with a wide soft edge (<b>softness 96</b>), so it blends into a plain wall. The soft edge reaches about 110 px past the box; everything farther out is your original picture, pixel for pixel. If a faint patch still shows, raise <b>softness</b>, try <b>color_match</b> <i>subtle</i>, or a new seed.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The work</h2><p>\\n\\n</p><p>Green. They run by themselves.</p><p>\\n\\n</p><ul><li><b>CLIP Text Encode (reads the edit prompt)</b> - Reads the prompt through the text encoder.</li><li><b>ConditioningZeroOut (empty negative)</b> - An empty negative prompt. FLUX 3 distilled runs at CFG 1, where the negative does nothing, but the KSampler still needs one plugged in.</li><li><b>Set Reference Multi Latent (the cut-out area)</b> - Hands the cut-out area to FLUX 3 as the picture to change, for the prompt and for the empty negative. Set to <b>resize, 1 megapixel</b>. It also gives the KSampler its blank canvas, the shape of the cut-out area.</li><li><b>KSampler (16 steps)</b> - The edit: 16 steps, CFG 1, euler, simple, the settings of Black Forest Labs' own FLUX 3 Klein distilled edit workflow.</li><li><b>VAE Decode (latent to picture)</b> - Turns the finished render into a picture.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The result</h2><p>\\n\\n</p><p>Dark red, at the end.</p><p>\\n\\n</p><ul><li><b>Save Image Pixaroma (saves the result)</b> - Saves each result as PNG into <code>ComfyUI/output/Flux 3 Klein Box Edit</code> and shows it on the node.</li><li><b>Image Compare Pixaroma (before and after, drag across it)</b> - Your picture and the result on top of each other. Drag across it: only the box area changes.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"info\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Readouts</h2><p>\\n\\n</p><p>Dark. Nothing to set: they show you what happened.</p><p>\\n\\n</p><ul><li><b>Run Timer</b> - The dark clock above the result shows how long the last Run took.</li></ul><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Nodes Info\",\"icon\":\"node-v5\",\"color\":\"#3d7cc9\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 20,
+      "type": "PixaromaInfo",
+      "pos": [
+        -289,
+        432
+      ],
+      "size": [
+        180,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>RUN TIMES</h1><p>\\n\\n</p><p>Measured on a <b>24 GB RTX 4090</b> with this workflow, with the models already loaded. A different card gives different numbers, but the shape holds: the time grows with the number of pictures and their size.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><table class=\\\"pix-note-grid\\\" style=\\\"--pix-note-grid-border: #f66744; --pix-note-grid-header-bg: #1a1a1a\\\"><thead><tr><th>What</th><th>Time</th></tr></thead><tbody><tr><td>One box edit (the cut-out area at about 1 megapixel)</td><td>about 4.5 s</td></tr></tbody></table><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The first Run of the session</h2><p>\\n\\n</p><p>The first Run after starting ComfyUI also has to load the models from disk (FLUX 3 and its text encoder, about 11 GB together), so it takes longer. After that they stay loaded.</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Run Times\",\"icon\":\"run-timer\",\"color\":\"#3f9a4f\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>RUN TIMES</h1><p>\\n\\n</p><p>Measured on a <b>24 GB RTX 4090</b> with this workflow, with the models already loaded. A different card gives different numbers, but the shape holds: the time grows with the number of pictures and their size.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><table class=\\\"pix-note-grid\\\" style=\\\"--pix-note-grid-border: #f66744; --pix-note-grid-header-bg: #1a1a1a\\\"><thead><tr><th>What</th><th>Time</th></tr></thead><tbody><tr><td>One box edit (the cut-out area at about 1 megapixel)</td><td>about 4.5 s</td></tr></tbody></table><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The first Run of the session</h2><p>\\n\\n</p><p>The first Run after starting ComfyUI also has to load the models from disk (FLUX 3 and its text encoder, about 11 GB together), so it takes longer. After that they stay loaded.</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Run Times\",\"icon\":\"run-timer\",\"color\":\"#3f9a4f\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 21,
+      "type": "PixaromaRunTimer",
+      "pos": [
+        2823,
+        110
+      ],
+      "size": [
+        141,
+        50
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "31d41930d0064480e347b401870bfe60339293db",
+        "Node name for S&R": "PixaromaRunTimer"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      8,
+      0,
+      "CLIP"
+    ],
+    [
+      2,
+      8,
+      0,
+      9,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      6,
+      1,
+      0,
+      11,
+      0,
+      "MODEL"
+    ],
+    [
+      7,
+      10,
+      0,
+      11,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      8,
+      10,
+      1,
+      11,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      9,
+      11,
+      0,
+      12,
+      0,
+      "LATENT"
+    ],
+    [
+      10,
+      3,
+      0,
+      12,
+      1,
+      "VAE"
+    ],
+    [
+      11,
+      10,
+      2,
+      11,
+      3,
+      "LATENT"
+    ],
+    [
+      12,
+      4,
+      0,
+      5,
+      0,
+      "IMAGE"
+    ],
+    [
+      13,
+      4,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      14,
+      5,
+      2,
+      7,
+      1,
+      "MASK"
+    ],
+    [
+      16,
+      5,
+      1,
+      8,
+      1,
+      "STRING"
+    ],
+    [
+      17,
+      6,
+      0,
+      11,
+      4,
+      "INT"
+    ],
+    [
+      18,
+      12,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      19,
+      7,
+      2,
+      13,
+      2,
+      "PIXAROMA_CROP_INFO"
+    ],
+    [
+      20,
+      13,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      21,
+      4,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      13,
+      0,
+      15,
+      1,
+      "IMAGE"
+    ],
+    [
+      3,
+      8,
+      0,
+      10,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      4,
+      9,
+      0,
+      10,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      5,
+      3,
+      0,
+      10,
+      2,
+      "VAE"
+    ],
+    [
+      15,
+      7,
+      0,
+      10,
+      3,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.65,
+      "offset": [
+        458.2307692307692,
+        147.3846153846154
+      ]
+    }
+  },
+  "version": 0.4
+}

@@ -1,0 +1,61 @@
+QWEN IMAGE 2.1 PROMPT WRITER FOR CLAUDE
+=======================================
+
+The same prompt writer as the Gemini Gem in the folder next door, as ONE file
+you paste into Claude. You give it a short idea, it gives back one long,
+detailed text-to-image prompt for Qwen Image 2.1, in a box you copy into the
+Text to Image workflows in this folder.
+
+
+SETUP
+-----
+
+There is nothing to upload and nothing that can be left half set up.
+
+1. Open a new Claude conversation.
+2. Open "Qwen Image 2.1 Text to Image - CLAUDE (paste) v1.txt", select all of
+   it, paste it into the message box and send it. Claude answers with one short
+   line saying it is ready.
+3. If you have Claude Projects, you can instead put the file in the project's
+   instructions, and every chat in that project already knows it.
+
+
+USING IT
+--------
+
+1. Send an idea with a subject and at least one detail:
+     a cat sleeping on a windowsill at sunset
+     a poster for a jazz festival
+     macro photo of a bee on a sunflower
+   Any language works; the prompt comes back in English.
+
+2. Copy the box and paste it into the Prompt node of a workflow in the
+   "1. Text to Image" folder: 1 (Text to Image), 2 (Low VRAM) or 6 (Turbo).
+
+3. Pick the size in the Sizes node. The prompt never names a size:
+     tall, such as 832 x 1248, for people, characters and posters
+     wide, such as 1248 x 832 or 1376 x 768, for scenes
+     1024 x 1024 for logos and stickers
+
+4. To change it, say so in the same chat:
+     make it night / closer / make it a watercolour / give her a red coat
+   It writes the whole prompt again and keeps everything you did not ask to
+   change. For a completely new idea, just send it; a new chat is not needed.
+
+
+TIPS
+----
+
+* WORDS IN THE PICTURE: put them in double quotes in your idea, such as
+  a logo for a coffee shop called "PIXA COFFEE"
+  Qwen spells quoted words exactly, typos included, so check them.
+* POSTERS, COVERS, LABELS, INFOGRAPHICS with no words given: it writes
+  believable short lines (title, date, place). Swap in your own before you run.
+* TRANSPARENT BACKGROUND: say "transparent background" or "sticker", and use
+  workflow "5. Qwen Image 2.1 - Text to Image - Transparent PNG".
+* SELFIES: the phone stays out of the picture, with the arm holding it
+  reaching out of the frame. Ask for a mirror selfie to see the phone.
+* MACRO: "macro photo of ..." makes the small thing fill the frame.
+* Made-up signs, labels and t-shirt prints are left out on purpose: small
+  made-up words come out as scrambled letters in Qwen. If you want words
+  somewhere, write them in quotes in your idea.
