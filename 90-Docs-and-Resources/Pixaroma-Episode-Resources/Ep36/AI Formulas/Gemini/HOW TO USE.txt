@@ -1,0 +1,88 @@
+QWEN IMAGE 2.1 PROMPT WRITER FOR GOOGLE GEMINI
+==============================================
+
+A Gem that turns a short idea into one long, detailed text-to-image prompt for
+Qwen Image 2.1. You paste that prompt into the Text to Image workflows in this
+folder. It never makes pictures itself: the whole reply is the prompt, in a box
+with a copy button.
+
+
+THE EASY WAY: USE MY GEM
+------------------------
+
+Open this link, it is free and needs only a Google account:
+
+  https://gemini.google.com/gem/1E8HAcT9e3tJ1d_7ntg2chmU54p_zSGt1?usp=sharing
+
+Bookmark it. The "New chat" button in Gemini's sidebar opens plain Gemini, not
+the Gem.
+
+
+MAKE YOUR OWN COPY (OPTIONAL)
+-----------------------------
+
+1. Go to Gemini on the web, open Gems, and create a New Gem.
+2. Name it, for example "Qwen Image 2.1 Prompts".
+3. Open the file "Qwen Image 2.1 Text to Image - INSTRUCTIONS (paste) v11.txt",
+   select all of it, and paste it into the Gem's Instructions box.
+   There is no knowledge file to upload for this one.
+4. Leave "Default tool" on "No default tool". Never give it an image tool.
+5. Save, then open the Gem's own chat.
+
+
+USING IT
+--------
+
+1. Type an idea with a subject and at least one detail:
+     a cat sleeping on a windowsill at sunset
+     a poster for a jazz festival
+     macro photo of a bee on a sunflower
+   A single word such as "dragon" may fail on Gemini's side.
+   Any language works; the prompt comes back in English.
+
+2. Copy the box and paste it into the Prompt node of a workflow in the
+   "1. Text to Image" folder: 1 (Text to Image), 2 (Low VRAM) or 6 (Turbo).
+
+3. Pick the size in the Sizes node. The prompt never names a size:
+     tall, such as 832 x 1248, for people, characters and posters
+     wide, such as 1248 x 832 or 1376 x 768, for scenes
+     1024 x 1024 for logos and stickers
+
+4. To change it, say so in the same chat:
+     make it night / closer / make it a watercolour / give her a red coat
+   It writes the whole prompt again and keeps everything you did not ask to
+   change.
+
+
+TIPS
+----
+
+* WORDS IN THE PICTURE: put them in double quotes in your idea, such as
+  a logo for a coffee shop called "PIXA COFFEE"
+  Qwen spells quoted words exactly, typos included, so check them.
+* POSTERS, COVERS, LABELS, INFOGRAPHICS with no words given: the Gem writes
+  believable short lines (title, date, place). Swap in your own before you run.
+* TRANSPARENT BACKGROUND: say "transparent background" or "sticker". The Gem
+  uses Qwen's own two sentences that switch transparency on. Use workflow
+  "5. Qwen Image 2.1 - Text to Image - Transparent PNG".
+* SELFIES: ask for a selfie and the phone stays out of the picture, with the arm
+  holding it reaching out of the frame. Ask for a mirror selfie if you want to
+  see the phone.
+* MACRO: "macro photo of ..." makes the small thing fill the frame.
+* The Gem leaves made-up signs, labels and t-shirt prints out on purpose:
+  small made-up words come out as scrambled letters in Qwen. If you want words
+  somewhere, write them in quotes in your idea.
+
+
+IF SOMETHING GOES WRONG
+-----------------------
+
+* "Sorry, something went wrong" or a box that starts twice: that is Gemini, not
+  the Gem. Send the idea again or word it a little differently. Insect ideas do
+  this more often than others.
+* After about 40 to 50 requests in an hour Gemini starts refusing everything for
+  a while, even in a normal chat. Wait and try later.
+* Gemini knows roughly where you are and may put your city on a poster. Name the
+  place yourself or edit that line.
+* A poster can still get a made-up date or website line. Replace it before you
+  run.

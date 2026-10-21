@@ -1,0 +1,58 @@
+MING IMAGE 0.1 PROMPT WRITER FOR CLAUDE
+=======================================
+
+The same prompt writer as the Gemini Gem in the folder next door, as ONE file
+you paste into Claude. You give it a short idea, it gives back Ming Image's own
+structured JSON prompt, in a box you copy into the Text to Image workflow in
+this folder. In the tests it was the cleanest of all: every word spelled right
+and no extra text of its own.
+
+
+SETUP
+-----
+
+There is nothing to upload and nothing that can be left half set up.
+
+1. Open a new Claude conversation.
+2. Open "Ming Image 0.1 Text to Image - CLAUDE (paste) v10.txt", select all of
+   it, paste it into the message box and send it. Claude answers with one short
+   line saying it is ready.
+3. If you have Claude Projects, you can instead put the file in the project's
+   instructions, and every chat in that project already knows it.
+
+
+USING IT
+--------
+
+1. Send your idea and the size you picked in step 1 of the workflow:
+     a poster for a summer jazz night, portrait 832 x 1248
+     a character select screen for a sci-fi fighting game with four fighters,
+     landscape 1920 x 1080
+     a minimal logo for a coffee shop called NORTH BREW, square 1024 x 1024
+   Without a size it uses 832 x 1248, or a wide or square size when the idea
+   clearly needs one, and writes the size at the top of its answer. Set step 1
+   of the workflow to the same size.
+
+2. Copy the box and paste it into "2. Add a prompt" in the workflow
+   "1. Ming Image 0.1 - Text to Image" (in the "1. Text to Image" folder),
+   then Run.
+
+3. To change it, say so in the same chat:
+     make the background dark navy / add the line "TICKETS 15 EUR" / bigger title
+     more 3D, Pixar look / cleaner, fewer details / portrait 1080 x 1920
+   A small change (a colour, a word, one part) keeps the rest as it was. A big
+   change (a new look, cleaner, a new size) writes the whole design again with
+   everything you asked for so far.
+   For a new idea, just send it; a new chat is not needed.
+
+
+TIPS
+----
+
+* WORDS IN THE PICTURE: write every word you want in the picture in your idea,
+  in capitals or in quotes. Ming spells given words well.
+* NUMBERS OF THINGS: say how many ("six icons", "four fighters", "three plans").
+* 3D LETTERING: keep 3D words short, one word of up to about six letters per
+  line. Longer lines come out right as flat text.
+* It adds a few short words a design needs (a button label, a subtitle, chart
+  labels, dish names on a menu). Swap in your own before you run.

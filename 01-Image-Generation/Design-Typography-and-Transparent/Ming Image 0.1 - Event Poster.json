@@ -1,0 +1,1196 @@
+{
+  "id": "cd9588c7-cf2f-52a6-8fba-a991c69f2aff",
+  "revision": 0,
+  "last_node_id": 22,
+  "last_link_id": 22,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UNETLoader",
+      "pos": [
+        -1032,
+        218
+      ],
+      "size": [
+        496,
+        82
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.37.2",
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "ming\\ming_image_0.1_design_int8_convrot.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "ming\\ming_image_0.1_design_int8_convrot.safetensors",
+        "weight_dtype": "default"
+      },
+      "color": "#f66744",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 2,
+      "type": "CLIPLoader",
+      "pos": [
+        -1032,
+        356
+      ],
+      "size": [
+        496,
+        106
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.37.2",
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors",
+        "qwen_image",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors",
+        "type": "qwen_image",
+        "device": "default"
+      },
+      "color": "#f66744",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 3,
+      "type": "VAELoader",
+      "pos": [
+        -1032,
+        518
+      ],
+      "size": [
+        496,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.37.2",
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "ming_image_vae_bf16.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "ming_image_vae_bf16.safetensors"
+      },
+      "color": "#f66744",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 4,
+      "type": "PixaromaSizes",
+      "pos": [
+        -500,
+        218
+      ],
+      "size": [
+        240,
+        414
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            3,
+            20
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            4,
+            21
+          ]
+        }
+      ],
+      "title": "1. Pick Orientation and Size",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "7a1cf573034fe14e29c1200d884531231a003e2e",
+        "Node name for S&R": "PixaromaSizes",
+        "sizesState": "{\"version\":1,\"sizes\":[[1024,1024],[1152,864],[1248,832],[1376,768],[1920,1080],[1536,1536],[2560,1440],[2048,2048],[2432,1824],[2496,1664]],\"selected\":2,\"orientation\":\"portrait\",\"snap\":8,\"accent\":null,\"collapsed\":false,\"starred\":[\"2048x2048\",\"1824x2432\",\"1664x2496\",\"1440x2560\"],\"w\":832,\"h\":1248}"
+      },
+      "widgets_values": [
+        {
+          "version": 1,
+          "sizes": [
+            [
+              1024,
+              1024
+            ],
+            [
+              1152,
+              864
+            ],
+            [
+              1248,
+              832
+            ],
+            [
+              1376,
+              768
+            ],
+            [
+              1920,
+              1080
+            ],
+            [
+              1536,
+              1536
+            ],
+            [
+              2560,
+              1440
+            ],
+            [
+              2048,
+              2048
+            ],
+            [
+              2432,
+              1824
+            ],
+            [
+              2496,
+              1664
+            ]
+          ],
+          "selected": 2,
+          "orientation": "portrait",
+          "snap": 8,
+          "accent": null,
+          "collapsed": false,
+          "starred": [
+            "2048x2048",
+            "1824x2432",
+            "1664x2496",
+            "1440x2560"
+          ],
+          "w": 832,
+          "h": 1248
+        }
+      ],
+      "widgets_values_named": {
+        "sizes_ui": {
+          "version": 1,
+          "sizes": [
+            [
+              1024,
+              1024
+            ],
+            [
+              1152,
+              864
+            ],
+            [
+              1248,
+              832
+            ],
+            [
+              1376,
+              768
+            ],
+            [
+              1920,
+              1080
+            ],
+            [
+              1536,
+              1536
+            ],
+            [
+              2560,
+              1440
+            ],
+            [
+              2048,
+              2048
+            ],
+            [
+              2432,
+              1824
+            ],
+            [
+              2496,
+              1664
+            ]
+          ],
+          "selected": 2,
+          "orientation": "portrait",
+          "snap": 8,
+          "accent": null,
+          "collapsed": false,
+          "starred": [
+            "2048x2048",
+            "1824x2432",
+            "1664x2496",
+            "1440x2560"
+          ],
+          "w": 832,
+          "h": 1248
+        }
+      },
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 5,
+      "type": "PixaromaPrompt",
+      "pos": [
+        -224,
+        218
+      ],
+      "size": [
+        496,
+        714
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "text",
+          "name": "text_in",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "title": "2. Add a prompt",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "7a1cf573034fe14e29c1200d884531231a003e2e",
+        "Node name for S&R": "PixaromaPrompt",
+        "promptState": {
+          "text": "{\n  \"canvas_settings\": {\n    \"aspect_ratio\": \"portrait, 832 x 1248 px\",\n    \"ambient_lighting\": \"Dramatic concert stage light: bright spotlights from above and behind the performer, deep shadows, the lower half fading to near black.\",\n    \"image_style\": \"Bold modern concert poster in black, white and orange: a black and white stage photo with heavy slab serif display type and orange accents.\"\n  },\n  \"layers\": [\n    {\n      \"description\": \"A dramatic black and white photo of a concert stage that fills the whole canvas: a cool 3D bunny rock star with round orange glasses singing into a microphone and playing an electric guitar, stage lights and a cheering crowd with raised hands behind, the lower half fading to near black.\",\n      \"coordinates\": \"cx: 0.500, cy: 0.500, w: 1.000, h: 1.000\",\n      \"hierarchy_and_relation\": \"The bottom layer behind all the text.\",\n      \"color_specs\": [\n        \"#000000\",\n        \"#FFFFFF\",\n        \"#7A7A7A\",\n        \"#F66744\"\n      ]\n    },\n    {\n      \"description\": \"A dark grey box with the orange words \\\"LOUDER THAN EVER\\\" in a bold condensed sans-serif.\",\n      \"coordinates\": \"cx: 0.500, cy: 0.285, w: 0.430, h: 0.045\",\n      \"hierarchy_and_relation\": \"Above the title, centered.\",\n      \"color_specs\": [\n        \"#2A2A2A\",\n        \"#F66744\"\n      ]\n    },\n    {\n      \"description\": \"The huge title word \\\"PIXA\\\" in a heavy white slab serif.\",\n      \"coordinates\": \"cx: 0.500, cy: 0.385, w: 0.640, h: 0.120\",\n      \"hierarchy_and_relation\": \"Directly under the tagline box, centered.\",\n      \"color_specs\": [\n        \"#FFFFFF\"\n      ]\n    },\n    {\n      \"description\": \"The huge title word \\\"FEST\\\" in the same heavy slab serif in bright orange.\",\n      \"coordinates\": \"cx: 0.500, cy: 0.500, w: 0.640, h: 0.120\",\n      \"hierarchy_and_relation\": \"Directly under the white title word.\",\n      \"color_specs\": [\n        \"#F66744\"\n      ]\n    },\n    {\n      \"description\": \"The small orange line \\\"8 PM - LATE\\\", then the date \\\"October 24th, 2026\\\" in a large bold white serif, then \\\"Pixaroma Arena\\\" in small white letters, stacked and centered.\",\n      \"coordinates\": \"cx: 0.500, cy: 0.655, w: 0.600, h: 0.130\",\n      \"hierarchy_and_relation\": \"Below the title.\",\n      \"color_specs\": [\n        \"#F66744\",\n        \"#FFFFFF\"\n      ]\n    },\n    {\n      \"description\": \"A thin orange line across with the white words \\\"Special Performance by\\\" in its middle, and below it three band names side by side in a bold orange serif, separated by thin vertical lines: \\\"Carrot Kings\\\", \\\"Neon Bunnies\\\" and \\\"Orange Riot\\\".\",\n      \"coordinates\": \"cx: 0.500, cy: 0.795, w: 0.700, h: 0.110\",\n      \"hierarchy_and_relation\": \"Below the date block.\",\n      \"color_specs\": [\n        \"#F66744\",\n        \"#FFFFFF\"\n      ]\n    },\n    {\n      \"description\": \"A solid orange bar with the black words \\\"GET TICKETS NOW\\\" in a bold condensed sans-serif.\",\n      \"coordinates\": \"cx: 0.500, cy: 0.915, w: 0.500, h: 0.050\",\n      \"hierarchy_and_relation\": \"At the bottom, centered.\",\n      \"color_specs\": [\n        \"#F66744\",\n        \"#000000\"\n      ]\n    }\n  ]\n}",
+          "order": "mine",
+          "sep": ", ",
+          "accent": null,
+          "showExpanded": false
+        }
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "pix_prompt_ui": ""
+      },
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 6,
+      "type": "PixaromaSeed",
+      "pos": [
+        -224,
+        1000
+      ],
+      "size": [
+        496,
+        86
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "title": "3. Seed Random/Fixed?",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "7a1cf573034fe14e29c1200d884531231a003e2e",
+        "Node name for S&R": "PixaromaSeed",
+        "seedState": "{\"seed\":2026,\"mode\":\"random\",\"compact\":true,\"digits\":16}"
+      },
+      "widgets_values": [
+        {
+          "seed": 2026,
+          "mode": "random",
+          "compact": true,
+          "digits": 16
+        }
+      ],
+      "widgets_values_named": {
+        "seed_ui": {
+          "seed": 2026,
+          "mode": "random",
+          "compact": true,
+          "digits": 16
+        }
+      },
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 8,
+      "type": "EmptyLatentImage",
+      "pos": [
+        308,
+        444
+      ],
+      "size": [
+        400,
+        106
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 3
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.37.2",
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        832,
+        1248,
+        1
+      ],
+      "widgets_values_named": {
+        "width": 832,
+        "height": 1248,
+        "batch_size": 1
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 9,
+      "type": "KSampler",
+      "pos": [
+        308,
+        606
+      ],
+      "size": [
+        400,
+        262
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 22
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 17
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 18
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 8
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.37.2",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "randomize",
+        12,
+        1,
+        "euler",
+        "simple",
+        1
+      ],
+      "widgets_values_named": {
+        "seed": 0,
+        "control_after_generate": "randomize",
+        "steps": 12,
+        "cfg": 1,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "denoise": 1
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 10,
+      "type": "VAEDecode",
+      "pos": [
+        308,
+        924
+      ],
+      "size": [
+        400,
+        46
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 10
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.37.2",
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 11,
+      "type": "PixaromaPreview",
+      "pos": [
+        744,
+        218
+      ],
+      "size": [
+        480,
+        560
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "7a1cf573034fe14e29c1200d884531231a003e2e",
+        "Node name for S&R": "PixaromaPreview"
+      },
+      "widgets_values": [
+        "poster",
+        "save"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "poster",
+        "save_mode": "save"
+      },
+      "color": "#4f2525",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 12,
+      "type": "PixaromaRunTimer",
+      "pos": [
+        1083,
+        110
+      ],
+      "size": [
+        141,
+        50
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "7a1cf573034fe14e29c1200d884531231a003e2e",
+        "Node name for S&R": "PixaromaRunTimer"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 13,
+      "type": "PixaromaLabel",
+      "pos": [
+        -1321,
+        98
+      ],
+      "size": [
+        441,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "80b307e8d1882fd933959cb0ea94a26d143557b5",
+        "Node name for S&R": "PixaromaLabel",
+        "aux_id": "pixaroma/ComfyUI-Pixaroma"
+      },
+      "widgets_values": [
+        "{\"text\":\"Ming Image 0.1 - Event Poster\",\"fontSize\":31,\"fontFamily\":\"Arial\",\"fontColor\":\"#ffffff\",\"textAlign\":\"left\",\"backgroundColor\":\"#f66744\",\"padding\":10,\"borderRadius\":0,\"opacity\":1,\"fontWeight\":\"normal\",\"lineHeight\":1}"
+      ],
+      "widgets_values_named": {
+        "label_json": "{\"text\":\"Ming Image 0.1 - Event Poster\",\"fontSize\":31,\"fontFamily\":\"Arial\",\"fontColor\":\"#ffffff\",\"textAlign\":\"left\",\"backgroundColor\":\"#f66744\",\"padding\":10,\"borderRadius\":0,\"opacity\":1,\"fontWeight\":\"normal\",\"lineHeight\":1}"
+      },
+      "color": "rgba(0,0,0,0)",
+      "bgcolor": "rgba(0,0,0,0)"
+    },
+    {
+      "id": 14,
+      "type": "PixaromaInfo",
+      "pos": [
+        -1321,
+        189
+      ],
+      "size": [
+        249,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "1227d9898f9d5137533df750611ca97e8c738f3d",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>MODELS AND NODES USED IN THIS WORKFLOW</h1><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load Diffusion Model</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/Ming-Image/resolve/main/diffusion_models/ming_image_0.1_design_int8_convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download ming_image_0.1_design_int8_convrot.safetensors<span class=\\\"pix-note-btnsize\\\">5.75 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/diffusion_models/ming</div><p>\\n\\n</p><p>Create the <code>ming</code> folder if it does not exist.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/Ming-Image/tree/main/diffusion_models\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">More versions</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/inclusionAI/Ming-Image-0.1-Design\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Ming Image model card</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"CLIP\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load CLIP</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/Ming-Image/resolve/main/text_encoders/ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors<span class=\\\"pix-note-btnsize\\\">18.17 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/text_encoders</div><p>\\n\\n</p><p>This is the big file: the text encoder is three times the size of the image model.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"VAE\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load VAE</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/Ming-Image/resolve/main/vae/ming_image_vae_bf16.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download ming_image_vae_bf16.safetensors<span class=\\\"pix-note-btnsize\\\">242 MB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/vae</div><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;License: MIT, commercial use allowed</h2><p>\\n\\n</p><p>Ming Image 0.1 Design is released by inclusionAI (Ant Group) under the <b>MIT License</b>. You can use what it makes for your own work and for commercial work.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/inclusionAI/Ming-Image-0.1-Design/blob/main/LICENSE\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">READ LICENSE</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;After placing the files, restart ComfyUI or refresh model lists using the <b>R</b> shortcut.</p><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Needs <b>ComfyUI 0.38.0 or newer</b>, the first version that can load Ming Image. If the model fails to load, update ComfyUI.</p><p>\\n\\n</p><h2><span data-ic=\\\"nodes-installed\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Nodes Installed from Manager</h2><p>\\n\\n</p><ul><li>Pixaroma</li></ul><p>\\n\\n</p><p><b>How to update Pixaroma nodes:</b> the help page has the steps for every kind of install, in the <b>Update the nodes</b> part.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/#update\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">How to update Pixaroma</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"pixaroma\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Resources</h2><p>\\n\\n</p><p>\\n  <a class=\\\"pix-note-discord\\\" href=\\\"https://discord.com/invite/gggpkVgBf3\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Join Discord</a>&nbsp;\\n  <a class=\\\"pix-note-yt\\\" href=\\\"https://www.youtube.com/@pixaroma\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Pixaroma YouTube Channel</a>&nbsp;\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Download Models\",\"icon\":\"download-model\",\"color\":\"#f66744\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>MODELS AND NODES USED IN THIS WORKFLOW</h1><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load Diffusion Model</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/Ming-Image/resolve/main/diffusion_models/ming_image_0.1_design_int8_convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download ming_image_0.1_design_int8_convrot.safetensors<span class=\\\"pix-note-btnsize\\\">5.75 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/diffusion_models/ming</div><p>\\n\\n</p><p>Create the <code>ming</code> folder if it does not exist.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/Ming-Image/tree/main/diffusion_models\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">More versions</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/inclusionAI/Ming-Image-0.1-Design\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Ming Image model card</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"CLIP\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load CLIP</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/Ming-Image/resolve/main/text_encoders/ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors<span class=\\\"pix-note-btnsize\\\">18.17 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/text_encoders</div><p>\\n\\n</p><p>This is the big file: the text encoder is three times the size of the image model.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"VAE\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load VAE</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/Ming-Image/resolve/main/vae/ming_image_vae_bf16.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download ming_image_vae_bf16.safetensors<span class=\\\"pix-note-btnsize\\\">242 MB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/vae</div><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;License: MIT, commercial use allowed</h2><p>\\n\\n</p><p>Ming Image 0.1 Design is released by inclusionAI (Ant Group) under the <b>MIT License</b>. You can use what it makes for your own work and for commercial work.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/inclusionAI/Ming-Image-0.1-Design/blob/main/LICENSE\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">READ LICENSE</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;After placing the files, restart ComfyUI or refresh model lists using the <b>R</b> shortcut.</p><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Needs <b>ComfyUI 0.38.0 or newer</b>, the first version that can load Ming Image. If the model fails to load, update ComfyUI.</p><p>\\n\\n</p><h2><span data-ic=\\\"nodes-installed\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Nodes Installed from Manager</h2><p>\\n\\n</p><ul><li>Pixaroma</li></ul><p>\\n\\n</p><p><b>How to update Pixaroma nodes:</b> the help page has the steps for every kind of install, in the <b>Update the nodes</b> part.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/#update\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">How to update Pixaroma</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"pixaroma\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Resources</h2><p>\\n\\n</p><p>\\n  <a class=\\\"pix-note-discord\\\" href=\\\"https://discord.com/invite/gggpkVgBf3\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Join Discord</a>&nbsp;\\n  <a class=\\\"pix-note-yt\\\" href=\\\"https://www.youtube.com/@pixaroma\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Pixaroma YouTube Channel</a>&nbsp;\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Download Models\",\"icon\":\"download-model\",\"color\":\"#f66744\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 15,
+      "type": "PixaromaInfo",
+      "pos": [
+        -1321,
+        270
+      ],
+      "size": [
+        186,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "1227d9898f9d5137533df750611ca97e8c738f3d",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>WHAT EACH NODE DOES</h1><p>\\n\\n</p><p>The colour of a node tells you what kind of node it is. Nothing here needs changing except the blue ones.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Models to download</h2><p>\\n\\n</p><p>Orange. Each one needs a file from the list in the note above.</p><p>\\n\\n</p><ul><li><b>Load Diffusion Model (Ming Image 0.1 Design)</b> - The image model itself, 6B, from inclusionAI (Ant Group). It is made for design: posters, flyers, ads, UI screens, infographics, anything with text.</li><li><b>Load CLIP (Ling mini 2.0)</b> - Reads your prompt.</li><li><b>Load VAE</b> - Turns the finished render into a picture. It works with four channels, red, green, blue and transparency, which is how this model can make transparent pictures.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The speed node</h2><p>\\n\\n</p><p>Teal, above the graph.</p><p>\\n\\n</p><ul><li><b>Model Attention Backend</b> - Set to <b>comfy kitchen attention</b>, a faster way to do the model's attention maths. The Run Times note has the numbers. On a graphics card that cannot use it, ComfyUI falls back to normal attention by itself.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The numbers you set</h2><p>\\n\\n</p><p>Blue, and numbered. These are the only nodes you have to touch.</p><p>\\n\\n</p><ul><li><b>1. Pick Orientation and Size</b> - The size of the picture. The starred sizes are the 2K sizes Ming lists for this model, and they look best; the others are about 1 megapixel and much faster. 1920 x 1080 is Full HD, exact. The orientation switch flips a size between portrait and landscape.</li><li><b>2. Add a prompt</b> - What you want to see. Put every word you want written in the picture in quotes, like the words in the demo prompt.</li><li><b>3. Seed Random/Fixed?</b> - Fixed repeats the same picture, Random rolls a new one each Run.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The helper</h2><p>\\n\\n</p><p>Purple. It runs by itself.</p><p>\\n\\n</p><ul><li><b>ModelSamplingFlux</b> - Tunes the model to the size of the picture: a big picture gets a different noise schedule than a small one. It reads the width and height from step 1. 1.15 and 0.5 are the settings from ComfyUI's own template.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The render</h2><p>\\n\\n</p><p>Green. These run by themselves.</p><p>\\n\\n</p><ul><li><b>CLIP Text Encode</b> - Reads your prompt through the text encoder.</li><li><b>ConditioningZeroOut</b> - An empty negative prompt. This model is made for CFG 1, where the negative does nothing, but the KSampler needs one plugged in.</li><li><b>Empty Latent Image</b> - The blank canvas, at the size from step 1.</li><li><b>KSampler</b> - The render: 12 steps, euler, simple, CFG 1, the settings from the model card. ComfyUI's own template uses a chain of custom sampler nodes instead; on the same seed the KSampler made exactly the same picture, pixel for pixel.</li><li><b>VAE Decode</b> - Turns the finished render into a picture.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The result</h2><p>\\n\\n</p><p>Dark red, at the end.</p><p>\\n\\n</p><ul><li><b>Preview Image Pixaroma</b> - Shows the picture and saves it to your output folder as a PNG. PNG keeps transparency, so a transparent picture stays transparent.</li></ul><p>\\n\\n</p><p>The dark <b>Run Timer</b> above it shows how long the last Run took. Handy when you are trying sizes against the table in the other note.</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Nodes Info\",\"icon\":\"node-v5\",\"color\":\"#3d7cc9\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>WHAT EACH NODE DOES</h1><p>\\n\\n</p><p>The colour of a node tells you what kind of node it is. Nothing here needs changing except the blue ones.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Models to download</h2><p>\\n\\n</p><p>Orange. Each one needs a file from the list in the note above.</p><p>\\n\\n</p><ul><li><b>Load Diffusion Model (Ming Image 0.1 Design)</b> - The image model itself, 6B, from inclusionAI (Ant Group). It is made for design: posters, flyers, ads, UI screens, infographics, anything with text.</li><li><b>Load CLIP (Ling mini 2.0)</b> - Reads your prompt.</li><li><b>Load VAE</b> - Turns the finished render into a picture. It works with four channels, red, green, blue and transparency, which is how this model can make transparent pictures.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The speed node</h2><p>\\n\\n</p><p>Teal, above the graph.</p><p>\\n\\n</p><ul><li><b>Model Attention Backend</b> - Set to <b>comfy kitchen attention</b>, a faster way to do the model's attention maths. The Run Times note has the numbers. On a graphics card that cannot use it, ComfyUI falls back to normal attention by itself.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The numbers you set</h2><p>\\n\\n</p><p>Blue, and numbered. These are the only nodes you have to touch.</p><p>\\n\\n</p><ul><li><b>1. Pick Orientation and Size</b> - The size of the picture. The starred sizes are the 2K sizes Ming lists for this model, and they look best; the others are about 1 megapixel and much faster. 1920 x 1080 is Full HD, exact. The orientation switch flips a size between portrait and landscape.</li><li><b>2. Add a prompt</b> - What you want to see. Put every word you want written in the picture in quotes, like the words in the demo prompt.</li><li><b>3. Seed Random/Fixed?</b> - Fixed repeats the same picture, Random rolls a new one each Run.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The helper</h2><p>\\n\\n</p><p>Purple. It runs by itself.</p><p>\\n\\n</p><ul><li><b>ModelSamplingFlux</b> - Tunes the model to the size of the picture: a big picture gets a different noise schedule than a small one. It reads the width and height from step 1. 1.15 and 0.5 are the settings from ComfyUI's own template.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The render</h2><p>\\n\\n</p><p>Green. These run by themselves.</p><p>\\n\\n</p><ul><li><b>CLIP Text Encode</b> - Reads your prompt through the text encoder.</li><li><b>ConditioningZeroOut</b> - An empty negative prompt. This model is made for CFG 1, where the negative does nothing, but the KSampler needs one plugged in.</li><li><b>Empty Latent Image</b> - The blank canvas, at the size from step 1.</li><li><b>KSampler</b> - The render: 12 steps, euler, simple, CFG 1, the settings from the model card. ComfyUI's own template uses a chain of custom sampler nodes instead; on the same seed the KSampler made exactly the same picture, pixel for pixel.</li><li><b>VAE Decode</b> - Turns the finished render into a picture.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The result</h2><p>\\n\\n</p><p>Dark red, at the end.</p><p>\\n\\n</p><ul><li><b>Preview Image Pixaroma</b> - Shows the picture and saves it to your output folder as a PNG. PNG keeps transparency, so a transparent picture stays transparent.</li></ul><p>\\n\\n</p><p>The dark <b>Run Timer</b> above it shows how long the last Run took. Handy when you are trying sizes against the table in the other note.</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Nodes Info\",\"icon\":\"node-v5\",\"color\":\"#3d7cc9\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 16,
+      "type": "PixaromaInfo",
+      "pos": [
+        -1321,
+        351
+      ],
+      "size": [
+        159,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "1227d9898f9d5137533df750611ca97e8c738f3d",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>SETTINGS</h1><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;What this workflow makes</h2><p>\\n\\n</p><p>An event poster or flyer with Ming Image 0.1 Design. The demo is PIXA FEST, a rock night in black, white and orange: a black and white stage photo with the bunny rock star singing and playing guitar, the tagline in a dark box, the big PIXA FEST title, the time, date and place, three bands and a tickets bar. Every line came out right on 4 of 4 test seeds.</p><p>\\n\\n</p><p>To make your own, change the words in quotes: the tagline, the name, the date, the place, the bands. The bands and the place in the demo are made up. Give the real date, time and place: anything you do not give is left off, so the poster never shows a made-up website or phone number.</p><p>\\n\\n</p><p>The prompt is written in Ming's own layout format because it keeps every part in its place: the same poster written as a plain sentence put the bunny in front of the title on 2 of 4 seeds.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Full HD is exact</h2><p>\\n\\n</p><p>Asked for <b>1920 x 1080</b>, Ming makes exactly 1920 x 1080, no trimming. In portrait it is 1080 x 1920, for vertical video.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Transparent pictures</h2><p>\\n\\n</p><p>Ming can make a picture with a transparent background. Start the prompt with exactly one of Ming's fixed phrases, then describe the subject:</p><p>\\n\\n</p><p><code>RGBA, 4-channel, transparent background, [your subject]</code></p><p>\\n\\n</p><p>It needs a 2K size: at 2048 x 2048 the background came out transparent on <b>6 of 8</b> seeds, while at 1024 x 1024 it worked on <b>1 of 20</b>. Preview Image Pixaroma saves a PNG, which keeps the transparency.</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Settings\",\"icon\":\"gear\",\"color\":\"#2a9d8f\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>SETTINGS</h1><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;What this workflow makes</h2><p>\\n\\n</p><p>An event poster or flyer with Ming Image 0.1 Design. The demo is PIXA FEST, a rock night in black, white and orange: a black and white stage photo with the bunny rock star singing and playing guitar, the tagline in a dark box, the big PIXA FEST title, the time, date and place, three bands and a tickets bar. Every line came out right on 4 of 4 test seeds.</p><p>\\n\\n</p><p>To make your own, change the words in quotes: the tagline, the name, the date, the place, the bands. The bands and the place in the demo are made up. Give the real date, time and place: anything you do not give is left off, so the poster never shows a made-up website or phone number.</p><p>\\n\\n</p><p>The prompt is written in Ming's own layout format because it keeps every part in its place: the same poster written as a plain sentence put the bunny in front of the title on 2 of 4 seeds.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Full HD is exact</h2><p>\\n\\n</p><p>Asked for <b>1920 x 1080</b>, Ming makes exactly 1920 x 1080, no trimming. In portrait it is 1080 x 1920, for vertical video.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Transparent pictures</h2><p>\\n\\n</p><p>Ming can make a picture with a transparent background. Start the prompt with exactly one of Ming's fixed phrases, then describe the subject:</p><p>\\n\\n</p><p><code>RGBA, 4-channel, transparent background, [your subject]</code></p><p>\\n\\n</p><p>It needs a 2K size: at 2048 x 2048 the background came out transparent on <b>6 of 8</b> seeds, while at 1024 x 1024 it worked on <b>1 of 20</b>. Preview Image Pixaroma saves a PNG, which keeps the transparency.</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Settings\",\"icon\":\"gear\",\"color\":\"#2a9d8f\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 17,
+      "type": "ModelAttentionBackend",
+      "pos": [
+        -224,
+        94
+      ],
+      "size": [
+        300,
+        58
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "slot_index": 0,
+          "links": [
+            19
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.37.2",
+        "Node name for S&R": "ModelAttentionBackend"
+      },
+      "widgets_values": [
+        "comfy kitchen attention"
+      ],
+      "widgets_values_named": {
+        "attention": "comfy kitchen attention"
+      },
+      "color": "#25494f",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 18,
+      "type": "CLIPTextEncode",
+      "pos": [
+        308,
+        218
+      ],
+      "size": [
+        400,
+        88
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 14
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            16,
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.38.1",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "text": ""
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 19,
+      "type": "ConditioningZeroOut",
+      "pos": [
+        308,
+        362
+      ],
+      "size": [
+        400,
+        26
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.38.1",
+        "Node name for S&R": "ConditioningZeroOut"
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 20,
+      "type": "ModelSamplingFlux",
+      "pos": [
+        -500,
+        688
+      ],
+      "size": [
+        240,
+        130
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 19
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 20
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            22
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.38.1",
+        "Node name for S&R": "ModelSamplingFlux"
+      },
+      "widgets_values": [
+        1.15,
+        0.5,
+        832,
+        1248
+      ],
+      "widgets_values_named": {
+        "max_shift": 1.15,
+        "base_shift": 0.5,
+        "width": 832,
+        "height": 1248
+      },
+      "color": "#40254f",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 21,
+      "type": "PixaromaInfo",
+      "pos": [
+        -1321,
+        513
+      ],
+      "size": [
+        180,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "1227d9898f9d5137533df750611ca97e8c738f3d",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>RUN TIMES</h1><p>\\n\\n</p><p>Every number below was measured on a <b>24 GB RTX 4090</b> with this workflow and its own settings, each run on a fresh seed with the models already loaded. A different card gives different numbers, but the shape holds: the cost goes up with the pixels.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;How long a Run takes</h2><p>\\n\\n</p><table class=\\\"pix-note-grid\\\" style=\\\"--pix-note-grid-border: #f66744; --pix-note-grid-header-bg: #1a1a1a\\\"><thead><tr><th>Size</th><th>Pixels</th><th>12 steps</th></tr></thead><tbody><tr><td>1024 x 1024</td><td>about 1 MP</td><td>2.6 s</td></tr><tr><td>1152 x 864</td><td>about 1 MP</td><td>2.4 s</td></tr><tr><td>1248 x 832</td><td>about 1 MP</td><td>2.6 s</td></tr><tr><td>1376 x 768</td><td>about 1 MP</td><td>2.6 s</td></tr><tr><td>1920 x 1080</td><td>Full HD, about 2.1 MP</td><td>5.4 s</td></tr><tr><td>1536 x 1536</td><td>about 2.4 MP</td><td>6.1 s</td></tr><tr><td>2560 x 1440</td><td>1440p, about 3.7 MP, 2K</td><td>10 s</td></tr><tr><td>2048 x 2048</td><td>about 4.2 MP, 2K</td><td>12 s</td></tr><tr><td>2432 x 1824</td><td>about 4.4 MP, 2K</td><td>13 s</td></tr><tr><td>2496 x 1664</td><td>about 4.2 MP, 2K</td><td>12 s</td></tr></tbody></table><p>\\n\\n</p><p>The table lists the sizes landscape. Turned on its side to portrait, a size takes the same time: <b>2.4 s</b> for 1152 x 864 against <b>2.5 s</b> for 864 x 1152, and <b>12 s</b> for 2496 x 1664 against <b>12 s</b> for 1664 x 2496.</p><p>\\n\\n</p><p>This workflow opens at <b>832 x 1248</b>, about 1 megapixel: quick on any card that runs the model. The starred sizes are Ming's recommended 2K sizes. Switch to one for the picture you keep: four times the pixels, and transparency only works there (see below).</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Kitchen attention</h2><p>\\n\\n</p><p>The teal <b>Model Attention Backend</b> node is set to <b>comfy kitchen attention</b>, a faster way to do the attention maths. On the same seed at 2048 x 2048, it took <b>12 s</b>, against <b>18 s</b> with the normal <b>pytorch attention</b>. Both had the same layout and the same text; the details differed, so treat it as a different seed rather than a worse picture. To compare it yourself, switch the node to pytorch attention.</p><p>\\n\\n</p><p>It needs an Nvidia or AMD graphics card. On anything else ComfyUI falls back to normal attention by itself, so the workflow still runs.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The first Run of the session</h2><p>\\n\\n</p><p>The first Run after starting ComfyUI has to load <b>5.75 GB</b> of image model and <b>18.2 GB</b> of text encoder. Measured on a 1024 x 1024 picture: <b>10 s</b> with the models unloaded first, <b>2.5 s</b> once they were loaded. At 1664 x 2496: <b>19 s</b> against <b>12 s</b>.</p><p>\\n\\n</p><p>That was with the model files still in this machine's file cache. The very first load after switching the computer on reads them off the disk for real and will be slower; that case was not measured, so no number is given for it.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Smaller graphics cards</h2><p>\\n\\n</p><p>ComfyUI loads this model in pieces, so it does not have to fit on the card in one go. In a test where ComfyUI was told to use only about 8 GB of this card, every text to image run stayed within it, the 2K sizes included. With nothing limiting it, it took about 23 GB of this 24 GB card: ComfyUI uses the room it has.</p><p>\\n\\n</p><p>That test ran on a 4090, so it shows what fits, not how fast a smaller card is. A slower card takes longer, and a 2K picture takes about five times as long as a 1 MP one. That is why this workflow opens at a 1 MP size.</p><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;System RAM</h2><p>\\n\\n</p><p>With the whole card to itself, ComfyUI held 6 to 9 GB of RAM. The smaller the card, the more of the models wait in RAM instead: up to about 22 GB when it was told to use 6 GB of the card. Plan on 32 GB of RAM at the very least. A smaller version of the text encoder (w4a8, 12.8 GB) is in the More versions list; it was not tested here.</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Run Times\",\"icon\":\"run-timer\",\"color\":\"#3f9a4f\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>RUN TIMES</h1><p>\\n\\n</p><p>Every number below was measured on a <b>24 GB RTX 4090</b> with this workflow and its own settings, each run on a fresh seed with the models already loaded. A different card gives different numbers, but the shape holds: the cost goes up with the pixels.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;How long a Run takes</h2><p>\\n\\n</p><table class=\\\"pix-note-grid\\\" style=\\\"--pix-note-grid-border: #f66744; --pix-note-grid-header-bg: #1a1a1a\\\"><thead><tr><th>Size</th><th>Pixels</th><th>12 steps</th></tr></thead><tbody><tr><td>1024 x 1024</td><td>about 1 MP</td><td>2.6 s</td></tr><tr><td>1152 x 864</td><td>about 1 MP</td><td>2.4 s</td></tr><tr><td>1248 x 832</td><td>about 1 MP</td><td>2.6 s</td></tr><tr><td>1376 x 768</td><td>about 1 MP</td><td>2.6 s</td></tr><tr><td>1920 x 1080</td><td>Full HD, about 2.1 MP</td><td>5.4 s</td></tr><tr><td>1536 x 1536</td><td>about 2.4 MP</td><td>6.1 s</td></tr><tr><td>2560 x 1440</td><td>1440p, about 3.7 MP, 2K</td><td>10 s</td></tr><tr><td>2048 x 2048</td><td>about 4.2 MP, 2K</td><td>12 s</td></tr><tr><td>2432 x 1824</td><td>about 4.4 MP, 2K</td><td>13 s</td></tr><tr><td>2496 x 1664</td><td>about 4.2 MP, 2K</td><td>12 s</td></tr></tbody></table><p>\\n\\n</p><p>The table lists the sizes landscape. Turned on its side to portrait, a size takes the same time: <b>2.4 s</b> for 1152 x 864 against <b>2.5 s</b> for 864 x 1152, and <b>12 s</b> for 2496 x 1664 against <b>12 s</b> for 1664 x 2496.</p><p>\\n\\n</p><p>This workflow opens at <b>832 x 1248</b>, about 1 megapixel: quick on any card that runs the model. The starred sizes are Ming's recommended 2K sizes. Switch to one for the picture you keep: four times the pixels, and transparency only works there (see below).</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Kitchen attention</h2><p>\\n\\n</p><p>The teal <b>Model Attention Backend</b> node is set to <b>comfy kitchen attention</b>, a faster way to do the attention maths. On the same seed at 2048 x 2048, it took <b>12 s</b>, against <b>18 s</b> with the normal <b>pytorch attention</b>. Both had the same layout and the same text; the details differed, so treat it as a different seed rather than a worse picture. To compare it yourself, switch the node to pytorch attention.</p><p>\\n\\n</p><p>It needs an Nvidia or AMD graphics card. On anything else ComfyUI falls back to normal attention by itself, so the workflow still runs.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The first Run of the session</h2><p>\\n\\n</p><p>The first Run after starting ComfyUI has to load <b>5.75 GB</b> of image model and <b>18.2 GB</b> of text encoder. Measured on a 1024 x 1024 picture: <b>10 s</b> with the models unloaded first, <b>2.5 s</b> once they were loaded. At 1664 x 2496: <b>19 s</b> against <b>12 s</b>.</p><p>\\n\\n</p><p>That was with the model files still in this machine's file cache. The very first load after switching the computer on reads them off the disk for real and will be slower; that case was not measured, so no number is given for it.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Smaller graphics cards</h2><p>\\n\\n</p><p>ComfyUI loads this model in pieces, so it does not have to fit on the card in one go. In a test where ComfyUI was told to use only about 8 GB of this card, every text to image run stayed within it, the 2K sizes included. With nothing limiting it, it took about 23 GB of this 24 GB card: ComfyUI uses the room it has.</p><p>\\n\\n</p><p>That test ran on a 4090, so it shows what fits, not how fast a smaller card is. A slower card takes longer, and a 2K picture takes about five times as long as a 1 MP one. That is why this workflow opens at a 1 MP size.</p><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;System RAM</h2><p>\\n\\n</p><p>With the whole card to itself, ComfyUI held 6 to 9 GB of RAM. The smaller the card, the more of the models wait in RAM instead: up to about 22 GB when it was told to use 6 GB of the card. Plan on 32 GB of RAM at the very least. A smaller version of the text encoder (w4a8, 12.8 GB) is in the More versions list; it was not tested here.</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Run Times\",\"icon\":\"run-timer\",\"color\":\"#3f9a4f\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 22,
+      "type": "PixaromaInfo",
+      "pos": [
+        -1321,
+        432
+      ],
+      "size": [
+        182,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "1227d9898f9d5137533df750611ca97e8c738f3d",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>PROMPTING</h1><p>\\n\\n</p><h2><span data-ic=\\\"ai-brain\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Google Gemini Free Prompting Gem</h2><p>\\n\\n</p><p>A free Gem in Google Gemini that turns a short idea into the structured JSON prompt Ming understands best. Type your idea, copy its answer and paste it into <b>2. Add a prompt</b>.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://gemini.google.com/gem/1UQMFxbpInLPoz7nhmKzQxifNecffmAXA?usp=sharing\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Ming Image 0.1 Prompt Writer</a></span>&nbsp;</p><p>\\n\\n</p><ul><li>Tell it the size you picked in step 1, like <code>portrait 832 x 1248</code>. Without a size it uses 832 x 1248, or a wide or square size when the idea clearly needs one, and writes the size it chose at the top of its answer: set step 1 to match.</li><li>To change a design, just ask, like <code>make the background dark navy</code>. It writes the whole prompt again with only that part changed.</li><li>Say how many things you want (<code>six icons</code>, <code>four fighters</code>) and write every word you want in the picture.</li><li>Gemini sometimes adds a small extra line of its own, like door times or a slogan. Say <code>remove the extra text</code> and it writes the prompt again without it.</li><li>It only writes text. Ming makes the picture here, in ComfyUI.</li></ul><p>\\n\\n</p><p>Tested on about 60 design ideas, from game screens, app and website screens to posters, logos, infographics, menus and 3D lettering, each rendered twice in Ming: most came out right on both.</p><p>\\n\\n</p><p>The <b>AI Formulas</b> folder next to these workflows has the same prompt writer for <b>Claude</b>, which was the cleanest in the tests, and the Gemini instructions if you want your own copy of the Gem.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Writing the prompt yourself</h2><p>\\n\\n</p><ul><li>Describe the layout part by part, from the top to the bottom: the headline, the picture, the small print.</li><li>Put every word you want rendered in quotes, exactly as it should read.</li><li>Name the style, the material and the colours: \\\"thick rounded 3D letters made of smooth matte clay\\\", \\\"the P orange, the I and the X white, the A teal\\\".</li></ul><p>\\n\\n</p><p>For pages with a lot of text, like an infographic or a menu, Ming's own structured format works much better than a sentence: a JSON description of the canvas and of each part of the layout, with its position, from the back to the front. In a test with a five-row infographic, a plain prompt garbled the rows on 4 of 4 seeds, while the structured version kept all five rows on 4 of 4. Ming's guide shows the format:</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://github.com/inclusionAI/Ming-Image#text-to-image-prompt-rewriting\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Ming prompt guide</a></span>&nbsp;</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Prompting\",\"icon\":\"prompt\",\"color\":\"#8a5cc7\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>PROMPTING</h1><p>\\n\\n</p><h2><span data-ic=\\\"ai-brain\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Google Gemini Free Prompting Gem</h2><p>\\n\\n</p><p>A free Gem in Google Gemini that turns a short idea into the structured JSON prompt Ming understands best. Type your idea, copy its answer and paste it into <b>2. Add a prompt</b>.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://gemini.google.com/gem/1UQMFxbpInLPoz7nhmKzQxifNecffmAXA?usp=sharing\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Ming Image 0.1 Prompt Writer</a></span>&nbsp;</p><p>\\n\\n</p><ul><li>Tell it the size you picked in step 1, like <code>portrait 832 x 1248</code>. Without a size it uses 832 x 1248, or a wide or square size when the idea clearly needs one, and writes the size it chose at the top of its answer: set step 1 to match.</li><li>To change a design, just ask, like <code>make the background dark navy</code>. It writes the whole prompt again with only that part changed.</li><li>Say how many things you want (<code>six icons</code>, <code>four fighters</code>) and write every word you want in the picture.</li><li>Gemini sometimes adds a small extra line of its own, like door times or a slogan. Say <code>remove the extra text</code> and it writes the prompt again without it.</li><li>It only writes text. Ming makes the picture here, in ComfyUI.</li></ul><p>\\n\\n</p><p>Tested on about 60 design ideas, from game screens, app and website screens to posters, logos, infographics, menus and 3D lettering, each rendered twice in Ming: most came out right on both.</p><p>\\n\\n</p><p>The <b>AI Formulas</b> folder next to these workflows has the same prompt writer for <b>Claude</b>, which was the cleanest in the tests, and the Gemini instructions if you want your own copy of the Gem.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Writing the prompt yourself</h2><p>\\n\\n</p><ul><li>Describe the layout part by part, from the top to the bottom: the headline, the picture, the small print.</li><li>Put every word you want rendered in quotes, exactly as it should read.</li><li>Name the style, the material and the colours: \\\"thick rounded 3D letters made of smooth matte clay\\\", \\\"the P orange, the I and the X white, the A teal\\\".</li></ul><p>\\n\\n</p><p>For pages with a lot of text, like an infographic or a menu, Ming's own structured format works much better than a sentence: a JSON description of the canvas and of each part of the layout, with its position, from the back to the front. In a test with a five-row infographic, a plain prompt garbled the rows on 4 of 4 seeds, while the structured version kept all five rows on 4 of 4. Ming's guide shows the format:</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://github.com/inclusionAI/Ming-Image#text-to-image-prompt-rewriting\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Ming prompt guide</a></span>&nbsp;</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Prompting\",\"icon\":\"prompt\",\"color\":\"#8a5cc7\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    }
+  ],
+  "links": [
+    [
+      3,
+      4,
+      0,
+      8,
+      0,
+      "INT"
+    ],
+    [
+      4,
+      4,
+      1,
+      8,
+      1,
+      "INT"
+    ],
+    [
+      8,
+      8,
+      0,
+      9,
+      3,
+      "LATENT"
+    ],
+    [
+      9,
+      6,
+      0,
+      9,
+      4,
+      "INT"
+    ],
+    [
+      10,
+      9,
+      0,
+      10,
+      0,
+      "LATENT"
+    ],
+    [
+      11,
+      3,
+      0,
+      10,
+      1,
+      "VAE"
+    ],
+    [
+      12,
+      10,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      13,
+      1,
+      0,
+      17,
+      0,
+      "MODEL"
+    ],
+    [
+      14,
+      2,
+      0,
+      18,
+      0,
+      "CLIP"
+    ],
+    [
+      15,
+      5,
+      0,
+      18,
+      1,
+      "STRING"
+    ],
+    [
+      16,
+      18,
+      0,
+      19,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      17,
+      18,
+      0,
+      9,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      18,
+      19,
+      0,
+      9,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      19,
+      17,
+      0,
+      20,
+      0,
+      "MODEL"
+    ],
+    [
+      20,
+      4,
+      0,
+      20,
+      1,
+      "INT"
+    ],
+    [
+      21,
+      4,
+      1,
+      20,
+      2,
+      "INT"
+    ],
+    [
+      22,
+      20,
+      0,
+      9,
+      0,
+      "MODEL"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7614651000000003,
+      "offset": [
+        1501.5727094788772,
+        111.54465755765703
+      ]
+    },
+    "frontendVersion": "1.53.6",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

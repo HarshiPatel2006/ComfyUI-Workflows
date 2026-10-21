@@ -1,0 +1,96 @@
+MING IMAGE 0.1 PROMPT WRITER FOR GOOGLE GEMINI
+==============================================
+
+A Gem that turns a short idea into Ming Image's own structured JSON prompt:
+posters, flyers, ads, social posts, thumbnails, logos, app and website screens,
+game screens and icons, infographics, menus, covers and 3D lettering. You paste
+that prompt into the Text to Image workflow in this folder. It never makes
+pictures itself: the whole reply is the prompt, in a box with a copy button.
+
+
+THE EASY WAY: USE MY GEM
+------------------------
+
+Open this link, it is free and needs only a Google account:
+
+  https://gemini.google.com/gem/1UQMFxbpInLPoz7nhmKzQxifNecffmAXA?usp=sharing
+
+Bookmark it. The "New chat" button in Gemini's sidebar opens plain Gemini, not
+the Gem.
+
+
+MAKE YOUR OWN COPY (OPTIONAL)
+-----------------------------
+
+1. Go to Gemini on the web, open Gems, and create a New Gem.
+2. Name it, for example "Ming Image 0.1 Prompts".
+3. Open "Ming Image 0.1 Text to Image - INSTRUCTIONS (paste) v10.txt", select
+   all of it, and paste it into the Gem's Instructions box.
+   There is no knowledge file to upload for this one.
+4. Leave "Default tool" on "No default tool". Never give it an image tool.
+5. Save, then open the Gem's own chat.
+
+
+USING IT
+--------
+
+1. Type your idea and the size you picked in step 1 of the workflow:
+     a poster for a summer jazz night, portrait 832 x 1248
+     a YouTube thumbnail for my video 10 COMFYUI TRICKS, landscape 1920 x 1080
+     a minimal logo for a coffee shop called NORTH BREW, square 1024 x 1024
+   Without a size it uses 832 x 1248, or a wide or square size when the idea
+   clearly needs one, and writes the size it chose at the top of its answer.
+   Set step 1 of the workflow to the same size.
+
+2. Copy the box and paste it into "2. Add a prompt" in the workflow
+   "1. Ming Image 0.1 - Text to Image" (in the "1. Text to Image" folder),
+   then Run.
+
+3. To change it, say so in the same chat:
+     make the background dark navy / add the line "TICKETS 15 EUR" / bigger title
+     more 3D, Pixar look / cleaner, fewer details / portrait 1080 x 1920
+   A small change (a colour, a word, one part) keeps the rest as it was. A big
+   change (a new look, cleaner, a new size) writes the whole design again with
+   everything you asked for so far.
+
+
+TIPS
+----
+
+* WORDS IN THE PICTURE: write every word you want in the picture in your idea,
+  in capitals or in quotes. Ming spells given words well.
+* NUMBERS OF THINGS: say how many ("six icons", "four fighters", "three plans").
+* 3D LETTERING: keep 3D words short, one word of up to about six letters per
+  line. Longer lines come out right as flat text.
+* EXTRA TEXT: the free Gemini models sometimes add small extra words of their
+  own (a slogan, door times, a line-up). If you see one, say "remove the extra
+  text" in the same chat. Small made-up words come out as scrambled letters.
+* 3D LOOK: ask for it in plain words ("3D", "Pixar look", "clay", "toy"). The Gem
+  then writes every part as a 3D object, which is what makes Ming render it in 3D.
+* THE MODEL: the Gem was tested on Gemini's free 3.5 Flash-Lite, 3.6 Flash and
+  3.1 Pro (pick it in the model menu under the chat box). Flash is a good everyday
+  choice. For a really clean, minimal design, or when a change you ask for is not
+  done properly, switch to 3.1 Pro: it follows the instructions most closely.
+* MINIMAL: say it plainly ("clean and minimal, few details"). Theme words like
+  "mech" or "steampunk" pull in plates, seams and gadgets, so for a clean look
+  describe the theme by its colours and shapes instead.
+
+
+WHAT IT WAS TESTED ON
+---------------------
+
+About 60 ideas, each prompt rendered twice in Ming Image 0.1: game menus, item
+icons, a character select screen, a fitness app, a landing page, a dashboard, a
+pricing page, Swiss and techno posters, infographics, logos, chrome and glossy
+3D text, Instagram and YouTube designs, a can, a book cover, a sushi menu, an
+isometric room, a sticker, a music player, a brand board, a podcast cover and a
+concert ticket. Most came out right on both renders.
+
+
+IF SOMETHING GOES WRONG
+-----------------------
+
+* "Sorry, something went wrong": that is Gemini, not the Gem. Send the idea
+  again or word it a little differently.
+* After many requests in an hour Gemini can refuse everything for a while,
+  even in a normal chat. Wait and try later.
