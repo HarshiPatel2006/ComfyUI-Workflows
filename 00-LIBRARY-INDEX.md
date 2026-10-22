@@ -19,7 +19,7 @@ Filename pattern: `Model - Task - Variant.json` (e.g. `Qwen Image 2.1 - One Imag
 | 90-Docs-and-Resources | LLM prompt-assistant instructions, LoRA training, learning & node demos, Pixaroma episode resources, sample media inputs, maintenance manifests + undo script |
 | 91-Review-Version-Conflicts | Original Pixaroma versions of workflows whose library copy has different settings — review and keep one |
 
-**352 workflows.** Adding a new workflow: drop it in the folder for its main job, name it `Model - Task - Variant.json`, and add it here.
+**370 workflows.** Adding a new workflow: drop it in the folder for its main job, name it `Model - Task - Variant.json`, and add it here.
 
 ## All workflows by folder
 
@@ -266,9 +266,17 @@ Filename pattern: `Model - Task - Variant.json` (e.g. `Qwen Image 2.1 - One Imag
 - Wan 2.1 SCAIL - Image to Video - Single Character
 - Wan 2.1 SCAIL 2 - Character Animation from Driving Video - Compact
 - Wan 2.1 SCAIL 2 - Character Animation from Driving Video - Long
+- Wan 2.1 SCAIL 2 - Character Replacement
+- Wan 2.1 SCAIL 2 - GAP - Hi Woman
+- Wan 2.1 SCAIL 2 - GAP - Video 2
+- Wan 2.1 SCAIL 2 - GAP - Video 3 Man
+- Wan 2.1 SCAIL 2 - GAP - Video 4 Man Closeup
+- Wan 2.1 SCAIL 2 - GAP - Video 5 Man Head
+- Wan 2.1 SCAIL 2 - GAP - Video 6 Man Head Fix
+- Wan 2.1 SCAIL 2 - GAP Multi Character - Long
 - Wan 2.2 Animate - Replace Character and Background - 16FPS
-- Wan 2.2 Animate - Replace Character and Background - 24FPS HD
 - Wan 2.2 Animate - Replace Character and Background - 24FPS
+- Wan 2.2 Animate - Replace Character and Background - 24FPS HD
 - Wan 2.2 Animate - Replace Only Character - 16FPS
 - Wan 2.2 Animate - Replace Only Character - 24FPS
 
@@ -286,10 +294,13 @@ Filename pattern: `Model - Task - Variant.json` (e.g. `Qwen Image 2.1 - One Imag
 - Wan 2.2 - Image to Video - GGUF Lightx2v 4-Step
 
 ### 04-Video/Reference-and-Audio-Sync
-- Minimax H3 - Reference Image + Audio Sync - Sing + Speed LoRA
+- LTX-2 - Video to Video - Voice Dubbing
+- LTX-2 - Video to Video - Voice Dubbing - Compact
 - Minimax H3 - Reference Image + Audio Sync - Sing
-- Minimax H3 - Reference Image + Audio Sync - Speak + Speed LoRA
+- Minimax H3 - Reference Image + Audio Sync - Sing + Speed LoRA
 - Minimax H3 - Reference Image + Audio Sync - Speak
+- Minimax H3 - Reference Image + Audio Sync - Speak + Speed LoRA
+- Minimax H3 - Reference to Video + Audio - Character Swap
 - Minimax H3 - Reference to Video - 2 Images
 - Minimax H3 - Reference to Video - 3 Images
 - Wan 2.1 InfiniteTalk - Talking Video - Easy Extend 3 to 34 Seconds
@@ -300,11 +311,13 @@ Filename pattern: `Model - Task - Variant.json` (e.g. `Qwen Image 2.1 - One Imag
 
 ### 04-Video/Text-to-Video
 - Minimax FastH3 - Text to Video (8-Step)
+- Minimax H3 - Text to Video
 - Minimax H3 - Text to Video + Speed LoRA
 - Minimax H3 - Text to Video - Low VRAM 8GB
-- Minimax H3 - Text to Video
+- Minimax H3 - Text to Video - Secret Sauce 4K Direct Output
 
 ### 04-Video/Video-Upscaling
+- SeedVR2 - HD Video Upscale
 - SeedVR2 - Video Upscale
 
 ### 05-Audio/Music-Generation
@@ -403,6 +416,11 @@ Filename pattern: `Model - Task - Variant.json` (e.g. `Qwen Image 2.1 - One Imag
 
 ### 09-Movie
 - Short Film Director Pipeline (Krea + MiniMax H3)
+- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Fixed
+- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Overnight
+- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Test Scene 1
+- Short Film Director Pipeline (Krea + MiniMax H3) - No Review
+- Short Film Director Pipeline (Krea + MiniMax H3) - No Review v2
 
 ### 10-LLM-and-Prompt-Tools
 - Gemma 4 - Anima Prompt Enhancer
@@ -619,12 +637,19 @@ Use this to find every workflow that needs a given model installed.
 - `08-Testing-and-Comparison/Krea 2 INT8 - LoRA XY Plot.json`
 - `90-Docs-and-Resources/LoRA-Training/Krea 2 - LoRA Converter.json`
 
-### Krea 2 + MiniMax H3 (pipeline) (1)
+### Krea 2 + MiniMax H3 (pipeline) (6)
+- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Fixed.json`
+- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Overnight.json`
+- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Test Scene 1.json`
+- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - No Review v2.json`
+- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - No Review.json`
 - `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3).json`
 
-### LTX-2 (2)
+### LTX-2 (4)
 - `04-Video/Image-to-Video/LTX-2 - Image to Video with Audio.json`
 - `04-Video/Image-to-Video/LTX-2 - Image to Video with Custom Audio.json`
+- `04-Video/Reference-and-Audio-Sync/LTX-2 - Video to Video - Voice Dubbing - Compact.json`
+- `04-Video/Reference-and-Audio-Sync/LTX-2 - Video to Video - Voice Dubbing.json`
 
 ### LaMa (1)
 - `02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/LaMa - Object Remover.json`
@@ -659,7 +684,7 @@ Use this to find every workflow that needs a given model installed.
 - `02-Image-Editing/Sketch-and-3D-to-Image/Ming Image 0.1 - Restyle a Design to 3D.json`
 - `02-Image-Editing/Sketch-and-3D-to-Image/Ming Image 0.1 - Sketch to Photo.json`
 
-### MiniMax H3 / FastH3 (21)
+### MiniMax H3 / FastH3 (23)
 - `01-Image-Generation/Text-to-Image/Minimax H3 - Text to Image (Single Frame).json`
 - `02-Image-Editing/Single-Image-Edit/Minimax H3 - One Image Edit (Single Frame).json`
 - `04-Video/Image-to-Video/Minimax FastH3 - Image to Video - First + Last Frame (8-Step).json`
@@ -673,11 +698,13 @@ Use this to find every workflow that needs a given model installed.
 - `04-Video/Reference-and-Audio-Sync/Minimax H3 - Reference Image + Audio Sync - Sing.json`
 - `04-Video/Reference-and-Audio-Sync/Minimax H3 - Reference Image + Audio Sync - Speak + Speed LoRA.json`
 - `04-Video/Reference-and-Audio-Sync/Minimax H3 - Reference Image + Audio Sync - Speak.json`
+- `04-Video/Reference-and-Audio-Sync/Minimax H3 - Reference to Video + Audio - Character Swap.json`
 - `04-Video/Reference-and-Audio-Sync/Minimax H3 - Reference to Video - 2 Images.json`
 - `04-Video/Reference-and-Audio-Sync/Minimax H3 - Reference to Video - 3 Images.json`
 - `04-Video/Text-to-Video/Minimax FastH3 - Text to Video (8-Step).json`
 - `04-Video/Text-to-Video/Minimax H3 - Text to Video + Speed LoRA.json`
 - `04-Video/Text-to-Video/Minimax H3 - Text to Video - Low VRAM 8GB.json`
+- `04-Video/Text-to-Video/Minimax H3 - Text to Video - Secret Sauce 4K Direct Output.json`
 - `04-Video/Text-to-Video/Minimax H3 - Text to Video.json`
 - `10-LLM-and-Prompt-Tools/Minimax H3 - First Frame to Video Prompt Generator.json`
 - `10-LLM-and-Prompt-Tools/Minimax H3 - Text to Video Prompt Generator.json`
@@ -807,8 +834,9 @@ Use this to find every workflow that needs a given model installed.
 - `01-Image-Generation/Text-to-Image/SD1.5 Juggernaut Reborn - Text to Image.json`
 - `02-Image-Editing/Single-Image-Edit/SD1.5 Juggernaut Reborn - Image to Image.json`
 
-### SeedVR2 (2)
+### SeedVR2 (3)
 - `03-Image-Enhancement/Upscaling/5 SeedVR2 - Upscale.json`
+- `04-Video/Video-Upscaling/SeedVR2 - HD Video Upscale.json`
 - `04-Video/Video-Upscaling/SeedVR2 - Video Upscale.json`
 
 ### Stable Audio 3 (4)
@@ -833,11 +861,19 @@ Use this to find every workflow that needs a given model installed.
 - `03-Image-Enhancement/Upscaling/2 Universal - Upscale with 4x Model (NMKD-Siax).json`
 - `07-Batch-and-Automation/Folder-Batch-Processing/NMKD-Siax 4x - Upscale All Images in a Folder.json`
 
-### Wan 2.1 / 2.2 (16)
+### Wan 2.1 / 2.2 (24)
 - `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL - Image to Video - Multi Character (9-16 Ratio Only).json`
 - `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL - Image to Video - Single Character.json`
 - `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - Character Animation from Driving Video - Compact.json`
 - `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - Character Animation from Driving Video - Long.json`
+- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - Character Replacement.json`
+- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - GAP - Hi Woman.json`
+- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - GAP - Video 2.json`
+- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - GAP - Video 3 Man.json`
+- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - GAP - Video 4 Man Closeup.json`
+- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - GAP - Video 5 Man Head.json`
+- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - GAP - Video 6 Man Head Fix.json`
+- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - GAP Multi Character - Long.json`
 - `04-Video/Character-Animation-Video-to-Video/Wan 2.2 Animate - Replace Character and Background - 16FPS.json`
 - `04-Video/Character-Animation-Video-to-Video/Wan 2.2 Animate - Replace Character and Background - 24FPS HD.json`
 - `04-Video/Character-Animation-Video-to-Video/Wan 2.2 Animate - Replace Character and Background - 24FPS.json`
