@@ -1,0 +1,85 @@
+{
+ "id": "f5faabf0-53d4-4b14-9e2e-a690d1e708bc",
+ "revision": 0,
+ "last_node_id": 2,
+ "last_link_id": 0,
+ "nodes": [
+  {
+   "id": 1,
+   "type": "DubSyncLipSyncVideo",
+   "pos": [
+    60,
+    60
+   ],
+   "size": [
+    420,
+    430
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "video_path",
+     "type": "STRING",
+     "links": null,
+     "slot_index": 0
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "DubSyncLipSyncVideo"
+   },
+   "widgets_values": [
+    "R01_SC007_0037.mp4",
+    "Sequence_15.wav",
+    40,
+    2.0,
+    1.0,
+    1247,
+    "fixed",
+    90,
+    true,
+    1.0,
+    3,
+    14,
+    "LatentSync/hindi_lipsync"
+   ],
+   "title": "LatentSync 1.6 \u2013 Hindi Lip-Sync (video + Hindi audio)"
+  },
+  {
+   "id": 2,
+   "type": "Note",
+   "pos": [
+    520,
+    60
+   ],
+   "size": [
+    520,
+    430
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {},
+   "widgets_values": [
+    "## LatentSync Hindi lip-sync\n\n**Inputs**\n1. Put your English **video** and the **Hindi audio** (same duration) in `ComfyUI/input`.\n2. Press **R** to refresh, then pick both in the node on the left.\n3. Click **Run**.\n\n**Output:** `ComfyUI/output/LatentSync/hindi_lipsync_XXXX.mp4`. It keeps the original resolution, fps, framing and everything outside the mouth. Only the lips are redrawn to match the Hindi, and the Hindi audio replaces the English.\n\n**Settings**\n- **guidance:** 2.0 is the default. Use 1.5 for subtler lips, 2.5 for stronger.\n- **steps:** 40 is the default. Use 30 to go faster.\n- **min_face_px:** faces shorter than this are left untouched.\n- **crf:** 14 is the default. Lower means better quality and a bigger file.\n\n**Tips**\n- A clean Hindi dialogue stem with no music syncs best. The node uses it to find speech, so mouths stay natural during pauses.\n- Cuts are detected automatically, so multi-shot clips are fine."
+   ]
+  }
+ ],
+ "links": [],
+ "groups": [],
+ "config": {},
+ "extra": {
+  "ds": {
+   "scale": 1.0,
+   "offset": [
+    0,
+    0
+   ]
+  }
+ },
+ "version": 0.4
+}

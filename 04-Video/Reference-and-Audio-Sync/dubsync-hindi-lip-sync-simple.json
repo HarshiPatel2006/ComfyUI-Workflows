@@ -1,0 +1,85 @@
+{
+ "id": "6b0e6c3e-5d55-4c47-9a39-0d1f2a7b0003",
+ "revision": 0,
+ "last_node_id": 2,
+ "last_link_id": 0,
+ "nodes": [
+  {
+   "id": 1,
+   "type": "DubSyncLipSyncVideo",
+   "pos": [
+    60,
+    60
+   ],
+   "size": [
+    420,
+    430
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "video_path",
+     "type": "STRING",
+     "links": null,
+     "slot_index": 0
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "DubSyncLipSyncVideo"
+   },
+   "widgets_values": [
+    "R01_SC007_0037.mp4",
+    "Sequence_15.wav",
+    40,
+    2.0,
+    1.0,
+    1247,
+    "fixed",
+    90,
+    true,
+    1.0,
+    3,
+    14,
+    "DubSync/hindi_lipsync"
+   ],
+   "title": "DubSync: Hindi Lip-Sync Video"
+  },
+  {
+   "id": 2,
+   "type": "Note",
+   "pos": [
+    520,
+    60
+   ],
+   "size": [
+    520,
+    430
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "properties": {},
+   "widgets_values": [
+    "## DubSync - Hindi lip-sync (LatentSync 1.6), one node\n\n1. Copy your **video** and the **Hindi audio** (same length) into `ComfyUI/input`, press **R** (refresh) and pick them in the node.\n2. Press **Queue**. The finished MP4 (original resolution + Hindi audio) is saved to `ComfyUI/output/DubSync/`.\n\n**What it does automatically:** splits the film into shots, only re-animates mouths where the Hindi has speech, skips faces smaller than *min_face_px*, mouth-only paste with lip colour + skin tone match, temporal smoothing, repairs blurry frames. Works on any length / 1080p / 2K (streams shot by shot).\n\n**Settings:** guidance 2.0 = clear lip motion (1.5 subtle, 2.5 strong). guidance_silence 1.0 = natural closed mouth on pauses. steps 40 (30 faster). Speed on RTX 5060 Ti: roughly 4-5 min per 10 s of dialogue.\n\n**Tip:** use a clean Hindi dialogue stem (no music) for the best sync."
+   ]
+  }
+ ],
+ "links": [],
+ "groups": [],
+ "config": {},
+ "extra": {
+  "ds": {
+   "scale": 1.0,
+   "offset": [
+    0,
+    0
+   ]
+  }
+ },
+ "version": 0.4
+}

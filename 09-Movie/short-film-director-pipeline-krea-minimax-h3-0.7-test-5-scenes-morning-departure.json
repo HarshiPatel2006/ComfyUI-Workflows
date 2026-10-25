@@ -1,0 +1,4127 @@
+{
+  "id": "84dc8653-84f1-45c5-a06c-434c0c6caa45",
+  "revision": 0,
+  "last_node_id": 250,
+  "last_link_id": 165,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "MarkdownNote",
+      "pos": [
+        60,
+        240
+      ],
+      "size": [
+        420,
+        380
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [],
+      "title": "README",
+      "properties": {
+        "Node name for S&R": "MarkdownNote",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "# Morning Departure Pipeline\n\n16 scenes / 78s total.\nRefs: @hero_face = character sheet, @storyboard = morning_departure_storyboard.jpg\nReload workflow from disk + Ctrl+Shift+R after changes."
+      ],
+      "widgets_values_named": {
+        "text": "# Morning Departure Pipeline\n\n16 scenes / 78s total.\nRefs: @hero_face = character sheet, @storyboard = morning_departure_storyboard.jpg\nReload workflow from disk + Ctrl+Shift+R after changes."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 206,
+      "type": "RandomNoise",
+      "pos": [
+        4041.089269166718,
+        2322.7030372259196
+      ],
+      "size": [
+        260,
+        82
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "widget": {
+            "name": "noise_seed"
+          },
+          "link": 88
+        }
+      ],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            94
+          ]
+        }
+      ],
+      "title": "Per-shot noise seed",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "RandomNoise",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "noise_seed": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        0,
+        "fixed"
+      ],
+      "widgets_values_named": {
+        "noise_seed": 0,
+        "control_after_generate": "fixed"
+      }
+    },
+    {
+      "id": 207,
+      "type": "BasicGuider",
+      "pos": [
+        4381.089269166717,
+        2322.7030372259196
+      ],
+      "size": [
+        280,
+        82
+      ],
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 130
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 93
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            95
+          ]
+        }
+      ],
+      "title": "Loop guider",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "BasicGuider",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 209,
+      "type": "BasicScheduler",
+      "pos": [
+        3701.089269166718,
+        2322.7030372259196
+      ],
+      "size": [
+        260,
+        106
+      ],
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 131
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": 89
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            97
+          ]
+        }
+      ],
+      "title": "Per-shot scheduler steps",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "BasicScheduler",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "steps": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "simple",
+        5,
+        1
+      ],
+      "widgets_values_named": {
+        "scheduler": "simple",
+        "steps": 5,
+        "denoise": 1
+      }
+    },
+    {
+      "id": 210,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        4741.089269166717,
+        2322.7030372259196
+      ],
+      "size": [
+        320,
+        120
+      ],
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 94
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 95
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 96
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 97
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 161
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            99,
+            100,
+            106,
+            111
+          ]
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "title": "H3 sampler — SINGLE LOOP BODY",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "SamplerCustomAdvanced",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 211,
+      "type": "VAEDecode",
+      "pos": [
+        5141.089269166717,
+        2322.7030372259196
+      ],
+      "size": [
+        240,
+        82
+      ],
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 99
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 120
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            101
+          ]
+        }
+      ],
+      "title": "Decode current clip frames",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "VAEDecode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 223,
+      "type": "MiniMaxH3ChainLoopEnd",
+      "pos": [
+        7061.089269166717,
+        2322.7030372259196
+      ],
+      "size": [
+        320,
+        162
+      ],
+      "flags": {},
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "flow",
+          "type": "H3_CHAIN_FLOW",
+          "link": 108
+        },
+        {
+          "name": "state",
+          "type": "H3_CHAIN_STATE",
+          "link": 109
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 110
+        },
+        {
+          "name": "sampled_latent",
+          "type": "LATENT",
+          "link": 111
+        },
+        {
+          "name": "segment",
+          "type": "H3_CHAIN_SEGMENT",
+          "link": 112
+        }
+      ],
+      "outputs": [
+        {
+          "name": "manifest",
+          "type": "H3_CHAIN_MANIFEST",
+          "links": [
+            113
+          ]
+        },
+        {
+          "name": "manifest_json",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "last_context_frames",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "name": "last_context_latent",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "title": "LOOP END — recurse through 12 scenes",
+      "properties": {
+        "cnr_id": "comfyui-minimaxh3-contex-loop",
+        "ver": "0.3.10",
+        "Node name for S&R": "MiniMaxH3ChainLoopEnd",
+        "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "fresh_scene",
+        "recursive"
+      ],
+      "widgets_values_named": {
+        "between_scene_cleanup": "fresh_scene",
+        "execution_mode": "recursive"
+      },
+      "color": "#1f1f48",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 227,
+      "type": "Reroute",
+      "pos": [
+        1761.0892691667177,
+        2262.7030372259196
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 118
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "VAE",
+          "links": [
+            119,
+            121
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 228,
+      "type": "Reroute",
+      "pos": [
+        2561.089269166718,
+        2262.7030372259196
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 123
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "VAE",
+          "links": [
+            120
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 229,
+      "type": "Reroute",
+      "pos": [
+        1961.0892691667177,
+        2262.7030372259196
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 121
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "VAE",
+          "links": [
+            122,
+            123
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 230,
+      "type": "Reroute",
+      "pos": [
+        2161.089269166718,
+        2262.7030372259196
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 124
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "VAE",
+          "links": [
+            125,
+            126
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 231,
+      "type": "Reroute",
+      "pos": [
+        2361.089269166718,
+        2262.7030372259196
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 126
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "VAE",
+          "links": [
+            127
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 232,
+      "type": "Reroute",
+      "pos": [
+        1561.0892691667177,
+        2262.7030372259196
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 128
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "MODEL",
+          "links": [
+            129
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 233,
+      "type": "Reroute",
+      "pos": [
+        2761.089269166718,
+        2262.7030372259196
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 129
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "MODEL",
+          "links": [
+            130,
+            131
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false,
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 208,
+      "type": "KSamplerSelect",
+      "pos": [
+        3361.089269166718,
+        2322.7030372259196
+      ],
+      "size": [
+        260,
+        82
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            96
+          ]
+        }
+      ],
+      "title": "Sampler algorithm",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "KSamplerSelect",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "euler"
+      ],
+      "widgets_values_named": {
+        "sampler_name": "euler"
+      }
+    },
+    {
+      "id": 203,
+      "type": "VAELoader",
+      "pos": [
+        68.89287423043618,
+        2897.160765061602
+      ],
+      "size": [
+        340,
+        82
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            124
+          ]
+        }
+      ],
+      "title": "H3 Audio VAE",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "VAELoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "minimax_h3_audio_vae_fp32.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+      }
+    },
+    {
+      "id": 202,
+      "type": "VAELoader",
+      "pos": [
+        68.89287423043618,
+        2743.039262531853
+      ],
+      "size": [
+        340,
+        82
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            118
+          ]
+        }
+      ],
+      "title": "H3 Video VAE",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "VAELoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "minimax_h3_video_vae_fp16.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+      }
+    },
+    {
+      "id": 201,
+      "type": "CLIPLoader",
+      "pos": [
+        68.89287423043618,
+        2563.7626954460225
+      ],
+      "size": [
+        340,
+        106
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            79
+          ]
+        }
+      ],
+      "title": "H3 TEXT ENCODER",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "CLIPLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "minimax",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "type": "minimax",
+        "device": "default"
+      }
+    },
+    {
+      "id": 245,
+      "type": "ModelPreviewOverrideKJ",
+      "pos": [
+        1423.8736103682172,
+        4429.363948678254
+      ],
+      "size": [
+        1089.5423404915982,
+        1104.7421850421733
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 152
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "audio_vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            153
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "3f20054214fec9f9234fd3841ae6f1e4287948f6",
+        "Node name for S&R": "ModelPreviewOverrideKJ",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        720,
+        80,
+        true,
+        9,
+        12,
+        "taeh3.safetensors",
+        ""
+      ],
+      "widgets_values_named": {
+        "max_resolution": 720,
+        "jpeg_quality": 80,
+        "suppress_default_preview": true,
+        "preview_frames": 9,
+        "preview_fps": 12,
+        "tiny_vae": "taeh3.safetensors",
+        "preview": ""
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 236,
+      "type": "MiniMaxH3TaggedPictureReference",
+      "pos": [
+        113.77928525705497,
+        3854.3059218478775
+      ],
+      "size": [
+        360,
+        122
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 132
+        },
+        {
+          "name": "previous",
+          "shape": 7,
+          "type": "H3_TAGGED_REFERENCES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "references",
+          "type": "H3_TAGGED_REFERENCES",
+          "links": [
+            133
+          ]
+        },
+        {
+          "name": "reference_fingerprint",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "status",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "@hero_face — Tagged Picture Reference",
+      "properties": {
+        "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+        "cnr_id": "comfyui-minimaxh3-contex-loop",
+        "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+      },
+      "widgets_values": [
+        "hero_face"
+      ],
+      "color": "#744c8c",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 7,
+      "type": "VAELoader",
+      "pos": [
+        33.8389019566025,
+        1915.8976996990737
+      ],
+      "size": [
+        340,
+        70
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            5,
+            7,
+            12
+          ]
+        }
+      ],
+      "title": "Qwen Image VAE",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "VAELoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "qwen_image_vae.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "qwen_image_vae.safetensors"
+      }
+    },
+    {
+      "id": 6,
+      "type": "CLIPLoader",
+      "pos": [
+        31.809726749078624,
+        1760.3871335674062
+      ],
+      "size": [
+        340,
+        106
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            11,
+            16
+          ]
+        }
+      ],
+      "title": "Qwen3-VL 4B (krea2)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "CLIPLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "qwen3vl_4b_fp8_scaled.safetensors",
+        "krea2",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
+        "type": "krea2",
+        "device": "default"
+      }
+    },
+    {
+      "id": 5,
+      "type": "ModelSamplingAuraFlow",
+      "pos": [
+        41.95560278669777,
+        1648.0662062846443
+      ],
+      "size": [
+        320,
+        82
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "title": "AuraFlow shift 1.15",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "ModelSamplingAuraFlow",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1.15,
+        "flow"
+      ],
+      "widgets_values_named": {
+        "shift": 1.15,
+        "sampling": "flow"
+      }
+    },
+    {
+      "id": 4,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        41.9556027866978,
+        1520.6723409830734
+      ],
+      "size": [
+        320,
+        82
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "title": "Identity Edit LoRA",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "krea2_identity_edit_v1_2.safetensors",
+        1
+      ],
+      "widgets_values_named": {
+        "lora_name": "krea2_identity_edit_v1_2.safetensors",
+        "strength_model": 1
+      }
+    },
+    {
+      "id": 3,
+      "type": "UNETLoader",
+      "pos": [
+        42.97019039045969,
+        1395.3076508890247
+      ],
+      "size": [
+        320,
+        82
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "title": "Krea 2 Turbo FP8",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "UNETLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "krea2_turbo_fp8_scaled.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "krea2_turbo_fp8_scaled.safetensors",
+        "weight_dtype": "default"
+      }
+    },
+    {
+      "id": 11,
+      "type": "Krea2EditGroundedEncode",
+      "pos": [
+        424.999365597983,
+        1763.8881584702654
+      ],
+      "size": [
+        380,
+        206
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 16
+        },
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 17
+        },
+        {
+          "name": "image_b",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "title": "Grounded negative",
+      "properties": {
+        "cnr_id": "comfyui-krea2edit",
+        "ver": "13ef60f20828949becada815d3cbc371eb5ccaab",
+        "Node name for S&R": "Krea2EditGroundedEncode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "",
+        1024,
+        ""
+      ],
+      "widgets_values_named": {
+        "prompt": "",
+        "grounding_px": 1024,
+        "system_prompt": ""
+      }
+    },
+    {
+      "id": 10,
+      "type": "Krea2EditModelPatch",
+      "pos": [
+        451.37864329579315,
+        1434.3126972639784
+      ],
+      "size": [
+        340,
+        294
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 3
+        },
+        {
+          "name": "source_latent",
+          "type": "LATENT",
+          "link": 6
+        },
+        {
+          "name": "source_latent_b",
+          "shape": 7,
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "name": "ref_boost_mask",
+          "shape": 7,
+          "type": "MASK",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": 7
+        },
+        {
+          "name": "source_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 8
+        },
+        {
+          "name": "source_image_b",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "target_latent",
+          "shape": 7,
+          "type": "LATENT",
+          "link": 9
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            10
+          ]
+        }
+      ],
+      "title": "Identity patch (ref_boost 4)",
+      "properties": {
+        "cnr_id": "comfyui-krea2edit",
+        "ver": "13ef60f20828949becada815d3cbc371eb5ccaab",
+        "Node name for S&R": "Krea2EditModelPatch",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        4,
+        1,
+        "fit",
+        "aligned (trained)",
+        "aligned (trained)"
+      ],
+      "widgets_values_named": {
+        "ref_boost": 4,
+        "ref_boost_a": 1,
+        "fit_mode": "fit",
+        "ref_position": "aligned (trained)",
+        "ref_position_a": "aligned (trained)"
+      }
+    },
+    {
+      "id": 9,
+      "type": "EmptySD3LatentImage",
+      "pos": [
+        477.7579209936031,
+        1263.7291931135028
+      ],
+      "size": [
+        280,
+        106
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            9,
+            15
+          ]
+        }
+      ],
+      "title": "Panel latent 768×432",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "EmptySD3LatentImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        768,
+        432,
+        1
+      ],
+      "widgets_values_named": {
+        "width": 768,
+        "height": 432,
+        "batch_size": 1
+      }
+    },
+    {
+      "id": 8,
+      "type": "VAEEncode",
+      "pos": [
+        501.09343588012706,
+        1160.3936782269786
+      ],
+      "size": [
+        240,
+        58
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 4
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "title": "Encode character",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "VAEEncode",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 204,
+      "type": "MiniMaxH3SigmaShift",
+      "pos": [
+        2460.2558896854894,
+        3590.7968264397864
+      ],
+      "size": [
+        320,
+        82
+      ],
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 153
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            128
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "MiniMaxH3SigmaShift",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        12,
+        3
+      ],
+      "widgets_values_named": {
+        "shift_video": 12,
+        "shift_audio": 3
+      }
+    },
+    {
+      "id": 205,
+      "type": "MiniMaxH3TaggedReferenceToVideo",
+      "pos": [
+        1736.5663861512076,
+        3768.1228573385733
+      ],
+      "size": [
+        440,
+        560
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 79
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 119
+        },
+        {
+          "name": "audio_vae",
+          "type": "VAE",
+          "link": 125
+        },
+        {
+          "name": "references",
+          "type": "H3_TAGGED_REFERENCES",
+          "link": 159
+        },
+        {
+          "name": "clip_index",
+          "type": "INT",
+          "link": 141,
+          "widget": {
+            "name": "clip_index"
+          }
+        },
+        {
+          "name": "clip_count",
+          "type": "INT",
+          "link": 142,
+          "widget": {
+            "name": "clip_count"
+          }
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "link": 83,
+          "widget": {
+            "name": "prompt"
+          }
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 84,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 85,
+          "widget": {
+            "name": "height"
+          }
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "link": 86,
+          "widget": {
+            "name": "length"
+          }
+        },
+        {
+          "name": "state",
+          "type": "H3_CHAIN_STATE",
+          "link": 160,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            91
+          ]
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            92
+          ]
+        },
+        {
+          "name": "compiled_prompt",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "active_references",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "reference_fingerprint",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "refmod_sources",
+          "type": "H3_REF_LIST",
+          "links": null
+        }
+      ],
+      "title": "TAGGED REF2VA — ACTIVATES @TAGS PER SCENE",
+      "properties": {
+        "Node name for S&R": "MiniMaxH3TaggedReferenceToVideo",
+        "cnr_id": "comfyui-minimaxh3-contex-loop",
+        "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+      },
+      "widgets_values": [
+        1,
+        12,
+        "subject_definitions:\n<Subject 1> is the man in @hero_face, late 20s to early 30s, olive complexion, wavy dark brown collar-length hair, trimmed beard and mustache, black leather motorcycle jacket open over a burgundy maroon crew-neck tee, charcoal slim jeans, and black sneakers with white soles.\n@hero_face is the multi-angle character reference sheet defining <Subject 1> facial identity, hair, beard line, and bone structure.\n@storyboard is the 4x4 labeled scene board reference for shot composition across panels A1-D4; panel A1 anchors this segment.\nsummary:\n[reference generation] Segment 1/12 (6s): cinematic horror short-film beat — farmhouse exterior approach. <Subject 1> identity locked from @hero_face; composition guided by @storyboard panel(s) A1. Photorealistic IMAX-scale dread, cold desaturated grade, no dialogue unless noted.\nretention_analysis:\n<Subject 1> (appears throughout): fully_preserved - exact face, hair, beard, leather jacket, burgundy tee, and jeans from @hero_face across every visible frame.\n@storyboard (A1): fully_preserved - camera angle, subject placement, lighting intent, and story beat follow the referenced board panel(s) for this segment.\ndetailed_description:\nThe target video uses a cinematic horror film grammar: shallow depth of field, motivated practical light, heavy negative space, and subtle handheld micro-drift. Color is cold blue-green with crushed shadows and selective warm accents only where lamps or moonlight justify it.\n[Shot 1] The segment opens on the storyboard composition for panel A1: farmhouse exterior approach. <Subject 1> occupies the frame with exact identity from @hero_face — jaw line, stubble, wavy hair, open leather jacket and maroon tee visible whenever framing allows. Environment textures read photoreal: peeling paint, dust in light beams, wet floor reflections where applicable.\n[Shot 2] At 00:02.000, the camera pushes or pans with restrained horror pacing, maintaining spatial continuity from @storyboard panel A1. Sound design favors low room tone, distant creaks, and the subject's controlled breathing; no music unless scene demands a sting.\nThe segment holds tension for 6.0 seconds total, ending on a micro-cliffhanger suitable for seamless continuation into the next timed segment.\noverall_soundscape:\nLow-frequency room rumble, distant house settling, faint fluorescent buzz, soft footfall texture on wood or tile, no crowd noise.\nnon_diegetic_music:\nNone — horror tension carried by diegetic ambience and silence breaks only.",
+        960,
+        544,
+        124,
+        "match",
+        "strict",
+        "512",
+        "timestamped_video",
+        false,
+        "native_ref2va"
+      ],
+      "color": "#346434",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 212,
+      "type": "VAEDecodeAudio",
+      "pos": [
+        5461.089269166717,
+        2322.7030372259196
+      ],
+      "size": [
+        240,
+        82
+      ],
+      "flags": {},
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 100
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 127
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            102
+          ]
+        }
+      ],
+      "title": "Decode current clip audio",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "VAEDecodeAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 213,
+      "type": "MiniMaxH3LoopTrim",
+      "pos": [
+        5781.089269166717,
+        2322.7030372259196
+      ],
+      "size": [
+        340,
+        190
+      ],
+      "flags": {},
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 101
+        },
+        {
+          "name": "trim_frames",
+          "type": "INT",
+          "widget": {
+            "name": "trim_frames"
+          },
+          "link": 103
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 102
+        },
+        {
+          "name": "state",
+          "shape": 7,
+          "type": "H3_CHAIN_STATE",
+          "link": 162
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            105,
+            110
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            107
+          ]
+        },
+        {
+          "name": "images_with_overlap",
+          "type": "IMAGE",
+          "links": [
+            163
+          ]
+        },
+        {
+          "name": "overlap_frames",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "title": "Trim overlap + frame-lock audio",
+      "properties": {
+        "cnr_id": "comfyui-minimaxh3-contex-loop",
+        "ver": "0.3.10",
+        "Node name for S&R": "MiniMaxH3LoopTrim",
+        "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "trim_frames": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        0,
+        24,
+        true,
+        "sync_with_video"
+      ],
+      "color": "#1f1f48",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 244,
+      "type": "ModelAttentionBackend",
+      "pos": [
+        172.34219611529676,
+        4436.688316098037
+      ],
+      "size": [
+        280,
+        58
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 150
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            154
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.31.0",
+        "Node name for S&R": "ModelAttentionBackend",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "comfy kitchen attention"
+      ],
+      "widgets_values_named": {
+        "attention": "comfy kitchen attention"
+      }
+    },
+    {
+      "id": 219,
+      "type": "MiniMaxH3ChainLoopStart",
+      "pos": [
+        1119.4474019499876,
+        2738.19147394544
+      ],
+      "size": [
+        342.144140625,
+        186
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "plan",
+          "type": "H3_CHAIN_PLAN",
+          "link": 145
+        },
+        {
+          "name": "external_context",
+          "shape": 7,
+          "type": "H3_CHAIN_EXTERNAL_CONTEXT",
+          "link": null
+        },
+        {
+          "name": "source_timeline",
+          "shape": 7,
+          "type": "H3_SOURCE_TIMELINE",
+          "link": null
+        },
+        {
+          "name": "tagged_references",
+          "shape": 7,
+          "type": "H3_TAGGED_REFERENCES",
+          "link": 164
+        }
+      ],
+      "outputs": [
+        {
+          "name": "flow",
+          "type": "H3_CHAIN_FLOW",
+          "links": [
+            108
+          ]
+        },
+        {
+          "name": "state",
+          "type": "H3_CHAIN_STATE",
+          "links": [
+            81
+          ]
+        },
+        {
+          "name": "status",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "LOOP START / RESUME — RANGE OPTIONAL",
+      "properties": {
+        "cnr_id": "comfyui-minimaxh3-contex-loop",
+        "ver": "0.3.10",
+        "Node name for S&R": "MiniMaxH3ChainLoopStart",
+        "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        1,
+        "1:5",
+        true
+      ],
+      "widgets_values_named": {
+        "start_clip": 1,
+        "scene_range": "1:5",
+        "verify_resume_history": true
+      },
+      "color": "#1f1f48",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 220,
+      "type": "MiniMaxH3ChainCurrent",
+      "pos": [
+        1509.5074438763272,
+        2636.5196501724595
+      ],
+      "size": [
+        420,
+        314
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "state",
+          "type": "H3_CHAIN_STATE",
+          "link": 81
+        }
+      ],
+      "outputs": [
+        {
+          "name": "state",
+          "type": "H3_CHAIN_STATE",
+          "links": [
+            90,
+            104,
+            109,
+            160,
+            162
+          ]
+        },
+        {
+          "name": "clip_index",
+          "type": "INT",
+          "links": [
+            141
+          ]
+        },
+        {
+          "name": "clip_count",
+          "type": "INT",
+          "links": [
+            142
+          ]
+        },
+        {
+          "name": "shot_id",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            83
+          ]
+        },
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "links": [
+            88
+          ]
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "links": [
+            86
+          ]
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "links": [
+            89
+          ]
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            84
+          ]
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            85
+          ]
+        },
+        {
+          "name": "audio_start",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "audio_duration",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "source_audio_slice",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "status",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "video_blend_frames",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "title": "CURRENT SCENE — PROMPT / SEED / TIMING",
+      "properties": {
+        "cnr_id": "comfyui-minimaxh3-contex-loop",
+        "ver": "0.3.10",
+        "Node name for S&R": "MiniMaxH3ChainCurrent",
+        "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        false
+      ],
+      "widgets_values_named": {
+        "align_audio_reference": false
+      },
+      "color": "#1f1f48",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 237,
+      "type": "MiniMaxH3TaggedPictureReference",
+      "pos": [
+        592.5195733604062,
+        3841.4905816739915
+      ],
+      "size": [
+        360,
+        122
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 134
+        },
+        {
+          "name": "previous",
+          "shape": 7,
+          "type": "H3_TAGGED_REFERENCES",
+          "link": 133
+        }
+      ],
+      "outputs": [
+        {
+          "name": "references",
+          "type": "H3_TAGGED_REFERENCES",
+          "links": [
+            159,
+            164
+          ]
+        },
+        {
+          "name": "reference_fingerprint",
+          "type": "STRING",
+          "links": [
+            165
+          ]
+        },
+        {
+          "name": "status",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "@storyboard — Tagged Picture Reference",
+      "properties": {
+        "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+        "cnr_id": "comfyui-minimaxh3-contex-loop",
+        "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+      },
+      "widgets_values": [
+        "storyboard"
+      ],
+      "color": "#744c8c",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 221,
+      "type": "MiniMaxH3ChainContext",
+      "pos": [
+        2509.8226565243062,
+        2359.2922220347627
+      ],
+      "size": [
+        350.8462890625,
+        166
+      ],
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "state",
+          "type": "H3_CHAIN_STATE",
+          "link": 90
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 91
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 122
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "link": 92
+        },
+        {
+          "name": "audio_vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "model",
+          "shape": 7,
+          "type": "MODEL",
+          "link": null
+        },
+        {
+          "name": "drift_sigmas",
+          "shape": 7,
+          "type": "SIGMAS",
+          "link": null
+        },
+        {
+          "name": "lip_sync_voice",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            93
+          ]
+        },
+        {
+          "name": "trim_frames",
+          "type": "INT",
+          "links": [
+            103
+          ]
+        },
+        {
+          "name": "is_continuation",
+          "type": "BOOLEAN",
+          "links": null
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            161
+          ]
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": null
+        }
+      ],
+      "title": "AUTO CONTEXT — clip 1 bypass / continuation",
+      "properties": {
+        "cnr_id": "comfyui-minimaxh3-contex-loop",
+        "ver": "0.3.10",
+        "Node name for S&R": "MiniMaxH3ChainContext",
+        "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#1f1f48",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 2,
+      "type": "LoadImage",
+      "pos": [
+        59.20359205065036,
+        975.0183771436404
+      ],
+      "size": [
+        320,
+        340
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            4,
+            8,
+            13,
+            17
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Character Reference Sheet",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "shortfilm_character_sheet.jpg",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "shortfilm_character_sheet.jpg",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 60,
+      "type": "Note",
+      "pos": [
+        951.0460661529568,
+        376.60471723732087
+      ],
+      "size": [
+        280,
+        100
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "Pipeline toggle",
+      "properties": {
+        "Node name for S&R": "Note",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "Enable ONE pipeline. H3 uses 2 images only (no song file)."
+      ],
+      "widgets_values_named": {
+        "text": "Enable ONE pipeline. H3 uses 2 images only (no song file)."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 13,
+      "type": "SceneBoardCompose",
+      "pos": [
+        1801.3713562104917,
+        858.5558745662306
+      ],
+      "size": [
+        360,
+        580
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "scene_board",
+          "type": "IMAGE",
+          "links": [
+            19
+          ]
+        },
+        {
+          "name": "saved_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "4x4 Scene Board",
+      "properties": {
+        "Node name for S&R": "SceneBoardCompose",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        4,
+        4,
+        8,
+        "storyboard",
+        28,
+        "#080a0e",
+        0,
+        0,
+        "stretch",
+        "A1, A2, A3, A4, B1, B2, B3, B4, C1, C2, C3, C4, D1, D2, D3, D4",
+        "shortfilm_scene_board",
+        true
+      ],
+      "widgets_values_named": {
+        "grid_columns": 4,
+        "grid_rows": 4,
+        "gutter_px": 8,
+        "label_mode": "storyboard",
+        "label_height": 28,
+        "background_color": "#080a0e",
+        "panel_width": 0,
+        "panel_height": 0,
+        "fit_mode": "stretch",
+        "custom_labels": "A1, A2, A3, A4, B1, B2, B3, B4, C1, C2, C3, C4, D1, D2, D3, D4",
+        "filename_prefix": "shortfilm_scene_board",
+        "save_to_output": true
+      }
+    },
+    {
+      "id": 243,
+      "type": "Note",
+      "pos": [
+        1375.2254819749905,
+        3043.131490111585
+      ],
+      "size": [
+        803.243307580804,
+        203.26879873195958
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "HOW TO WORK WITH V2",
+      "properties": {
+        "Node name for S&R": "Note",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "1. Open the Scene Prompt Editor and select a scene. It edits the connected Plan directly.\n\n2. Click @ Reference. The tray shows only references active for that scene and their current native labels. Hover an image/video tag to preview it. Hover audio for controls; it never autoplays. Click a chip to insert its stable @tag.\n\n3. Queue from scene 1, or set Loop Start's range/resume controls. The Scheduled Ref2VA node compiles stable tags to native H3 labels and inserts no prompt text.\n\n4. Review Gate pauses after each saved scene. Approve to continue, edit+retry to replace only that scene prompt, reroll for a new seed, or approve+stop to keep a recoverable partial.\n\n5. Final Assemble uses %date:yyyy-MM-dd%. Existing exports are never overwritten: later runs receive _001, _002, and so on. The amber recovery branch remains muted until you need assembly without rerendering."
+      ],
+      "widgets_values_named": {
+        "text": "1. Open the Scene Prompt Editor and select a scene. It edits the connected Plan directly.\n\n2. Click @ Reference. The tray shows only references active for that scene and their current native labels. Hover an image/video tag to preview it. Hover audio for controls; it never autoplays. Click a chip to insert its stable @tag.\n\n3. Queue from scene 1, or set Loop Start's range/resume controls. The Scheduled Ref2VA node compiles stable tags to native H3 labels and inserts no prompt text.\n\n4. Review Gate pauses after each saved scene. Approve to continue, edit+retry to replace only that scene prompt, reroll for a new seed, or approve+stop to keep a recoverable partial.\n\n5. Final Assemble uses %date:yyyy-MM-dd%. Existing exports are never overwritten: later runs receive _001, _002, and so on. The amber recovery branch remains muted until you need assembly without rerendering."
+      },
+      "color": "#432f66",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 222,
+      "type": "MiniMaxH3ChainSegmentSave",
+      "pos": [
+        6161.958469994346,
+        2732.0872906391146
+      ],
+      "size": [
+        809.8377741652833,
+        680.2485617017118
+      ],
+      "flags": {},
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "state",
+          "type": "H3_CHAIN_STATE",
+          "link": 104
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 105
+        },
+        {
+          "name": "sampled_latent",
+          "type": "LATENT",
+          "link": 106
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 107
+        },
+        {
+          "name": "images_with_overlap",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 163
+        },
+        {
+          "name": "denoised_latent",
+          "shape": 7,
+          "type": "LATENT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "segment",
+          "type": "H3_CHAIN_SEGMENT",
+          "links": [
+            112
+          ]
+        },
+        {
+          "name": "status",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "SAVE SEGMENT + TRANSACTIONAL CHECKPOINT",
+      "properties": {
+        "cnr_id": "comfyui-minimaxh3-contex-loop",
+        "ver": "0.3.10",
+        "Node name for S&R": "MiniMaxH3ChainSegmentSave",
+        "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "color": "#1f1f48",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 224,
+      "type": "MiniMaxH3ChainAssemble",
+      "pos": [
+        7539.695550590998,
+        2513.1587473822474
+      ],
+      "size": [
+        1338.8767829097978,
+        1001.1876960464796
+      ],
+      "flags": {},
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "manifest",
+          "type": "H3_CHAIN_MANIFEST",
+          "link": 113
+        },
+        {
+          "name": "source_timeline",
+          "shape": 7,
+          "type": "H3_SOURCE_TIMELINE",
+          "link": null
+        },
+        {
+          "name": "blend_video_vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "FINAL ASSEMBLY — DATE + COLLISION SAFE",
+      "properties": {
+        "cnr_id": "comfyui-minimaxh3-contex-loop",
+        "ver": "0.3.10",
+        "Node name for S&R": "MiniMaxH3ChainAssemble",
+        "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "plan",
+        "silver_estate_v2_%date:yyyy-MM-dd%",
+        256,
+        false,
+        "",
+        "plan",
+        "off",
+        "off",
+        false,
+        "av_overlap"
+      ],
+      "widgets_values_named": {
+        "audio_source": "plan",
+        "filename": "silver_estate_v2_%date:yyyy-MM-dd%",
+        "audio_bitrate": 256,
+        "copy_to_output": false,
+        "output_subfolder": "",
+        "blend_schedule": "plan",
+        "boundary_tone_match": "off",
+        "color_stabilization": "off",
+        "delete_checkpoints_after_assembly": false,
+        "generated_audio_join": "av_overlap"
+      },
+      "color": "#24533a",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 14,
+      "type": "PreviewImage",
+      "pos": [
+        2202.182811551059,
+        857.5647826015222
+      ],
+      "size": [
+        1251.1672682126605,
+        1139.8652981006055
+      ],
+      "flags": {},
+      "order": 42,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "title": "Preview board",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "PreviewImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 246,
+      "type": "SpectrumApplyMiniMaxH3",
+      "pos": [
+        515.3980300538176,
+        4436.981566515481
+      ],
+      "size": [
+        330.669921875,
+        658
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 154
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            157
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "xmarre/ComfyUI-Spectrum-MiniMax-H3",
+        "ver": "806fe498d574a726fecb8818917f00a4b993fd77",
+        "Node name for S&R": "SpectrumApplyMiniMaxH3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        true,
+        0.5,
+        1,
+        0.1,
+        2,
+        0.75,
+        1,
+        1,
+        8,
+        false,
+        "system_ram",
+        true,
+        false,
+        false,
+        false,
+        0,
+        "system_ram",
+        "off",
+        0.65,
+        false,
+        false,
+        "coordinate_rls",
+        "hard_clip",
+        0.4,
+        "no_attenuation",
+        "balanced"
+      ],
+      "widgets_values_named": {
+        "enabled": true,
+        "blend_weight": 0.5,
+        "degree": 1,
+        "ridge_lambda": 0.1,
+        "window_size": 2,
+        "flex_window": 0.75,
+        "warmup_steps": 1,
+        "tail_actual_steps": 1,
+        "max_history": 8,
+        "debug": false,
+        "history_storage": "system_ram",
+        "bootstrap_first_forecast": true,
+        "anchor_residual_feedback": false,
+        "selective_rollback_correction": false,
+        "offline_smoothing_replay": true,
+        "audio_blend_weight": 0,
+        "offline_archive_storage": "system_ram",
+        "model_aware_mode": "off",
+        "model_aware_risk_threshold": 0.65,
+        "model_aware_trust_shrinkage": false,
+        "model_aware_replay_generic_correction": false,
+        "generic_correction_mode": "coordinate_rls",
+        "generic_correction_limiter": "hard_clip",
+        "generic_correction_limit": 0.4,
+        "generic_correction_attenuation": "no_attenuation",
+        "sa_pece_forecast_policy": "balanced"
+      }
+    },
+    {
+      "id": 247,
+      "type": "EasyCache",
+      "pos": [
+        899.6581911946263,
+        4434.34736134147
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 157
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            158
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "EasyCache",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        0.2,
+        0.15,
+        0.95,
+        false
+      ],
+      "widgets_values_named": {
+        "reuse_threshold": 0.2,
+        "start_percent": 0.15,
+        "end_percent": 0.95,
+        "verbose": false
+      }
+    },
+    {
+      "id": 217,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        900.4984513212644,
+        4160.791731540013
+      ],
+      "size": [
+        280,
+        82
+      ],
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 158
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            152
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "LoraLoaderModelOnly",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+        0.95
+      ],
+      "widgets_values_named": {
+        "lora_name": "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+        "strength_model": 0.95
+      }
+    },
+    {
+      "id": 218,
+      "type": "MiniMaxH3ChainPlan",
+      "pos": [
+        2783.462183714599,
+        2621.984198257716
+      ],
+      "size": [
+        1346.885542627138,
+        3117.801811955355
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "plan_json_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "chain_policy",
+          "shape": 7,
+          "type": "H3_CHAIN_POLICY",
+          "link": null
+        },
+        {
+          "name": "project_assets",
+          "shape": 7,
+          "type": "H3_PROJECT_ASSETS",
+          "link": null
+        },
+        {
+          "name": "generation_fingerprint",
+          "type": "STRING",
+          "widget": {
+            "name": "generation_fingerprint"
+          },
+          "link": 165
+        }
+      ],
+      "outputs": [
+        {
+          "name": "plan",
+          "type": "H3_CHAIN_PLAN",
+          "links": [
+            144
+          ]
+        },
+        {
+          "name": "summary",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "clip_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "video_blend_frames",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "title": "H3 CHAIN PLAN V2 — EDIT SCENES HERE",
+      "properties": {
+        "cnr_id": "comfyui-minimaxh3-contex-loop",
+        "ver": "0.3.10",
+        "Node name for S&R": "MiniMaxH3ChainPlan",
+        "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+        "h3_chain_scene_colors": {},
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "generation_fingerprint": true
+          },
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        },
+        "h3_chain_plan_layout": {
+          "promptHeights": {
+            "shared": 88,
+            "scene:clip_01": 112,
+            "scene:clip_02": 112,
+            "scene:clip_03": 112,
+            "scene:clip_04": 112,
+            "scene:clip_05": 112,
+            "scene:clip_06": 112,
+            "scene:clip_07": 112,
+            "scene:clip_08": 112,
+            "scene:clip_09": 112,
+            "scene:clip_10": 112,
+            "scene:clip_11": 112,
+            "scene:clip_12": 112,
+            "scene:clip_13": 112,
+            "scene:clip_14": 112,
+            "scene:clip_15": 112,
+            "scene:clip_16": 112,
+            "scene-basic:clip_01": 72,
+            "scene-basic:clip_02": 72,
+            "scene-basic:clip_03": 72,
+            "scene-basic:clip_04": 72,
+            "scene-basic:clip_05": 72,
+            "scene-basic:clip_06": 72,
+            "scene-basic:clip_07": 72,
+            "scene-basic:clip_08": 72,
+            "scene-basic:clip_09": 72,
+            "scene-basic:clip_10": 72,
+            "scene-basic:clip_11": 72,
+            "scene-basic:clip_12": 72,
+            "scene-basic:clip_13": 72,
+            "scene-basic:clip_14": 72,
+            "scene-basic:clip_15": 72,
+            "scene-basic:clip_16": 72
+          },
+          "collapsedScenes": {}
+        }
+      },
+      "widgets_values": [
+        "{\n  \"prompt_prefix\": [\n    \"Morning Departure. <Subject 1> is a native prompt label — not a reference tag. Use @hero_face (Picture 1) + @storyboard (Picture 2) on Scheduled Picture Ref nodes only. No non-diegetic music in any scene — overall_soundscape SFX only.\"\n  ],\n  \"shots\": [\n    {\n      \"id\": \"clip_01\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel A1 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel A1.\",\n        \"<Subject 1> is the man whose face, hair, and build come from @hero_face, currently asleep on his side wearing a plain grey sleep t-shirt.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video holds on <Subject 1>, referenced for identity, sleeping peacefully in the softly lit bedroom from <Picture 2> as dawn light grows; guided by @storyboard panel A1.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his face, hair, and grey sleep t-shirt are retained exactly from @hero_face, matching @storyboard panel A1.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the bedroom, venetian-blind light bars across the bed, nightstand lamps, and rumpled white bedding are retained.\",\n        \"@storyboard (A1): fully_preserved - composition follows storyboard panel A1.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, warm soft dawn light with gentle film grain.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel A1): <Subject 1> lies asleep on his side under rumpled white bedding, one arm tucked beneath the pillow, his tousled dark hair falling across his forehead, a plain grey t-shirt visible at the shoulder. Warm early light filters through half-open venetian blinds, casting soft horizontal bars across the bed and wall that shift almost imperceptibly as the sun rises further. His chest rises and falls in slow, even breaths. The camera performs a very slow, small-amplitude push in toward his face, holding the calm before the coming interruption.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Soft ambient room tone continues throughout, with a faint, distant birdsong outside the window and the quiet rustle of bedding as he breathes.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 124,\n      \"steps\": 15,\n      \"seed\": \"13915539271247461598\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_02\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face defines <Subject 1> identity. @storyboard panel A2 anchors this segment.\",\n        \"<Picture 1> is <Subject 1>'s identity reference. <Picture 2> is the phone-alarm close-up from panel A2.\",\n        \"<Subject 1> is the man from @hero_face; only his hand and partial sleepy body presence appear.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] Extreme close-up of <Subject 1> silencing a 7:00 AM phone alarm, guided by @storyboard panel A2.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - hand shape and skin tone follow @hero_face. <Picture 2>: fully_preserved - phone position, dark bedside surface, warm blurred bedroom background, and close fingertip framing are retained.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is live-action cinematic realism, macro close-up, warm shallow depth of field. [Shot 1] the shot begins from <Picture 2>: <Subject 1>'s hand reaches from the bed toward a black phone glowing with a 7:00 AM alarm screen. His index finger taps the screen once with sleepy precision, the alarm stops, the display dims, and the phone settles back into quiet while the camera remains static and tightly focused on the fingertip and glass.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Rhythmic phone alarm buzz, one firm tap on glass, a tiny interface chime, then silence.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"8023843005045845389\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_03\",\n      \"prompt\": [\n        \"duration_seconds: 4\",\n        \"\",\n        \"subject_definitions:\",\n        \"@hero_face defines <Subject 1> identity. @storyboard panel A3 anchors this segment.\",\n        \"<Picture 1> is the identity reference. <Picture 2> is the seated waking-up composition from A3.\",\n        \"<Subject 1> is sitting on the bed in a grey t-shirt, hair messy, face tired.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1> wakes fully, sitting up and rubbing one eye in warm morning light.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - face, stubble, hair, and grey shirt match @hero_face. <Picture 2>: fully_preserved - seated pose, blinds, golden light, bed edge, and intimate framing are retained.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is live-action cinematic realism with warm directional sunlight. [Shot 1] the shot begins from <Picture 2>: <Subject 1> sits at the bed edge, rubbing one eye with the heel of his hand while his loose hair falls across his forehead. He lowers his hand, blinks into the window light, exhales, and steadies himself, while the camera makes a slow subtle arc around his right side.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Soft bedding movement, one tired exhale, faint morning ambience beyond the window.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"4682831609320273551\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_04\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel A4 anchors this segment.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel A4.\",\n        \"<Subject 1> is the man whose face, hair, and build come from @hero_face, wearing a grey sleep t-shirt and grey sleep shorts.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video shows <Subject 1>, referenced for identity, rising from bed and stretching fully in the bedroom of <Picture 2>; guided by @storyboard panel A4.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his face, hair, grey t-shirt, and grey shorts are retained exactly from @hero_face, matching @storyboard panel A4.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the full bedroom, made bed, nightstand lamps on both sides, and closet door are retained.\",\n        \"@storyboard (A4): fully_preserved - composition follows storyboard panel A4.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, soft even morning light filling the room.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel A4): <Subject 1> stands beside the now-empty, slightly rumpled bed in his grey sleep t-shirt and shorts, both arms raised straight overhead in a full stretch, back arching slightly, head tilting back for a moment before he lowers his arms and rolls his shoulders loose. The full bedroom is visible around him — nightstand lamps flanking the headboard, a closet door at the edge of frame, soft daylight now filling the space evenly. The camera holds a static wide shot for the stretch, then performs a slow, small-amplitude push in as he finishes and turns toward the bedroom door.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"A soft exhale and a faint joint-stretch sound accompany the movement, with quiet footsteps beginning as he turns toward the door.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 124,\n      \"steps\": 15,\n      \"seed\": \"13983323932619111901\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_05\",\n      \"prompt\": [\n        \"duration_seconds: 4\",\n        \"\",\n        \"subject_definitions:\",\n        \"@hero_face defines <Subject 1> identity. @storyboard panel B1 anchors this segment.\",\n        \"<Picture 2> is the bedroom-to-bathroom doorway composition from B1.\",\n        \"<Subject 1> wears a plain blue-grey morning t-shirt.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1> walks from the warm bedroom toward the cooler bathroom doorway.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - face, hair, build, and shirt continuity match @hero_face. <Picture 2>: fully_preserved - doorway, bathroom edge, warm bedroom behind him, and standing full-body framing are retained.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is live-action cinematic realism. [Shot 1] the shot begins from <Picture 2>: <Subject 1> walks slowly toward the bathroom doorway, shoulders relaxed but still sleepy, passing from amber bedroom light into a cooler white hallway edge. The camera tracks backward slightly, keeping his face and torso centered as he pauses at the bathroom threshold.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Bare footsteps on floor, faint bathroom fan hum growing louder, soft cloth movement.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"4845432826813068485\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_06\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel B2 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel B2.\",\n        \"<Subject 1> is the man whose face, hair, and build come from @hero_face, wearing the heather blue-grey t-shirt, brushing his teeth.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video shows <Subject 1>, referenced for identity, brushing his teeth at the bathroom mirror as seen in <Picture 2>; guided by @storyboard panel B2.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his face, hair, stubble, and blue-grey t-shirt are retained exactly from @hero_face, matching @storyboard panel B2.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the over-the-shoulder mirror framing, toothbrush and foam, and bathroom mirror reflection are retained.\",\n        \"@storyboard (B2): fully_preserved - composition follows storyboard panel B2.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, clean bathroom light with a slightly cool cast.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel B2): camera framed over <Subject 1>'s shoulder from behind, his silhouette soft in the foreground while his reflection is sharp in the mirror ahead, toothbrush moving in slow, steady strokes, a touch of white foam at the corner of his mouth. His eyes stay on his own reflection, unfocused and still half-tired. He pauses, leans toward the sink, and spits out of the bottom of frame, then straightens back up wiping his mouth with the back of his wrist. The camera holds a static shot throughout, locked on the mirror reflection.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"A steady, soft bristle-on-teeth sound continues, followed by a brief water-tap run and a wet spit sound near the end.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 124,\n      \"steps\": 15,\n      \"seed\": \"18377256739177730655\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_07\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel B3 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel B3.\",\n        \"<Subject 1> is the man whose silhouette, build, and hair come from @hero_face, now showering.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video shows <Subject 1>, referenced for build and silhouette, showering behind the fogged glass door of <Picture 2>; guided by @storyboard panel B3.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his build, hair, and silhouette proportions are retained exactly from @hero_face, matching @storyboard panel B3.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the frosted glass door, warm backlight, steam, and tasteful non-explicit silhouette framing are retained.\",\n        \"@storyboard (B3): fully_preserved - composition follows storyboard panel B3.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, warm backlight diffused through steamed glass, tasteful and non-explicit throughout.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel B3): <Subject 1>'s silhouette is visible only through a fogged glass shower door, warm light glowing behind him, water running down in a steady sheet that further softens his outline. He reaches one hand out to the shower wall, adjusting a control, tilting his head back briefly under the water. Steam curls along the top edge of the glass and slowly thickens across the frame. The camera holds a static shot at a respectful mid-distance, the framing never moving past the glass, keeping the moment atmospheric rather than explicit.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Continuous shower-spray water sound fills the shot, with one soft mechanical click as he adjusts the shower control partway through.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 158,\n      \"steps\": 15,\n      \"seed\": \"2037439268431119169\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_08\",\n      \"prompt\": [\n        \"duration_seconds: 5\",\n        \"\",\n        \"subject_definitions:\",\n        \"@hero_face defines <Subject 1> identity. @storyboard panel B4 anchors this segment.\",\n        \"<Picture 2> is the towel-drying bathroom frame from B4.\",\n        \"<Subject 1> is shirtless but covered at the waist with a white towel, drying his wet hair.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1> dries his hair after showering in the steamy bathroom.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - face, wet hair, skin tone, and build match @hero_face. <Picture 2>: fully_preserved - towel, shower door, steam, warm bathroom light, and right-side framing are retained.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is live-action cinematic realism with warm foggy bathroom atmosphere. [Shot 1] the shot begins from <Picture 2>: <Subject 1> rubs a white towel through his wet hair, tilting his head down and then to the side as steam drifts behind him. He slows, lowers the towel slightly, and looks toward the mirror off-frame, preparing for the day while droplets remain on his shoulders.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Towel rubbing through wet hair, soft dripping water, bathroom fan hum, faint breath.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score.\"\n      ],\n      \"length\": 124,\n      \"steps\": 15,\n      \"seed\": \"12134412095045730312\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_09\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel C1 anchors this segment.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel C1.\",\n        \"<Subject 1> is the man whose face, hair, and build come from @hero_face, now fully dressed in a black leather jacket, dark maroon henley, and dark jeans.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video shows <Subject 1>, referenced for identity and wardrobe, now dressed and walking into the kitchen shown in <Picture 2>; guided by @storyboard panel C1.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his face, hair, black leather jacket, and maroon henley are retained exactly from @hero_face, matching @storyboard panel C1.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the white cabinetry, stainless fridge and microwave, and even daylight are retained.\",\n        \"@storyboard (C1): fully_preserved - composition follows storyboard panel C1.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, clean bright daylight filling a white modern kitchen.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel C1): <Subject 1>, now fully dressed in his black leather jacket over a dark maroon henley and dark jeans, walks a few steps into a bright kitchen lined with white cabinetry, a stainless fridge, and microwave. He glances toward the counter ahead, rolling one jacket sleeve slightly, his posture settled and awake now compared to earlier in the morning. The camera performs a slow, small-amplitude push in as he crosses toward the counter, even daylight holding steady across the white surfaces.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Footsteps on a hard kitchen floor continue throughout, with a faint refrigerator hum in the background.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"17799137422760911130\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_10\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel C2 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel C2.\",\n        \"<Subject 1> is the man in @hero_face, pouring coffee.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video is a close-up of <Subject 1> pouring hot coffee from a glass carafe into a white mug, as shown in <Picture 2>; guided by @storyboard panel C2.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his hand and jacket sleeve are retained exactly from @hero_face.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the glass carafe, streaming dark coffee, rising steam, and white ceramic mug are retained.\",\n        \"@storyboard (C2): fully_preserved - composition follows storyboard panel C2.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, warm soft-focus kitchen light.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel C2): a close-up on <Subject 1>'s hand tilting a glass carafe, a steady stream of dark coffee pouring down into a plain white ceramic mug below, steam curling upward and catching the soft window light. The mug fills gradually, the stream narrowing as he tilts the carafe back upright at the end, a last few drops falling before he sets the carafe down just out of frame. The camera holds a static macro shot, focus locked on the pour and the rising steam throughout.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"A steady stream-pouring sound continues, softening as the mug fills, with a quiet clink as the carafe is set down at the end.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"5765487181431672289\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_11\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel C3 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel C3.\",\n        \"<Subject 1> is the man whose face, hair, and build come from @hero_face, wearing the black leather jacket and maroon henley, packing his bag.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video shows <Subject 1>, referenced for identity and wardrobe, packing his laptop into his bag beside his coffee at the kitchen counter of <Picture 2>; guided by @storyboard panel C3.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his face, hair, jacket, and henley are retained exactly from @hero_face, matching @storyboard panel C3.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the kitchen counter, open brown messenger bag, laptop, coffee mug, and cabinetry behind him are retained.\",\n        \"@storyboard (C3): fully_preserved - composition follows storyboard panel C3.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, bright even daylight across a white kitchen counter.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel C3): <Subject 1> stands at the kitchen counter, his white mug of coffee set beside him, an open brown canvas-and-leather messenger bag in front of him on the counter. He lifts a silver laptop with both hands and lowers it carefully into the bag's main compartment, then reaches for the mug, takes a slow sip, and sets it back down before returning to close the bag's flap partway. The camera performs a slow arc shot at small amplitude around his right side, the white cabinets and stove sliding gently through the background.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"A soft laptop-into-bag settling sound and the quiet clink of the mug against the counter carry through, with the soft rustle of the bag's flap closing near the end.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 158,\n      \"steps\": 15,\n      \"seed\": \"2496024309396471045\"\n    },\n    {\n      \"id\": \"clip_12\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel C4 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel C4.\",\n        \"<Subject 1> is the man in @hero_face, reaching for his phone and keys.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video is a close-up of <Subject 1> picking up his phone and Mercedes key fob from the countertop shown in <Picture 2>; guided by @storyboard panel C4.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his hand and black jacket sleeve are retained exactly from @hero_face.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the countertop, black phone, and Mercedes-Benz key fob are retained.\",\n        \"@storyboard (C4): fully_preserved - composition follows storyboard panel C4.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, bright neutral daylight on a pale stone countertop.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel C4): a close-up on a black smartphone and a Mercedes-Benz key fob resting side by side on a pale countertop. <Subject 1>'s hand, black jacket sleeve at the wrist, reaches into frame from the right, fingers closing first around the key fob and lifting it, then sliding the phone up into the same hand a beat later. The camera holds a static macro shot, focus locked on the countertop and the hand's motion throughout.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"A soft key-fob jingle sounds as it lifts, followed by the light scrape of the phone sliding across the countertop.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"15418735483708033743\"\n    },\n    {\n      \"id\": \"clip_13\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel D1 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel D1.\",\n        \"<Subject 1> is the man whose face, hair, and build come from @hero_face, wearing the black leather jacket and maroon henley, with a brown messenger bag over one shoulder.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video shows <Subject 1>, referenced for identity and wardrobe, opening his apartment door and stepping out, as shown in <Picture 2>; guided by @storyboard panel D1.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his face, hair, jacket, henley, and messenger bag are retained exactly from @hero_face, matching @storyboard panel D1.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the warm interior light, wooden door, and hallway beyond are retained.\",\n        \"@storyboard (D1): fully_preserved - composition follows storyboard panel D1.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, warm interior amber light spilling toward a cooler hallway beyond the door.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel D1): <Subject 1> stands just inside his apartment's open wooden front door, his brown messenger bag slung over one shoulder, one hand resting on the door's edge. He glances back briefly over his shoulder into the warmly lit apartment behind him, then steps forward across the threshold into the dimmer hallway beyond, pulling the door partway closed behind him as he moves. The camera performs a slow, small-amplitude pull back through the doorway, the warm interior light narrowing to a sliver as the door swings toward closed.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"A soft door-hinge creak accompanies his step through the threshold, with his footsteps continuing into the quieter hallway beyond.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 124,\n      \"steps\": 15,\n      \"seed\": \"16017190224278577953\"\n    },\n    {\n      \"id\": \"clip_14\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel D2 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel D2.\",\n        \"<Subject 1> is the man in @hero_face, locking his apartment door from the outside hallway.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video is a close-up of <Subject 1>'s hand closing an already-open apartment door, pulling it shut, inserting the key, locking the door, and removing the key; guided by @storyboard panel D2.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his hand, skin tone, and black leather jacket sleeve are retained exactly from @hero_face.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the wooden door, brass deadbolt keyhole, cylindrical door handle, close hand framing, and warm hallway light are retained.\",\n        \"@storyboard (D2): fully_preserved - composition follows storyboard panel D2 while adding the clear door-closing and key-locking action.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, warm hallway light catching the wood grain of the apartment door, with a tactile close-up focus on the hand, handle, key, and lock.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel D2): a tight close-up on the apartment door from the outside hallway, the door still slightly open with a narrow dark gap visible along the doorframe. <Subject 1>'s hand enters frame from the right, black leather jacket sleeve visible at the wrist, fingers wrapping around the cylindrical handle. He pulls the door inward until it closes flush with the frame, the latch catching with a soft click. Without leaving frame, his other fingers bring a metal key to the brass deadbolt above the handle, carefully insert it into the keyhole, and turn it firmly until the lock engages. After the solid lock-click, he turns the key back to neutral, pulls it out cleanly, and his hand exits frame with the keys. The camera remains a static macro close-up throughout, focus locked on the lock hardware and hand motion, with no face visible in this scene.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"A soft door pull and latch click as the open door closes, followed by metal key insertion, a firm deadbolt turn, a solid mechanical lock-click, a small key-ring jingle, and the key sliding out of the lock.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None. Diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"1305824719555997168\"\n    },\n    {\n      \"id\": \"clip_15\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel D3 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel D3.\",\n        \"<Subject 1> is the man whose face, hair, and build come from @hero_face, wearing the black leather jacket and maroon henley, walking toward his car.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video shows <Subject 1>, referenced for identity and wardrobe, crossing the parking lot toward his grey Mercedes-AMG C63, as shown in <Picture 2>; guided by @storyboard panel D3.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his face, hair, jacket, and henley are retained exactly from @hero_face, matching @storyboard panel D3.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the overcast parking lot, background cars, and grey Mercedes-AMG C63 are retained.\",\n        \"@storyboard (D3): fully_preserved - composition follows storyboard panel D3.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, cool overcast daylight across an open parking lot.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel D3): <Subject 1> walks steadily across an open parking lot under a pale overcast sky, other cars parked in soft focus behind him, his grey Mercedes-AMG C63 sitting angled toward camera ahead. He reaches the driver's side, slows his stride, and lifts the key fob to unlock it, the car's lights flashing once in response. He opens the driver's door and pauses for a beat, one hand on the doorframe, before beginning to lower himself into the seat. The camera performs a slow tracking shot at small amplitude, following alongside him at a steady distance until he reaches the open door.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Footsteps on pavement continue throughout, with a single electronic unlock-chirp and light flash as the fob is used, and the soft clunk of the door being pulled open at the end.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 158,\n      \"steps\": 15,\n      \"seed\": \"15856289694038618439\"\n    },\n    {\n      \"id\": \"clip_16\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel D4 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel D4.\",\n        \"<Subject 1> is the man whose face, eyes, hair, and build come from @hero_face, wearing the black leather jacket and maroon henley, already seated inside the grey Mercedes-AMG C63.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video starts with <Subject 1> already inside the car, showing his focused eyes reflected in the rear-view mirror, then cuts to the exterior rear view of the grey Mercedes-AMG C63 growling away from the scene and leaving realistic exhaust smoke behind; guided by @storyboard panel D4.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his eyes, brow shape, skin tone, hair framing, black leather jacket, and maroon henley are retained exactly from @hero_face.\",\n        \"<Picture 2> ([Shot 2] exterior departure frame): fully_preserved - the rear/low road angle, grey Mercedes-AMG C63, two-lane road, overcast daylight, bare roadside trees, and receding car composition are retained from @storyboard panel D4.\",\n        \"@storyboard (D4): fully_preserved - composition follows storyboard panel D4 for the exterior departure, while adding an interior mirror close-up as the opening beat.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, cool overcast daylight outside with a darker, polished car interior, realistic reflections, shallow depth of field, and natural handheld micro-movement.\",\n        \"[Shot 1] the segment begins inside the parked grey Mercedes-AMG C63: an extreme close-up frames the rear-view mirror, showing only <Subject 1>'s focused eyes and upper brow reflected in the glass. His eyes glance once from the mirror toward the road ahead, calm and determined, while the black leather jacket collar and maroon henley are barely visible as soft dark shapes below the mirror. The camera holds steady from the passenger-side interior angle, focus locked on the mirror reflection, with the windshield and pale road outside blurred behind it.\",\n        \"[Shot 2] At 00:02.500, the camera cuts to the exterior rear framing from <Picture 2> (@storyboard panel D4): the grey Mercedes-AMG C63 sits low in frame on the two-lane road, rear end facing camera, tail lights glowing red under the overcast sky. The engine growls deeper, the car surges forward smoothly, and a small burst of realistic pale exhaust smoke rolls out behind it near the rear bumper, expanding low over the road before thinning into the cold air. The Mercedes accelerates away from the camera with controlled power, keeping the low static rear composition as it recedes down the lane; the smoke lingers in the foreground for a moment, then disperses naturally as the car grows smaller in the distance.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Inside the cabin, there is a muted leather creak, a soft breath, and a low engine idle under the mirror close-up. After the cut outside, the Mercedes-AMG C63 engine growls louder, tires grip the road, exhaust coughs with a brief throaty burst, and the remaining smoke fades under distant road ambience.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"steps\": 15,\n      \"seed\": \"569487957097150616\",\n      \"length\": 175\n    }\n  ],\n  \"defaults\": {}\n}",
+        "test_5scenes",
+        "",
+        960,
+        544,
+        22,
+        "video",
+        "head",
+        "disabled",
+        "generated_audio",
+        0,
+        15,
+        5,
+        0,
+        20,
+        0,
+        "guide"
+      ],
+      "widgets_values_named": {
+        "plan_json": "{\n  \"prompt_prefix\": [\n    \"Morning Departure. <Subject 1> is a native prompt label — not a reference tag. Use @hero_face (Picture 1) + @storyboard (Picture 2) on Scheduled Picture Ref nodes only. No non-diegetic music in any scene — overall_soundscape SFX only.\"\n  ],\n  \"shots\": [\n    {\n      \"id\": \"clip_01\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel A1 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel A1.\",\n        \"<Subject 1> is the man whose face, hair, and build come from @hero_face, currently asleep on his side wearing a plain grey sleep t-shirt.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video holds on <Subject 1>, referenced for identity, sleeping peacefully in the softly lit bedroom from <Picture 2> as dawn light grows; guided by @storyboard panel A1.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his face, hair, and grey sleep t-shirt are retained exactly from @hero_face, matching @storyboard panel A1.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the bedroom, venetian-blind light bars across the bed, nightstand lamps, and rumpled white bedding are retained.\",\n        \"@storyboard (A1): fully_preserved - composition follows storyboard panel A1.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, warm soft dawn light with gentle film grain.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel A1): <Subject 1> lies asleep on his side under rumpled white bedding, one arm tucked beneath the pillow, his tousled dark hair falling across his forehead, a plain grey t-shirt visible at the shoulder. Warm early light filters through half-open venetian blinds, casting soft horizontal bars across the bed and wall that shift almost imperceptibly as the sun rises further. His chest rises and falls in slow, even breaths. The camera performs a very slow, small-amplitude push in toward his face, holding the calm before the coming interruption.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Soft ambient room tone continues throughout, with a faint, distant birdsong outside the window and the quiet rustle of bedding as he breathes.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 124,\n      \"steps\": 15,\n      \"seed\": \"13915539271247461598\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_02\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face defines <Subject 1> identity. @storyboard panel A2 anchors this segment.\",\n        \"<Picture 1> is <Subject 1>'s identity reference. <Picture 2> is the phone-alarm close-up from panel A2.\",\n        \"<Subject 1> is the man from @hero_face; only his hand and partial sleepy body presence appear.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] Extreme close-up of <Subject 1> silencing a 7:00 AM phone alarm, guided by @storyboard panel A2.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - hand shape and skin tone follow @hero_face. <Picture 2>: fully_preserved - phone position, dark bedside surface, warm blurred bedroom background, and close fingertip framing are retained.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is live-action cinematic realism, macro close-up, warm shallow depth of field. [Shot 1] the shot begins from <Picture 2>: <Subject 1>'s hand reaches from the bed toward a black phone glowing with a 7:00 AM alarm screen. His index finger taps the screen once with sleepy precision, the alarm stops, the display dims, and the phone settles back into quiet while the camera remains static and tightly focused on the fingertip and glass.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Rhythmic phone alarm buzz, one firm tap on glass, a tiny interface chime, then silence.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"8023843005045845389\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_03\",\n      \"prompt\": [\n        \"duration_seconds: 4\",\n        \"\",\n        \"subject_definitions:\",\n        \"@hero_face defines <Subject 1> identity. @storyboard panel A3 anchors this segment.\",\n        \"<Picture 1> is the identity reference. <Picture 2> is the seated waking-up composition from A3.\",\n        \"<Subject 1> is sitting on the bed in a grey t-shirt, hair messy, face tired.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1> wakes fully, sitting up and rubbing one eye in warm morning light.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - face, stubble, hair, and grey shirt match @hero_face. <Picture 2>: fully_preserved - seated pose, blinds, golden light, bed edge, and intimate framing are retained.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is live-action cinematic realism with warm directional sunlight. [Shot 1] the shot begins from <Picture 2>: <Subject 1> sits at the bed edge, rubbing one eye with the heel of his hand while his loose hair falls across his forehead. He lowers his hand, blinks into the window light, exhales, and steadies himself, while the camera makes a slow subtle arc around his right side.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Soft bedding movement, one tired exhale, faint morning ambience beyond the window.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"4682831609320273551\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_04\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel A4 anchors this segment.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel A4.\",\n        \"<Subject 1> is the man whose face, hair, and build come from @hero_face, wearing a grey sleep t-shirt and grey sleep shorts.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video shows <Subject 1>, referenced for identity, rising from bed and stretching fully in the bedroom of <Picture 2>; guided by @storyboard panel A4.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his face, hair, grey t-shirt, and grey shorts are retained exactly from @hero_face, matching @storyboard panel A4.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the full bedroom, made bed, nightstand lamps on both sides, and closet door are retained.\",\n        \"@storyboard (A4): fully_preserved - composition follows storyboard panel A4.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, soft even morning light filling the room.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel A4): <Subject 1> stands beside the now-empty, slightly rumpled bed in his grey sleep t-shirt and shorts, both arms raised straight overhead in a full stretch, back arching slightly, head tilting back for a moment before he lowers his arms and rolls his shoulders loose. The full bedroom is visible around him — nightstand lamps flanking the headboard, a closet door at the edge of frame, soft daylight now filling the space evenly. The camera holds a static wide shot for the stretch, then performs a slow, small-amplitude push in as he finishes and turns toward the bedroom door.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"A soft exhale and a faint joint-stretch sound accompany the movement, with quiet footsteps beginning as he turns toward the door.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 124,\n      \"steps\": 15,\n      \"seed\": \"13983323932619111901\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_05\",\n      \"prompt\": [\n        \"duration_seconds: 4\",\n        \"\",\n        \"subject_definitions:\",\n        \"@hero_face defines <Subject 1> identity. @storyboard panel B1 anchors this segment.\",\n        \"<Picture 2> is the bedroom-to-bathroom doorway composition from B1.\",\n        \"<Subject 1> wears a plain blue-grey morning t-shirt.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1> walks from the warm bedroom toward the cooler bathroom doorway.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - face, hair, build, and shirt continuity match @hero_face. <Picture 2>: fully_preserved - doorway, bathroom edge, warm bedroom behind him, and standing full-body framing are retained.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is live-action cinematic realism. [Shot 1] the shot begins from <Picture 2>: <Subject 1> walks slowly toward the bathroom doorway, shoulders relaxed but still sleepy, passing from amber bedroom light into a cooler white hallway edge. The camera tracks backward slightly, keeping his face and torso centered as he pauses at the bathroom threshold.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Bare footsteps on floor, faint bathroom fan hum growing louder, soft cloth movement.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"4845432826813068485\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_06\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel B2 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel B2.\",\n        \"<Subject 1> is the man whose face, hair, and build come from @hero_face, wearing the heather blue-grey t-shirt, brushing his teeth.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video shows <Subject 1>, referenced for identity, brushing his teeth at the bathroom mirror as seen in <Picture 2>; guided by @storyboard panel B2.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his face, hair, stubble, and blue-grey t-shirt are retained exactly from @hero_face, matching @storyboard panel B2.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the over-the-shoulder mirror framing, toothbrush and foam, and bathroom mirror reflection are retained.\",\n        \"@storyboard (B2): fully_preserved - composition follows storyboard panel B2.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, clean bathroom light with a slightly cool cast.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel B2): camera framed over <Subject 1>'s shoulder from behind, his silhouette soft in the foreground while his reflection is sharp in the mirror ahead, toothbrush moving in slow, steady strokes, a touch of white foam at the corner of his mouth. His eyes stay on his own reflection, unfocused and still half-tired. He pauses, leans toward the sink, and spits out of the bottom of frame, then straightens back up wiping his mouth with the back of his wrist. The camera holds a static shot throughout, locked on the mirror reflection.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"A steady, soft bristle-on-teeth sound continues, followed by a brief water-tap run and a wet spit sound near the end.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 124,\n      \"steps\": 15,\n      \"seed\": \"18377256739177730655\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_07\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel B3 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel B3.\",\n        \"<Subject 1> is the man whose silhouette, build, and hair come from @hero_face, now showering.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video shows <Subject 1>, referenced for build and silhouette, showering behind the fogged glass door of <Picture 2>; guided by @storyboard panel B3.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his build, hair, and silhouette proportions are retained exactly from @hero_face, matching @storyboard panel B3.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the frosted glass door, warm backlight, steam, and tasteful non-explicit silhouette framing are retained.\",\n        \"@storyboard (B3): fully_preserved - composition follows storyboard panel B3.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, warm backlight diffused through steamed glass, tasteful and non-explicit throughout.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel B3): <Subject 1>'s silhouette is visible only through a fogged glass shower door, warm light glowing behind him, water running down in a steady sheet that further softens his outline. He reaches one hand out to the shower wall, adjusting a control, tilting his head back briefly under the water. Steam curls along the top edge of the glass and slowly thickens across the frame. The camera holds a static shot at a respectful mid-distance, the framing never moving past the glass, keeping the moment atmospheric rather than explicit.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Continuous shower-spray water sound fills the shot, with one soft mechanical click as he adjusts the shower control partway through.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 158,\n      \"steps\": 15,\n      \"seed\": \"2037439268431119169\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_08\",\n      \"prompt\": [\n        \"duration_seconds: 5\",\n        \"\",\n        \"subject_definitions:\",\n        \"@hero_face defines <Subject 1> identity. @storyboard panel B4 anchors this segment.\",\n        \"<Picture 2> is the towel-drying bathroom frame from B4.\",\n        \"<Subject 1> is shirtless but covered at the waist with a white towel, drying his wet hair.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1> dries his hair after showering in the steamy bathroom.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - face, wet hair, skin tone, and build match @hero_face. <Picture 2>: fully_preserved - towel, shower door, steam, warm bathroom light, and right-side framing are retained.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is live-action cinematic realism with warm foggy bathroom atmosphere. [Shot 1] the shot begins from <Picture 2>: <Subject 1> rubs a white towel through his wet hair, tilting his head down and then to the side as steam drifts behind him. He slows, lowers the towel slightly, and looks toward the mirror off-frame, preparing for the day while droplets remain on his shoulders.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Towel rubbing through wet hair, soft dripping water, bathroom fan hum, faint breath.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score.\"\n      ],\n      \"length\": 124,\n      \"steps\": 15,\n      \"seed\": \"12134412095045730312\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_09\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel C1 anchors this segment.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel C1.\",\n        \"<Subject 1> is the man whose face, hair, and build come from @hero_face, now fully dressed in a black leather jacket, dark maroon henley, and dark jeans.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video shows <Subject 1>, referenced for identity and wardrobe, now dressed and walking into the kitchen shown in <Picture 2>; guided by @storyboard panel C1.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his face, hair, black leather jacket, and maroon henley are retained exactly from @hero_face, matching @storyboard panel C1.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the white cabinetry, stainless fridge and microwave, and even daylight are retained.\",\n        \"@storyboard (C1): fully_preserved - composition follows storyboard panel C1.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, clean bright daylight filling a white modern kitchen.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel C1): <Subject 1>, now fully dressed in his black leather jacket over a dark maroon henley and dark jeans, walks a few steps into a bright kitchen lined with white cabinetry, a stainless fridge, and microwave. He glances toward the counter ahead, rolling one jacket sleeve slightly, his posture settled and awake now compared to earlier in the morning. The camera performs a slow, small-amplitude push in as he crosses toward the counter, even daylight holding steady across the white surfaces.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Footsteps on a hard kitchen floor continue throughout, with a faint refrigerator hum in the background.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"17799137422760911130\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_10\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel C2 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel C2.\",\n        \"<Subject 1> is the man in @hero_face, pouring coffee.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video is a close-up of <Subject 1> pouring hot coffee from a glass carafe into a white mug, as shown in <Picture 2>; guided by @storyboard panel C2.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his hand and jacket sleeve are retained exactly from @hero_face.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the glass carafe, streaming dark coffee, rising steam, and white ceramic mug are retained.\",\n        \"@storyboard (C2): fully_preserved - composition follows storyboard panel C2.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, warm soft-focus kitchen light.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel C2): a close-up on <Subject 1>'s hand tilting a glass carafe, a steady stream of dark coffee pouring down into a plain white ceramic mug below, steam curling upward and catching the soft window light. The mug fills gradually, the stream narrowing as he tilts the carafe back upright at the end, a last few drops falling before he sets the carafe down just out of frame. The camera holds a static macro shot, focus locked on the pour and the rising steam throughout.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"A steady stream-pouring sound continues, softening as the mug fills, with a quiet clink as the carafe is set down at the end.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"5765487181431672289\",\n      \"context_length\": 22,\n      \"audio_context_length\": 22\n    },\n    {\n      \"id\": \"clip_11\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel C3 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel C3.\",\n        \"<Subject 1> is the man whose face, hair, and build come from @hero_face, wearing the black leather jacket and maroon henley, packing his bag.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video shows <Subject 1>, referenced for identity and wardrobe, packing his laptop into his bag beside his coffee at the kitchen counter of <Picture 2>; guided by @storyboard panel C3.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his face, hair, jacket, and henley are retained exactly from @hero_face, matching @storyboard panel C3.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the kitchen counter, open brown messenger bag, laptop, coffee mug, and cabinetry behind him are retained.\",\n        \"@storyboard (C3): fully_preserved - composition follows storyboard panel C3.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, bright even daylight across a white kitchen counter.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel C3): <Subject 1> stands at the kitchen counter, his white mug of coffee set beside him, an open brown canvas-and-leather messenger bag in front of him on the counter. He lifts a silver laptop with both hands and lowers it carefully into the bag's main compartment, then reaches for the mug, takes a slow sip, and sets it back down before returning to close the bag's flap partway. The camera performs a slow arc shot at small amplitude around his right side, the white cabinets and stove sliding gently through the background.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"A soft laptop-into-bag settling sound and the quiet clink of the mug against the counter carry through, with the soft rustle of the bag's flap closing near the end.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 158,\n      \"steps\": 15,\n      \"seed\": \"2496024309396471045\"\n    },\n    {\n      \"id\": \"clip_12\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel C4 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel C4.\",\n        \"<Subject 1> is the man in @hero_face, reaching for his phone and keys.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video is a close-up of <Subject 1> picking up his phone and Mercedes key fob from the countertop shown in <Picture 2>; guided by @storyboard panel C4.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his hand and black jacket sleeve are retained exactly from @hero_face.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the countertop, black phone, and Mercedes-Benz key fob are retained.\",\n        \"@storyboard (C4): fully_preserved - composition follows storyboard panel C4.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, bright neutral daylight on a pale stone countertop.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel C4): a close-up on a black smartphone and a Mercedes-Benz key fob resting side by side on a pale countertop. <Subject 1>'s hand, black jacket sleeve at the wrist, reaches into frame from the right, fingers closing first around the key fob and lifting it, then sliding the phone up into the same hand a beat later. The camera holds a static macro shot, focus locked on the countertop and the hand's motion throughout.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"A soft key-fob jingle sounds as it lifts, followed by the light scrape of the phone sliding across the countertop.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"15418735483708033743\"\n    },\n    {\n      \"id\": \"clip_13\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel D1 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel D1.\",\n        \"<Subject 1> is the man whose face, hair, and build come from @hero_face, wearing the black leather jacket and maroon henley, with a brown messenger bag over one shoulder.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video shows <Subject 1>, referenced for identity and wardrobe, opening his apartment door and stepping out, as shown in <Picture 2>; guided by @storyboard panel D1.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his face, hair, jacket, henley, and messenger bag are retained exactly from @hero_face, matching @storyboard panel D1.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the warm interior light, wooden door, and hallway beyond are retained.\",\n        \"@storyboard (D1): fully_preserved - composition follows storyboard panel D1.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, warm interior amber light spilling toward a cooler hallway beyond the door.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel D1): <Subject 1> stands just inside his apartment's open wooden front door, his brown messenger bag slung over one shoulder, one hand resting on the door's edge. He glances back briefly over his shoulder into the warmly lit apartment behind him, then steps forward across the threshold into the dimmer hallway beyond, pulling the door partway closed behind him as he moves. The camera performs a slow, small-amplitude pull back through the doorway, the warm interior light narrowing to a sliver as the door swings toward closed.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"A soft door-hinge creak accompanies his step through the threshold, with his footsteps continuing into the quieter hallway beyond.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 124,\n      \"steps\": 15,\n      \"seed\": \"16017190224278577953\"\n    },\n    {\n      \"id\": \"clip_14\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel D2 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel D2.\",\n        \"<Subject 1> is the man in @hero_face, locking his apartment door from the outside hallway.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video is a close-up of <Subject 1>'s hand closing an already-open apartment door, pulling it shut, inserting the key, locking the door, and removing the key; guided by @storyboard panel D2.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his hand, skin tone, and black leather jacket sleeve are retained exactly from @hero_face.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the wooden door, brass deadbolt keyhole, cylindrical door handle, close hand framing, and warm hallway light are retained.\",\n        \"@storyboard (D2): fully_preserved - composition follows storyboard panel D2 while adding the clear door-closing and key-locking action.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, warm hallway light catching the wood grain of the apartment door, with a tactile close-up focus on the hand, handle, key, and lock.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel D2): a tight close-up on the apartment door from the outside hallway, the door still slightly open with a narrow dark gap visible along the doorframe. <Subject 1>'s hand enters frame from the right, black leather jacket sleeve visible at the wrist, fingers wrapping around the cylindrical handle. He pulls the door inward until it closes flush with the frame, the latch catching with a soft click. Without leaving frame, his other fingers bring a metal key to the brass deadbolt above the handle, carefully insert it into the keyhole, and turn it firmly until the lock engages. After the solid lock-click, he turns the key back to neutral, pulls it out cleanly, and his hand exits frame with the keys. The camera remains a static macro close-up throughout, focus locked on the lock hardware and hand motion, with no face visible in this scene.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"A soft door pull and latch click as the open door closes, followed by metal key insertion, a firm deadbolt turn, a solid mechanical lock-click, a small key-ring jingle, and the key sliding out of the lock.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None. Diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"1305824719555997168\"\n    },\n    {\n      \"id\": \"clip_15\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel D3 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel D3.\",\n        \"<Subject 1> is the man whose face, hair, and build come from @hero_face, wearing the black leather jacket and maroon henley, walking toward his car.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video shows <Subject 1>, referenced for identity and wardrobe, crossing the parking lot toward his grey Mercedes-AMG C63, as shown in <Picture 2>; guided by @storyboard panel D3.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his face, hair, jacket, and henley are retained exactly from @hero_face, matching @storyboard panel D3.\",\n        \"<Picture 2> ([Shot 1] first frame): fully_preserved - the overcast parking lot, background cars, and grey Mercedes-AMG C63 are retained.\",\n        \"@storyboard (D3): fully_preserved - composition follows storyboard panel D3.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, cool overcast daylight across an open parking lot.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@storyboard panel D3): <Subject 1> walks steadily across an open parking lot under a pale overcast sky, other cars parked in soft focus behind him, his grey Mercedes-AMG C63 sitting angled toward camera ahead. He reaches the driver's side, slows his stride, and lifts the key fob to unlock it, the car's lights flashing once in response. He opens the driver's door and pauses for a beat, one hand on the doorframe, before beginning to lower himself into the seat. The camera performs a slow tracking shot at small amplitude, following alongside him at a steady distance until he reaches the open door.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Footsteps on pavement continue throughout, with a single electronic unlock-chirp and light flash as the fob is used, and the soft clunk of the door being pulled open at the end.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 158,\n      \"steps\": 15,\n      \"seed\": \"15856289694038618439\"\n    },\n    {\n      \"id\": \"clip_16\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character turnaround sheet. Use it for <Subject 1> identity whenever he appears.\",\n        \"@storyboard is the 4x4 Morning Departure scene board (morning_departure_storyboard.jpg); panel D4 anchors this segment.\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the storyboard composition anchor from @storyboard panel D4.\",\n        \"<Subject 1> is the man whose face, eyes, hair, and build come from @hero_face, wearing the black leather jacket and maroon henley, already seated inside the grey Mercedes-AMG C63.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The target video starts with <Subject 1> already inside the car, showing his focused eyes reflected in the rear-view mirror, then cuts to the exterior rear view of the grey Mercedes-AMG C63 growling away from the scene and leaving realistic exhaust smoke behind; guided by @storyboard panel D4.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1> (appears in [Shot 1]): fully_preserved - his eyes, brow shape, skin tone, hair framing, black leather jacket, and maroon henley are retained exactly from @hero_face.\",\n        \"<Picture 2> ([Shot 2] exterior departure frame): fully_preserved - the rear/low road angle, grey Mercedes-AMG C63, two-lane road, overcast daylight, bare roadside trees, and receding car composition are retained from @storyboard panel D4.\",\n        \"@storyboard (D4): fully_preserved - composition follows storyboard panel D4 for the exterior departure, while adding an interior mirror close-up as the opening beat.\",\n        \"\",\n        \"detailed_description:\",\n        \"The target video is in a live-action, cinematic realism style, cool overcast daylight outside with a darker, polished car interior, realistic reflections, shallow depth of field, and natural handheld micro-movement.\",\n        \"[Shot 1] the segment begins inside the parked grey Mercedes-AMG C63: an extreme close-up frames the rear-view mirror, showing only <Subject 1>'s focused eyes and upper brow reflected in the glass. His eyes glance once from the mirror toward the road ahead, calm and determined, while the black leather jacket collar and maroon henley are barely visible as soft dark shapes below the mirror. The camera holds steady from the passenger-side interior angle, focus locked on the mirror reflection, with the windshield and pale road outside blurred behind it.\",\n        \"[Shot 2] At 00:02.500, the camera cuts to the exterior rear framing from <Picture 2> (@storyboard panel D4): the grey Mercedes-AMG C63 sits low in frame on the two-lane road, rear end facing camera, tail lights glowing red under the overcast sky. The engine growls deeper, the car surges forward smoothly, and a small burst of realistic pale exhaust smoke rolls out behind it near the rear bumper, expanding low over the road before thinning into the cold air. The Mercedes accelerates away from the camera with controlled power, keeping the low static rear composition as it recedes down the lane; the smoke lingers in the foreground for a moment, then disperses naturally as the car grows smaller in the distance.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Inside the cabin, there is a muted leather creak, a soft breath, and a low engine idle under the mirror close-up. After the cut outside, the Mercedes-AMG C63 engine growls louder, tires grip the road, exhaust coughs with a brief throaty burst, and the remaining smoke fades under distant road ambience.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None — diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"steps\": 15,\n      \"seed\": \"569487957097150616\",\n      \"length\": 175\n    }\n  ],\n  \"defaults\": {}\n}",
+        "run_name": "morning_departure_78s",
+        "generation_fingerprint": "",
+        "width": 1280,
+        "height": 736,
+        "context_length": 22,
+        "encode_mode": "video",
+        "anchor_mode": "head",
+        "crop": "disabled",
+        "audio_mode": "generated_audio",
+        "audio_context_length": 0,
+        "default_duration_seconds": 15,
+        "default_steps": 5,
+        "base_seed": 0,
+        "segment_crf": 20,
+        "video_blend_frames": 0,
+        "continuation_mode": "guide"
+      },
+      "color": "#1f1f48",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 240,
+      "type": "MiniMaxH3ChainScenePromptEditor",
+      "pos": [
+        4332.12015215932,
+        3702.11859339659
+      ],
+      "size": [
+        2200.2225255759754,
+        1231.100489758372
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "plan",
+          "type": "H3_CHAIN_PLAN",
+          "link": 144
+        }
+      ],
+      "outputs": [
+        {
+          "name": "plan",
+          "type": "H3_CHAIN_PLAN",
+          "links": [
+            145
+          ]
+        }
+      ],
+      "title": "SCENE PROMPT EDITOR — CLICK @ REFERENCE / HOVER TO PREVIEW",
+      "properties": {
+        "cnr_id": "comfyui-minimaxh3-contex-loop",
+        "ver": "0.3.10",
+        "Node name for S&R": "MiniMaxH3ChainScenePromptEditor",
+        "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        },
+        "h3_scene_prompt_editor_active_scene": 0,
+        "h3_scene_prompt_editor_font_size": 18,
+        "h3_scene_prompt_editor_rich_text": true
+      },
+      "widgets_values": [],
+      "widgets_values_named": {},
+      "color": "#1f1f48",
+      "bgcolor": "rgba(24,24,27,.9)"
+    },
+    {
+      "id": 12,
+      "type": "KreaMultiShotStillsV2",
+      "pos": [
+        842.5182497521404,
+        834.6978677805587
+      ],
+      "size": [
+        904.3753509020669,
+        1132
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 10
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 11
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 12
+        },
+        {
+          "name": "reference_image",
+          "type": "IMAGE",
+          "link": 13
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 14
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 15
+        },
+        {
+          "name": "background_image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            18
+          ]
+        },
+        {
+          "name": "shot_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "shots_json",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "16 storyboard panels (A1-D4)",
+      "properties": {
+        "Node name for S&R": "KreaMultiShotStillsV2",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        null,
+        "shortfilm_board",
+        12,
+        20260823,
+        12,
+        1,
+        "euler",
+        "simple",
+        1,
+        768,
+        false,
+        0,
+        "{\"shots\":[{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_1.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_2.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_3.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_4.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_5.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_6.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_7.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_8.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_9.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_10.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_11.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_12.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_13.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_14.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_15.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_16.png\"}],\"selected\":15}"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "shortfilm_board",
+        "seed": 12,
+        "control_after_generate": 20260823,
+        "steps": 12,
+        "cfg": 1,
+        "sampler_name": "euler",
+        "scheduler": "simple",
+        "denoise": 1,
+        "grounding_px": 768,
+        "overwrite": false,
+        "regenerate_shot": 0,
+        "shots_json": "{\"shots\":[{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_1.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_2.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_3.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_4.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_5.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_6.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_7.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_8.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_9.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_10.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_11.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_12.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_13.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_14.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_15.png\"},{\"prompt\":\"Cinematic 16:9 photograph of the same character from the reference sheet, exact face identity, one scene only, photorealistic.\",\"preview\":\"shortfilm_board_16.png\"}],\"selected\":15}"
+      }
+    },
+    {
+      "id": 58,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": [
+        499.3693997081819,
+        325.0068814203869
+      ],
+      "size": [
+        420,
+        220
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "PIPELINE SWITCH pick ONE Krea OR H3",
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "SWITCH",
+        "showNav": true,
+        "showAllGraphs": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "always one",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 215,
+      "type": "LoadImage",
+      "pos": [
+        461.73831650588033,
+        2909.131319814567
+      ],
+      "size": [
+        360,
+        400
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            134
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "H3 @storyboard — 4x4 Scene Board",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "example_scene_board_4x4.jpg",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "example_scene_board_4x4.jpg",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 214,
+      "type": "LoadImage",
+      "pos": [
+        589.640919245574,
+        2377.3388122451247
+      ],
+      "size": [
+        360,
+        400
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            132
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "H3 @hero_face — Character Sheet",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "LoadImage",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "shortfilm_character_sheet.jpg",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "shortfilm_character_sheet.jpg",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 200,
+      "type": "UNETLoader",
+      "pos": [
+        66.60605017988337,
+        2418.788489118485
+      ],
+      "size": [
+        340,
+        82
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            150
+          ]
+        }
+      ],
+      "title": "H3 REF2VA MODEL — REQUIRED",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.30.0",
+        "Node name for S&R": "UNETLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.8",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "h3\\minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "h3\\minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "weight_dtype": "default"
+      }
+    }
+  ],
+  "links": [
+    [
+      1,
+      3,
+      0,
+      4,
+      0,
+      "MODEL"
+    ],
+    [
+      2,
+      4,
+      0,
+      5,
+      0,
+      "MODEL"
+    ],
+    [
+      3,
+      5,
+      0,
+      10,
+      0,
+      "MODEL"
+    ],
+    [
+      4,
+      2,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      5,
+      7,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      6,
+      8,
+      0,
+      10,
+      1,
+      "LATENT"
+    ],
+    [
+      7,
+      7,
+      0,
+      10,
+      4,
+      "VAE"
+    ],
+    [
+      8,
+      2,
+      0,
+      10,
+      5,
+      "IMAGE"
+    ],
+    [
+      9,
+      9,
+      0,
+      10,
+      7,
+      "LATENT"
+    ],
+    [
+      10,
+      10,
+      0,
+      12,
+      0,
+      "MODEL"
+    ],
+    [
+      11,
+      6,
+      0,
+      12,
+      1,
+      "CLIP"
+    ],
+    [
+      12,
+      7,
+      0,
+      12,
+      2,
+      "VAE"
+    ],
+    [
+      13,
+      2,
+      0,
+      12,
+      3,
+      "IMAGE"
+    ],
+    [
+      14,
+      11,
+      0,
+      12,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      15,
+      9,
+      0,
+      12,
+      5,
+      "LATENT"
+    ],
+    [
+      16,
+      6,
+      0,
+      11,
+      0,
+      "CLIP"
+    ],
+    [
+      17,
+      2,
+      0,
+      11,
+      1,
+      "IMAGE"
+    ],
+    [
+      18,
+      12,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      19,
+      13,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      79,
+      201,
+      0,
+      205,
+      0,
+      "CLIP"
+    ],
+    [
+      83,
+      220,
+      4,
+      205,
+      6,
+      "STRING"
+    ],
+    [
+      84,
+      220,
+      8,
+      205,
+      7,
+      "INT"
+    ],
+    [
+      85,
+      220,
+      9,
+      205,
+      8,
+      "INT"
+    ],
+    [
+      86,
+      220,
+      6,
+      205,
+      9,
+      "INT"
+    ],
+    [
+      88,
+      220,
+      5,
+      206,
+      0,
+      "INT"
+    ],
+    [
+      89,
+      220,
+      7,
+      209,
+      1,
+      "INT"
+    ],
+    [
+      90,
+      220,
+      0,
+      221,
+      0,
+      "H3_CHAIN_STATE"
+    ],
+    [
+      91,
+      205,
+      0,
+      221,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      92,
+      205,
+      1,
+      221,
+      3,
+      "LATENT"
+    ],
+    [
+      93,
+      221,
+      0,
+      207,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      94,
+      206,
+      0,
+      210,
+      0,
+      "NOISE"
+    ],
+    [
+      95,
+      207,
+      0,
+      210,
+      1,
+      "GUIDER"
+    ],
+    [
+      96,
+      208,
+      0,
+      210,
+      2,
+      "SAMPLER"
+    ],
+    [
+      97,
+      209,
+      0,
+      210,
+      3,
+      "SIGMAS"
+    ],
+    [
+      99,
+      210,
+      0,
+      211,
+      0,
+      "LATENT"
+    ],
+    [
+      104,
+      220,
+      0,
+      222,
+      0,
+      "H3_CHAIN_STATE"
+    ],
+    [
+      106,
+      210,
+      0,
+      222,
+      2,
+      "LATENT"
+    ],
+    [
+      108,
+      219,
+      0,
+      223,
+      0,
+      "H3_CHAIN_FLOW"
+    ],
+    [
+      109,
+      220,
+      0,
+      223,
+      1,
+      "H3_CHAIN_STATE"
+    ],
+    [
+      111,
+      210,
+      0,
+      223,
+      3,
+      "LATENT"
+    ],
+    [
+      112,
+      222,
+      0,
+      223,
+      4,
+      "H3_CHAIN_SEGMENT"
+    ],
+    [
+      118,
+      202,
+      0,
+      227,
+      0,
+      "VAE"
+    ],
+    [
+      119,
+      227,
+      0,
+      205,
+      1,
+      "VAE"
+    ],
+    [
+      120,
+      228,
+      0,
+      211,
+      1,
+      "VAE"
+    ],
+    [
+      121,
+      227,
+      0,
+      229,
+      0,
+      "VAE"
+    ],
+    [
+      122,
+      229,
+      0,
+      221,
+      2,
+      "VAE"
+    ],
+    [
+      123,
+      229,
+      0,
+      228,
+      0,
+      "VAE"
+    ],
+    [
+      124,
+      203,
+      0,
+      230,
+      0,
+      "VAE"
+    ],
+    [
+      125,
+      230,
+      0,
+      205,
+      2,
+      "VAE"
+    ],
+    [
+      126,
+      230,
+      0,
+      231,
+      0,
+      "VAE"
+    ],
+    [
+      128,
+      204,
+      0,
+      232,
+      0,
+      "MODEL"
+    ],
+    [
+      129,
+      232,
+      0,
+      233,
+      0,
+      "MODEL"
+    ],
+    [
+      130,
+      233,
+      0,
+      207,
+      0,
+      "MODEL"
+    ],
+    [
+      131,
+      233,
+      0,
+      209,
+      0,
+      "MODEL"
+    ],
+    [
+      132,
+      214,
+      0,
+      236,
+      0,
+      "IMAGE"
+    ],
+    [
+      133,
+      236,
+      0,
+      237,
+      1,
+      "H3_TAGGED_REFERENCES"
+    ],
+    [
+      134,
+      215,
+      0,
+      237,
+      0,
+      "IMAGE"
+    ],
+    [
+      141,
+      220,
+      1,
+      205,
+      4,
+      "INT"
+    ],
+    [
+      142,
+      220,
+      2,
+      205,
+      5,
+      "INT"
+    ],
+    [
+      144,
+      218,
+      0,
+      240,
+      0,
+      "H3_CHAIN_PLAN"
+    ],
+    [
+      150,
+      200,
+      0,
+      244,
+      0,
+      "MODEL"
+    ],
+    [
+      152,
+      217,
+      0,
+      245,
+      0,
+      "MODEL"
+    ],
+    [
+      153,
+      245,
+      0,
+      204,
+      0,
+      "MODEL"
+    ],
+    [
+      154,
+      244,
+      0,
+      246,
+      0,
+      "MODEL"
+    ],
+    [
+      100,
+      210,
+      0,
+      212,
+      0,
+      "LATENT"
+    ],
+    [
+      105,
+      213,
+      0,
+      222,
+      1,
+      "IMAGE"
+    ],
+    [
+      107,
+      213,
+      1,
+      222,
+      3,
+      "AUDIO"
+    ],
+    [
+      110,
+      213,
+      0,
+      223,
+      2,
+      "IMAGE"
+    ],
+    [
+      127,
+      231,
+      0,
+      212,
+      1,
+      "VAE"
+    ],
+    [
+      157,
+      246,
+      0,
+      247,
+      0,
+      "MODEL"
+    ],
+    [
+      158,
+      247,
+      0,
+      217,
+      0,
+      "MODEL"
+    ],
+    [
+      159,
+      237,
+      0,
+      205,
+      3,
+      "H3_TAGGED_REFERENCES"
+    ],
+    [
+      101,
+      211,
+      0,
+      213,
+      0,
+      "IMAGE"
+    ],
+    [
+      102,
+      212,
+      0,
+      213,
+      2,
+      "AUDIO"
+    ],
+    [
+      103,
+      221,
+      1,
+      213,
+      1,
+      "INT"
+    ],
+    [
+      145,
+      240,
+      0,
+      219,
+      0,
+      "H3_CHAIN_PLAN"
+    ],
+    [
+      81,
+      219,
+      1,
+      220,
+      0,
+      "H3_CHAIN_STATE"
+    ],
+    [
+      113,
+      223,
+      0,
+      224,
+      0,
+      "H3_CHAIN_MANIFEST"
+    ],
+    [
+      160,
+      220,
+      0,
+      205,
+      10,
+      "H3_CHAIN_STATE"
+    ],
+    [
+      161,
+      221,
+      3,
+      210,
+      4,
+      "LATENT"
+    ],
+    [
+      162,
+      220,
+      0,
+      213,
+      3,
+      "H3_CHAIN_STATE"
+    ],
+    [
+      163,
+      213,
+      2,
+      222,
+      4,
+      "IMAGE"
+    ],
+    [
+      164,
+      237,
+      0,
+      219,
+      3,
+      "H3_TAGGED_REFERENCES"
+    ],
+    [
+      165,
+      237,
+      1,
+      218,
+      3,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "CONTROL",
+      "bounding": [
+        20,
+        0,
+        1220,
+        660
+      ],
+      "color": "#232",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "SWITCH KREA Storyboard Pipeline",
+      "bounding": [
+        19.20359205065034,
+        752.0983780614056,
+        3461.8426461183094,
+        1251.8387610522136
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "SWITCH H3 Video Pipeline",
+      "bounding": [
+        41.089269166717784,
+        2202.7030372259196,
+        9060.040273597186,
+        3562.0443484123434
+      ],
+      "color": "#535",
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "RECOVERY (optional)",
+      "bounding": [
+        575.1312896923114,
+        3475.4184105721506,
+        2251.771219350737,
+        2122.0920415938795
+      ],
+      "color": "#222",
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "preview",
+      "bounding": [
+        1393.190738625517,
+        4318.591287552963,
+        1155.890256753226,
+        1234.0118480365227
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.5563580000000367,
+      "offset": [
+        -157.25266302888895,
+        -2016.5026595443373
+      ]
+    },
+    "comfyui_mcp": {
+      "workflow_uuid": "834b5b9c-2277-4192-91df-5345877892ef"
+    },
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "frontendVersion": "1.55.18",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4,
+  "seed_widgets": {
+    "206": 0
+  }
+}

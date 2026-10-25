@@ -1,0 +1,74 @@
+{
+ "1": {
+  "class_type": "DubSyncLoadVideo",
+  "inputs": {
+   "path": "C:\\path\\to\\crop.mkv",
+   "start_frame": 0,
+   "frame_count": 0
+  }
+ },
+ "2": {
+  "class_type": "DubSyncLoadAudio",
+  "inputs": {
+   "path": "C:\\path\\to\\hindi_vocals_16k.wav",
+   "start_seconds": 0.0,
+   "duration_seconds": 0.0
+  }
+ },
+ "3": {
+  "class_type": "DubSyncLatentSyncLoader",
+  "inputs": {
+   "precision": "fp16",
+   "deepcache": false
+  }
+ },
+ "4": {
+  "class_type": "DubSyncLatentSync",
+  "inputs": {
+   "engine": [
+    "3",
+    0
+   ],
+   "images": [
+    "1",
+    0
+   ],
+   "audio": [
+    "2",
+    0
+   ],
+   "fps": [
+    "1",
+    1
+   ],
+   "inference_steps": 30,
+   "guidance": 1.5,
+   "seed": 1247,
+   "chunk_frames": 48,
+   "face_select": "nearest_to_target",
+   "target_x": 0.5,
+   "target_y": 0.45,
+   "landmark_smoothing": 5,
+   "blend": "mouth_only",
+   "mouth_dilate": 8,
+   "mouth_feather": 15,
+   "mask": "mask.png",
+   "targets_json": ""
+  }
+ },
+ "5": {
+  "class_type": "DubSyncSaveVideo",
+  "inputs": {
+   "images": [
+    "4",
+    0
+   ],
+   "path": "C:\\path\\to\\result.mkv",
+   "fps": [
+    "1",
+    1
+   ],
+   "codec": "ffv1 (lossless .mkv)"
+  }
+ }
+}

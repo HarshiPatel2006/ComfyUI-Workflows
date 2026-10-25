@@ -1,0 +1,298 @@
+{
+ "1": {
+  "class_type": "VHS_LoadVideo",
+  "inputs": {
+   "video": "swap_src_video.mp4",
+   "force_rate": 24,
+   "custom_width": 0,
+   "custom_height": 0,
+   "frame_load_cap": 141,
+   "skip_first_frames": 0,
+   "select_every_nth": 1,
+   "format": "None"
+  }
+ },
+ "2": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "swap_character.jpg"
+  }
+ },
+ "3": {
+  "class_type": "CheckpointLoaderSimple",
+  "inputs": {
+   "ckpt_name": "sam3.1_multiplex_fp16.safetensors"
+  }
+ },
+ "4": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {
+   "clip": [
+    "3",
+    1
+   ],
+   "text": "person"
+  }
+ },
+ "5": {
+  "class_type": "SAM3_Detect",
+  "inputs": {
+   "model": [
+    "3",
+    0
+   ],
+   "image": [
+    "1",
+    0
+   ],
+   "conditioning": [
+    "4",
+    0
+   ],
+   "threshold": 0.5,
+   "refine_iterations": 2,
+   "individual_masks": false
+  }
+ },
+ "6": {
+  "class_type": "ImageInvert",
+  "inputs": {
+   "image": [
+    "1",
+    0
+   ]
+  }
+ },
+ "7": {
+  "class_type": "ImageCompositeMasked",
+  "inputs": {
+   "destination": [
+    "1",
+    0
+   ],
+   "source": [
+    "6",
+    0
+   ],
+   "mask": [
+    "5",
+    0
+   ],
+   "x": 0,
+   "y": 0,
+   "resize_source": false
+  }
+ },
+ "8": {
+  "class_type": "ImageScaleToTotalPixels",
+  "inputs": {
+   "image": [
+    "7",
+    0
+   ],
+   "upscale_method": "nearest-exact",
+   "megapixels": 0.15,
+   "resolution_steps": 1
+  }
+ },
+ "9": {
+  "class_type": "UNETLoader",
+  "inputs": {
+   "unet_name": "h3\\minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+   "weight_dtype": "default"
+  }
+ },
+ "10": {
+  "class_type": "CLIPLoader",
+  "inputs": {
+   "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+   "type": "minimax",
+   "device": "default"
+  }
+ },
+ "11": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+  }
+ },
+ "12": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+  }
+ },
+ "13": {
+  "class_type": "RegexReplace",
+  "inputs": {
+   "string": "subject_definitions:\n<Subject 1> is the adult person in <Picture 1>, with the exact face, skin tone, hairstyle, body proportions and complete outfit from that image: a man in his early thirties with a slim, athletic build, fair skin, light blue-grey eyes, short dark-brown hair cropped close on the sides, and a full, neatly trimmed dark-brown beard and moustache. He wears a plain beige long-sleeved crew-neck cotton sweatshirt and light-blue denim jeans.\n<Video 1> is the source clip; use its performer's motion, timing and camera movement.\n<Audio 1> is the source soundtrack.\n\nsummary:\n[reference generation] From the very first frame, <Subject 1> fully replaces the performer in <Video 1> and performs the same actions with the same timing for the entire clip.\n\nretention_analysis:\n<Subject 1>: attribute_transfer - transfer the face, hairstyle, outfit and body proportions consistently to every frame.\n<Video 1>: partially_preserved - preserve the performer's action, pose, timing and camera movement; do not preserve the original performer's face, makeup or face paint, hair, hair accessories, clothing or props.\n<Audio 1>: reference - keep the timing and ambience of the source audio.\n\ndetailed_description:\nPhotorealistic, continuous shot.\n[Shot 1] <Subject 1>, already fully transformed in the opening frame, stands at the foot of the stairs with a confident, rhythmic swagger, his right arm raised out to the side with the hand flicking loosely at shoulder height while his left hand rests near his waist, his head nodding slightly to an unheard beat. Around one and a half seconds in he lowers the raised arm and sweeps his right hand across his chest in a smooth rolling gesture while stepping forward toward the camera. From about three seconds he leans in close to the lens with a relaxed, cocky expression, then tilts his head from one side to the other, dipping and swaying his upper body playfully, ending with a slight smirk as he looks down into the camera. The handheld camera starts low and slightly below him, pushes in steadily as he approaches, and keeps looking up at him with gentle sway. The camera follows the same path and framing as <Video 1>. Stable face, stable outfit, natural body motion, no identity drift, no morphing, no duplicated limbs.\nSetting in <Video 1>: the target video takes place in <Subject 2>, the interior stairwell of an old building, with tall white-framed multi-pane windows filling the left side, rust-red painted pillars and wall sections, a white plaster ceiling with patches of peeling paint, and a worn concrete staircase with a varnished wooden handrail and a carved wooden newel post rising behind.\nScene lighting on the performer in <Video 1>: bright, soft, neutral-white daylight comes from the large windows on the left of frame, lighting the face and chest evenly with gentle shadows on the right side; the windows are slightly overexposed and the overall look is airy, low-contrast and naturally graded.\nFraming on the performer in <Video 1>: low-angle medium shot from just above the head to the hips at the start, moving in to a low-angle close-up from the top of the head to the mid-chest by about three seconds, with the head sometimes cut by the top edge as he leans in; the legs and feet are never visible.\n\noverall_soundscape:\nNatural ambience matching the scene. No dialogue.\n\nnon_diegetic_music:\nN/A\n",
+   "regex_pattern": "^[ \\t>*_`#]*subject[ _]definitions[ \\t*_`]*:[*_`]*",
+   "replace": "subject_definitions:\n<Subject 2> is the environment of <Video 1>: its location, walls, floor, background, set, furniture, objects and light sources, exactly as they appear in <Video 1> (described in the 'Setting in <Video 1>' line if given).\n<Video 1> is the source video for the target video edit.\nBackground rule: <Picture 1> provides only <Subject 1> - the character's identity, face, hair and outfit design. Everything around <Subject 1> in every frame is <Subject 2>: the location, background, set, objects and lighting of <Video 1>.\nLighting rule: relight <Subject 1> to match <Video 1> exactly - same light direction, intensity, colour temperature, coloured light and reflections, shadows, contrast and colour grade as the original performer - so the character looks filmed in that scene, not composited. If a 'Scene lighting' line is given, match it exactly.\nFraming rule: keep exactly the shot size, crop, lens and subject scale of <Video 1> in every frame, as described in the 'Framing on the performer' line if given; <Subject 1> occupies the same area of the frame, cut by the frame edges at the same places on the body, as the performer.",
+   "case_insensitive": true,
+   "multiline": true,
+   "dotall": false,
+   "count": 1
+  }
+ },
+ "14": {
+  "class_type": "RegexReplace",
+  "inputs": {
+   "string": [
+    "13",
+    0
+   ],
+   "regex_pattern": "(?:\\[[ \\t]*reference[ \\t]+generation([^\\]\\n]*)\\]([\\s\\S]*?))?^[ \\t>*_`#]*retention[ _]analysis[ \\t*_`]*:[*_`]*",
+   "replace": "[video editing\\g<1>] The target video is an edited version of <Video 1>. <Subject 2> stays exactly as it is in <Video 1>, and the only edit is the performer, who becomes <Subject 1>.\\g<2>\nretention_analysis:\n<Subject 2> (appears in every shot): fully_preserved - the location, walls, floor, background, set, furniture, objects and light sources of <Video 1> are retained exactly, in the same positions and from the same camera angle.\nLighting: preserved from <Video 1> - <Subject 1> takes the lighting and colour grade of <Subject 2>.",
+   "case_insensitive": true,
+   "multiline": true,
+   "dotall": false,
+   "count": 1
+  }
+ },
+ "15": {
+  "class_type": "MiniMaxH3ReferenceToVideo",
+  "inputs": {
+   "clip": [
+    "10",
+    0
+   ],
+   "vae": [
+    "11",
+    0
+   ],
+   "audio_vae": [
+    "12",
+    0
+   ],
+   "ref_images.ref_image_0": [
+    "2",
+    0
+   ],
+   "ref_videos.ref_video_0": [
+    "8",
+    0
+   ],
+   "prompt": [
+    "14",
+    0
+   ],
+   "width": 896,
+   "height": 480,
+   "length": 141,
+   "ref_image_size": "match"
+  }
+ },
+ "16": {
+  "class_type": "BasicGuider",
+  "inputs": {
+   "model": [
+    "9",
+    0
+   ],
+   "conditioning": [
+    "15",
+    0
+   ]
+  }
+ },
+ "17": {
+  "class_type": "RandomNoise",
+  "inputs": {
+   "noise_seed": 150020260820
+  }
+ },
+ "18": {
+  "class_type": "KSamplerSelect",
+  "inputs": {
+   "sampler_name": "res_multistep"
+  }
+ },
+ "19": {
+  "class_type": "BasicScheduler",
+  "inputs": {
+   "model": [
+    "9",
+    0
+   ],
+   "scheduler": "simple",
+   "steps": 20,
+   "denoise": 1
+  }
+ },
+ "20": {
+  "class_type": "SamplerCustomAdvanced",
+  "inputs": {
+   "noise": [
+    "17",
+    0
+   ],
+   "guider": [
+    "16",
+    0
+   ],
+   "sampler": [
+    "18",
+    0
+   ],
+   "sigmas": [
+    "19",
+    0
+   ],
+   "latent_image": [
+    "15",
+    1
+   ]
+  }
+ },
+ "21": {
+  "class_type": "VAEDecode",
+  "inputs": {
+   "samples": [
+    "20",
+    0
+   ],
+   "vae": [
+    "11",
+    0
+   ]
+  }
+ },
+ "22": {
+  "class_type": "VHS_VideoCombine",
+  "inputs": {
+   "images": [
+    "21",
+    0
+   ],
+   "frame_rate": 24,
+   "loop_count": 0,
+   "filename_prefix": "H3_Swap_480p",
+   "format": "video/h264-mp4",
+   "pingpong": false,
+   "save_output": true,
+   "pix_fmt": "yuv420p",
+   "crf": 19,
+   "save_metadata": true,
+   "trim_to_audio": false
+  }
+ },
+ "23": {
+  "class_type": "VHS_VideoCombine",
+  "inputs": {
+   "images": [
+    "8",
+    0
+   ],
+   "frame_rate": 24,
+   "loop_count": 0,
+   "filename_prefix": "H3_Swap_motionguide",
+   "format": "video/h264-mp4",
+   "pingpong": false,
+   "save_output": true,
+   "pix_fmt": "yuv420p",
+   "crf": 19,
+   "save_metadata": false,
+   "trim_to_audio": false
+  }
+ }
+}

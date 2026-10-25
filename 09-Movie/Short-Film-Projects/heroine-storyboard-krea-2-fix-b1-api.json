@@ -1,0 +1,178 @@
+{
+ "2": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "_upload_heroine_character_sheet.jpg"
+  }
+ },
+ "3": {
+  "class_type": "UNETLoader",
+  "inputs": {
+   "unet_name": "krea2_turbo_fp8_scaled.safetensors",
+   "weight_dtype": "default"
+  }
+ },
+ "4": {
+  "class_type": "LoraLoaderModelOnly",
+  "inputs": {
+   "model": [
+    "3",
+    0
+   ],
+   "lora_name": "krea2_identity_edit_v1_2.safetensors",
+   "strength_model": 1
+  }
+ },
+ "5": {
+  "class_type": "ModelSamplingAuraFlow",
+  "inputs": {
+   "model": [
+    "4",
+    0
+   ],
+   "shift": 1.15
+  }
+ },
+ "6": {
+  "class_type": "CLIPLoader",
+  "inputs": {
+   "clip_name": "qwen3vl_4b_fp8_scaled.safetensors",
+   "type": "krea2",
+   "device": "default"
+  }
+ },
+ "7": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "qwen_image_vae.safetensors"
+  }
+ },
+ "8": {
+  "class_type": "VAEEncode",
+  "inputs": {
+   "pixels": [
+    "2",
+    0
+   ],
+   "vae": [
+    "7",
+    0
+   ]
+  }
+ },
+ "9": {
+  "class_type": "EmptySD3LatentImage",
+  "inputs": {
+   "width": 768,
+   "height": 432,
+   "batch_size": 1
+  }
+ },
+ "10": {
+  "class_type": "Krea2EditModelPatch",
+  "inputs": {
+   "model": [
+    "5",
+    0
+   ],
+   "source_latent": [
+    "8",
+    0
+   ],
+   "vae": [
+    "7",
+    0
+   ],
+   "source_image": [
+    "2",
+    0
+   ],
+   "target_latent": [
+    "9",
+    0
+   ],
+   "ref_boost": 4,
+   "ref_boost_a": 1,
+   "fit_mode": "fit",
+   "ref_position": "aligned (trained)",
+   "ref_position_a": "aligned (trained)"
+  }
+ },
+ "11": {
+  "class_type": "Krea2EditGroundedEncode",
+  "inputs": {
+   "clip": [
+    "6",
+    0
+   ],
+   "image": [
+    "2",
+    0
+   ],
+   "prompt": "orange cast, amber tint, teal tint, oversaturated, crushed blacks",
+   "grounding_px": 1024,
+   "system_prompt": ""
+  }
+ },
+ "12": {
+  "class_type": "KreaMultiShotStillsV2",
+  "inputs": {
+   "model": [
+    "10",
+    0
+   ],
+   "clip": [
+    "6",
+    0
+   ],
+   "vae": [
+    "7",
+    0
+   ],
+   "reference_image": [
+    "2",
+    0
+   ],
+   "negative": [
+    "11",
+    0
+   ],
+   "latent_image": [
+    "9",
+    0
+   ],
+   "filename_prefix": "heroine_morning_board",
+   "seed": 777001,
+   "steps": 12,
+   "cfg": 1,
+   "sampler_name": "euler",
+   "scheduler": "simple",
+   "denoise": 1,
+   "grounding_px": 768,
+   "overwrite": true,
+   "regenerate_shot": 5,
+   "shots_json": "{\"shots\": [{\"prompt\": \"Cinematic 16:9 film still of the same young woman from the reference sheet, exact face identity, long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin. She wears a soft ivory cotton pyjama set. Medium close-up, she sleeps on her side under rumpled white bedding, one hand under the pillow, hair spread across it. Soft early-morning daylight through sheer white curtains, airy bedroom. Photorealistic, shallow depth of field. Natural cinematic colour grade: neutral white balance, true-to-life skin tones, soft contrast with gently lifted shadows, clean bright whites, subtle muted pastels, no orange, amber or teal cast, fine film grain.\", \"preview\": \"heroine_morning_board_1.png\"}, {\"prompt\": \"Cinematic 16:9 film still, extreme macro close-up of a woman's slender index finger tapping a black smartphone showing a large simple clock alarm screen on a white bedside table. Soft blurred bedroom behind, clean daylight reflections on the glass. Photorealistic, shallow depth of field. Natural cinematic colour grade: neutral white balance, true-to-life skin tones, soft contrast with gently lifted shadows, clean bright whites, subtle muted pastels, no orange, amber or teal cast, fine film grain.\", \"preview\": \"heroine_morning_board_2.png\"}, {\"prompt\": \"Cinematic 16:9 film still of the same young woman from the reference sheet, exact face identity, long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin. She wears a soft ivory cotton pyjama set. Medium shot, she sits up on the edge of the bed, sleepy, pushing her hair back from her face with one hand. Bright soft window light behind her, white bedding. Photorealistic, shallow depth of field. Natural cinematic colour grade: neutral white balance, true-to-life skin tones, soft contrast with gently lifted shadows, clean bright whites, subtle muted pastels, no orange, amber or teal cast, fine film grain.\", \"preview\": \"heroine_morning_board_3.png\"}, {\"prompt\": \"Cinematic 16:9 film still of the same young woman from the reference sheet, exact face identity, long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin. She wears a soft ivory cotton pyjama set. Wide shot, she stands beside the unmade bed near a bright window, arms stretched high overhead mid-stretch, eyes closed, calm smile. Clean airy bedroom. Photorealistic, shallow depth of field. Natural cinematic colour grade: neutral white balance, true-to-life skin tones, soft contrast with gently lifted shadows, clean bright whites, subtle muted pastels, no orange, amber or teal cast, fine film grain.\", \"preview\": \"heroine_morning_board_4.png\"}, {\"prompt\": \"Cinematic 16:9 film still of the same young woman from the reference sheet, exact face identity, long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin. She wears a soft ivory cotton pyjama set. Medium-wide shot from behind, full body seen from the back only, wearing the matching ivory pyjama top and ivory pyjama trousers, she walks from the bedroom toward an open bathroom doorway, the bathroom lit by soft clean white light. Photorealistic, shallow depth of field. Natural cinematic colour grade: neutral white balance, true-to-life skin tones, soft contrast with gently lifted shadows, clean bright whites, subtle muted pastels, no orange, amber or teal cast, fine film grain. Single continuous full-frame shot, one person only, no inset, no split screen, no collage.\", \"preview\": \"heroine_morning_board_5.png\"}, {\"prompt\": \"Cinematic 16:9 film still of the same young woman from the reference sheet, exact face identity, long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin. She wears a soft ivory cotton pyjama set. Medium close-up over her shoulder into a bathroom mirror, she brushes her teeth, sleepy eyes on her reflection, white tiles, soft even light. Photorealistic, shallow depth of field. Natural cinematic colour grade: neutral white balance, true-to-life skin tones, soft contrast with gently lifted shadows, clean bright whites, subtle muted pastels, no orange, amber or teal cast, fine film grain.\", \"preview\": \"heroine_morning_board_6.png\"}, {\"prompt\": \"Cinematic 16:9 film still, a woman's blurred silhouette showering behind a heavily fogged glass shower door, long dark hair, water droplets and streaks on the glass, rising steam, soft white bathroom light, modest framing, no detail visible. Photorealistic, shallow depth of field. Natural cinematic colour grade: neutral white balance, true-to-life skin tones, soft contrast with gently lifted shadows, clean bright whites, subtle muted pastels, no orange, amber or teal cast, fine film grain.\", \"preview\": \"heroine_morning_board_7.png\"}, {\"prompt\": \"Cinematic 16:9 film still of the same young woman from the reference sheet, exact face identity, long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin. She wears a white towelling bathrobe. Medium shot, she dries her damp hair with a white towel in front of a steamy mirror that is half wiped clean, soft diffused light. Photorealistic, shallow depth of field. Natural cinematic colour grade: neutral white balance, true-to-life skin tones, soft contrast with gently lifted shadows, clean bright whites, subtle muted pastels, no orange, amber or teal cast, fine film grain.\", \"preview\": \"heroine_morning_board_8.png\"}, {\"prompt\": \"Cinematic 16:9 film still of the same young woman from the reference sheet, exact face identity, long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin. She wears a fitted black camisole tucked into high-waisted beige pleated wide-leg trousers, small gold drop earrings, a thin gold chain necklace and tan sandals. Medium-wide shot, fully dressed, she walks into a bright modern white kitchen with a large window and a potted plant, clean natural daylight. Photorealistic, shallow depth of field. Natural cinematic colour grade: neutral white balance, true-to-life skin tones, soft contrast with gently lifted shadows, clean bright whites, subtle muted pastels, no orange, amber or teal cast, fine film grain. Single continuous full-frame shot, one person only, no inset, no split screen, no collage.\", \"preview\": \"heroine_morning_board_9.png\"}, {\"prompt\": \"Cinematic 16:9 film still, close-up of a woman's hand with a thin gold bracelet pouring steaming coffee from a glass carafe into a white ceramic mug on a light marble counter, soft daylight from the side, delicate steam. Photorealistic, shallow depth of field. Natural cinematic colour grade: neutral white balance, true-to-life skin tones, soft contrast with gently lifted shadows, clean bright whites, subtle muted pastels, no orange, amber or teal cast, fine film grain.\", \"preview\": \"heroine_morning_board_10.png\"}, {\"prompt\": \"Cinematic 16:9 film still of the same young woman from the reference sheet, exact face identity, long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin. She wears a fitted black camisole tucked into high-waisted beige pleated wide-leg trousers, small gold drop earrings, a thin gold chain necklace and tan sandals. Medium shot at the kitchen counter, she slides a silver laptop into a tan leather tote bag, a white coffee mug beside it, focused expression, soft window light. Photorealistic, shallow depth of field. Natural cinematic colour grade: neutral white balance, true-to-life skin tones, soft contrast with gently lifted shadows, clean bright whites, subtle muted pastels, no orange, amber or teal cast, fine film grain.\", \"preview\": \"heroine_morning_board_11.png\"}, {\"prompt\": \"Cinematic 16:9 film still, close-up of a woman's hand with a thin gold bracelet picking up a black smartphone and a car key fob from a light marble kitchen counter, a white coffee mug soft in the background, clean daylight. Photorealistic, shallow depth of field. Natural cinematic colour grade: neutral white balance, true-to-life skin tones, soft contrast with gently lifted shadows, clean bright whites, subtle muted pastels, no orange, amber or teal cast, fine film grain.\", \"preview\": \"heroine_morning_board_12.png\"}, {\"prompt\": \"Cinematic 16:9 film still of the same young woman from the reference sheet, exact face identity, long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin. She wears a fitted black camisole tucked into high-waisted beige pleated wide-leg trousers, small gold drop earrings, a thin gold chain necklace and tan sandals. Medium-wide shot from the hallway, she opens her apartment front door and steps out, tan tote bag on her shoulder, bright daylight spilling in. Photorealistic, shallow depth of field. Natural cinematic colour grade: neutral white balance, true-to-life skin tones, soft contrast with gently lifted shadows, clean bright whites, subtle muted pastels, no orange, amber or teal cast, fine film grain.\", \"preview\": \"heroine_morning_board_13.png\"}, {\"prompt\": \"Cinematic 16:9 film still, close-up of a woman's hand with a thin gold bracelet turning a key in the lock of a pale grey apartment front door from outside, brass handle, clean daylight. Photorealistic, shallow depth of field. Natural cinematic colour grade: neutral white balance, true-to-life skin tones, soft contrast with gently lifted shadows, clean bright whites, subtle muted pastels, no orange, amber or teal cast, fine film grain.\", \"preview\": \"heroine_morning_board_14.png\"}, {\"prompt\": \"Cinematic 16:9 film still of the same young woman from the reference sheet, exact face identity, long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin. She wears a fitted black camisole tucked into high-waisted beige pleated wide-leg trousers, small gold drop earrings, a thin gold chain necklace and tan sandals. Wide shot, she walks across a sunny apartment parking lot toward a grey Mercedes-AMG C63 sedan, tote bag on her shoulder, confident stride, soft morning shadows. Photorealistic, shallow depth of field. Natural cinematic colour grade: neutral white balance, true-to-life skin tones, soft contrast with gently lifted shadows, clean bright whites, subtle muted pastels, no orange, amber or teal cast, fine film grain.\", \"preview\": \"heroine_morning_board_15.png\"}, {\"prompt\": \"Cinematic 16:9 film still, rear three-quarter exterior view of a grey Mercedes-AMG C63 sedan pulling out of an apartment parking lot onto a quiet road, clean morning daylight, slight motion blur on the wheels. Photorealistic, shallow depth of field. Natural cinematic colour grade: neutral white balance, true-to-life skin tones, soft contrast with gently lifted shadows, clean bright whites, subtle muted pastels, no orange, amber or teal cast, fine film grain.\", \"preview\": \"heroine_morning_board_16.png\"}], \"selected\": 0}"
+  }
+ },
+ "13": {
+  "class_type": "SceneBoardCompose",
+  "inputs": {
+   "images": [
+    "12",
+    0
+   ],
+   "grid_columns": 4,
+   "grid_rows": 4,
+   "gutter_px": 8,
+   "label_mode": "storyboard",
+   "label_height": 28,
+   "background_color": "#080a0e",
+   "panel_width": 0,
+   "panel_height": 0,
+   "fit_mode": "stretch",
+   "custom_labels": "A1, A2, A3, A4, B1, B2, B3, B4, C1, C2, C3, C4, D1, D2, D3, D4",
+   "filename_prefix": "heroine_morning_scene_board",
+   "save_to_output": true
+  }
+ }
+}

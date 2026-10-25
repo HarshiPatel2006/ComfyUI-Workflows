@@ -19,7 +19,7 @@ Filename pattern: `Model - Task - Variant.json` (e.g. `Qwen Image 2.1 - One Imag
 | 90-Docs-and-Resources | LLM prompt-assistant instructions, LoRA training, learning & node demos, Pixaroma episode resources, sample media inputs, maintenance manifests + undo script |
 | 91-Review-Version-Conflicts | Original Pixaroma versions of workflows whose library copy has different settings — review and keep one |
 
-**370 workflows.** Adding a new workflow: drop it in the folder for its main job, name it `Model - Task - Variant.json`, and add it here.
+**380 workflows.** Adding a new workflow: drop it in the folder for its main job, name it `Model - Task - Variant.json`, and add it here.
 
 ## All workflows by folder
 
@@ -319,6 +319,7 @@ Filename pattern: `Model - Task - Variant.json` (e.g. `Qwen Image 2.1 - One Imag
 ### 04-Video/Video-Upscaling
 - SeedVR2 - HD Video Upscale
 - SeedVR2 - Video Upscale
+- SeedVR2 - Video Upscale - API Run
 
 ### 05-Audio/Music-Generation
 - ACE-Step v1.5 XL Turbo - Text to Music
@@ -344,8 +345,11 @@ Filename pattern: `Model - Task - Variant.json` (e.g. `Qwen Image 2.1 - One Imag
 ### 06-3D-Generation/Image-to-3D
 - Pixal3D - Image to 3D Model - HQ + PBR Textures
 - Pixal3D - Image to 3D Model - Low VRAM
-- Trellis 2 - Image to 3D Model - HQ + PBR Textures
+- SAM3D Body - 3D Viewer
+- SAM3D Body - Utility
+- SAM3D Body - Video to 3D Body - Multi (R01_SC008)
 - Trellis 2 - Image to 3D Model - High VRAM
+- Trellis 2 - Image to 3D Model - HQ + PBR Textures
 - Trellis 2 - Image to 3D Model - Low VRAM
 
 ### 06-3D-Generation/Multi-View-to-3D
@@ -417,8 +421,14 @@ Filename pattern: `Model - Task - Variant.json` (e.g. `Qwen Image 2.1 - One Imag
 ### 09-Movie
 - Short Film Director Pipeline (Krea + MiniMax H3)
 - Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Fixed
+- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Fixed - Storyboard Prompts
+- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 HiRes 16 Scenes - Heroine
+- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 HiRes 3 Scenes
+- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 HiRes Full 16 Scenes
 - Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Overnight
 - Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Test Scene 1
+- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Trial 5 Scenes
+- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Trial 5 Scenes - MCP Run
 - Short Film Director Pipeline (Krea + MiniMax H3) - No Review
 - Short Film Director Pipeline (Krea + MiniMax H3) - No Review v2
 
@@ -637,10 +647,16 @@ Use this to find every workflow that needs a given model installed.
 - `08-Testing-and-Comparison/Krea 2 INT8 - LoRA XY Plot.json`
 - `90-Docs-and-Resources/LoRA-Training/Krea 2 - LoRA Converter.json`
 
-### Krea 2 + MiniMax H3 (pipeline) (6)
+### Krea 2 + MiniMax H3 (pipeline) (12)
+- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Fixed - Storyboard Prompts.json`
 - `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Fixed.json`
+- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 HiRes 16 Scenes - Heroine.json`
+- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 HiRes 3 Scenes.json`
+- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 HiRes Full 16 Scenes.json`
 - `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Overnight.json`
 - `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Test Scene 1.json`
+- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Trial 5 Scenes - MCP Run.json`
+- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Trial 5 Scenes.json`
 - `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - No Review v2.json`
 - `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - No Review.json`
 - `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3).json`
@@ -834,9 +850,15 @@ Use this to find every workflow that needs a given model installed.
 - `01-Image-Generation/Text-to-Image/SD1.5 Juggernaut Reborn - Text to Image.json`
 - `02-Image-Editing/Single-Image-Edit/SD1.5 Juggernaut Reborn - Image to Image.json`
 
-### SeedVR2 (3)
+### SAM3D Body (3)
+- `06-3D-Generation/Image-to-3D/SAM3D Body - 3D Viewer.json`
+- `06-3D-Generation/Image-to-3D/SAM3D Body - Utility.json`
+- `06-3D-Generation/Image-to-3D/SAM3D Body - Video to 3D Body - Multi (R01_SC008).json`
+
+### SeedVR2 (4)
 - `03-Image-Enhancement/Upscaling/5 SeedVR2 - Upscale.json`
 - `04-Video/Video-Upscaling/SeedVR2 - HD Video Upscale.json`
+- `04-Video/Video-Upscaling/SeedVR2 - Video Upscale - API Run.json`
 - `04-Video/Video-Upscaling/SeedVR2 - Video Upscale.json`
 
 ### Stable Audio 3 (4)

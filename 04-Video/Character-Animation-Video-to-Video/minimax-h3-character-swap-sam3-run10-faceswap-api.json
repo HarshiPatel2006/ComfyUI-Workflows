@@ -1,0 +1,360 @@
+{
+ "1": {
+  "class_type": "VHS_LoadVideo",
+  "inputs": {
+   "video": "swap6_src_720p.mp4",
+   "force_rate": 24,
+   "custom_width": 1280,
+   "custom_height": 704,
+   "frame_load_cap": 175,
+   "skip_first_frames": 0,
+   "select_every_nth": 1,
+   "format": "None"
+  }
+ },
+ "2": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "swap10_face.png"
+  }
+ },
+ "3": {
+  "class_type": "CheckpointLoaderSimple",
+  "inputs": {
+   "ckpt_name": "sam3.1_multiplex_fp16.safetensors"
+  }
+ },
+ "4": {
+  "class_type": "CLIPTextEncode",
+  "inputs": {
+   "clip": [
+    "3",
+    1
+   ],
+   "text": "head"
+  }
+ },
+ "5": {
+  "class_type": "SAM3_Detect",
+  "inputs": {
+   "model": [
+    "3",
+    0
+   ],
+   "image": [
+    "1",
+    0
+   ],
+   "conditioning": [
+    "4",
+    0
+   ],
+   "threshold": 0.4,
+   "refine_iterations": 2,
+   "individual_masks": false
+  }
+ },
+ "6": {
+  "class_type": "ImageInvert",
+  "inputs": {
+   "image": [
+    "1",
+    0
+   ]
+  }
+ },
+ "7": {
+  "class_type": "ImageCompositeMasked",
+  "inputs": {
+   "destination": [
+    "1",
+    0
+   ],
+   "source": [
+    "6",
+    0
+   ],
+   "mask": [
+    "5",
+    0
+   ],
+   "x": 0,
+   "y": 0,
+   "resize_source": false
+  }
+ },
+ "8": {
+  "class_type": "ImageScaleToTotalPixels",
+  "inputs": {
+   "image": [
+    "7",
+    0
+   ],
+   "upscale_method": "nearest-exact",
+   "megapixels": 0.25,
+   "resolution_steps": 1
+  }
+ },
+ "9": {
+  "class_type": "UNETLoader",
+  "inputs": {
+   "unet_name": "h3\\minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+   "weight_dtype": "default"
+  }
+ },
+ "10": {
+  "class_type": "CLIPLoader",
+  "inputs": {
+   "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+   "type": "minimax",
+   "device": "default"
+  }
+ },
+ "11": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+  }
+ },
+ "12": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+  }
+ },
+ "15": {
+  "class_type": "MiniMaxH3ReferenceToVideo",
+  "inputs": {
+   "clip": [
+    "10",
+    0
+   ],
+   "vae": [
+    "11",
+    0
+   ],
+   "audio_vae": [
+    "12",
+    0
+   ],
+   "ref_images.ref_image_0": [
+    "2",
+    0
+   ],
+   "ref_videos.ref_video_0": [
+    "8",
+    0
+   ],
+   "prompt": "subject_definitions:\n<Subject 2> is everything in <Video 1> except the performer's head: the performer's body, neck below the jaw, purple long-sleeved kurta, arms, hands, fingers, gestures, and the whole environment, background, trees and light sources, exactly as they appear in <Video 1>.\n<Video 1> is the source video for the target video edit.\nEdit rule: this is a face replacement only. <Picture 1> provides only the head of <Subject 1> - face, facial structure, eyes, eyebrows, nose, lips, beard, curly hair and small hoop earrings. Ignore the shirt, jewellery on the body, chair and room in <Picture 1>. Everything below the jaw and everything around the head is <Subject 2> and must stay exactly as in <Video 1>.\nLighting rule: relight the new head to match <Video 1> exactly - same soft overcast daylight, direction, colour temperature, shadows, contrast and colour grade - so the head looks filmed in that scene with that body, not composited. Match the skin tone of the face naturally to the neck and hands of <Subject 2>.\nFraming rule: keep exactly the shot size, crop, lens and head position of <Video 1> in every frame; the new head occupies exactly the same place, size and angle as the original head.\n<Subject 1> is the adult person in <Picture 1>, with the exact face, skin tone and hairstyle from that image: a man in his late twenties with warm olive-tan skin, hazel-brown eyes, defined dark eyebrows, a straight nose, a short, neat dark beard and moustache, small silver hoop earrings in both ears, and voluminous dark-brown curly hair falling over his forehead.\n<Video 1> is the source clip; use its performer's head motion, facial expressions, mouth movements, eye direction, timing and camera movement exactly.\n<Audio 1> is the source soundtrack; its voice (S1) belongs to <Subject 1>.\n\nsummary:\n[video editing] The target video is an edited version of <Video 1>. <Subject 2> stays exactly as it is in <Video 1>, and the only edit is the performer's head, which becomes the head of <Subject 1> from the very first frame, with the same expressions, mouth shapes and head movements at the same timing for the entire clip.\n\nretention_analysis:\n<Subject 2> (appears in every shot): fully_preserved - the performer's body, purple kurta, arms, hands, finger positions and gestures, and the entire background and lighting of <Video 1> are retained exactly, in the same positions and from the same camera angle.\nLighting: preserved from <Video 1> - <Subject 1>'s face takes the lighting and colour grade of <Subject 2>.\n<Subject 1>: attribute_transfer - transfer only the face, facial features, beard, curly hairstyle and earrings consistently to every frame.\n<Video 1>: partially_preserved - preserve the performer's head pose, facial expressions, eyebrow movements, eye direction, mouth shapes, timing and camera movement; do not preserve the original performer's face, hair or beard.\n<Audio 1>: fully_copy - copy the source audio exactly; <Subject 1>'s lip movements are synchronized word for word to the speech (S1).\n\ndetailed_description:\nPhotorealistic, continuous shot.\n[Shot 1] <Subject 1>, already fully transformed in the opening frame, stands facing the camera with his right hand pressed over his mouth and chin in a thoughtful, slightly embarrassed expression, eyes glancing to the side. Around one second in he slides the hand down to stroke his beard, lowers it, looks straight into the camera and speaks (S1) with lively, expressive eyebrows, wide mouth movements and animated facial expressions. Around three and a half seconds he glances sideways with a small knowing smile, then from about four seconds he points his right hand toward the camera and speaks (S1) animatedly, tilting his head to the side. At about six seconds he raises a thumb near his chin, tilts his head and keeps speaking (S1) with a playful smile, then finishes looking into the camera with a cheeky expression. The handheld camera stays mostly steady at eye level with slight natural sway. The camera follows the same path and framing as <Video 1>. Stable face, natural skin texture, expressions that match the original performer moment by moment, no identity drift, no morphing, no duplicated limbs.\nSetting in <Video 1>: the target video takes place in <Subject 2>, an outdoor spot in daytime directly in front of a dense, leafy mango tree whose long, glossy green leaves and dark branches fill the entire background.\nScene lighting on the performer in <Video 1>: soft, even, overcast daylight from the front and above, neutral-white colour temperature, gentle shadows under the chin and nose, bright natural exposure.\nFraming on the performer in <Video 1>: medium close-up from just above the top of the head to the upper chest, with the performer centred; the waist and legs are never visible.\n\noverall_soundscape:\nOutdoor daytime ambience with a light breeze through the leaves and faint distant background sounds.\n\nnon_diegetic_music:\nN/A\n",
+   "width": 1280,
+   "height": 704,
+   "length": 175,
+   "ref_image_size": "match",
+   "ref_audios.ref_audio_0": [
+    "1",
+    2
+   ]
+  }
+ },
+ "16": {
+  "class_type": "BasicGuider",
+  "inputs": {
+   "model": [
+    "9",
+    0
+   ],
+   "conditioning": [
+    "15",
+    0
+   ]
+  }
+ },
+ "17": {
+  "class_type": "RandomNoise",
+  "inputs": {
+   "noise_seed": 150020260820
+  }
+ },
+ "18": {
+  "class_type": "KSamplerSelect",
+  "inputs": {
+   "sampler_name": "res_multistep"
+  }
+ },
+ "19": {
+  "class_type": "BasicScheduler",
+  "inputs": {
+   "model": [
+    "9",
+    0
+   ],
+   "scheduler": "simple",
+   "steps": 20,
+   "denoise": 1
+  }
+ },
+ "20": {
+  "class_type": "SamplerCustomAdvanced",
+  "inputs": {
+   "noise": [
+    "17",
+    0
+   ],
+   "guider": [
+    "16",
+    0
+   ],
+   "sampler": [
+    "18",
+    0
+   ],
+   "sigmas": [
+    "19",
+    0
+   ],
+   "latent_image": [
+    "15",
+    1
+   ]
+  }
+ },
+ "21": {
+  "class_type": "VAEDecode",
+  "inputs": {
+   "samples": [
+    "20",
+    0
+   ],
+   "vae": [
+    "11",
+    0
+   ]
+  }
+ },
+ "22": {
+  "class_type": "VHS_VideoCombine",
+  "inputs": {
+   "images": [
+    "21",
+    0
+   ],
+   "frame_rate": 24,
+   "loop_count": 0,
+   "filename_prefix": "H3_Swap10_faceswap_raw_720p",
+   "format": "video/h264-mp4",
+   "pingpong": false,
+   "save_output": true,
+   "pix_fmt": "yuv420p",
+   "crf": 19,
+   "save_metadata": true,
+   "trim_to_audio": false,
+   "audio": [
+    "1",
+    2
+   ]
+  }
+ },
+ "23": {
+  "class_type": "VHS_VideoCombine",
+  "inputs": {
+   "images": [
+    "8",
+    0
+   ],
+   "frame_rate": 24,
+   "loop_count": 0,
+   "filename_prefix": "H3_Swap10_faceswap_guide",
+   "format": "video/h264-mp4",
+   "pingpong": false,
+   "save_output": true,
+   "pix_fmt": "yuv420p",
+   "crf": 19,
+   "save_metadata": false,
+   "trim_to_audio": false
+  }
+ },
+ "30": {
+  "class_type": "GrowMask",
+  "inputs": {
+   "mask": [
+    "5",
+    0
+   ],
+   "expand": 28,
+   "tapered_corners": true
+  }
+ },
+ "31": {
+  "class_type": "MaskToImage",
+  "inputs": {
+   "mask": [
+    "30",
+    0
+   ]
+  }
+ },
+ "32": {
+  "class_type": "ImageBlur",
+  "inputs": {
+   "image": [
+    "31",
+    0
+   ],
+   "blur_radius": 21,
+   "sigma": 8.0
+  }
+ },
+ "33": {
+  "class_type": "ImageToMask",
+  "inputs": {
+   "image": [
+    "32",
+    0
+   ],
+   "channel": "red"
+  }
+ },
+ "34": {
+  "class_type": "ImageCompositeMasked",
+  "inputs": {
+   "destination": [
+    "1",
+    0
+   ],
+   "source": [
+    "21",
+    0
+   ],
+   "mask": [
+    "33",
+    0
+   ],
+   "x": 0,
+   "y": 0,
+   "resize_source": false
+  }
+ },
+ "35": {
+  "class_type": "VHS_VideoCombine",
+  "inputs": {
+   "images": [
+    "34",
+    0
+   ],
+   "frame_rate": 24,
+   "loop_count": 0,
+   "filename_prefix": "H3_Swap10_faceswap_FINAL_720p",
+   "format": "video/h264-mp4",
+   "pingpong": false,
+   "save_output": true,
+   "pix_fmt": "yuv420p",
+   "crf": 19,
+   "save_metadata": true,
+   "trim_to_audio": false,
+   "audio": [
+    "1",
+    2
+   ]
+  }
+ }
+}

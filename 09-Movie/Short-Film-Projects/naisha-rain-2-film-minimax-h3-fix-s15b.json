@@ -1,0 +1,6460 @@
+{
+ "id": "84dc8653-84f1-45c5-a06c-434c0c6caa45",
+ "revision": 0,
+ "last_node_id": 278,
+ "last_link_id": 196,
+ "nodes": [
+  {
+   "id": 206,
+   "type": "RandomNoise",
+   "pos": [
+    4041.089269166718,
+    2322.7030372259196
+   ],
+   "size": [
+    260,
+    82
+   ],
+   "flags": {},
+   "order": 41,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "noise_seed",
+     "name": "noise_seed",
+     "type": "INT",
+     "widget": {
+      "name": "noise_seed"
+     },
+     "link": 88
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "NOISE",
+     "name": "NOISE",
+     "type": "NOISE",
+     "links": [
+      94
+     ]
+    }
+   ],
+   "title": "Per-shot noise seed",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "RandomNoise",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "noise_seed": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    0,
+    "fixed"
+   ]
+  },
+  {
+   "id": 207,
+   "type": "BasicGuider",
+   "pos": [
+    4381.089269166717,
+    2322.7030372259196
+   ],
+   "size": [
+    280,
+    82
+   ],
+   "flags": {},
+   "order": 46,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "model",
+     "name": "model",
+     "type": "MODEL",
+     "link": 130
+    },
+    {
+     "localized_name": "conditioning",
+     "name": "conditioning",
+     "type": "CONDITIONING",
+     "link": 93
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "GUIDER",
+     "name": "GUIDER",
+     "type": "GUIDER",
+     "links": [
+      95
+     ]
+    }
+   ],
+   "title": "Loop guider",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "BasicGuider",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   }
+  },
+  {
+   "id": 209,
+   "type": "BasicScheduler",
+   "pos": [
+    3701.089269166718,
+    2322.7030372259196
+   ],
+   "size": [
+    260,
+    106
+   ],
+   "flags": {},
+   "order": 47,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "model",
+     "name": "model",
+     "type": "MODEL",
+     "link": 131
+    },
+    {
+     "localized_name": "scheduler",
+     "name": "scheduler",
+     "type": "COMBO",
+     "widget": {
+      "name": "scheduler"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "steps",
+     "name": "steps",
+     "type": "INT",
+     "widget": {
+      "name": "steps"
+     },
+     "link": 89
+    },
+    {
+     "localized_name": "denoise",
+     "name": "denoise",
+     "type": "FLOAT",
+     "widget": {
+      "name": "denoise"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "SIGMAS",
+     "name": "SIGMAS",
+     "type": "SIGMAS",
+     "links": [
+      97
+     ]
+    }
+   ],
+   "title": "Per-shot scheduler steps",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "BasicScheduler",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "steps": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "simple",
+    5,
+    1
+   ]
+  },
+  {
+   "id": 210,
+   "type": "SamplerCustomAdvanced",
+   "pos": [
+    4741.089269166717,
+    2322.7030372259196
+   ],
+   "size": [
+    320,
+    120
+   ],
+   "flags": {},
+   "order": 48,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "noise",
+     "name": "noise",
+     "type": "NOISE",
+     "link": 94
+    },
+    {
+     "localized_name": "guider",
+     "name": "guider",
+     "type": "GUIDER",
+     "link": 95
+    },
+    {
+     "localized_name": "sampler",
+     "name": "sampler",
+     "type": "SAMPLER",
+     "link": 96
+    },
+    {
+     "localized_name": "sigmas",
+     "name": "sigmas",
+     "type": "SIGMAS",
+     "link": 97
+    },
+    {
+     "localized_name": "latent_image",
+     "name": "latent_image",
+     "type": "LATENT",
+     "link": 161
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "output",
+     "name": "output",
+     "type": "LATENT",
+     "links": [
+      99,
+      100,
+      106,
+      111
+     ]
+    },
+    {
+     "localized_name": "denoised_output",
+     "name": "denoised_output",
+     "type": "LATENT",
+     "links": null
+    }
+   ],
+   "title": "H3 sampler \u2014 SINGLE LOOP BODY",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "SamplerCustomAdvanced",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   }
+  },
+  {
+   "id": 211,
+   "type": "VAEDecode",
+   "pos": [
+    5141.089269166717,
+    2322.7030372259196
+   ],
+   "size": [
+    240,
+    82
+   ],
+   "flags": {},
+   "order": 49,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "samples",
+     "name": "samples",
+     "type": "LATENT",
+     "link": 99
+    },
+    {
+     "localized_name": "vae",
+     "name": "vae",
+     "type": "VAE",
+     "link": 120
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      101
+     ]
+    }
+   ],
+   "title": "Decode current clip frames",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "VAEDecode",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   }
+  },
+  {
+   "id": 223,
+   "type": "MiniMaxH3ChainLoopEnd",
+   "pos": [
+    7061.089269166717,
+    2322.7030372259196
+   ],
+   "size": [
+    320,
+    162
+   ],
+   "flags": {},
+   "order": 53,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "flow",
+     "name": "flow",
+     "type": "H3_CHAIN_FLOW",
+     "link": 108
+    },
+    {
+     "localized_name": "state",
+     "name": "state",
+     "type": "H3_CHAIN_STATE",
+     "link": 109
+    },
+    {
+     "localized_name": "images",
+     "name": "images",
+     "type": "IMAGE",
+     "link": 110
+    },
+    {
+     "localized_name": "sampled_latent",
+     "name": "sampled_latent",
+     "type": "LATENT",
+     "link": 111
+    },
+    {
+     "localized_name": "segment",
+     "name": "segment",
+     "type": "H3_CHAIN_SEGMENT",
+     "link": 112
+    },
+    {
+     "localized_name": "between_scene_cleanup",
+     "name": "between_scene_cleanup",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "between_scene_cleanup"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "execution_mode",
+     "name": "execution_mode",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "execution_mode"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "manifest",
+     "name": "manifest",
+     "type": "H3_CHAIN_MANIFEST",
+     "links": [
+      113
+     ]
+    },
+    {
+     "localized_name": "manifest_json",
+     "name": "manifest_json",
+     "type": "STRING",
+     "links": null
+    },
+    {
+     "localized_name": "last_context_frames",
+     "name": "last_context_frames",
+     "type": "IMAGE",
+     "links": null
+    },
+    {
+     "localized_name": "last_context_latent",
+     "name": "last_context_latent",
+     "type": "LATENT",
+     "links": null
+    }
+   ],
+   "title": "LOOP END - recurse through 16 scenes",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.3.10",
+    "Node name for S&R": "MiniMaxH3ChainLoopEnd",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "fresh_scene",
+    "recursive"
+   ],
+   "color": "#1f1f48",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 227,
+   "type": "Reroute",
+   "pos": [
+    1761.0892691667177,
+    2262.7030372259196
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 17,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 118
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "VAE",
+     "links": [
+      119,
+      121
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   }
+  },
+  {
+   "id": 228,
+   "type": "Reroute",
+   "pos": [
+    2561.089269166718,
+    2262.7030372259196
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 28,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 123
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "VAE",
+     "links": [
+      120
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   }
+  },
+  {
+   "id": 229,
+   "type": "Reroute",
+   "pos": [
+    1961.0892691667177,
+    2262.7030372259196
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 24,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 121
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "VAE",
+     "links": [
+      122,
+      123
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   }
+  },
+  {
+   "id": 230,
+   "type": "Reroute",
+   "pos": [
+    2161.089269166718,
+    2262.7030372259196
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 16,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 124
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "VAE",
+     "links": [
+      125,
+      126
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   }
+  },
+  {
+   "id": 231,
+   "type": "Reroute",
+   "pos": [
+    2361.089269166718,
+    2262.7030372259196
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 23,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 126
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "VAE",
+     "links": [
+      127
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   }
+  },
+  {
+   "id": 232,
+   "type": "Reroute",
+   "pos": [
+    1561.0892691667177,
+    2262.7030372259196
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 43,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 128
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "MODEL",
+     "links": [
+      129
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   }
+  },
+  {
+   "id": 233,
+   "type": "Reroute",
+   "pos": [
+    2761.089269166718,
+    2262.7030372259196
+   ],
+   "size": [
+    75,
+    26
+   ],
+   "flags": {},
+   "order": 45,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "",
+     "type": "*",
+     "link": 129
+    }
+   ],
+   "outputs": [
+    {
+     "name": "",
+     "type": "MODEL",
+     "links": [
+      130,
+      131
+     ]
+    }
+   ],
+   "properties": {
+    "showOutputText": false,
+    "horizontal": false,
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   }
+  },
+  {
+   "id": 208,
+   "type": "KSamplerSelect",
+   "pos": [
+    3361.089269166718,
+    2322.7030372259196
+   ],
+   "size": [
+    260,
+    82
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "sampler_name",
+     "name": "sampler_name",
+     "type": "COMBO",
+     "widget": {
+      "name": "sampler_name"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "SAMPLER",
+     "name": "SAMPLER",
+     "type": "SAMPLER",
+     "links": [
+      96
+     ]
+    }
+   ],
+   "title": "Sampler algorithm",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "KSamplerSelect",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "euler"
+   ]
+  },
+  {
+   "id": 203,
+   "type": "VAELoader",
+   "pos": [
+    68.89287423043618,
+    2897.160765061602
+   ],
+   "size": [
+    340,
+    82
+   ],
+   "flags": {},
+   "order": 2,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "vae_name",
+     "name": "vae_name",
+     "type": "COMBO",
+     "widget": {
+      "name": "vae_name"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "VAE",
+     "name": "VAE",
+     "type": "VAE",
+     "links": [
+      124
+     ]
+    }
+   ],
+   "title": "H3 Audio VAE",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "VAELoader",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "minimax_h3_audio_vae_fp32.safetensors"
+   ]
+  },
+  {
+   "id": 202,
+   "type": "VAELoader",
+   "pos": [
+    68.89287423043618,
+    2743.039262531853
+   ],
+   "size": [
+    340,
+    82
+   ],
+   "flags": {},
+   "order": 3,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "vae_name",
+     "name": "vae_name",
+     "type": "COMBO",
+     "widget": {
+      "name": "vae_name"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "VAE",
+     "name": "VAE",
+     "type": "VAE",
+     "links": [
+      118
+     ]
+    }
+   ],
+   "title": "H3 Video VAE",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "VAELoader",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "minimax_h3_video_vae_fp16.safetensors"
+   ]
+  },
+  {
+   "id": 201,
+   "type": "CLIPLoader",
+   "pos": [
+    68.89287423043618,
+    2563.7626954460225
+   ],
+   "size": [
+    340,
+    106
+   ],
+   "flags": {},
+   "order": 4,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "clip_name",
+     "name": "clip_name",
+     "type": "COMBO",
+     "widget": {
+      "name": "clip_name"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "type",
+     "name": "type",
+     "type": "COMBO",
+     "widget": {
+      "name": "type"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "device",
+     "name": "device",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "device"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "CLIP",
+     "name": "CLIP",
+     "type": "CLIP",
+     "links": [
+      79
+     ]
+    }
+   ],
+   "title": "H3 TEXT ENCODER",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "CLIPLoader",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+    "minimax",
+    "default"
+   ]
+  },
+  {
+   "id": 245,
+   "type": "ModelPreviewOverrideKJ",
+   "pos": [
+    1423.8736103682172,
+    4429.363948678254
+   ],
+   "size": [
+    1089.5423404915982,
+    1104.7421850421733
+   ],
+   "flags": {},
+   "order": 37,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "model",
+     "name": "model",
+     "type": "MODEL",
+     "link": 152
+    },
+    {
+     "localized_name": "vae",
+     "name": "vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": null
+    },
+    {
+     "localized_name": "audio_vae",
+     "name": "audio_vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": null
+    },
+    {
+     "localized_name": "max_resolution",
+     "name": "max_resolution",
+     "type": "INT",
+     "widget": {
+      "name": "max_resolution"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "jpeg_quality",
+     "name": "jpeg_quality",
+     "type": "INT",
+     "widget": {
+      "name": "jpeg_quality"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "suppress_default_preview",
+     "name": "suppress_default_preview",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "suppress_default_preview"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "preview_frames",
+     "name": "preview_frames",
+     "type": "INT",
+     "widget": {
+      "name": "preview_frames"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "preview_fps",
+     "name": "preview_fps",
+     "type": "INT",
+     "widget": {
+      "name": "preview_fps"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "tiny_vae",
+     "name": "tiny_vae",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "tiny_vae"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "MODEL",
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      153
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfyui-kjnodes",
+    "ver": "3f20054214fec9f9234fd3841ae6f1e4287948f6",
+    "Node name for S&R": "ModelPreviewOverrideKJ",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.5.2"
+    }
+   },
+   "widgets_values": [
+    720,
+    80,
+    true,
+    9,
+    12,
+    "taeh3.safetensors",
+    ""
+   ],
+   "color": "#233",
+   "bgcolor": "#355"
+  },
+  {
+   "id": 236,
+   "type": "MiniMaxH3TaggedPictureReference",
+   "pos": [
+    113.77928525705497,
+    3854.3059218478775
+   ],
+   "size": [
+    360,
+    122
+   ],
+   "flags": {},
+   "order": 21,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "IMAGE",
+     "link": 132
+    },
+    {
+     "localized_name": "previous",
+     "name": "previous",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": null
+    },
+    {
+     "localized_name": "tag",
+     "name": "tag",
+     "type": "STRING",
+     "widget": {
+      "name": "tag"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "links": [
+      133
+     ]
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": null
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "@hero_face \u2014 Tagged Picture Reference",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    "hero_face"
+   ],
+   "color": "#744c8c",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 204,
+   "type": "MiniMaxH3SigmaShift",
+   "pos": [
+    2460.2558896854894,
+    3590.7968264397864
+   ],
+   "size": [
+    320,
+    82
+   ],
+   "flags": {},
+   "order": 40,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "model",
+     "name": "model",
+     "type": "MODEL",
+     "link": 153
+    },
+    {
+     "localized_name": "shift_video",
+     "name": "shift_video",
+     "type": "FLOAT",
+     "widget": {
+      "name": "shift_video"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "shift_audio",
+     "name": "shift_audio",
+     "type": "FLOAT",
+     "widget": {
+      "name": "shift_audio"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "MODEL",
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      128
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "MiniMaxH3SigmaShift",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    12,
+    3
+   ]
+  },
+  {
+   "id": 205,
+   "type": "MiniMaxH3TaggedReferenceToVideo",
+   "pos": [
+    1736.5663861512076,
+    3768.1228573385733
+   ],
+   "size": [
+    440,
+    560
+   ],
+   "flags": {},
+   "order": 42,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "clip",
+     "name": "clip",
+     "type": "CLIP",
+     "link": 79
+    },
+    {
+     "localized_name": "vae",
+     "name": "vae",
+     "type": "VAE",
+     "link": 119
+    },
+    {
+     "localized_name": "audio_vae",
+     "name": "audio_vae",
+     "type": "VAE",
+     "link": 125
+    },
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 159
+    },
+    {
+     "localized_name": "state",
+     "name": "state",
+     "shape": 7,
+     "type": "H3_CHAIN_STATE",
+     "link": 160
+    },
+    {
+     "localized_name": "clip_index",
+     "name": "clip_index",
+     "type": "INT",
+     "widget": {
+      "name": "clip_index"
+     },
+     "link": 141
+    },
+    {
+     "localized_name": "clip_count",
+     "name": "clip_count",
+     "type": "INT",
+     "widget": {
+      "name": "clip_count"
+     },
+     "link": 142
+    },
+    {
+     "localized_name": "prompt",
+     "name": "prompt",
+     "type": "STRING",
+     "widget": {
+      "name": "prompt"
+     },
+     "link": 83
+    },
+    {
+     "localized_name": "width",
+     "name": "width",
+     "type": "INT",
+     "widget": {
+      "name": "width"
+     },
+     "link": 84
+    },
+    {
+     "localized_name": "height",
+     "name": "height",
+     "type": "INT",
+     "widget": {
+      "name": "height"
+     },
+     "link": 85
+    },
+    {
+     "localized_name": "length",
+     "name": "length",
+     "type": "INT",
+     "widget": {
+      "name": "length"
+     },
+     "link": 86
+    },
+    {
+     "localized_name": "ref_image_size",
+     "name": "ref_image_size",
+     "type": "COMBO",
+     "widget": {
+      "name": "ref_image_size"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "reference_policy",
+     "name": "reference_policy",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "reference_policy"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "semantic_anchor_size",
+     "name": "semantic_anchor_size",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "semantic_anchor_size"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "semantic_anchor_mode",
+     "name": "semantic_anchor_mode",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "semantic_anchor_mode"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "cache_for_upscale",
+     "name": "cache_for_upscale",
+     "shape": 7,
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "cache_for_upscale"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "conditioning_backend",
+     "name": "conditioning_backend",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "conditioning_backend"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "positive",
+     "name": "positive",
+     "type": "CONDITIONING",
+     "links": [
+      91
+     ]
+    },
+    {
+     "localized_name": "latent",
+     "name": "latent",
+     "type": "LATENT",
+     "links": [
+      92
+     ]
+    },
+    {
+     "localized_name": "compiled_prompt",
+     "name": "compiled_prompt",
+     "type": "STRING",
+     "links": null
+    },
+    {
+     "localized_name": "active_references",
+     "name": "active_references",
+     "type": "STRING",
+     "links": null
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": null
+    },
+    {
+     "localized_name": "refmod_sources",
+     "name": "refmod_sources",
+     "type": "H3_REF_LIST",
+     "links": null
+    }
+   ],
+   "title": "TAGGED REF2VA \u2014 ACTIVATES @TAGS PER SCENE",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedReferenceToVideo",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    1,
+    12,
+    "subject_definitions:\n<Subject 1> is the man in @hero_face, late 20s to early 30s, olive complexion, wavy dark brown collar-length hair, trimmed beard and mustache, black leather motorcycle jacket open over a burgundy maroon crew-neck tee, charcoal slim jeans, and black sneakers with white soles.\n@hero_face is the multi-angle character reference sheet defining <Subject 1> facial identity, hair, beard line, and bone structure.\n@storyboard is the 4x4 labeled scene board reference for shot composition across panels A1-D4; panel A1 anchors this segment.\nsummary:\n[reference generation] Segment 1/12 (6s): cinematic horror short-film beat \u2014 farmhouse exterior approach. <Subject 1> identity locked from @hero_face; composition guided by @storyboard panel(s) A1. Photorealistic IMAX-scale dread, cold desaturated grade, no dialogue unless noted.\nretention_analysis:\n<Subject 1> (appears throughout): fully_preserved - exact face, hair, beard, leather jacket, burgundy tee, and jeans from @hero_face across every visible frame.\n@storyboard (A1): fully_preserved - camera angle, subject placement, lighting intent, and story beat follow the referenced board panel(s) for this segment.\ndetailed_description:\nThe target video uses a cinematic horror film grammar: shallow depth of field, motivated practical light, heavy negative space, and subtle handheld micro-drift. Color is cold blue-green with crushed shadows and selective warm accents only where lamps or moonlight justify it.\n[Shot 1] The segment opens on the storyboard composition for panel A1: farmhouse exterior approach. <Subject 1> occupies the frame with exact identity from @hero_face \u2014 jaw line, stubble, wavy hair, open leather jacket and maroon tee visible whenever framing allows. Environment textures read photoreal: peeling paint, dust in light beams, wet floor reflections where applicable.\n[Shot 2] At 00:02.000, the camera pushes or pans with restrained horror pacing, maintaining spatial continuity from @storyboard panel A1. Sound design favors low room tone, distant creaks, and the subject's controlled breathing; no music unless scene demands a sting.\nThe segment holds tension for 6.0 seconds total, ending on a micro-cliffhanger suitable for seamless continuation into the next timed segment.\noverall_soundscape:\nLow-frequency room rumble, distant house settling, faint fluorescent buzz, soft footfall texture on wood or tile, no crowd noise.\nnon_diegetic_music:\nNone \u2014 horror tension carried by diegetic ambience and silence breaks only.",
+    960,
+    544,
+    124,
+    "match",
+    "strict",
+    "512",
+    "timestamped_video",
+    false,
+    "native_ref2va"
+   ],
+   "color": "#346434",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 212,
+   "type": "VAEDecodeAudio",
+   "pos": [
+    5461.089269166717,
+    2322.7030372259196
+   ],
+   "size": [
+    240,
+    82
+   ],
+   "flags": {},
+   "order": 50,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "samples",
+     "name": "samples",
+     "type": "LATENT",
+     "link": 100
+    },
+    {
+     "localized_name": "vae",
+     "name": "vae",
+     "type": "VAE",
+     "link": 127
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "AUDIO",
+     "name": "AUDIO",
+     "type": "AUDIO",
+     "links": [
+      102
+     ]
+    }
+   ],
+   "title": "Decode current clip audio",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "VAEDecodeAudio",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   }
+  },
+  {
+   "id": 213,
+   "type": "MiniMaxH3LoopTrim",
+   "pos": [
+    5781.089269166717,
+    2322.7030372259196
+   ],
+   "size": [
+    340,
+    190
+   ],
+   "flags": {},
+   "order": 51,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "images",
+     "name": "images",
+     "type": "IMAGE",
+     "link": 101
+    },
+    {
+     "localized_name": "audio",
+     "name": "audio",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": 102
+    },
+    {
+     "localized_name": "state",
+     "name": "state",
+     "shape": 7,
+     "type": "H3_CHAIN_STATE",
+     "link": 162
+    },
+    {
+     "localized_name": "trim_frames",
+     "name": "trim_frames",
+     "type": "INT",
+     "widget": {
+      "name": "trim_frames"
+     },
+     "link": 103
+    },
+    {
+     "localized_name": "fps",
+     "name": "fps",
+     "shape": 7,
+     "type": "FLOAT",
+     "widget": {
+      "name": "fps"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "match_tail",
+     "name": "match_tail",
+     "shape": 7,
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "match_tail"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "Audio trim mode",
+     "name": "audio_trim_mode",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "audio_trim_mode"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "images",
+     "name": "images",
+     "type": "IMAGE",
+     "links": [
+      105,
+      110
+     ]
+    },
+    {
+     "localized_name": "audio",
+     "name": "audio",
+     "type": "AUDIO",
+     "links": [
+      107
+     ]
+    },
+    {
+     "localized_name": "images_with_overlap",
+     "name": "images_with_overlap",
+     "type": "IMAGE",
+     "links": [
+      163
+     ]
+    },
+    {
+     "localized_name": "overlap_frames",
+     "name": "overlap_frames",
+     "type": "INT",
+     "links": null
+    }
+   ],
+   "title": "Trim overlap + frame-lock audio",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.3.10",
+    "Node name for S&R": "MiniMaxH3LoopTrim",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "trim_frames": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    0,
+    24,
+    true,
+    "sync_with_video"
+   ],
+   "color": "#1f1f48",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 244,
+   "type": "ModelAttentionBackend",
+   "pos": [
+    172.34219611529676,
+    4436.688316098037
+   ],
+   "size": [
+    280,
+    58
+   ],
+   "flags": {},
+   "order": 22,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "model",
+     "name": "model",
+     "type": "MODEL",
+     "link": 150
+    },
+    {
+     "localized_name": "backend",
+     "name": "attention",
+     "type": "COMBO",
+     "widget": {
+      "name": "attention"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "model",
+     "name": "model",
+     "type": "MODEL",
+     "links": [
+      154
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.31.0",
+    "Node name for S&R": "ModelAttentionBackend",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "comfy kitchen attention"
+   ]
+  },
+  {
+   "id": 219,
+   "type": "MiniMaxH3ChainLoopStart",
+   "pos": [
+    1119.4474019499876,
+    2738.19147394544
+   ],
+   "size": [
+    342.144140625,
+    186
+   ],
+   "flags": {},
+   "order": 36,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "plan",
+     "name": "plan",
+     "type": "H3_CHAIN_PLAN",
+     "link": 145
+    },
+    {
+     "localized_name": "external_context",
+     "name": "external_context",
+     "shape": 7,
+     "type": "H3_CHAIN_EXTERNAL_CONTEXT",
+     "link": null
+    },
+    {
+     "localized_name": "source_timeline",
+     "name": "source_timeline",
+     "shape": 7,
+     "type": "H3_SOURCE_TIMELINE",
+     "link": null
+    },
+    {
+     "localized_name": "tagged_references",
+     "name": "tagged_references",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 164
+    },
+    {
+     "localized_name": "start_clip",
+     "name": "start_clip",
+     "type": "INT",
+     "widget": {
+      "name": "start_clip"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "scene_range",
+     "name": "scene_range",
+     "shape": 7,
+     "type": "STRING",
+     "widget": {
+      "name": "scene_range"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "verify_resume_history",
+     "name": "verify_resume_history",
+     "shape": 7,
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "verify_resume_history"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "flow",
+     "name": "flow",
+     "type": "H3_CHAIN_FLOW",
+     "links": [
+      108
+     ]
+    },
+    {
+     "localized_name": "state",
+     "name": "state",
+     "type": "H3_CHAIN_STATE",
+     "links": [
+      81
+     ]
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "LOOP START / RESUME \u2014 RANGE OPTIONAL",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.3.10",
+    "Node name for S&R": "MiniMaxH3ChainLoopStart",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    15,
+    "15",
+    false
+   ],
+   "color": "#1f1f48",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 220,
+   "type": "MiniMaxH3ChainCurrent",
+   "pos": [
+    1509.5074438763272,
+    2636.5196501724595
+   ],
+   "size": [
+    420,
+    314
+   ],
+   "flags": {},
+   "order": 39,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "state",
+     "name": "state",
+     "type": "H3_CHAIN_STATE",
+     "link": 81
+    },
+    {
+     "localized_name": "align_audio_reference",
+     "name": "align_audio_reference",
+     "shape": 7,
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "align_audio_reference"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "state",
+     "name": "state",
+     "type": "H3_CHAIN_STATE",
+     "links": [
+      90,
+      104,
+      109,
+      160,
+      162
+     ]
+    },
+    {
+     "localized_name": "clip_index",
+     "name": "clip_index",
+     "type": "INT",
+     "links": [
+      141
+     ]
+    },
+    {
+     "localized_name": "clip_count",
+     "name": "clip_count",
+     "type": "INT",
+     "links": [
+      142
+     ]
+    },
+    {
+     "localized_name": "shot_id",
+     "name": "shot_id",
+     "type": "STRING",
+     "links": null
+    },
+    {
+     "localized_name": "prompt",
+     "name": "prompt",
+     "type": "STRING",
+     "links": [
+      83
+     ]
+    },
+    {
+     "localized_name": "noise_seed",
+     "name": "noise_seed",
+     "type": "INT",
+     "links": [
+      88
+     ]
+    },
+    {
+     "localized_name": "length",
+     "name": "length",
+     "type": "INT",
+     "links": [
+      86
+     ]
+    },
+    {
+     "localized_name": "steps",
+     "name": "steps",
+     "type": "INT",
+     "links": [
+      89
+     ]
+    },
+    {
+     "localized_name": "width",
+     "name": "width",
+     "type": "INT",
+     "links": [
+      84
+     ]
+    },
+    {
+     "localized_name": "height",
+     "name": "height",
+     "type": "INT",
+     "links": [
+      85
+     ]
+    },
+    {
+     "localized_name": "audio_start",
+     "name": "audio_start",
+     "type": "FLOAT",
+     "links": null
+    },
+    {
+     "localized_name": "audio_duration",
+     "name": "audio_duration",
+     "type": "FLOAT",
+     "links": null
+    },
+    {
+     "localized_name": "source_audio_slice",
+     "name": "source_audio_slice",
+     "type": "AUDIO",
+     "links": null
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    },
+    {
+     "localized_name": "video_blend_frames",
+     "name": "video_blend_frames",
+     "type": "INT",
+     "links": null
+    }
+   ],
+   "title": "CURRENT SCENE \u2014 PROMPT / SEED / TIMING",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.3.10",
+    "Node name for S&R": "MiniMaxH3ChainCurrent",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    false
+   ],
+   "color": "#1f1f48",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 237,
+   "type": "MiniMaxH3TaggedPictureReference",
+   "pos": [
+    592.5195733604062,
+    3841.4905816739915
+   ],
+   "size": [
+    360,
+    122
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "IMAGE",
+     "link": 134
+    },
+    {
+     "localized_name": "previous",
+     "name": "previous",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 133
+    },
+    {
+     "localized_name": "tag",
+     "name": "tag",
+     "type": "STRING",
+     "widget": {
+      "name": "tag"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "links": [
+      168
+     ]
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": []
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "@panel_a1",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    "panel_a1"
+   ],
+   "color": "#744c8c",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 221,
+   "type": "MiniMaxH3ChainContext",
+   "pos": [
+    2509.8226565243062,
+    2359.2922220347627
+   ],
+   "size": [
+    350.8462890625,
+    166
+   ],
+   "flags": {},
+   "order": 44,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "state",
+     "name": "state",
+     "type": "H3_CHAIN_STATE",
+     "link": 90
+    },
+    {
+     "localized_name": "conditioning",
+     "name": "conditioning",
+     "type": "CONDITIONING",
+     "link": 91
+    },
+    {
+     "localized_name": "vae",
+     "name": "vae",
+     "type": "VAE",
+     "link": 122
+    },
+    {
+     "localized_name": "latent",
+     "name": "latent",
+     "type": "LATENT",
+     "link": 92
+    },
+    {
+     "localized_name": "audio_vae",
+     "name": "audio_vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": null
+    },
+    {
+     "localized_name": "model",
+     "name": "model",
+     "shape": 7,
+     "type": "MODEL",
+     "link": null
+    },
+    {
+     "localized_name": "drift_sigmas",
+     "name": "drift_sigmas",
+     "shape": 7,
+     "type": "SIGMAS",
+     "link": null
+    },
+    {
+     "localized_name": "lip_sync_voice",
+     "name": "lip_sync_voice",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "conditioning",
+     "name": "conditioning",
+     "type": "CONDITIONING",
+     "links": [
+      93
+     ]
+    },
+    {
+     "localized_name": "trim_frames",
+     "name": "trim_frames",
+     "type": "INT",
+     "links": [
+      103
+     ]
+    },
+    {
+     "localized_name": "is_continuation",
+     "name": "is_continuation",
+     "type": "BOOLEAN",
+     "links": null
+    },
+    {
+     "localized_name": "latent",
+     "name": "latent",
+     "type": "LATENT",
+     "links": [
+      161
+     ]
+    },
+    {
+     "localized_name": "model",
+     "name": "model",
+     "type": "MODEL",
+     "links": null
+    }
+   ],
+   "title": "AUTO CONTEXT \u2014 clip 1 bypass / continuation",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.3.10",
+    "Node name for S&R": "MiniMaxH3ChainContext",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "color": "#1f1f48",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 60,
+   "type": "Note",
+   "pos": [
+    951.0460661529568,
+    376.60471723732087
+   ],
+   "size": [
+    280,
+    100
+   ],
+   "flags": {},
+   "order": 10,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "Pipeline toggle",
+   "properties": {
+    "Node name for S&R": "Note",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "Enable ONE pipeline. H3 uses 2 images only (no song file)."
+   ],
+   "color": "#432",
+   "bgcolor": "#653"
+  },
+  {
+   "id": 243,
+   "type": "Note",
+   "pos": [
+    1375.2254819749905,
+    3043.131490111585
+   ],
+   "size": [
+    803.243307580804,
+    203.26879873195958
+   ],
+   "flags": {},
+   "order": 11,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [],
+   "title": "HOW TO WORK WITH V2",
+   "properties": {
+    "Node name for S&R": "Note",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "1. Open the Scene Prompt Editor and select a scene. It edits the connected Plan directly.\n\n2. Click @ Reference. The tray shows only references active for that scene and their current native labels. Hover an image/video tag to preview it. Hover audio for controls; it never autoplays. Click a chip to insert its stable @tag.\n\n3. Queue from scene 1, or set Loop Start's range/resume controls. The Scheduled Ref2VA node compiles stable tags to native H3 labels and inserts no prompt text.\n\n4. Review Gate pauses after each saved scene. Approve to continue, edit+retry to replace only that scene prompt, reroll for a new seed, or approve+stop to keep a recoverable partial.\n\n5. Final Assemble uses %date:yyyy-MM-dd%. Existing exports are never overwritten: later runs receive _001, _002, and so on. The amber recovery branch remains muted until you need assembly without rerendering."
+   ],
+   "color": "#432f66",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 222,
+   "type": "MiniMaxH3ChainSegmentSave",
+   "pos": [
+    6161.958469994346,
+    2732.0872906391146
+   ],
+   "size": [
+    809.8377741652833,
+    680.2485617017118
+   ],
+   "flags": {},
+   "order": 52,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "state",
+     "name": "state",
+     "type": "H3_CHAIN_STATE",
+     "link": 104
+    },
+    {
+     "localized_name": "images",
+     "name": "images",
+     "type": "IMAGE",
+     "link": 105
+    },
+    {
+     "localized_name": "sampled_latent",
+     "name": "sampled_latent",
+     "type": "LATENT",
+     "link": 106
+    },
+    {
+     "localized_name": "audio",
+     "name": "audio",
+     "shape": 7,
+     "type": "AUDIO",
+     "link": 107
+    },
+    {
+     "localized_name": "images_with_overlap",
+     "name": "images_with_overlap",
+     "shape": 7,
+     "type": "IMAGE",
+     "link": 163
+    },
+    {
+     "localized_name": "denoised_latent",
+     "name": "denoised_latent",
+     "shape": 7,
+     "type": "LATENT",
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "segment",
+     "name": "segment",
+     "type": "H3_CHAIN_SEGMENT",
+     "links": [
+      112
+     ]
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "SAVE SEGMENT + TRANSACTIONAL CHECKPOINT",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.3.10",
+    "Node name for S&R": "MiniMaxH3ChainSegmentSave",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [],
+   "color": "#1f1f48",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 224,
+   "type": "MiniMaxH3ChainAssemble",
+   "pos": [
+    7539.695550590998,
+    2513.1587473822474
+   ],
+   "size": [
+    1338.8767829097978,
+    1064.6968436488855
+   ],
+   "flags": {},
+   "order": 54,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "manifest",
+     "name": "manifest",
+     "type": "H3_CHAIN_MANIFEST",
+     "link": 113
+    },
+    {
+     "localized_name": "source_timeline",
+     "name": "source_timeline",
+     "shape": 7,
+     "type": "H3_SOURCE_TIMELINE",
+     "link": null
+    },
+    {
+     "localized_name": "blend_video_vae",
+     "name": "blend_video_vae",
+     "shape": 7,
+     "type": "VAE",
+     "link": null
+    },
+    {
+     "localized_name": "audio_source",
+     "name": "audio_source",
+     "type": "COMBO",
+     "widget": {
+      "name": "audio_source"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "filename",
+     "name": "filename",
+     "type": "STRING",
+     "widget": {
+      "name": "filename"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "audio_bitrate",
+     "name": "audio_bitrate",
+     "type": "INT",
+     "widget": {
+      "name": "audio_bitrate"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "copy_to_output",
+     "name": "copy_to_output",
+     "shape": 7,
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "copy_to_output"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "output_subfolder",
+     "name": "output_subfolder",
+     "shape": 7,
+     "type": "STRING",
+     "widget": {
+      "name": "output_subfolder"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "blend_schedule",
+     "name": "blend_schedule",
+     "shape": 7,
+     "type": "STRING",
+     "widget": {
+      "name": "blend_schedule"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "boundary_tone_match",
+     "name": "boundary_tone_match",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "boundary_tone_match"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "color_stabilization",
+     "name": "color_stabilization",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "color_stabilization"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "delete_checkpoints_after_assembly",
+     "name": "delete_checkpoints_after_assembly",
+     "shape": 7,
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "delete_checkpoints_after_assembly"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "generated_audio_join",
+     "name": "generated_audio_join",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "generated_audio_join"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "video_path",
+     "name": "video_path",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "FINAL ASSEMBLY \u2014 DATE + COLLISION SAFE",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.3.10",
+    "Node name for S&R": "MiniMaxH3ChainAssemble",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "plan",
+    "naisha_rain_%date:yyyy-MM-dd%",
+    256,
+    false,
+    "",
+    "plan",
+    "off",
+    "off",
+    false,
+    "av_overlap"
+   ],
+   "color": "#24533a",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 246,
+   "type": "SpectrumApplyMiniMaxH3",
+   "pos": [
+    515.3980300538176,
+    4436.981566515481
+   ],
+   "size": [
+    330.669921875,
+    658
+   ],
+   "flags": {},
+   "order": 27,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "model",
+     "name": "model",
+     "type": "MODEL",
+     "link": 154
+    },
+    {
+     "localized_name": "enabled",
+     "name": "enabled",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "enabled"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "blend_weight",
+     "name": "blend_weight",
+     "type": "FLOAT",
+     "widget": {
+      "name": "blend_weight"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "degree",
+     "name": "degree",
+     "type": "INT",
+     "widget": {
+      "name": "degree"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "ridge_lambda",
+     "name": "ridge_lambda",
+     "type": "FLOAT",
+     "widget": {
+      "name": "ridge_lambda"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "window_size",
+     "name": "window_size",
+     "type": "FLOAT",
+     "widget": {
+      "name": "window_size"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "flex_window",
+     "name": "flex_window",
+     "type": "FLOAT",
+     "widget": {
+      "name": "flex_window"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "warmup_steps",
+     "name": "warmup_steps",
+     "type": "INT",
+     "widget": {
+      "name": "warmup_steps"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "tail_actual_steps",
+     "name": "tail_actual_steps",
+     "type": "INT",
+     "widget": {
+      "name": "tail_actual_steps"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "max_history",
+     "name": "max_history",
+     "type": "INT",
+     "widget": {
+      "name": "max_history"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "debug",
+     "name": "debug",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "debug"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "history_storage",
+     "name": "history_storage",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "history_storage"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "bootstrap_first_forecast",
+     "name": "bootstrap_first_forecast",
+     "shape": 7,
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "bootstrap_first_forecast"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "anchor_residual_feedback",
+     "name": "anchor_residual_feedback",
+     "shape": 7,
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "anchor_residual_feedback"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "selective_rollback_correction",
+     "name": "selective_rollback_correction",
+     "shape": 7,
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "selective_rollback_correction"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "offline_smoothing_replay",
+     "name": "offline_smoothing_replay",
+     "shape": 7,
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "offline_smoothing_replay"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "audio_blend_weight",
+     "name": "audio_blend_weight",
+     "shape": 7,
+     "type": "FLOAT",
+     "widget": {
+      "name": "audio_blend_weight"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "offline_archive_storage",
+     "name": "offline_archive_storage",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "offline_archive_storage"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "model_aware_mode",
+     "name": "model_aware_mode",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "model_aware_mode"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "model_aware_risk_threshold",
+     "name": "model_aware_risk_threshold",
+     "shape": 7,
+     "type": "FLOAT",
+     "widget": {
+      "name": "model_aware_risk_threshold"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "model_aware_trust_shrinkage",
+     "name": "model_aware_trust_shrinkage",
+     "shape": 7,
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "model_aware_trust_shrinkage"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "model_aware_replay_generic_correction",
+     "name": "model_aware_replay_generic_correction",
+     "shape": 7,
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "model_aware_replay_generic_correction"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "generic_correction_mode",
+     "name": "generic_correction_mode",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "generic_correction_mode"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "generic_correction_limiter",
+     "name": "generic_correction_limiter",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "generic_correction_limiter"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "generic_correction_limit",
+     "name": "generic_correction_limit",
+     "shape": 7,
+     "type": "FLOAT",
+     "widget": {
+      "name": "generic_correction_limit"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "generic_correction_attenuation",
+     "name": "generic_correction_attenuation",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "generic_correction_attenuation"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "sa_pece_forecast_policy",
+     "name": "sa_pece_forecast_policy",
+     "shape": 7,
+     "type": "COMBO",
+     "widget": {
+      "name": "sa_pece_forecast_policy"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "model",
+     "name": "model",
+     "type": "MODEL",
+     "links": [
+      157
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfyui-spectrum-minimax-h3",
+    "ver": "806fe498d574a726fecb8818917f00a4b993fd77",
+    "Node name for S&R": "SpectrumApplyMiniMaxH3",
+    "aux_id": "xmarre/ComfyUI-Spectrum-MiniMax-H3",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    true,
+    0.5,
+    1,
+    0.1,
+    2,
+    0.75,
+    1,
+    1,
+    8,
+    false,
+    "system_ram",
+    true,
+    false,
+    false,
+    false,
+    0,
+    "system_ram",
+    "off",
+    0.65,
+    false,
+    false,
+    "coordinate_rls",
+    "hard_clip",
+    0.4,
+    "no_attenuation",
+    "balanced"
+   ]
+  },
+  {
+   "id": 247,
+   "type": "EasyCache",
+   "pos": [
+    899.6581911946263,
+    4434.34736134147
+   ],
+   "size": [
+    270,
+    130
+   ],
+   "flags": {},
+   "order": 31,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "model",
+     "name": "model",
+     "type": "MODEL",
+     "link": 157
+    },
+    {
+     "localized_name": "reuse_threshold",
+     "name": "reuse_threshold",
+     "type": "FLOAT",
+     "widget": {
+      "name": "reuse_threshold"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "start_percent",
+     "name": "start_percent",
+     "type": "FLOAT",
+     "widget": {
+      "name": "start_percent"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "end_percent",
+     "name": "end_percent",
+     "type": "FLOAT",
+     "widget": {
+      "name": "end_percent"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "verbose",
+     "name": "verbose",
+     "type": "BOOLEAN",
+     "widget": {
+      "name": "verbose"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "MODEL",
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      158
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.42.1",
+    "Node name for S&R": "EasyCache",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "input_ue_unconnectable": {},
+     "version": "7.8"
+    }
+   },
+   "widgets_values": [
+    0.2,
+    0.15,
+    0.95,
+    false
+   ]
+  },
+  {
+   "id": 217,
+   "type": "LoraLoaderModelOnly",
+   "pos": [
+    900.4984513212644,
+    4160.791731540013
+   ],
+   "size": [
+    280,
+    82
+   ],
+   "flags": {},
+   "order": 34,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "model",
+     "name": "model",
+     "type": "MODEL",
+     "link": 158
+    },
+    {
+     "localized_name": "lora_name",
+     "name": "lora_name",
+     "type": "COMBO",
+     "widget": {
+      "name": "lora_name"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "strength_model",
+     "name": "strength_model",
+     "type": "FLOAT",
+     "widget": {
+      "name": "strength_model"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "MODEL",
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      152
+     ]
+    }
+   ],
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoraLoaderModelOnly",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+    0.95
+   ]
+  },
+  {
+   "id": 218,
+   "type": "MiniMaxH3ChainPlan",
+   "pos": [
+    2783.462183714599,
+    2621.984198257716
+   ],
+   "size": [
+    1346.885542627138,
+    3117.801811955355
+   ],
+   "flags": {},
+   "order": 30,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "plan_json_input",
+     "name": "plan_json_input",
+     "shape": 7,
+     "type": "STRING",
+     "link": null
+    },
+    {
+     "localized_name": "chain_policy",
+     "name": "chain_policy",
+     "shape": 7,
+     "type": "H3_CHAIN_POLICY",
+     "link": 166
+    },
+    {
+     "localized_name": "project_assets",
+     "name": "project_assets",
+     "shape": 7,
+     "type": "H3_PROJECT_ASSETS",
+     "link": null
+    },
+    {
+     "localized_name": "plan_json",
+     "name": "plan_json",
+     "type": "STRING",
+     "widget": {
+      "name": "plan_json"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "run_name",
+     "name": "run_name",
+     "type": "STRING",
+     "widget": {
+      "name": "run_name"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "generation_fingerprint",
+     "name": "generation_fingerprint",
+     "type": "STRING",
+     "widget": {
+      "name": "generation_fingerprint"
+     },
+     "link": 165
+    },
+    {
+     "localized_name": "width",
+     "name": "width",
+     "type": "INT",
+     "widget": {
+      "name": "width"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "height",
+     "name": "height",
+     "type": "INT",
+     "widget": {
+      "name": "height"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "context_length",
+     "name": "context_length",
+     "type": "COMBO",
+     "widget": {
+      "name": "context_length"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "encode_mode",
+     "name": "encode_mode",
+     "type": "COMBO",
+     "widget": {
+      "name": "encode_mode"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "anchor_mode",
+     "name": "anchor_mode",
+     "type": "COMBO",
+     "widget": {
+      "name": "anchor_mode"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "crop",
+     "name": "crop",
+     "type": "COMBO",
+     "widget": {
+      "name": "crop"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "audio_mode",
+     "name": "audio_mode",
+     "type": "COMBO",
+     "widget": {
+      "name": "audio_mode"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "audio_context_length",
+     "name": "audio_context_length",
+     "type": "INT",
+     "widget": {
+      "name": "audio_context_length"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "default_duration_seconds",
+     "name": "default_duration_seconds",
+     "type": "FLOAT",
+     "widget": {
+      "name": "default_duration_seconds"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "default_steps",
+     "name": "default_steps",
+     "type": "INT",
+     "widget": {
+      "name": "default_steps"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "base_seed",
+     "name": "base_seed",
+     "type": "INT",
+     "widget": {
+      "name": "base_seed"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "segment_crf",
+     "name": "segment_crf",
+     "type": "INT",
+     "widget": {
+      "name": "segment_crf"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "video_blend_frames",
+     "name": "video_blend_frames",
+     "type": "INT",
+     "widget": {
+      "name": "video_blend_frames"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "continuation_mode",
+     "name": "continuation_mode",
+     "type": "COMBO",
+     "widget": {
+      "name": "continuation_mode"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "plan",
+     "name": "plan",
+     "type": "H3_CHAIN_PLAN",
+     "links": [
+      144
+     ]
+    },
+    {
+     "localized_name": "summary",
+     "name": "summary",
+     "type": "STRING",
+     "links": null
+    },
+    {
+     "localized_name": "clip_count",
+     "name": "clip_count",
+     "type": "INT",
+     "links": null
+    },
+    {
+     "localized_name": "width",
+     "name": "width",
+     "type": "INT",
+     "links": null
+    },
+    {
+     "localized_name": "height",
+     "name": "height",
+     "type": "INT",
+     "links": null
+    },
+    {
+     "localized_name": "video_blend_frames",
+     "name": "video_blend_frames",
+     "type": "INT",
+     "links": null
+    }
+   ],
+   "title": "H3 CHAIN PLAN V2 \u2014 EDIT SCENES HERE",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.3.10",
+    "Node name for S&R": "MiniMaxH3ChainPlan",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+    "h3_chain_scene_colors": {},
+    "ue_properties": {
+     "widget_ue_connectable": {
+      "generation_fingerprint": true
+     },
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    },
+    "h3_chain_plan_layout": {
+     "promptHeights": {
+      "shared": 88,
+      "scene:clip_01": 112,
+      "scene:clip_02": 112,
+      "scene:clip_03": 112,
+      "scene:clip_04": 112,
+      "scene:clip_05": 112,
+      "scene:clip_06": 112,
+      "scene:clip_07": 112,
+      "scene:clip_08": 112,
+      "scene:clip_09": 112,
+      "scene:clip_10": 112,
+      "scene:clip_11": 112,
+      "scene:clip_12": 112,
+      "scene:clip_13": 112,
+      "scene:clip_14": 112,
+      "scene:clip_15": 112,
+      "scene:clip_16": 112,
+      "scene-basic:clip_01": 72,
+      "scene-basic:clip_02": 72,
+      "scene-basic:clip_03": 72,
+      "scene-basic:clip_04": 72,
+      "scene-basic:clip_05": 72,
+      "scene-basic:clip_06": 72,
+      "scene-basic:clip_07": 72,
+      "scene-basic:clip_08": 72,
+      "scene-basic:clip_09": 72,
+      "scene-basic:clip_10": 72,
+      "scene-basic:clip_11": 72,
+      "scene-basic:clip_12": 72,
+      "scene-basic:clip_13": 72,
+      "scene-basic:clip_14": 72,
+      "scene-basic:clip_15": 72,
+      "scene-basic:clip_16": 72
+     },
+     "collapsedScenes": {}
+    }
+   },
+   "widgets_values": [
+    "{\n  \"prompt_prefix\": [\n    \"Rain (short film). <Subject 1> is a native prompt label - not a reference tag. Use only the reference tags named in each scene. Live-action cinematic realism throughout. No non-diegetic music in any scene - overall_soundscape SFX only.\"\n  ],\n  \"shots\": [\n    {\n      \"id\": \"clip_01\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character reference sheet (close-up face, front, side and back views). Use it for <Subject 1> identity.\",\n        \"@panel_a1 is the single storyboard frame for this shot (one photo, not a grid).\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the exact first-frame composition from @panel_a1.\",\n        \"<Subject 1> is the young woman from @hero_face: long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin, small gold drop earrings and a thin gold necklace; wearing a fitted black camisole and high-waisted beige pleated wide-leg trousers, barefoot; sitting on the grey sofa holding an open book with a blank cover.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1> reads a book on the sofa by the big window; guided by @panel_a1.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - her face, brows, eyes, hair, jewellery and outfit are retained exactly from @hero_face, matching @panel_a1.\",\n        \"@panel_a1: fully_preserved - composition, framing, room design and lighting follow this single frame; never show a grid, collage or several panels.\",\n        \"\",\n        \"detailed_description:\",\n        \"First frame: she is already sitting on the sofa with the open book in both hands.\",\n        \"Rules: this is a hard cut into a new shot; nothing from any previous shot or location is visible. Exactly one woman exists in this film (<Subject 1>); she appears only once in frame, never duplicated, and nobody else appears. She never looks at, smiles at or poses for the camera. Her outfit, hair and jewellery stay exactly the same. No object appears or disappears; props keep their exact colour and state. No text or lettering anywhere. The action fills the whole clip and the clip ends as soon as the action is complete.\",\n        \"The target video is live-action cinematic realism: soft diffused rainy-day daylight, neutral white balance, true-to-life skin tones, soft contrast, subtle muted cool tones, fine film grain. The camera is steady with at most a very slow, subtle drift.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@panel_a1): She turns one page of the book and keeps reading, eyes on the page.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Quiet room tone, a soft page turn, distant muffled outdoor ambience.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None - diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"1627051304947278004\"\n    },\n    {\n      \"id\": \"clip_02\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@panel_a2 is the single storyboard frame for this shot (one photo, not a grid).\",\n        \"<Picture 1> is the exact first-frame composition from @panel_a2.\",\n        \"No person appears in this shot: no woman, no hand, no silhouette.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] The first raindrops hit the window glass (empty object shot, no people); guided by @panel_a2.\",\n        \"\",\n        \"retention_analysis:\",\n        \"@panel_a2: fully_preserved - composition, framing, room design and lighting follow this single frame; never show a grid, collage or several panels.\",\n        \"\",\n        \"detailed_description:\",\n        \"First frame: the glass already has three or four fresh raindrops on it.\",\n        \"Rules: this is a hard cut into a new shot; nothing from any previous shot or location is visible. This is an empty object/detail shot: there are no people at all in this shot - no woman, no face, no body, no hand, no arm, no silhouette, no reflection of a person. Nobody enters or walks into the frame at any time. No object appears or disappears; props keep their exact colour and state. No text or lettering anywhere. The action fills the whole clip and the clip ends as soon as the action is complete.\",\n        \"The target video is live-action cinematic realism: soft diffused rainy-day daylight, neutral white balance, true-to-life skin tones, soft contrast, subtle muted cool tones, fine film grain. The camera is steady with at most a very slow, subtle drift.\",\n        \"[Shot 1] the shot begins from <Picture 1> (@panel_a2): More raindrops land on the glass one by one and begin to trickle down. No person and no hand appears.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"The first soft taps of rain on glass, growing slightly.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None - diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 90,\n      \"steps\": 15,\n      \"seed\": \"684722604482706306\"\n    },\n    {\n      \"id\": \"clip_03\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character reference sheet (close-up face, front, side and back views). Use it for <Subject 1> identity.\",\n        \"@panel_a3 is the single storyboard frame for this shot (one photo, not a grid).\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the exact first-frame composition from @panel_a3.\",\n        \"<Subject 1> is the young woman from @hero_face: long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin, small gold drop earrings and a thin gold necklace; wearing a fitted black camisole and high-waisted beige pleated wide-leg trousers, barefoot; sitting on the sofa with the open book in her lap.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1> looks up from her book toward the window; guided by @panel_a3.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - her face, brows, eyes, hair, jewellery and outfit are retained exactly from @hero_face, matching @panel_a3.\",\n        \"@panel_a3: fully_preserved - composition, framing, room design and lighting follow this single frame; never show a grid, collage or several panels.\",\n        \"\",\n        \"detailed_description:\",\n        \"First frame: she is already sitting on the sofa looking down at the open book in her lap.\",\n        \"Rules: this is a hard cut into a new shot; nothing from any previous shot or location is visible. Exactly one woman exists in this film (<Subject 1>); she appears only once in frame, never duplicated, and nobody else appears. She never looks at, smiles at or poses for the camera. Her outfit, hair and jewellery stay exactly the same. No object appears or disappears; props keep their exact colour and state. No text or lettering anywhere. The action fills the whole clip and the clip ends as soon as the action is complete.\",\n        \"The target video is live-action cinematic realism: soft diffused rainy-day daylight, neutral white balance, true-to-life skin tones, soft contrast, subtle muted cool tones, fine film grain. The camera is steady with at most a very slow, subtle drift.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@panel_a3): She lifts her eyes from the page and turns her head to look at the window on her left. She never looks at the camera.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Rain tapping on the window, quiet room tone.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None - diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 90,\n      \"steps\": 15,\n      \"seed\": \"5986419405258054743\"\n    },\n    {\n      \"id\": \"clip_04\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character reference sheet (close-up face, front, side and back views). Use it for <Subject 1> identity.\",\n        \"@panel_a4 is the single storyboard frame for this shot (one photo, not a grid).\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the exact first-frame composition from @panel_a4.\",\n        \"<Subject 1> is the young woman from @hero_face: long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin, small gold drop earrings and a thin gold necklace; wearing a fitted black camisole and high-waisted beige pleated wide-leg trousers, barefoot; close-up, looking out of the window.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1> smiles softly at the rain; guided by @panel_a4.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - her face, brows, eyes, hair, jewellery and outfit are retained exactly from @hero_face, matching @panel_a4.\",\n        \"@panel_a4: fully_preserved - composition, framing, room design and lighting follow this single frame; never show a grid, collage or several panels.\",\n        \"\",\n        \"detailed_description:\",\n        \"First frame: she is already looking toward the window with a neutral face.\",\n        \"Rules: this is a hard cut into a new shot; nothing from any previous shot or location is visible. Exactly one woman exists in this film (<Subject 1>); she appears only once in frame, never duplicated, and nobody else appears. She never looks at, smiles at or poses for the camera. Her outfit, hair and jewellery stay exactly the same. No object appears or disappears; props keep their exact colour and state. No text or lettering anywhere. The action fills the whole clip and the clip ends as soon as the action is complete.\",\n        \"The target video is live-action cinematic realism: soft diffused rainy-day daylight, neutral white balance, true-to-life skin tones, soft contrast, subtle muted cool tones, fine film grain. The camera is steady with at most a very slow, subtle drift.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@panel_a4): A soft smile slowly forms as she watches the rain. Her eyes stay on the window, never on the camera.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Steady gentle rain on glass.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None - diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 90,\n      \"steps\": 15,\n      \"seed\": \"1765796510144836361\"\n    },\n    {\n      \"id\": \"clip_05\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character reference sheet (close-up face, front, side and back views). Use it for <Subject 1> identity.\",\n        \"@panel_b1 is the single storyboard frame for this shot (one photo, not a grid).\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the exact first-frame composition from @panel_b1.\",\n        \"<Subject 1> is the young woman from @hero_face: long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin, small gold drop earrings and a thin gold necklace; wearing a fitted black camisole and high-waisted beige pleated wide-leg trousers, barefoot; sitting on the sofa holding the open book.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1> closes her book and puts it down; guided by @panel_b1.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - her face, brows, eyes, hair, jewellery and outfit are retained exactly from @hero_face, matching @panel_b1.\",\n        \"@panel_b1: fully_preserved - composition, framing, room design and lighting follow this single frame; never show a grid, collage or several panels.\",\n        \"\",\n        \"detailed_description:\",\n        \"First frame: she is already holding the open book in both hands.\",\n        \"Rules: this is a hard cut into a new shot; nothing from any previous shot or location is visible. Exactly one woman exists in this film (<Subject 1>); she appears only once in frame, never duplicated, and nobody else appears. She never looks at, smiles at or poses for the camera. Her outfit, hair and jewellery stay exactly the same. No object appears or disappears; props keep their exact colour and state. No text or lettering anywhere. The action fills the whole clip and the clip ends as soon as the action is complete.\",\n        \"The target video is live-action cinematic realism: soft diffused rainy-day daylight, neutral white balance, true-to-life skin tones, soft contrast, subtle muted cool tones, fine film grain. The camera is steady with at most a very slow, subtle drift.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@panel_b1): She closes the book and sets it down on the sofa cushion beside her, then lets go of it. Her hands are empty at the end.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Book closing softly, rain on glass.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None - diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 90,\n      \"steps\": 15,\n      \"seed\": \"7991603786880615910\"\n    },\n    {\n      \"id\": \"clip_06\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character reference sheet (close-up face, front, side and back views). Use it for <Subject 1> identity.\",\n        \"@panel_b2 is the single storyboard frame for this shot (one photo, not a grid).\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the exact first-frame composition from @panel_b2.\",\n        \"<Subject 1> is the young woman from @hero_face: long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin, small gold drop earrings and a thin gold necklace; wearing a fitted black camisole and high-waisted beige pleated wide-leg trousers, barefoot; standing at the kitchen counter holding a brushed stainless-steel kettle under the running tap.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1> fills the kettle at the kitchen tap; guided by @panel_b2.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - her face, brows, eyes, hair, jewellery and outfit are retained exactly from @hero_face, matching @panel_b2.\",\n        \"@panel_b2: fully_preserved - composition, framing, room design and lighting follow this single frame; never show a grid, collage or several panels.\",\n        \"\",\n        \"detailed_description:\",\n        \"First frame: the tap is already running and a clear stream of water is already flowing into the kettle she holds.\",\n        \"Rules: this is a hard cut into a new shot; nothing from any previous shot or location is visible. Exactly one woman exists in this film (<Subject 1>); she appears only once in frame, never duplicated, and nobody else appears. She never looks at, smiles at or poses for the camera. Her outfit, hair and jewellery stay exactly the same. No object appears or disappears; props keep their exact colour and state. No text or lettering anywhere. The action fills the whole clip and the clip ends as soon as the action is complete.\",\n        \"The target video is live-action cinematic realism: soft diffused rainy-day daylight, neutral white balance, true-to-life skin tones, soft contrast, subtle muted cool tones, fine film grain. The camera is steady with at most a very slow, subtle drift.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@panel_b2): Water fills the kettle; she turns the tap off and places the kettle on its base on the counter. The water stream is always visible while the tap is open.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Running tap water, the tap squeaking off, kettle set down, rain in the background.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None - diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"567666496530784974\"\n    },\n    {\n      \"id\": \"clip_07\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character reference sheet (close-up face, front, side and back views). Use it for <Subject 1> identity.\",\n        \"@panel_b3 is the single storyboard frame for this shot (one photo, not a grid).\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the exact first-frame composition from @panel_b3.\",\n        \"<Subject 1> is the young woman from @hero_face: long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin, small gold drop earrings and a thin gold necklace; wearing a fitted black camisole and high-waisted beige pleated wide-leg trousers, barefoot; only her hand is visible.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1>'s hand drops a tea bag into a white mug; guided by @panel_b3.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - her face, brows, eyes, hair, jewellery and outfit are retained exactly from @hero_face, matching @panel_b3.\",\n        \"@panel_b3: fully_preserved - composition, framing, room design and lighting follow this single frame; never show a grid, collage or several panels.\",\n        \"\",\n        \"detailed_description:\",\n        \"First frame: her fingers are already holding a tea bag by its paper tag just above the empty white mug.\",\n        \"Rules: this is a hard cut into a new shot; nothing from any previous shot or location is visible. Exactly one woman exists in this film (<Subject 1>); she appears only once in frame, never duplicated, and nobody else appears. She never looks at, smiles at or poses for the camera. Her outfit, hair and jewellery stay exactly the same. No object appears or disappears; props keep their exact colour and state. No text or lettering anywhere. The action fills the whole clip and the clip ends as soon as the action is complete.\",\n        \"The target video is live-action cinematic realism: soft diffused rainy-day daylight, neutral white balance, true-to-life skin tones, soft contrast, subtle muted cool tones, fine film grain. The camera is steady with at most a very slow, subtle drift.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@panel_b3): She lowers the tea bag into the white mug and lets go of it; the tag hangs over the rim. The mug stays plain white.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Soft paper rustle, rain in the background.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None - diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 90,\n      \"steps\": 15,\n      \"seed\": \"6035469028859213139\"\n    },\n    {\n      \"id\": \"clip_08\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character reference sheet (close-up face, front, side and back views). Use it for <Subject 1> identity.\",\n        \"@panel_b4 is the single storyboard frame for this shot (one photo, not a grid).\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the exact first-frame composition from @panel_b4.\",\n        \"<Subject 1> is the young woman from @hero_face: long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin, small gold drop earrings and a thin gold necklace; wearing a fitted black camisole and high-waisted beige pleated wide-leg trousers, barefoot; only her hand and forearm are visible, holding the kettle.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1> pours hot water into the white mug; guided by @panel_b4.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - her face, brows, eyes, hair, jewellery and outfit are retained exactly from @hero_face, matching @panel_b4.\",\n        \"@panel_b4: fully_preserved - composition, framing, room design and lighting follow this single frame; never show a grid, collage or several panels.\",\n        \"\",\n        \"detailed_description:\",\n        \"First frame: the kettle is already tilted and a clear stream of steaming water is already flowing into the white mug.\",\n        \"Rules: this is a hard cut into a new shot; nothing from any previous shot or location is visible. Exactly one woman exists in this film (<Subject 1>); she appears only once in frame, never duplicated, and nobody else appears. She never looks at, smiles at or poses for the camera. Her outfit, hair and jewellery stay exactly the same. No object appears or disappears; props keep their exact colour and state. No text or lettering anywhere. The action fills the whole clip and the clip ends as soon as the action is complete.\",\n        \"The target video is live-action cinematic realism: soft diffused rainy-day daylight, neutral white balance, true-to-life skin tones, soft contrast, subtle muted cool tones, fine film grain. The camera is steady with at most a very slow, subtle drift.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@panel_b4): The mug fills with tea-coloured water, then she tilts the kettle up and lifts it away. The water stream is visible the whole time the kettle is tilted.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Hot water pouring, gentle bubbling, rain in the background.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None - diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"801540053447975723\"\n    },\n    {\n      \"id\": \"clip_09\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@panel_c1 is the single storyboard frame for this shot (one photo, not a grid).\",\n        \"<Picture 1> is the exact first-frame composition from @panel_c1.\",\n        \"No person appears in this shot: no woman, no hand, no silhouette.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] Steam rises from the mug of tea (empty object shot, no people); guided by @panel_c1.\",\n        \"\",\n        \"retention_analysis:\",\n        \"@panel_c1: fully_preserved - composition, framing, room design and lighting follow this single frame; never show a grid, collage or several panels.\",\n        \"\",\n        \"detailed_description:\",\n        \"First frame: the mug of tea already sits on the counter with steam rising.\",\n        \"Rules: this is a hard cut into a new shot; nothing from any previous shot or location is visible. This is an empty object/detail shot: there are no people at all in this shot - no woman, no face, no body, no hand, no arm, no silhouette, no reflection of a person. Nobody enters or walks into the frame at any time. No object appears or disappears; props keep their exact colour and state. No text or lettering anywhere. The action fills the whole clip and the clip ends as soon as the action is complete.\",\n        \"The target video is live-action cinematic realism: soft diffused rainy-day daylight, neutral white balance, true-to-life skin tones, soft contrast, subtle muted cool tones, fine film grain. The camera is steady with at most a very slow, subtle drift.\",\n        \"[Shot 1] the shot begins from <Picture 1> (@panel_c1): Soft steam curls up from the tea. Nothing else moves. No hand and no person appears.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Quiet rain, a faint kettle settling tick.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None - diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 90,\n      \"steps\": 15,\n      \"seed\": \"8093355266637289152\"\n    },\n    {\n      \"id\": \"clip_10\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character reference sheet (close-up face, front, side and back views). Use it for <Subject 1> identity.\",\n        \"@panel_c2 is the single storyboard frame for this shot (one photo, not a grid).\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the exact first-frame composition from @panel_c2.\",\n        \"<Subject 1> is the young woman from @hero_face: long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin, small gold drop earrings and a thin gold necklace; wearing a fitted black camisole and high-waisted beige pleated wide-leg trousers, barefoot; walking, holding the white mug with both hands.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1> carries her tea to the window; guided by @panel_c2.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - her face, brows, eyes, hair, jewellery and outfit are retained exactly from @hero_face, matching @panel_c2.\",\n        \"@panel_c2: fully_preserved - composition, framing, room design and lighting follow this single frame; never show a grid, collage or several panels.\",\n        \"\",\n        \"detailed_description:\",\n        \"First frame: she is already walking from the kitchen corner, the white mug already in both hands.\",\n        \"Rules: this is a hard cut into a new shot; nothing from any previous shot or location is visible. Exactly one woman exists in this film (<Subject 1>); she appears only once in frame, never duplicated, and nobody else appears. She never looks at, smiles at or poses for the camera. Her outfit, hair and jewellery stay exactly the same. No object appears or disappears; props keep their exact colour and state. No text or lettering anywhere. The action fills the whole clip and the clip ends as soon as the action is complete.\",\n        \"The target video is live-action cinematic realism: soft diffused rainy-day daylight, neutral white balance, true-to-life skin tones, soft contrast, subtle muted cool tones, fine film grain. The camera is steady with at most a very slow, subtle drift.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@panel_c2): She walks slowly across the room to the window seat, carefully holding the mug with both hands. She stays inside the room.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Bare footsteps on the wooden floor, rain on the window.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None - diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"7859339607515846232\"\n    },\n    {\n      \"id\": \"clip_11\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character reference sheet (close-up face, front, side and back views). Use it for <Subject 1> identity.\",\n        \"@panel_c3 is the single storyboard frame for this shot (one photo, not a grid).\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the exact first-frame composition from @panel_c3.\",\n        \"<Subject 1> is the young woman from @hero_face: long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin, small gold drop earrings and a thin gold necklace; wearing a fitted black camisole and high-waisted beige pleated wide-leg trousers, barefoot; at the window seat holding the white mug with both hands.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1> sits down on the window seat with her tea; guided by @panel_c3.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - her face, brows, eyes, hair, jewellery and outfit are retained exactly from @hero_face, matching @panel_c3.\",\n        \"@panel_c3: fully_preserved - composition, framing, room design and lighting follow this single frame; never show a grid, collage or several panels.\",\n        \"\",\n        \"detailed_description:\",\n        \"First frame: she is already standing at the window seat holding the white mug.\",\n        \"Rules: this is a hard cut into a new shot; nothing from any previous shot or location is visible. Exactly one woman exists in this film (<Subject 1>); she appears only once in frame, never duplicated, and nobody else appears. She never looks at, smiles at or poses for the camera. Her outfit, hair and jewellery stay exactly the same. No object appears or disappears; props keep their exact colour and state. No text or lettering anywhere. The action fills the whole clip and the clip ends as soon as the action is complete.\",\n        \"The target video is live-action cinematic realism: soft diffused rainy-day daylight, neutral white balance, true-to-life skin tones, soft contrast, subtle muted cool tones, fine film grain. The camera is steady with at most a very slow, subtle drift.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@panel_c3): She sits down on the cushion and tucks her knees up, still holding the mug with both hands. She looks out of the window.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Cushion settling, rain on glass.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None - diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"6006927473039510907\"\n    },\n    {\n      \"id\": \"clip_12\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character reference sheet (close-up face, front, side and back views). Use it for <Subject 1> identity.\",\n        \"@panel_c4 is the single storyboard frame for this shot (one photo, not a grid).\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the exact first-frame composition from @panel_c4.\",\n        \"<Subject 1> is the young woman from @hero_face: long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin, small gold drop earrings and a thin gold necklace; wearing a fitted black camisole and high-waisted beige pleated wide-leg trousers, barefoot; only her two hands and the mug are visible.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1>'s hands warm around the mug; guided by @panel_c4.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - her face, brows, eyes, hair, jewellery and outfit are retained exactly from @hero_face, matching @panel_c4.\",\n        \"@panel_c4: fully_preserved - composition, framing, room design and lighting follow this single frame; never show a grid, collage or several panels.\",\n        \"\",\n        \"detailed_description:\",\n        \"First frame: both hands are already wrapped around the white mug on her knees.\",\n        \"Rules: this is a hard cut into a new shot; nothing from any previous shot or location is visible. Exactly one woman exists in this film (<Subject 1>); she appears only once in frame, never duplicated, and nobody else appears. She never looks at, smiles at or poses for the camera. Her outfit, hair and jewellery stay exactly the same. No object appears or disappears; props keep their exact colour and state. No text or lettering anywhere. The action fills the whole clip and the clip ends as soon as the action is complete.\",\n        \"The target video is live-action cinematic realism: soft diffused rainy-day daylight, neutral white balance, true-to-life skin tones, soft contrast, subtle muted cool tones, fine film grain. The camera is steady with at most a very slow, subtle drift.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@panel_c4): Her fingers tighten gently around the warm mug; steam rises. No object appears or disappears.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Rain, soft steam, quiet room tone.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None - diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 90,\n      \"steps\": 15,\n      \"seed\": \"5656485859572035619\"\n    },\n    {\n      \"id\": \"clip_13\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character reference sheet (close-up face, front, side and back views). Use it for <Subject 1> identity.\",\n        \"@panel_d1 is the single storyboard frame for this shot (one photo, not a grid).\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the exact first-frame composition from @panel_d1.\",\n        \"<Subject 1> is the young woman from @hero_face: long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin, small gold drop earrings and a thin gold necklace; wearing a fitted black camisole and high-waisted beige pleated wide-leg trousers, barefoot; sitting on the window seat holding the white mug, seen from outside through the rainy glass.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1> sips her tea, seen through the rainy window; guided by @panel_d1.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - her face, brows, eyes, hair, jewellery and outfit are retained exactly from @hero_face, matching @panel_d1.\",\n        \"@panel_d1: fully_preserved - composition, framing, room design and lighting follow this single frame; never show a grid, collage or several panels.\",\n        \"\",\n        \"detailed_description:\",\n        \"First frame: the camera is already outside; she already holds the mug near her lips.\",\n        \"Rules: this is a hard cut into a new shot; nothing from any previous shot or location is visible. Exactly one woman exists in this film (<Subject 1>); she appears only once in frame, never duplicated, and nobody else appears. She never looks at, smiles at or poses for the camera. Her outfit, hair and jewellery stay exactly the same. No object appears or disappears; props keep their exact colour and state. No text or lettering anywhere. The action fills the whole clip and the clip ends as soon as the action is complete.\",\n        \"The target video is live-action cinematic realism: soft diffused rainy-day daylight, neutral white balance, true-to-life skin tones, soft contrast, subtle muted cool tones, fine film grain. The camera is steady with at most a very slow, subtle drift.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@panel_d1): She takes one slow sip of tea and lowers the mug to her chest. Raindrops keep running down the glass in front of her.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Rain outside, louder and closer, muffled interior.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None - diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"3199911095121734820\"\n    },\n    {\n      \"id\": \"clip_14\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character reference sheet (close-up face, front, side and back views). Use it for <Subject 1> identity.\",\n        \"@panel_d2 is the single storyboard frame for this shot (one photo, not a grid).\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the exact first-frame composition from @panel_d2.\",\n        \"<Subject 1> is the young woman from @hero_face: long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin, small gold drop earrings and a thin gold necklace; wearing a fitted black camisole and high-waisted beige pleated wide-leg trousers, barefoot; close-up profile, looking out of the window.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1> watches the rain, calm; guided by @panel_d2.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - her face, brows, eyes, hair, jewellery and outfit are retained exactly from @hero_face, matching @panel_d2.\",\n        \"@panel_d2: fully_preserved - composition, framing, room design and lighting follow this single frame; never show a grid, collage or several panels.\",\n        \"\",\n        \"detailed_description:\",\n        \"First frame: she is already in profile looking out of the window.\",\n        \"Rules: this is a hard cut into a new shot; nothing from any previous shot or location is visible. Exactly one woman exists in this film (<Subject 1>); she appears only once in frame, never duplicated, and nobody else appears. She never looks at, smiles at or poses for the camera. Her outfit, hair and jewellery stay exactly the same. No object appears or disappears; props keep their exact colour and state. No text or lettering anywhere. The action fills the whole clip and the clip ends as soon as the action is complete.\",\n        \"The target video is live-action cinematic realism: soft diffused rainy-day daylight, neutral white balance, true-to-life skin tones, soft contrast, subtle muted cool tones, fine film grain. The camera is steady with at most a very slow, subtle drift.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@panel_d2): She blinks slowly and breathes out, calm. Her gaze stays on the rain outside.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Steady rain, a soft breath.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None - diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 90,\n      \"steps\": 15,\n      \"seed\": \"4636920215723109817\"\n    },\n    {\n      \"id\": \"clip_15\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@panel_d3 is the single storyboard frame for this shot (one photo, not a grid).\",\n        \"<Picture 1> is the exact first-frame composition from @panel_d3.\",\n        \"No person appears in this shot: no woman, no hand, no silhouette.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] Raindrops run down the window glass (empty object shot, no people); guided by @panel_d3.\",\n        \"\",\n        \"retention_analysis:\",\n        \"@panel_d3: fully_preserved - composition, framing, room design and lighting follow this single frame; never show a grid, collage or several panels.\",\n        \"\",\n        \"detailed_description:\",\n        \"First frame: raindrops are already sliding down the glass.\",\n        \"Rules: this is a hard cut into a new shot; nothing from any previous shot or location is visible. This is an empty object/detail shot: there are no people at all in this shot - no woman, no face, no body, no hand, no arm, no silhouette, no reflection of a person. Nobody enters or walks into the frame at any time. No object appears or disappears; props keep their exact colour and state. No text or lettering anywhere. The action fills the whole clip and the clip ends as soon as the action is complete.\",\n        \"The target video is live-action cinematic realism: soft diffused rainy-day daylight, neutral white balance, true-to-life skin tones, soft contrast, subtle muted cool tones, fine film grain. The camera is steady with at most a very slow, subtle drift.\",\n        \"[Shot 1] the shot begins from <Picture 1> (@panel_d3): Two raindrops merge and race down the glass. No person and no hand appears.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Rain on glass, a distant soft roll of thunder.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None - diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 90,\n      \"steps\": 15,\n      \"seed\": \"6986994086854132380\"\n    },\n    {\n      \"id\": \"clip_16\",\n      \"prompt\": [\n        \"subject_definitions:\",\n        \"@hero_face is the multi-angle character reference sheet (close-up face, front, side and back views). Use it for <Subject 1> identity.\",\n        \"@panel_d4 is the single storyboard frame for this shot (one photo, not a grid).\",\n        \"<Picture 1> defines the identity and appearance of <Subject 1> from @hero_face.\",\n        \"<Picture 2> is the exact first-frame composition from @panel_d4.\",\n        \"<Subject 1> is the young woman from @hero_face: long straight black hair with a centre parting, thick dark brows, brown eyes, fair skin, small gold drop earrings and a thin gold necklace; wearing a fitted black camisole and high-waisted beige pleated wide-leg trousers, barefoot; sitting on the window seat, the white mug resting in her lap.\",\n        \"\",\n        \"summary:\",\n        \"[reference generation + keyframe completion] <Subject 1> rests her head against the window and closes her eyes; guided by @panel_d4.\",\n        \"\",\n        \"retention_analysis:\",\n        \"<Subject 1>: fully_preserved - her face, brows, eyes, hair, jewellery and outfit are retained exactly from @hero_face, matching @panel_d4.\",\n        \"@panel_d4: fully_preserved - composition, framing, room design and lighting follow this single frame; never show a grid, collage or several panels.\",\n        \"\",\n        \"detailed_description:\",\n        \"First frame: she is already sitting on the window seat with the mug in her lap, looking out.\",\n        \"Rules: this is a hard cut into a new shot; nothing from any previous shot or location is visible. Exactly one woman exists in this film (<Subject 1>); she appears only once in frame, never duplicated, and nobody else appears. She never looks at, smiles at or poses for the camera. Her outfit, hair and jewellery stay exactly the same. No object appears or disappears; props keep their exact colour and state. No text or lettering anywhere. The action fills the whole clip and the clip ends as soon as the action is complete.\",\n        \"The target video is live-action cinematic realism: soft diffused rainy-day daylight, neutral white balance, true-to-life skin tones, soft contrast, subtle muted cool tones, fine film grain. The camera is steady with at most a very slow, subtle drift.\",\n        \"[Shot 1] the shot begins from <Picture 2> (@panel_d4): She leans her head against the window frame and slowly closes her eyes. The clip ends as her eyes close.\",\n        \"\",\n        \"overall_soundscape:\",\n        \"Rain, quiet room tone fading softly.\",\n        \"\",\n        \"non_diegetic_music:\",\n        \"None - diegetic soundscape only; no score, no music bed, no musical sting.\"\n      ],\n      \"length\": 107,\n      \"steps\": 15,\n      \"seed\": \"4361075068296155132\"\n    }\n  ],\n  \"defaults\": {}\n}",
+    "naisha_rain_fix15",
+    "",
+    1280,
+    736,
+    22,
+    "video",
+    "head",
+    "disabled",
+    "generated_audio",
+    0,
+    15,
+    5,
+    0,
+    20,
+    0,
+    "guide"
+   ],
+   "color": "#1f1f48",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 240,
+   "type": "MiniMaxH3ChainScenePromptEditor",
+   "pos": [
+    4332.12015215932,
+    3702.11859339659
+   ],
+   "size": [
+    2200.2225255759754,
+    1231.100489758372
+   ],
+   "flags": {},
+   "order": 33,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "plan",
+     "name": "plan",
+     "type": "H3_CHAIN_PLAN",
+     "link": 144
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "plan",
+     "name": "plan",
+     "type": "H3_CHAIN_PLAN",
+     "links": [
+      145
+     ]
+    }
+   ],
+   "title": "SCENE PROMPT EDITOR \u2014 CLICK @ REFERENCE / HOVER TO PREVIEW",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.3.10",
+    "Node name for S&R": "MiniMaxH3ChainScenePromptEditor",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    },
+    "h3_scene_prompt_editor_active_scene": 0,
+    "h3_scene_prompt_editor_font_size": 18,
+    "h3_scene_prompt_editor_rich_text": true
+   },
+   "widgets_values": [],
+   "color": "#1f1f48",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 215,
+   "type": "LoadImage",
+   "pos": [
+    461.73831650588033,
+    2909.131319814567
+   ],
+   "size": [
+    360,
+    400
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      134
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Panel A1",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "naisha_rain_board_1.png",
+    "image"
+   ]
+  },
+  {
+   "id": 214,
+   "type": "LoadImage",
+   "pos": [
+    589.640919245574,
+    2377.3388122451247
+   ],
+   "size": [
+    360,
+    400
+   ],
+   "flags": {},
+   "order": 14,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      132
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "H3 @hero_face \u2014 Character Sheet",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "_upload_heroine_character_sheet.jpg",
+    "image"
+   ]
+  },
+  {
+   "id": 200,
+   "type": "UNETLoader",
+   "pos": [
+    66.60605017988337,
+    2418.788489118485
+   ],
+   "size": [
+    340,
+    82
+   ],
+   "flags": {},
+   "order": 15,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "unet_name",
+     "name": "unet_name",
+     "type": "COMBO",
+     "widget": {
+      "name": "unet_name"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "weight_dtype",
+     "name": "weight_dtype",
+     "type": "COMBO",
+     "widget": {
+      "name": "weight_dtype"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "MODEL",
+     "name": "MODEL",
+     "type": "MODEL",
+     "links": [
+      150
+     ]
+    }
+   ],
+   "title": "H3 REF2VA MODEL \u2014 REQUIRED",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "UNETLoader",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "h3\\minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+    "default"
+   ]
+  },
+  {
+   "id": 248,
+   "type": "MiniMaxH3GenerationProfile",
+   "pos": [
+    1400,
+    1900
+   ],
+   "size": [
+    320,
+    110
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "lip_sync_options",
+     "type": "H3_LIP_SYNC_OPTIONS",
+     "shape": 7,
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "name": "chain_policy",
+     "type": "H3_CHAIN_POLICY",
+     "links": [
+      166
+     ]
+    },
+    {
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "MiniMaxH3GenerationProfile",
+    "cnr_id": "comfyui-minimaxh3-contex-loop"
+   },
+   "widgets_values": [
+    "Independent scenes",
+    "Generate fresh audio per scene"
+   ],
+   "title": "Hard cuts - Independent scenes"
+  },
+  {
+   "id": 249,
+   "type": "LoadImage",
+   "pos": [
+    461.73831650588033,
+    3039.131319814567
+   ],
+   "size": [
+    360,
+    400
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      167
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Panel A2",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "naisha_rain_board_2.png",
+    "image"
+   ]
+  },
+  {
+   "id": 250,
+   "type": "MiniMaxH3TaggedPictureReference",
+   "pos": [
+    592.5195733604062,
+    3971.4905816739915
+   ],
+   "size": [
+    360,
+    122
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "IMAGE",
+     "link": 167
+    },
+    {
+     "localized_name": "previous",
+     "name": "previous",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 168
+    },
+    {
+     "localized_name": "tag",
+     "name": "tag",
+     "type": "STRING",
+     "widget": {
+      "name": "tag"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "links": [
+      170
+     ]
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": []
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "@panel_a2",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    "panel_a2"
+   ],
+   "color": "#744c8c",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 251,
+   "type": "LoadImage",
+   "pos": [
+    461.73831650588033,
+    3169.131319814567
+   ],
+   "size": [
+    360,
+    400
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      169
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Panel A3",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "naisha_rain_board_3.png",
+    "image"
+   ]
+  },
+  {
+   "id": 252,
+   "type": "MiniMaxH3TaggedPictureReference",
+   "pos": [
+    592.5195733604062,
+    4101.490581673992
+   ],
+   "size": [
+    360,
+    122
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "IMAGE",
+     "link": 169
+    },
+    {
+     "localized_name": "previous",
+     "name": "previous",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 170
+    },
+    {
+     "localized_name": "tag",
+     "name": "tag",
+     "type": "STRING",
+     "widget": {
+      "name": "tag"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "links": [
+      172
+     ]
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": []
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "@panel_a3",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    "panel_a3"
+   ],
+   "color": "#744c8c",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 253,
+   "type": "LoadImage",
+   "pos": [
+    461.73831650588033,
+    3299.131319814567
+   ],
+   "size": [
+    360,
+    400
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      171
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Panel A4",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "naisha_rain_board_4.png",
+    "image"
+   ]
+  },
+  {
+   "id": 254,
+   "type": "MiniMaxH3TaggedPictureReference",
+   "pos": [
+    592.5195733604062,
+    4231.490581673992
+   ],
+   "size": [
+    360,
+    122
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "IMAGE",
+     "link": 171
+    },
+    {
+     "localized_name": "previous",
+     "name": "previous",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 172
+    },
+    {
+     "localized_name": "tag",
+     "name": "tag",
+     "type": "STRING",
+     "widget": {
+      "name": "tag"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "links": [
+      174
+     ]
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": []
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "@panel_a4",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    "panel_a4"
+   ],
+   "color": "#744c8c",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 255,
+   "type": "LoadImage",
+   "pos": [
+    461.73831650588033,
+    3429.131319814567
+   ],
+   "size": [
+    360,
+    400
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      173
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Panel B1",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "naisha_rain_board_5.png",
+    "image"
+   ]
+  },
+  {
+   "id": 256,
+   "type": "MiniMaxH3TaggedPictureReference",
+   "pos": [
+    592.5195733604062,
+    4361.490581673992
+   ],
+   "size": [
+    360,
+    122
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "IMAGE",
+     "link": 173
+    },
+    {
+     "localized_name": "previous",
+     "name": "previous",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 174
+    },
+    {
+     "localized_name": "tag",
+     "name": "tag",
+     "type": "STRING",
+     "widget": {
+      "name": "tag"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "links": [
+      176
+     ]
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": []
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "@panel_b1",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    "panel_b1"
+   ],
+   "color": "#744c8c",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 257,
+   "type": "LoadImage",
+   "pos": [
+    461.73831650588033,
+    3559.131319814567
+   ],
+   "size": [
+    360,
+    400
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      175
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Panel B2",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "naisha_rain_board_6.png",
+    "image"
+   ]
+  },
+  {
+   "id": 258,
+   "type": "MiniMaxH3TaggedPictureReference",
+   "pos": [
+    592.5195733604062,
+    4491.490581673992
+   ],
+   "size": [
+    360,
+    122
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "IMAGE",
+     "link": 175
+    },
+    {
+     "localized_name": "previous",
+     "name": "previous",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 176
+    },
+    {
+     "localized_name": "tag",
+     "name": "tag",
+     "type": "STRING",
+     "widget": {
+      "name": "tag"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "links": [
+      178
+     ]
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": []
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "@panel_b2",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    "panel_b2"
+   ],
+   "color": "#744c8c",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 259,
+   "type": "LoadImage",
+   "pos": [
+    461.73831650588033,
+    3689.131319814567
+   ],
+   "size": [
+    360,
+    400
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      177
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Panel B3",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "naisha_rain_board_7.png",
+    "image"
+   ]
+  },
+  {
+   "id": 260,
+   "type": "MiniMaxH3TaggedPictureReference",
+   "pos": [
+    592.5195733604062,
+    4621.490581673992
+   ],
+   "size": [
+    360,
+    122
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "IMAGE",
+     "link": 177
+    },
+    {
+     "localized_name": "previous",
+     "name": "previous",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 178
+    },
+    {
+     "localized_name": "tag",
+     "name": "tag",
+     "type": "STRING",
+     "widget": {
+      "name": "tag"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "links": [
+      180
+     ]
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": []
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "@panel_b3",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    "panel_b3"
+   ],
+   "color": "#744c8c",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 261,
+   "type": "LoadImage",
+   "pos": [
+    461.73831650588033,
+    3819.131319814567
+   ],
+   "size": [
+    360,
+    400
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      179
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Panel B4",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "naisha_rain_board_8.png",
+    "image"
+   ]
+  },
+  {
+   "id": 262,
+   "type": "MiniMaxH3TaggedPictureReference",
+   "pos": [
+    592.5195733604062,
+    4751.490581673992
+   ],
+   "size": [
+    360,
+    122
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "IMAGE",
+     "link": 179
+    },
+    {
+     "localized_name": "previous",
+     "name": "previous",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 180
+    },
+    {
+     "localized_name": "tag",
+     "name": "tag",
+     "type": "STRING",
+     "widget": {
+      "name": "tag"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "links": [
+      182
+     ]
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": []
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "@panel_b4",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    "panel_b4"
+   ],
+   "color": "#744c8c",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 263,
+   "type": "LoadImage",
+   "pos": [
+    461.73831650588033,
+    3949.131319814567
+   ],
+   "size": [
+    360,
+    400
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      181
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Panel C1",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "naisha_rain_board_9.png",
+    "image"
+   ]
+  },
+  {
+   "id": 264,
+   "type": "MiniMaxH3TaggedPictureReference",
+   "pos": [
+    592.5195733604062,
+    4881.490581673992
+   ],
+   "size": [
+    360,
+    122
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "IMAGE",
+     "link": 181
+    },
+    {
+     "localized_name": "previous",
+     "name": "previous",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 182
+    },
+    {
+     "localized_name": "tag",
+     "name": "tag",
+     "type": "STRING",
+     "widget": {
+      "name": "tag"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "links": [
+      184
+     ]
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": []
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "@panel_c1",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    "panel_c1"
+   ],
+   "color": "#744c8c",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 265,
+   "type": "LoadImage",
+   "pos": [
+    461.73831650588033,
+    4079.131319814567
+   ],
+   "size": [
+    360,
+    400
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      183
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Panel C2",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "naisha_rain_board_10.png",
+    "image"
+   ]
+  },
+  {
+   "id": 266,
+   "type": "MiniMaxH3TaggedPictureReference",
+   "pos": [
+    592.5195733604062,
+    5011.490581673992
+   ],
+   "size": [
+    360,
+    122
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "IMAGE",
+     "link": 183
+    },
+    {
+     "localized_name": "previous",
+     "name": "previous",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 184
+    },
+    {
+     "localized_name": "tag",
+     "name": "tag",
+     "type": "STRING",
+     "widget": {
+      "name": "tag"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "links": [
+      186
+     ]
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": []
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "@panel_c2",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    "panel_c2"
+   ],
+   "color": "#744c8c",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 267,
+   "type": "LoadImage",
+   "pos": [
+    461.73831650588033,
+    4209.131319814567
+   ],
+   "size": [
+    360,
+    400
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      185
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Panel C3",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "naisha_rain_board_11.png",
+    "image"
+   ]
+  },
+  {
+   "id": 268,
+   "type": "MiniMaxH3TaggedPictureReference",
+   "pos": [
+    592.5195733604062,
+    5141.490581673992
+   ],
+   "size": [
+    360,
+    122
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "IMAGE",
+     "link": 185
+    },
+    {
+     "localized_name": "previous",
+     "name": "previous",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 186
+    },
+    {
+     "localized_name": "tag",
+     "name": "tag",
+     "type": "STRING",
+     "widget": {
+      "name": "tag"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "links": [
+      188
+     ]
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": []
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "@panel_c3",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    "panel_c3"
+   ],
+   "color": "#744c8c",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 269,
+   "type": "LoadImage",
+   "pos": [
+    461.73831650588033,
+    4339.131319814567
+   ],
+   "size": [
+    360,
+    400
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      187
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Panel C4",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "naisha_rain_board_12.png",
+    "image"
+   ]
+  },
+  {
+   "id": 270,
+   "type": "MiniMaxH3TaggedPictureReference",
+   "pos": [
+    592.5195733604062,
+    5271.490581673992
+   ],
+   "size": [
+    360,
+    122
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "IMAGE",
+     "link": 187
+    },
+    {
+     "localized_name": "previous",
+     "name": "previous",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 188
+    },
+    {
+     "localized_name": "tag",
+     "name": "tag",
+     "type": "STRING",
+     "widget": {
+      "name": "tag"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "links": [
+      190
+     ]
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": []
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "@panel_c4",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    "panel_c4"
+   ],
+   "color": "#744c8c",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 271,
+   "type": "LoadImage",
+   "pos": [
+    461.73831650588033,
+    4469.131319814567
+   ],
+   "size": [
+    360,
+    400
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      189
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Panel D1",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "naisha_rain_board_13.png",
+    "image"
+   ]
+  },
+  {
+   "id": 272,
+   "type": "MiniMaxH3TaggedPictureReference",
+   "pos": [
+    592.5195733604062,
+    5401.490581673992
+   ],
+   "size": [
+    360,
+    122
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "IMAGE",
+     "link": 189
+    },
+    {
+     "localized_name": "previous",
+     "name": "previous",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 190
+    },
+    {
+     "localized_name": "tag",
+     "name": "tag",
+     "type": "STRING",
+     "widget": {
+      "name": "tag"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "links": [
+      192
+     ]
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": []
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "@panel_d1",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    "panel_d1"
+   ],
+   "color": "#744c8c",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 273,
+   "type": "LoadImage",
+   "pos": [
+    461.73831650588033,
+    4599.131319814567
+   ],
+   "size": [
+    360,
+    400
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      191
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Panel D2",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "naisha_rain_board_14.png",
+    "image"
+   ]
+  },
+  {
+   "id": 274,
+   "type": "MiniMaxH3TaggedPictureReference",
+   "pos": [
+    592.5195733604062,
+    5531.490581673992
+   ],
+   "size": [
+    360,
+    122
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "IMAGE",
+     "link": 191
+    },
+    {
+     "localized_name": "previous",
+     "name": "previous",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 192
+    },
+    {
+     "localized_name": "tag",
+     "name": "tag",
+     "type": "STRING",
+     "widget": {
+      "name": "tag"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "links": [
+      194
+     ]
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": []
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "@panel_d2",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    "panel_d2"
+   ],
+   "color": "#744c8c",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 275,
+   "type": "LoadImage",
+   "pos": [
+    461.73831650588033,
+    4729.131319814567
+   ],
+   "size": [
+    360,
+    400
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      193
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Panel D3",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "naisha_rain_board_15.png",
+    "image"
+   ]
+  },
+  {
+   "id": 276,
+   "type": "MiniMaxH3TaggedPictureReference",
+   "pos": [
+    592.5195733604062,
+    5661.490581673992
+   ],
+   "size": [
+    360,
+    122
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "IMAGE",
+     "link": 193
+    },
+    {
+     "localized_name": "previous",
+     "name": "previous",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 194
+    },
+    {
+     "localized_name": "tag",
+     "name": "tag",
+     "type": "STRING",
+     "widget": {
+      "name": "tag"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "links": [
+      196
+     ]
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": []
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "@panel_d3",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    "panel_d3"
+   ],
+   "color": "#744c8c",
+   "bgcolor": "rgba(24,24,27,.9)"
+  },
+  {
+   "id": 277,
+   "type": "LoadImage",
+   "pos": [
+    461.73831650588033,
+    4859.131319814567
+   ],
+   "size": [
+    360,
+    400
+   ],
+   "flags": {},
+   "order": 13,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "COMBO",
+     "widget": {
+      "name": "image"
+     },
+     "link": null
+    },
+    {
+     "localized_name": "choose file to upload",
+     "name": "upload",
+     "type": "IMAGEUPLOAD",
+     "widget": {
+      "name": "upload"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "IMAGE",
+     "name": "IMAGE",
+     "type": "IMAGE",
+     "links": [
+      195
+     ]
+    },
+    {
+     "localized_name": "MASK",
+     "name": "MASK",
+     "type": "MASK",
+     "links": null
+    }
+   ],
+   "title": "Panel D4",
+   "properties": {
+    "cnr_id": "comfy-core",
+    "ver": "0.30.0",
+    "Node name for S&R": "LoadImage",
+    "ue_properties": {
+     "widget_ue_connectable": {},
+     "version": "7.8",
+     "input_ue_unconnectable": {}
+    }
+   },
+   "widgets_values": [
+    "naisha_rain_board_16.png",
+    "image"
+   ]
+  },
+  {
+   "id": 278,
+   "type": "MiniMaxH3TaggedPictureReference",
+   "pos": [
+    592.5195733604062,
+    5791.490581673992
+   ],
+   "size": [
+    360,
+    122
+   ],
+   "flags": {},
+   "order": 26,
+   "mode": 0,
+   "inputs": [
+    {
+     "localized_name": "image",
+     "name": "image",
+     "type": "IMAGE",
+     "link": 195
+    },
+    {
+     "localized_name": "previous",
+     "name": "previous",
+     "shape": 7,
+     "type": "H3_TAGGED_REFERENCES",
+     "link": 196
+    },
+    {
+     "localized_name": "tag",
+     "name": "tag",
+     "type": "STRING",
+     "widget": {
+      "name": "tag"
+     },
+     "link": null
+    }
+   ],
+   "outputs": [
+    {
+     "localized_name": "references",
+     "name": "references",
+     "type": "H3_TAGGED_REFERENCES",
+     "links": [
+      159,
+      164
+     ]
+    },
+    {
+     "localized_name": "reference_fingerprint",
+     "name": "reference_fingerprint",
+     "type": "STRING",
+     "links": [
+      165
+     ]
+    },
+    {
+     "localized_name": "status",
+     "name": "status",
+     "type": "STRING",
+     "links": null
+    }
+   ],
+   "title": "@panel_d4",
+   "properties": {
+    "cnr_id": "comfyui-minimaxh3-contex-loop",
+    "ver": "0.7.3",
+    "Node name for S&R": "MiniMaxH3TaggedPictureReference",
+    "aux_id": "ethanfel/ComfyUI-MiniMaxH3-Contex-Loop"
+   },
+   "widgets_values": [
+    "panel_d4"
+   ],
+   "color": "#744c8c",
+   "bgcolor": "rgba(24,24,27,.9)"
+  }
+ ],
+ "links": [
+  [
+   79,
+   201,
+   0,
+   205,
+   0,
+   "CLIP"
+  ],
+  [
+   88,
+   220,
+   5,
+   206,
+   0,
+   "INT"
+  ],
+  [
+   90,
+   220,
+   0,
+   221,
+   0,
+   "H3_CHAIN_STATE"
+  ],
+  [
+   91,
+   205,
+   0,
+   221,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   92,
+   205,
+   1,
+   221,
+   3,
+   "LATENT"
+  ],
+  [
+   93,
+   221,
+   0,
+   207,
+   1,
+   "CONDITIONING"
+  ],
+  [
+   94,
+   206,
+   0,
+   210,
+   0,
+   "NOISE"
+  ],
+  [
+   95,
+   207,
+   0,
+   210,
+   1,
+   "GUIDER"
+  ],
+  [
+   96,
+   208,
+   0,
+   210,
+   2,
+   "SAMPLER"
+  ],
+  [
+   97,
+   209,
+   0,
+   210,
+   3,
+   "SIGMAS"
+  ],
+  [
+   99,
+   210,
+   0,
+   211,
+   0,
+   "LATENT"
+  ],
+  [
+   104,
+   220,
+   0,
+   222,
+   0,
+   "H3_CHAIN_STATE"
+  ],
+  [
+   106,
+   210,
+   0,
+   222,
+   2,
+   "LATENT"
+  ],
+  [
+   108,
+   219,
+   0,
+   223,
+   0,
+   "H3_CHAIN_FLOW"
+  ],
+  [
+   109,
+   220,
+   0,
+   223,
+   1,
+   "H3_CHAIN_STATE"
+  ],
+  [
+   111,
+   210,
+   0,
+   223,
+   3,
+   "LATENT"
+  ],
+  [
+   112,
+   222,
+   0,
+   223,
+   4,
+   "H3_CHAIN_SEGMENT"
+  ],
+  [
+   118,
+   202,
+   0,
+   227,
+   0,
+   "VAE"
+  ],
+  [
+   119,
+   227,
+   0,
+   205,
+   1,
+   "VAE"
+  ],
+  [
+   120,
+   228,
+   0,
+   211,
+   1,
+   "VAE"
+  ],
+  [
+   121,
+   227,
+   0,
+   229,
+   0,
+   "VAE"
+  ],
+  [
+   122,
+   229,
+   0,
+   221,
+   2,
+   "VAE"
+  ],
+  [
+   123,
+   229,
+   0,
+   228,
+   0,
+   "VAE"
+  ],
+  [
+   124,
+   203,
+   0,
+   230,
+   0,
+   "VAE"
+  ],
+  [
+   125,
+   230,
+   0,
+   205,
+   2,
+   "VAE"
+  ],
+  [
+   126,
+   230,
+   0,
+   231,
+   0,
+   "VAE"
+  ],
+  [
+   128,
+   204,
+   0,
+   232,
+   0,
+   "MODEL"
+  ],
+  [
+   129,
+   232,
+   0,
+   233,
+   0,
+   "MODEL"
+  ],
+  [
+   130,
+   233,
+   0,
+   207,
+   0,
+   "MODEL"
+  ],
+  [
+   131,
+   233,
+   0,
+   209,
+   0,
+   "MODEL"
+  ],
+  [
+   132,
+   214,
+   0,
+   236,
+   0,
+   "IMAGE"
+  ],
+  [
+   133,
+   236,
+   0,
+   237,
+   1,
+   "H3_TAGGED_REFERENCES"
+  ],
+  [
+   134,
+   215,
+   0,
+   237,
+   0,
+   "IMAGE"
+  ],
+  [
+   144,
+   218,
+   0,
+   240,
+   0,
+   "H3_CHAIN_PLAN"
+  ],
+  [
+   150,
+   200,
+   0,
+   244,
+   0,
+   "MODEL"
+  ],
+  [
+   152,
+   217,
+   0,
+   245,
+   0,
+   "MODEL"
+  ],
+  [
+   153,
+   245,
+   0,
+   204,
+   0,
+   "MODEL"
+  ],
+  [
+   154,
+   244,
+   0,
+   246,
+   0,
+   "MODEL"
+  ],
+  [
+   100,
+   210,
+   0,
+   212,
+   0,
+   "LATENT"
+  ],
+  [
+   105,
+   213,
+   0,
+   222,
+   1,
+   "IMAGE"
+  ],
+  [
+   107,
+   213,
+   1,
+   222,
+   3,
+   "AUDIO"
+  ],
+  [
+   110,
+   213,
+   0,
+   223,
+   2,
+   "IMAGE"
+  ],
+  [
+   127,
+   231,
+   0,
+   212,
+   1,
+   "VAE"
+  ],
+  [
+   157,
+   246,
+   0,
+   247,
+   0,
+   "MODEL"
+  ],
+  [
+   158,
+   247,
+   0,
+   217,
+   0,
+   "MODEL"
+  ],
+  [
+   159,
+   278,
+   0,
+   205,
+   3,
+   "H3_TAGGED_REFERENCES"
+  ],
+  [
+   101,
+   211,
+   0,
+   213,
+   0,
+   "IMAGE"
+  ],
+  [
+   145,
+   240,
+   0,
+   219,
+   0,
+   "H3_CHAIN_PLAN"
+  ],
+  [
+   81,
+   219,
+   1,
+   220,
+   0,
+   "H3_CHAIN_STATE"
+  ],
+  [
+   113,
+   223,
+   0,
+   224,
+   0,
+   "H3_CHAIN_MANIFEST"
+  ],
+  [
+   161,
+   221,
+   3,
+   210,
+   4,
+   "LATENT"
+  ],
+  [
+   163,
+   213,
+   2,
+   222,
+   4,
+   "IMAGE"
+  ],
+  [
+   164,
+   278,
+   0,
+   219,
+   3,
+   "H3_TAGGED_REFERENCES"
+  ],
+  [
+   89,
+   220,
+   7,
+   209,
+   2,
+   "INT"
+  ],
+  [
+   141,
+   220,
+   1,
+   205,
+   5,
+   "INT"
+  ],
+  [
+   142,
+   220,
+   2,
+   205,
+   6,
+   "INT"
+  ],
+  [
+   83,
+   220,
+   4,
+   205,
+   7,
+   "STRING"
+  ],
+  [
+   84,
+   220,
+   8,
+   205,
+   8,
+   "INT"
+  ],
+  [
+   85,
+   220,
+   9,
+   205,
+   9,
+   "INT"
+  ],
+  [
+   86,
+   220,
+   6,
+   205,
+   10,
+   "INT"
+  ],
+  [
+   160,
+   220,
+   0,
+   205,
+   4,
+   "H3_CHAIN_STATE"
+  ],
+  [
+   103,
+   221,
+   1,
+   213,
+   3,
+   "INT"
+  ],
+  [
+   102,
+   212,
+   0,
+   213,
+   1,
+   "AUDIO"
+  ],
+  [
+   162,
+   220,
+   0,
+   213,
+   2,
+   "H3_CHAIN_STATE"
+  ],
+  [
+   165,
+   278,
+   1,
+   218,
+   5,
+   "STRING"
+  ],
+  [
+   166,
+   248,
+   0,
+   218,
+   1,
+   "H3_CHAIN_POLICY"
+  ],
+  [
+   167,
+   249,
+   0,
+   250,
+   0,
+   "IMAGE"
+  ],
+  [
+   168,
+   237,
+   0,
+   250,
+   1,
+   "H3_TAGGED_REFERENCES"
+  ],
+  [
+   169,
+   251,
+   0,
+   252,
+   0,
+   "IMAGE"
+  ],
+  [
+   170,
+   250,
+   0,
+   252,
+   1,
+   "H3_TAGGED_REFERENCES"
+  ],
+  [
+   171,
+   253,
+   0,
+   254,
+   0,
+   "IMAGE"
+  ],
+  [
+   172,
+   252,
+   0,
+   254,
+   1,
+   "H3_TAGGED_REFERENCES"
+  ],
+  [
+   173,
+   255,
+   0,
+   256,
+   0,
+   "IMAGE"
+  ],
+  [
+   174,
+   254,
+   0,
+   256,
+   1,
+   "H3_TAGGED_REFERENCES"
+  ],
+  [
+   175,
+   257,
+   0,
+   258,
+   0,
+   "IMAGE"
+  ],
+  [
+   176,
+   256,
+   0,
+   258,
+   1,
+   "H3_TAGGED_REFERENCES"
+  ],
+  [
+   177,
+   259,
+   0,
+   260,
+   0,
+   "IMAGE"
+  ],
+  [
+   178,
+   258,
+   0,
+   260,
+   1,
+   "H3_TAGGED_REFERENCES"
+  ],
+  [
+   179,
+   261,
+   0,
+   262,
+   0,
+   "IMAGE"
+  ],
+  [
+   180,
+   260,
+   0,
+   262,
+   1,
+   "H3_TAGGED_REFERENCES"
+  ],
+  [
+   181,
+   263,
+   0,
+   264,
+   0,
+   "IMAGE"
+  ],
+  [
+   182,
+   262,
+   0,
+   264,
+   1,
+   "H3_TAGGED_REFERENCES"
+  ],
+  [
+   183,
+   265,
+   0,
+   266,
+   0,
+   "IMAGE"
+  ],
+  [
+   184,
+   264,
+   0,
+   266,
+   1,
+   "H3_TAGGED_REFERENCES"
+  ],
+  [
+   185,
+   267,
+   0,
+   268,
+   0,
+   "IMAGE"
+  ],
+  [
+   186,
+   266,
+   0,
+   268,
+   1,
+   "H3_TAGGED_REFERENCES"
+  ],
+  [
+   187,
+   269,
+   0,
+   270,
+   0,
+   "IMAGE"
+  ],
+  [
+   188,
+   268,
+   0,
+   270,
+   1,
+   "H3_TAGGED_REFERENCES"
+  ],
+  [
+   189,
+   271,
+   0,
+   272,
+   0,
+   "IMAGE"
+  ],
+  [
+   190,
+   270,
+   0,
+   272,
+   1,
+   "H3_TAGGED_REFERENCES"
+  ],
+  [
+   191,
+   273,
+   0,
+   274,
+   0,
+   "IMAGE"
+  ],
+  [
+   192,
+   272,
+   0,
+   274,
+   1,
+   "H3_TAGGED_REFERENCES"
+  ],
+  [
+   193,
+   275,
+   0,
+   276,
+   0,
+   "IMAGE"
+  ],
+  [
+   194,
+   274,
+   0,
+   276,
+   1,
+   "H3_TAGGED_REFERENCES"
+  ],
+  [
+   195,
+   277,
+   0,
+   278,
+   0,
+   "IMAGE"
+  ],
+  [
+   196,
+   276,
+   0,
+   278,
+   1,
+   "H3_TAGGED_REFERENCES"
+  ]
+ ],
+ "groups": [
+  {
+   "id": 1,
+   "title": "CONTROL",
+   "bounding": [
+    20,
+    0,
+    1220,
+    660
+   ],
+   "color": "#232",
+   "flags": {}
+  },
+  {
+   "id": 2,
+   "title": "SWITCH KREA Storyboard Pipeline",
+   "bounding": [
+    19.20359205065034,
+    752.0983780614056,
+    3461.8426461183094,
+    1251.8387610522136
+   ],
+   "color": "#3f789e",
+   "flags": {}
+  },
+  {
+   "id": 3,
+   "title": "SWITCH H3 Video Pipeline",
+   "bounding": [
+    41.089269166717784,
+    2202.7030372259196,
+    9060.040273597186,
+    3562.0443484123434
+   ],
+   "color": "#535",
+   "flags": {}
+  },
+  {
+   "id": 4,
+   "title": "RECOVERY (optional)",
+   "bounding": [
+    575.1312896923114,
+    3475.4184105721506,
+    2251.771219350737,
+    2122.0920415938795
+   ],
+   "color": "#222",
+   "flags": {}
+  },
+  {
+   "id": 5,
+   "title": "preview",
+   "bounding": [
+    1393.190738625517,
+    4318.591287552963,
+    1155.890256753226,
+    1234.0118480365227
+   ],
+   "color": "#3f789e",
+   "flags": {}
+  }
+ ],
+ "config": {},
+ "extra": {
+  "ds": {
+   "scale": 0.4598000000000329,
+   "offset": [
+    -7385.973943355897,
+    -2171.2384192353097
+   ]
+  },
+  "comfyui_mcp": {
+   "workflow_uuid": "834b5b9c-2277-4192-91df-5345877892ef"
+  },
+  "ue_links": [],
+  "links_added_by_ue": [],
+  "frontendVersion": "1.55.18",
+  "VHS_latentpreview": false,
+  "VHS_latentpreviewrate": 0,
+  "VHS_MetadataImage": true,
+  "VHS_KeepIntermediate": true
+ },
+ "extensions": {
+  "seed_widgets": {
+   "206": 0
+  }
+ },
+ "version": 0.4
+}

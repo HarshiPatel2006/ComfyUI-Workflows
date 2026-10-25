@@ -1,0 +1,23 @@
+{
+ "1": {
+  "class_type": "DubSyncTBDubTeacher",
+  "inputs": {
+   "video_path": "C:\\path\\to\\crop.mkv",
+   "audio_path": "C:\\path\\to\\hi.wav",
+   "output_path": "C:\\path\\to\\result.mkv",
+   "source_fps": 0.0,
+   "steps": 30,
+   "ref_cfg": 2.0,
+   "audio_cfg": 6.0,
+   "seed": 42,
+   "memory_mode": "resident",
+   "per_chunk_audio": false,
+   "motion_from_latents": false,
+   "runtime_python": "",
+   "upstream_dir": "",
+   "models_dir": "",
+   "timeout_minutes": 240,
+   "return_images": false
+  }
+ }
+}

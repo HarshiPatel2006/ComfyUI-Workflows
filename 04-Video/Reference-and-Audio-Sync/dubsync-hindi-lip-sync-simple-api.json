@@ -1,0 +1,19 @@
+{
+ "1": {
+  "class_type": "DubSyncLipSyncVideo",
+  "inputs": {
+   "video": "R01_SC007_0037.mp4",
+   "hindi_audio": "Sequence_15.wav",
+   "steps": 40,
+   "guidance": 2.0,
+   "guidance_silence": 1.0,
+   "seed": 1247,
+   "min_face_px": 90,
+   "seamless_finish": true,
+   "lip_color_match": 1.0,
+   "landmark_smoothing": 3,
+   "crf": 14,
+   "filename_prefix": "DubSync/hindi_lipsync"
+  }
+ }
+}
