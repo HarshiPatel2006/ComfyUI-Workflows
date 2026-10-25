@@ -2,7 +2,7 @@
 
 **Product:** Short Film Director Pipeline (Krea + MiniMax H3)  
 **Brand:** The AI Brief  
-**Workflow file:** `Short Film Director Pipeline (Krea + MiniMax H3).json`  
+**Workflow file:** `short-film-director-pipeline-krea-minimax-h3.json`  
 **Price:** Free ($0)
 
 This guide installs **every custom node**, downloads **every model / LoRA**, and walks you through generating a **multi-panel storyboard** then an **unlimited-length MiniMax H3 film** with locked character identity.
@@ -147,7 +147,7 @@ The shipped workflow Load Image nodes expect:
 
 ## 4) Open the workflow
 
-1. ComfyUI → **Load** → `Short Film Director Pipeline (Krea + MiniMax H3).json`
+1. ComfyUI → **Load** → `short-film-director-pipeline-krea-minimax-h3.json`
 2. Fix any red nodes (missing packs / models).
 3. Top-left: **PIPELINE SWITCH** — click **SWITCH KREA Storyboard Pipeline** *or* **SWITCH H3 Video Pipeline** (always one).
 

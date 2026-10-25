@@ -3,7 +3,7 @@
 1. Install custom nodes from SETUP_GUIDE.md (MultiShot pack + krea2edit + Contex Loop + rgthree + KJNodes).
 2. Download Krea 2 + MiniMax H3 models listed in SETUP_GUIDE.
 3. Copy `sample_assets/*` into `ComfyUI/input/` (character sheet + example boards + panels).
-4. Load `Short Film Director Pipeline (Krea + MiniMax H3).json`.
+4. Load `short-film-director-pipeline-krea-minimax-h3.json`.
 5. Use **PIPELINE SWITCH**: enable **KREA** first.
 6. In Multi-Shot V2: edit prompts or **Upload / Browse & fill** your stills → Queue.
 7. Check Scene Board Compose preview.

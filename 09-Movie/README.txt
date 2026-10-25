@@ -3,7 +3,7 @@ The AI Brief — FREE ComfyUI workflow pack
 
 CONTENTS
 --------
-Short Film Director Pipeline (Krea + MiniMax H3).json
+short-film-director-pipeline-krea-minimax-h3.json
 SETUP_GUIDE.md          — full install: every node, model, LoRA + download links
 QUICK_START.md          — 9-step first run
 LINKS.md                — GitHub + Google Doc + model hubs
