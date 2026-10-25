@@ -1,932 +1,568 @@
 # ComfyUI Workflow Library — Index
 
-Workflows are filed by **what they do**; the filename starts with the **model family** so a folder sorts by model.
-
-Filename pattern: `Model - Task - Variant.json` (e.g. `Qwen Image 2.1 - One Image Edit - Low VRAM.json`). A trailing `(EpNN)` marks which Pixaroma episode a variant came from when two otherwise share a name.
-
-| Folder | Purpose |
-|---|---|
-| 01-Image-Generation | Text-to-image, ControlNet-guided, LLM prompt-assisted, design/typography/transparent PNG, prompt batching |
-| 02-Image-Editing | Instruction edits, multi-image composition, character/outfit/pose, inpaint/outpaint/object removal, background removal, sketch & 3D-to-image, compositing & image tools |
-| 03-Image-Enhancement | Upscaling (local + paid API), filters & colour grading |
-| 04-Video | Text-to-video, image-to-video, reference & audio-sync (talking video), character animation, video upscaling, audio-reactive |
-| 05-Audio | Speech / voice cloning, music and sound generation |
-| 06-3D-Generation | Image-to-3D and multi-view-to-3D meshes |
-| 07-Batch-and-Automation | Process whole folders of images; loops; control, logic and math |
-| 08-Testing-and-Comparison | XY plots, draft-then-finish, image/group comparison |
-| 09-Movie | Short film director pipeline |
-| 10-LLM-and-Prompt-Tools | LLM workflows that output text: prompt enhancers, image/video/audio to prompt, prompt generators |
-| 90-Docs-and-Resources | LLM prompt-assistant instructions, LoRA training, learning & node demos, Pixaroma episode resources, sample media inputs, maintenance manifests + undo script |
-| 91-Review-Version-Conflicts | Original Pixaroma versions of workflows whose library copy has different settings — review and keep one |
-
-**380 workflows.** Adding a new workflow: drop it in the folder for its main job, name it `Model - Task - Variant.json`, and add it here.
-
-## All workflows by folder
-
-### 01-Image-Generation/ControlNet-Guided
-- SD1.5 Juggernaut Reborn - Text to Image + ControlNet Canny
-- Z-Image Turbo - Text to Image - FP8 AIO + ControlNet Union
-
-### 01-Image-Generation/Design-Typography-and-Transparent
-- Flux 3 Klein - Text in Images
-- Ming Image 0.1 - 3D Lettering
-- Ming Image 0.1 - App and Website Screens
-- Ming Image 0.1 - Event Poster
-- Ming Image 0.1 - Game Screens and Icons
-- Ming Image 0.1 - Infographic
-- Ming Image 0.1 - Logo Design
-- Ming Image 0.1 - Logo Variations
-- Ming Image 0.1 - Social Media Post
-- Ming Image 0.1 - Transparent PNG
-- Ming Image 0.1 - YouTube Thumbnail
-- Pixaroma Nodes - Text Overlay
-- Qwen Image 2.1 - Transparent PNG
-- Z-Image Turbo - Text to Image + Text Overlay
-
-### 01-Image-Generation/LLM-Prompt-Assisted
-- Anima Base v1.0 - Anime Text to Image + Gemma 4 Prompt Enhancer
-- Boogu Image - Text to Image + Prompt Enhancer
-- Flux 2 Klein 9B - Image to Prompt to Image (Qwen 3.5)
-- Flux 2 Klein 9B - Text to Image + Qwen 3.5 Prompt Enhancer
-- Flux 3 Klein - Image to Prompt to Image
-- Flux 3 Klein - Text to Image + Prompt Upsampler
-- Krea 2 - Image to Prompt to Image (Ep31 AI Prompt Node)
-- Krea 2 - Image to Prompt to Image
-- Krea 2 - Text to Image + AI Prompt Enhancer (Ep31)
-- Krea 2 - Text to Image + Extra Pass + Prompt Enhancer (Uncensored)
-- Krea 2 - Text to Image + Extra Pass + Prompt Enhancer
-- Krea 2 - Text to Image + Prompt Enhancer (Ep28)
-- Krea 2 - Text to Image + Prompt Enhancer (Uncensored)
-- Krea 2 - Text to Image + Prompt Enhancer
-- Krea 2 INT8 - Image to Prompt to Image
-- Krea 2 INT8 - Text to Image + Extra Pass + Image to Prompt
-- Krea 2 INT8 - Text to Image + Extra Pass + Prompt Enhancer
-- Krea 2 INT8 - Text to Image + Prompt Enhancer
-- Ming Image 0.1 - Text to Image + Prompt Enhancer
-- Nunchaku - Z-Image Turbo - Text to Image + QwenVL GGUF Prompt Enhancer
-- Qwen Image 2.1 - Image to Prompt to Image
-- Qwen Image 2.1 - Text to Image + Prompt Enhancer
-- Z-Image Turbo - Image to Prompt to Image (Gemma 4)
-- Z-Image Turbo - Text to Image + Gemma 4 Prompt Enhancer + Find and Replace
-- Z-Image Turbo - Text to Image + Gemma 4 Prompt Enhancer
-- Z-Image Turbo INT8 - Text to Image + AI Prompt Enhancer
-
-### 01-Image-Generation/Prompt-Batching-and-Variations
-- Flux 2 Klein 9B - Build a Prompt from Switches
-- Flux 2 Klein 9B - Every Prompt Combination with Brackets
-- Flux 2 Klein 9B - One Image per Prompt
-- Flux 2 Klein 9B - One Subject in Many Styles
-- Flux 2 Klein 9B - Queue a List of Prompts
-- Flux 2 Klein 9B - Random Prompts Every Run
-- Flux 2 Klein 9B - Short Ideas into Finished Images (Qwen 3.5 AI Prompt)
-- Flux 2 Klein 9B - Short Story to Storyboard (Qwen 3.5 AI Prompt)
-- Pixaroma Nodes - Prompt Multi - From List
-- Pixaroma Nodes - Prompt Multi - Queue Text
-- Pixaroma Nodes - Prompt Pack - Line
-- Pixaroma Nodes - Prompt Pack - Paragraph
-- Pixaroma Nodes - Prompt Stack
-- Z-Image Turbo - Prompt Multi - Queue Text
-- Z-Image Turbo - Prompt Pack - Line
-- Z-Image Turbo - Prompt Pack - Paragraph
-- Z-Image Turbo - Prompt Stack
-
-### 01-Image-Generation/Text-to-Image
-- Anima Base v1.0 - Anime Text to Image + SeedVR2 Upscale
-- Anima Base v1.0 - Anime Text to Image
-- Boogu Image - Text to Image
-- Ernie Image Turbo - Text to Image - GGUF
-- Flux 2 Klein 4B FP8 (Distilled) - Text to Image - Basic
-- Flux 2 Klein 9B - Text to Image
-- Flux 2 Klein 9B FP8 (Distilled) - Text to Image - Basic
-- Flux 2 Klein 9B FP8 - Text to Image (Ep16)
-- Flux 3 Klein - Layout with Boxes
-- Flux 3 Klein - Text to Image + Z-Image Realism Pass
-- Flux 3 Klein - Text to Image
-- Krea 2 - Text to Image (Ep28)
-- Krea 2 - Text to Image + Extra Pass + LoRA
-- Krea 2 - Text to Image + Extra Pass
-- Krea 2 - Text to Image - 2K Hi-Res + Prompt Enhancer (Uncensored)
-- Krea 2 - Text to Image - 2K Hi-Res + Prompt Enhancer
-- Krea 2 - Text to Image - Simple + LoRA
-- Krea 2 - Text to Image - Simple - Low VRAM
-- Krea 2 - Text to Image - Simple
-- Krea 2 INT8 - Text to Image + Extra Pass + LoRA
-- Krea 2 INT8 - Text to Image + Extra Pass
-- Krea 2 INT8 - Text to Image - Simple + LoRA
-- Krea 2 INT8 - Text to Image - Simple
-- Lens - Text to Image
-- Ming Image 0.1 - Text to Image
-- Minimax H3 - Text to Image (Single Frame)
-- Nunchaku - Flux.1 Dev - Text to Image
-- Nunchaku - Qwen Image Lightning - Text to Image
-- Nunchaku - Z-Image Turbo - Text to Image
-- Qwen Image 2.1 - Text to Image - Low VRAM
-- Qwen Image 2.1 - Text to Image - Turbo
-- Qwen Image 2.1 - Text to Image
-- SD1.5 Juggernaut Reborn - Text to Image + LoRA
-- SD1.5 Juggernaut Reborn - Text to Image
-- Z-Image Turbo - Text to Image - FP8 (Ep18)
-- Z-Image Turbo - Text to Image - FP8 AIO + LoRA
-- Z-Image Turbo - Text to Image - FP8 AIO Checkpoint
-- Z-Image Turbo - Text to Image - FP8
-- Z-Image Turbo - Text to Image - GGUF
-- Z-Image Turbo INT8 - Text to Image
-
-### 02-Image-Editing/Background-Removal
-- BiRefNet - Remove Background
-- Qwen Image 2.1 - Remove Background
-- SAM3 - Remove Background (Segment + Crop Object)
-- Utility - Remove Background from Transparent Items
-- Utility - Remove Background
-
-### 02-Image-Editing/Character-Outfit-and-Pose
-- Flux 2 Klein 9B - Character Turnaround Sheet from One Image
-- Flux 3 Klein - Character Sheet
-- Flux 3 Klein - Outfit Change
-- Krea 2 - Outfit Change + Outfit LoRA
-- Krea 2 - Outfit Transfer v2
-- Qwen Image 2.1 - Character Sheet
-- Qwen Image 2.1 - Outfit Change - Turbo
-- Qwen Image 2.1 - Outfit Change
-- Qwen Image 2.1 - Pose from a Picture
-
-### 02-Image-Editing/Compositing-and-Image-Tools
-- Pixaroma Nodes - 3D Builder (Ep11)
-- Pixaroma Nodes - 3D Builder (Ep13)
-- Pixaroma Nodes - Combine - Join Two Images
-- Pixaroma Nodes - Crop (Ep11)
-- Pixaroma Nodes - Crop (Ep13)
-- Pixaroma Nodes - Image Composer (Ep11)
-- Pixaroma Nodes - Image Composer (Ep13)
-- Pixaroma Nodes - Paint (Ep11)
-- Pixaroma Nodes - Paint (Ep13)
-- Utility - Image Blend
-- Utility - Image Combiner for Transparent Items
-- Utility - Image Combiner
-- Utility - Image Scale
-- Utility - Image Stitch
-- Utility - Image Transformation
-
-### 02-Image-Editing/Inpaint-Outpaint-and-Object-Removal
-- Flux 2 Klein 4B FP8 (Distilled) - Inpaint
-- Flux 2 Klein 9B - Outpaint
-- Flux 2 Klein 9B - Paint to Image
-- Flux 2 Klein 9B FP8 (Distilled) - Inpaint
-- Flux 2 Klein 9B FP8 (Distilled) - Paint-Guided Edit
-- Flux 2 Klein 9B FP8 - Inpaint (Ep22)
-- Flux 2 Klein 9B INT8 - Inpaint
-- Flux 2 Klein 9B KV FP8 - Inpaint
-- Flux 2 Klein 9B KV FP8 - Outpaint (Custom Ratio)
-- Flux 3 Klein - Edit inside a Box
-- Flux 3 Klein - Outpaint
-- LaMa - Object Remover
-- Qwen Image 2.1 - Inpaint
-- Qwen Image 2.1 - Outpaint
-
-### 02-Image-Editing/Multi-Image-Composition
-- Flux 2 Klein 4B FP8 (Distilled) - Multi-Image Edit - 2 Images
-- Flux 2 Klein 9B - Image Composer to Image
-- Flux 2 Klein 9B FP8 (Distilled) - Multi-Image Edit - 2 Images
-- Flux 2 Klein 9B KV FP8 - Image Blend
-- Flux 2 Klein 9B KV FP8 - Multi-Image Edit - 2 Images
-- Flux 2 Klein 9B KV FP8 - Multi-Image Edit - 3 Images
-- Flux 2 Klein 9B KV FP8 - Multi-Image Edit - 4 Images
-- Flux 3 Klein - Character in a Scene
-- Flux 3 Klein - Group Photo
-- Flux 3 Klein - Logo on a Product
-- Flux 3 Klein - Product Ad
-- Ming Image 0.1 - Product Ad from Two Pictures
-- Qwen Image 2.1 - Character in a Scene
-- Qwen Image 2.1 - Logo on a Product
-- Qwen Image 2.1 - Multi-Image Edit - 2 Images + Prompt Enhancer
-- Qwen Image 2.1 - Multi-Image Edit - 3 Images
-- Qwen Image 2.1 - Multi-Image Edit - 4 Images
-- Qwen Image 2.1 - Multi-Image Edit - Group Photo from 6 Images
-
-### 02-Image-Editing/Single-Image-Edit
-- Boogu Edit - One Image Edit
-- Flux 2 Klein 4B FP8 (Distilled) - One Image Edit
-- Flux 2 Klein 9B - One Image Edit V1
-- Flux 2 Klein 9B - One Image Edit V2 + Notify and Switch
-- Flux 2 Klein 9B - One Image Edit V3 + Keep Filename + Save to Dated Folder
-- Flux 2 Klein 9B - One Image, Many Edits
-- Flux 2 Klein 9B - One Image, Prompts from List
-- Flux 2 Klein 9B FP8 (Distilled) - One Image Edit
-- Flux 2 Klein 9B INT8 - One Image Edit
-- Flux 2 Klein 9B KV FP8 - One Image Edit (Custom Ratio)
-- Flux 2 Klein 9B KV FP8 - One Image Edit (Same Ratio)
-- Flux 3 Klein - Edit Text in a Picture
-- Flux 3 Klein - One Image Edit
-- Flux 3 Klein - Relight and Seasons
-- Flux 3 Klein - Restore and Colorize
-- Flux 3 Klein - Restyle
-- Krea 2 - Edit LoRA - Character and Background
-- Krea 2 - Edit LoRA - Custom Ratio
-- Krea 2 - Edit LoRA
-- Ming Image 0.1 - One Image Edit
-- Ming Image 0.1 - Social Media Pack from One Image
-- Minimax H3 - One Image Edit (Single Frame)
-- Qwen Image 2.1 - One Image Edit + Consistency LoRA
-- Qwen Image 2.1 - One Image Edit + Prompt Enhancer
-- Qwen Image 2.1 - One Image Edit - Low VRAM
-- Qwen Image 2.1 - One Image Edit - Turbo
-- Qwen Image 2.1 - One Image Edit
-- SD1.5 Juggernaut Reborn - Image to Image
-
-### 02-Image-Editing/Sketch-and-3D-to-Image
-- Flux 2 Klein 9B - 3D Model to Image (Ep33)
-- Flux 2 Klein 9B - 3D Model to Image - Keep the Angle (Ep33)
-- Flux 2 Klein 9B - 3D Model to Image - Keep the Angle (Ep34)
-- Flux 2 Klein 9B - 3D Model to Image
-- Flux 2 Klein 9B - 3D Scene Builder to Image
-- Ming Image 0.1 - Restyle a Design to 3D
-- Ming Image 0.1 - Sketch to Photo
-- Qwen Image 2.1 - Sketch to Image + Consistency LoRA
-- Qwen Image 2.1 - Sketch to Image
-
-### 03-Image-Enhancement/Filters-and-Color-Grading
-- LayerStyle - Image Filters and Color Adjustments
-- Utility - Image Filters Example
-
-### 03-Image-Enhancement/Upscaling
-- 1 Universal - Upscale Simple (No Model)
-- 2 Universal - Upscale with 4x Model (NMKD-Siax)
-- 3 Z-Image Turbo - Tiled Diffusion Upscaler
-- 4 Nunchaku - Fluxmania - Tiled Diffusion Upscaler
-- 5 SeedVR2 - Upscale
-- 6 PAID API (51 Credits) - Nano Banana Pro - Upscale
-- 7 PAID API (53 Credits) - Recraft - Creative Upscale
-- 8 PAID API (8.5 Credits) - SeeDream 4.5 - Upscale
-
-### 04-Video/Audio-Reactive
-- Utility - Images React to Music (Audio Reactive)
-
-### 04-Video/Character-Animation-Video-to-Video
-- Wan 2.1 SCAIL - Image to Video - Multi Character (9-16 Ratio Only)
-- Wan 2.1 SCAIL - Image to Video - Single Character
-- Wan 2.1 SCAIL 2 - Character Animation from Driving Video - Compact
-- Wan 2.1 SCAIL 2 - Character Animation from Driving Video - Long
-- Wan 2.1 SCAIL 2 - Character Replacement
-- Wan 2.1 SCAIL 2 - GAP - Hi Woman
-- Wan 2.1 SCAIL 2 - GAP - Video 2
-- Wan 2.1 SCAIL 2 - GAP - Video 3 Man
-- Wan 2.1 SCAIL 2 - GAP - Video 4 Man Closeup
-- Wan 2.1 SCAIL 2 - GAP - Video 5 Man Head
-- Wan 2.1 SCAIL 2 - GAP - Video 6 Man Head Fix
-- Wan 2.1 SCAIL 2 - GAP Multi Character - Long
-- Wan 2.2 Animate - Replace Character and Background - 16FPS
-- Wan 2.2 Animate - Replace Character and Background - 24FPS
-- Wan 2.2 Animate - Replace Character and Background - 24FPS HD
-- Wan 2.2 Animate - Replace Only Character - 16FPS
-- Wan 2.2 Animate - Replace Only Character - 24FPS
-
-### 04-Video/Image-to-Video
-- LTX-2 - Image to Video with Audio
-- LTX-2 - Image to Video with Custom Audio
-- Minimax FastH3 - Image to Video - First + Last Frame (8-Step)
-- Minimax FastH3 - Image to Video - First Frame (8-Step)
-- Minimax H3 - Image to Video - First + Last Frame + Speed LoRA
-- Minimax H3 - Image to Video - First + Last Frame
-- Minimax H3 - Image to Video - First Frame + Speed LoRA
-- Minimax H3 - Image to Video - First Frame
-- Minimax H3 - Image to Video - Last Frame
-- Wan 2.2 - Image to Video - GGUF Lightx2v 4-Step + LoRA
-- Wan 2.2 - Image to Video - GGUF Lightx2v 4-Step
-
-### 04-Video/Reference-and-Audio-Sync
-- LTX-2 - Video to Video - Voice Dubbing
-- LTX-2 - Video to Video - Voice Dubbing - Compact
-- Minimax H3 - Reference Image + Audio Sync - Sing
-- Minimax H3 - Reference Image + Audio Sync - Sing + Speed LoRA
-- Minimax H3 - Reference Image + Audio Sync - Speak
-- Minimax H3 - Reference Image + Audio Sync - Speak + Speed LoRA
-- Minimax H3 - Reference to Video + Audio - Character Swap
-- Minimax H3 - Reference to Video - 2 Images
-- Minimax H3 - Reference to Video - 3 Images
-- Wan 2.1 InfiniteTalk - Talking Video - Easy Extend 3 to 34 Seconds
-- Wan 2.1 InfiniteTalk - Talking Video - Manual Extend 3 to 34 Seconds
-- Wan 2.1 InfiniteTalk - Talking Video from Audio - 10-11 Seconds
-- Wan 2.1 InfiniteTalk - Talking Video from Audio - 4-6 Seconds
-- Wan 2.1 InfiniteTalk - Talking Video from Audio - 7-9 Seconds
-
-### 04-Video/Text-to-Video
-- Minimax FastH3 - Text to Video (8-Step)
-- Minimax H3 - Text to Video
-- Minimax H3 - Text to Video + Speed LoRA
-- Minimax H3 - Text to Video - Low VRAM 8GB
-- Minimax H3 - Text to Video - Secret Sauce 4K Direct Output
-
-### 04-Video/Video-Upscaling
-- SeedVR2 - HD Video Upscale
-- SeedVR2 - Video Upscale
-- SeedVR2 - Video Upscale - API Run
-
-### 05-Audio/Music-Generation
-- ACE-Step v1.5 XL Turbo - Text to Music
-- Minimax Music 3 - Text to Music
-- Stable Audio 3 - Image to Music + Gemma 4
-- Stable Audio 3 - Text to Music + Gemma 4 Prompt Enhancer
-- Stable Audio 3 - Text to Music
-- Stable Audio 3 - Text to Sound Effects + Gemma 4
-
-### 05-Audio/Speech-and-Voice-Cloning
-- Fish S2 - Multi-Speaker Dialogue TTS
-- Fish S2 - Text to Speech
-- Fish S2 - Voice Clone TTS
-- Qwen3-TTS - Custom Voice
-- Qwen3-TTS - Voice Clone + Load Saved Voice
-- Qwen3-TTS - Voice Clone + Save Voice
-- Qwen3-TTS - Voice Clone + Saved Multi Voice + Dialogue
-- Qwen3-TTS - Voice Clone
-- Qwen3-TTS - Voice Design + Dialogue
-- Qwen3-TTS - Voice Design + Save Voice
-- Qwen3-TTS - Voice Design
-
-### 06-3D-Generation/Image-to-3D
-- Pixal3D - Image to 3D Model - HQ + PBR Textures
-- Pixal3D - Image to 3D Model - Low VRAM
-- SAM3D Body - 3D Viewer
-- SAM3D Body - Utility
-- SAM3D Body - Video to 3D Body - Multi (R01_SC008)
-- Trellis 2 - Image to 3D Model - High VRAM
-- Trellis 2 - Image to 3D Model - HQ + PBR Textures
-- Trellis 2 - Image to 3D Model - Low VRAM
-
-### 06-3D-Generation/Multi-View-to-3D
-- Pixal3D Multi-View - 1 Shape Only (No Colours) - HQ
-- Pixal3D Multi-View - 1 Shape Only (No Colours)
-- Pixal3D Multi-View - 2 Model + Colours
-- Pixal3D Multi-View - 3 Model + PBR Textures - LQ
-- Pixal3D Multi-View - 4 Model + PBR Textures - HQ
-
-### 07-Batch-and-Automation/Control-Logic-and-Math
-- BiRefNet - Turn Steps On and Off
-- Flux 2 Klein 9B - One Control Panel for the Whole Workflow
-- Flux 2 Klein 9B - One Workflow, Two Jobs
-- Flux 2 Klein 9B - Set and Get - No Long Wires
-- Flux 2 Klein 9B - Style Presets from a Dropdown
-- Pixaroma Nodes - Switch Node
-
-### 07-Batch-and-Automation/Folder-Batch-Processing
-- BiRefNet - Remove the Background from All Images in a Folder
-- Flux 2 Klein 9B + Qwen3-VL - AI Writes an Edit for Every Image
-- Flux 2 Klein 9B + Qwen3-VL - Re-imagine All Images in a Folder in Another Style
-- Flux 2 Klein 9B - Before and After Grid for All Images in a Folder
-- Flux 2 Klein 9B - Coloring Pages from All Images in a Folder
-- Flux 2 Klein 9B - Do a Big Image Folder in Parts
-- Flux 2 Klein 9B - Edit All Images in a Folder with One Prompt
-- Flux 2 Klein 9B - Edit Each Image with Its Own Prompt
-- Flux 2 Klein 9B - Edit Images from Folder (Simple)
-- Flux 2 Klein 9B - Fix the Caption Text Files, Then Make the Images Again
-- Flux 2 Klein 9B - Make All Images in a Folder Wide (Outpaint)
-- Flux 2 Klein 9B - One Image per Text File
-- Flux 2 Klein 9B - Product Photos from All Images in a Folder
-- Flux 2 Klein 9B - Re-create Old Images from Their Prompts
-- Flux 2 Klein 9B - Restore and Colorize Old Photos in a Folder
-- NMKD-Siax 4x - Upscale All Images in a Folder
-- Qwen3-VL - Caption All Images in a Folder for LoRA Training
-- Qwen3-VL - Keep Only the Images the AI Says Yes To
-- Qwen3-VL - Rename Every Image by What Is in It
-- Qwen3-VL - Sort All Images in a Folder into Subfolders by What Is in Them
-- Utility - Add Your Logo to All Images in a Folder
-- Utility - Collect the Prompts from All Images in a Folder
-- Utility - Contact Sheet of All Images in a Folder
-- Utility - Load Images from Folder + Crop
-- Utility - Math - Scale All Images in a Folder by Percent
-- Utility - Rename and Convert All Images in a Folder
-- Utility - Resize All Images in a Folder
-- Utility - Slideshow Video from All Images in a Folder
-- Utility - Social Media Sizes for All Images in a Folder
-- Utility - Watermark All Images in a Folder
-
-### 07-Batch-and-Automation/Loops
-- 1. Flux 2 Klein 9B - Loop Basics - Four Versions of One Prompt
-- 2. Flux 2 Klein 9B - Loop - Build Up an Image Step by Step
-- 3. Utility - Loop - Photo Strip from All Images in a Folder
-- 4. Flux 2 Klein 9B - Loop - Comic Strip with the Same Character
-- Pixaroma Nodes - Loop - Build a List
-- Pixaroma Nodes - Loop - Build an Image Batch
-- Pixaroma Nodes - Loop - Carry Two Values
-
-### 08-Testing-and-Comparison
-- Flux 2 Klein 9B - Draft First, Then Finish (Preview Gate)
-- Flux 2 Klein 9B - XY Plot - Steps and Samplers
-- Flux 2 Klein 9B - XY Plot - Styles and Subjects
-- Krea 2 INT8 - LoRA XY Plot
-- Pixaroma Nodes - Group Compare (ComfyUI vs Pixaroma)
-- Pixaroma Nodes - Image Compare
-- Utility - Image Compare (Side by Side)
-- Z-Image Turbo - XY Plot
-
-### 09-Movie
-- Short Film Director Pipeline (Krea + MiniMax H3)
-- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Fixed
-- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Fixed - Storyboard Prompts
-- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 HiRes 16 Scenes - Heroine
-- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 HiRes 3 Scenes
-- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 HiRes Full 16 Scenes
-- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Overnight
-- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Test Scene 1
-- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Trial 5 Scenes
-- Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Trial 5 Scenes - MCP Run
-- Short Film Director Pipeline (Krea + MiniMax H3) - No Review
-- Short Film Director Pipeline (Krea + MiniMax H3) - No Review v2
-
-### 10-LLM-and-Prompt-Tools
-- Gemma 4 - Anima Prompt Enhancer
-- Gemma 4 - Audio to Text
-- Gemma 4 - Image to Prompt
-- Gemma 4 - Prompt Enhancer
-- Gemma 4 - Video to Description
-- Gemma 4 - Video to Prompt
-- Minimax H3 - First Frame to Video Prompt Generator
-- Minimax H3 - Text to Video Prompt Generator
-- Minimax Music 3 - Caption and Lyrics Generator
-- Pixaroma Nodes - Read Prompt From Image Metadata
-- Qwen 3.5 - Image to Prompt
-- Qwen 3.5 - Text to Prompt
-- Qwen Image 2.1 - Image to Prompt (Qwen3-VL 8B)
-- Qwen3-VL - Prompt from Image
-- QwenVL 3 - Image and Text to Prompt (GGUF)
-
-### 90-Docs-and-Resources/Learning-and-Node-Demos
-- Flux 2 Klein 9B FP8 - Multi-Step Workflow Example
-- Nodes Explained 01 - Models Explained - Finished (Z-Image Turbo)
-- Nodes Explained 01 - Models Explained - Practice (Z-Image Turbo)
-- Pixaroma - Help and Resources
-- Pixaroma Nodes - Change Node Color
-- Pixaroma Nodes - Labels (Ep11)
-- Pixaroma Nodes - Labels (Ep13)
-- Pixaroma Nodes - Note
-
-### 90-Docs-and-Resources/LoRA-Training
-- Krea 2 - LoRA Converter
-
-### 91-Review-Version-Conflicts
-- Ep11 - Flux 2 Klein 9B FP8 (Distilled) - One Image Edit with Paint Pixaroma Node (Pixaroma original)
-- Ep15 - ACE-Step v1.5 XL Turbo - Text to Music (Pixaroma original)
-- Ep16 - Flux 2 Klein 9B - Image to Prompt to Image (Qwen 3.5) (Pixaroma original)
-- Ep16 - Flux 2 Klein 9B - Text to Image + Qwen 3.5 Prompt Enhancer (Pixaroma original)
-- Ep20 - Anima Base v1.0 - Anime Text to Image + Gemma 4 Prompt Enhancer (Pixaroma original)
-
-## Index by model family
-
-Use this to find every workflow that needs a given model installed.
-
-### ACE-Step 1.5 (2)
-- `05-Audio/Music-Generation/ACE-Step v1.5 XL Turbo - Text to Music.json`
-- `91-Review-Version-Conflicts/Ep15 - ACE-Step v1.5 XL Turbo - Text to Music (Pixaroma original).json`
-
-### Anima (5)
-- `01-Image-Generation/LLM-Prompt-Assisted/Anima Base v1.0 - Anime Text to Image + Gemma 4 Prompt Enhancer.json`
-- `01-Image-Generation/Text-to-Image/Anima Base v1.0 - Anime Text to Image + SeedVR2 Upscale.json`
-- `01-Image-Generation/Text-to-Image/Anima Base v1.0 - Anime Text to Image.json`
-- `10-LLM-and-Prompt-Tools/Gemma 4 - Anima Prompt Enhancer.json`
-- `91-Review-Version-Conflicts/Ep20 - Anima Base v1.0 - Anime Text to Image + Gemma 4 Prompt Enhancer (Pixaroma original).json`
-
-### BiRefNet (3)
-- `02-Image-Editing/Background-Removal/BiRefNet - Remove Background.json`
-- `07-Batch-and-Automation/Control-Logic-and-Math/BiRefNet - Turn Steps On and Off.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/BiRefNet - Remove the Background from All Images in a Folder.json`
-
-### Boogu Image / Edit (3)
-- `01-Image-Generation/LLM-Prompt-Assisted/Boogu Image - Text to Image + Prompt Enhancer.json`
-- `01-Image-Generation/Text-to-Image/Boogu Image - Text to Image.json`
-- `02-Image-Editing/Single-Image-Edit/Boogu Edit - One Image Edit.json`
-
-### Ernie Image (1)
-- `01-Image-Generation/Text-to-Image/Ernie Image Turbo - Text to Image - GGUF.json`
-
-### FLUX.1 Dev (Nunchaku) (1)
-- `01-Image-Generation/Text-to-Image/Nunchaku - Flux.1 Dev - Text to Image.json`
-
-### FLUX.2 Klein 4B (4)
-- `01-Image-Generation/Text-to-Image/Flux 2 Klein 4B FP8 (Distilled) - Text to Image - Basic.json`
-- `02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/Flux 2 Klein 4B FP8 (Distilled) - Inpaint.json`
-- `02-Image-Editing/Multi-Image-Composition/Flux 2 Klein 4B FP8 (Distilled) - Multi-Image Edit - 2 Images.json`
-- `02-Image-Editing/Single-Image-Edit/Flux 2 Klein 4B FP8 (Distilled) - One Image Edit.json`
-
-### FLUX.2 Klein 9B (70)
-- `01-Image-Generation/LLM-Prompt-Assisted/Flux 2 Klein 9B - Image to Prompt to Image (Qwen 3.5).json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Flux 2 Klein 9B - Text to Image + Qwen 3.5 Prompt Enhancer.json`
-- `01-Image-Generation/Prompt-Batching-and-Variations/Flux 2 Klein 9B - Build a Prompt from Switches.json`
-- `01-Image-Generation/Prompt-Batching-and-Variations/Flux 2 Klein 9B - Every Prompt Combination with Brackets.json`
-- `01-Image-Generation/Prompt-Batching-and-Variations/Flux 2 Klein 9B - One Image per Prompt.json`
-- `01-Image-Generation/Prompt-Batching-and-Variations/Flux 2 Klein 9B - One Subject in Many Styles.json`
-- `01-Image-Generation/Prompt-Batching-and-Variations/Flux 2 Klein 9B - Queue a List of Prompts.json`
-- `01-Image-Generation/Prompt-Batching-and-Variations/Flux 2 Klein 9B - Random Prompts Every Run.json`
-- `01-Image-Generation/Prompt-Batching-and-Variations/Flux 2 Klein 9B - Short Ideas into Finished Images (Qwen 3.5 AI Prompt).json`
-- `01-Image-Generation/Prompt-Batching-and-Variations/Flux 2 Klein 9B - Short Story to Storyboard (Qwen 3.5 AI Prompt).json`
-- `01-Image-Generation/Text-to-Image/Flux 2 Klein 9B - Text to Image.json`
-- `01-Image-Generation/Text-to-Image/Flux 2 Klein 9B FP8 (Distilled) - Text to Image - Basic.json`
-- `01-Image-Generation/Text-to-Image/Flux 2 Klein 9B FP8 - Text to Image (Ep16).json`
-- `02-Image-Editing/Character-Outfit-and-Pose/Flux 2 Klein 9B - Character Turnaround Sheet from One Image.json`
-- `02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/Flux 2 Klein 9B - Outpaint.json`
-- `02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/Flux 2 Klein 9B - Paint to Image.json`
-- `02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/Flux 2 Klein 9B FP8 (Distilled) - Inpaint.json`
-- `02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/Flux 2 Klein 9B FP8 (Distilled) - Paint-Guided Edit.json`
-- `02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/Flux 2 Klein 9B FP8 - Inpaint (Ep22).json`
-- `02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/Flux 2 Klein 9B INT8 - Inpaint.json`
-- `02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/Flux 2 Klein 9B KV FP8 - Inpaint.json`
-- `02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/Flux 2 Klein 9B KV FP8 - Outpaint (Custom Ratio).json`
-- `02-Image-Editing/Multi-Image-Composition/Flux 2 Klein 9B - Image Composer to Image.json`
-- `02-Image-Editing/Multi-Image-Composition/Flux 2 Klein 9B FP8 (Distilled) - Multi-Image Edit - 2 Images.json`
-- `02-Image-Editing/Multi-Image-Composition/Flux 2 Klein 9B KV FP8 - Image Blend.json`
-- `02-Image-Editing/Multi-Image-Composition/Flux 2 Klein 9B KV FP8 - Multi-Image Edit - 2 Images.json`
-- `02-Image-Editing/Multi-Image-Composition/Flux 2 Klein 9B KV FP8 - Multi-Image Edit - 3 Images.json`
-- `02-Image-Editing/Multi-Image-Composition/Flux 2 Klein 9B KV FP8 - Multi-Image Edit - 4 Images.json`
-- `02-Image-Editing/Single-Image-Edit/Flux 2 Klein 9B - One Image Edit V1.json`
-- `02-Image-Editing/Single-Image-Edit/Flux 2 Klein 9B - One Image Edit V2 + Notify and Switch.json`
-- `02-Image-Editing/Single-Image-Edit/Flux 2 Klein 9B - One Image Edit V3 + Keep Filename + Save to Dated Folder.json`
-- `02-Image-Editing/Single-Image-Edit/Flux 2 Klein 9B - One Image, Many Edits.json`
-- `02-Image-Editing/Single-Image-Edit/Flux 2 Klein 9B - One Image, Prompts from List.json`
-- `02-Image-Editing/Single-Image-Edit/Flux 2 Klein 9B FP8 (Distilled) - One Image Edit.json`
-- `02-Image-Editing/Single-Image-Edit/Flux 2 Klein 9B INT8 - One Image Edit.json`
-- `02-Image-Editing/Single-Image-Edit/Flux 2 Klein 9B KV FP8 - One Image Edit (Custom Ratio).json`
-- `02-Image-Editing/Single-Image-Edit/Flux 2 Klein 9B KV FP8 - One Image Edit (Same Ratio).json`
-- `02-Image-Editing/Sketch-and-3D-to-Image/Flux 2 Klein 9B - 3D Model to Image (Ep33).json`
-- `02-Image-Editing/Sketch-and-3D-to-Image/Flux 2 Klein 9B - 3D Model to Image - Keep the Angle (Ep33).json`
-- `02-Image-Editing/Sketch-and-3D-to-Image/Flux 2 Klein 9B - 3D Model to Image - Keep the Angle (Ep34).json`
-- `02-Image-Editing/Sketch-and-3D-to-Image/Flux 2 Klein 9B - 3D Model to Image.json`
-- `02-Image-Editing/Sketch-and-3D-to-Image/Flux 2 Klein 9B - 3D Scene Builder to Image.json`
-- `07-Batch-and-Automation/Control-Logic-and-Math/Flux 2 Klein 9B - One Control Panel for the Whole Workflow.json`
-- `07-Batch-and-Automation/Control-Logic-and-Math/Flux 2 Klein 9B - One Workflow, Two Jobs.json`
-- `07-Batch-and-Automation/Control-Logic-and-Math/Flux 2 Klein 9B - Set and Get - No Long Wires.json`
-- `07-Batch-and-Automation/Control-Logic-and-Math/Flux 2 Klein 9B - Style Presets from a Dropdown.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Flux 2 Klein 9B + Qwen3-VL - AI Writes an Edit for Every Image.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Flux 2 Klein 9B + Qwen3-VL - Re-imagine All Images in a Folder in Another Style.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Flux 2 Klein 9B - Before and After Grid for All Images in a Folder.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Flux 2 Klein 9B - Coloring Pages from All Images in a Folder.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Flux 2 Klein 9B - Do a Big Image Folder in Parts.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Flux 2 Klein 9B - Edit All Images in a Folder with One Prompt.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Flux 2 Klein 9B - Edit Each Image with Its Own Prompt.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Flux 2 Klein 9B - Edit Images from Folder (Simple).json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Flux 2 Klein 9B - Fix the Caption Text Files, Then Make the Images Again.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Flux 2 Klein 9B - Make All Images in a Folder Wide (Outpaint).json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Flux 2 Klein 9B - One Image per Text File.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Flux 2 Klein 9B - Product Photos from All Images in a Folder.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Flux 2 Klein 9B - Re-create Old Images from Their Prompts.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Flux 2 Klein 9B - Restore and Colorize Old Photos in a Folder.json`
-- `07-Batch-and-Automation/Loops/1. Flux 2 Klein 9B - Loop Basics - Four Versions of One Prompt.json`
-- `07-Batch-and-Automation/Loops/2. Flux 2 Klein 9B - Loop - Build Up an Image Step by Step.json`
-- `07-Batch-and-Automation/Loops/4. Flux 2 Klein 9B - Loop - Comic Strip with the Same Character.json`
-- `08-Testing-and-Comparison/Flux 2 Klein 9B - Draft First, Then Finish (Preview Gate).json`
-- `08-Testing-and-Comparison/Flux 2 Klein 9B - XY Plot - Steps and Samplers.json`
-- `08-Testing-and-Comparison/Flux 2 Klein 9B - XY Plot - Styles and Subjects.json`
-- `90-Docs-and-Resources/Learning-and-Node-Demos/Flux 2 Klein 9B FP8 - Multi-Step Workflow Example.json`
-- `91-Review-Version-Conflicts/Ep11 - Flux 2 Klein 9B FP8 (Distilled) - One Image Edit with Paint Pixaroma Node (Pixaroma original).json`
-- `91-Review-Version-Conflicts/Ep16 - Flux 2 Klein 9B - Image to Prompt to Image (Qwen 3.5) (Pixaroma original).json`
-- `91-Review-Version-Conflicts/Ep16 - Flux 2 Klein 9B - Text to Image + Qwen 3.5 Prompt Enhancer (Pixaroma original).json`
-
-### FLUX.3 Klein (19)
-- `01-Image-Generation/Design-Typography-and-Transparent/Flux 3 Klein - Text in Images.json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Flux 3 Klein - Image to Prompt to Image.json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Flux 3 Klein - Text to Image + Prompt Upsampler.json`
-- `01-Image-Generation/Text-to-Image/Flux 3 Klein - Layout with Boxes.json`
-- `01-Image-Generation/Text-to-Image/Flux 3 Klein - Text to Image + Z-Image Realism Pass.json`
-- `01-Image-Generation/Text-to-Image/Flux 3 Klein - Text to Image.json`
-- `02-Image-Editing/Character-Outfit-and-Pose/Flux 3 Klein - Character Sheet.json`
-- `02-Image-Editing/Character-Outfit-and-Pose/Flux 3 Klein - Outfit Change.json`
-- `02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/Flux 3 Klein - Edit inside a Box.json`
-- `02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/Flux 3 Klein - Outpaint.json`
-- `02-Image-Editing/Multi-Image-Composition/Flux 3 Klein - Character in a Scene.json`
-- `02-Image-Editing/Multi-Image-Composition/Flux 3 Klein - Group Photo.json`
-- `02-Image-Editing/Multi-Image-Composition/Flux 3 Klein - Logo on a Product.json`
-- `02-Image-Editing/Multi-Image-Composition/Flux 3 Klein - Product Ad.json`
-- `02-Image-Editing/Single-Image-Edit/Flux 3 Klein - Edit Text in a Picture.json`
-- `02-Image-Editing/Single-Image-Edit/Flux 3 Klein - One Image Edit.json`
-- `02-Image-Editing/Single-Image-Edit/Flux 3 Klein - Relight and Seasons.json`
-- `02-Image-Editing/Single-Image-Edit/Flux 3 Klein - Restore and Colorize.json`
-- `02-Image-Editing/Single-Image-Edit/Flux 3 Klein - Restyle.json`
-
-### Fish S2 (3)
-- `05-Audio/Speech-and-Voice-Cloning/Fish S2 - Multi-Speaker Dialogue TTS.json`
-- `05-Audio/Speech-and-Voice-Cloning/Fish S2 - Text to Speech.json`
-- `05-Audio/Speech-and-Voice-Cloning/Fish S2 - Voice Clone TTS.json`
-
-### Fluxmania (Nunchaku) (1)
-- `03-Image-Enhancement/Upscaling/4 Nunchaku - Fluxmania - Tiled Diffusion Upscaler.json`
-
-### Gemma 4 (LLM) (5)
-- `10-LLM-and-Prompt-Tools/Gemma 4 - Audio to Text.json`
-- `10-LLM-and-Prompt-Tools/Gemma 4 - Image to Prompt.json`
-- `10-LLM-and-Prompt-Tools/Gemma 4 - Prompt Enhancer.json`
-- `10-LLM-and-Prompt-Tools/Gemma 4 - Video to Description.json`
-- `10-LLM-and-Prompt-Tools/Gemma 4 - Video to Prompt.json`
-
-### Krea 2 (31)
-- `01-Image-Generation/LLM-Prompt-Assisted/Krea 2 - Image to Prompt to Image (Ep31 AI Prompt Node).json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Krea 2 - Image to Prompt to Image.json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Krea 2 - Text to Image + AI Prompt Enhancer (Ep31).json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Krea 2 - Text to Image + Extra Pass + Prompt Enhancer (Uncensored).json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Krea 2 - Text to Image + Extra Pass + Prompt Enhancer.json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Krea 2 - Text to Image + Prompt Enhancer (Ep28).json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Krea 2 - Text to Image + Prompt Enhancer (Uncensored).json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Krea 2 - Text to Image + Prompt Enhancer.json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Krea 2 INT8 - Image to Prompt to Image.json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Krea 2 INT8 - Text to Image + Extra Pass + Image to Prompt.json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Krea 2 INT8 - Text to Image + Extra Pass + Prompt Enhancer.json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Krea 2 INT8 - Text to Image + Prompt Enhancer.json`
-- `01-Image-Generation/Text-to-Image/Krea 2 - Text to Image (Ep28).json`
-- `01-Image-Generation/Text-to-Image/Krea 2 - Text to Image + Extra Pass + LoRA.json`
-- `01-Image-Generation/Text-to-Image/Krea 2 - Text to Image + Extra Pass.json`
-- `01-Image-Generation/Text-to-Image/Krea 2 - Text to Image - 2K Hi-Res + Prompt Enhancer (Uncensored).json`
-- `01-Image-Generation/Text-to-Image/Krea 2 - Text to Image - 2K Hi-Res + Prompt Enhancer.json`
-- `01-Image-Generation/Text-to-Image/Krea 2 - Text to Image - Simple + LoRA.json`
-- `01-Image-Generation/Text-to-Image/Krea 2 - Text to Image - Simple - Low VRAM.json`
-- `01-Image-Generation/Text-to-Image/Krea 2 - Text to Image - Simple.json`
-- `01-Image-Generation/Text-to-Image/Krea 2 INT8 - Text to Image + Extra Pass + LoRA.json`
-- `01-Image-Generation/Text-to-Image/Krea 2 INT8 - Text to Image + Extra Pass.json`
-- `01-Image-Generation/Text-to-Image/Krea 2 INT8 - Text to Image - Simple + LoRA.json`
-- `01-Image-Generation/Text-to-Image/Krea 2 INT8 - Text to Image - Simple.json`
-- `02-Image-Editing/Character-Outfit-and-Pose/Krea 2 - Outfit Change + Outfit LoRA.json`
-- `02-Image-Editing/Character-Outfit-and-Pose/Krea 2 - Outfit Transfer v2.json`
-- `02-Image-Editing/Single-Image-Edit/Krea 2 - Edit LoRA - Character and Background.json`
-- `02-Image-Editing/Single-Image-Edit/Krea 2 - Edit LoRA - Custom Ratio.json`
-- `02-Image-Editing/Single-Image-Edit/Krea 2 - Edit LoRA.json`
-- `08-Testing-and-Comparison/Krea 2 INT8 - LoRA XY Plot.json`
-- `90-Docs-and-Resources/LoRA-Training/Krea 2 - LoRA Converter.json`
-
-### Krea 2 + MiniMax H3 (pipeline) (12)
-- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Fixed - Storyboard Prompts.json`
-- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Fixed.json`
-- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 HiRes 16 Scenes - Heroine.json`
-- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 HiRes 3 Scenes.json`
-- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 HiRes Full 16 Scenes.json`
-- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Overnight.json`
-- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Test Scene 1.json`
-- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Trial 5 Scenes - MCP Run.json`
-- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - H3 0.7 Trial 5 Scenes.json`
-- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - No Review v2.json`
-- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3) - No Review.json`
-- `09-Movie/Short Film Director Pipeline (Krea + MiniMax H3).json`
-
-### LTX-2 (4)
-- `04-Video/Image-to-Video/LTX-2 - Image to Video with Audio.json`
-- `04-Video/Image-to-Video/LTX-2 - Image to Video with Custom Audio.json`
-- `04-Video/Reference-and-Audio-Sync/LTX-2 - Video to Video - Voice Dubbing - Compact.json`
-- `04-Video/Reference-and-Audio-Sync/LTX-2 - Video to Video - Voice Dubbing.json`
-
-### LaMa (1)
-- `02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/LaMa - Object Remover.json`
-
-### LayerStyle (1)
-- `03-Image-Enhancement/Filters-and-Color-Grading/LayerStyle - Image Filters and Color Adjustments.json`
-
-### Learning / node demos (3)
-- `90-Docs-and-Resources/Learning-and-Node-Demos/Nodes Explained 01 - Models Explained - Finished (Z-Image Turbo).json`
-- `90-Docs-and-Resources/Learning-and-Node-Demos/Nodes Explained 01 - Models Explained - Practice (Z-Image Turbo).json`
-- `90-Docs-and-Resources/Learning-and-Node-Demos/Pixaroma - Help and Resources.json`
-
-### Lens (1)
-- `01-Image-Generation/Text-to-Image/Lens - Text to Image.json`
-
-### Ming Image 0.1 (17)
-- `01-Image-Generation/Design-Typography-and-Transparent/Ming Image 0.1 - 3D Lettering.json`
-- `01-Image-Generation/Design-Typography-and-Transparent/Ming Image 0.1 - App and Website Screens.json`
-- `01-Image-Generation/Design-Typography-and-Transparent/Ming Image 0.1 - Event Poster.json`
-- `01-Image-Generation/Design-Typography-and-Transparent/Ming Image 0.1 - Game Screens and Icons.json`
-- `01-Image-Generation/Design-Typography-and-Transparent/Ming Image 0.1 - Infographic.json`
-- `01-Image-Generation/Design-Typography-and-Transparent/Ming Image 0.1 - Logo Design.json`
-- `01-Image-Generation/Design-Typography-and-Transparent/Ming Image 0.1 - Logo Variations.json`
-- `01-Image-Generation/Design-Typography-and-Transparent/Ming Image 0.1 - Social Media Post.json`
-- `01-Image-Generation/Design-Typography-and-Transparent/Ming Image 0.1 - Transparent PNG.json`
-- `01-Image-Generation/Design-Typography-and-Transparent/Ming Image 0.1 - YouTube Thumbnail.json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Ming Image 0.1 - Text to Image + Prompt Enhancer.json`
-- `01-Image-Generation/Text-to-Image/Ming Image 0.1 - Text to Image.json`
-- `02-Image-Editing/Multi-Image-Composition/Ming Image 0.1 - Product Ad from Two Pictures.json`
-- `02-Image-Editing/Single-Image-Edit/Ming Image 0.1 - One Image Edit.json`
-- `02-Image-Editing/Single-Image-Edit/Ming Image 0.1 - Social Media Pack from One Image.json`
-- `02-Image-Editing/Sketch-and-3D-to-Image/Ming Image 0.1 - Restyle a Design to 3D.json`
-- `02-Image-Editing/Sketch-and-3D-to-Image/Ming Image 0.1 - Sketch to Photo.json`
-
-### MiniMax H3 / FastH3 (23)
-- `01-Image-Generation/Text-to-Image/Minimax H3 - Text to Image (Single Frame).json`
-- `02-Image-Editing/Single-Image-Edit/Minimax H3 - One Image Edit (Single Frame).json`
-- `04-Video/Image-to-Video/Minimax FastH3 - Image to Video - First + Last Frame (8-Step).json`
-- `04-Video/Image-to-Video/Minimax FastH3 - Image to Video - First Frame (8-Step).json`
-- `04-Video/Image-to-Video/Minimax H3 - Image to Video - First + Last Frame + Speed LoRA.json`
-- `04-Video/Image-to-Video/Minimax H3 - Image to Video - First + Last Frame.json`
-- `04-Video/Image-to-Video/Minimax H3 - Image to Video - First Frame + Speed LoRA.json`
-- `04-Video/Image-to-Video/Minimax H3 - Image to Video - First Frame.json`
-- `04-Video/Image-to-Video/Minimax H3 - Image to Video - Last Frame.json`
-- `04-Video/Reference-and-Audio-Sync/Minimax H3 - Reference Image + Audio Sync - Sing + Speed LoRA.json`
-- `04-Video/Reference-and-Audio-Sync/Minimax H3 - Reference Image + Audio Sync - Sing.json`
-- `04-Video/Reference-and-Audio-Sync/Minimax H3 - Reference Image + Audio Sync - Speak + Speed LoRA.json`
-- `04-Video/Reference-and-Audio-Sync/Minimax H3 - Reference Image + Audio Sync - Speak.json`
-- `04-Video/Reference-and-Audio-Sync/Minimax H3 - Reference to Video + Audio - Character Swap.json`
-- `04-Video/Reference-and-Audio-Sync/Minimax H3 - Reference to Video - 2 Images.json`
-- `04-Video/Reference-and-Audio-Sync/Minimax H3 - Reference to Video - 3 Images.json`
-- `04-Video/Text-to-Video/Minimax FastH3 - Text to Video (8-Step).json`
-- `04-Video/Text-to-Video/Minimax H3 - Text to Video + Speed LoRA.json`
-- `04-Video/Text-to-Video/Minimax H3 - Text to Video - Low VRAM 8GB.json`
-- `04-Video/Text-to-Video/Minimax H3 - Text to Video - Secret Sauce 4K Direct Output.json`
-- `04-Video/Text-to-Video/Minimax H3 - Text to Video.json`
-- `10-LLM-and-Prompt-Tools/Minimax H3 - First Frame to Video Prompt Generator.json`
-- `10-LLM-and-Prompt-Tools/Minimax H3 - Text to Video Prompt Generator.json`
-
-### MiniMax Music 3 (2)
-- `05-Audio/Music-Generation/Minimax Music 3 - Text to Music.json`
-- `10-LLM-and-Prompt-Tools/Minimax Music 3 - Caption and Lyrics Generator.json`
-
-### No AI model (utility) (23)
-- `02-Image-Editing/Background-Removal/Utility - Remove Background from Transparent Items.json`
-- `02-Image-Editing/Background-Removal/Utility - Remove Background.json`
-- `02-Image-Editing/Compositing-and-Image-Tools/Utility - Image Blend.json`
-- `02-Image-Editing/Compositing-and-Image-Tools/Utility - Image Combiner for Transparent Items.json`
-- `02-Image-Editing/Compositing-and-Image-Tools/Utility - Image Combiner.json`
-- `02-Image-Editing/Compositing-and-Image-Tools/Utility - Image Scale.json`
-- `02-Image-Editing/Compositing-and-Image-Tools/Utility - Image Stitch.json`
-- `02-Image-Editing/Compositing-and-Image-Tools/Utility - Image Transformation.json`
-- `03-Image-Enhancement/Filters-and-Color-Grading/Utility - Image Filters Example.json`
-- `03-Image-Enhancement/Upscaling/1 Universal - Upscale Simple (No Model).json`
-- `04-Video/Audio-Reactive/Utility - Images React to Music (Audio Reactive).json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Utility - Add Your Logo to All Images in a Folder.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Utility - Collect the Prompts from All Images in a Folder.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Utility - Contact Sheet of All Images in a Folder.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Utility - Load Images from Folder + Crop.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Utility - Math - Scale All Images in a Folder by Percent.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Utility - Rename and Convert All Images in a Folder.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Utility - Resize All Images in a Folder.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Utility - Slideshow Video from All Images in a Folder.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Utility - Social Media Sizes for All Images in a Folder.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Utility - Watermark All Images in a Folder.json`
-- `07-Batch-and-Automation/Loops/3. Utility - Loop - Photo Strip from All Images in a Folder.json`
-- `08-Testing-and-Comparison/Utility - Image Compare (Side by Side).json`
-
-### Paid API nodes (3)
-- `03-Image-Enhancement/Upscaling/6 PAID API (51 Credits) - Nano Banana Pro - Upscale.json`
-- `03-Image-Enhancement/Upscaling/7 PAID API (53 Credits) - Recraft - Creative Upscale.json`
-- `03-Image-Enhancement/Upscaling/8 PAID API (8.5 Credits) - SeeDream 4.5 - Upscale.json`
-
-### Pixaroma nodes only (no AI model) (26)
-- `01-Image-Generation/Design-Typography-and-Transparent/Pixaroma Nodes - Text Overlay.json`
-- `01-Image-Generation/Prompt-Batching-and-Variations/Pixaroma Nodes - Prompt Multi - From List.json`
-- `01-Image-Generation/Prompt-Batching-and-Variations/Pixaroma Nodes - Prompt Multi - Queue Text.json`
-- `01-Image-Generation/Prompt-Batching-and-Variations/Pixaroma Nodes - Prompt Pack - Line.json`
-- `01-Image-Generation/Prompt-Batching-and-Variations/Pixaroma Nodes - Prompt Pack - Paragraph.json`
-- `01-Image-Generation/Prompt-Batching-and-Variations/Pixaroma Nodes - Prompt Stack.json`
-- `02-Image-Editing/Compositing-and-Image-Tools/Pixaroma Nodes - 3D Builder (Ep11).json`
-- `02-Image-Editing/Compositing-and-Image-Tools/Pixaroma Nodes - 3D Builder (Ep13).json`
-- `02-Image-Editing/Compositing-and-Image-Tools/Pixaroma Nodes - Combine - Join Two Images.json`
-- `02-Image-Editing/Compositing-and-Image-Tools/Pixaroma Nodes - Crop (Ep11).json`
-- `02-Image-Editing/Compositing-and-Image-Tools/Pixaroma Nodes - Crop (Ep13).json`
-- `02-Image-Editing/Compositing-and-Image-Tools/Pixaroma Nodes - Image Composer (Ep11).json`
-- `02-Image-Editing/Compositing-and-Image-Tools/Pixaroma Nodes - Image Composer (Ep13).json`
-- `02-Image-Editing/Compositing-and-Image-Tools/Pixaroma Nodes - Paint (Ep11).json`
-- `02-Image-Editing/Compositing-and-Image-Tools/Pixaroma Nodes - Paint (Ep13).json`
-- `07-Batch-and-Automation/Control-Logic-and-Math/Pixaroma Nodes - Switch Node.json`
-- `07-Batch-and-Automation/Loops/Pixaroma Nodes - Loop - Build a List.json`
-- `07-Batch-and-Automation/Loops/Pixaroma Nodes - Loop - Build an Image Batch.json`
-- `07-Batch-and-Automation/Loops/Pixaroma Nodes - Loop - Carry Two Values.json`
-- `08-Testing-and-Comparison/Pixaroma Nodes - Group Compare (ComfyUI vs Pixaroma).json`
-- `08-Testing-and-Comparison/Pixaroma Nodes - Image Compare.json`
-- `10-LLM-and-Prompt-Tools/Pixaroma Nodes - Read Prompt From Image Metadata.json`
-- `90-Docs-and-Resources/Learning-and-Node-Demos/Pixaroma Nodes - Change Node Color.json`
-- `90-Docs-and-Resources/Learning-and-Node-Demos/Pixaroma Nodes - Labels (Ep11).json`
-- `90-Docs-and-Resources/Learning-and-Node-Demos/Pixaroma Nodes - Labels (Ep13).json`
-- `90-Docs-and-Resources/Learning-and-Node-Demos/Pixaroma Nodes - Note.json`
-
-### Qwen 3.5 (LLM) (2)
-- `10-LLM-and-Prompt-Tools/Qwen 3.5 - Image to Prompt.json`
-- `10-LLM-and-Prompt-Tools/Qwen 3.5 - Text to Prompt.json`
-
-### Qwen Image (Nunchaku) (1)
-- `01-Image-Generation/Text-to-Image/Nunchaku - Qwen Image Lightning - Text to Image.json`
-
-### Qwen Image 2.1 (27)
-- `01-Image-Generation/Design-Typography-and-Transparent/Qwen Image 2.1 - Transparent PNG.json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Qwen Image 2.1 - Image to Prompt to Image.json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Qwen Image 2.1 - Text to Image + Prompt Enhancer.json`
-- `01-Image-Generation/Text-to-Image/Qwen Image 2.1 - Text to Image - Low VRAM.json`
-- `01-Image-Generation/Text-to-Image/Qwen Image 2.1 - Text to Image - Turbo.json`
-- `01-Image-Generation/Text-to-Image/Qwen Image 2.1 - Text to Image.json`
-- `02-Image-Editing/Background-Removal/Qwen Image 2.1 - Remove Background.json`
-- `02-Image-Editing/Character-Outfit-and-Pose/Qwen Image 2.1 - Character Sheet.json`
-- `02-Image-Editing/Character-Outfit-and-Pose/Qwen Image 2.1 - Outfit Change - Turbo.json`
-- `02-Image-Editing/Character-Outfit-and-Pose/Qwen Image 2.1 - Outfit Change.json`
-- `02-Image-Editing/Character-Outfit-and-Pose/Qwen Image 2.1 - Pose from a Picture.json`
-- `02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/Qwen Image 2.1 - Inpaint.json`
-- `02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/Qwen Image 2.1 - Outpaint.json`
-- `02-Image-Editing/Multi-Image-Composition/Qwen Image 2.1 - Character in a Scene.json`
-- `02-Image-Editing/Multi-Image-Composition/Qwen Image 2.1 - Logo on a Product.json`
-- `02-Image-Editing/Multi-Image-Composition/Qwen Image 2.1 - Multi-Image Edit - 2 Images + Prompt Enhancer.json`
-- `02-Image-Editing/Multi-Image-Composition/Qwen Image 2.1 - Multi-Image Edit - 3 Images.json`
-- `02-Image-Editing/Multi-Image-Composition/Qwen Image 2.1 - Multi-Image Edit - 4 Images.json`
-- `02-Image-Editing/Multi-Image-Composition/Qwen Image 2.1 - Multi-Image Edit - Group Photo from 6 Images.json`
-- `02-Image-Editing/Single-Image-Edit/Qwen Image 2.1 - One Image Edit + Consistency LoRA.json`
-- `02-Image-Editing/Single-Image-Edit/Qwen Image 2.1 - One Image Edit + Prompt Enhancer.json`
-- `02-Image-Editing/Single-Image-Edit/Qwen Image 2.1 - One Image Edit - Low VRAM.json`
-- `02-Image-Editing/Single-Image-Edit/Qwen Image 2.1 - One Image Edit - Turbo.json`
-- `02-Image-Editing/Single-Image-Edit/Qwen Image 2.1 - One Image Edit.json`
-- `02-Image-Editing/Sketch-and-3D-to-Image/Qwen Image 2.1 - Sketch to Image + Consistency LoRA.json`
-- `02-Image-Editing/Sketch-and-3D-to-Image/Qwen Image 2.1 - Sketch to Image.json`
-- `10-LLM-and-Prompt-Tools/Qwen Image 2.1 - Image to Prompt (Qwen3-VL 8B).json`
-
-### Qwen3-TTS (8)
-- `05-Audio/Speech-and-Voice-Cloning/Qwen3-TTS - Custom Voice.json`
-- `05-Audio/Speech-and-Voice-Cloning/Qwen3-TTS - Voice Clone + Load Saved Voice.json`
-- `05-Audio/Speech-and-Voice-Cloning/Qwen3-TTS - Voice Clone + Save Voice.json`
-- `05-Audio/Speech-and-Voice-Cloning/Qwen3-TTS - Voice Clone + Saved Multi Voice + Dialogue.json`
-- `05-Audio/Speech-and-Voice-Cloning/Qwen3-TTS - Voice Clone.json`
-- `05-Audio/Speech-and-Voice-Cloning/Qwen3-TTS - Voice Design + Dialogue.json`
-- `05-Audio/Speech-and-Voice-Cloning/Qwen3-TTS - Voice Design + Save Voice.json`
-- `05-Audio/Speech-and-Voice-Cloning/Qwen3-TTS - Voice Design.json`
-
-### Qwen3-VL (LLM) (6)
-- `07-Batch-and-Automation/Folder-Batch-Processing/Qwen3-VL - Caption All Images in a Folder for LoRA Training.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Qwen3-VL - Keep Only the Images the AI Says Yes To.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Qwen3-VL - Rename Every Image by What Is in It.json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/Qwen3-VL - Sort All Images in a Folder into Subfolders by What Is in Them.json`
-- `10-LLM-and-Prompt-Tools/Qwen3-VL - Prompt from Image.json`
-- `10-LLM-and-Prompt-Tools/QwenVL 3 - Image and Text to Prompt (GGUF).json`
-
-### SAM3 (1)
-- `02-Image-Editing/Background-Removal/SAM3 - Remove Background (Segment + Crop Object).json`
-
-### SD 1.5 (4)
-- `01-Image-Generation/ControlNet-Guided/SD1.5 Juggernaut Reborn - Text to Image + ControlNet Canny.json`
-- `01-Image-Generation/Text-to-Image/SD1.5 Juggernaut Reborn - Text to Image + LoRA.json`
-- `01-Image-Generation/Text-to-Image/SD1.5 Juggernaut Reborn - Text to Image.json`
-- `02-Image-Editing/Single-Image-Edit/SD1.5 Juggernaut Reborn - Image to Image.json`
-
-### SAM3D Body (3)
-- `06-3D-Generation/Image-to-3D/SAM3D Body - 3D Viewer.json`
-- `06-3D-Generation/Image-to-3D/SAM3D Body - Utility.json`
-- `06-3D-Generation/Image-to-3D/SAM3D Body - Video to 3D Body - Multi (R01_SC008).json`
-
-### SeedVR2 (4)
-- `03-Image-Enhancement/Upscaling/5 SeedVR2 - Upscale.json`
-- `04-Video/Video-Upscaling/SeedVR2 - HD Video Upscale.json`
-- `04-Video/Video-Upscaling/SeedVR2 - Video Upscale - API Run.json`
-- `04-Video/Video-Upscaling/SeedVR2 - Video Upscale.json`
-
-### Stable Audio 3 (4)
-- `05-Audio/Music-Generation/Stable Audio 3 - Image to Music + Gemma 4.json`
-- `05-Audio/Music-Generation/Stable Audio 3 - Text to Music + Gemma 4 Prompt Enhancer.json`
-- `05-Audio/Music-Generation/Stable Audio 3 - Text to Music.json`
-- `05-Audio/Music-Generation/Stable Audio 3 - Text to Sound Effects + Gemma 4.json`
-
-### Trellis 2 / Pixal3D (10)
-- `06-3D-Generation/Image-to-3D/Pixal3D - Image to 3D Model - HQ + PBR Textures.json`
-- `06-3D-Generation/Image-to-3D/Pixal3D - Image to 3D Model - Low VRAM.json`
-- `06-3D-Generation/Image-to-3D/Trellis 2 - Image to 3D Model - HQ + PBR Textures.json`
-- `06-3D-Generation/Image-to-3D/Trellis 2 - Image to 3D Model - High VRAM.json`
-- `06-3D-Generation/Image-to-3D/Trellis 2 - Image to 3D Model - Low VRAM.json`
-- `06-3D-Generation/Multi-View-to-3D/Pixal3D Multi-View - 1 Shape Only (No Colours) - HQ.json`
-- `06-3D-Generation/Multi-View-to-3D/Pixal3D Multi-View - 1 Shape Only (No Colours).json`
-- `06-3D-Generation/Multi-View-to-3D/Pixal3D Multi-View - 2 Model + Colours.json`
-- `06-3D-Generation/Multi-View-to-3D/Pixal3D Multi-View - 3 Model + PBR Textures - LQ.json`
-- `06-3D-Generation/Multi-View-to-3D/Pixal3D Multi-View - 4 Model + PBR Textures - HQ.json`
-
-### Upscale model (NMKD-Siax) (2)
-- `03-Image-Enhancement/Upscaling/2 Universal - Upscale with 4x Model (NMKD-Siax).json`
-- `07-Batch-and-Automation/Folder-Batch-Processing/NMKD-Siax 4x - Upscale All Images in a Folder.json`
-
-### Wan 2.1 / 2.2 (24)
-- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL - Image to Video - Multi Character (9-16 Ratio Only).json`
-- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL - Image to Video - Single Character.json`
-- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - Character Animation from Driving Video - Compact.json`
-- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - Character Animation from Driving Video - Long.json`
-- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - Character Replacement.json`
-- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - GAP - Hi Woman.json`
-- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - GAP - Video 2.json`
-- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - GAP - Video 3 Man.json`
-- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - GAP - Video 4 Man Closeup.json`
-- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - GAP - Video 5 Man Head.json`
-- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - GAP - Video 6 Man Head Fix.json`
-- `04-Video/Character-Animation-Video-to-Video/Wan 2.1 SCAIL 2 - GAP Multi Character - Long.json`
-- `04-Video/Character-Animation-Video-to-Video/Wan 2.2 Animate - Replace Character and Background - 16FPS.json`
-- `04-Video/Character-Animation-Video-to-Video/Wan 2.2 Animate - Replace Character and Background - 24FPS HD.json`
-- `04-Video/Character-Animation-Video-to-Video/Wan 2.2 Animate - Replace Character and Background - 24FPS.json`
-- `04-Video/Character-Animation-Video-to-Video/Wan 2.2 Animate - Replace Only Character - 16FPS.json`
-- `04-Video/Character-Animation-Video-to-Video/Wan 2.2 Animate - Replace Only Character - 24FPS.json`
-- `04-Video/Image-to-Video/Wan 2.2 - Image to Video - GGUF Lightx2v 4-Step + LoRA.json`
-- `04-Video/Image-to-Video/Wan 2.2 - Image to Video - GGUF Lightx2v 4-Step.json`
-- `04-Video/Reference-and-Audio-Sync/Wan 2.1 InfiniteTalk - Talking Video - Easy Extend 3 to 34 Seconds.json`
-- `04-Video/Reference-and-Audio-Sync/Wan 2.1 InfiniteTalk - Talking Video - Manual Extend 3 to 34 Seconds.json`
-- `04-Video/Reference-and-Audio-Sync/Wan 2.1 InfiniteTalk - Talking Video from Audio - 10-11 Seconds.json`
-- `04-Video/Reference-and-Audio-Sync/Wan 2.1 InfiniteTalk - Talking Video from Audio - 4-6 Seconds.json`
-- `04-Video/Reference-and-Audio-Sync/Wan 2.1 InfiniteTalk - Talking Video from Audio - 7-9 Seconds.json`
-
-### Z-Image Turbo (20)
-- `01-Image-Generation/ControlNet-Guided/Z-Image Turbo - Text to Image - FP8 AIO + ControlNet Union.json`
-- `01-Image-Generation/Design-Typography-and-Transparent/Z-Image Turbo - Text to Image + Text Overlay.json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Nunchaku - Z-Image Turbo - Text to Image + QwenVL GGUF Prompt Enhancer.json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Z-Image Turbo - Image to Prompt to Image (Gemma 4).json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Z-Image Turbo - Text to Image + Gemma 4 Prompt Enhancer + Find and Replace.json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Z-Image Turbo - Text to Image + Gemma 4 Prompt Enhancer.json`
-- `01-Image-Generation/LLM-Prompt-Assisted/Z-Image Turbo INT8 - Text to Image + AI Prompt Enhancer.json`
-- `01-Image-Generation/Prompt-Batching-and-Variations/Z-Image Turbo - Prompt Multi - Queue Text.json`
-- `01-Image-Generation/Prompt-Batching-and-Variations/Z-Image Turbo - Prompt Pack - Line.json`
-- `01-Image-Generation/Prompt-Batching-and-Variations/Z-Image Turbo - Prompt Pack - Paragraph.json`
-- `01-Image-Generation/Prompt-Batching-and-Variations/Z-Image Turbo - Prompt Stack.json`
-- `01-Image-Generation/Text-to-Image/Nunchaku - Z-Image Turbo - Text to Image.json`
-- `01-Image-Generation/Text-to-Image/Z-Image Turbo - Text to Image - FP8 (Ep18).json`
-- `01-Image-Generation/Text-to-Image/Z-Image Turbo - Text to Image - FP8 AIO + LoRA.json`
-- `01-Image-Generation/Text-to-Image/Z-Image Turbo - Text to Image - FP8 AIO Checkpoint.json`
-- `01-Image-Generation/Text-to-Image/Z-Image Turbo - Text to Image - FP8.json`
-- `01-Image-Generation/Text-to-Image/Z-Image Turbo - Text to Image - GGUF.json`
-- `01-Image-Generation/Text-to-Image/Z-Image Turbo INT8 - Text to Image.json`
-- `03-Image-Enhancement/Upscaling/3 Z-Image Turbo - Tiled Diffusion Upscaler.json`
-- `08-Testing-and-Comparison/Z-Image Turbo - XY Plot.json`
+Plain list of all 461 workflows by folder. The [README](README.md) has descriptions, models and required custom nodes for each one.
+
+Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-image-2.1-one-image-edit-low-vram.json`). `-api` = API format; `epNN` = tutorial episode the variant came from.
+
+## 01-Image-Generation/ControlNet-Guided
+
+- [sd15-juggernaut-reborn-txt2img-controlnet-canny](01-Image-Generation/ControlNet-Guided/sd15-juggernaut-reborn-txt2img-controlnet-canny.json)
+- [z-image-turbo-txt2img-fp8-aio-controlnet-union](01-Image-Generation/ControlNet-Guided/z-image-turbo-txt2img-fp8-aio-controlnet-union.json)
+
+## 01-Image-Generation/Design-Typography-and-Transparent
+
+- [flux-3-klein-text-in-images](01-Image-Generation/Design-Typography-and-Transparent/flux-3-klein-text-in-images.json)
+- [ming-image-0.1-3d-lettering](01-Image-Generation/Design-Typography-and-Transparent/ming-image-0.1-3d-lettering.json)
+- [ming-image-0.1-app-and-website-screens](01-Image-Generation/Design-Typography-and-Transparent/ming-image-0.1-app-and-website-screens.json)
+- [ming-image-0.1-event-poster](01-Image-Generation/Design-Typography-and-Transparent/ming-image-0.1-event-poster.json)
+- [ming-image-0.1-game-screens-and-icons](01-Image-Generation/Design-Typography-and-Transparent/ming-image-0.1-game-screens-and-icons.json)
+- [ming-image-0.1-infographic](01-Image-Generation/Design-Typography-and-Transparent/ming-image-0.1-infographic.json)
+- [ming-image-0.1-logo-design](01-Image-Generation/Design-Typography-and-Transparent/ming-image-0.1-logo-design.json)
+- [ming-image-0.1-logo-variations](01-Image-Generation/Design-Typography-and-Transparent/ming-image-0.1-logo-variations.json)
+- [ming-image-0.1-social-media-post](01-Image-Generation/Design-Typography-and-Transparent/ming-image-0.1-social-media-post.json)
+- [ming-image-0.1-transparent-png](01-Image-Generation/Design-Typography-and-Transparent/ming-image-0.1-transparent-png.json)
+- [ming-image-0.1-youtube-thumbnail](01-Image-Generation/Design-Typography-and-Transparent/ming-image-0.1-youtube-thumbnail.json)
+- [pixaroma-nodes-text-overlay](01-Image-Generation/Design-Typography-and-Transparent/pixaroma-nodes-text-overlay.json)
+- [qwen-image-2.1-transparent-png](01-Image-Generation/Design-Typography-and-Transparent/qwen-image-2.1-transparent-png.json)
+- [z-image-turbo-txt2img-text-overlay](01-Image-Generation/Design-Typography-and-Transparent/z-image-turbo-txt2img-text-overlay.json)
+
+## 01-Image-Generation/LLM-Prompt-Assisted
+
+- [anima-base-v1.0-anime-txt2img-gemma-4-prompt-enhancer](01-Image-Generation/LLM-Prompt-Assisted/anima-base-v1.0-anime-txt2img-gemma-4-prompt-enhancer.json)
+- [boogu-image-txt2img-prompt-enhancer](01-Image-Generation/LLM-Prompt-Assisted/boogu-image-txt2img-prompt-enhancer.json)
+- [flux-2-klein-9b-image-to-prompt-to-image-qwen-3.5](01-Image-Generation/LLM-Prompt-Assisted/flux-2-klein-9b-image-to-prompt-to-image-qwen-3.5.json)
+- [flux-2-klein-9b-txt2img-qwen-3.5-prompt-enhancer](01-Image-Generation/LLM-Prompt-Assisted/flux-2-klein-9b-txt2img-qwen-3.5-prompt-enhancer.json)
+- [flux-3-klein-image-to-prompt-to-image](01-Image-Generation/LLM-Prompt-Assisted/flux-3-klein-image-to-prompt-to-image.json)
+- [flux-3-klein-txt2img-prompt-upsampler](01-Image-Generation/LLM-Prompt-Assisted/flux-3-klein-txt2img-prompt-upsampler.json)
+- [krea-2-image-to-prompt-to-image-ep31-ai-prompt-node](01-Image-Generation/LLM-Prompt-Assisted/krea-2-image-to-prompt-to-image-ep31-ai-prompt-node.json)
+- [krea-2-image-to-prompt-to-image](01-Image-Generation/LLM-Prompt-Assisted/krea-2-image-to-prompt-to-image.json)
+- [krea-2-int8-image-to-prompt-to-image](01-Image-Generation/LLM-Prompt-Assisted/krea-2-int8-image-to-prompt-to-image.json)
+- [krea-2-int8-txt2img-extra-pass-image-to-prompt](01-Image-Generation/LLM-Prompt-Assisted/krea-2-int8-txt2img-extra-pass-image-to-prompt.json)
+- [krea-2-int8-txt2img-extra-pass-prompt-enhancer](01-Image-Generation/LLM-Prompt-Assisted/krea-2-int8-txt2img-extra-pass-prompt-enhancer.json)
+- [krea-2-int8-txt2img-prompt-enhancer](01-Image-Generation/LLM-Prompt-Assisted/krea-2-int8-txt2img-prompt-enhancer.json)
+- [krea-2-txt2img-ai-prompt-enhancer-ep31](01-Image-Generation/LLM-Prompt-Assisted/krea-2-txt2img-ai-prompt-enhancer-ep31.json)
+- [krea-2-txt2img-extra-pass-prompt-enhancer-uncensored](01-Image-Generation/LLM-Prompt-Assisted/krea-2-txt2img-extra-pass-prompt-enhancer-uncensored.json)
+- [krea-2-txt2img-extra-pass-prompt-enhancer](01-Image-Generation/LLM-Prompt-Assisted/krea-2-txt2img-extra-pass-prompt-enhancer.json)
+- [krea-2-txt2img-prompt-enhancer-ep28](01-Image-Generation/LLM-Prompt-Assisted/krea-2-txt2img-prompt-enhancer-ep28.json)
+- [krea-2-txt2img-prompt-enhancer-uncensored](01-Image-Generation/LLM-Prompt-Assisted/krea-2-txt2img-prompt-enhancer-uncensored.json)
+- [krea-2-txt2img-prompt-enhancer](01-Image-Generation/LLM-Prompt-Assisted/krea-2-txt2img-prompt-enhancer.json)
+- [ming-image-0.1-txt2img-prompt-enhancer](01-Image-Generation/LLM-Prompt-Assisted/ming-image-0.1-txt2img-prompt-enhancer.json)
+- [nunchaku-z-image-turbo-txt2img-qwenvl-gguf-prompt-enhancer](01-Image-Generation/LLM-Prompt-Assisted/nunchaku-z-image-turbo-txt2img-qwenvl-gguf-prompt-enhancer.json)
+- [qwen-image-2.1-image-to-prompt-to-image](01-Image-Generation/LLM-Prompt-Assisted/qwen-image-2.1-image-to-prompt-to-image.json)
+- [qwen-image-2.1-txt2img-prompt-enhancer](01-Image-Generation/LLM-Prompt-Assisted/qwen-image-2.1-txt2img-prompt-enhancer.json)
+- [z-image-turbo-image-to-prompt-to-image-gemma-4](01-Image-Generation/LLM-Prompt-Assisted/z-image-turbo-image-to-prompt-to-image-gemma-4.json)
+- [z-image-turbo-int8-txt2img-ai-prompt-enhancer](01-Image-Generation/LLM-Prompt-Assisted/z-image-turbo-int8-txt2img-ai-prompt-enhancer.json)
+- [z-image-turbo-txt2img-gemma-4-prompt-enhancer-find-and-replace](01-Image-Generation/LLM-Prompt-Assisted/z-image-turbo-txt2img-gemma-4-prompt-enhancer-find-and-replace.json)
+- [z-image-turbo-txt2img-gemma-4-prompt-enhancer](01-Image-Generation/LLM-Prompt-Assisted/z-image-turbo-txt2img-gemma-4-prompt-enhancer.json)
+
+## 01-Image-Generation/Prompt-Batching-and-Variations
+
+- [flux-2-klein-9b-build-a-prompt-from-switches](01-Image-Generation/Prompt-Batching-and-Variations/flux-2-klein-9b-build-a-prompt-from-switches.json)
+- [flux-2-klein-9b-every-prompt-combination-with-brackets](01-Image-Generation/Prompt-Batching-and-Variations/flux-2-klein-9b-every-prompt-combination-with-brackets.json)
+- [flux-2-klein-9b-one-image-per-prompt](01-Image-Generation/Prompt-Batching-and-Variations/flux-2-klein-9b-one-image-per-prompt.json)
+- [flux-2-klein-9b-one-subject-in-many-styles](01-Image-Generation/Prompt-Batching-and-Variations/flux-2-klein-9b-one-subject-in-many-styles.json)
+- [flux-2-klein-9b-queue-a-list-of-prompts](01-Image-Generation/Prompt-Batching-and-Variations/flux-2-klein-9b-queue-a-list-of-prompts.json)
+- [flux-2-klein-9b-random-prompts-every-run](01-Image-Generation/Prompt-Batching-and-Variations/flux-2-klein-9b-random-prompts-every-run.json)
+- [flux-2-klein-9b-short-ideas-into-finished-images-qwen-3.5-ai-prompt](01-Image-Generation/Prompt-Batching-and-Variations/flux-2-klein-9b-short-ideas-into-finished-images-qwen-3.5-ai-prompt.json)
+- [flux-2-klein-9b-short-story-to-storyboard-qwen-3.5-ai-prompt](01-Image-Generation/Prompt-Batching-and-Variations/flux-2-klein-9b-short-story-to-storyboard-qwen-3.5-ai-prompt.json)
+- [pixaroma-nodes-prompt-multi-from-list](01-Image-Generation/Prompt-Batching-and-Variations/pixaroma-nodes-prompt-multi-from-list.json)
+- [pixaroma-nodes-prompt-multi-queue-text](01-Image-Generation/Prompt-Batching-and-Variations/pixaroma-nodes-prompt-multi-queue-text.json)
+- [pixaroma-nodes-prompt-pack-line](01-Image-Generation/Prompt-Batching-and-Variations/pixaroma-nodes-prompt-pack-line.json)
+- [pixaroma-nodes-prompt-pack-paragraph](01-Image-Generation/Prompt-Batching-and-Variations/pixaroma-nodes-prompt-pack-paragraph.json)
+- [pixaroma-nodes-prompt-stack](01-Image-Generation/Prompt-Batching-and-Variations/pixaroma-nodes-prompt-stack.json)
+- [z-image-turbo-prompt-multi-queue-text](01-Image-Generation/Prompt-Batching-and-Variations/z-image-turbo-prompt-multi-queue-text.json)
+- [z-image-turbo-prompt-pack-line](01-Image-Generation/Prompt-Batching-and-Variations/z-image-turbo-prompt-pack-line.json)
+- [z-image-turbo-prompt-pack-paragraph](01-Image-Generation/Prompt-Batching-and-Variations/z-image-turbo-prompt-pack-paragraph.json)
+- [z-image-turbo-prompt-stack](01-Image-Generation/Prompt-Batching-and-Variations/z-image-turbo-prompt-stack.json)
+
+## 01-Image-Generation/Text-to-Image
+
+- [anima-base-v1.0-anime-txt2img-seedvr2-upscale](01-Image-Generation/Text-to-Image/anima-base-v1.0-anime-txt2img-seedvr2-upscale.json)
+- [anima-base-v1.0-anime-txt2img](01-Image-Generation/Text-to-Image/anima-base-v1.0-anime-txt2img.json)
+- [boogu-image-txt2img](01-Image-Generation/Text-to-Image/boogu-image-txt2img.json)
+- [ernie-image-turbo-txt2img-gguf](01-Image-Generation/Text-to-Image/ernie-image-turbo-txt2img-gguf.json)
+- [flux-2-klein-4b-fp8-distilled-txt2img-basic](01-Image-Generation/Text-to-Image/flux-2-klein-4b-fp8-distilled-txt2img-basic.json)
+- [flux-2-klein-9b-fp8-distilled-txt2img-basic](01-Image-Generation/Text-to-Image/flux-2-klein-9b-fp8-distilled-txt2img-basic.json)
+- [flux-2-klein-9b-fp8-txt2img-ep16](01-Image-Generation/Text-to-Image/flux-2-klein-9b-fp8-txt2img-ep16.json)
+- [flux-2-klein-9b-txt2img](01-Image-Generation/Text-to-Image/flux-2-klein-9b-txt2img.json)
+- [flux-3-klein-layout-with-boxes](01-Image-Generation/Text-to-Image/flux-3-klein-layout-with-boxes.json)
+- [flux-3-klein-txt2img-z-image-realism-pass](01-Image-Generation/Text-to-Image/flux-3-klein-txt2img-z-image-realism-pass.json)
+- [flux-3-klein-txt2img](01-Image-Generation/Text-to-Image/flux-3-klein-txt2img.json)
+- [krea-2-int8-txt2img-extra-pass-lora](01-Image-Generation/Text-to-Image/krea-2-int8-txt2img-extra-pass-lora.json)
+- [krea-2-int8-txt2img-extra-pass](01-Image-Generation/Text-to-Image/krea-2-int8-txt2img-extra-pass.json)
+- [krea-2-int8-txt2img-simple-lora](01-Image-Generation/Text-to-Image/krea-2-int8-txt2img-simple-lora.json)
+- [krea-2-int8-txt2img-simple](01-Image-Generation/Text-to-Image/krea-2-int8-txt2img-simple.json)
+- [krea-2-txt2img-2k-hi-res-prompt-enhancer-uncensored](01-Image-Generation/Text-to-Image/krea-2-txt2img-2k-hi-res-prompt-enhancer-uncensored.json)
+- [krea-2-txt2img-2k-hi-res-prompt-enhancer](01-Image-Generation/Text-to-Image/krea-2-txt2img-2k-hi-res-prompt-enhancer.json)
+- [krea-2-txt2img-ep28](01-Image-Generation/Text-to-Image/krea-2-txt2img-ep28.json)
+- [krea-2-txt2img-extra-pass-lora](01-Image-Generation/Text-to-Image/krea-2-txt2img-extra-pass-lora.json)
+- [krea-2-txt2img-extra-pass](01-Image-Generation/Text-to-Image/krea-2-txt2img-extra-pass.json)
+- [krea-2-txt2img-simple-lora](01-Image-Generation/Text-to-Image/krea-2-txt2img-simple-lora.json)
+- [krea-2-txt2img-simple-low-vram](01-Image-Generation/Text-to-Image/krea-2-txt2img-simple-low-vram.json)
+- [krea-2-txt2img-simple](01-Image-Generation/Text-to-Image/krea-2-txt2img-simple.json)
+- [lens-txt2img](01-Image-Generation/Text-to-Image/lens-txt2img.json)
+- [ming-image-0.1-txt2img](01-Image-Generation/Text-to-Image/ming-image-0.1-txt2img.json)
+- [minimax-h3-txt2img-single-frame](01-Image-Generation/Text-to-Image/minimax-h3-txt2img-single-frame.json)
+- [nunchaku-flux.1-dev-txt2img](01-Image-Generation/Text-to-Image/nunchaku-flux.1-dev-txt2img.json)
+- [nunchaku-qwen-image-lightning-txt2img](01-Image-Generation/Text-to-Image/nunchaku-qwen-image-lightning-txt2img.json)
+- [nunchaku-z-image-turbo-txt2img](01-Image-Generation/Text-to-Image/nunchaku-z-image-turbo-txt2img.json)
+- [qwen-image-2.1-txt2img-low-vram](01-Image-Generation/Text-to-Image/qwen-image-2.1-txt2img-low-vram.json)
+- [qwen-image-2.1-txt2img-turbo](01-Image-Generation/Text-to-Image/qwen-image-2.1-txt2img-turbo.json)
+- [qwen-image-2.1-txt2img](01-Image-Generation/Text-to-Image/qwen-image-2.1-txt2img.json)
+- [sd15-juggernaut-reborn-txt2img-lora-starter](01-Image-Generation/Text-to-Image/sd15-juggernaut-reborn-txt2img-lora-starter.json)
+- [sd15-juggernaut-reborn-txt2img-lora](01-Image-Generation/Text-to-Image/sd15-juggernaut-reborn-txt2img-lora.json)
+- [sd15-juggernaut-reborn-txt2img](01-Image-Generation/Text-to-Image/sd15-juggernaut-reborn-txt2img.json)
+- [z-image-turbo-int8-txt2img](01-Image-Generation/Text-to-Image/z-image-turbo-int8-txt2img.json)
+- [z-image-turbo-txt2img-character-sheet-alt-1](01-Image-Generation/Text-to-Image/z-image-turbo-txt2img-character-sheet-alt-1.json)
+- [z-image-turbo-txt2img-character-sheet-alt-2](01-Image-Generation/Text-to-Image/z-image-turbo-txt2img-character-sheet-alt-2.json)
+- [z-image-turbo-txt2img-character-sheet](01-Image-Generation/Text-to-Image/z-image-turbo-txt2img-character-sheet.json)
+- [z-image-turbo-txt2img-fp8-aio-checkpoint](01-Image-Generation/Text-to-Image/z-image-turbo-txt2img-fp8-aio-checkpoint.json)
+- [z-image-turbo-txt2img-fp8-aio-lora](01-Image-Generation/Text-to-Image/z-image-turbo-txt2img-fp8-aio-lora.json)
+- [z-image-turbo-txt2img-fp8-aio-starter](01-Image-Generation/Text-to-Image/z-image-turbo-txt2img-fp8-aio-starter.json)
+- [z-image-turbo-txt2img-fp8-ep18](01-Image-Generation/Text-to-Image/z-image-turbo-txt2img-fp8-ep18.json)
+- [z-image-turbo-txt2img-fp8](01-Image-Generation/Text-to-Image/z-image-turbo-txt2img-fp8.json)
+- [z-image-turbo-txt2img-gguf](01-Image-Generation/Text-to-Image/z-image-turbo-txt2img-gguf.json)
+
+## 02-Image-Editing/Background-Removal
+
+- [birefnet-remove-background](02-Image-Editing/Background-Removal/birefnet-remove-background.json)
+- [qwen-image-2.1-remove-background](02-Image-Editing/Background-Removal/qwen-image-2.1-remove-background.json)
+- [sam3-remove-background-segment-crop-object](02-Image-Editing/Background-Removal/sam3-remove-background-segment-crop-object.json)
+- [utility-remove-background-from-transparent-items](02-Image-Editing/Background-Removal/utility-remove-background-from-transparent-items.json)
+- [utility-remove-background](02-Image-Editing/Background-Removal/utility-remove-background.json)
+
+## 02-Image-Editing/Character-Outfit-and-Pose
+
+- [flux-2-klein-9b-character-turnaround-sheet-from-one-image](02-Image-Editing/Character-Outfit-and-Pose/flux-2-klein-9b-character-turnaround-sheet-from-one-image.json)
+- [flux-3-klein-character-sheet](02-Image-Editing/Character-Outfit-and-Pose/flux-3-klein-character-sheet.json)
+- [flux-3-klein-outfit-change](02-Image-Editing/Character-Outfit-and-Pose/flux-3-klein-outfit-change.json)
+- [krea-2-outfit-change-outfit-lora](02-Image-Editing/Character-Outfit-and-Pose/krea-2-outfit-change-outfit-lora.json)
+- [krea-2-outfit-transfer-v2](02-Image-Editing/Character-Outfit-and-Pose/krea-2-outfit-transfer-v2.json)
+- [qwen-image-2.1-character-sheet](02-Image-Editing/Character-Outfit-and-Pose/qwen-image-2.1-character-sheet.json)
+- [qwen-image-2.1-outfit-change-turbo](02-Image-Editing/Character-Outfit-and-Pose/qwen-image-2.1-outfit-change-turbo.json)
+- [qwen-image-2.1-outfit-change](02-Image-Editing/Character-Outfit-and-Pose/qwen-image-2.1-outfit-change.json)
+- [qwen-image-2.1-pose-from-a-picture](02-Image-Editing/Character-Outfit-and-Pose/qwen-image-2.1-pose-from-a-picture.json)
+
+## 02-Image-Editing/Compositing-and-Image-Tools
+
+- [pixaroma-nodes-3d-builder-ep11](02-Image-Editing/Compositing-and-Image-Tools/pixaroma-nodes-3d-builder-ep11.json)
+- [pixaroma-nodes-3d-builder-ep13](02-Image-Editing/Compositing-and-Image-Tools/pixaroma-nodes-3d-builder-ep13.json)
+- [pixaroma-nodes-combine-join-two-images](02-Image-Editing/Compositing-and-Image-Tools/pixaroma-nodes-combine-join-two-images.json)
+- [pixaroma-nodes-crop-ep11](02-Image-Editing/Compositing-and-Image-Tools/pixaroma-nodes-crop-ep11.json)
+- [pixaroma-nodes-crop-ep13](02-Image-Editing/Compositing-and-Image-Tools/pixaroma-nodes-crop-ep13.json)
+- [pixaroma-nodes-image-composer-ep11](02-Image-Editing/Compositing-and-Image-Tools/pixaroma-nodes-image-composer-ep11.json)
+- [pixaroma-nodes-image-composer-ep13](02-Image-Editing/Compositing-and-Image-Tools/pixaroma-nodes-image-composer-ep13.json)
+- [pixaroma-nodes-paint-ep11](02-Image-Editing/Compositing-and-Image-Tools/pixaroma-nodes-paint-ep11.json)
+- [pixaroma-nodes-paint-ep13](02-Image-Editing/Compositing-and-Image-Tools/pixaroma-nodes-paint-ep13.json)
+- [utility-image-blend](02-Image-Editing/Compositing-and-Image-Tools/utility-image-blend.json)
+- [utility-image-combiner-for-transparent-items](02-Image-Editing/Compositing-and-Image-Tools/utility-image-combiner-for-transparent-items.json)
+- [utility-image-combiner](02-Image-Editing/Compositing-and-Image-Tools/utility-image-combiner.json)
+- [utility-image-scale](02-Image-Editing/Compositing-and-Image-Tools/utility-image-scale.json)
+- [utility-image-stitch](02-Image-Editing/Compositing-and-Image-Tools/utility-image-stitch.json)
+- [utility-image-transformation](02-Image-Editing/Compositing-and-Image-Tools/utility-image-transformation.json)
+
+## 02-Image-Editing/Inpaint-Outpaint-and-Object-Removal
+
+- [flux-2-klein-4b-fp8-distilled-inpaint](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/flux-2-klein-4b-fp8-distilled-inpaint.json)
+- [flux-2-klein-9b-fp8-distilled-inpaint](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/flux-2-klein-9b-fp8-distilled-inpaint.json)
+- [flux-2-klein-9b-fp8-distilled-paint-guided-edit](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/flux-2-klein-9b-fp8-distilled-paint-guided-edit.json)
+- [flux-2-klein-9b-fp8-inpaint-ep22](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/flux-2-klein-9b-fp8-inpaint-ep22.json)
+- [flux-2-klein-9b-int8-inpaint](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/flux-2-klein-9b-int8-inpaint.json)
+- [flux-2-klein-9b-kv-fp8-inpaint](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/flux-2-klein-9b-kv-fp8-inpaint.json)
+- [flux-2-klein-9b-kv-fp8-outpaint-custom-ratio](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/flux-2-klein-9b-kv-fp8-outpaint-custom-ratio.json)
+- [flux-2-klein-9b-outpaint](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/flux-2-klein-9b-outpaint.json)
+- [flux-2-klein-9b-paint-to-image](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/flux-2-klein-9b-paint-to-image.json)
+- [flux-3-klein-edit-inside-a-box](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/flux-3-klein-edit-inside-a-box.json)
+- [flux-3-klein-outpaint](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/flux-3-klein-outpaint.json)
+- [lama-object-remover](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/lama-object-remover.json)
+- [qwen-image-2.1-inpaint](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/qwen-image-2.1-inpaint.json)
+- [qwen-image-2.1-outpaint](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/qwen-image-2.1-outpaint.json)
+
+## 02-Image-Editing/Multi-Image-Composition
+
+- [flux-2-klein-4b-fp8-distilled-multi-image-edit-2-images](02-Image-Editing/Multi-Image-Composition/flux-2-klein-4b-fp8-distilled-multi-image-edit-2-images.json)
+- [flux-2-klein-9b-fp8-distilled-multi-image-edit-2-images](02-Image-Editing/Multi-Image-Composition/flux-2-klein-9b-fp8-distilled-multi-image-edit-2-images.json)
+- [flux-2-klein-9b-image-composer-to-image](02-Image-Editing/Multi-Image-Composition/flux-2-klein-9b-image-composer-to-image.json)
+- [flux-2-klein-9b-kv-fp8-image-blend](02-Image-Editing/Multi-Image-Composition/flux-2-klein-9b-kv-fp8-image-blend.json)
+- [flux-2-klein-9b-kv-fp8-multi-image-edit-2-images](02-Image-Editing/Multi-Image-Composition/flux-2-klein-9b-kv-fp8-multi-image-edit-2-images.json)
+- [flux-2-klein-9b-kv-fp8-multi-image-edit-3-images](02-Image-Editing/Multi-Image-Composition/flux-2-klein-9b-kv-fp8-multi-image-edit-3-images.json)
+- [flux-2-klein-9b-kv-fp8-multi-image-edit-4-images](02-Image-Editing/Multi-Image-Composition/flux-2-klein-9b-kv-fp8-multi-image-edit-4-images.json)
+- [flux-3-klein-character-in-a-scene](02-Image-Editing/Multi-Image-Composition/flux-3-klein-character-in-a-scene.json)
+- [flux-3-klein-group-photo](02-Image-Editing/Multi-Image-Composition/flux-3-klein-group-photo.json)
+- [flux-3-klein-logo-on-a-product](02-Image-Editing/Multi-Image-Composition/flux-3-klein-logo-on-a-product.json)
+- [flux-3-klein-product-ad](02-Image-Editing/Multi-Image-Composition/flux-3-klein-product-ad.json)
+- [ming-image-0.1-product-ad-from-two-pictures](02-Image-Editing/Multi-Image-Composition/ming-image-0.1-product-ad-from-two-pictures.json)
+- [qwen-image-2.1-character-in-a-scene](02-Image-Editing/Multi-Image-Composition/qwen-image-2.1-character-in-a-scene.json)
+- [qwen-image-2.1-logo-on-a-product](02-Image-Editing/Multi-Image-Composition/qwen-image-2.1-logo-on-a-product.json)
+- [qwen-image-2.1-multi-image-edit-2-images-prompt-enhancer](02-Image-Editing/Multi-Image-Composition/qwen-image-2.1-multi-image-edit-2-images-prompt-enhancer.json)
+- [qwen-image-2.1-multi-image-edit-3-images](02-Image-Editing/Multi-Image-Composition/qwen-image-2.1-multi-image-edit-3-images.json)
+- [qwen-image-2.1-multi-image-edit-4-images](02-Image-Editing/Multi-Image-Composition/qwen-image-2.1-multi-image-edit-4-images.json)
+- [qwen-image-2.1-multi-image-edit-group-photo-from-6-images](02-Image-Editing/Multi-Image-Composition/qwen-image-2.1-multi-image-edit-group-photo-from-6-images.json)
+
+## 02-Image-Editing/Single-Image-Edit
+
+- [boogu-edit-one-image-edit](02-Image-Editing/Single-Image-Edit/boogu-edit-one-image-edit.json)
+- [flux-2-klein-4b-fp8-distilled-one-image-edit](02-Image-Editing/Single-Image-Edit/flux-2-klein-4b-fp8-distilled-one-image-edit.json)
+- [flux-2-klein-9b-fp8-distilled-one-image-edit](02-Image-Editing/Single-Image-Edit/flux-2-klein-9b-fp8-distilled-one-image-edit.json)
+- [flux-2-klein-9b-int8-one-image-edit](02-Image-Editing/Single-Image-Edit/flux-2-klein-9b-int8-one-image-edit.json)
+- [flux-2-klein-9b-kv-fp8-one-image-edit-custom-ratio](02-Image-Editing/Single-Image-Edit/flux-2-klein-9b-kv-fp8-one-image-edit-custom-ratio.json)
+- [flux-2-klein-9b-kv-fp8-one-image-edit-same-ratio](02-Image-Editing/Single-Image-Edit/flux-2-klein-9b-kv-fp8-one-image-edit-same-ratio.json)
+- [flux-2-klein-9b-one-image-edit-v1](02-Image-Editing/Single-Image-Edit/flux-2-klein-9b-one-image-edit-v1.json)
+- [flux-2-klein-9b-one-image-edit-v2-notify-and-switch](02-Image-Editing/Single-Image-Edit/flux-2-klein-9b-one-image-edit-v2-notify-and-switch.json)
+- [flux-2-klein-9b-one-image-edit-v3-keep-filename-save-to-dated-folder](02-Image-Editing/Single-Image-Edit/flux-2-klein-9b-one-image-edit-v3-keep-filename-save-to-dated-folder.json)
+- [flux-2-klein-9b-one-image-many-edits](02-Image-Editing/Single-Image-Edit/flux-2-klein-9b-one-image-many-edits.json)
+- [flux-2-klein-9b-one-image-prompts-from-list](02-Image-Editing/Single-Image-Edit/flux-2-klein-9b-one-image-prompts-from-list.json)
+- [flux-3-klein-edit-text-in-a-picture](02-Image-Editing/Single-Image-Edit/flux-3-klein-edit-text-in-a-picture.json)
+- [flux-3-klein-one-image-edit](02-Image-Editing/Single-Image-Edit/flux-3-klein-one-image-edit.json)
+- [flux-3-klein-relight-and-seasons](02-Image-Editing/Single-Image-Edit/flux-3-klein-relight-and-seasons.json)
+- [flux-3-klein-restore-and-colorize](02-Image-Editing/Single-Image-Edit/flux-3-klein-restore-and-colorize.json)
+- [flux-3-klein-restyle](02-Image-Editing/Single-Image-Edit/flux-3-klein-restyle.json)
+- [krea-2-edit-lora-character-and-background](02-Image-Editing/Single-Image-Edit/krea-2-edit-lora-character-and-background.json)
+- [krea-2-edit-lora-custom-ratio](02-Image-Editing/Single-Image-Edit/krea-2-edit-lora-custom-ratio.json)
+- [krea-2-edit-lora](02-Image-Editing/Single-Image-Edit/krea-2-edit-lora.json)
+- [ming-image-0.1-one-image-edit](02-Image-Editing/Single-Image-Edit/ming-image-0.1-one-image-edit.json)
+- [ming-image-0.1-social-media-pack-from-one-image](02-Image-Editing/Single-Image-Edit/ming-image-0.1-social-media-pack-from-one-image.json)
+- [minimax-h3-one-image-edit-single-frame](02-Image-Editing/Single-Image-Edit/minimax-h3-one-image-edit-single-frame.json)
+- [qwen-image-2.1-one-image-edit-consistency-lora](02-Image-Editing/Single-Image-Edit/qwen-image-2.1-one-image-edit-consistency-lora.json)
+- [qwen-image-2.1-one-image-edit-low-vram](02-Image-Editing/Single-Image-Edit/qwen-image-2.1-one-image-edit-low-vram.json)
+- [qwen-image-2.1-one-image-edit-prompt-enhancer](02-Image-Editing/Single-Image-Edit/qwen-image-2.1-one-image-edit-prompt-enhancer.json)
+- [qwen-image-2.1-one-image-edit-turbo](02-Image-Editing/Single-Image-Edit/qwen-image-2.1-one-image-edit-turbo.json)
+- [qwen-image-2.1-one-image-edit](02-Image-Editing/Single-Image-Edit/qwen-image-2.1-one-image-edit.json)
+- [sd15-juggernaut-reborn-img2img](02-Image-Editing/Single-Image-Edit/sd15-juggernaut-reborn-img2img.json)
+
+## 02-Image-Editing/Sketch-and-3D-to-Image
+
+- [flux-2-klein-9b-3d-model-to-image-ep33](02-Image-Editing/Sketch-and-3D-to-Image/flux-2-klein-9b-3d-model-to-image-ep33.json)
+- [flux-2-klein-9b-3d-model-to-image-keep-the-angle-ep33](02-Image-Editing/Sketch-and-3D-to-Image/flux-2-klein-9b-3d-model-to-image-keep-the-angle-ep33.json)
+- [flux-2-klein-9b-3d-model-to-image-keep-the-angle-ep34](02-Image-Editing/Sketch-and-3D-to-Image/flux-2-klein-9b-3d-model-to-image-keep-the-angle-ep34.json)
+- [flux-2-klein-9b-3d-model-to-image](02-Image-Editing/Sketch-and-3D-to-Image/flux-2-klein-9b-3d-model-to-image.json)
+- [flux-2-klein-9b-3d-scene-builder-to-image](02-Image-Editing/Sketch-and-3D-to-Image/flux-2-klein-9b-3d-scene-builder-to-image.json)
+- [ming-image-0.1-restyle-a-design-to-3d](02-Image-Editing/Sketch-and-3D-to-Image/ming-image-0.1-restyle-a-design-to-3d.json)
+- [ming-image-0.1-sketch-to-photo](02-Image-Editing/Sketch-and-3D-to-Image/ming-image-0.1-sketch-to-photo.json)
+- [qwen-image-2.1-sketch-to-image-consistency-lora](02-Image-Editing/Sketch-and-3D-to-Image/qwen-image-2.1-sketch-to-image-consistency-lora.json)
+- [qwen-image-2.1-sketch-to-image](02-Image-Editing/Sketch-and-3D-to-Image/qwen-image-2.1-sketch-to-image.json)
+
+## 03-Image-Enhancement/Filters-and-Color-Grading
+
+- [layerstyle-image-filters-and-color-adjustments](03-Image-Enhancement/Filters-and-Color-Grading/layerstyle-image-filters-and-color-adjustments.json)
+- [utility-image-filters-example](03-Image-Enhancement/Filters-and-Color-Grading/utility-image-filters-example.json)
+
+## 03-Image-Enhancement/Upscaling
+
+- [1-universal-upscale-simple-no-model](03-Image-Enhancement/Upscaling/1-universal-upscale-simple-no-model.json)
+- [2-universal-upscale-with-4x-model-nmkd-siax](03-Image-Enhancement/Upscaling/2-universal-upscale-with-4x-model-nmkd-siax.json)
+- [3-z-image-turbo-tiled-diffusion-upscaler](03-Image-Enhancement/Upscaling/3-z-image-turbo-tiled-diffusion-upscaler.json)
+- [4-nunchaku-fluxmania-tiled-diffusion-upscaler](03-Image-Enhancement/Upscaling/4-nunchaku-fluxmania-tiled-diffusion-upscaler.json)
+- [5-seedvr2-upscale](03-Image-Enhancement/Upscaling/5-seedvr2-upscale.json)
+- [6-paid-api-51-credits-nano-banana-pro-upscale](03-Image-Enhancement/Upscaling/6-paid-api-51-credits-nano-banana-pro-upscale.json)
+- [7-paid-api-53-credits-recraft-creative-upscale](03-Image-Enhancement/Upscaling/7-paid-api-53-credits-recraft-creative-upscale.json)
+- [8-paid-api-8.5-credits-seedream-4.5-upscale](03-Image-Enhancement/Upscaling/8-paid-api-8.5-credits-seedream-4.5-upscale.json)
+
+## 04-Video/Audio-Reactive
+
+- [utility-images-react-to-music-audio-reactive](04-Video/Audio-Reactive/utility-images-react-to-music-audio-reactive.json)
+
+## 04-Video/Character-Animation-Video-to-Video
+
+- [minimax-h3-character-swap-motion-guide-check-run08-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-motion-guide-check-run08-api.json)
+- [minimax-h3-character-swap-motion-guide-check-run08-v2-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-motion-guide-check-run08-v2-api.json)
+- [minimax-h3-character-swap-sam3-mdmz-v1](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-mdmz-v1.json)
+- [minimax-h3-character-swap-sam3-run01-480p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run01-480p-api.json)
+- [minimax-h3-character-swap-sam3-run02-480p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run02-480p-api.json)
+- [minimax-h3-character-swap-sam3-run03-480p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run03-480p-api.json)
+- [minimax-h3-character-swap-sam3-run04-480p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run04-480p-api.json)
+- [minimax-h3-character-swap-sam3-run05-480p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run05-480p-api.json)
+- [minimax-h3-character-swap-sam3-run05-720p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run05-720p-api.json)
+- [minimax-h3-character-swap-sam3-run06-720p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run06-720p-api.json)
+- [minimax-h3-character-swap-sam3-run07a-dance-720p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run07a-dance-720p-api.json)
+- [minimax-h3-character-swap-sam3-run07b-talk-720p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run07b-talk-720p-api.json)
+- [minimax-h3-character-swap-sam3-run08-duo-720p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run08-duo-720p-api.json)
+- [minimax-h3-character-swap-sam3-run09-toons-720p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run09-toons-720p-api.json)
+- [minimax-h3-character-swap-sam3-run10-faceswap-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run10-faceswap-api.json)
+- [minimax-h3-character-swap-sam3-run11a-480p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run11a-480p-api.json)
+- [minimax-h3-character-swap-sam3-run11b-480p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run11b-480p-api.json)
+- [minimax-h3-character-swap-sam3-run11c-480p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run11c-480p-api.json)
+- [minimax-h3-character-swap-sam3-run11c-720p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run11c-720p-api.json)
+- [reactor-video-face-swap-api](04-Video/Character-Animation-Video-to-Video/reactor-video-face-swap-api.json)
+- [wan-2.1-scail-2-character-animation-from-driving-video-compact](04-Video/Character-Animation-Video-to-Video/wan-2.1-scail-2-character-animation-from-driving-video-compact.json)
+- [wan-2.1-scail-2-character-animation-from-driving-video-long](04-Video/Character-Animation-Video-to-Video/wan-2.1-scail-2-character-animation-from-driving-video-long.json)
+- [wan-2.1-scail-2-character-replacement](04-Video/Character-Animation-Video-to-Video/wan-2.1-scail-2-character-replacement.json)
+- [wan-2.1-scail-2-gap-hi-woman](04-Video/Character-Animation-Video-to-Video/wan-2.1-scail-2-gap-hi-woman.json)
+- [wan-2.1-scail-2-gap-multi-character-long](04-Video/Character-Animation-Video-to-Video/wan-2.1-scail-2-gap-multi-character-long.json)
+- [wan-2.1-scail-2-gap-video-2](04-Video/Character-Animation-Video-to-Video/wan-2.1-scail-2-gap-video-2.json)
+- [wan-2.1-scail-2-gap-video-3-man](04-Video/Character-Animation-Video-to-Video/wan-2.1-scail-2-gap-video-3-man.json)
+- [wan-2.1-scail-2-gap-video-4-man-closeup](04-Video/Character-Animation-Video-to-Video/wan-2.1-scail-2-gap-video-4-man-closeup.json)
+- [wan-2.1-scail-2-gap-video-5-man-head](04-Video/Character-Animation-Video-to-Video/wan-2.1-scail-2-gap-video-5-man-head.json)
+- [wan-2.1-scail-2-gap-video-6-man-head-fix](04-Video/Character-Animation-Video-to-Video/wan-2.1-scail-2-gap-video-6-man-head-fix.json)
+- [wan-2.1-scail-img2video-multi-character-9-16-ratio-only](04-Video/Character-Animation-Video-to-Video/wan-2.1-scail-img2video-multi-character-9-16-ratio-only.json)
+- [wan-2.1-scail-img2video-single-character](04-Video/Character-Animation-Video-to-Video/wan-2.1-scail-img2video-single-character.json)
+- [wan-2.2-animate-replace-character-and-background-16fps](04-Video/Character-Animation-Video-to-Video/wan-2.2-animate-replace-character-and-background-16fps.json)
+- [wan-2.2-animate-replace-character-and-background-24fps-hd](04-Video/Character-Animation-Video-to-Video/wan-2.2-animate-replace-character-and-background-24fps-hd.json)
+- [wan-2.2-animate-replace-character-and-background-24fps](04-Video/Character-Animation-Video-to-Video/wan-2.2-animate-replace-character-and-background-24fps.json)
+- [wan-2.2-animate-replace-only-character-16fps](04-Video/Character-Animation-Video-to-Video/wan-2.2-animate-replace-only-character-16fps.json)
+- [wan-2.2-animate-replace-only-character-24fps](04-Video/Character-Animation-Video-to-Video/wan-2.2-animate-replace-only-character-24fps.json)
+
+## 04-Video/Image-to-Video
+
+- [ltx-2-img2video-with-audio](04-Video/Image-to-Video/ltx-2-img2video-with-audio.json)
+- [ltx-2-img2video-with-custom-audio](04-Video/Image-to-Video/ltx-2-img2video-with-custom-audio.json)
+- [minimax-fasth3-img2video-first-frame-8-step](04-Video/Image-to-Video/minimax-fasth3-img2video-first-frame-8-step.json)
+- [minimax-fasth3-img2video-first-last-frame-8-step](04-Video/Image-to-Video/minimax-fasth3-img2video-first-last-frame-8-step.json)
+- [minimax-h3-img2video-first-frame-speed-lora](04-Video/Image-to-Video/minimax-h3-img2video-first-frame-speed-lora.json)
+- [minimax-h3-img2video-first-frame](04-Video/Image-to-Video/minimax-h3-img2video-first-frame.json)
+- [minimax-h3-img2video-first-last-frame-speed-lora](04-Video/Image-to-Video/minimax-h3-img2video-first-last-frame-speed-lora.json)
+- [minimax-h3-img2video-first-last-frame](04-Video/Image-to-Video/minimax-h3-img2video-first-last-frame.json)
+- [minimax-h3-img2video-last-frame](04-Video/Image-to-Video/minimax-h3-img2video-last-frame.json)
+- [wan-2.2-img2video-gguf-lightx2v-4-step-lora](04-Video/Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step-lora.json)
+- [wan-2.2-img2video-gguf-lightx2v-4-step](04-Video/Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step.json)
+
+## 04-Video/Reference-and-Audio-Sync
+
+- [dubsync-hindi-lip-sync-simple-api](04-Video/Reference-and-Audio-Sync/dubsync-hindi-lip-sync-simple-api.json)
+- [dubsync-hindi-lip-sync-simple](04-Video/Reference-and-Audio-Sync/dubsync-hindi-lip-sync-simple.json)
+- [dubsync-latentsync-lip-sync-api](04-Video/Reference-and-Audio-Sync/dubsync-latentsync-lip-sync-api.json)
+- [dubsync-latentsync-lip-sync-single-shot](04-Video/Reference-and-Audio-Sync/dubsync-latentsync-lip-sync-single-shot.json)
+- [dubsync-tbdub-teacher-lip-sync-api](04-Video/Reference-and-Audio-Sync/dubsync-tbdub-teacher-lip-sync-api.json)
+- [dubsync-tbdub-teacher-lip-sync-single-shot](04-Video/Reference-and-Audio-Sync/dubsync-tbdub-teacher-lip-sync-single-shot.json)
+- [latentsync-hindi-lip-sync-dubbing](04-Video/Reference-and-Audio-Sync/latentsync-hindi-lip-sync-dubbing.json)
+- [ltx-2-lip-sync-to-your-audio-r01-sc007-0037](04-Video/Reference-and-Audio-Sync/ltx-2-lip-sync-to-your-audio-r01-sc007-0037.json)
+- [ltx-2-video2video-voice-dubbing-compact](04-Video/Reference-and-Audio-Sync/ltx-2-video2video-voice-dubbing-compact.json)
+- [ltx-2-video2video-voice-dubbing-runpod-1080p](04-Video/Reference-and-Audio-Sync/ltx-2-video2video-voice-dubbing-runpod-1080p.json)
+- [ltx-2-video2video-voice-dubbing](04-Video/Reference-and-Audio-Sync/ltx-2-video2video-voice-dubbing.json)
+- [minimax-h3-reference-image-audio-sync-sing-speed-lora](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-image-audio-sync-sing-speed-lora.json)
+- [minimax-h3-reference-image-audio-sync-sing](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-image-audio-sync-sing.json)
+- [minimax-h3-reference-image-audio-sync-speak-speed-lora](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-image-audio-sync-speak-speed-lora.json)
+- [minimax-h3-reference-image-audio-sync-speak](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-image-audio-sync-speak.json)
+- [minimax-h3-reference-to-video-2-images](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-to-video-2-images.json)
+- [minimax-h3-reference-to-video-3-images](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-to-video-3-images.json)
+- [minimax-h3-reference-to-video-audio-character-swap](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-to-video-audio-character-swap.json)
+- [wan-2.1-infinitetalk-avatar-generator-video2video-basic-single](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-avatar-generator-video2video-basic-single.json)
+- [wan-2.1-infinitetalk-talking-video-easy-extend-3-to-34-seconds](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-talking-video-easy-extend-3-to-34-seconds.json)
+- [wan-2.1-infinitetalk-talking-video-from-audio-10-11-seconds](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-talking-video-from-audio-10-11-seconds.json)
+- [wan-2.1-infinitetalk-talking-video-from-audio-4-6-seconds](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-talking-video-from-audio-4-6-seconds.json)
+- [wan-2.1-infinitetalk-talking-video-from-audio-7-9-seconds](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-talking-video-from-audio-7-9-seconds.json)
+- [wan-2.1-infinitetalk-talking-video-manual-extend-3-to-34-seconds](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-talking-video-manual-extend-3-to-34-seconds.json)
+- [wan-2.1-infinitetalk-video-dubbing-video2video-flat](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-video-dubbing-video2video-flat.json)
+- [wan-2.1-infinitetalk-video-dubbing-video2video](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-video-dubbing-video2video.json)
+
+## 04-Video/Text-to-Video
+
+- [minimax-fasth3-txt2video-8-step](04-Video/Text-to-Video/minimax-fasth3-txt2video-8-step.json)
+- [minimax-h3-txt2video-low-vram-8gb](04-Video/Text-to-Video/minimax-h3-txt2video-low-vram-8gb.json)
+- [minimax-h3-txt2video-secret-sauce-4k-direct-output](04-Video/Text-to-Video/minimax-h3-txt2video-secret-sauce-4k-direct-output.json)
+- [minimax-h3-txt2video-speed-lora](04-Video/Text-to-Video/minimax-h3-txt2video-speed-lora.json)
+- [minimax-h3-txt2video](04-Video/Text-to-Video/minimax-h3-txt2video.json)
+
+## 04-Video/Video-Upscaling
+
+- [seedvr2-hd-video-upscale](04-Video/Video-Upscaling/seedvr2-hd-video-upscale.json)
+- [seedvr2-video-upscale-1080p-api](04-Video/Video-Upscaling/seedvr2-video-upscale-1080p-api.json)
+- [seedvr2-video-upscale-api-run](04-Video/Video-Upscaling/seedvr2-video-upscale-api-run.json)
+- [seedvr2-video-upscale-cartoon-dance-api](04-Video/Video-Upscaling/seedvr2-video-upscale-cartoon-dance-api.json)
+- [seedvr2-video-upscale-cartoon-talk-api](04-Video/Video-Upscaling/seedvr2-video-upscale-cartoon-talk-api.json)
+- [seedvr2-video-upscale-curly-dance-api](04-Video/Video-Upscaling/seedvr2-video-upscale-curly-dance-api.json)
+- [seedvr2-video-upscale-curly-talk-api](04-Video/Video-Upscaling/seedvr2-video-upscale-curly-talk-api.json)
+- [seedvr2-video-upscale-duo-api](04-Video/Video-Upscaling/seedvr2-video-upscale-duo-api.json)
+- [seedvr2-video-upscale-toons-api](04-Video/Video-Upscaling/seedvr2-video-upscale-toons-api.json)
+- [seedvr2-video-upscale](04-Video/Video-Upscaling/seedvr2-video-upscale.json)
+
+## 05-Audio/Music-Generation
+
+- [ace-step-v1.5-xl-turbo-text-to-music](05-Audio/Music-Generation/ace-step-v1.5-xl-turbo-text-to-music.json)
+- [minimax-music-3-text-to-music](05-Audio/Music-Generation/minimax-music-3-text-to-music.json)
+- [stable-audio-3-image-to-music-gemma-4](05-Audio/Music-Generation/stable-audio-3-image-to-music-gemma-4.json)
+- [stable-audio-3-text-to-music-gemma-4-prompt-enhancer](05-Audio/Music-Generation/stable-audio-3-text-to-music-gemma-4-prompt-enhancer.json)
+- [stable-audio-3-text-to-music](05-Audio/Music-Generation/stable-audio-3-text-to-music.json)
+- [stable-audio-3-text-to-sound-effects-gemma-4](05-Audio/Music-Generation/stable-audio-3-text-to-sound-effects-gemma-4.json)
+
+## 05-Audio/Speech-and-Voice-Cloning
+
+- [fish-s2-multi-speaker-dialogue-tts](05-Audio/Speech-and-Voice-Cloning/fish-s2-multi-speaker-dialogue-tts.json)
+- [fish-s2-text-to-speech](05-Audio/Speech-and-Voice-Cloning/fish-s2-text-to-speech.json)
+- [fish-s2-voice-clone-tts](05-Audio/Speech-and-Voice-Cloning/fish-s2-voice-clone-tts.json)
+- [qwen3-tts-custom-voice](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-custom-voice.json)
+- [qwen3-tts-voice-clone-load-saved-voice](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-clone-load-saved-voice.json)
+- [qwen3-tts-voice-clone-save-voice](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-clone-save-voice.json)
+- [qwen3-tts-voice-clone-saved-multi-voice-dialogue](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-clone-saved-multi-voice-dialogue.json)
+- [qwen3-tts-voice-clone](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-clone.json)
+- [qwen3-tts-voice-design-dialogue](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-design-dialogue.json)
+- [qwen3-tts-voice-design-save-voice](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-design-save-voice.json)
+- [qwen3-tts-voice-design](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-design.json)
+
+## 06-3D-Generation/Image-to-3D
+
+- [pixal3d-image-to-3d-model-hq-pbr-textures](06-3D-Generation/Image-to-3D/pixal3d-image-to-3d-model-hq-pbr-textures.json)
+- [pixal3d-image-to-3d-model-low-vram](06-3D-Generation/Image-to-3D/pixal3d-image-to-3d-model-low-vram.json)
+- [sam3d-body-3d-viewer](06-3D-Generation/Image-to-3D/sam3d-body-3d-viewer.json)
+- [sam3d-body-utility](06-3D-Generation/Image-to-3D/sam3d-body-utility.json)
+- [sam3d-body-video-to-3d-body-multi-r01-sc008](06-3D-Generation/Image-to-3D/sam3d-body-video-to-3d-body-multi-r01-sc008.json)
+- [trellis-2-image-to-3d-model-high-vram](06-3D-Generation/Image-to-3D/trellis-2-image-to-3d-model-high-vram.json)
+- [trellis-2-image-to-3d-model-hq-pbr-textures](06-3D-Generation/Image-to-3D/trellis-2-image-to-3d-model-hq-pbr-textures.json)
+- [trellis-2-image-to-3d-model-low-vram](06-3D-Generation/Image-to-3D/trellis-2-image-to-3d-model-low-vram.json)
+
+## 06-3D-Generation/Multi-View-to-3D
+
+- [pixal3d-multi-view-1-shape-only-no-colours-hq](06-3D-Generation/Multi-View-to-3D/pixal3d-multi-view-1-shape-only-no-colours-hq.json)
+- [pixal3d-multi-view-1-shape-only-no-colours](06-3D-Generation/Multi-View-to-3D/pixal3d-multi-view-1-shape-only-no-colours.json)
+- [pixal3d-multi-view-2-model-colours](06-3D-Generation/Multi-View-to-3D/pixal3d-multi-view-2-model-colours.json)
+- [pixal3d-multi-view-3-model-pbr-textures-lq](06-3D-Generation/Multi-View-to-3D/pixal3d-multi-view-3-model-pbr-textures-lq.json)
+- [pixal3d-multi-view-4-model-pbr-textures-hq](06-3D-Generation/Multi-View-to-3D/pixal3d-multi-view-4-model-pbr-textures-hq.json)
+
+## 07-Batch-and-Automation/Control-Logic-and-Math
+
+- [birefnet-turn-steps-on-and-off](07-Batch-and-Automation/Control-Logic-and-Math/birefnet-turn-steps-on-and-off.json)
+- [flux-2-klein-9b-one-control-panel-for-the-whole-workflow](07-Batch-and-Automation/Control-Logic-and-Math/flux-2-klein-9b-one-control-panel-for-the-whole-workflow.json)
+- [flux-2-klein-9b-one-workflow-two-jobs](07-Batch-and-Automation/Control-Logic-and-Math/flux-2-klein-9b-one-workflow-two-jobs.json)
+- [flux-2-klein-9b-set-and-get-no-long-wires](07-Batch-and-Automation/Control-Logic-and-Math/flux-2-klein-9b-set-and-get-no-long-wires.json)
+- [flux-2-klein-9b-style-presets-from-a-dropdown](07-Batch-and-Automation/Control-Logic-and-Math/flux-2-klein-9b-style-presets-from-a-dropdown.json)
+- [free-vram-utility-api](07-Batch-and-Automation/Control-Logic-and-Math/free-vram-utility-api.json)
+- [pixaroma-nodes-switch-node](07-Batch-and-Automation/Control-Logic-and-Math/pixaroma-nodes-switch-node.json)
+
+## 07-Batch-and-Automation/Folder-Batch-Processing
+
+- [birefnet-remove-the-background-from-all-images-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/birefnet-remove-the-background-from-all-images-in-a-folder.json)
+- [flux-2-klein-9b-before-and-after-grid-for-all-images-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/flux-2-klein-9b-before-and-after-grid-for-all-images-in-a-folder.json)
+- [flux-2-klein-9b-coloring-pages-from-all-images-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/flux-2-klein-9b-coloring-pages-from-all-images-in-a-folder.json)
+- [flux-2-klein-9b-do-a-big-image-folder-in-parts](07-Batch-and-Automation/Folder-Batch-Processing/flux-2-klein-9b-do-a-big-image-folder-in-parts.json)
+- [flux-2-klein-9b-edit-all-images-in-a-folder-with-one-prompt](07-Batch-and-Automation/Folder-Batch-Processing/flux-2-klein-9b-edit-all-images-in-a-folder-with-one-prompt.json)
+- [flux-2-klein-9b-edit-each-image-with-its-own-prompt](07-Batch-and-Automation/Folder-Batch-Processing/flux-2-klein-9b-edit-each-image-with-its-own-prompt.json)
+- [flux-2-klein-9b-edit-images-from-folder-simple](07-Batch-and-Automation/Folder-Batch-Processing/flux-2-klein-9b-edit-images-from-folder-simple.json)
+- [flux-2-klein-9b-fix-the-caption-text-files-then-make-the-images-again](07-Batch-and-Automation/Folder-Batch-Processing/flux-2-klein-9b-fix-the-caption-text-files-then-make-the-images-again.json)
+- [flux-2-klein-9b-make-all-images-in-a-folder-wide-outpaint](07-Batch-and-Automation/Folder-Batch-Processing/flux-2-klein-9b-make-all-images-in-a-folder-wide-outpaint.json)
+- [flux-2-klein-9b-one-image-per-text-file](07-Batch-and-Automation/Folder-Batch-Processing/flux-2-klein-9b-one-image-per-text-file.json)
+- [flux-2-klein-9b-product-photos-from-all-images-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/flux-2-klein-9b-product-photos-from-all-images-in-a-folder.json)
+- [flux-2-klein-9b-qwen3-vl-ai-writes-an-edit-for-every-image](07-Batch-and-Automation/Folder-Batch-Processing/flux-2-klein-9b-qwen3-vl-ai-writes-an-edit-for-every-image.json)
+- [flux-2-klein-9b-qwen3-vl-re-imagine-all-images-in-a-folder-in-another-style](07-Batch-and-Automation/Folder-Batch-Processing/flux-2-klein-9b-qwen3-vl-re-imagine-all-images-in-a-folder-in-another-style.json)
+- [flux-2-klein-9b-re-create-old-images-from-their-prompts](07-Batch-and-Automation/Folder-Batch-Processing/flux-2-klein-9b-re-create-old-images-from-their-prompts.json)
+- [flux-2-klein-9b-restore-and-colorize-old-photos-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/flux-2-klein-9b-restore-and-colorize-old-photos-in-a-folder.json)
+- [nmkd-siax-4x-upscale-all-images-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/nmkd-siax-4x-upscale-all-images-in-a-folder.json)
+- [qwen3-vl-caption-all-images-in-a-folder-for-lora-training](07-Batch-and-Automation/Folder-Batch-Processing/qwen3-vl-caption-all-images-in-a-folder-for-lora-training.json)
+- [qwen3-vl-keep-only-the-images-the-ai-says-yes-to](07-Batch-and-Automation/Folder-Batch-Processing/qwen3-vl-keep-only-the-images-the-ai-says-yes-to.json)
+- [qwen3-vl-rename-every-image-by-what-is-in-it](07-Batch-and-Automation/Folder-Batch-Processing/qwen3-vl-rename-every-image-by-what-is-in-it.json)
+- [qwen3-vl-sort-all-images-in-a-folder-into-subfolders-by-what-is-in-them](07-Batch-and-Automation/Folder-Batch-Processing/qwen3-vl-sort-all-images-in-a-folder-into-subfolders-by-what-is-in-them.json)
+- [utility-add-your-logo-to-all-images-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/utility-add-your-logo-to-all-images-in-a-folder.json)
+- [utility-collect-the-prompts-from-all-images-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/utility-collect-the-prompts-from-all-images-in-a-folder.json)
+- [utility-contact-sheet-of-all-images-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/utility-contact-sheet-of-all-images-in-a-folder.json)
+- [utility-load-images-from-folder-crop](07-Batch-and-Automation/Folder-Batch-Processing/utility-load-images-from-folder-crop.json)
+- [utility-math-scale-all-images-in-a-folder-by-percent](07-Batch-and-Automation/Folder-Batch-Processing/utility-math-scale-all-images-in-a-folder-by-percent.json)
+- [utility-rename-and-convert-all-images-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/utility-rename-and-convert-all-images-in-a-folder.json)
+- [utility-resize-all-images-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/utility-resize-all-images-in-a-folder.json)
+- [utility-slideshow-video-from-all-images-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/utility-slideshow-video-from-all-images-in-a-folder.json)
+- [utility-social-media-sizes-for-all-images-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/utility-social-media-sizes-for-all-images-in-a-folder.json)
+- [utility-watermark-all-images-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/utility-watermark-all-images-in-a-folder.json)
+
+## 07-Batch-and-Automation/Loops
+
+- [1.-flux-2-klein-9b-loop-basics-four-versions-of-one-prompt](07-Batch-and-Automation/Loops/1.-flux-2-klein-9b-loop-basics-four-versions-of-one-prompt.json)
+- [2.-flux-2-klein-9b-loop-build-up-an-image-step-by-step](07-Batch-and-Automation/Loops/2.-flux-2-klein-9b-loop-build-up-an-image-step-by-step.json)
+- [3.-utility-loop-photo-strip-from-all-images-in-a-folder](07-Batch-and-Automation/Loops/3.-utility-loop-photo-strip-from-all-images-in-a-folder.json)
+- [4.-flux-2-klein-9b-loop-comic-strip-with-the-same-character](07-Batch-and-Automation/Loops/4.-flux-2-klein-9b-loop-comic-strip-with-the-same-character.json)
+- [pixaroma-nodes-loop-build-a-list](07-Batch-and-Automation/Loops/pixaroma-nodes-loop-build-a-list.json)
+- [pixaroma-nodes-loop-build-an-image-batch](07-Batch-and-Automation/Loops/pixaroma-nodes-loop-build-an-image-batch.json)
+- [pixaroma-nodes-loop-carry-two-values](07-Batch-and-Automation/Loops/pixaroma-nodes-loop-carry-two-values.json)
+
+## 08-Testing-and-Comparison
+
+- [flux-2-klein-9b-draft-first-then-finish-preview-gate](08-Testing-and-Comparison/flux-2-klein-9b-draft-first-then-finish-preview-gate.json)
+- [flux-2-klein-9b-xy-plot-steps-and-samplers](08-Testing-and-Comparison/flux-2-klein-9b-xy-plot-steps-and-samplers.json)
+- [flux-2-klein-9b-xy-plot-styles-and-subjects](08-Testing-and-Comparison/flux-2-klein-9b-xy-plot-styles-and-subjects.json)
+- [krea-2-int8-lora-xy-plot](08-Testing-and-Comparison/krea-2-int8-lora-xy-plot.json)
+- [pixaroma-nodes-group-compare-comfyui-vs-pixaroma](08-Testing-and-Comparison/pixaroma-nodes-group-compare-comfyui-vs-pixaroma.json)
+- [pixaroma-nodes-image-compare](08-Testing-and-Comparison/pixaroma-nodes-image-compare.json)
+- [utility-image-compare-side-by-side](08-Testing-and-Comparison/utility-image-compare-side-by-side.json)
+- [z-image-turbo-xy-plot](08-Testing-and-Comparison/z-image-turbo-xy-plot.json)
+
+## 09-Movie
+
+- [short-film-director-pipeline-krea-minimax-h3-0.7-fixed-storyboard-prompts](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-fixed-storyboard-prompts.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-fixed](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-fixed.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-hires-16-scenes-heroine](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-hires-16-scenes-heroine.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-hires-3-scenes](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-hires-3-scenes.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-hires-full-16-scenes](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-hires-full-16-scenes.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-overnight](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-overnight.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-test-5-scenes-morning-departure](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-test-5-scenes-morning-departure.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-test-scene-1](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-test-scene-1.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-trial-5-scenes-mcp-run](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-trial-5-scenes-mcp-run.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-trial-5-scenes](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-trial-5-scenes.json)
+- [short-film-director-pipeline-krea-minimax-h3-no-review-v2](09-Movie/short-film-director-pipeline-krea-minimax-h3-no-review-v2.json)
+- [short-film-director-pipeline-krea-minimax-h3-no-review](09-Movie/short-film-director-pipeline-krea-minimax-h3-no-review.json)
+- [short-film-director-pipeline-krea-minimax-h3](09-Movie/short-film-director-pipeline-krea-minimax-h3.json)
+
+## 09-Movie/Short-Film-Projects
+
+- [backyard-goal-0-set-plate-krea-2-api](09-Movie/Short-Film-Projects/backyard-goal-0-set-plate-krea-2-api.json)
+- [backyard-goal-1-storyboard-krea-2-fix](09-Movie/Short-Film-Projects/backyard-goal-1-storyboard-krea-2-fix.json)
+- [backyard-goal-1-storyboard-krea-2](09-Movie/Short-Film-Projects/backyard-goal-1-storyboard-krea-2.json)
+- [backyard-goal-2-film-minimax-h3-fix7](09-Movie/Short-Film-Projects/backyard-goal-2-film-minimax-h3-fix7.json)
+- [backyard-goal-2-film-minimax-h3-run](09-Movie/Short-Film-Projects/backyard-goal-2-film-minimax-h3-run.json)
+- [backyard-goal-2-film-minimax-h3](09-Movie/Short-Film-Projects/backyard-goal-2-film-minimax-h3.json)
+- [backyard-goal-v2-0-set-plate-krea-2-api](09-Movie/Short-Film-Projects/backyard-goal-v2-0-set-plate-krea-2-api.json)
+- [backyard-goal-v2-1-storyboard-krea-2](09-Movie/Short-Film-Projects/backyard-goal-v2-1-storyboard-krea-2.json)
+- [backyard-goal-v2-2-film-minimax-h3](09-Movie/Short-Film-Projects/backyard-goal-v2-2-film-minimax-h3.json)
+- [golden-hour-0-set-plate-krea-2-api](09-Movie/Short-Film-Projects/golden-hour-0-set-plate-krea-2-api.json)
+- [golden-hour-1-storyboard-krea-2-fix](09-Movie/Short-Film-Projects/golden-hour-1-storyboard-krea-2-fix.json)
+- [golden-hour-1-storyboard-krea-2-v3](09-Movie/Short-Film-Projects/golden-hour-1-storyboard-krea-2-v3.json)
+- [golden-hour-1-storyboard-krea-2](09-Movie/Short-Film-Projects/golden-hour-1-storyboard-krea-2.json)
+- [golden-hour-2-film-minimax-h3-final](09-Movie/Short-Film-Projects/golden-hour-2-film-minimax-h3-final.json)
+- [golden-hour-2-film-minimax-h3-v3](09-Movie/Short-Film-Projects/golden-hour-2-film-minimax-h3-v3.json)
+- [golden-hour-2-film-minimax-h3-v4](09-Movie/Short-Film-Projects/golden-hour-2-film-minimax-h3-v4.json)
+- [golden-hour-2-film-minimax-h3](09-Movie/Short-Film-Projects/golden-hour-2-film-minimax-h3.json)
+- [heroine-short-film-krea-minimax-h3-1280](09-Movie/Short-Film-Projects/heroine-short-film-krea-minimax-h3-1280.json)
+- [heroine-storyboard-krea-2-api](09-Movie/Short-Film-Projects/heroine-storyboard-krea-2-api.json)
+- [heroine-storyboard-krea-2-fix-b1-api](09-Movie/Short-Film-Projects/heroine-storyboard-krea-2-fix-b1-api.json)
+- [heroine-storyboard-krea-2-fix-b1-v2-api](09-Movie/Short-Film-Projects/heroine-storyboard-krea-2-fix-b1-v2-api.json)
+- [heroine-storyboard-krea-2-fix-b3-v2-api](09-Movie/Short-Film-Projects/heroine-storyboard-krea-2-fix-b3-v2-api.json)
+- [heroine-storyboard-krea-2-fix-c1-api](09-Movie/Short-Film-Projects/heroine-storyboard-krea-2-fix-c1-api.json)
+- [minimax-h3-chain-plan-test-api](09-Movie/Short-Film-Projects/minimax-h3-chain-plan-test-api.json)
+- [morning-departure-storyboard-krea-2-api](09-Movie/Short-Film-Projects/morning-departure-storyboard-krea-2-api.json)
+- [naisha-rain-1-storyboard-krea-2](09-Movie/Short-Film-Projects/naisha-rain-1-storyboard-krea-2.json)
+- [naisha-rain-2-film-minimax-h3-fix-s15](09-Movie/Short-Film-Projects/naisha-rain-2-film-minimax-h3-fix-s15.json)
+- [naisha-rain-2-film-minimax-h3-fix-s15b](09-Movie/Short-Film-Projects/naisha-rain-2-film-minimax-h3-fix-s15b.json)
+- [naisha-rain-2-film-minimax-h3-fix-s15c](09-Movie/Short-Film-Projects/naisha-rain-2-film-minimax-h3-fix-s15c.json)
+- [naisha-rain-2-film-minimax-h3-fix-s9](09-Movie/Short-Film-Projects/naisha-rain-2-film-minimax-h3-fix-s9.json)
+- [naisha-rain-2-film-minimax-h3](09-Movie/Short-Film-Projects/naisha-rain-2-film-minimax-h3.json)
+- [toonboy-1-storyboard-krea-2](09-Movie/Short-Film-Projects/toonboy-1-storyboard-krea-2.json)
+- [toonboy-2-film-minimax-h3-v1-backup](09-Movie/Short-Film-Projects/toonboy-2-film-minimax-h3-v1-backup.json)
+- [toonboy-2-film-minimax-h3-v2-backup](09-Movie/Short-Film-Projects/toonboy-2-film-minimax-h3-v2-backup.json)
+- [toonboy-2-film-minimax-h3](09-Movie/Short-Film-Projects/toonboy-2-film-minimax-h3.json)
+
+## 10-LLM-and-Prompt-Tools
+
+- [gemma-4-anima-prompt-enhancer](10-LLM-and-Prompt-Tools/gemma-4-anima-prompt-enhancer.json)
+- [gemma-4-audio-to-text](10-LLM-and-Prompt-Tools/gemma-4-audio-to-text.json)
+- [gemma-4-image-to-prompt](10-LLM-and-Prompt-Tools/gemma-4-image-to-prompt.json)
+- [gemma-4-prompt-enhancer](10-LLM-and-Prompt-Tools/gemma-4-prompt-enhancer.json)
+- [gemma-4-video-to-description](10-LLM-and-Prompt-Tools/gemma-4-video-to-description.json)
+- [gemma-4-video-to-prompt](10-LLM-and-Prompt-Tools/gemma-4-video-to-prompt.json)
+- [minimax-h3-first-frame-to-video-prompt-generator](10-LLM-and-Prompt-Tools/minimax-h3-first-frame-to-video-prompt-generator.json)
+- [minimax-h3-txt2video-prompt-generator](10-LLM-and-Prompt-Tools/minimax-h3-txt2video-prompt-generator.json)
+- [minimax-music-3-caption-and-lyrics-generator](10-LLM-and-Prompt-Tools/minimax-music-3-caption-and-lyrics-generator.json)
+- [pixaroma-nodes-read-prompt-from-image-metadata](10-LLM-and-Prompt-Tools/pixaroma-nodes-read-prompt-from-image-metadata.json)
+- [qwen-3.5-image-to-prompt](10-LLM-and-Prompt-Tools/qwen-3.5-image-to-prompt.json)
+- [qwen-3.5-text-to-prompt](10-LLM-and-Prompt-Tools/qwen-3.5-text-to-prompt.json)
+- [qwen-image-2.1-image-to-prompt-qwen3-vl-8b](10-LLM-and-Prompt-Tools/qwen-image-2.1-image-to-prompt-qwen3-vl-8b.json)
+- [qwen3-vl-prompt-from-image](10-LLM-and-Prompt-Tools/qwen3-vl-prompt-from-image.json)
+- [qwenvl-3-image-and-text-to-prompt-gguf](10-LLM-and-Prompt-Tools/qwenvl-3-image-and-text-to-prompt-gguf.json)
+
+## 90-Docs-and-Resources/Learning-and-Node-Demos
+
+- [flux-2-klein-9b-fp8-multi-step-workflow-example](90-Docs-and-Resources/Learning-and-Node-Demos/flux-2-klein-9b-fp8-multi-step-workflow-example.json)
+- [nodes-explained-01-models-explained-finished-z-image-turbo](90-Docs-and-Resources/Learning-and-Node-Demos/nodes-explained-01-models-explained-finished-z-image-turbo.json)
+- [nodes-explained-01-models-explained-practice-z-image-turbo](90-Docs-and-Resources/Learning-and-Node-Demos/nodes-explained-01-models-explained-practice-z-image-turbo.json)
+- [pixaroma-help-and-resources](90-Docs-and-Resources/Learning-and-Node-Demos/pixaroma-help-and-resources.json)
+- [pixaroma-nodes-change-node-color](90-Docs-and-Resources/Learning-and-Node-Demos/pixaroma-nodes-change-node-color.json)
+- [pixaroma-nodes-labels-ep11](90-Docs-and-Resources/Learning-and-Node-Demos/pixaroma-nodes-labels-ep11.json)
+- [pixaroma-nodes-labels-ep13](90-Docs-and-Resources/Learning-and-Node-Demos/pixaroma-nodes-labels-ep13.json)
+- [pixaroma-nodes-note](90-Docs-and-Resources/Learning-and-Node-Demos/pixaroma-nodes-note.json)
+
+## 90-Docs-and-Resources/LoRA-Training
+
+- [krea-2-lora-converter](90-Docs-and-Resources/LoRA-Training/krea-2-lora-converter.json)
+
+## 91-Review-Version-Conflicts
+
+- [ep11-flux-2-klein-9b-fp8-distilled-one-image-edit-with-paint-pixaroma-node-pixaroma-original](91-Review-Version-Conflicts/ep11-flux-2-klein-9b-fp8-distilled-one-image-edit-with-paint-pixaroma-node-pixaroma-original.json)
+- [ep15-ace-step-v1.5-xl-turbo-text-to-music-pixaroma-original](91-Review-Version-Conflicts/ep15-ace-step-v1.5-xl-turbo-text-to-music-pixaroma-original.json)
+- [ep16-flux-2-klein-9b-image-to-prompt-to-image-qwen-3.5-pixaroma-original](91-Review-Version-Conflicts/ep16-flux-2-klein-9b-image-to-prompt-to-image-qwen-3.5-pixaroma-original.json)
+- [ep16-flux-2-klein-9b-txt2img-qwen-3.5-prompt-enhancer-pixaroma-original](91-Review-Version-Conflicts/ep16-flux-2-klein-9b-txt2img-qwen-3.5-prompt-enhancer-pixaroma-original.json)
+- [ep20-anima-base-v1.0-anime-txt2img-gemma-4-prompt-enhancer-pixaroma-original](91-Review-Version-Conflicts/ep20-anima-base-v1.0-anime-txt2img-gemma-4-prompt-enhancer-pixaroma-original.json)
