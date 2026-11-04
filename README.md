@@ -1,8 +1,8 @@
 # ComfyUI Workflows Collection: FLUX, Qwen-Image, Wan, LTX-2, MiniMax H3, Krea 2 and more
 
-[![Workflows](https://img.shields.io/badge/workflows-461-blue)](#workflow-catalog) [![ComfyUI](https://img.shields.io/badge/ComfyUI-workflows-green)](https://github.com/Comfy-Org/ComfyUI) [![Format](https://img.shields.io/badge/format-JSON-lightgrey)](#how-to-use) [![License](https://img.shields.io/badge/license-see%20below-purple)](#license)
+[![Workflows](https://img.shields.io/badge/workflows-464-blue)](#workflow-catalog) [![ComfyUI](https://img.shields.io/badge/ComfyUI-workflows-green)](https://github.com/Comfy-Org/ComfyUI) [![Format](https://img.shields.io/badge/format-JSON-lightgrey)](#how-to-use) [![License](https://img.shields.io/badge/license-see%20below-purple)](#license)
 
-A categorized library of **461 ready-to-use ComfyUI workflows** (`.json`) for **text-to-image (txt2img)**, **image-to-image (img2img) editing**, **inpainting and outpainting**, **background removal**, **upscaling**, **text-to-video and image-to-video (img2video)**, **lip-sync and talking avatars**, **face swap and character swap**, **text-to-speech and music**, **3D generation**, **batch automation** and a complete **AI short-film pipeline**.
+A categorized library of **464 ready-to-use ComfyUI workflows** (`.json`) for **text-to-image (txt2img)**, **image-to-image (img2img) editing**, **inpainting and outpainting**, **background removal**, **upscaling**, **text-to-video and image-to-video (img2video)**, **lip-sync and talking avatars**, **face swap and character swap**, **text-to-speech and music**, **3D generation**, **batch automation** and a complete **AI short-film pipeline**.
 
 Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, install any missing custom nodes with ComfyUI-Manager, add the models, and press **Run**. The catalog below lists what each workflow does, which models it loads and which custom node packs it needs.
 
@@ -60,7 +60,7 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 
 ## Workflow catalog
 
-461 workflows: 421 in the normal UI format and 40 in API format (filenames ending in `-api`). Model names are the files each workflow loads; download links are usually in the notes inside the workflow.
+464 workflows: 424 in the normal UI format and 40 in API format (filenames ending in `-api`). Model names are the files each workflow loads; download links are usually in the notes inside the workflow.
 
 ### 01 · Image Generation
 
@@ -386,7 +386,7 @@ Folder: [`03-Image-Enhancement/Upscaling/`](03-Image-Enhancement/Upscaling)
 
 ### 04 · AI Video
 
-Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking video and lip-sync, character animation and character swap, video upscaling and audio-reactive video — Wan 2.1 / 2.2, LTX-2, MiniMax H3, SeedVR2, InfiniteTalk, SCAIL. Folder: [`04-Video/`](04-Video) — 90 workflows.
+Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking video and lip-sync, character animation and character swap, video upscaling and audio-reactive video — Wan 2.1 / 2.2, LTX-2, MiniMax H3, SeedVR2, InfiniteTalk, SCAIL. Folder: [`04-Video/`](04-Video) — 93 workflows.
 
 #### Audio-reactive visuals (1)
 
@@ -440,7 +440,7 @@ Folder: [`04-Video/Character-Animation-Video-to-Video/`](04-Video/Character-Anim
 | [wan-2.2-animate-replace-only-character-16fps](04-Video/Character-Animation-Video-to-Video/wan-2.2-animate-replace-only-character-16fps.json) | Replace Only Character — 16FPS | `sam3.pt`, `vitpose_h_wholebody_model.onnx`, `yolov10m.onnx` +9 more | ComfyUI_LayerStyle, ComfyUI-KJNodes, ComfyUI-WanAnimatePreprocess, ComfyUI-WanVideoWrapper, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Sam3, ComfyUI-Easy-Use |
 | [wan-2.2-animate-replace-only-character-24fps](04-Video/Character-Animation-Video-to-Video/wan-2.2-animate-replace-only-character-24fps.json) | Replace Only Character — 24FPS | `sam3.pt`, `vitpose_h_wholebody_model.onnx`, `yolov10m.onnx` +9 more | ComfyUI_LayerStyle, ComfyUI-KJNodes, ComfyUI-WanAnimatePreprocess, ComfyUI-WanVideoWrapper, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Sam3, ComfyUI-Easy-Use |
 
-#### Image-to-video (img2video), first/last frame (11)
+#### Image-to-video (img2video), first/last frame (12)
 
 Folder: [`04-Video/Image-to-Video/`](04-Video/Image-to-Video)
 
@@ -455,6 +455,7 @@ Folder: [`04-Video/Image-to-Video/`](04-Video/Image-to-Video)
 | [minimax-h3-img2video-first-last-frame-speed-lora](04-Video/Image-to-Video/minimax-h3-img2video-first-last-frame-speed-lora.json) | Image to Video — First + Last Frame + Speed LoRA | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_fp16.safetensors`, `minimax_h3_audio_vae_fp32.safetensors` +2 more | ComfyUI-Pixaroma |
 | [minimax-h3-img2video-first-last-frame](04-Video/Image-to-Video/minimax-h3-img2video-first-last-frame.json) | Image to Video — First + Last Frame | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_fp16.safetensors`, `minimax_h3_audio_vae_fp32.safetensors` +1 more | ComfyUI-Pixaroma |
 | [minimax-h3-img2video-last-frame](04-Video/Image-to-Video/minimax-h3-img2video-last-frame.json) | Image to Video — Last Frame | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_fp16.safetensors`, `minimax_h3_audio_vae_fp32.safetensors` +1 more | ComfyUI-Pixaroma |
+| [minimax-h3-pika-flex-img2video-first-last-frame-2-stage](04-Video/Image-to-Video/minimax-h3-pika-flex-img2video-first-last-frame-2-stage.json) | Image to Video — First + Last Frame, Pika-H3-Flex 6-Step + Latent Upscale (2-Stage) | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `pika_h3_flex_fl2va_v1_avg_rank_56_bf16.safetensors` +4 more | ComfyUI-KJNodes |
 | [wan-2.2-img2video-gguf-lightx2v-4-step-lora](04-Video/Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step-lora.json) | Image to Video — GGUF Lightx2v 4-Step + LoRA | `umt5_xxl_fp8_e4m3fn_scaled.safetensors`, `wan_2.1_vae.safetensors`, `wan2.2_i2v_A14b_high_noise_lightx2v_4step-Q6_K.gguf` +2 more | ComfyUI-GGUF, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Use |
 | [wan-2.2-img2video-gguf-lightx2v-4-step](04-Video/Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step.json) | Image to Video — GGUF Lightx2v 4-Step | `umt5_xxl_fp8_e4m3fn_scaled.safetensors`, `wan_2.1_vae.safetensors`, `wan2.2_i2v_A14b_high_noise_lightx2v_4step-Q6_K.gguf` +1 more | ComfyUI-GGUF, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Use |
 
@@ -491,13 +492,15 @@ Folder: [`04-Video/Reference-and-Audio-Sync/`](04-Video/Reference-and-Audio-Sync
 | [wan-2.1-infinitetalk-video-dubbing-video2video-flat](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-video-dubbing-video2video-flat.json) | Flattened single-path version of the InfiniteTalk video dubbing workflow | `clip_vision_h.safetensors`, `Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors`, `Wan21_I2V_14B_lightx2v_cfg_step_distill_lora_rank64.safetensors` +3 more | ComfyUI_LayerStyle, ComfyUI-KJNodes, ComfyUI-WanVideoWrapper, ComfyUI-VideoHelperSuite, comfy_mtb, ComfyUI-Custom-Scripts |
 | [wan-2.1-infinitetalk-video-dubbing-video2video](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-video-dubbing-video2video.json) | Video dubbing (video2video): Wan 2.1 InfiniteTalk re-animates the speaker to a new audio track, TTS or text | `clip_vision_h.safetensors`, `Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors`, `Wan21_I2V_14B_lightx2v_cfg_step_distill_lora_rank64.safetensors` +3 more | ComfyUI_LayerStyle, ComfyUI-KJNodes, ComfyUI-WanVideoWrapper, ComfyUI-VideoHelperSuite, comfy_mtb, ComfyUI-Custom-Scripts, rgthree-comfy |
 
-#### Text-to-video (txt2video) (5)
+#### Text-to-video (txt2video) (7)
 
 Folder: [`04-Video/Text-to-Video/`](04-Video/Text-to-Video)
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
 | [minimax-fasth3-txt2video-8-step](04-Video/Text-to-Video/minimax-fasth3-txt2video-8-step.json) | Text to Video (8-Step) | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_fp16.safetensors`, `fastvideo_fasth3_8step_v2_pruned_int8_convrot.safetensors` +1 more | ComfyUI-Pixaroma |
+| [minimax-h3-pika-flex-txt2video-2-stage-2k](04-Video/Text-to-Video/minimax-h3-pika-flex-txt2video-2-stage-2k.json) | Text to Video — Pika-H3-Flex 6-Step + 2K Latent Upscale (2-Stage) | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `pika_h3_flex_fl2va_v1_avg_rank_56_bf16.safetensors` +4 more | ComfyUI-KJNodes |
+| [minimax-h3-pika-flex-txt2video-720p-to-1080p](04-Video/Text-to-Video/minimax-h3-pika-flex-txt2video-720p-to-1080p.json) | Text to Video — Pika-H3-Flex, 720p → 1080p, 5 s (tuned for 16 GB VRAM / 30 GB RAM) | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_fl2va_pruned_w6a8.safetensors`, `pika_h3_flex_fl2va_v1_avg_rank_56_bf16.safetensors` +4 more | ComfyUI-KJNodes |
 | [minimax-h3-txt2video-low-vram-8gb](04-Video/Text-to-Video/minimax-h3-txt2video-low-vram-8gb.json) | Text to Video — Low VRAM 8GB | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_fp16.safetensors`, `minimax_h3_fl2va_pruned_int8_convrot.safetensors` +1 more | ComfyUI_LayerStyle, ComfyUI-Pixaroma |
 | [minimax-h3-txt2video-secret-sauce-4k-direct-output](04-Video/Text-to-Video/minimax-h3-txt2video-secret-sauce-4k-direct-output.json) | Text to Video — Secret Sauce 4K Direct Output | `qwen3vl_32b_minimax_h3_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `taeh3.safetensors` +9 more | ComfyUI-MemoryCleaner, ComfyUI-KJNodes, ComfyUI-VideoHelperSuite, rgthree-comfy, ComfyUI-MiniMaxH3-TimelineDirector, ComfyUI_Comfyroll_CustomNodes, ComfyUI-MiniMaxH3-Unified, H3SigmaRefiner (unknown source), RH_DLSS5Enhance (unknown source) |
 | [minimax-h3-txt2video-speed-lora](04-Video/Text-to-Video/minimax-h3-txt2video-speed-lora.json) | Text to Video + Speed LoRA | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_fp16.safetensors`, `minimax_h3_audio_vae_fp32.safetensors` +2 more | ComfyUI-Pixaroma |

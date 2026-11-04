@@ -1,6 +1,6 @@
 # ComfyUI Workflow Library — Index
 
-Plain list of all 461 workflows by folder. The [README](README.md) has descriptions, models and required custom nodes for each one.
+Plain list of all 464 workflows by folder. The [README](README.md) has descriptions, models and required custom nodes for each one.
 
 Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-image-2.1-one-image-edit-low-vram.json`). `-api` = API format; `epNN` = tutorial episode the variant came from.
 
@@ -313,6 +313,7 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [minimax-h3-img2video-first-last-frame-speed-lora](04-Video/Image-to-Video/minimax-h3-img2video-first-last-frame-speed-lora.json)
 - [minimax-h3-img2video-first-last-frame](04-Video/Image-to-Video/minimax-h3-img2video-first-last-frame.json)
 - [minimax-h3-img2video-last-frame](04-Video/Image-to-Video/minimax-h3-img2video-last-frame.json)
+- [minimax-h3-pika-flex-img2video-first-last-frame-2-stage](04-Video/Image-to-Video/minimax-h3-pika-flex-img2video-first-last-frame-2-stage.json)
 - [wan-2.2-img2video-gguf-lightx2v-4-step-lora](04-Video/Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step-lora.json)
 - [wan-2.2-img2video-gguf-lightx2v-4-step](04-Video/Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step.json)
 
@@ -348,6 +349,8 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 ## 04-Video/Text-to-Video
 
 - [minimax-fasth3-txt2video-8-step](04-Video/Text-to-Video/minimax-fasth3-txt2video-8-step.json)
+- [minimax-h3-pika-flex-txt2video-2-stage-2k](04-Video/Text-to-Video/minimax-h3-pika-flex-txt2video-2-stage-2k.json)
+- [minimax-h3-pika-flex-txt2video-720p-to-1080p](04-Video/Text-to-Video/minimax-h3-pika-flex-txt2video-720p-to-1080p.json)
 - [minimax-h3-txt2video-low-vram-8gb](04-Video/Text-to-Video/minimax-h3-txt2video-low-vram-8gb.json)
 - [minimax-h3-txt2video-secret-sauce-4k-direct-output](04-Video/Text-to-Video/minimax-h3-txt2video-secret-sauce-4k-direct-output.json)
 - [minimax-h3-txt2video-speed-lora](04-Video/Text-to-Video/minimax-h3-txt2video-speed-lora.json)

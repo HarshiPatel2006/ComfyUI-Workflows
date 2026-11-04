@@ -8,10 +8,10 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 | [`Character-Animation-Video-to-Video/`](Character-Animation-Video-to-Video) | Character animation, character replacement, character swap and face swap (video2video) | 37 |
 | [`Image-to-Video/`](Image-to-Video) | Image-to-video (img2video), first/last frame | 11 |
 | [`Reference-and-Audio-Sync/`](Reference-and-Audio-Sync) | Reference-to-video, talking video, lip-sync and video dubbing | 26 |
-| [`Text-to-Video/`](Text-to-Video) | Text-to-video (txt2video) | 5 |
+| [`Text-to-Video/`](Text-to-Video) | Text-to-video (txt2video) | 7 |
 | [`Video-Upscaling/`](Video-Upscaling) | Video upscaling | 10 |
 
-## Workflows (90)
+## Workflows (93)
 
 ### Audio-reactive visuals
 
@@ -74,6 +74,7 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 | [minimax-h3-img2video-first-last-frame-speed-lora](Image-to-Video/minimax-h3-img2video-first-last-frame-speed-lora.json) | Image to Video — First + Last Frame + Speed LoRA | ComfyUI-Pixaroma |
 | [minimax-h3-img2video-first-last-frame](Image-to-Video/minimax-h3-img2video-first-last-frame.json) | Image to Video — First + Last Frame | ComfyUI-Pixaroma |
 | [minimax-h3-img2video-last-frame](Image-to-Video/minimax-h3-img2video-last-frame.json) | Image to Video — Last Frame | ComfyUI-Pixaroma |
+| [minimax-h3-pika-flex-img2video-first-last-frame-2-stage](Image-to-Video/minimax-h3-pika-flex-img2video-first-last-frame-2-stage.json) | Image to Video — First + Last Frame, Pika-H3-Flex 6-Step + Latent Upscale (2-Stage) | ComfyUI-KJNodes |
 | [wan-2.2-img2video-gguf-lightx2v-4-step-lora](Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step-lora.json) | Image to Video — GGUF Lightx2v 4-Step + LoRA | ComfyUI-GGUF, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Use |
 | [wan-2.2-img2video-gguf-lightx2v-4-step](Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step.json) | Image to Video — GGUF Lightx2v 4-Step | ComfyUI-GGUF, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Use |
 
@@ -113,6 +114,8 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 | Workflow | What it does | Custom nodes needed |
 |---|---|---|
 | [minimax-fasth3-txt2video-8-step](Text-to-Video/minimax-fasth3-txt2video-8-step.json) | Text to Video (8-Step) | ComfyUI-Pixaroma |
+| [minimax-h3-pika-flex-txt2video-2-stage-2k](Text-to-Video/minimax-h3-pika-flex-txt2video-2-stage-2k.json) | Text to Video — Pika-H3-Flex 6-Step + 2K Latent Upscale (2-Stage) | ComfyUI-KJNodes |
+| [minimax-h3-pika-flex-txt2video-720p-to-1080p](Text-to-Video/minimax-h3-pika-flex-txt2video-720p-to-1080p.json) | Text to Video — Pika-H3-Flex, 720p → 1080p, 5 s (tuned for 16 GB VRAM / 30 GB RAM) | ComfyUI-KJNodes |
 | [minimax-h3-txt2video-low-vram-8gb](Text-to-Video/minimax-h3-txt2video-low-vram-8gb.json) | Text to Video — Low VRAM 8GB | ComfyUI_LayerStyle, ComfyUI-Pixaroma |
 | [minimax-h3-txt2video-secret-sauce-4k-direct-output](Text-to-Video/minimax-h3-txt2video-secret-sauce-4k-direct-output.json) | Text to Video — Secret Sauce 4K Direct Output | ComfyUI-MemoryCleaner, ComfyUI-KJNodes, ComfyUI-VideoHelperSuite, rgthree-comfy, ComfyUI-MiniMaxH3-TimelineDirector, ComfyUI_Comfyroll_CustomNodes, ComfyUI-MiniMaxH3-Unified, H3SigmaRefiner (unknown source), RH_DLSS5Enhance (unknown source) |
 | [minimax-h3-txt2video-speed-lora](Text-to-Video/minimax-h3-txt2video-speed-lora.json) | Text to Video + Speed LoRA | ComfyUI-Pixaroma |
