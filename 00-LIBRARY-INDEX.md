@@ -306,6 +306,7 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 
 - [ltx-2-img2video-with-audio](04-Video/Image-to-Video/ltx-2-img2video-with-audio.json)
 - [ltx-2-img2video-with-custom-audio](04-Video/Image-to-Video/ltx-2-img2video-with-custom-audio.json)
+- [ltx-2.5-img2video-with-audio-distilled-2x-upscale](04-Video/Image-to-Video/ltx-2.5-img2video-with-audio-distilled-2x-upscale.json)
 - [minimax-fasth3-img2video-first-frame-8-step](04-Video/Image-to-Video/minimax-fasth3-img2video-first-frame-8-step.json)
 - [minimax-fasth3-img2video-first-last-frame-8-step](04-Video/Image-to-Video/minimax-fasth3-img2video-first-last-frame-8-step.json)
 - [minimax-h3-img2video-first-frame-speed-lora](04-Video/Image-to-Video/minimax-h3-img2video-first-frame-speed-lora.json)
@@ -314,6 +315,7 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [minimax-h3-img2video-first-last-frame](04-Video/Image-to-Video/minimax-h3-img2video-first-last-frame.json)
 - [minimax-h3-img2video-last-frame](04-Video/Image-to-Video/minimax-h3-img2video-last-frame.json)
 - [minimax-h3-pika-flex-img2video-first-last-frame-2-stage](04-Video/Image-to-Video/minimax-h3-pika-flex-img2video-first-last-frame-2-stage.json)
+- [minimax-h3-img2video-first-last-frame-full-20-step-2-stage-1088](04-Video/Image-to-Video/minimax-h3-img2video-first-last-frame-full-20-step-2-stage-1088.json)
 - [wan-2.2-img2video-gguf-lightx2v-4-step-lora](04-Video/Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step-lora.json)
 - [wan-2.2-img2video-gguf-lightx2v-4-step](04-Video/Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step.json)
 
@@ -336,6 +338,7 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [minimax-h3-reference-image-audio-sync-speak](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-image-audio-sync-speak.json)
 - [minimax-h3-reference-to-video-2-images](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-to-video-2-images.json)
 - [minimax-h3-reference-to-video-3-images](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-to-video-3-images.json)
+- [minimax-h3-pika-flex-reference-to-video-3-images-2-stage-1088](04-Video/Reference-and-Audio-Sync/minimax-h3-pika-flex-reference-to-video-3-images-2-stage-1088.json)
 - [minimax-h3-reference-to-video-audio-character-swap](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-to-video-audio-character-swap.json)
 - [wan-2.1-infinitetalk-avatar-generator-video2video-basic-single](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-avatar-generator-video2video-basic-single.json)
 - [wan-2.1-infinitetalk-talking-video-easy-extend-3-to-34-seconds](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-talking-video-easy-extend-3-to-34-seconds.json)
@@ -355,6 +358,7 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [minimax-h3-txt2video-secret-sauce-4k-direct-output](04-Video/Text-to-Video/minimax-h3-txt2video-secret-sauce-4k-direct-output.json)
 - [minimax-h3-txt2video-speed-lora](04-Video/Text-to-Video/minimax-h3-txt2video-speed-lora.json)
 - [minimax-h3-txt2video](04-Video/Text-to-Video/minimax-h3-txt2video.json)
+- [mochi-1-txt2video](04-Video/Text-to-Video/mochi-1-txt2video.json)
 
 ## 04-Video/Video-Upscaling
 
@@ -368,6 +372,7 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [seedvr2-video-upscale-duo-api](04-Video/Video-Upscaling/seedvr2-video-upscale-duo-api.json)
 - [seedvr2-video-upscale-toons-api](04-Video/Video-Upscaling/seedvr2-video-upscale-toons-api.json)
 - [seedvr2-video-upscale](04-Video/Video-Upscaling/seedvr2-video-upscale.json)
+- [minimax-h3-video-sharpener-refiner-upscale-from-video](04-Video/Video-Upscaling/minimax-h3-video-sharpener-refiner-upscale-from-video.json)
 
 ## 05-Audio/Music-Generation
 

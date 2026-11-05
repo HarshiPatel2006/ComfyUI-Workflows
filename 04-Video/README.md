@@ -67,6 +67,7 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 |---|---|---|
 | [ltx-2-img2video-with-audio](Image-to-Video/ltx-2-img2video-with-audio.json) | Image to Video with Audio | ComfyUI-VideoHelperSuite, ComfyUI-Easy-Use |
 | [ltx-2-img2video-with-custom-audio](Image-to-Video/ltx-2-img2video-with-custom-audio.json) | Image to Video with Custom Audio | ComfyUI_LayerStyle, ComfyUI-KJNodes, ComfyUI-MelBandRoFormer, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Use |
+| [ltx-2.5-img2video-with-audio-distilled-2x-upscale](Image-to-Video/ltx-2.5-img2video-with-audio-distilled-2x-upscale.json) | Image to Video with Audio — LTX-2.5 22B distilled + 2x latent upscaler | — |
 | [minimax-fasth3-img2video-first-frame-8-step](Image-to-Video/minimax-fasth3-img2video-first-frame-8-step.json) | Image to Video — First Frame (8-Step) | ComfyUI-Pixaroma |
 | [minimax-fasth3-img2video-first-last-frame-8-step](Image-to-Video/minimax-fasth3-img2video-first-last-frame-8-step.json) | Image to Video — First + Last Frame (8-Step) | ComfyUI-Pixaroma |
 | [minimax-h3-img2video-first-frame-speed-lora](Image-to-Video/minimax-h3-img2video-first-frame-speed-lora.json) | Image to Video — First Frame + Speed LoRA | ComfyUI-Pixaroma |
@@ -75,6 +76,7 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 | [minimax-h3-img2video-first-last-frame](Image-to-Video/minimax-h3-img2video-first-last-frame.json) | Image to Video — First + Last Frame | ComfyUI-Pixaroma |
 | [minimax-h3-img2video-last-frame](Image-to-Video/minimax-h3-img2video-last-frame.json) | Image to Video — Last Frame | ComfyUI-Pixaroma |
 | [minimax-h3-pika-flex-img2video-first-last-frame-2-stage](Image-to-Video/minimax-h3-pika-flex-img2video-first-last-frame-2-stage.json) | Image to Video — First + Last Frame, Pika-H3-Flex 6-Step + Latent Upscale (2-Stage) | ComfyUI-KJNodes |
+| [minimax-h3-img2video-first-last-frame-full-20-step-2-stage-1088](Image-to-Video/minimax-h3-img2video-first-last-frame-full-20-step-2-stage-1088.json) | Image to Video — First + Last Frame, full H3 20-step + Pika refiner upscale to 1920x1088, low-VRAM attention (Ulluman S01 Draft 2) | ComfyUI-KJNodes |
 | [wan-2.2-img2video-gguf-lightx2v-4-step-lora](Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step-lora.json) | Image to Video — GGUF Lightx2v 4-Step + LoRA | ComfyUI-GGUF, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Use |
 | [wan-2.2-img2video-gguf-lightx2v-4-step](Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step.json) | Image to Video — GGUF Lightx2v 4-Step | ComfyUI-GGUF, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Use |
 
@@ -99,6 +101,7 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 | [minimax-h3-reference-image-audio-sync-speak](Reference-and-Audio-Sync/minimax-h3-reference-image-audio-sync-speak.json) | Reference Image + Audio Sync — Speak | ComfyUI-Pixaroma |
 | [minimax-h3-reference-to-video-2-images](Reference-and-Audio-Sync/minimax-h3-reference-to-video-2-images.json) | Reference to Video — 2 Images | ComfyUI-Pixaroma |
 | [minimax-h3-reference-to-video-3-images](Reference-and-Audio-Sync/minimax-h3-reference-to-video-3-images.json) | Reference to Video — 3 Images | ComfyUI-Pixaroma |
+| [minimax-h3-pika-flex-reference-to-video-3-images-2-stage-1088](Reference-and-Audio-Sync/minimax-h3-pika-flex-reference-to-video-3-images-2-stage-1088.json) | Reference to Video (3 images) — Pika-H3-Flex ref2va 6-Step + Refiner Upscale 1280x736 → 1920x1088, low-VRAM attention (Naisha SC01) | ComfyUI-KJNodes |
 | [minimax-h3-reference-to-video-audio-character-swap](Reference-and-Audio-Sync/minimax-h3-reference-to-video-audio-character-swap.json) | Reference to Video + Audio — Character Swap | Core only |
 | [wan-2.1-infinitetalk-avatar-generator-video2video-basic-single](Reference-and-Audio-Sync/wan-2.1-infinitetalk-avatar-generator-video2video-basic-single.json) | Talking avatar generator: drive a video with an audio file, TTS or typed text using Wan 2.1 InfiniteTalk | ComfyUI_LayerStyle, audio-separation-nodes-comfyui, ComfyUI_ChatterBox_SRT_Voice, ComfyUI-KJNodes, ComfyUI-WanVideoWrapper, ComfyUI-VideoHelperSuite, comfy_mtb, ComfyUI-Custom-Scripts, rgthree-comfy |
 | [wan-2.1-infinitetalk-talking-video-easy-extend-3-to-34-seconds](Reference-and-Audio-Sync/wan-2.1-infinitetalk-talking-video-easy-extend-3-to-34-seconds.json) | Talking Video — Easy Extend 3 to 34 Seconds | ComfyUI-VideoHelperSuite, rgthree-comfy |
@@ -120,6 +123,7 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 | [minimax-h3-txt2video-secret-sauce-4k-direct-output](Text-to-Video/minimax-h3-txt2video-secret-sauce-4k-direct-output.json) | Text to Video — Secret Sauce 4K Direct Output | ComfyUI-MemoryCleaner, ComfyUI-KJNodes, ComfyUI-VideoHelperSuite, rgthree-comfy, ComfyUI-MiniMaxH3-TimelineDirector, ComfyUI_Comfyroll_CustomNodes, ComfyUI-MiniMaxH3-Unified, H3SigmaRefiner (unknown source), RH_DLSS5Enhance (unknown source) |
 | [minimax-h3-txt2video-speed-lora](Text-to-Video/minimax-h3-txt2video-speed-lora.json) | Text to Video + Speed LoRA | ComfyUI-Pixaroma |
 | [minimax-h3-txt2video](Text-to-Video/minimax-h3-txt2video.json) | Text to Video | ComfyUI-Pixaroma |
+| [mochi-1-txt2video](Text-to-Video/mochi-1-txt2video.json) | Text to Video — Genmo Mochi 1 | — |
 
 ### Video upscaling
 
@@ -135,5 +139,6 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 | [seedvr2-video-upscale-duo-api](Video-Upscaling/seedvr2-video-upscale-duo-api.json) | SeedVR2 7B video upscale run (duo clip) (API format) | ComfyUI-VideoHelperSuite, ComfyUI-SeedVR2_VideoUpscaler |
 | [seedvr2-video-upscale-toons-api](Video-Upscaling/seedvr2-video-upscale-toons-api.json) | SeedVR2 7B video upscale run (toons clip) (API format) | ComfyUI-VideoHelperSuite, ComfyUI-SeedVR2_VideoUpscaler |
 | [seedvr2-video-upscale](Video-Upscaling/seedvr2-video-upscale.json) | Video Upscale | ComfyUI-VideoHelperSuite, ComfyUI-SeedVR2_VideoUpscaler |
+| [minimax-h3-video-sharpener-refiner-upscale-from-video](Video-Upscaling/minimax-h3-video-sharpener-refiner-upscale-from-video.json) | Video Upscale / Sharpen — load any video, re-render it through the H3 2K refiner LoRA (Pika pass-2 only) | — |
 
 See the [main README](../README.md) for models used, setup steps and the full catalog.
