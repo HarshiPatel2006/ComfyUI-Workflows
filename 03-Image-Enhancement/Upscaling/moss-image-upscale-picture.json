@@ -1,0 +1,1638 @@
+{
+  "revision": 0,
+  "last_node_id": 26,
+  "last_link_id": 24,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UNETLoader",
+      "pos": [
+        0,
+        218
+      ],
+      "size": [
+        420,
+        82
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "unet_name",
+          "name": "unet_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "unet_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "weight_dtype",
+          "name": "weight_dtype",
+          "type": "COMBO",
+          "widget": {
+            "name": "weight_dtype"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "MODEL",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "title": "Load Diffusion Model (MOSS-Image SFT)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "moss\\moss_image_sft_int8_convrot.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "moss\\moss_image_sft_int8_convrot.safetensors",
+        "weight_dtype": "default"
+      },
+      "color": "#f66744",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 2,
+      "type": "CLIPLoader",
+      "pos": [
+        0,
+        356
+      ],
+      "size": [
+        420,
+        106
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip_name",
+          "name": "clip_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "type",
+          "name": "type",
+          "type": "COMBO",
+          "widget": {
+            "name": "type"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "device",
+          "name": "device",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "CLIP",
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            2,
+            8,
+            12
+          ]
+        }
+      ],
+      "title": "Load CLIP (Qwen 3.5 9B, reads the prompt)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "qwen3.5_9b_w4a8_gptq.safetensors",
+        "moss_image",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3.5_9b_w4a8_gptq.safetensors",
+        "type": "moss_image",
+        "device": "default"
+      },
+      "color": "#f66744",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 3,
+      "type": "VAELoader",
+      "pos": [
+        0,
+        518
+      ],
+      "size": [
+        420,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "vae_name",
+          "name": "vae_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "VAE",
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            7,
+            19
+          ]
+        }
+      ],
+      "title": "Load VAE (Flux 2 VAE small)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "flux2-vae_small.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "flux2-vae_small.safetensors"
+      },
+      "color": "#f66744",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 4,
+      "type": "PixaromaLoadImageMini",
+      "pos": [
+        460,
+        218
+      ],
+      "size": [
+        366,
+        420
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            10
+          ]
+        },
+        {
+          "localized_name": "image_info",
+          "name": "image_info",
+          "type": "PIX_IMAGE_INFO",
+          "links": null
+        }
+      ],
+      "title": "Load Image Mini Pixaroma (1. your picture)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "21a1f1510c9667410c59315e1aea54dfb1fb14a9",
+        "Node name for S&R": "PixaromaLoadImageMini"
+      },
+      "widgets_values": [
+        "Ep40 Cafe Portrait.jpg",
+        "image",
+        ""
+      ],
+      "widgets_values_named": {
+        "image": "Ep40 Cafe Portrait.jpg",
+        "upload": "image",
+        "pixaroma_load_image_mini_ui": ""
+      },
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 5,
+      "type": "PixaromaLongestSide",
+      "pos": [
+        460,
+        716
+      ],
+      "size": [
+        385,
+        144
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            11,
+            16,
+            23
+          ]
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "title": "Longest Side Pixaroma (2. size before the 2x)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "21a1f1510c9667410c59315e1aea54dfb1fb14a9",
+        "Node name for S&R": "PixaromaLongestSide",
+        "longestSideState": {
+          "size": 1024,
+          "sizes": [
+            768,
+            1024,
+            1280,
+            1536
+          ],
+          "ratio": "keep",
+          "ratios": [
+            "keep"
+          ],
+          "step": 16,
+          "anchor": "center",
+          "allow_upscale": true,
+          "resample": "auto"
+        }
+      },
+      "widgets_values": [],
+      "widgets_values_named": {},
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 6,
+      "type": "PixaromaAIPrompt",
+      "pos": [
+        885,
+        218
+      ],
+      "size": [
+        497,
+        520
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "shape": 7,
+          "type": "CLIP",
+          "link": 12
+        },
+        {
+          "localized_name": "image",
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 11
+        },
+        {
+          "localized_name": "video",
+          "name": "video",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "localized_name": "text",
+          "name": "text",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "name": "image_2",
+          "type": "IMAGE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "text",
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "title": "AI Prompt Pixaroma (3. looks at the picture, writes the prompt)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "21a1f1510c9667410c59315e1aea54dfb1fb14a9",
+        "Node name for S&R": "PixaromaAIPrompt",
+        "aiPromptState": {
+          "idea": "Describe this image as one detailed caption that would recreate it as closely as possible. Describe only what you see, and never mention the image or an original.",
+          "formula": "You turn a user's image idea into one detailed caption for a text-to-image model. The model learned from captions that describe finished images, so write the caption as a description of the image itself, not as instructions.\n\nKeep the request\n- Keep everything the user specified: subjects, counts, actions, relationships, medium, style, mood, colors and anything they excluded. Never contradict or drop it.\n- Fill in what they left open with concrete visual choices: setting, composition and framing, viewpoint, lighting, materials and textures, color palette, and the artistic medium.\n- Describe only what can be seen. Leave out sounds, smells, backstory and intentions.\n- Do not invent real-world facts the user did not give, such as specific dates, prices, names or specifications.\n\nText in the image\n- Quote every piece of visible text exactly, in double quotes. Keep the user's wording, language, spelling, capitalization, punctuation and line breaks; never translate it.\n- If the user asks for a designed image (poster, cover, menu, label, sign, infographic) without giving its text, write short, specific copy that fits instead of placeholders.\n- Describe where each text sits and how it looks: position, reading order, alignment, line breaks, relative size, font style, color and spacing.\n- Do not mention watermarks or artist signatures.\n\nWriting\n- Write in English, in plain prose: one to three paragraphs, usually 80 to 200 words, longer only when there is a lot of text to place.\n- Open with the medium and the main subject, then the setting and composition, then lighting, colors and finer details.\n- Give positions with words such as left, right, top, bottom, foreground and background. No coordinates, lists, headings, JSON or Markdown.\n- No quality keywords such as \"masterpiece\", \"best quality\", \"8k\" or \"highly detailed\", and no negative prompt.\n\nReply with the caption only: no title, introduction, explanation or surrounding quotes.",
+          "model": "",
+          "clip_type": "moss_image",
+          "order": "idea",
+          "sep": "newline",
+          "seed": 1,
+          "temperature": 0.7,
+          "max_length": 4096,
+          "top_k": 64,
+          "top_p": 0.95,
+          "min_p": 0.05,
+          "repetition_penalty": 1,
+          "presence_penalty": 0,
+          "do_sample": true,
+          "thinking": false,
+          "use_default_template": true,
+          "release_model": false,
+          "system_formula": true,
+          "seed_mode": "fixed",
+          "idea_share": 0.489
+        }
+      },
+      "widgets_values": [],
+      "widgets_values_named": {},
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 7,
+      "type": "PixaromaShowText",
+      "pos": [
+        1422,
+        218
+      ],
+      "size": [
+        480,
+        470
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "source",
+          "name": "source",
+          "type": "*",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "text",
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "title": "Show Text Pixaroma (the prompt MOSS gets)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "21a1f1510c9667410c59315e1aea54dfb1fb14a9",
+        "Node name for S&R": "PixaromaShowText"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "text": ""
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 8,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        0,
+        632
+      ],
+      "size": [
+        420,
+        58
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model_name",
+          "name": "model_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "model_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "UPSCALE_MODEL",
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "title": "Load Upscale Model (4x NMKD Siax)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x_NMKD-Siax_200k.pth"
+      ],
+      "widgets_values_named": {
+        "model_name": "4x_NMKD-Siax_200k.pth"
+      },
+      "color": "#f66744",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 9,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        1942,
+        218
+      ],
+      "size": [
+        356,
+        46
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "upscale_model",
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 15
+        },
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "title": "Upscale Image (using Model) (4x bigger)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "ImageUpscaleWithModel"
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 10,
+      "type": "ImageScaleBy",
+      "pos": [
+        1942,
+        320
+      ],
+      "size": [
+        355,
+        82
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "link": 17
+        },
+        {
+          "localized_name": "upscale_method",
+          "name": "upscale_method",
+          "type": "COMBO",
+          "widget": {
+            "name": "upscale_method"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "scale_by",
+          "name": "scale_by",
+          "type": "FLOAT",
+          "widget": {
+            "name": "scale_by"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "title": "Upscale Image By (0.5 = 2x your picture)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "ImageScaleBy"
+      },
+      "widgets_values": [
+        "lanczos",
+        0.5
+      ],
+      "widgets_values_named": {
+        "upscale_method": "lanczos",
+        "scale_by": 0.5
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 11,
+      "type": "VAEEncode",
+      "pos": [
+        1942,
+        458
+      ],
+      "size": [
+        332,
+        46
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "pixels",
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 18
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "LATENT",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            5
+          ]
+        }
+      ],
+      "title": "VAE Encode (the big picture to latent)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "VAEEncode"
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 12,
+      "type": "PixaromaNumberPick",
+      "pos": [
+        885,
+        816
+      ],
+      "size": [
+        320,
+        28
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "value",
+          "name": "value",
+          "type": "INT,FLOAT",
+          "links": [
+            20
+          ]
+        }
+      ],
+      "title": "Number Pick Pixaroma (4. denoise)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "21a1f1510c9667410c59315e1aea54dfb1fb14a9",
+        "Node name for S&R": "PixaromaNumberPick",
+        "numberPickState": {
+          "value": 0.25,
+          "out": "float",
+          "values": [
+            0.15,
+            0.2,
+            0.25,
+            0.3,
+            0.35
+          ]
+        }
+      },
+      "widgets_values": [],
+      "widgets_values_named": {},
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 13,
+      "type": "PixaromaSeed",
+      "pos": [
+        885,
+        922
+      ],
+      "size": [
+        320,
+        86
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "links": [
+            21
+          ]
+        }
+      ],
+      "title": "Seed Pixaroma (5. seed)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "21a1f1510c9667410c59315e1aea54dfb1fb14a9",
+        "Node name for S&R": "PixaromaSeed",
+        "seedState": "{\"seed\":1,\"mode\":\"fixed\",\"compact\":true,\"digits\":16}"
+      },
+      "widgets_values": [
+        {
+          "seed": 1,
+          "mode": "fixed",
+          "compact": true,
+          "digits": 16
+        }
+      ],
+      "widgets_values_named": {
+        "seed_ui": {
+          "seed": 1,
+          "mode": "fixed",
+          "compact": true,
+          "digits": 16
+        }
+      },
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 14,
+      "type": "CLIPTextEncode",
+      "pos": [
+        2338,
+        218
+      ],
+      "size": [
+        400,
+        88
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 2
+        },
+        {
+          "localized_name": "text",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (reads the prompt)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "text": ""
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 15,
+      "type": "CLIPTextEncode",
+      "pos": [
+        2338,
+        362
+      ],
+      "size": [
+        400,
+        110
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "CLIP",
+          "link": 8
+        },
+        {
+          "localized_name": "text",
+          "name": "text",
+          "type": "STRING",
+          "widget": {
+            "name": "text"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "CONDITIONING",
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "title": "CLIP Text Encode (negative prompt)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "nsfw, worst quality, bad anatomy, watermark, jpeg artifact"
+      ],
+      "widgets_values_named": {
+        "text": "nsfw, worst quality, bad anatomy, watermark, jpeg artifact"
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 16,
+      "type": "SkipLayerGuidanceDiTSimple",
+      "pos": [
+        2338,
+        528
+      ],
+      "size": [
+        449,
+        130
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 1
+        },
+        {
+          "localized_name": "double_layers",
+          "name": "double_layers",
+          "type": "STRING",
+          "widget": {
+            "name": "double_layers"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "single_layers",
+          "name": "single_layers",
+          "type": "STRING",
+          "widget": {
+            "name": "single_layers"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "start_percent",
+          "name": "start_percent",
+          "type": "FLOAT",
+          "widget": {
+            "name": "start_percent"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "end_percent",
+          "name": "end_percent",
+          "type": "FLOAT",
+          "widget": {
+            "name": "end_percent"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "MODEL",
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "title": "Skip Layer Guidance (from ComfyUI's MOSS workflow)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "SkipLayerGuidanceDiTSimple"
+      },
+      "widgets_values": [
+        "",
+        "22",
+        0,
+        0.5
+      ],
+      "widgets_values_named": {
+        "double_layers": "",
+        "single_layers": "22",
+        "start_percent": 0,
+        "end_percent": 0.5
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 17,
+      "type": "KSampler",
+      "pos": [
+        2338,
+        714
+      ],
+      "size": [
+        270,
+        262
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "MODEL",
+          "link": 3
+        },
+        {
+          "localized_name": "positive",
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 4
+        },
+        {
+          "localized_name": "negative",
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 9
+        },
+        {
+          "localized_name": "latent_image",
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 5
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": 21
+        },
+        {
+          "localized_name": "steps",
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "sampler_name",
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "scheduler",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "denoise",
+          "name": "denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "denoise"
+          },
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "LATENT",
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "title": "KSampler (15 steps)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        0,
+        "fixed",
+        15,
+        2.5,
+        "er_sde",
+        "simple",
+        0.25
+      ],
+      "widgets_values_named": {
+        "seed": 0,
+        "control_after_generate": "fixed",
+        "steps": 15,
+        "cfg": 2.5,
+        "sampler_name": "er_sde",
+        "scheduler": "simple",
+        "denoise": 0.25
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 18,
+      "type": "VAEDecode",
+      "pos": [
+        2338,
+        1032
+      ],
+      "size": [
+        284,
+        46
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "samples",
+          "name": "samples",
+          "type": "LATENT",
+          "link": 6
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "VAE",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "IMAGE",
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            22,
+            24
+          ]
+        }
+      ],
+      "title": "VAE Decode (latent to picture)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.42.1",
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#254f27",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 19,
+      "type": "PixaromaSaveImage",
+      "pos": [
+        2827,
+        218
+      ],
+      "size": [
+        474,
+        820
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "images",
+          "name": "images",
+          "type": "IMAGE",
+          "link": 22
+        },
+        {
+          "localized_name": "name",
+          "name": "name",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "title": "Save Image Pixaroma (saves the big picture)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "21a1f1510c9667410c59315e1aea54dfb1fb14a9",
+        "Node name for S&R": "PixaromaSaveImage",
+        "saveImageState": "{\"version\":1,\"folder\":\"\",\"pattern\":\"MOSS Image Upscaled Pictures/image_%counter%\",\"format\":\"png\",\"quality\":100,\"embedWorkflow\":true,\"civitaiMeta\":false,\"saveOnRun\":true,\"dateStyle\":\"yyyy-MM-dd\",\"counterDigits\":3,\"folded\":false,\"hideBarWhenFolded\":false,\"webpLossless\":false,\"inputSubfolders\":false,\"showOpen\":true,\"showCopy\":true,\"showFolder\":true,\"showPng\":true,\"showJpg\":true,\"showWebp\":true}"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "widgets_values_named": {
+        "pixaroma_save_image": ""
+      },
+      "color": "#4f2525",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 20,
+      "type": "PixaromaCompare",
+      "pos": [
+        3341,
+        218
+      ],
+      "size": [
+        511,
+        560
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "image1",
+          "name": "image1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 23
+        },
+        {
+          "localized_name": "image2",
+          "name": "image2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 24
+        }
+      ],
+      "outputs": [],
+      "title": "Image Compare Pixaroma (yours and the big one, drag across it)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "21a1f1510c9667410c59315e1aea54dfb1fb14a9",
+        "Node name for S&R": "PixaromaCompare",
+        "compareState": {
+          "mode": 0,
+          "showWhich": 0,
+          "opacity": 0.5,
+          "images": []
+        }
+      },
+      "color": "#4f2525",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 21,
+      "type": "PixaromaLabel",
+      "pos": [
+        -289,
+        98
+      ],
+      "size": [
+        479,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "21a1f1510c9667410c59315e1aea54dfb1fb14a9",
+        "Node name for S&R": "PixaromaLabel"
+      },
+      "widgets_values": [
+        "{\"text\":\"MOSS Image - Upscale a Picture\",\"fontSize\":31,\"fontFamily\":\"Arial\",\"fontColor\":\"#ffffff\",\"textAlign\":\"left\",\"backgroundColor\":\"#f66744\",\"padding\":10,\"borderRadius\":0,\"opacity\":1,\"fontWeight\":\"normal\",\"lineHeight\":1}"
+      ],
+      "widgets_values_named": {
+        "label_json": "{\"text\":\"MOSS Image - Upscale a Picture\",\"fontSize\":31,\"fontFamily\":\"Arial\",\"fontColor\":\"#ffffff\",\"textAlign\":\"left\",\"backgroundColor\":\"#f66744\",\"padding\":10,\"borderRadius\":0,\"opacity\":1,\"fontWeight\":\"normal\",\"lineHeight\":1}"
+      },
+      "color": "rgba(0,0,0,0)",
+      "bgcolor": "rgba(0,0,0,0)"
+    },
+    {
+      "id": 22,
+      "type": "PixaromaInfo",
+      "pos": [
+        -289,
+        189
+      ],
+      "size": [
+        249,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "21a1f1510c9667410c59315e1aea54dfb1fb14a9",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>MODELS AND NODES USED IN THIS WORKFLOW</h1><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;MOSS-Image needs <b>ComfyUI 0.42.0 or newer</b>, the first version with MOSS. On an older ComfyUI, Load CLIP has no <b>moss_image</b> type: update ComfyUI first.</p><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load Diffusion Model</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/MOSS-Image/resolve/main/diffusion_models/moss_image_sft_int8_convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download moss_image_sft_int8_convrot.safetensors<span class=\\\"pix-note-btnsize\\\">5.41 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/diffusion_models/moss</div><p>\\n\\n</p><p>Create the <code>moss</code> folder if it does not exist.</p><p>\\n\\n</p><p>Take the file with <code>sft</code> in its name: that is the finished model. The <code>base</code> files are the raw model, made for training LoRAs.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"CLIP\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load CLIP</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/MOSS-Image/resolve/main/text_encoders/qwen3.5_9b_w4a8_gptq.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download qwen3.5_9b_w4a8_gptq.safetensors<span class=\\\"pix-note-btnsize\\\">7.34 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/text_encoders</div><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"VAE\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load VAE</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/MOSS-Image/resolve/main/vae/flux2-vae_small.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download flux2-vae_small.safetensors<span class=\\\"pix-note-btnsize\\\">250 MB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/vae</div><p>\\n\\n</p><p>This is the <b>small</b> Flux 2 VAE, a different file from <code>flux2-vae.safetensors</code>.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load Upscale Model</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/4x_NMKD-Siax_200k.pth\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download 4x_NMKD-Siax_200k.pth<span class=\\\"pix-note-btnsize\\\">67 MB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/upscale_models</div><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;License</h2><p>\\n\\n</p><p>MOSS-Image is made by OpenMOSS and released under the <b>Apache 2.0</b> license: you may use the pictures and the model commercially.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">MOSS-Image model card</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;After placing the files, restart ComfyUI or refresh model lists using the <b>R</b> shortcut.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"nodes-installed\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Nodes Installed from Manager</h2><p>\\n\\n</p><ul><li>Pixaroma: <b>update to the latest version</b> (these workflows need at least <b>1.4.217</b>). A node shows red or missing? Update Pixaroma.</li></ul><p>\\n\\n</p><p><b>Which version is the newest?</b> The <b>Latest Pixaroma version</b> button shows it and what is new in it. The help page has the update steps for every kind of install.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/latest/?need=1.4.217\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Latest Pixaroma version</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/#update\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">How to update Pixaroma</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"puzzle\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Something missing?</h2><p>\\n\\n</p><p>Each button opens a short video that shows the fix, with the steps written under it.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/missing-nodes/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Red or missing nodes</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/missing-models/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">A model file is missing</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/refresh/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Buttons missing after an update</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"pixaroma\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Resources</h2><p>\\n\\n</p><p>\\n  <a class=\\\"pix-note-discord\\\" href=\\\"https://discord.com/invite/gggpkVgBf3\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Join Discord</a>&nbsp;\\n  <a class=\\\"pix-note-yt\\\" href=\\\"https://www.youtube.com/@pixaroma\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Pixaroma YouTube Channel</a>&nbsp;\\n  <span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/report/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Ask for help</a></span>&nbsp;\\n</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Download Models\",\"icon\":\"download-model\",\"color\":\"#f66744\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>MODELS AND NODES USED IN THIS WORKFLOW</h1><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;MOSS-Image needs <b>ComfyUI 0.42.0 or newer</b>, the first version with MOSS. On an older ComfyUI, Load CLIP has no <b>moss_image</b> type: update ComfyUI first.</p><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load Diffusion Model</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/MOSS-Image/resolve/main/diffusion_models/moss_image_sft_int8_convrot.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download moss_image_sft_int8_convrot.safetensors<span class=\\\"pix-note-btnsize\\\">5.41 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/diffusion_models/moss</div><p>\\n\\n</p><p>Create the <code>moss</code> folder if it does not exist.</p><p>\\n\\n</p><p>Take the file with <code>sft</code> in its name: that is the finished model. The <code>base</code> files are the raw model, made for training LoRAs.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"CLIP\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load CLIP</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/MOSS-Image/resolve/main/text_encoders/qwen3.5_9b_w4a8_gptq.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download qwen3.5_9b_w4a8_gptq.safetensors<span class=\\\"pix-note-btnsize\\\">7.34 GB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/text_encoders</div><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"VAE\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load VAE</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/Comfy-Org/MOSS-Image/resolve/main/vae/flux2-vae_small.safetensors\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download flux2-vae_small.safetensors<span class=\\\"pix-note-btnsize\\\">250 MB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/vae</div><p>\\n\\n</p><p>This is the <b>small</b> Flux 2 VAE, a different file from <code>flux2-vae.safetensors</code>.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Load Upscale Model</h2><p>\\n\\n</p><p>\\n<span class=\\\"pix-note-btnblock\\\">\\n  <a class=\\\"pix-note-dl\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/uwg/upscaler/resolve/main/ESRGAN/4x_NMKD-Siax_200k.pth\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Download 4x_NMKD-Siax_200k.pth<span class=\\\"pix-note-btnsize\\\">67 MB</span></a>\\n</span>&nbsp;\\n</p><p>\\n\\n</p><div class=\\\"pix-note-folderhint\\\" style=\\\"color: #f66744\\\">Place in: ComfyUI/models/upscale_models</div><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;License</h2><p>\\n\\n</p><p>MOSS-Image is made by OpenMOSS and released under the <b>Apache 2.0</b> license: you may use the pictures and the model commercially.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">MOSS-Image model card</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;After placing the files, restart ComfyUI or refresh model lists using the <b>R</b> shortcut.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"nodes-installed\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Nodes Installed from Manager</h2><p>\\n\\n</p><ul><li>Pixaroma: <b>update to the latest version</b> (these workflows need at least <b>1.4.217</b>). A node shows red or missing? Update Pixaroma.</li></ul><p>\\n\\n</p><p><b>Which version is the newest?</b> The <b>Latest Pixaroma version</b> button shows it and what is new in it. The help page has the update steps for every kind of install.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/latest/?need=1.4.217\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Latest Pixaroma version</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/#update\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">How to update Pixaroma</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"puzzle\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Something missing?</h2><p>\\n\\n</p><p>Each button opens a short video that shows the fix, with the steps written under it.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/missing-nodes/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Red or missing nodes</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/missing-models/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">A model file is missing</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/refresh/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Buttons missing after an update</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"pixaroma\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Resources</h2><p>\\n\\n</p><p>\\n  <a class=\\\"pix-note-discord\\\" href=\\\"https://discord.com/invite/gggpkVgBf3\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Join Discord</a>&nbsp;\\n  <a class=\\\"pix-note-yt\\\" href=\\\"https://www.youtube.com/@pixaroma\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Pixaroma YouTube Channel</a>&nbsp;\\n  <span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/report/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Ask for help</a></span>&nbsp;\\n</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Download Models\",\"icon\":\"download-model\",\"color\":\"#f66744\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 23,
+      "type": "PixaromaInfo",
+      "pos": [
+        -289,
+        270
+      ],
+      "size": [
+        191,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "21a1f1510c9667410c59315e1aea54dfb1fb14a9",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>HOW TO USE</h1><p>\\n\\n</p><p>Makes <b>your own picture twice as big with real detail</b>. The MOSS text encoder looks at it and writes a prompt, an upscale model makes it bigger, and MOSS repaints it lightly so skin, hair, fabric and small letters look real, not just sharpened.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"to-do\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Steps</h2><p>\\n\\n</p><ol><li>Load your picture in <b>Load Image Mini Pixaroma</b>.</li><li>Pick the size on <b>Longest Side Pixaroma</b>: the final picture is twice that (1024 becomes 2048).</li><li>Pick the <b>denoise</b> on <b>Number Pick Pixaroma</b>: <b>0.25</b> is a good start.</li><li>Press <b>Run</b>, then drag across <b>Image Compare Pixaroma</b> to compare yours and the big one.</li></ol><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"idea\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;More to try</h2><p>\\n\\n</p><p>The second example from the video: make the red panda with the <b>More to try</b> prompt of workflow 1, load it here and press <b>Run</b> at 0.25.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Good to know</h2><p>\\n\\n</p><ul><li>Every AI upscaler has a harder time with real photos: skin and hair can come out too smooth. Illustrations and 3D pictures usually come out cleaner: on the red panda even the upscale model alone looked clean, while on a photo it looked plastic until the MOSS pass. For photos, keep the denoise low.</li><li>In our tests it kept the person and the words: a shop sign and its handwritten line came back right at 0.25 and at 0.35.</li><li>It makes a picture bigger, it does not repair it: scratches and dust on an old photo stay. Small faces in a group photo can change a little above 0.25: use 0.15 or 0.2 there.</li><li>For a picture you make with MOSS, workflow 8 does the same with your own prompt and seed.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"question-mark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Something not working?</h2><p>\\n\\n</p><p>Each button opens the answer on the Pixaroma help page.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/faq/#q-ai-prompt-local\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">What AI Prompt needs</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/faq/#q-save-other-folder\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Save to your own folder</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/look/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Nodes look different from the video</a></span>&nbsp;</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"How to Use\",\"icon\":\"to-do\",\"color\":\"#2a9d8f\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>HOW TO USE</h1><p>\\n\\n</p><p>Makes <b>your own picture twice as big with real detail</b>. The MOSS text encoder looks at it and writes a prompt, an upscale model makes it bigger, and MOSS repaints it lightly so skin, hair, fabric and small letters look real, not just sharpened.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"to-do\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Steps</h2><p>\\n\\n</p><ol><li>Load your picture in <b>Load Image Mini Pixaroma</b>.</li><li>Pick the size on <b>Longest Side Pixaroma</b>: the final picture is twice that (1024 becomes 2048).</li><li>Pick the <b>denoise</b> on <b>Number Pick Pixaroma</b>: <b>0.25</b> is a good start.</li><li>Press <b>Run</b>, then drag across <b>Image Compare Pixaroma</b> to compare yours and the big one.</li></ol><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"idea\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;More to try</h2><p>\\n\\n</p><p>The second example from the video: make the red panda with the <b>More to try</b> prompt of workflow 1, load it here and press <b>Run</b> at 0.25.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Good to know</h2><p>\\n\\n</p><ul><li>Every AI upscaler has a harder time with real photos: skin and hair can come out too smooth. Illustrations and 3D pictures usually come out cleaner: on the red panda even the upscale model alone looked clean, while on a photo it looked plastic until the MOSS pass. For photos, keep the denoise low.</li><li>In our tests it kept the person and the words: a shop sign and its handwritten line came back right at 0.25 and at 0.35.</li><li>It makes a picture bigger, it does not repair it: scratches and dust on an old photo stay. Small faces in a group photo can change a little above 0.25: use 0.15 or 0.2 there.</li><li>For a picture you make with MOSS, workflow 8 does the same with your own prompt and seed.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"question-mark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Something not working?</h2><p>\\n\\n</p><p>Each button opens the answer on the Pixaroma help page.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/faq/#q-ai-prompt-local\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">What AI Prompt needs</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/faq/#q-save-other-folder\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Save to your own folder</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/look/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Nodes look different from the video</a></span>&nbsp;</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"How to Use\",\"icon\":\"to-do\",\"color\":\"#2a9d8f\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 24,
+      "type": "PixaromaInfo",
+      "pos": [
+        -289,
+        351
+      ],
+      "size": [
+        186,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "21a1f1510c9667410c59315e1aea54dfb1fb14a9",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>WHAT EACH NODE DOES</h1><p>\\n\\n</p><p>The colour of a node tells you what kind of node it is. Nothing here needs changing except the blue ones.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Models to download</h2><p>\\n\\n</p><p>Orange. Each one needs a file from the <b>Download Models</b> note.</p><p>\\n\\n</p><ul><li><b>Load Diffusion Model (MOSS-Image SFT)</b> - The image model, <b>MOSS-Image SFT</b> from OpenMOSS: a 5B text-to-image model that is very good at <b>words in pictures</b> and can follow a layout of boxes. The int8 file (5.4 GB) looks the same as the 10 GB bf16 file in our tests.</li><li><b>Load CLIP (Qwen 3.5 9B, reads the prompt)</b> - Reads your prompt and turns the words into something MOSS understands. The type must be <b>moss_image</b>. It can also SEE: here it looks at your picture and writes the prompt for the second pass, so there is nothing extra to download for that.</li><li><b>Load VAE (Flux 2 VAE small)</b> - Turns the finished render into a picture. MOSS uses the <b>small</b> Flux 2 VAE, a different file from the normal flux2-vae.</li><li><b>Load Upscale Model (4x NMKD Siax)</b> - Loads the upscale model, <b>4x NMKD Siax</b>, made for photos (67 MB).</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The steps you set</h2><p>\\n\\n</p><p>Blue, and numbered. These are the only nodes you need to touch.</p><p>\\n\\n</p><ul><li><b>Load Image Mini Pixaroma (1. your picture)</b> - The picture to make bigger. Click it to upload your own, or pick one from the list.</li><li><b>Longest Side Pixaroma (2. size before the 2x)</b> - Sets your picture's longest side first, here <b>1024</b>, with its own shape. The final picture is <b>twice</b> that: 1024 becomes 2048. A bigger number gives a bigger picture and takes longer.</li><li><b>AI Prompt Pixaroma (3. looks at the picture, writes the prompt)</b> - Looks at your picture and writes a detailed prompt for it, so MOSS knows what it is repainting. You do not need to write anything.</li><li><b>Number Pick Pixaroma (4. denoise)</b> - The <b>denoise</b>: how much of the big picture MOSS may repaint. <b>0.25</b> (the default) keeps the person and adds real skin, hair and fabric detail. <b>0.15</b> and <b>0.2</b> stay closest to your picture; <b>0.3</b> and <b>0.35</b> add more new detail, but small things start to change (eyes, small faces). Sharper is not always better: pick what fits your picture.</li><li><b>Seed Pixaroma (5. seed)</b> - The seed of MOSS's pass. Another seed changes only the fine detail. The demo uses seed <b>1</b>.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The work</h2><p>\\n\\n</p><p>Green. They run by themselves.</p><p>\\n\\n</p><ul><li><b>Upscale Image (using Model) (4x bigger)</b> - Makes your picture 4 times bigger with the upscale model.</li><li><b>Upscale Image By (0.5 = 2x your picture)</b> - Brings the 4x picture down to <b>2 times</b> your picture's size. On its own the result looks sharp but a bit artificial; MOSS's pass makes the detail real.</li><li><b>VAE Encode (the big picture to latent)</b> - Turns the big picture into MOSS's own format for its pass.</li><li><b>CLIP Text Encode (reads the prompt)</b> - Reads the prompt through the text encoder.</li><li><b>CLIP Text Encode (negative prompt)</b> - The negative prompt from ComfyUI's own MOSS workflow and the MOSS user guide: <i>nsfw, worst quality, bad anatomy, watermark, jpeg artifact</i>. Leave it as it is.</li><li><b>Skip Layer Guidance (from ComfyUI's MOSS workflow)</b> - A setting from ComfyUI's own MOSS workflow and the MOSS user guide: it skips layer 22 in the negative half of the first half of the steps. Leave it as it is.</li><li><b>KSampler (15 steps)</b> - MOSS's pass: it repaints the big picture lightly in <b>15 steps</b>, at the denoise you pick on <b>Number Pick Pixaroma</b>. CFG 2.5, er_sde and simple are the settings of ComfyUI's own MOSS workflow.</li><li><b>VAE Decode (latent to picture)</b> - Turns the finished render into a picture.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The result</h2><p>\\n\\n</p><p>Dark red, at the end.</p><p>\\n\\n</p><ul><li><b>Save Image Pixaroma (saves the big picture)</b> - Saves the big picture as PNG into <code>ComfyUI/output/MOSS Image Upscaled Pictures</code> and shows it on the node.</li><li><b>Image Compare Pixaroma (yours and the big one, drag across it)</b> - Your picture (1) and the big one (2) on top of each other. Drag across it to compare.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"info\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Readouts</h2><p>\\n\\n</p><p>Dark. Nothing to set: they show you what happened.</p><p>\\n\\n</p><ul><li><b>Show Text Pixaroma (the prompt MOSS gets)</b> - Shows the prompt the AI wrote for your picture.</li><li><b>Run Timer</b> - The dark clock above the result shows how long the last Run took.</li></ul><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Nodes Info\",\"icon\":\"node-v5\",\"color\":\"#3d7cc9\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>WHAT EACH NODE DOES</h1><p>\\n\\n</p><p>The colour of a node tells you what kind of node it is. Nothing here needs changing except the blue ones.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"model-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Models to download</h2><p>\\n\\n</p><p>Orange. Each one needs a file from the <b>Download Models</b> note.</p><p>\\n\\n</p><ul><li><b>Load Diffusion Model (MOSS-Image SFT)</b> - The image model, <b>MOSS-Image SFT</b> from OpenMOSS: a 5B text-to-image model that is very good at <b>words in pictures</b> and can follow a layout of boxes. The int8 file (5.4 GB) looks the same as the 10 GB bf16 file in our tests.</li><li><b>Load CLIP (Qwen 3.5 9B, reads the prompt)</b> - Reads your prompt and turns the words into something MOSS understands. The type must be <b>moss_image</b>. It can also SEE: here it looks at your picture and writes the prompt for the second pass, so there is nothing extra to download for that.</li><li><b>Load VAE (Flux 2 VAE small)</b> - Turns the finished render into a picture. MOSS uses the <b>small</b> Flux 2 VAE, a different file from the normal flux2-vae.</li><li><b>Load Upscale Model (4x NMKD Siax)</b> - Loads the upscale model, <b>4x NMKD Siax</b>, made for photos (67 MB).</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The steps you set</h2><p>\\n\\n</p><p>Blue, and numbered. These are the only nodes you need to touch.</p><p>\\n\\n</p><ul><li><b>Load Image Mini Pixaroma (1. your picture)</b> - The picture to make bigger. Click it to upload your own, or pick one from the list.</li><li><b>Longest Side Pixaroma (2. size before the 2x)</b> - Sets your picture's longest side first, here <b>1024</b>, with its own shape. The final picture is <b>twice</b> that: 1024 becomes 2048. A bigger number gives a bigger picture and takes longer.</li><li><b>AI Prompt Pixaroma (3. looks at the picture, writes the prompt)</b> - Looks at your picture and writes a detailed prompt for it, so MOSS knows what it is repainting. You do not need to write anything.</li><li><b>Number Pick Pixaroma (4. denoise)</b> - The <b>denoise</b>: how much of the big picture MOSS may repaint. <b>0.25</b> (the default) keeps the person and adds real skin, hair and fabric detail. <b>0.15</b> and <b>0.2</b> stay closest to your picture; <b>0.3</b> and <b>0.35</b> add more new detail, but small things start to change (eyes, small faces). Sharper is not always better: pick what fits your picture.</li><li><b>Seed Pixaroma (5. seed)</b> - The seed of MOSS's pass. Another seed changes only the fine detail. The demo uses seed <b>1</b>.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The work</h2><p>\\n\\n</p><p>Green. They run by themselves.</p><p>\\n\\n</p><ul><li><b>Upscale Image (using Model) (4x bigger)</b> - Makes your picture 4 times bigger with the upscale model.</li><li><b>Upscale Image By (0.5 = 2x your picture)</b> - Brings the 4x picture down to <b>2 times</b> your picture's size. On its own the result looks sharp but a bit artificial; MOSS's pass makes the detail real.</li><li><b>VAE Encode (the big picture to latent)</b> - Turns the big picture into MOSS's own format for its pass.</li><li><b>CLIP Text Encode (reads the prompt)</b> - Reads the prompt through the text encoder.</li><li><b>CLIP Text Encode (negative prompt)</b> - The negative prompt from ComfyUI's own MOSS workflow and the MOSS user guide: <i>nsfw, worst quality, bad anatomy, watermark, jpeg artifact</i>. Leave it as it is.</li><li><b>Skip Layer Guidance (from ComfyUI's MOSS workflow)</b> - A setting from ComfyUI's own MOSS workflow and the MOSS user guide: it skips layer 22 in the negative half of the first half of the steps. Leave it as it is.</li><li><b>KSampler (15 steps)</b> - MOSS's pass: it repaints the big picture lightly in <b>15 steps</b>, at the denoise you pick on <b>Number Pick Pixaroma</b>. CFG 2.5, er_sde and simple are the settings of ComfyUI's own MOSS workflow.</li><li><b>VAE Decode (latent to picture)</b> - Turns the finished render into a picture.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The result</h2><p>\\n\\n</p><p>Dark red, at the end.</p><p>\\n\\n</p><ul><li><b>Save Image Pixaroma (saves the big picture)</b> - Saves the big picture as PNG into <code>ComfyUI/output/MOSS Image Upscaled Pictures</code> and shows it on the node.</li><li><b>Image Compare Pixaroma (yours and the big one, drag across it)</b> - Your picture (1) and the big one (2) on top of each other. Drag across it to compare.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"info\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Readouts</h2><p>\\n\\n</p><p>Dark. Nothing to set: they show you what happened.</p><p>\\n\\n</p><ul><li><b>Show Text Pixaroma (the prompt MOSS gets)</b> - Shows the prompt the AI wrote for your picture.</li><li><b>Run Timer</b> - The dark clock above the result shows how long the last Run took.</li></ul><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Nodes Info\",\"icon\":\"node-v5\",\"color\":\"#3d7cc9\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 25,
+      "type": "PixaromaInfo",
+      "pos": [
+        -289,
+        432
+      ],
+      "size": [
+        180,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "21a1f1510c9667410c59315e1aea54dfb1fb14a9",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>RUN TIMES</h1><p>\\n\\n</p><p>Measured on a <b>24 GB RTX 4090</b> with this workflow, with the models already loaded. A different card gives different numbers, but the shape holds: the time grows with the number of pictures and their size.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><table class=\\\"pix-note-grid\\\" style=\\\"--pix-note-grid-border: #f66744; --pix-note-grid-header-bg: #1a1a1a\\\"><thead><tr><th>What</th><th>Time</th></tr></thead><tbody><tr><td>The AI writing the prompt</td><td>about 3 s</td></tr><tr><td>1024 picture to 2048, MOSS pass</td><td>about 30 s</td></tr></tbody></table><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The first Run of the session</h2><p>\\n\\n</p><p>The first Run after starting ComfyUI also has to load the models from disk (MOSS and its text encoder, about 13 GB together), so it takes longer. After that they stay loaded.</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Run Times\",\"icon\":\"run-timer\",\"color\":\"#3f9a4f\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>RUN TIMES</h1><p>\\n\\n</p><p>Measured on a <b>24 GB RTX 4090</b> with this workflow, with the models already loaded. A different card gives different numbers, but the shape holds: the time grows with the number of pictures and their size.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><table class=\\\"pix-note-grid\\\" style=\\\"--pix-note-grid-border: #f66744; --pix-note-grid-header-bg: #1a1a1a\\\"><thead><tr><th>What</th><th>Time</th></tr></thead><tbody><tr><td>The AI writing the prompt</td><td>about 3 s</td></tr><tr><td>1024 picture to 2048, MOSS pass</td><td>about 30 s</td></tr></tbody></table><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"warning-v1\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The first Run of the session</h2><p>\\n\\n</p><p>The first Run after starting ComfyUI also has to load the models from disk (MOSS and its text encoder, about 13 GB together), so it takes longer. After that they stay loaded.</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Run Times\",\"icon\":\"run-timer\",\"color\":\"#3f9a4f\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 26,
+      "type": "PixaromaRunTimer",
+      "pos": [
+        3160,
+        110
+      ],
+      "size": [
+        141,
+        50
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "21a1f1510c9667410c59315e1aea54dfb1fb14a9",
+        "Node name for S&R": "PixaromaRunTimer"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      16,
+      0,
+      "MODEL"
+    ],
+    [
+      2,
+      2,
+      0,
+      14,
+      0,
+      "CLIP"
+    ],
+    [
+      3,
+      16,
+      0,
+      17,
+      0,
+      "MODEL"
+    ],
+    [
+      4,
+      14,
+      0,
+      17,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      5,
+      11,
+      0,
+      17,
+      3,
+      "LATENT"
+    ],
+    [
+      6,
+      17,
+      0,
+      18,
+      0,
+      "LATENT"
+    ],
+    [
+      7,
+      3,
+      0,
+      18,
+      1,
+      "VAE"
+    ],
+    [
+      8,
+      2,
+      0,
+      15,
+      0,
+      "CLIP"
+    ],
+    [
+      9,
+      15,
+      0,
+      17,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      10,
+      4,
+      0,
+      5,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      5,
+      0,
+      6,
+      1,
+      "IMAGE"
+    ],
+    [
+      12,
+      2,
+      0,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      13,
+      6,
+      0,
+      7,
+      0,
+      "STRING"
+    ],
+    [
+      14,
+      7,
+      0,
+      14,
+      1,
+      "STRING"
+    ],
+    [
+      15,
+      8,
+      0,
+      9,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      16,
+      5,
+      0,
+      9,
+      1,
+      "IMAGE"
+    ],
+    [
+      17,
+      9,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      10,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      19,
+      3,
+      0,
+      11,
+      1,
+      "VAE"
+    ],
+    [
+      20,
+      12,
+      0,
+      17,
+      9,
+      "FLOAT"
+    ],
+    [
+      21,
+      13,
+      0,
+      17,
+      4,
+      "INT"
+    ],
+    [
+      22,
+      18,
+      0,
+      19,
+      0,
+      "IMAGE"
+    ],
+    [
+      23,
+      5,
+      0,
+      20,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      18,
+      0,
+      20,
+      1,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.65,
+      "offset": [
+        458.2307692307692,
+        147.3846153846154
+      ]
+    }
+  },
+  "version": 0.4
+}

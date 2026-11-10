@@ -5,13 +5,14 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 | Subfolder | What is inside | Workflows |
 |---|---|---|
 | [`Audio-Reactive/`](Audio-Reactive) | Audio-reactive visuals | 1 |
-| [`Character-Animation-Video-to-Video/`](Character-Animation-Video-to-Video) | Character animation, character replacement, character swap and face swap (video2video) | 37 |
-| [`Image-to-Video/`](Image-to-Video) | Image-to-video (img2video), first/last frame | 11 |
-| [`Reference-and-Audio-Sync/`](Reference-and-Audio-Sync) | Reference-to-video, talking video, lip-sync and video dubbing | 26 |
-| [`Text-to-Video/`](Text-to-Video) | Text-to-video (txt2video) | 7 |
-| [`Video-Upscaling/`](Video-Upscaling) | Video upscaling | 10 |
+| [`Character-Animation-Video-to-Video/`](Character-Animation-Video-to-Video) | Character animation, character replacement, character swap and face swap (video2video) | 45 |
+| [`Image-to-Video/`](Image-to-Video) | Image-to-video (img2video), first/last frame | 18 |
+| [`Reference-and-Audio-Sync/`](Reference-and-Audio-Sync) | Reference-to-video, talking video, lip-sync and video dubbing | 38 |
+| [`Text-to-Video/`](Text-to-Video) | Text-to-video (txt2video) | 9 |
+| [`Video-Upscaling/`](Video-Upscaling) | Video upscaling | 13 |
+| [`Video-Editing-and-Tools/`](Video-Editing-and-Tools) | Video editing and clip tools | 1 |
 
-## Workflows (93)
+## Workflows (125)
 
 ### Audio-reactive visuals
 
@@ -60,6 +61,14 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 | [wan-2.2-animate-replace-character-and-background-24fps](Character-Animation-Video-to-Video/wan-2.2-animate-replace-character-and-background-24fps.json) | Replace Character and Background — 24FPS | ComfyUI_LayerStyle, ComfyUI-KJNodes, ComfyUI-WanAnimatePreprocess, ComfyUI-WanVideoWrapper, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Sam3, ComfyUI-Easy-Use |
 | [wan-2.2-animate-replace-only-character-16fps](Character-Animation-Video-to-Video/wan-2.2-animate-replace-only-character-16fps.json) | Replace Only Character — 16FPS | ComfyUI_LayerStyle, ComfyUI-KJNodes, ComfyUI-WanAnimatePreprocess, ComfyUI-WanVideoWrapper, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Sam3, ComfyUI-Easy-Use |
 | [wan-2.2-animate-replace-only-character-24fps](Character-Animation-Video-to-Video/wan-2.2-animate-replace-only-character-24fps.json) | Replace Only Character — 24FPS | ComfyUI_LayerStyle, ComfyUI-KJNodes, ComfyUI-WanAnimatePreprocess, ComfyUI-WanVideoWrapper, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Sam3, ComfyUI-Easy-Use |
+| [minimax-h3-character-swap-lora](Character-Animation-Video-to-Video/minimax-h3-character-swap-lora.json) | Minimax H3 - Character Swap LoRA (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-character-swap-lora-full-hd](Character-Animation-Video-to-Video/minimax-h3-character-swap-lora-full-hd.json) | Minimax H3 - Character Swap LoRA + Upscale to Full HD (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-head-swap-lora](Character-Animation-Video-to-Video/minimax-h3-head-swap-lora.json) | Minimax H3 - Head Swap LoRA (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-cartoon-mascot-swap-reference-video](Character-Animation-Video-to-Video/minimax-h3-cartoon-mascot-swap-reference-video.json) | Minimax H3 - Cartoon and Mascot Swap with Reference Video (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-pose-controlnet-motion-transfer](Character-Animation-Video-to-Video/minimax-h3-pose-controlnet-motion-transfer.json) | Minimax H3 - Pose ControlNet - Motion Transfer (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-vfx-edit-lora-video-by-text](Character-Animation-Video-to-Video/minimax-h3-vfx-edit-lora-video-by-text.json) | Minimax H3 - VFX Edit LoRA - Edit a Video by Text (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-vfx-edit-lora-outfit-from-pictures](Character-Animation-Video-to-Video/minimax-h3-vfx-edit-lora-outfit-from-pictures.json) | Minimax H3 - VFX Edit LoRA - Change the Outfit from Pictures (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-style-transfer-lora-restyle-video](Character-Animation-Video-to-Video/minimax-h3-style-transfer-lora-restyle-video.json) | Minimax H3 - Style Transfer LoRA - Restyle a Video (Ep41) | ComfyUI-Pixaroma |
 
 ### Image-to-video (img2video), first/last frame
 
@@ -79,6 +88,10 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 | [minimax-h3-img2video-first-last-frame-full-20-step-2-stage-1088](Image-to-Video/minimax-h3-img2video-first-last-frame-full-20-step-2-stage-1088.json) | Image to Video — First + Last Frame, full H3 20-step + Pika refiner upscale to 1920x1088, low-VRAM attention (Ulluman S01 Draft 2) | ComfyUI-KJNodes |
 | [wan-2.2-img2video-gguf-lightx2v-4-step-lora](Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step-lora.json) | Image to Video — GGUF Lightx2v 4-Step + LoRA | ComfyUI-GGUF, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Use |
 | [wan-2.2-img2video-gguf-lightx2v-4-step](Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step.json) | Image to Video — GGUF Lightx2v 4-Step | ComfyUI-GGUF, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Use |
+| [minimax-h3-img2video-prompt-control-ep41](Image-to-Video/minimax-h3-img2video-prompt-control-ep41.json) | Minimax H3 - Picture to Video - Tell It What to Do (Ep41) | ComfyUI-Pixaroma |
+| [flux-2-klein-minimax-h3-outfit-change-spin](Image-to-Video/flux-2-klein-minimax-h3-outfit-change-spin.json) | Flux Klein + Minimax H3 - Outfit Change Spin (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-img2video-first-last-frame-ep41](Image-to-Video/minimax-h3-img2video-first-last-frame-ep41.json) | Bonus - Minimax H3 - First and Last Frame to Video (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-img2video-ep42](Image-to-Video/minimax-h3-img2video-ep42.json) | Bonus - Minimax H3 - Picture to Video (Ep42) | ComfyUI-Pixaroma |
 
 ### Reference-to-video, talking video, lip-sync and video dubbing
 
@@ -111,6 +124,17 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 | [wan-2.1-infinitetalk-talking-video-manual-extend-3-to-34-seconds](Reference-and-Audio-Sync/wan-2.1-infinitetalk-talking-video-manual-extend-3-to-34-seconds.json) | Talking Video — Manual Extend 3 to 34 Seconds | ComfyUI-VideoHelperSuite, rgthree-comfy |
 | [wan-2.1-infinitetalk-video-dubbing-video2video-flat](Reference-and-Audio-Sync/wan-2.1-infinitetalk-video-dubbing-video2video-flat.json) | Flattened single-path version of the InfiniteTalk video dubbing workflow | ComfyUI_LayerStyle, ComfyUI-KJNodes, ComfyUI-WanVideoWrapper, ComfyUI-VideoHelperSuite, comfy_mtb, ComfyUI-Custom-Scripts |
 | [wan-2.1-infinitetalk-video-dubbing-video2video](Reference-and-Audio-Sync/wan-2.1-infinitetalk-video-dubbing-video2video.json) | Video dubbing (video2video): Wan 2.1 InfiniteTalk re-animates the speaker to a new audio track, TTS or text | ComfyUI_LayerStyle, ComfyUI-KJNodes, ComfyUI-WanVideoWrapper, ComfyUI-VideoHelperSuite, comfy_mtb, ComfyUI-Custom-Scripts, rgthree-comfy |
+| [minimax-h3-picture-talk-from-typed-words](Reference-and-Audio-Sync/minimax-h3-picture-talk-from-typed-words.json) | Minimax H3 - Make a Picture Talk from Typed Words (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-audio-sync-picture-talk-ep41](Reference-and-Audio-Sync/minimax-h3-audio-sync-picture-talk-ep41.json) | Minimax H3 - Audio Sync - Make a Picture Talk (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-audio-sync-picture-sing-ep41](Reference-and-Audio-Sync/minimax-h3-audio-sync-picture-sing-ep41.json) | Minimax H3 - Audio Sync - Make a Picture Sing (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-timeline-sing-scenes](Reference-and-Audio-Sync/minimax-h3-timeline-sing-scenes.json) | Minimax H3 - Timeline - Sing a Song in Scenes (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-timeline-sing-clean-cuts](Reference-and-Audio-Sync/minimax-h3-timeline-sing-clean-cuts.json) | Minimax H3 - Timeline - Sing with Clean Cuts (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-timeline-four-singers](Reference-and-Audio-Sync/minimax-h3-timeline-four-singers.json) | Minimax H3 - Timeline - Four Singers in One Song (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-timeline-sing-character-walks-in](Reference-and-Audio-Sync/minimax-h3-timeline-sing-character-walks-in.json) | Minimax H3 - Timeline - Sing + a Character Walks In (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-timeline-act-story-scenes](Reference-and-Audio-Sync/minimax-h3-timeline-act-story-scenes.json) | Minimax H3 - Timeline - Act a Story in Scenes (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-timeline-act-walk-new-place](Reference-and-Audio-Sync/minimax-h3-timeline-act-walk-new-place.json) | Minimax H3 - Timeline - Act - Walk Into a New Place (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-timeline-redo-one-scene-keep](Reference-and-Audio-Sync/minimax-h3-timeline-redo-one-scene-keep.json) | Minimax H3 - Timeline - Redo One Scene (Keep) (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-timeline-sing-bigger-size](Reference-and-Audio-Sync/minimax-h3-timeline-sing-bigger-size.json) | Minimax H3 - Timeline - Sing at a Bigger Size (Ep41) | ComfyUI-Pixaroma |
 
 ### Text-to-video (txt2video)
 
@@ -124,6 +148,7 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 | [minimax-h3-txt2video-speed-lora](Text-to-Video/minimax-h3-txt2video-speed-lora.json) | Text to Video + Speed LoRA | ComfyUI-Pixaroma |
 | [minimax-h3-txt2video](Text-to-Video/minimax-h3-txt2video.json) | Text to Video | ComfyUI-Pixaroma |
 | [mochi-1-txt2video](Text-to-Video/mochi-1-txt2video.json) | Text to Video — Genmo Mochi 1 | — |
+| [minimax-h3-txt2video-2k-ep41](Text-to-Video/minimax-h3-txt2video-2k-ep41.json) | Bonus - Minimax H3 - Text to Video in 2K (Ep41) | ComfyUI-Pixaroma |
 
 ### Video upscaling
 
@@ -140,5 +165,14 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 | [seedvr2-video-upscale-toons-api](Video-Upscaling/seedvr2-video-upscale-toons-api.json) | SeedVR2 7B video upscale run (toons clip) (API format) | ComfyUI-VideoHelperSuite, ComfyUI-SeedVR2_VideoUpscaler |
 | [seedvr2-video-upscale](Video-Upscaling/seedvr2-video-upscale.json) | Video Upscale | ComfyUI-VideoHelperSuite, ComfyUI-SeedVR2_VideoUpscaler |
 | [minimax-h3-video-sharpener-refiner-upscale-from-video](Video-Upscaling/minimax-h3-video-sharpener-refiner-upscale-from-video.json) | Video Upscale / Sharpen — load any video, re-render it through the H3 2K refiner LoRA (Pika pass-2 only) | — |
+| [minimax-h3-sharpen-lora-full-hd](Video-Upscaling/minimax-h3-sharpen-lora-full-hd.json) | Minimax H3 - Sharpen LoRA + Upscale to Full HD (Ep41) | ComfyUI-Pixaroma |
+| [minimax-h3-regenerate-lora-remake-video-2k](Video-Upscaling/minimax-h3-regenerate-lora-remake-video-2k.json) | Minimax H3 - Regenerate LoRA - Remake a Video in 2K (Ep41) | ComfyUI-Pixaroma |
+
+
+### Video editing and clip tools
+
+| Workflow | What it does | Custom nodes needed |
+|---|---|---|
+| [pixaroma-video-tools-join-clips](Video-Editing-and-Tools/pixaroma-video-tools-join-clips.json) | Video Tools - Join Your Clips into One Video (Ep41) | ComfyUI-Pixaroma |
 
 See the [main README](../README.md) for models used, setup steps and the full catalog.

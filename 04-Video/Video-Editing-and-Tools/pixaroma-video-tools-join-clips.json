@@ -1,0 +1,1112 @@
+{
+  "revision": 0,
+  "last_node_id": 11,
+  "last_link_id": 12,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "PixaromaLoadVideo",
+      "pos": [
+        0,
+        218
+      ],
+      "size": [
+        367,
+        520
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "video",
+          "name": "video",
+          "type": "COMBO",
+          "widget": {
+            "name": "video"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_frames",
+          "name": "max_frames",
+          "type": "INT",
+          "widget": {
+            "name": "max_frames"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "force_fps",
+          "name": "force_fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "force_fps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "skip_first_frames",
+          "name": "skip_first_frames",
+          "type": "INT",
+          "widget": {
+            "name": "skip_first_frames"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "custom_width",
+          "name": "custom_width",
+          "type": "INT",
+          "widget": {
+            "name": "custom_width"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "custom_height",
+          "name": "custom_height",
+          "type": "INT",
+          "widget": {
+            "name": "custom_height"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "video_frames",
+          "name": "video_frames",
+          "type": "IMAGE",
+          "links": [
+            1
+          ]
+        },
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            2
+          ]
+        },
+        {
+          "localized_name": "frame_count",
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "fps",
+          "name": "fps",
+          "type": "FLOAT",
+          "links": [
+            9
+          ]
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "duration",
+          "name": "duration",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "title": "Load Video Pixaroma (1. clip 1, the original)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "fb380b67555434cd7494653152167daf35ea5406",
+        "Node name for S&R": "PixaromaLoadVideo"
+      },
+      "widgets_values": [
+        "Ep41 Man Talking 10s.mp4",
+        0,
+        24,
+        0,
+        480,
+        864,
+        null,
+        ""
+      ],
+      "widgets_values_named": {
+        "video": "Ep41 Man Talking 10s.mp4",
+        "max_frames": 0,
+        "force_fps": 24,
+        "skip_first_frames": 0,
+        "custom_width": 480,
+        "custom_height": 864,
+        "choose video to upload": null,
+        "pixaroma_video_source": ""
+      },
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 2,
+      "type": "PixaromaLoadVideo",
+      "pos": [
+        0,
+        816
+      ],
+      "size": [
+        381,
+        520
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "video",
+          "name": "video",
+          "type": "COMBO",
+          "widget": {
+            "name": "video"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_frames",
+          "name": "max_frames",
+          "type": "INT",
+          "widget": {
+            "name": "max_frames"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "force_fps",
+          "name": "force_fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "force_fps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "skip_first_frames",
+          "name": "skip_first_frames",
+          "type": "INT",
+          "widget": {
+            "name": "skip_first_frames"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "custom_width",
+          "name": "custom_width",
+          "type": "INT",
+          "widget": {
+            "name": "custom_width"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "custom_height",
+          "name": "custom_height",
+          "type": "INT",
+          "widget": {
+            "name": "custom_height"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "video_frames",
+          "name": "video_frames",
+          "type": "IMAGE",
+          "links": [
+            3
+          ]
+        },
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            4
+          ]
+        },
+        {
+          "localized_name": "frame_count",
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "fps",
+          "name": "fps",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "duration",
+          "name": "duration",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "title": "Load Video Pixaroma (2. clip 2, workflow 07)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "fb380b67555434cd7494653152167daf35ea5406",
+        "Node name for S&R": "PixaromaLoadVideo"
+      },
+      "widgets_values": [
+        "Ep41 Look Flannel Shirt.mp4",
+        0,
+        24,
+        0,
+        480,
+        864,
+        null,
+        ""
+      ],
+      "widgets_values_named": {
+        "video": "Ep41 Look Flannel Shirt.mp4",
+        "max_frames": 0,
+        "force_fps": 24,
+        "skip_first_frames": 0,
+        "custom_width": 480,
+        "custom_height": 864,
+        "choose video to upload": null,
+        "pixaroma_video_source": ""
+      },
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 3,
+      "type": "PixaromaLoadVideo",
+      "pos": [
+        421,
+        218
+      ],
+      "size": [
+        381,
+        520
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "video",
+          "name": "video",
+          "type": "COMBO",
+          "widget": {
+            "name": "video"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_frames",
+          "name": "max_frames",
+          "type": "INT",
+          "widget": {
+            "name": "max_frames"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "force_fps",
+          "name": "force_fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "force_fps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "skip_first_frames",
+          "name": "skip_first_frames",
+          "type": "INT",
+          "widget": {
+            "name": "skip_first_frames"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "custom_width",
+          "name": "custom_width",
+          "type": "INT",
+          "widget": {
+            "name": "custom_width"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "custom_height",
+          "name": "custom_height",
+          "type": "INT",
+          "widget": {
+            "name": "custom_height"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "video_frames",
+          "name": "video_frames",
+          "type": "IMAGE",
+          "links": [
+            5
+          ]
+        },
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            6
+          ]
+        },
+        {
+          "localized_name": "frame_count",
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "fps",
+          "name": "fps",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "duration",
+          "name": "duration",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "title": "Load Video Pixaroma (3. clip 3, workflow 08)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "fb380b67555434cd7494653152167daf35ea5406",
+        "Node name for S&R": "PixaromaLoadVideo"
+      },
+      "widgets_values": [
+        "Ep41 Look Jacket and Cap.mp4",
+        0,
+        24,
+        0,
+        480,
+        864,
+        null,
+        ""
+      ],
+      "widgets_values_named": {
+        "video": "Ep41 Look Jacket and Cap.mp4",
+        "max_frames": 0,
+        "force_fps": 24,
+        "skip_first_frames": 0,
+        "custom_width": 480,
+        "custom_height": 864,
+        "choose video to upload": null,
+        "pixaroma_video_source": ""
+      },
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 4,
+      "type": "PixaromaLoadVideo",
+      "pos": [
+        421,
+        816
+      ],
+      "size": [
+        382,
+        520
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "video",
+          "name": "video",
+          "type": "COMBO",
+          "widget": {
+            "name": "video"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_frames",
+          "name": "max_frames",
+          "type": "INT",
+          "widget": {
+            "name": "max_frames"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "force_fps",
+          "name": "force_fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "force_fps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "skip_first_frames",
+          "name": "skip_first_frames",
+          "type": "INT",
+          "widget": {
+            "name": "skip_first_frames"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "custom_width",
+          "name": "custom_width",
+          "type": "INT",
+          "widget": {
+            "name": "custom_width"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "custom_height",
+          "name": "custom_height",
+          "type": "INT",
+          "widget": {
+            "name": "custom_height"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "video_frames",
+          "name": "video_frames",
+          "type": "IMAGE",
+          "links": [
+            7
+          ]
+        },
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            8
+          ]
+        },
+        {
+          "localized_name": "frame_count",
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "fps",
+          "name": "fps",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "localized_name": "width",
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "height",
+          "name": "height",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "duration",
+          "name": "duration",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "title": "Load Video Pixaroma (4. clip 4, workflow 02)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "fb380b67555434cd7494653152167daf35ea5406",
+        "Node name for S&R": "PixaromaLoadVideo"
+      },
+      "widgets_values": [
+        "Ep41 Look Knight.mp4",
+        0,
+        24,
+        0,
+        480,
+        864,
+        null,
+        ""
+      ],
+      "widgets_values_named": {
+        "video": "Ep41 Look Knight.mp4",
+        "max_frames": 0,
+        "force_fps": 24,
+        "skip_first_frames": 0,
+        "custom_width": 480,
+        "custom_height": 864,
+        "choose video to upload": null,
+        "pixaroma_video_source": ""
+      },
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 5,
+      "type": "PixaromaVideoTools",
+      "pos": [
+        843,
+        218
+      ],
+      "size": [
+        620,
+        760
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "fps",
+          "name": "fps",
+          "shape": 7,
+          "type": "FLOAT",
+          "link": 9
+        },
+        {
+          "localized_name": "music",
+          "name": "music",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "localized_name": "video_1",
+          "name": "video_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 1
+        },
+        {
+          "localized_name": "audio_1",
+          "name": "audio_1",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 2
+        },
+        {
+          "localized_name": "video_2",
+          "name": "video_2",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 3
+        },
+        {
+          "localized_name": "audio_2",
+          "name": "audio_2",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 4
+        },
+        {
+          "localized_name": "video_3",
+          "name": "video_3",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 5
+        },
+        {
+          "localized_name": "audio_3",
+          "name": "audio_3",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 6
+        },
+        {
+          "localized_name": "video_4",
+          "name": "video_4",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 7
+        },
+        {
+          "localized_name": "audio_4",
+          "name": "audio_4",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 8
+        },
+        {
+          "localized_name": "video_5",
+          "name": "video_5",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "audio_5",
+          "name": "audio_5",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "video_frames",
+          "name": "video_frames",
+          "type": "IMAGE",
+          "links": [
+            10
+          ]
+        },
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            11
+          ]
+        },
+        {
+          "localized_name": "frame_count",
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "fps",
+          "name": "fps",
+          "type": "FLOAT",
+          "links": [
+            12
+          ]
+        },
+        {
+          "localized_name": "duration",
+          "name": "duration",
+          "type": "FLOAT",
+          "links": null
+        }
+      ],
+      "title": "Video Tools Pixaroma (5. how to join them)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "fb380b67555434cd7494653152167daf35ea5406",
+        "Node name for S&R": "PixaromaVideoTools",
+        "videoTools": {
+          "v": 1,
+          "clips": [
+            {
+              "cutStart": 0,
+              "cutEnd": 180,
+              "reverse": false
+            },
+            {
+              "cutStart": 52,
+              "cutEnd": 123,
+              "reverse": false
+            },
+            {
+              "cutStart": 112,
+              "cutEnd": 63,
+              "reverse": false
+            },
+            {
+              "cutStart": 172,
+              "cutEnd": 3,
+              "reverse": false
+            }
+          ],
+          "join": "crossfade",
+          "joinFrames": 8,
+          "match": false,
+          "matchStrength": 100,
+          "loop": "off",
+          "loopTimes": 2,
+          "loopFrames": 12,
+          "fadeIn": 6,
+          "fadeOut": 12,
+          "size": "fill",
+          "preview": "animated",
+          "fps": 24,
+          "musicMix": "music"
+        }
+      },
+      "widgets_values": [],
+      "widgets_values_named": {},
+      "color": "#14436c",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 6,
+      "type": "PixaromaSaveVideo",
+      "pos": [
+        1503,
+        218
+      ],
+      "size": [
+        474,
+        860
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "video_frames",
+          "name": "video_frames",
+          "type": "IMAGE",
+          "link": 10
+        },
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 11
+        },
+        {
+          "localized_name": "name",
+          "name": "name",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "fps",
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": 12
+        }
+      ],
+      "outputs": [],
+      "title": "Save Video Pixaroma (the joined video)",
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "fb380b67555434cd7494653152167daf35ea5406",
+        "Node name for S&R": "PixaromaSaveVideo",
+        "saveVideoState": "{\"version\":1,\"folder\":\"\",\"pattern\":\"Joined Videos/joined_%counter%\",\"format\":\"mp4\",\"quality\":75,\"bitDepth\":10,\"trimToAudio\":false,\"audioFadeMs\":0,\"embedWorkflow\":true,\"civitaiMeta\":false,\"saveOnRun\":true,\"dateStyle\":\"yyyy-MM-dd\",\"counterDigits\":3,\"folded\":false,\"hideBarWhenFolded\":false,\"showOpen\":true,\"showDownload\":true,\"showFolder\":true,\"showMp4\":true,\"showMp4Hq\":true}"
+      },
+      "widgets_values": [
+        24,
+        ""
+      ],
+      "widgets_values_named": {
+        "fps": 24,
+        "pixaroma_save_video": ""
+      },
+      "color": "#4f2525",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 7,
+      "type": "PixaromaLabel",
+      "pos": [
+        -289,
+        98
+      ],
+      "size": [
+        629,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "fb380b67555434cd7494653152167daf35ea5406",
+        "Node name for S&R": "PixaromaLabel"
+      },
+      "widgets_values": [
+        "{\"text\":\"Video Tools - Join Your Clips into One Video\",\"fontSize\":31,\"fontFamily\":\"Arial\",\"fontColor\":\"#ffffff\",\"textAlign\":\"left\",\"backgroundColor\":\"#f66744\",\"padding\":10,\"borderRadius\":0,\"opacity\":1,\"fontWeight\":\"normal\",\"lineHeight\":1}"
+      ],
+      "widgets_values_named": {
+        "label_json": "{\"text\":\"Video Tools - Join Your Clips into One Video\",\"fontSize\":31,\"fontFamily\":\"Arial\",\"fontColor\":\"#ffffff\",\"textAlign\":\"left\",\"backgroundColor\":\"#f66744\",\"padding\":10,\"borderRadius\":0,\"opacity\":1,\"fontWeight\":\"normal\",\"lineHeight\":1}"
+      },
+      "color": "rgba(0,0,0,0)",
+      "bgcolor": "rgba(0,0,0,0)"
+    },
+    {
+      "id": 8,
+      "type": "PixaromaInfo",
+      "pos": [
+        -289,
+        189
+      ],
+      "size": [
+        249,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "fb380b67555434cd7494653152167daf35ea5406",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>NODES USED IN THIS WORKFLOW</h1><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><b>No models to download.</b> This workflow only joins and trims videos you already have, so it runs on any computer in seconds, even without a strong graphics card.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"nodes-installed\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Nodes Installed from Manager</h2><p>\\n\\n</p><ul><li>Pixaroma, version <b>1.4.233</b> or newer. A node shows red or missing? Update Pixaroma.</li></ul><p>\\n\\n</p><p><b>Which version is the newest?</b> The <b>Latest Pixaroma version</b> button shows it and what is new in it. The help page has the update steps for every kind of install.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/latest/?need=1.4.233\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Latest Pixaroma version</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/#update\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">How to update Pixaroma</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"puzzle\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Something missing?</h2><p>\\n\\n</p><p>Each button opens a short video that shows the fix, with the steps written under it.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/missing-nodes/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Red or missing nodes</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/refresh/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Buttons missing after an update</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"pixaroma\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Resources</h2><p>\\n\\n</p><p>\\n  <a class=\\\"pix-note-discord\\\" href=\\\"https://discord.com/invite/gggpkVgBf3\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Join Discord</a>&nbsp;\\n  <a class=\\\"pix-note-yt\\\" href=\\\"https://www.youtube.com/@pixaroma\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Pixaroma YouTube Channel</a>&nbsp;\\n  <span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/report/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Ask for help</a></span>&nbsp;\\n</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Download Models\",\"icon\":\"download-model\",\"color\":\"#f66744\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>NODES USED IN THIS WORKFLOW</h1><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><p><b>No models to download.</b> This workflow only joins and trims videos you already have, so it runs on any computer in seconds, even without a strong graphics card.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"nodes-installed\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Nodes Installed from Manager</h2><p>\\n\\n</p><ul><li>Pixaroma, version <b>1.4.233</b> or newer. A node shows red or missing? Update Pixaroma.</li></ul><p>\\n\\n</p><p><b>Which version is the newest?</b> The <b>Latest Pixaroma version</b> button shows it and what is new in it. The help page has the update steps for every kind of install.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/latest/?need=1.4.233\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Latest Pixaroma version</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/#update\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">How to update Pixaroma</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"puzzle\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Something missing?</h2><p>\\n\\n</p><p>Each button opens a short video that shows the fix, with the steps written under it.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/missing-nodes/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Red or missing nodes</a></span>&nbsp;<span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/refresh/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Buttons missing after an update</a></span>&nbsp;</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"pixaroma\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Resources</h2><p>\\n\\n</p><p>\\n  <a class=\\\"pix-note-discord\\\" href=\\\"https://discord.com/invite/gggpkVgBf3\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Join Discord</a>&nbsp;\\n  <a class=\\\"pix-note-yt\\\" href=\\\"https://www.youtube.com/@pixaroma\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Pixaroma YouTube Channel</a>&nbsp;\\n  <span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/report/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Ask for help</a></span>&nbsp;\\n</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Download Models\",\"icon\":\"download-model\",\"color\":\"#f66744\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 9,
+      "type": "PixaromaInfo",
+      "pos": [
+        -289,
+        270
+      ],
+      "size": [
+        191,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "fb380b67555434cd7494653152167daf35ea5406",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>HOW TO USE</h1><p>\\n\\n</p><p>Joins up to eight video clips into one video, WITH their sound: cut the start or end of each clip, pick how they meet, fade in and out, loop, or lay one song under the whole video. No model: it runs in seconds.</p><p>\\n\\n</p><p>The demo: four clips of the SAME 10 seconds of the same man talking. The original, and his new looks from workflow <b>07</b> (VFX Edit), <b>08</b> (outfit from pictures) and <b>02</b> (Character Swap). Each clip shows the NEXT 2.5 seconds of his sentence, so he keeps talking while his look changes.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"to-do\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Steps</h2><p>\\n\\n</p><ol><li><b>1.</b> to <b>4.</b> Load your clips in the order they should play, one <b>Load Video</b> each.</li><li><b>5.</b> On <b>Video Tools</b>, set the cuts, the join and the fades (see below). The timeline on the node follows every change.</li><li>Press <b>Run</b>. <b>Play</b> on Video Tools shows a small moving preview, the saved video plays on <b>Save Video</b>.</li></ol><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"video\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;How the demo is set</h2><p>\\n\\n</p><ul><li>clip 1: <b>Cut start 0</b>, <b>Cut end 180</b>. It keeps the first 2.5 seconds.</li><li>clip 2: <b>Cut start 52</b>, <b>Cut end 123</b>.</li><li>clip 3: <b>Cut start 112</b>, <b>Cut end 63</b>.</li><li>clip 4: <b>Cut start 172</b>, <b>Cut end 3</b>.</li><li><b>Join: Crossfade</b>, Length <b>8</b> frames. A crossfade lays the last 8 frames of one clip over the first 8 of the next. Each clip here starts 8 frames BEFORE the one before it stops, so during the crossfade both show the same moment with the same sound: his voice runs on with no jump while one look melts into the next.</li><li><b>Fade In 6</b>, <b>Out 12</b> frames: up from black at the start, down to black at the end. The sound fades with it.</li><li>Cuts count in <b>frames</b>: at 24 frames a second, 24 frames = 1 second, 60 = 2.5 seconds.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"idea\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;With your own clips</h2><p>\\n\\n</p><ul><li><b>More clips:</b> each time you wire a clip, a new free pair of inputs (<b>video</b> + <b>audio</b>) appears, up to eight.</li><li><b>Join:</b> <b>Cut</b> = one right after the other, <b>Crossfade</b> = one melts into the next, <b>Through black</b> = a short dip to black between them.</li><li><b>Match colors</b> helps when one clip continues another (a clip made from the last frame of the one before) and comes out a little darker or warmer.</li><li><b>A music video:</b> load a song with <b>Load Audio Pixaroma</b> and drop its wire on the <b>music</b> dot of Video Tools. <b>Only music</b> leaves the clips' own sound out, <b>Music + clip sound</b> keeps both. The song is cut to the video's length and fades with it.</li><li><b>Loop:</b> <b>Repeat</b> plays it again, <b>Ping-pong</b> goes forward then backwards, <b>Seamless</b> blends the end into the start for a video that loops with no jump.</li><li><b>&#10226; Back</b> on a clip plays it backwards, its sound too.</li><li>Every clip takes the size of clip 1 (the gear sets Fill, Fit or Stretch). Keep one frame rate for all clips: the Load Video nodes here all load at 24.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"question-mark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Something not working?</h2><p>\\n\\n</p><p>Each button opens the answer on the Pixaroma help page.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/look/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Nodes look different from the video</a></span>&nbsp;</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"How to Use\",\"icon\":\"to-do\",\"color\":\"#2a9d8f\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>HOW TO USE</h1><p>\\n\\n</p><p>Joins up to eight video clips into one video, WITH their sound: cut the start or end of each clip, pick how they meet, fade in and out, loop, or lay one song under the whole video. No model: it runs in seconds.</p><p>\\n\\n</p><p>The demo: four clips of the SAME 10 seconds of the same man talking. The original, and his new looks from workflow <b>07</b> (VFX Edit), <b>08</b> (outfit from pictures) and <b>02</b> (Character Swap). Each clip shows the NEXT 2.5 seconds of his sentence, so he keeps talking while his look changes.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"to-do\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Steps</h2><p>\\n\\n</p><ol><li><b>1.</b> to <b>4.</b> Load your clips in the order they should play, one <b>Load Video</b> each.</li><li><b>5.</b> On <b>Video Tools</b>, set the cuts, the join and the fades (see below). The timeline on the node follows every change.</li><li>Press <b>Run</b>. <b>Play</b> on Video Tools shows a small moving preview, the saved video plays on <b>Save Video</b>.</li></ol><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"video\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;How the demo is set</h2><p>\\n\\n</p><ul><li>clip 1: <b>Cut start 0</b>, <b>Cut end 180</b>. It keeps the first 2.5 seconds.</li><li>clip 2: <b>Cut start 52</b>, <b>Cut end 123</b>.</li><li>clip 3: <b>Cut start 112</b>, <b>Cut end 63</b>.</li><li>clip 4: <b>Cut start 172</b>, <b>Cut end 3</b>.</li><li><b>Join: Crossfade</b>, Length <b>8</b> frames. A crossfade lays the last 8 frames of one clip over the first 8 of the next. Each clip here starts 8 frames BEFORE the one before it stops, so during the crossfade both show the same moment with the same sound: his voice runs on with no jump while one look melts into the next.</li><li><b>Fade In 6</b>, <b>Out 12</b> frames: up from black at the start, down to black at the end. The sound fades with it.</li><li>Cuts count in <b>frames</b>: at 24 frames a second, 24 frames = 1 second, 60 = 2.5 seconds.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"idea\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;With your own clips</h2><p>\\n\\n</p><ul><li><b>More clips:</b> each time you wire a clip, a new free pair of inputs (<b>video</b> + <b>audio</b>) appears, up to eight.</li><li><b>Join:</b> <b>Cut</b> = one right after the other, <b>Crossfade</b> = one melts into the next, <b>Through black</b> = a short dip to black between them.</li><li><b>Match colors</b> helps when one clip continues another (a clip made from the last frame of the one before) and comes out a little darker or warmer.</li><li><b>A music video:</b> load a song with <b>Load Audio Pixaroma</b> and drop its wire on the <b>music</b> dot of Video Tools. <b>Only music</b> leaves the clips' own sound out, <b>Music + clip sound</b> keeps both. The song is cut to the video's length and fades with it.</li><li><b>Loop:</b> <b>Repeat</b> plays it again, <b>Ping-pong</b> goes forward then backwards, <b>Seamless</b> blends the end into the start for a video that loops with no jump.</li><li><b>&#10226; Back</b> on a clip plays it backwards, its sound too.</li><li>Every clip takes the size of clip 1 (the gear sets Fill, Fit or Stretch). Keep one frame rate for all clips: the Load Video nodes here all load at 24.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"question-mark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Something not working?</h2><p>\\n\\n</p><p>Each button opens the answer on the Pixaroma help page.</p><p>\\n\\n</p><p><span class=\\\"pix-note-btnblock\\\"><a class=\\\"pix-note-rm\\\" style=\\\"background-color: #f66744\\\" href=\\\"https://workflows.pixaroma.com/help/look/\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\">Nodes look different from the video</a></span>&nbsp;</p><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"How to Use\",\"icon\":\"to-do\",\"color\":\"#2a9d8f\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 10,
+      "type": "PixaromaInfo",
+      "pos": [
+        -289,
+        351
+      ],
+      "size": [
+        186,
+        51
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "fb380b67555434cd7494653152167daf35ea5406",
+        "Node name for S&R": "PixaromaInfo"
+      },
+      "widgets_values": [
+        "{\"version\":1,\"content\":\"<h1>WHAT EACH NODE DOES</h1><p>\\n\\n</p><p>The colour of a node tells you what kind of node it is. Nothing here needs changing except the blue ones.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The steps you set</h2><p>\\n\\n</p><p>Blue, and numbered. These are the only nodes you need to touch.</p><p>\\n\\n</p><ul><li><b>Load Video Pixaroma (1. clip 1, the original)</b> - Clip 1, the original video. Every clip is loaded at <b>480 x 864</b>, the size the H3 clips were made at, so they all match.</li><li><b>Load Video Pixaroma (2. clip 2, workflow 07)</b> - Clip 2: the same video after workflow 07. It follows the original frame for frame and carries the original sound.</li><li><b>Load Video Pixaroma (3. clip 3, workflow 08)</b> - Clip 3: the same video after workflow 08. It follows the original frame for frame and carries the original sound.</li><li><b>Load Video Pixaroma (4. clip 4, workflow 02)</b> - Clip 4: the same video after workflow 02. It follows the original frame for frame and carries the original sound.</li><li><b>Video Tools Pixaroma (5. how to join them)</b> - Joins the clips in order, with their sound. Each clip is cut to its own 2.5 seconds of the sentence (<b>Cut start</b> / <b>Cut end</b>), the joins are <b>Crossfades</b> of 8 frames, and the video fades in and out at the ends. The timeline on the node shows it all.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The result</h2><p>\\n\\n</p><p>Dark red, at the end.</p><p>\\n\\n</p><ul><li><b>Save Video Pixaroma (the joined video)</b> - Saves the joined video as MP4 into <code>ComfyUI/output/Joined Videos</code> and plays it on the node.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"info\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Readouts</h2><p>\\n\\n</p><p>Dark. Nothing to set: they show you what happened.</p><p>\\n\\n</p><ul><li><b>Run Timer</b> - The dark clock above the result shows how long the last Run took.</li></ul><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Nodes Info\",\"icon\":\"node-v5\",\"color\":\"#3d7cc9\"}}"
+      ],
+      "widgets_values_named": {
+        "note_json": "{\"version\":1,\"content\":\"<h1>WHAT EACH NODE DOES</h1><p>\\n\\n</p><p>The colour of a node tells you what kind of node it is. Nothing here needs changing except the blue ones.</p><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"chip\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The steps you set</h2><p>\\n\\n</p><p>Blue, and numbered. These are the only nodes you need to touch.</p><p>\\n\\n</p><ul><li><b>Load Video Pixaroma (1. clip 1, the original)</b> - Clip 1, the original video. Every clip is loaded at <b>480 x 864</b>, the size the H3 clips were made at, so they all match.</li><li><b>Load Video Pixaroma (2. clip 2, workflow 07)</b> - Clip 2: the same video after workflow 07. It follows the original frame for frame and carries the original sound.</li><li><b>Load Video Pixaroma (3. clip 3, workflow 08)</b> - Clip 3: the same video after workflow 08. It follows the original frame for frame and carries the original sound.</li><li><b>Load Video Pixaroma (4. clip 4, workflow 02)</b> - Clip 4: the same video after workflow 02. It follows the original frame for frame and carries the original sound.</li><li><b>Video Tools Pixaroma (5. how to join them)</b> - Joins the clips in order, with their sound. Each clip is cut to its own 2.5 seconds of the sentence (<b>Cut start</b> / <b>Cut end</b>), the joins are <b>Crossfades</b> of 8 frames, and the video fades in and out at the ends. The timeline on the node shows it all.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"checkmark\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;The result</h2><p>\\n\\n</p><p>Dark red, at the end.</p><p>\\n\\n</p><ul><li><b>Save Video Pixaroma (the joined video)</b> - Saves the joined video as MP4 into <code>ComfyUI/output/Joined Videos</code> and plays it on the node.</li></ul><p>\\n\\n</p><hr class=\\\"pix-note-hr-solid\\\" style=\\\"color: #b8b8b8\\\"><p>\\n\\n</p><h2><span data-ic=\\\"info\\\" class=\\\"pix-note-ic\\\" contenteditable=\\\"false\\\" style=\\\"color: #f66744\\\"></span>&nbsp;Readouts</h2><p>\\n\\n</p><p>Dark. Nothing to set: they show you what happened.</p><p>\\n\\n</p><ul><li><b>Run Timer</b> - The dark clock above the result shows how long the last Run took.</li></ul><p>\\n\\n</p>\",\"buttonColor\":\"#f66744\",\"lineColor\":\"#f66744\",\"backgroundColor\":\"#2a2a2a\",\"info\":{\"title\":\"Nodes Info\",\"icon\":\"node-v5\",\"color\":\"#3d7cc9\"}}"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    },
+    {
+      "id": 11,
+      "type": "PixaromaRunTimer",
+      "pos": [
+        1836,
+        110
+      ],
+      "size": [
+        141,
+        50
+      ],
+      "flags": {
+        "no_title": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "ComfyUI-Pixaroma",
+        "ver": "fb380b67555434cd7494653152167daf35ea5406",
+        "Node name for S&R": "PixaromaRunTimer"
+      },
+      "color": "#1d1d1d",
+      "bgcolor": "#2a2a2a"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      5,
+      2,
+      "IMAGE"
+    ],
+    [
+      2,
+      1,
+      1,
+      5,
+      3,
+      "AUDIO"
+    ],
+    [
+      3,
+      2,
+      0,
+      5,
+      4,
+      "IMAGE"
+    ],
+    [
+      4,
+      2,
+      1,
+      5,
+      5,
+      "AUDIO"
+    ],
+    [
+      5,
+      3,
+      0,
+      5,
+      6,
+      "IMAGE"
+    ],
+    [
+      6,
+      3,
+      1,
+      5,
+      7,
+      "AUDIO"
+    ],
+    [
+      7,
+      4,
+      0,
+      5,
+      8,
+      "IMAGE"
+    ],
+    [
+      8,
+      4,
+      1,
+      5,
+      9,
+      "AUDIO"
+    ],
+    [
+      9,
+      1,
+      3,
+      5,
+      0,
+      "FLOAT"
+    ],
+    [
+      10,
+      5,
+      0,
+      6,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      5,
+      1,
+      6,
+      1,
+      "AUDIO"
+    ],
+    [
+      12,
+      5,
+      3,
+      6,
+      3,
+      "FLOAT"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.65,
+      "offset": [
+        458.2307692307692,
+        147.3846153846154
+      ]
+    }
+  },
+  "version": 0.4
+}

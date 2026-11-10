@@ -13,10 +13,10 @@ Contents:
 
 | Subfolder | What is inside | Workflows |
 |---|---|---|
-| [`Learning-and-Node-Demos/`](Learning-and-Node-Demos) | Learning workflows and node demos | 8 |
+| [`Learning-and-Node-Demos/`](Learning-and-Node-Demos) | Learning workflows and node demos | 14 |
 | [`LoRA-Training/`](LoRA-Training) | LoRA conversion and training | 1 |
 
-## Workflows (9)
+## Workflows (15)
 
 ### Learning workflows and node demos
 
@@ -30,6 +30,12 @@ Contents:
 | [pixaroma-nodes-labels-ep11](Learning-and-Node-Demos/pixaroma-nodes-labels-ep11.json) | Labels (Ep11) | ComfyUI-Pixaroma |
 | [pixaroma-nodes-labels-ep13](Learning-and-Node-Demos/pixaroma-nodes-labels-ep13.json) | Labels (Ep13) | ComfyUI-Pixaroma |
 | [pixaroma-nodes-note](Learning-and-Node-Demos/pixaroma-nodes-note.json) | Note | ComfyUI-Pixaroma |
+| [nodes-explained-02-prompts-explained-finished-z-image-turbo](Learning-and-Node-Demos/nodes-explained-02-prompts-explained-finished-z-image-turbo.json) | Prompts Explained - Finished | Core only |
+| [nodes-explained-02-prompts-explained-pixaroma-z-image-turbo](Learning-and-Node-Demos/nodes-explained-02-prompts-explained-pixaroma-z-image-turbo.json) | Prompts Explained - Pixaroma | ComfyUI-Pixaroma |
+| [nodes-explained-02-prompts-explained-practice-z-image-turbo](Learning-and-Node-Demos/nodes-explained-02-prompts-explained-practice-z-image-turbo.json) | Prompts Explained - Practice | Core only |
+| [nodes-explained-03-image-size-explained-finished-z-image-turbo](Learning-and-Node-Demos/nodes-explained-03-image-size-explained-finished-z-image-turbo.json) | Image Size Explained - Finished | Core only |
+| [nodes-explained-03-image-size-explained-pixaroma-z-image-turbo](Learning-and-Node-Demos/nodes-explained-03-image-size-explained-pixaroma-z-image-turbo.json) | Image Size Explained - Pixaroma | ComfyUI-Pixaroma |
+| [nodes-explained-03-image-size-explained-practice-z-image-turbo](Learning-and-Node-Demos/nodes-explained-03-image-size-explained-practice-z-image-turbo.json) | Image Size Explained - Practice | Core only |
 
 ### LoRA conversion and training
 

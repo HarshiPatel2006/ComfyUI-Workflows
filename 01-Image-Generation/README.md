@@ -5,12 +5,12 @@ Text-to-image (txt2img) workflows for FLUX.2 / FLUX.3 Klein, Qwen-Image 2.1, Kre
 | Subfolder | What is inside | Workflows |
 |---|---|---|
 | [`ControlNet-Guided/`](ControlNet-Guided) | ControlNet-guided generation (Canny, Union) | 2 |
-| [`Design-Typography-and-Transparent/`](Design-Typography-and-Transparent) | Logos, posters, text in images, UI screens and transparent PNGs | 14 |
-| [`LLM-Prompt-Assisted/`](LLM-Prompt-Assisted) | Text-to-image with LLM prompt enhancers and image-to-prompt-to-image | 26 |
+| [`Design-Typography-and-Transparent/`](Design-Typography-and-Transparent) | Logos, posters, text in images, UI screens and transparent PNGs | 16 |
+| [`LLM-Prompt-Assisted/`](LLM-Prompt-Assisted) | Text-to-image with LLM prompt enhancers and image-to-prompt-to-image | 29 |
 | [`Prompt-Batching-and-Variations/`](Prompt-Batching-and-Variations) | Prompt lists, styles and batch variations | 17 |
-| [`Text-to-Image/`](Text-to-Image) | Text-to-image (txt2img) generation | 45 |
+| [`Text-to-Image/`](Text-to-Image) | Text-to-image (txt2img) generation | 49 |
 
-## Workflows (104)
+## Workflows (113)
 
 ### ControlNet-guided generation (Canny, Union)
 
@@ -37,6 +37,8 @@ Text-to-image (txt2img) workflows for FLUX.2 / FLUX.3 Klein, Qwen-Image 2.1, Kre
 | [pixaroma-nodes-text-overlay](Design-Typography-and-Transparent/pixaroma-nodes-text-overlay.json) | Text Overlay | ComfyUI-Pixaroma |
 | [qwen-image-2.1-transparent-png](Design-Typography-and-Transparent/qwen-image-2.1-transparent-png.json) | Transparent PNG | ComfyUI-Pixaroma |
 | [z-image-turbo-txt2img-text-overlay](Design-Typography-and-Transparent/z-image-turbo-txt2img-text-overlay.json) | Text to Image + Text Overlay | ComfyUI-Pixaroma |
+| [moss-image-text-in-images](Design-Typography-and-Transparent/moss-image-text-in-images.json) | MOSS Image - Words in Pictures (Ep40) | ComfyUI-Pixaroma |
+| [p-h3-image-text-in-images](Design-Typography-and-Transparent/p-h3-image-text-in-images.json) | P-H3 Image - Words in Pictures (Ep42) | ComfyUI-Pixaroma |
 
 ### Text-to-image with LLM prompt enhancers and image-to-prompt-to-image
 
@@ -68,6 +70,9 @@ Text-to-image (txt2img) workflows for FLUX.2 / FLUX.3 Klein, Qwen-Image 2.1, Kre
 | [z-image-turbo-int8-txt2img-ai-prompt-enhancer](LLM-Prompt-Assisted/z-image-turbo-int8-txt2img-ai-prompt-enhancer.json) | Text to Image + AI Prompt Enhancer | ComfyUI-Pixaroma |
 | [z-image-turbo-txt2img-gemma-4-prompt-enhancer-find-and-replace](LLM-Prompt-Assisted/z-image-turbo-txt2img-gemma-4-prompt-enhancer-find-and-replace.json) | Text to Image + Gemma 4 Prompt Enhancer + Find and Replace | ComfyUI-Pixaroma |
 | [z-image-turbo-txt2img-gemma-4-prompt-enhancer](LLM-Prompt-Assisted/z-image-turbo-txt2img-gemma-4-prompt-enhancer.json) | Text to Image + Gemma 4 Prompt Enhancer | ComfyUI-Pixaroma |
+| [moss-image-txt2img-prompt-helper](LLM-Prompt-Assisted/moss-image-txt2img-prompt-helper.json) | MOSS Image - Text to Image + Prompt Helper (Ep40) | ComfyUI-Pixaroma |
+| [moss-image-image-to-prompt-to-image](LLM-Prompt-Assisted/moss-image-image-to-prompt-to-image.json) | MOSS Image - Image to Prompt to Image (Ep40) | ComfyUI-Pixaroma |
+| [p-h3-image-short-idea-prompt-upsampler](LLM-Prompt-Assisted/p-h3-image-short-idea-prompt-upsampler.json) | P-H3 Image - Short Idea with Prompt Upsampler (Ep42) | ComfyUI-Pixaroma |
 
 ### Prompt lists, styles and batch variations
 
@@ -140,5 +145,9 @@ Text-to-image (txt2img) workflows for FLUX.2 / FLUX.3 Klein, Qwen-Image 2.1, Kre
 | [z-image-turbo-txt2img-fp8-ep18](Text-to-Image/z-image-turbo-txt2img-fp8-ep18.json) | Text to Image — FP8 (Ep18) | ComfyUI-Pixaroma |
 | [z-image-turbo-txt2img-fp8](Text-to-Image/z-image-turbo-txt2img-fp8.json) | Text to Image — FP8 | Core only |
 | [z-image-turbo-txt2img-gguf](Text-to-Image/z-image-turbo-txt2img-gguf.json) | Text to Image — GGUF | ComfyUI-GGUF |
+| [moss-image-txt2img](Text-to-Image/moss-image-txt2img.json) | MOSS Image - Text to Image (Ep40) | ComfyUI-Pixaroma |
+| [moss-image-txt2img-speed-lora-4-step](Text-to-Image/moss-image-txt2img-speed-lora-4-step.json) | MOSS Image - Fast 4 Steps with a Speed LoRA (Ep40) | ComfyUI-Pixaroma |
+| [moss-image-layout-with-boxes](Text-to-Image/moss-image-layout-with-boxes.json) | MOSS Image - Layout with Boxes (Ep40) | ComfyUI-Pixaroma |
+| [p-h3-image-txt2img](Text-to-Image/p-h3-image-txt2img.json) | P-H3 Image - Text to Image (Ep42) | ComfyUI-Pixaroma |
 
 See the [main README](../README.md) for models used, setup steps and the full catalog.
