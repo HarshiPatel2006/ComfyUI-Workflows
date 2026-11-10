@@ -890,12 +890,6 @@ Original versions of workflows whose library copy has different settings, node s
 | [krea-2-txt2img-ai-prompt-enhancer-ep31-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-ai-prompt-enhancer-ep31-pixaroma-original.json) | Krea 2 Text to Image + Prompt Enhance (Ep31) — source version; compare the [library copy](01-Image-Generation/LLM-Prompt-Assisted/krea-2-txt2img-ai-prompt-enhancer-ep31.json) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Pixaroma |
 | [krea-2-image-to-prompt-to-image-ai-prompt-node-ep31-pixaroma-original](91-Review-Version-Conflicts/krea-2-image-to-prompt-to-image-ai-prompt-node-ep31-pixaroma-original.json) | Krea 2 Text to Image + Prompt From Image (Ep31) — source version; compare the [library copy](01-Image-Generation/LLM-Prompt-Assisted/krea-2-image-to-prompt-to-image-ep31-ai-prompt-node.json) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Pixaroma |
 
-## Pixaroma public download sync (2026-11-10)
-
-Added 99 source files without changing their JSON: 60 new workflows and 39 differing source versions in [Version Conflicts](91-Review-Version-Conflicts/README.md). Compared 398 workflows from the [free episode archive](https://workflows.pixaroma.com/all-workflows.zip) and eight direct downloads from [Nodes Explained](https://workflows.pixaroma.com/comfyui-nodes-explained/); 307 were already present. The archive also contains one prompt-tag library JSON, excluded from workflow counts.
-
-Comparison uses node types, enabled/bypassed state, widget values and directed port connections, ignoring layout, generated node/link IDs and annotation text. Missing and empty widget arrays are equivalent; note-only learning demos retain their note contents for comparison. Different runtime settings and node schemas are preserved for review. Episodes 40–42 introduce MOSS Image, P-H3 Image and new Pixaroma MiniMax H3 pipelines; these use new graph designs rather than the earlier third-party H3 pipelines. The [cloud listing](https://workflows.pixaroma.com/cloud/) offers hosted runs, with no direct workflow JSON downloads.
-
 ## How to use
 
 ### 1. Install ComfyUI
