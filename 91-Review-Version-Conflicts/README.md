@@ -4,8 +4,8 @@ Original versions of workflows whose library copy has different settings, node s
 
 Files here preserve source versions of workflows in the main library with different settings, node schemas or connections. Neither copy was overwritten; keep whichever you prefer.
 
-| File here | Library copy | What differs |
-|---|---|---|
+| File here | Library copy | Models used | What differs |
+|---|---|---|---|
 | [ep11-flux-2-klein-9b-fp8-distilled-one-image-edit-with-paint-pixaroma-node-pixaroma-original](ep11-flux-2-klein-9b-fp8-distilled-one-image-edit-with-paint-pixaroma-node-pixaroma-original.json) | [02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/flux-2-klein-9b-fp8-distilled-paint-guided-edit](../02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/flux-2-klein-9b-fp8-distilled-paint-guided-edit.json) | `flux2-vae.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux-2-klein-9b-fp8mixed.safetensors` | Model path `flux2\` (original) vs `flux/` (library), seed, painted canvas |
 | [ep15-ace-step-v1.5-xl-turbo-text-to-music-pixaroma-original](ep15-ace-step-v1.5-xl-turbo-text-to-music-pixaroma-original.json) | [05-Audio/Music-Generation/ace-step-v1.5-xl-turbo-text-to-music](../05-Audio/Music-Generation/ace-step-v1.5-xl-turbo-text-to-music.json) | `qwen_0.6b_ace15.safetensors`, `qwen_4b_ace15.safetensors`, `acestep_v1.5_xl_turbo_bf16.safetensors` +1 more | Model path `acestep\` subfolder (original) vs root (library); prompt, duration 120 vs 20 |
 | [ep16-flux-2-klein-9b-image-to-prompt-to-image-qwen-3.5-pixaroma-original](ep16-flux-2-klein-9b-image-to-prompt-to-image-qwen-3.5-pixaroma-original.json) | [01-Image-Generation/LLM-Prompt-Assisted/flux-2-klein-9b-image-to-prompt-to-image-qwen-3.5](../01-Image-Generation/LLM-Prompt-Assisted/flux-2-klein-9b-image-to-prompt-to-image-qwen-3.5.json) | `flux-2-klein-9b-fp8mixed.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` +1 more | Input image, seed, last generated prompt text |

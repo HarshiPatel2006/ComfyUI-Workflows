@@ -26,7 +26,7 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 
 ## Workflow categories
 
-568 workflows: 528 in the normal UI format and 40 in API format (filenames ending in `-api`). Each category README lists every workflow in that folder with what it does, the models it loads and the custom nodes it needs. For one flat list of all files, see [`00-LIBRARY-INDEX.md`](00-LIBRARY-INDEX.md).
+568 workflows: 528 in the normal UI format and 40 in API format (filenames ending in `-api`). Each category README lists every workflow in that folder with what it does, the models it loads and the custom nodes it needs; the version-conflicts folder lists the models and what differs from the library copy. For one flat list of all files, see [`00-LIBRARY-INDEX.md`](00-LIBRARY-INDEX.md).
 
 | Category | What is inside | Workflows |
 |---|---|---|
@@ -201,7 +201,7 @@ ComfyUI-Workflows/
 
 Filenames follow `model-task-variant.json` in lowercase kebab-case, for example `krea-2-txt2img-extra-pass-lora.json` or `wan-2.2-img2video-gguf-lightx2v-4-step.json`. Common abbreviations: `txt2img` (text-to-image), `img2img` (image-to-image), `img2video` (image-to-video), `txt2video` (text-to-video), `video2video` (video-to-video). A trailing `-api` means API format; `epNN` marks the tutorial episode a variant came from; `-starter` marks a beginner version.
 
-Each category folder has its own `README.md` listing every workflow with what it does, the models it loads and the custom nodes it needs.
+Each category folder has its own `README.md` listing every workflow with what it does, the models it loads and the custom nodes it needs. The version-conflicts folder lists the models and what differs from the library copy instead.
 
 ## Contributing
 
