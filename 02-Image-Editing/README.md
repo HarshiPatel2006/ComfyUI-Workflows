@@ -5,14 +5,14 @@ Image-to-image (img2img) and instruction editing: single- and multi-image edits,
 | Subfolder | What is inside | Workflows |
 |---|---|---|
 | [`Background-Removal/`](Background-Removal) | Background removal and segmentation | 5 |
-| [`Character-Outfit-and-Pose/`](Character-Outfit-and-Pose) | Outfit transfer, pose and character edits | 9 |
+| [`Character-Outfit-and-Pose/`](Character-Outfit-and-Pose) | Outfit transfer, pose and character edits | 12 |
 | [`Compositing-and-Image-Tools/`](Compositing-and-Image-Tools) | Crop, compose, paint, stitch and other image tools | 15 |
-| [`Inpaint-Outpaint-and-Object-Removal/`](Inpaint-Outpaint-and-Object-Removal) | Inpainting, outpainting and object removal | 14 |
-| [`Multi-Image-Composition/`](Multi-Image-Composition) | Multi-image edits and composition | 18 |
-| [`Single-Image-Edit/`](Single-Image-Edit) | Instruction-based single-image editing (img2img) | 28 |
+| [`Inpaint-Outpaint-and-Object-Removal/`](Inpaint-Outpaint-and-Object-Removal) | Inpainting, outpainting and object removal | 16 |
+| [`Multi-Image-Composition/`](Multi-Image-Composition) | Multi-image edits and composition | 22 |
+| [`Single-Image-Edit/`](Single-Image-Edit) | Instruction-based single-image editing (img2img) | 34 |
 | [`Sketch-and-3D-to-Image/`](Sketch-and-3D-to-Image) | Sketch-to-image and 3D-render-to-image | 9 |
 
-## Workflows (98)
+## Workflows (113)
 
 ### Background removal and segmentation
 
@@ -37,6 +37,9 @@ Image-to-image (img2img) and instruction editing: single- and multi-image edits,
 | [qwen-image-2.1-outfit-change-turbo](Character-Outfit-and-Pose/qwen-image-2.1-outfit-change-turbo.json) | Outfit Change — Turbo | ComfyUI-Pixaroma |
 | [qwen-image-2.1-outfit-change](Character-Outfit-and-Pose/qwen-image-2.1-outfit-change.json) | Outfit Change | ComfyUI-Pixaroma |
 | [qwen-image-2.1-pose-from-a-picture](Character-Outfit-and-Pose/qwen-image-2.1-pose-from-a-picture.json) | Pose from a Picture | ComfyUI-Pixaroma |
+| [flux-2-klein-9b-character-sheet-ep41](Character-Outfit-and-Pose/flux-2-klein-9b-character-sheet-ep41.json) | Flux Klein - Character Sheet from One Picture (Ep41) | ComfyUI-Pixaroma |
+| [p-h3-image-character-sheet](Character-Outfit-and-Pose/p-h3-image-character-sheet.json) | P-H3 Image - Character Sheet (Ep42) | ComfyUI-Pixaroma |
+| [p-h3-image-outfit-from-second-picture](Character-Outfit-and-Pose/p-h3-image-outfit-from-second-picture.json) | P-H3 Image - Outfit from a Second Picture (Ep42) | ComfyUI-Pixaroma |
 
 ### Crop, compose, paint, stitch and other image tools
 
@@ -76,6 +79,8 @@ Image-to-image (img2img) and instruction editing: single- and multi-image edits,
 | [lama-object-remover](Inpaint-Outpaint-and-Object-Removal/lama-object-remover.json) | Object Remover | ComfyUI-RMBG |
 | [qwen-image-2.1-inpaint](Inpaint-Outpaint-and-Object-Removal/qwen-image-2.1-inpaint.json) | Inpaint | ComfyUI-Pixaroma |
 | [qwen-image-2.1-outpaint](Inpaint-Outpaint-and-Object-Removal/qwen-image-2.1-outpaint.json) | Outpaint | ComfyUI-Pixaroma |
+| [p-h3-image-edit-inside-box](Inpaint-Outpaint-and-Object-Removal/p-h3-image-edit-inside-box.json) | P-H3 Image - Edit inside a Box (Ep42) | ComfyUI-Pixaroma |
+| [p-h3-image-outpaint](Inpaint-Outpaint-and-Object-Removal/p-h3-image-outpaint.json) | P-H3 Image - Outpaint (Ep42) | ComfyUI-Pixaroma |
 
 ### Multi-image edits and composition
 
@@ -99,6 +104,10 @@ Image-to-image (img2img) and instruction editing: single- and multi-image edits,
 | [qwen-image-2.1-multi-image-edit-3-images](Multi-Image-Composition/qwen-image-2.1-multi-image-edit-3-images.json) | Multi-Image Edit — 3 Images | ComfyUI-Pixaroma |
 | [qwen-image-2.1-multi-image-edit-4-images](Multi-Image-Composition/qwen-image-2.1-multi-image-edit-4-images.json) | Multi-Image Edit — 4 Images | ComfyUI-Pixaroma |
 | [qwen-image-2.1-multi-image-edit-group-photo-from-6-images](Multi-Image-Composition/qwen-image-2.1-multi-image-edit-group-photo-from-6-images.json) | Multi-Image Edit — Group Photo from 6 Images | ComfyUI-Pixaroma |
+| [p-h3-image-character-in-a-scene](Multi-Image-Composition/p-h3-image-character-in-a-scene.json) | P-H3 Image - Character in a Scene (Ep42) | ComfyUI-Pixaroma |
+| [p-h3-image-logo-on-product](Multi-Image-Composition/p-h3-image-logo-on-product.json) | P-H3 Image - Logo on a Product (Ep42) | ComfyUI-Pixaroma |
+| [p-h3-image-group-photo](Multi-Image-Composition/p-h3-image-group-photo.json) | P-H3 Image - Group Photo (Ep42) | ComfyUI-Pixaroma |
+| [p-h3-image-style-from-second-picture](Multi-Image-Composition/p-h3-image-style-from-second-picture.json) | P-H3 Image - Style from a Second Picture (Ep42) | ComfyUI-Pixaroma |
 
 ### Instruction-based single-image editing (img2img)
 
@@ -132,6 +141,12 @@ Image-to-image (img2img) and instruction editing: single- and multi-image edits,
 | [qwen-image-2.1-one-image-edit-turbo](Single-Image-Edit/qwen-image-2.1-one-image-edit-turbo.json) | One Image Edit — Turbo | ComfyUI-Pixaroma |
 | [qwen-image-2.1-one-image-edit](Single-Image-Edit/qwen-image-2.1-one-image-edit.json) | One Image Edit | ComfyUI-Pixaroma |
 | [sd15-juggernaut-reborn-img2img](Single-Image-Edit/sd15-juggernaut-reborn-img2img.json) | Image to Image | Core only |
+| [moss-image-edit-text-in-a-picture](Single-Image-Edit/moss-image-edit-text-in-a-picture.json) | MOSS Image - Same Picture, New Words (Ep40) | ComfyUI-Pixaroma |
+| [p-h3-image-edit-new-place](Single-Image-Edit/p-h3-image-edit-new-place.json) | P-H3 Image - Image Edit New Place (Ep42) | ComfyUI-Pixaroma |
+| [p-h3-image-relight-day-to-night](Single-Image-Edit/p-h3-image-relight-day-to-night.json) | P-H3 Image - Relight Day to Night (Ep42) | ComfyUI-Pixaroma |
+| [p-h3-image-edit-text-in-a-picture](Single-Image-Edit/p-h3-image-edit-text-in-a-picture.json) | P-H3 Image - Edit Text in a Picture (Ep42) | ComfyUI-Pixaroma |
+| [p-h3-image-restyle-picture](Single-Image-Edit/p-h3-image-restyle-picture.json) | P-H3 Image - Restyle a Picture (Ep42) | ComfyUI-Pixaroma |
+| [p-h3-image-restore-and-colorize](Single-Image-Edit/p-h3-image-restore-and-colorize.json) | P-H3 Image - Restore and Colorize (Ep42) | ComfyUI-Pixaroma |
 
 ### Sketch-to-image and 3D-render-to-image
 

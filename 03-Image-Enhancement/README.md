@@ -5,9 +5,9 @@ Image upscaling (SeedVR2, tiled diffusion, 4x ESRGAN-style models, paid API upsc
 | Subfolder | What is inside | Workflows |
 |---|---|---|
 | [`Filters-and-Color-Grading/`](Filters-and-Color-Grading) | Filters and color grading | 2 |
-| [`Upscaling/`](Upscaling) | Image upscaling | 8 |
+| [`Upscaling/`](Upscaling) | Image upscaling | 11 |
 
-## Workflows (10)
+## Workflows (13)
 
 ### Filters and color grading
 
@@ -28,5 +28,8 @@ Image upscaling (SeedVR2, tiled diffusion, 4x ESRGAN-style models, paid API upsc
 | [6-paid-api-51-credits-nano-banana-pro-upscale](Upscaling/6-paid-api-51-credits-nano-banana-pro-upscale.json) | Nano Banana Pro — Upscale | rgthree-comfy |
 | [7-paid-api-53-credits-recraft-creative-upscale](Upscaling/7-paid-api-53-credits-recraft-creative-upscale.json) | Recraft — Creative Upscale | rgthree-comfy |
 | [8-paid-api-8.5-credits-seedream-4.5-upscale](Upscaling/8-paid-api-8.5-credits-seedream-4.5-upscale.json) | SeeDream 4.5 — Upscale | rgthree-comfy |
+| [moss-image-upscale-2x-keep-picture](Upscaling/moss-image-upscale-2x-keep-picture.json) | MOSS Image - Upscale 2x, Keep the Picture (Ep40) | ComfyUI-Pixaroma |
+| [moss-image-upscale-picture](Upscaling/moss-image-upscale-picture.json) | MOSS Image - Upscale a Picture (Ep40) | ComfyUI-Pixaroma |
+| [p-h3-image-creative-upscale](Upscaling/p-h3-image-creative-upscale.json) | P-H3 Image - Creative Upscale (Ep42) | ComfyUI-Pixaroma |
 
 See the [main README](../README.md) for models used, setup steps and the full catalog.

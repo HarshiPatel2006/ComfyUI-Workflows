@@ -1,8 +1,8 @@
 # ComfyUI Workflows Collection: FLUX, Qwen-Image, Wan, LTX-2, MiniMax H3, Krea 2 and more
 
-[![Workflows](https://img.shields.io/badge/workflows-469-blue)](#workflow-catalog) [![ComfyUI](https://img.shields.io/badge/ComfyUI-workflows-green)](https://github.com/Comfy-Org/ComfyUI) [![Format](https://img.shields.io/badge/format-JSON-lightgrey)](#how-to-use) [![License](https://img.shields.io/badge/license-see%20below-purple)](#license)
+[![Workflows](https://img.shields.io/badge/workflows-568-blue)](#workflow-catalog) [![ComfyUI](https://img.shields.io/badge/ComfyUI-workflows-green)](https://github.com/Comfy-Org/ComfyUI) [![Format](https://img.shields.io/badge/format-JSON-lightgrey)](#how-to-use) [![License](https://img.shields.io/badge/license-see%20below-purple)](#license)
 
-A categorized library of **469 ready-to-use ComfyUI workflows** (`.json`) for **text-to-image (txt2img)**, **image-to-image (img2img) editing**, **inpainting and outpainting**, **background removal**, **upscaling**, **text-to-video and image-to-video (img2video)**, **lip-sync and talking avatars**, **face swap and character swap**, **text-to-speech and music**, **3D generation**, **batch automation** and a complete **AI short-film pipeline**.
+A categorized library of **568 ready-to-use ComfyUI workflows** (`.json`) for **text-to-image (txt2img)**, **image-to-image (img2img) editing**, **inpainting and outpainting**, **background removal**, **upscaling**, **text-to-video and image-to-video (img2video)**, **lip-sync and talking avatars**, **face swap and character swap**, **text-to-speech and music**, **3D generation**, **batch automation** and a complete **AI short-film pipeline**.
 
 Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, install any missing custom nodes with ComfyUI-Manager, add the models, and press **Run**. The catalog below lists what each workflow does, which models it loads and which custom node packs it needs.
 
@@ -60,11 +60,11 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 
 ## Workflow catalog
 
-464 workflows: 424 in the normal UI format and 40 in API format (filenames ending in `-api`). Model names are the files each workflow loads; download links are usually in the notes inside the workflow.
+568 workflows: 528 in the normal UI format and 40 in API format (filenames ending in `-api`). Model names are the files each workflow loads; download links are usually in the notes inside the workflow.
 
 ### 01 · Image Generation
 
-Text-to-image (txt2img) workflows for FLUX.2 / FLUX.3 Klein, Qwen-Image 2.1, Krea 2, Z-Image Turbo, Ming Image, SD 1.5 and more — plus ControlNet, LLM prompt enhancers, typography / logo / transparent PNG design and prompt batching. Folder: [`01-Image-Generation/`](01-Image-Generation) — 104 workflows.
+Text-to-image (txt2img) workflows for FLUX.2 / FLUX.3 Klein, Qwen-Image 2.1, Krea 2, Z-Image Turbo, Ming Image, SD 1.5 and more — plus ControlNet, LLM prompt enhancers, typography / logo / transparent PNG design and prompt batching. Folder: [`01-Image-Generation/`](01-Image-Generation) — 113 workflows.
 
 #### ControlNet-guided generation (Canny, Union) (2)
 
@@ -75,7 +75,7 @@ Folder: [`01-Image-Generation/ControlNet-Guided/`](01-Image-Generation/ControlNe
 | [sd15-juggernaut-reborn-txt2img-controlnet-canny](01-Image-Generation/ControlNet-Guided/sd15-juggernaut-reborn-txt2img-controlnet-canny.json) | Text to Image + ControlNet Canny | `juggernaut_reborn.safetensors`, `control_v11p_sd15_canny_fp16.safetensors` | comfyui_controlnet_aux |
 | [z-image-turbo-txt2img-fp8-aio-controlnet-union](01-Image-Generation/ControlNet-Guided/z-image-turbo-txt2img-fp8-aio-controlnet-union.json) | Text to Image — FP8 AIO + ControlNet Union | `Z-Image-Turbo-Fun-Controlnet-Union.safetensors`, `z-image-turbo-fp8-aio.safetensors` | comfyui_controlnet_aux, rgthree-comfy |
 
-#### Logos, posters, text in images, UI screens and transparent PNGs (14)
+#### Logos, posters, text in images, UI screens and transparent PNGs (16)
 
 Folder: [`01-Image-Generation/Design-Typography-and-Transparent/`](01-Image-Generation/Design-Typography-and-Transparent)
 
@@ -95,8 +95,10 @@ Folder: [`01-Image-Generation/Design-Typography-and-Transparent/`](01-Image-Gene
 | [pixaroma-nodes-text-overlay](01-Image-Generation/Design-Typography-and-Transparent/pixaroma-nodes-text-overlay.json) | Text Overlay | — | ComfyUI-Pixaroma |
 | [qwen-image-2.1-transparent-png](01-Image-Generation/Design-Typography-and-Transparent/qwen-image-2.1-transparent-png.json) | Transparent PNG | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
 | [z-image-turbo-txt2img-text-overlay](01-Image-Generation/Design-Typography-and-Transparent/z-image-turbo-txt2img-text-overlay.json) | Text to Image + Text Overlay | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
+| [moss-image-text-in-images](01-Image-Generation/Design-Typography-and-Transparent/moss-image-text-in-images.json) | MOSS Image - Words in Pictures (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [p-h3-image-text-in-images](01-Image-Generation/Design-Typography-and-Transparent/p-h3-image-text-in-images.json) | P-H3 Image - Words in Pictures (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
 
-#### Text-to-image with LLM prompt enhancers and image-to-prompt-to-image (26)
+#### Text-to-image with LLM prompt enhancers and image-to-prompt-to-image (29)
 
 Folder: [`01-Image-Generation/LLM-Prompt-Assisted/`](01-Image-Generation/LLM-Prompt-Assisted)
 
@@ -153,7 +155,7 @@ Folder: [`01-Image-Generation/Prompt-Batching-and-Variations/`](01-Image-Generat
 | [z-image-turbo-prompt-pack-paragraph](01-Image-Generation/Prompt-Batching-and-Variations/z-image-turbo-prompt-pack-paragraph.json) | Prompt Pack — Paragraph | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
 | [z-image-turbo-prompt-stack](01-Image-Generation/Prompt-Batching-and-Variations/z-image-turbo-prompt-stack.json) | Prompt Stack | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
 
-#### Text-to-image (txt2img) generation (45)
+#### Text-to-image (txt2img) generation (49)
 
 Folder: [`01-Image-Generation/Text-to-Image/`](01-Image-Generation/Text-to-Image)
 
@@ -207,7 +209,7 @@ Folder: [`01-Image-Generation/Text-to-Image/`](01-Image-Generation/Text-to-Image
 
 ### 02 · Image Editing
 
-Image-to-image (img2img) and instruction editing: single- and multi-image edits, inpainting, outpainting, object removal, background removal, outfit and pose changes, sketch-to-image and compositing tools. Folder: [`02-Image-Editing/`](02-Image-Editing) — 98 workflows.
+Image-to-image (img2img) and instruction editing: single- and multi-image edits, inpainting, outpainting, object removal, background removal, outfit and pose changes, sketch-to-image and compositing tools. Folder: [`02-Image-Editing/`](02-Image-Editing) — 113 workflows.
 
 #### Background removal and segmentation (5)
 
@@ -221,7 +223,7 @@ Folder: [`02-Image-Editing/Background-Removal/`](02-Image-Editing/Background-Rem
 | [utility-remove-background-from-transparent-items](02-Image-Editing/Background-Removal/utility-remove-background-from-transparent-items.json) | Remove Background from Transparent Items | — | ComfyUI-RMBG |
 | [utility-remove-background](02-Image-Editing/Background-Removal/utility-remove-background.json) | Remove Background | — | ComfyUI-RMBG, ComfyUI_LayerStyle, rgthree-comfy |
 
-#### Outfit transfer, pose and character edits (9)
+#### Outfit transfer, pose and character edits (12)
 
 Folder: [`02-Image-Editing/Character-Outfit-and-Pose/`](02-Image-Editing/Character-Outfit-and-Pose)
 
@@ -259,7 +261,7 @@ Folder: [`02-Image-Editing/Compositing-and-Image-Tools/`](02-Image-Editing/Compo
 | [utility-image-stitch](02-Image-Editing/Compositing-and-Image-Tools/utility-image-stitch.json) | Image Stitch | — | ComfyUI-RMBG, rgthree-comfy |
 | [utility-image-transformation](02-Image-Editing/Compositing-and-Image-Tools/utility-image-transformation.json) | Image Transformation | — | ComfyUI_LayerStyle, rgthree-comfy |
 
-#### Inpainting, outpainting and object removal (14)
+#### Inpainting, outpainting and object removal (16)
 
 Folder: [`02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/`](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal)
 
@@ -279,8 +281,10 @@ Folder: [`02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/`](02-Image-Editi
 | [lama-object-remover](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/lama-object-remover.json) | Object Remover | — | ComfyUI-RMBG |
 | [qwen-image-2.1-inpaint](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/qwen-image-2.1-inpaint.json) | Inpaint | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
 | [qwen-image-2.1-outpaint](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/qwen-image-2.1-outpaint.json) | Outpaint | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` +1 more | ComfyUI-Pixaroma |
+| [p-h3-image-edit-inside-box](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/p-h3-image-edit-inside-box.json) | P-H3 Image - Edit inside a Box (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [p-h3-image-outpaint](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/p-h3-image-outpaint.json) | P-H3 Image - Outpaint (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
 
-#### Multi-image edits and composition (18)
+#### Multi-image edits and composition (22)
 
 Folder: [`02-Image-Editing/Multi-Image-Composition/`](02-Image-Editing/Multi-Image-Composition)
 
@@ -305,7 +309,7 @@ Folder: [`02-Image-Editing/Multi-Image-Composition/`](02-Image-Editing/Multi-Ima
 | [qwen-image-2.1-multi-image-edit-4-images](02-Image-Editing/Multi-Image-Composition/qwen-image-2.1-multi-image-edit-4-images.json) | Multi-Image Edit — 4 Images | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
 | [qwen-image-2.1-multi-image-edit-group-photo-from-6-images](02-Image-Editing/Multi-Image-Composition/qwen-image-2.1-multi-image-edit-group-photo-from-6-images.json) | Multi-Image Edit — Group Photo from 6 Images | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
 
-#### Instruction-based single-image editing (img2img) (28)
+#### Instruction-based single-image editing (img2img) (34)
 
 Folder: [`02-Image-Editing/Single-Image-Edit/`](02-Image-Editing/Single-Image-Edit)
 
@@ -358,7 +362,7 @@ Folder: [`02-Image-Editing/Sketch-and-3D-to-Image/`](02-Image-Editing/Sketch-and
 
 ### 03 · Image Upscaling and Enhancement
 
-Image upscaling (SeedVR2, tiled diffusion, 4x ESRGAN-style models, paid API upscalers) and filters / color grading. Folder: [`03-Image-Enhancement/`](03-Image-Enhancement) — 10 workflows.
+Image upscaling (SeedVR2, tiled diffusion, 4x ESRGAN-style models, paid API upscalers) and filters / color grading. Folder: [`03-Image-Enhancement/`](03-Image-Enhancement) — 13 workflows.
 
 #### Filters and color grading (2)
 
@@ -369,7 +373,7 @@ Folder: [`03-Image-Enhancement/Filters-and-Color-Grading/`](03-Image-Enhancement
 | [layerstyle-image-filters-and-color-adjustments](03-Image-Enhancement/Filters-and-Color-Grading/layerstyle-image-filters-and-color-adjustments.json) | Image Filters and Color Adjustments | — | ComfyUI_LayerStyle, rgthree-comfy |
 | [utility-image-filters-example](03-Image-Enhancement/Filters-and-Color-Grading/utility-image-filters-example.json) | Image Filters Example | — | ComfyUI-RMBG, ComfyUI_LayerStyle, rgthree-comfy |
 
-#### Image upscaling (8)
+#### Image upscaling (11)
 
 Folder: [`03-Image-Enhancement/Upscaling/`](03-Image-Enhancement/Upscaling)
 
@@ -383,10 +387,13 @@ Folder: [`03-Image-Enhancement/Upscaling/`](03-Image-Enhancement/Upscaling)
 | [6-paid-api-51-credits-nano-banana-pro-upscale](03-Image-Enhancement/Upscaling/6-paid-api-51-credits-nano-banana-pro-upscale.json) | Nano Banana Pro — Upscale | — | rgthree-comfy |
 | [7-paid-api-53-credits-recraft-creative-upscale](03-Image-Enhancement/Upscaling/7-paid-api-53-credits-recraft-creative-upscale.json) | Recraft — Creative Upscale | — | rgthree-comfy |
 | [8-paid-api-8.5-credits-seedream-4.5-upscale](03-Image-Enhancement/Upscaling/8-paid-api-8.5-credits-seedream-4.5-upscale.json) | SeeDream 4.5 — Upscale | — | rgthree-comfy |
+| [moss-image-upscale-2x-keep-picture](03-Image-Enhancement/Upscaling/moss-image-upscale-2x-keep-picture.json) | MOSS Image - Upscale 2x, Keep the Picture (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [moss-image-upscale-picture](03-Image-Enhancement/Upscaling/moss-image-upscale-picture.json) | MOSS Image - Upscale a Picture (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors`, `4x_NMKD-Siax_200k.pth` | ComfyUI-Pixaroma |
+| [p-h3-image-creative-upscale](03-Image-Enhancement/Upscaling/p-h3-image-creative-upscale.json) | P-H3 Image - Creative Upscale (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
 
 ### 04 · AI Video
 
-Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking video and lip-sync, character animation and character swap, video upscaling and audio-reactive video — Wan 2.1 / 2.2, LTX-2, MiniMax H3, SeedVR2, InfiniteTalk, SCAIL. Folder: [`04-Video/`](04-Video) — 93 workflows.
+Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking video and lip-sync, character animation and character swap, video upscaling and audio-reactive video — Wan 2.1 / 2.2, LTX-2, MiniMax H3, SeedVR2, InfiniteTalk, SCAIL. Folder: [`04-Video/`](04-Video) — 125 workflows.
 
 #### Audio-reactive visuals (1)
 
@@ -396,7 +403,7 @@ Folder: [`04-Video/Audio-Reactive/`](04-Video/Audio-Reactive)
 |---|---|---|---|
 | [utility-images-react-to-music-audio-reactive](04-Video/Audio-Reactive/utility-images-react-to-music-audio-reactive.json) | Images React to Music (Audio Reactive) | — | ComfyUI-Pixaroma |
 
-#### Character animation, character replacement, character swap and face swap (video2video) (37)
+#### Character animation, character replacement, character swap and face swap (video2video) (45)
 
 Folder: [`04-Video/Character-Animation-Video-to-Video/`](04-Video/Character-Animation-Video-to-Video)
 
@@ -439,8 +446,16 @@ Folder: [`04-Video/Character-Animation-Video-to-Video/`](04-Video/Character-Anim
 | [wan-2.2-animate-replace-character-and-background-24fps](04-Video/Character-Animation-Video-to-Video/wan-2.2-animate-replace-character-and-background-24fps.json) | Replace Character and Background — 24FPS | `sam3.pt`, `vitpose_h_wholebody_model.onnx`, `yolov10m.onnx` +9 more | ComfyUI_LayerStyle, ComfyUI-KJNodes, ComfyUI-WanAnimatePreprocess, ComfyUI-WanVideoWrapper, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Sam3, ComfyUI-Easy-Use |
 | [wan-2.2-animate-replace-only-character-16fps](04-Video/Character-Animation-Video-to-Video/wan-2.2-animate-replace-only-character-16fps.json) | Replace Only Character — 16FPS | `sam3.pt`, `vitpose_h_wholebody_model.onnx`, `yolov10m.onnx` +9 more | ComfyUI_LayerStyle, ComfyUI-KJNodes, ComfyUI-WanAnimatePreprocess, ComfyUI-WanVideoWrapper, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Sam3, ComfyUI-Easy-Use |
 | [wan-2.2-animate-replace-only-character-24fps](04-Video/Character-Animation-Video-to-Video/wan-2.2-animate-replace-only-character-24fps.json) | Replace Only Character — 24FPS | `sam3.pt`, `vitpose_h_wholebody_model.onnx`, `yolov10m.onnx` +9 more | ComfyUI_LayerStyle, ComfyUI-KJNodes, ComfyUI-WanAnimatePreprocess, ComfyUI-WanVideoWrapper, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Sam3, ComfyUI-Easy-Use |
+| [minimax-h3-character-swap-lora](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-lora.json) | Minimax H3 - Character Swap LoRA (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors`, `minimax_h3_character_swap_v1.0_ref2va_r64_gl.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-character-swap-lora-full-hd](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-lora-full-hd.json) | Minimax H3 - Character Swap LoRA + Upscale to Full HD (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors`, `minimax_h3_character_swap_v1.0_ref2va_r64_gl.safetensors`, `minimax_h3_lms_v1.0_r64.safetensors`, `RealESRGAN_x2.pth` | ComfyUI-Pixaroma |
+| [minimax-h3-head-swap-lora](04-Video/Character-Animation-Video-to-Video/minimax-h3-head-swap-lora.json) | Minimax H3 - Head Swap LoRA (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors`, `minimax_h3_head_swap_v1.0_r32.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-cartoon-mascot-swap-reference-video](04-Video/Character-Animation-Video-to-Video/minimax-h3-cartoon-mascot-swap-reference-video.json) | Minimax H3 - Cartoon and Mascot Swap with Reference Video (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-pose-controlnet-motion-transfer](04-Video/Character-Animation-Video-to-Video/minimax-h3-pose-controlnet-motion-transfer.json) | Minimax H3 - Pose ControlNet - Motion Transfer (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors`, `minimax_h3_fun_controlnet_union_pruned_int8_convrot.safetensors`, `rt_detr_v4-x-hgnet_fp16.safetensors`, `sdpose_wholebody_fp16.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-vfx-edit-lora-video-by-text](04-Video/Character-Animation-Video-to-Video/minimax-h3-vfx-edit-lora-video-by-text.json) | Minimax H3 - VFX Edit LoRA - Edit a Video by Text (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors`, `minimax_h3_vfx_edit_v1.0_r128.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-vfx-edit-lora-outfit-from-pictures](04-Video/Character-Animation-Video-to-Video/minimax-h3-vfx-edit-lora-outfit-from-pictures.json) | Minimax H3 - VFX Edit LoRA - Change the Outfit from Pictures (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors`, `minimax_h3_vfx_edit_v1.0_r128.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-style-transfer-lora-restyle-video](04-Video/Character-Animation-Video-to-Video/minimax-h3-style-transfer-lora-restyle-video.json) | Minimax H3 - Style Transfer LoRA - Restyle a Video (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors`, `minimax_h3_style_transfer_v1.0_r64.safetensors` | ComfyUI-Pixaroma |
 
-#### Image-to-video (img2video), first/last frame (12)
+#### Image-to-video (img2video), first/last frame (18)
 
 Folder: [`04-Video/Image-to-Video/`](04-Video/Image-to-Video)
 
@@ -460,8 +475,12 @@ Folder: [`04-Video/Image-to-Video/`](04-Video/Image-to-Video)
 | [minimax-h3-img2video-first-last-frame-full-20-step-2-stage-1088](04-Video/Image-to-Video/minimax-h3-img2video-first-last-frame-full-20-step-2-stage-1088.json) | Image to Video — First + Last Frame, full H3 20-step + Pika refiner upscale to 1920x1088, low-VRAM attention (Ulluman S01 Draft 2) | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_fl2va_pruned_w6a8.safetensors`, `minimax_h3_open_regenerate_2k_refiner_rank_16_bf16.safetensors` +3 more | ComfyUI-KJNodes |
 | [wan-2.2-img2video-gguf-lightx2v-4-step-lora](04-Video/Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step-lora.json) | Image to Video — GGUF Lightx2v 4-Step + LoRA | `umt5_xxl_fp8_e4m3fn_scaled.safetensors`, `wan_2.1_vae.safetensors`, `wan2.2_i2v_A14b_high_noise_lightx2v_4step-Q6_K.gguf` +2 more | ComfyUI-GGUF, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Use |
 | [wan-2.2-img2video-gguf-lightx2v-4-step](04-Video/Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step.json) | Image to Video — GGUF Lightx2v 4-Step | `umt5_xxl_fp8_e4m3fn_scaled.safetensors`, `wan_2.1_vae.safetensors`, `wan2.2_i2v_A14b_high_noise_lightx2v_4step-Q6_K.gguf` +1 more | ComfyUI-GGUF, ComfyUI-VideoHelperSuite, ComfyUI-Easy-Use |
+| [minimax-h3-img2video-prompt-control-ep41](04-Video/Image-to-Video/minimax-h3-img2video-prompt-control-ep41.json) | Minimax H3 - Picture to Video - Tell It What to Do (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors` | ComfyUI-Pixaroma |
+| [flux-2-klein-minimax-h3-outfit-change-spin](04-Video/Image-to-Video/flux-2-klein-minimax-h3-outfit-change-spin.json) | Flux Klein + Minimax H3 - Outfit Change Spin (Ep41) | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors`, `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-img2video-first-last-frame-ep41](04-Video/Image-to-Video/minimax-h3-img2video-first-last-frame-ep41.json) | Bonus - Minimax H3 - First and Last Frame to Video (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-img2video-ep42](04-Video/Image-to-Video/minimax-h3-img2video-ep42.json) | Bonus - Minimax H3 - Picture to Video (Ep42) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors` | ComfyUI-Pixaroma |
 
-#### Reference-to-video, talking video, lip-sync and video dubbing (26)
+#### Reference-to-video, talking video, lip-sync and video dubbing (38)
 
 Folder: [`04-Video/Reference-and-Audio-Sync/`](04-Video/Reference-and-Audio-Sync)
 
@@ -494,8 +513,19 @@ Folder: [`04-Video/Reference-and-Audio-Sync/`](04-Video/Reference-and-Audio-Sync
 | [wan-2.1-infinitetalk-talking-video-manual-extend-3-to-34-seconds](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-talking-video-manual-extend-3-to-34-seconds.json) | Talking Video — Manual Extend 3 to 34 Seconds | `Wan2_1-I2V-14B-480p_fp8_e4m3fn_scaled_KJ.safetensors`, `lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors`, `wan2.1_infiniteTalk_single_fp16.safetensors` +4 more | ComfyUI-VideoHelperSuite, rgthree-comfy |
 | [wan-2.1-infinitetalk-video-dubbing-video2video-flat](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-video-dubbing-video2video-flat.json) | Flattened single-path version of the InfiniteTalk video dubbing workflow | `clip_vision_h.safetensors`, `Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors`, `Wan21_I2V_14B_lightx2v_cfg_step_distill_lora_rank64.safetensors` +3 more | ComfyUI_LayerStyle, ComfyUI-KJNodes, ComfyUI-WanVideoWrapper, ComfyUI-VideoHelperSuite, comfy_mtb, ComfyUI-Custom-Scripts |
 | [wan-2.1-infinitetalk-video-dubbing-video2video](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-video-dubbing-video2video.json) | Video dubbing (video2video): Wan 2.1 InfiniteTalk re-animates the speaker to a new audio track, TTS or text | `clip_vision_h.safetensors`, `Wan2_1-I2V-14B-720P_fp8_e4m3fn.safetensors`, `Wan21_I2V_14B_lightx2v_cfg_step_distill_lora_rank64.safetensors` +3 more | ComfyUI_LayerStyle, ComfyUI-KJNodes, ComfyUI-WanVideoWrapper, ComfyUI-VideoHelperSuite, comfy_mtb, ComfyUI-Custom-Scripts, rgthree-comfy |
+| [minimax-h3-picture-talk-from-typed-words](04-Video/Reference-and-Audio-Sync/minimax-h3-picture-talk-from-typed-words.json) | Minimax H3 - Make a Picture Talk from Typed Words (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-audio-sync-picture-talk-ep41](04-Video/Reference-and-Audio-Sync/minimax-h3-audio-sync-picture-talk-ep41.json) | Minimax H3 - Audio Sync - Make a Picture Talk (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-audio-sync-picture-sing-ep41](04-Video/Reference-and-Audio-Sync/minimax-h3-audio-sync-picture-sing-ep41.json) | Minimax H3 - Audio Sync - Make a Picture Sing (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-timeline-sing-scenes](04-Video/Reference-and-Audio-Sync/minimax-h3-timeline-sing-scenes.json) | Minimax H3 - Timeline - Sing a Song in Scenes (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-timeline-sing-clean-cuts](04-Video/Reference-and-Audio-Sync/minimax-h3-timeline-sing-clean-cuts.json) | Minimax H3 - Timeline - Sing with Clean Cuts (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-timeline-four-singers](04-Video/Reference-and-Audio-Sync/minimax-h3-timeline-four-singers.json) | Minimax H3 - Timeline - Four Singers in One Song (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-timeline-sing-character-walks-in](04-Video/Reference-and-Audio-Sync/minimax-h3-timeline-sing-character-walks-in.json) | Minimax H3 - Timeline - Sing + a Character Walks In (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-timeline-act-story-scenes](04-Video/Reference-and-Audio-Sync/minimax-h3-timeline-act-story-scenes.json) | Minimax H3 - Timeline - Act a Story in Scenes (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-timeline-act-walk-new-place](04-Video/Reference-and-Audio-Sync/minimax-h3-timeline-act-walk-new-place.json) | Minimax H3 - Timeline - Act - Walk Into a New Place (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-timeline-redo-one-scene-keep](04-Video/Reference-and-Audio-Sync/minimax-h3-timeline-redo-one-scene-keep.json) | Minimax H3 - Timeline - Redo One Scene (Keep) (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-timeline-sing-bigger-size](04-Video/Reference-and-Audio-Sync/minimax-h3-timeline-sing-bigger-size.json) | Minimax H3 - Timeline - Sing at a Bigger Size (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors` | ComfyUI-Pixaroma |
 
-#### Text-to-video (txt2video) (7)
+#### Text-to-video (txt2video) (9)
 
 Folder: [`04-Video/Text-to-Video/`](04-Video/Text-to-Video)
 
@@ -509,8 +539,9 @@ Folder: [`04-Video/Text-to-Video/`](04-Video/Text-to-Video)
 | [minimax-h3-txt2video-speed-lora](04-Video/Text-to-Video/minimax-h3-txt2video-speed-lora.json) | Text to Video + Speed LoRA | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_fp16.safetensors`, `minimax_h3_audio_vae_fp32.safetensors` +2 more | ComfyUI-Pixaroma |
 | [minimax-h3-txt2video](04-Video/Text-to-Video/minimax-h3-txt2video.json) | Text to Video | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_fp16.safetensors`, `minimax_h3_fl2va_pruned_int8_convrot.safetensors` +1 more | ComfyUI-Pixaroma |
 | [mochi-1-txt2video](04-Video/Text-to-Video/mochi-1-txt2video.json) | Text to Video — Genmo Mochi 1 | `dit.safetensors`, `t5xxl_fp16.safetensors`, `decoder.safetensors` | — |
+| [minimax-h3-txt2video-2k-ep41](04-Video/Text-to-Video/minimax-h3-txt2video-2k-ep41.json) | Bonus - Minimax H3 - Text to Video in 2K (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors`, `open_h3_regenerate_2k_comfy_swiglu_fixed.safetensors`, `minimax_h3_latent_upscaler_3d_conv_v1_fp16.safetensors` | ComfyUI-Pixaroma |
 
-#### Video upscaling (10)
+#### Video upscaling (13)
 
 Folder: [`04-Video/Video-Upscaling/`](04-Video/Video-Upscaling)
 
@@ -527,6 +558,16 @@ Folder: [`04-Video/Video-Upscaling/`](04-Video/Video-Upscaling)
 | [seedvr2-video-upscale-toons-api](04-Video/Video-Upscaling/seedvr2-video-upscale-toons-api.json) | SeedVR2 7B video upscale run (toons clip) (API format) | `seedvr2_ema_7b_fp8_e4m3fn_mixed_block35_fp16.safetensors`, `ema_vae_fp16.safetensors` | ComfyUI-VideoHelperSuite, ComfyUI-SeedVR2_VideoUpscaler |
 | [seedvr2-video-upscale](04-Video/Video-Upscaling/seedvr2-video-upscale.json) | Video Upscale | `ema_vae_fp16.safetensors`, `seedvr2_ema_3b_fp16.safetensors` | ComfyUI-VideoHelperSuite, ComfyUI-SeedVR2_VideoUpscaler |
 | [minimax-h3-video-sharpener-refiner-upscale-from-video](04-Video/Video-Upscaling/minimax-h3-video-sharpener-refiner-upscale-from-video.json) | Video Upscale / Sharpen — load any video, re-render it through the H3 2K refiner LoRA (Pika pass-2 only) | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_fl2va_pruned_w6a8.safetensors`, `minimax_h3_open_regenerate_2k_refiner_rank_384_bf16.safetensors` +1 more | — |
+| [minimax-h3-sharpen-lora-full-hd](04-Video/Video-Upscaling/minimax-h3-sharpen-lora-full-hd.json) | Minimax H3 - Sharpen LoRA + Upscale to Full HD (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors`, `minimax_h3_lms_v1.0_r64.safetensors`, `RealESRGAN_x2.pth` | ComfyUI-Pixaroma |
+| [minimax-h3-regenerate-lora-remake-video-2k](04-Video/Video-Upscaling/minimax-h3-regenerate-lora-remake-video-2k.json) | Minimax H3 - Regenerate LoRA - Remake a Video in 2K (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `open_h3_regenerate_2k_comfy_swiglu_fixed.safetensors`, `minimax_h3_latent_upscaler_3d_conv_v1_fp16.safetensors` | ComfyUI-Pixaroma |
+
+#### Video editing and clip tools (1)
+
+Folder: [`04-Video/Video-Editing-and-Tools/`](04-Video/Video-Editing-and-Tools)
+
+| Workflow | What it does | Models used | Custom nodes needed |
+|---|---|---|---|
+| [pixaroma-video-tools-join-clips](04-Video/Video-Editing-and-Tools/pixaroma-video-tools-join-clips.json) | Video Tools - Join Your Clips into One Video (Ep41) | No model file selected | ComfyUI-Pixaroma |
 
 ### 05 · Audio
 
@@ -766,9 +807,9 @@ Local LLM / VLM workflows that output text: prompt enhancers, image-to-prompt, v
 
 ### 90 · Docs and Resources
 
-Learning workflows and node demos, LoRA training notes, LLM prompt-assistant instructions and sample input media. Folder: [`90-Docs-and-Resources/`](90-Docs-and-Resources) — 9 workflows.
+Learning workflows and node demos, LoRA training notes, LLM prompt-assistant instructions and sample input media. Folder: [`90-Docs-and-Resources/`](90-Docs-and-Resources) — 15 workflows.
 
-#### Learning workflows and node demos (8)
+#### Learning workflows and node demos (14)
 
 Folder: [`90-Docs-and-Resources/Learning-and-Node-Demos/`](90-Docs-and-Resources/Learning-and-Node-Demos)
 
@@ -782,6 +823,12 @@ Folder: [`90-Docs-and-Resources/Learning-and-Node-Demos/`](90-Docs-and-Resources
 | [pixaroma-nodes-labels-ep11](90-Docs-and-Resources/Learning-and-Node-Demos/pixaroma-nodes-labels-ep11.json) | Labels (Ep11) | — | ComfyUI-Pixaroma |
 | [pixaroma-nodes-labels-ep13](90-Docs-and-Resources/Learning-and-Node-Demos/pixaroma-nodes-labels-ep13.json) | Labels (Ep13) | — | ComfyUI-Pixaroma |
 | [pixaroma-nodes-note](90-Docs-and-Resources/Learning-and-Node-Demos/pixaroma-nodes-note.json) | Note | — | ComfyUI-Pixaroma |
+| [nodes-explained-02-prompts-explained-finished-z-image-turbo](90-Docs-and-Resources/Learning-and-Node-Demos/nodes-explained-02-prompts-explained-finished-z-image-turbo.json) | Prompts Explained - Finished | `z_image_turbo_int8_convrot.safetensors`, `qwen_3_4b_fp8_mixed.safetensors`, `ae.safetensors` | Core only |
+| [nodes-explained-02-prompts-explained-pixaroma-z-image-turbo](90-Docs-and-Resources/Learning-and-Node-Demos/nodes-explained-02-prompts-explained-pixaroma-z-image-turbo.json) | Prompts Explained - Pixaroma | `z_image_turbo_int8_convrot.safetensors`, `qwen_3_4b_fp8_mixed.safetensors`, `ae.safetensors` | Core only |
+| [nodes-explained-02-prompts-explained-practice-z-image-turbo](90-Docs-and-Resources/Learning-and-Node-Demos/nodes-explained-02-prompts-explained-practice-z-image-turbo.json) | Prompts Explained - Practice | `z_image_turbo_int8_convrot.safetensors`, `qwen_3_4b_fp8_mixed.safetensors`, `ae.safetensors` | Core only |
+| [nodes-explained-03-image-size-explained-finished-z-image-turbo](90-Docs-and-Resources/Learning-and-Node-Demos/nodes-explained-03-image-size-explained-finished-z-image-turbo.json) | Image Size Explained - Finished | `z_image_turbo_int8_convrot.safetensors`, `qwen_3_4b_fp8_mixed.safetensors`, `ae.safetensors` | Core only |
+| [nodes-explained-03-image-size-explained-pixaroma-z-image-turbo](90-Docs-and-Resources/Learning-and-Node-Demos/nodes-explained-03-image-size-explained-pixaroma-z-image-turbo.json) | Image Size Explained - Pixaroma | `z_image_turbo_int8_convrot.safetensors`, `qwen_3_4b_fp8_mixed.safetensors`, `ae.safetensors` | Core only |
+| [nodes-explained-03-image-size-explained-practice-z-image-turbo](90-Docs-and-Resources/Learning-and-Node-Demos/nodes-explained-03-image-size-explained-practice-z-image-turbo.json) | Image Size Explained - Practice | `z_image_turbo_int8_convrot.safetensors`, `qwen_3_4b_fp8_mixed.safetensors`, `ae.safetensors` | Core only |
 
 #### LoRA conversion and training (1)
 
@@ -793,7 +840,7 @@ Folder: [`90-Docs-and-Resources/LoRA-Training/`](90-Docs-and-Resources/LoRA-Trai
 
 ### 91 · Version Conflicts
 
-Original versions of workflows whose library copy has different settings, kept for comparison. Folder: [`91-Review-Version-Conflicts/`](91-Review-Version-Conflicts) — 5 workflows.
+Original versions of workflows whose library copy has different settings, node schemas or connections, kept for comparison. Folder: [`91-Review-Version-Conflicts/`](91-Review-Version-Conflicts) — 44 workflows.
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
@@ -802,6 +849,52 @@ Original versions of workflows whose library copy has different settings, kept f
 | [ep16-flux-2-klein-9b-image-to-prompt-to-image-qwen-3.5-pixaroma-original](91-Review-Version-Conflicts/ep16-flux-2-klein-9b-image-to-prompt-to-image-qwen-3.5-pixaroma-original.json) | Flux 2 Klein 9B — Image to Prompt to Image (Qwen 3.5) (Pixaroma original) | `flux-2-klein-9b-fp8mixed.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` +1 more | ComfyUI-Pixaroma |
 | [ep16-flux-2-klein-9b-txt2img-qwen-3.5-prompt-enhancer-pixaroma-original](91-Review-Version-Conflicts/ep16-flux-2-klein-9b-txt2img-qwen-3.5-prompt-enhancer-pixaroma-original.json) | Flux 2 Klein 9B — Text to Image + Qwen 3.5 Prompt Enhancer (Pixaroma original) | `flux-2-klein-9b-fp8mixed.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` +1 more | ComfyUI-Pixaroma |
 | [ep20-anima-base-v1.0-anime-txt2img-gemma-4-prompt-enhancer-pixaroma-original](91-Review-Version-Conflicts/ep20-anima-base-v1.0-anime-txt2img-gemma-4-prompt-enhancer-pixaroma-original.json) | Anima Base v1.0 — Anime Text to Image + Gemma 4 Prompt Enhancer (Pixaroma original) | `anima-base-v1.0.safetensors`, `qwen_image_vae.safetensors`, `qwen_3_06b_base.safetensors` +1 more | ComfyUI-Pixaroma |
+
+| [qwen3-tts-voice-design-ep07-pixaroma-original](91-Review-Version-Conflicts/qwen3-tts-voice-design-ep07-pixaroma-original.json) | Qwen3-TTS VoiceDesign (Ep07) — source version; compare the [library copy](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-design.json) | No model file selected | comfyui-easy-use, comfyui_layerstyle, qwen3-tts-comfyui |
+| [qwen3-tts-voice-clone-ep07-pixaroma-original](91-Review-Version-Conflicts/qwen3-tts-voice-clone-ep07-pixaroma-original.json) | Qwen3-TTS VoiceClone (Ep07) — source version; compare the [library copy](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-clone.json) | No model file selected | comfyui-easy-use, comfyui_layerstyle, qwen3-tts-comfyui |
+| [qwen3-tts-voice-design-dialogue-ep07-pixaroma-original](91-Review-Version-Conflicts/qwen3-tts-voice-design-dialogue-ep07-pixaroma-original.json) | Qwen3-TTS VoiceDesign + Dialogue (Ep07) — source version; compare the [library copy](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-design-dialogue.json) | No model file selected | comfyui-easy-use, comfyui_layerstyle, qwen3-tts-comfyui |
+| [utility-image-compare-side-by-side-ep08-pixaroma-original](91-Review-Version-Conflicts/utility-image-compare-side-by-side-ep08-pixaroma-original.json) | Image Compare (Ep08) — source version; compare the [library copy](08-Testing-and-Comparison/utility-image-compare-side-by-side.json) | No model file selected | comfyui-itools, comfyui-rmbg, rgthree-comfy |
+| [layerstyle-image-filters-and-color-adjustments-ep08-pixaroma-original](91-Review-Version-Conflicts/layerstyle-image-filters-and-color-adjustments-ep08-pixaroma-original.json) | Image Filters (Ep08) — source version; compare the [library copy](03-Image-Enhancement/Filters-and-Color-Grading/layerstyle-image-filters-and-color-adjustments.json) | No model file selected | comfyui_layerstyle, rgthree-comfy |
+| [flux-2-klein-9b-kv-fp8-multi-image-edit-3-images-ep09-pixaroma-original](91-Review-Version-Conflicts/flux-2-klein-9b-kv-fp8-multi-image-edit-3-images-ep09-pixaroma-original.json) | Flux 2 Klein 9B KV FP8 - 3 Images Edit (Ep09) — source version; compare the [library copy](02-Image-Editing/Multi-Image-Composition/flux-2-klein-9b-kv-fp8-multi-image-edit-3-images.json) | `qwen_3_8b_fp8mixed.safetensors`, `flux-2-klein-9b-kv-fp8.safetensors`, `flux2-vae.safetensors` | Core only |
+| [flux-2-klein-9b-kv-fp8-multi-image-edit-4-images-ep09-pixaroma-original](91-Review-Version-Conflicts/flux-2-klein-9b-kv-fp8-multi-image-edit-4-images-ep09-pixaroma-original.json) | Flux 2 Klein 9B KV FP8 - 4 Images Edit (Ep09) — source version; compare the [library copy](02-Image-Editing/Multi-Image-Composition/flux-2-klein-9b-kv-fp8-multi-image-edit-4-images.json) | `qwen_3_8b_fp8mixed.safetensors`, `flux-2-klein-9b-kv-fp8.safetensors`, `flux2-vae.safetensors` | Core only |
+| [fish-s2-multi-speaker-dialogue-tts-ep10-pixaroma-original](91-Review-Version-Conflicts/fish-s2-multi-speaker-dialogue-tts-ep10-pixaroma-original.json) | Fish S2 Multi-Speaker TTS (Ep10) — source version; compare the [library copy](05-Audio/Speech-and-Voice-Cloning/fish-s2-multi-speaker-dialogue-tts.json) | No model file selected | ComfyUI-fish-audio-s2, comfyui-easy-use, comfyui-videohelpersuite |
+| [fish-s2-voice-clone-tts-ep10-pixaroma-original](91-Review-Version-Conflicts/fish-s2-voice-clone-tts-ep10-pixaroma-original.json) | Fish S2 Voice Clone TTS (Ep10) — source version; compare the [library copy](05-Audio/Speech-and-Voice-Cloning/fish-s2-voice-clone-tts.json) | No model file selected | ComfyUI-fish-audio-s2, comfyui-easy-use, comfyui-videohelpersuite |
+| [krea-2-txt2img-simple-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-simple-ep24-pixaroma-original.json) | Krea 2 Text to Image - Simple (Ep24) — source version; compare the [library copy](01-Image-Generation/Text-to-Image/krea-2-txt2img-simple.json) | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-txt2img-simple-lora-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-simple-lora-ep24-pixaroma-original.json) | Krea 2 Text to Image - Simple + Lora (Ep24) — source version; compare the [library copy](01-Image-Generation/Text-to-Image/krea-2-txt2img-simple-lora.json) | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2_vintagetarot.safetensors` | ComfyUI-Pixaroma, rgthree-comfy |
+| [krea-2-txt2img-prompt-enhancer-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-prompt-enhancer-ep24-pixaroma-original.json) | Krea 2 Text to Image - Simple + Prompt Enhancer (Ep24) — source version; compare the [library copy](01-Image-Generation/LLM-Prompt-Assisted/krea-2-txt2img-prompt-enhancer.json) | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-txt2img-simple-low-vram-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-simple-low-vram-ep24-pixaroma-original.json) | Krea 2 Text to Image - Simple Low Vram (Ep24) — source version; compare the [library copy](01-Image-Generation/Text-to-Image/krea-2-txt2img-simple-low-vram.json) | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-txt2img-extra-pass-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-extra-pass-ep24-pixaroma-original.json) | Krea 2 Text to Image + Extra Pass (Ep24) — source version; compare the [library copy](01-Image-Generation/Text-to-Image/krea-2-txt2img-extra-pass.json) | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-txt2img-extra-pass-lora-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-extra-pass-lora-ep24-pixaroma-original.json) | Krea 2 Text to Image + Extra Pass + Lora (Ep24) — source version; compare the [library copy](01-Image-Generation/Text-to-Image/krea-2-txt2img-extra-pass-lora.json) | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2_kidsdrawing.safetensors` | ComfyUI-Pixaroma, rgthree-comfy |
+| [krea-2-txt2img-extra-pass-prompt-enhancer-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-extra-pass-prompt-enhancer-ep24-pixaroma-original.json) | Krea 2 Text to Image + Extra Pass + Prompt Enhancer (Ep24) — source version; compare the [library copy](01-Image-Generation/LLM-Prompt-Assisted/krea-2-txt2img-extra-pass-prompt-enhancer.json) | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-txt2img-2k-hi-res-prompt-enhancer-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-2k-hi-res-prompt-enhancer-ep24-pixaroma-original.json) | Krea 2 Text to Image - 2K (Ep24) — source version; compare the [library copy](01-Image-Generation/Text-to-Image/krea-2-txt2img-2k-hi-res-prompt-enhancer.json) | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-txt2img-extra-pass-prompt-enhancer-uncensored-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-extra-pass-prompt-enhancer-uncensored-ep24-pixaroma-original.json) | Krea 2 Text to Image + Extra Pass + Prompt Enhancer (Uncensored) (Ep24) — source version; compare the [library copy](01-Image-Generation/LLM-Prompt-Assisted/krea-2-txt2img-extra-pass-prompt-enhancer-uncensored.json) | `krea2_turbo_fp8_scaled.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors`, `qwen_image_vae.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-txt2img-prompt-enhancer-uncensored-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-prompt-enhancer-uncensored-ep24-pixaroma-original.json) | Krea 2 Text to Image + Prompt Enhancer (Uncensored) (Ep24) — source version; compare the [library copy](01-Image-Generation/LLM-Prompt-Assisted/krea-2-txt2img-prompt-enhancer-uncensored.json) | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-txt2img-2k-hi-res-prompt-enhancer-uncensored-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-2k-hi-res-prompt-enhancer-uncensored-ep24-pixaroma-original.json) | Krea 2 Text to Image - 2K (Uncensored) (Ep24) — source version; compare the [library copy](01-Image-Generation/Text-to-Image/krea-2-txt2img-2k-hi-res-prompt-enhancer-uncensored.json) | `krea2_turbo_fp8_scaled.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors`, `qwen_image_vae.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-int8-txt2img-simple-ep25-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-txt2img-simple-ep25-pixaroma-original.json) | Krea 2 Text to Image - Simple (Ep25) — source version; compare the [library copy](01-Image-Generation/Text-to-Image/krea-2-int8-txt2img-simple.json) | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-int8-txt2img-prompt-enhancer-ep25-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-txt2img-prompt-enhancer-ep25-pixaroma-original.json) | Krea 2 Text to Image - Simple + Prompt Enhancer (Ep25) — source version; compare the [library copy](01-Image-Generation/LLM-Prompt-Assisted/krea-2-int8-txt2img-prompt-enhancer.json) | `qwen_image_vae.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2_turbo_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-int8-image-to-prompt-to-image-ep25-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-image-to-prompt-to-image-ep25-pixaroma-original.json) | Krea 2 Text to Image - Simple + Prompt from Image (Ep25) — source version; compare the [library copy](01-Image-Generation/LLM-Prompt-Assisted/krea-2-int8-image-to-prompt-to-image.json) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-int8-txt2img-extra-pass-ep25-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-txt2img-extra-pass-ep25-pixaroma-original.json) | Krea 2 Text to Image + Extra Pass (Ep25) — source version; compare the [library copy](01-Image-Generation/Text-to-Image/krea-2-int8-txt2img-extra-pass.json) | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-int8-txt2img-extra-pass-prompt-enhancer-ep25-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-txt2img-extra-pass-prompt-enhancer-ep25-pixaroma-original.json) | Krea 2 Text to Image + Extra Pass + Prompt Enhancer (Ep25) — source version; compare the [library copy](01-Image-Generation/LLM-Prompt-Assisted/krea-2-int8-txt2img-extra-pass-prompt-enhancer.json) | `qwen_image_vae.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2_turbo_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-int8-txt2img-extra-pass-image-to-prompt-ep25-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-txt2img-extra-pass-image-to-prompt-ep25-pixaroma-original.json) | Krea 2 Text to Image + Extra Pass + Prompt from Image (Ep25) — source version; compare the [library copy](01-Image-Generation/LLM-Prompt-Assisted/krea-2-int8-txt2img-extra-pass-image-to-prompt.json) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-int8-txt2img-extra-pass-lora-ep26-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-txt2img-extra-pass-lora-ep26-pixaroma-original.json) | Krea 2 Text to Image + Extra Pass + Lora (Ep26) — source version; compare the [library copy](01-Image-Generation/Text-to-Image/krea-2-int8-txt2img-extra-pass-lora.json) | `qwen_image_vae.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2-questpaint26_comfyui.safetensors`, `krea2_turbo_int8_convrot.safetensors` | ComfyUI-Pixaroma, rgthree-comfy |
+| [krea-2-int8-lora-xy-plot-ep26-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-lora-xy-plot-ep26-pixaroma-original.json) | Krea 2 Text to Image - Simple + Lora XY Plot (Ep26) — source version; compare the [library copy](08-Testing-and-Comparison/krea-2-int8-lora-xy-plot.json) | `qwen_image_vae.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `krea2-questpaint26_comfyui.safetensors` | ComfyUI-Pixaroma, rgthree-comfy |
+| [krea-2-int8-txt2img-simple-lora-ep26-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-txt2img-simple-lora-ep26-pixaroma-original.json) | Krea 2 Text to Image - Simple + Lora (Ep26) — source version; compare the [library copy](01-Image-Generation/Text-to-Image/krea-2-int8-txt2img-simple-lora.json) | `qwen_image_vae.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `krea2-questpaint26_comfyui.safetensors` | ComfyUI-Pixaroma, rgthree-comfy |
+| [krea-2-txt2img-prompt-enhancer-ep28-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-prompt-enhancer-ep28-pixaroma-original.json) | Krea 2 Text to Image + Prompt Enhancer (Ep28) — source version; compare the [library copy](01-Image-Generation/LLM-Prompt-Assisted/krea-2-txt2img-prompt-enhancer-ep28.json) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-image-to-prompt-to-image-ep28-pixaroma-original](91-Review-Version-Conflicts/krea-2-image-to-prompt-to-image-ep28-pixaroma-original.json) | Krea 2 Text to Image + Prompt from Image (Ep28) — source version; compare the [library copy](01-Image-Generation/LLM-Prompt-Assisted/krea-2-image-to-prompt-to-image.json) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-txt2img-ep28-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-ep28-pixaroma-original.json) | Krea 2 Text to Image (Ep28) — source version; compare the [library copy](01-Image-Generation/Text-to-Image/krea-2-txt2img-ep28.json) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-edit-lora-character-and-background-ep30-pixaroma-original](91-Review-Version-Conflicts/krea-2-edit-lora-character-and-background-ep30-pixaroma-original.json) | Krea 2 + Edit Lora - Character and Background (Ep30) — source version; compare the [library copy](02-Image-Editing/Single-Image-Edit/krea-2-edit-lora-character-and-background.json) | `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors`, `qwen_image_vae.safetensors`, `krea2_identity_edit_v1_2.safetensors` | ComfyUI-Pixaroma, comfyui-krea2edit |
+| [krea-2-edit-lora-custom-ratio-ep30-pixaroma-original](91-Review-Version-Conflicts/krea-2-edit-lora-custom-ratio-ep30-pixaroma-original.json) | Krea 2 + Edit Lora - Custom Ratio (Ep30) — source version; compare the [library copy](02-Image-Editing/Single-Image-Edit/krea-2-edit-lora-custom-ratio.json) | `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors`, `qwen_image_vae.safetensors`, `krea2_identity_edit_v1_2.safetensors` | ComfyUI-Pixaroma, comfyui-krea2edit |
+| [krea-2-edit-lora-ep30-pixaroma-original](91-Review-Version-Conflicts/krea-2-edit-lora-ep30-pixaroma-original.json) | Krea 2 + Edit Lora (Ep30) — source version; compare the [library copy](02-Image-Editing/Single-Image-Edit/krea-2-edit-lora.json) | `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors`, `qwen_image_vae.safetensors`, `krea2_identity_edit_v1_2.safetensors` | ComfyUI-Pixaroma, comfyui-krea2edit |
+| [krea-2-outfit-change-outfit-lora-ep30-pixaroma-original](91-Review-Version-Conflicts/krea-2-outfit-change-outfit-lora-ep30-pixaroma-original.json) | Krea 2 + One Image Outfit Lora (Ep30) — source version; compare the [library copy](02-Image-Editing/Character-Outfit-and-Pose/krea-2-outfit-change-outfit-lora.json) | `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors`, `qwen_image_vae.safetensors`, `krea_outfittransfer.safetensors` | ComfyUI-Pixaroma, comfyui-krea2edit |
+| [krea-2-outfit-transfer-v2-ep30-pixaroma-original](91-Review-Version-Conflicts/krea-2-outfit-transfer-v2-ep30-pixaroma-original.json) | Krea 2 + Outfit Transfer 2 (Ep30) — source version; compare the [library copy](02-Image-Editing/Character-Outfit-and-Pose/krea-2-outfit-transfer-v2.json) | `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors`, `qwen_image_vae.safetensors`, `krea_outfittransfer.safetensors` | ComfyUI-Pixaroma, comfyui-krea2edit |
+| [krea-2-txt2img-ai-prompt-enhancer-ep31-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-ai-prompt-enhancer-ep31-pixaroma-original.json) | Krea 2 Text to Image + Prompt Enhance (Ep31) — source version; compare the [library copy](01-Image-Generation/LLM-Prompt-Assisted/krea-2-txt2img-ai-prompt-enhancer-ep31.json) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-image-to-prompt-to-image-ai-prompt-node-ep31-pixaroma-original](91-Review-Version-Conflicts/krea-2-image-to-prompt-to-image-ai-prompt-node-ep31-pixaroma-original.json) | Krea 2 Text to Image + Prompt From Image (Ep31) — source version; compare the [library copy](01-Image-Generation/LLM-Prompt-Assisted/krea-2-image-to-prompt-to-image-ep31-ai-prompt-node.json) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Pixaroma |
+
+## Pixaroma public download sync (2026-11-10)
+
+Added 99 source files without changing their JSON: 60 new workflows and 39 differing source versions in [Version Conflicts](91-Review-Version-Conflicts/README.md). Compared 398 workflows from the [free episode archive](https://workflows.pixaroma.com/all-workflows.zip) and eight direct downloads from [Nodes Explained](https://workflows.pixaroma.com/comfyui-nodes-explained/); 307 were already present. The archive also contains one prompt-tag library JSON, excluded from workflow counts.
+
+Comparison uses node types, enabled/bypassed state, widget values and directed port connections, ignoring layout, generated node/link IDs and annotation text. Missing and empty widget arrays are equivalent; note-only learning demos retain their note contents for comparison. Different runtime settings and node schemas are preserved for review. Episodes 40–42 introduce MOSS Image, P-H3 Image and new Pixaroma MiniMax H3 pipelines; these use new graph designs rather than the earlier third-party H3 pipelines. The [cloud listing](https://workflows.pixaroma.com/cloud/) offers hosted runs, with no direct workflow JSON downloads.
 
 ## How to use
 
@@ -871,22 +964,22 @@ Workflows marked *PAID API* use ComfyUI partner nodes (for example Nano Banana P
 
 | Custom node pack | Used by | Link |
 |---|---|---|
-| ComfyUI-Pixaroma | 269 workflows | [github.com/pixaroma/ComfyUI-Pixaroma](https://github.com/pixaroma/ComfyUI-Pixaroma) |
-| ComfyUI-VideoHelperSuite | 53 workflows | [github.com/Kosinkadink/ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite) |
-| rgthree-comfy | 52 workflows | [github.com/rgthree/rgthree-comfy](https://github.com/rgthree/rgthree-comfy) |
+| ComfyUI-Pixaroma | 353 workflows | [github.com/pixaroma/ComfyUI-Pixaroma](https://github.com/pixaroma/ComfyUI-Pixaroma) |
+| ComfyUI-VideoHelperSuite | 55 workflows | [github.com/Kosinkadink/ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite) |
+| rgthree-comfy | 59 workflows | [github.com/rgthree/rgthree-comfy](https://github.com/rgthree/rgthree-comfy) |
 | ComfyUI-KJNodes | 50 workflows | [github.com/kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) |
-| comfyui-krea2edit | 33 workflows | [github.com/lbouaraba/comfyui-krea2edit](https://github.com/lbouaraba/comfyui-krea2edit) |
+| comfyui-krea2edit | 38 workflows | [github.com/lbouaraba/comfyui-krea2edit](https://github.com/lbouaraba/comfyui-krea2edit) |
 | ComfyUI-MiniMaxH3-Context-Loop | 31 workflows | [github.com/ethanfel/ComfyUI-MiniMaxH3-Context-Loop](https://github.com/ethanfel/ComfyUI-MiniMaxH3-Context-Loop) |
 | ComfyUI-Krea2T-Enhancer | 30 workflows | [github.com/capitan01R/ComfyUI-Krea2T-Enhancer](https://github.com/capitan01R/ComfyUI-Krea2T-Enhancer) |
 | ComfyUI-Spectrum-MiniMax-H3 | 30 workflows | [github.com/xmarre/ComfyUI-Spectrum-MiniMax-H3](https://github.com/xmarre/ComfyUI-Spectrum-MiniMax-H3) |
 | ComfyUI-MultiShot-Plan | 28 workflows | [github.com/CodingWithShahzaib/ComfyUI-MultiShot-Plan](https://github.com/CodingWithShahzaib/ComfyUI-MultiShot-Plan) |
-| ComfyUI_LayerStyle | 23 workflows | [github.com/chflame163/ComfyUI_LayerStyle](https://github.com/chflame163/ComfyUI_LayerStyle) |
-| ComfyUI-Easy-Use | 22 workflows | [github.com/yolain/ComfyUI-Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use) |
+| ComfyUI_LayerStyle | 27 workflows | [github.com/chflame163/ComfyUI_LayerStyle](https://github.com/chflame163/ComfyUI_LayerStyle) |
+| ComfyUI-Easy-Use | 27 workflows | [github.com/yolain/ComfyUI-Easy-Use](https://github.com/yolain/ComfyUI-Easy-Use) |
 | ComfyUI-WanVideoWrapper | 14 workflows | [github.com/kijai/ComfyUI-WanVideoWrapper](https://github.com/kijai/ComfyUI-WanVideoWrapper) |
-| ComfyUI-RMBG | 12 workflows | [github.com/1038lab/ComfyUI-RMBG](https://github.com/1038lab/ComfyUI-RMBG) |
+| ComfyUI-RMBG | 13 workflows | [github.com/1038lab/ComfyUI-RMBG](https://github.com/1038lab/ComfyUI-RMBG) |
 | ComfyUI-SeedVR2_VideoUpscaler | 11 workflows | [github.com/numz/ComfyUI-SeedVR2_VideoUpscaler](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler) |
 | ComfyUI-GGUF | 10 workflows | [github.com/city96/ComfyUI-GGUF](https://github.com/city96/ComfyUI-GGUF) |
-| ComfyUI-Qwen-TTS | 8 workflows | [github.com/flybirdxx/ComfyUI-Qwen-TTS](https://github.com/flybirdxx/ComfyUI-Qwen-TTS) |
+| ComfyUI-Qwen-TTS | 11 workflows | [github.com/flybirdxx/ComfyUI-Qwen-TTS](https://github.com/flybirdxx/ComfyUI-Qwen-TTS) |
 | ComfyUI-DubSync (local) | 7 workflows | Local pack, not published |
 | ComfyUI-WanAnimatePreprocess | 7 workflows | [github.com/kijai/ComfyUI-WanAnimatePreprocess](https://github.com/kijai/ComfyUI-WanAnimatePreprocess) |
 | wan-scail2-gap | 7 workflows | [github.com/GeekatplayStudio/wan-scail2-gap](https://github.com/GeekatplayStudio/wan-scail2-gap) |
@@ -896,7 +989,7 @@ Workflows marked *PAID API* use ComfyUI partner nodes (for example Nano Banana P
 | ComfyUI-ChatterboxTTS | 4 workflows | [github.com/Yuan-ManX/ComfyUI-ChatterboxTTS](https://github.com/Yuan-ManX/ComfyUI-ChatterboxTTS) |
 | comfy_mtb | 3 workflows | [github.com/melMass/comfy_mtb](https://github.com/melMass/comfy_mtb) |
 | ComfyUI-Custom-Scripts | 3 workflows | [github.com/pythongosssss/ComfyUI-Custom-Scripts](https://github.com/pythongosssss/ComfyUI-Custom-Scripts) |
-| comfyui-fish-audio-s2 | 3 workflows | [registry.comfy.org/nodes/comfyui-fish-audio-s2](https://registry.comfy.org/nodes/comfyui-fish-audio-s2) |
+| comfyui-fish-audio-s2 | 5 workflows | [registry.comfy.org/nodes/comfyui-fish-audio-s2](https://registry.comfy.org/nodes/comfyui-fish-audio-s2) |
 | ComfyUI-Inpaint-CropAndStitch | 3 workflows | [github.com/lquesada/ComfyUI-Inpaint-CropAndStitch](https://github.com/lquesada/ComfyUI-Inpaint-CropAndStitch) |
 | comfyui_controlnet_aux | 3 workflows | [github.com/Fannovel16/comfyui_controlnet_aux](https://github.com/Fannovel16/comfyui_controlnet_aux) |
 | ComfyUI-QwenVL | 2 workflows | [github.com/1038lab/ComfyUI-QwenVL](https://github.com/1038lab/ComfyUI-QwenVL) |
@@ -931,6 +1024,26 @@ ComfyUI-Workflows/
 ├── 10-LLM-and-Prompt-Tools/              # LLM and Prompt Tools
 ├── 90-Docs-and-Resources/                # Docs and Resources
 ├── 91-Review-Version-Conflicts/          # Version Conflicts
+| [p-h3-image-character-in-a-scene](02-Image-Editing/Multi-Image-Composition/p-h3-image-character-in-a-scene.json) | P-H3 Image - Character in a Scene (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [p-h3-image-logo-on-product](02-Image-Editing/Multi-Image-Composition/p-h3-image-logo-on-product.json) | P-H3 Image - Logo on a Product (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [p-h3-image-group-photo](02-Image-Editing/Multi-Image-Composition/p-h3-image-group-photo.json) | P-H3 Image - Group Photo (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [p-h3-image-style-from-second-picture](02-Image-Editing/Multi-Image-Composition/p-h3-image-style-from-second-picture.json) | P-H3 Image - Style from a Second Picture (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `minimax_h3_style_transfer_v1.0_r64.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [moss-image-txt2img](01-Image-Generation/Text-to-Image/moss-image-txt2img.json) | MOSS Image - Text to Image (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [moss-image-txt2img-speed-lora-4-step](01-Image-Generation/Text-to-Image/moss-image-txt2img-speed-lora-4-step.json) | MOSS Image - Fast 4 Steps with a Speed LoRA (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors`, `moss_image_sft_4step_v2.0.safetensors` | ComfyUI-Pixaroma |
+| [moss-image-layout-with-boxes](01-Image-Generation/Text-to-Image/moss-image-layout-with-boxes.json) | MOSS Image - Layout with Boxes (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [p-h3-image-txt2img](01-Image-Generation/Text-to-Image/p-h3-image-txt2img.json) | P-H3 Image - Text to Image (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [moss-image-edit-text-in-a-picture](02-Image-Editing/Single-Image-Edit/moss-image-edit-text-in-a-picture.json) | MOSS Image - Same Picture, New Words (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [p-h3-image-edit-new-place](02-Image-Editing/Single-Image-Edit/p-h3-image-edit-new-place.json) | P-H3 Image - Image Edit New Place (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [p-h3-image-relight-day-to-night](02-Image-Editing/Single-Image-Edit/p-h3-image-relight-day-to-night.json) | P-H3 Image - Relight Day to Night (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [p-h3-image-edit-text-in-a-picture](02-Image-Editing/Single-Image-Edit/p-h3-image-edit-text-in-a-picture.json) | P-H3 Image - Edit Text in a Picture (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [p-h3-image-restyle-picture](02-Image-Editing/Single-Image-Edit/p-h3-image-restyle-picture.json) | P-H3 Image - Restyle a Picture (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [p-h3-image-restore-and-colorize](02-Image-Editing/Single-Image-Edit/p-h3-image-restore-and-colorize.json) | P-H3 Image - Restore and Colorize (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [flux-2-klein-9b-character-sheet-ep41](02-Image-Editing/Character-Outfit-and-Pose/flux-2-klein-9b-character-sheet-ep41.json) | Flux Klein - Character Sheet from One Picture (Ep41) | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [p-h3-image-character-sheet](02-Image-Editing/Character-Outfit-and-Pose/p-h3-image-character-sheet.json) | P-H3 Image - Character Sheet (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [p-h3-image-outfit-from-second-picture](02-Image-Editing/Character-Outfit-and-Pose/p-h3-image-outfit-from-second-picture.json) | P-H3 Image - Outfit from a Second Picture (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [moss-image-txt2img-prompt-helper](01-Image-Generation/LLM-Prompt-Assisted/moss-image-txt2img-prompt-helper.json) | MOSS Image - Text to Image + Prompt Helper (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [moss-image-image-to-prompt-to-image](01-Image-Generation/LLM-Prompt-Assisted/moss-image-image-to-prompt-to-image.json) | MOSS Image - Image to Prompt to Image (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [p-h3-image-short-idea-prompt-upsampler](01-Image-Generation/LLM-Prompt-Assisted/p-h3-image-short-idea-prompt-upsampler.json) | P-H3 Image - Short Idea with Prompt Upsampler (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors`, `p-h3-image_prompt_upsampler_w4a8.safetensors` | ComfyUI-Pixaroma |
 ├── 00-LIBRARY-INDEX.md                    # plain list of every workflow
 └── README.md
 ```

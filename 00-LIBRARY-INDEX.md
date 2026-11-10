@@ -1,6 +1,6 @@
 # ComfyUI Workflow Library — Index
 
-Plain list of all 464 workflows by folder. The [README](README.md) has descriptions, models and required custom nodes for each one.
+Plain list of all 568 workflows by folder. The [README](README.md) has descriptions, models and required custom nodes for each one.
 
 Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-image-2.1-one-image-edit-low-vram.json`). `-api` = API format; `epNN` = tutorial episode the variant came from.
 
@@ -22,6 +22,8 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [ming-image-0.1-social-media-post](01-Image-Generation/Design-Typography-and-Transparent/ming-image-0.1-social-media-post.json)
 - [ming-image-0.1-transparent-png](01-Image-Generation/Design-Typography-and-Transparent/ming-image-0.1-transparent-png.json)
 - [ming-image-0.1-youtube-thumbnail](01-Image-Generation/Design-Typography-and-Transparent/ming-image-0.1-youtube-thumbnail.json)
+- [moss-image-text-in-images](01-Image-Generation/Design-Typography-and-Transparent/moss-image-text-in-images.json)
+- [p-h3-image-text-in-images](01-Image-Generation/Design-Typography-and-Transparent/p-h3-image-text-in-images.json)
 - [pixaroma-nodes-text-overlay](01-Image-Generation/Design-Typography-and-Transparent/pixaroma-nodes-text-overlay.json)
 - [qwen-image-2.1-transparent-png](01-Image-Generation/Design-Typography-and-Transparent/qwen-image-2.1-transparent-png.json)
 - [z-image-turbo-txt2img-text-overlay](01-Image-Generation/Design-Typography-and-Transparent/z-image-turbo-txt2img-text-overlay.json)
@@ -47,7 +49,10 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [krea-2-txt2img-prompt-enhancer-uncensored](01-Image-Generation/LLM-Prompt-Assisted/krea-2-txt2img-prompt-enhancer-uncensored.json)
 - [krea-2-txt2img-prompt-enhancer](01-Image-Generation/LLM-Prompt-Assisted/krea-2-txt2img-prompt-enhancer.json)
 - [ming-image-0.1-txt2img-prompt-enhancer](01-Image-Generation/LLM-Prompt-Assisted/ming-image-0.1-txt2img-prompt-enhancer.json)
+- [moss-image-image-to-prompt-to-image](01-Image-Generation/LLM-Prompt-Assisted/moss-image-image-to-prompt-to-image.json)
+- [moss-image-txt2img-prompt-helper](01-Image-Generation/LLM-Prompt-Assisted/moss-image-txt2img-prompt-helper.json)
 - [nunchaku-z-image-turbo-txt2img-qwenvl-gguf-prompt-enhancer](01-Image-Generation/LLM-Prompt-Assisted/nunchaku-z-image-turbo-txt2img-qwenvl-gguf-prompt-enhancer.json)
+- [p-h3-image-short-idea-prompt-upsampler](01-Image-Generation/LLM-Prompt-Assisted/p-h3-image-short-idea-prompt-upsampler.json)
 - [qwen-image-2.1-image-to-prompt-to-image](01-Image-Generation/LLM-Prompt-Assisted/qwen-image-2.1-image-to-prompt-to-image.json)
 - [qwen-image-2.1-txt2img-prompt-enhancer](01-Image-Generation/LLM-Prompt-Assisted/qwen-image-2.1-txt2img-prompt-enhancer.json)
 - [z-image-turbo-image-to-prompt-to-image-gemma-4](01-Image-Generation/LLM-Prompt-Assisted/z-image-turbo-image-to-prompt-to-image-gemma-4.json)
@@ -103,9 +108,13 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [lens-txt2img](01-Image-Generation/Text-to-Image/lens-txt2img.json)
 - [ming-image-0.1-txt2img](01-Image-Generation/Text-to-Image/ming-image-0.1-txt2img.json)
 - [minimax-h3-txt2img-single-frame](01-Image-Generation/Text-to-Image/minimax-h3-txt2img-single-frame.json)
+- [moss-image-layout-with-boxes](01-Image-Generation/Text-to-Image/moss-image-layout-with-boxes.json)
+- [moss-image-txt2img-speed-lora-4-step](01-Image-Generation/Text-to-Image/moss-image-txt2img-speed-lora-4-step.json)
+- [moss-image-txt2img](01-Image-Generation/Text-to-Image/moss-image-txt2img.json)
 - [nunchaku-flux.1-dev-txt2img](01-Image-Generation/Text-to-Image/nunchaku-flux.1-dev-txt2img.json)
 - [nunchaku-qwen-image-lightning-txt2img](01-Image-Generation/Text-to-Image/nunchaku-qwen-image-lightning-txt2img.json)
 - [nunchaku-z-image-turbo-txt2img](01-Image-Generation/Text-to-Image/nunchaku-z-image-turbo-txt2img.json)
+- [p-h3-image-txt2img](01-Image-Generation/Text-to-Image/p-h3-image-txt2img.json)
 - [qwen-image-2.1-txt2img-low-vram](01-Image-Generation/Text-to-Image/qwen-image-2.1-txt2img-low-vram.json)
 - [qwen-image-2.1-txt2img-turbo](01-Image-Generation/Text-to-Image/qwen-image-2.1-txt2img-turbo.json)
 - [qwen-image-2.1-txt2img](01-Image-Generation/Text-to-Image/qwen-image-2.1-txt2img.json)
@@ -133,11 +142,14 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 
 ## 02-Image-Editing/Character-Outfit-and-Pose
 
+- [flux-2-klein-9b-character-sheet-ep41](02-Image-Editing/Character-Outfit-and-Pose/flux-2-klein-9b-character-sheet-ep41.json)
 - [flux-2-klein-9b-character-turnaround-sheet-from-one-image](02-Image-Editing/Character-Outfit-and-Pose/flux-2-klein-9b-character-turnaround-sheet-from-one-image.json)
 - [flux-3-klein-character-sheet](02-Image-Editing/Character-Outfit-and-Pose/flux-3-klein-character-sheet.json)
 - [flux-3-klein-outfit-change](02-Image-Editing/Character-Outfit-and-Pose/flux-3-klein-outfit-change.json)
 - [krea-2-outfit-change-outfit-lora](02-Image-Editing/Character-Outfit-and-Pose/krea-2-outfit-change-outfit-lora.json)
 - [krea-2-outfit-transfer-v2](02-Image-Editing/Character-Outfit-and-Pose/krea-2-outfit-transfer-v2.json)
+- [p-h3-image-character-sheet](02-Image-Editing/Character-Outfit-and-Pose/p-h3-image-character-sheet.json)
+- [p-h3-image-outfit-from-second-picture](02-Image-Editing/Character-Outfit-and-Pose/p-h3-image-outfit-from-second-picture.json)
 - [qwen-image-2.1-character-sheet](02-Image-Editing/Character-Outfit-and-Pose/qwen-image-2.1-character-sheet.json)
 - [qwen-image-2.1-outfit-change-turbo](02-Image-Editing/Character-Outfit-and-Pose/qwen-image-2.1-outfit-change-turbo.json)
 - [qwen-image-2.1-outfit-change](02-Image-Editing/Character-Outfit-and-Pose/qwen-image-2.1-outfit-change.json)
@@ -175,6 +187,8 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [flux-3-klein-edit-inside-a-box](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/flux-3-klein-edit-inside-a-box.json)
 - [flux-3-klein-outpaint](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/flux-3-klein-outpaint.json)
 - [lama-object-remover](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/lama-object-remover.json)
+- [p-h3-image-edit-inside-box](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/p-h3-image-edit-inside-box.json)
+- [p-h3-image-outpaint](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/p-h3-image-outpaint.json)
 - [qwen-image-2.1-inpaint](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/qwen-image-2.1-inpaint.json)
 - [qwen-image-2.1-outpaint](02-Image-Editing/Inpaint-Outpaint-and-Object-Removal/qwen-image-2.1-outpaint.json)
 
@@ -192,6 +206,10 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [flux-3-klein-logo-on-a-product](02-Image-Editing/Multi-Image-Composition/flux-3-klein-logo-on-a-product.json)
 - [flux-3-klein-product-ad](02-Image-Editing/Multi-Image-Composition/flux-3-klein-product-ad.json)
 - [ming-image-0.1-product-ad-from-two-pictures](02-Image-Editing/Multi-Image-Composition/ming-image-0.1-product-ad-from-two-pictures.json)
+- [p-h3-image-character-in-a-scene](02-Image-Editing/Multi-Image-Composition/p-h3-image-character-in-a-scene.json)
+- [p-h3-image-group-photo](02-Image-Editing/Multi-Image-Composition/p-h3-image-group-photo.json)
+- [p-h3-image-logo-on-product](02-Image-Editing/Multi-Image-Composition/p-h3-image-logo-on-product.json)
+- [p-h3-image-style-from-second-picture](02-Image-Editing/Multi-Image-Composition/p-h3-image-style-from-second-picture.json)
 - [qwen-image-2.1-character-in-a-scene](02-Image-Editing/Multi-Image-Composition/qwen-image-2.1-character-in-a-scene.json)
 - [qwen-image-2.1-logo-on-a-product](02-Image-Editing/Multi-Image-Composition/qwen-image-2.1-logo-on-a-product.json)
 - [qwen-image-2.1-multi-image-edit-2-images-prompt-enhancer](02-Image-Editing/Multi-Image-Composition/qwen-image-2.1-multi-image-edit-2-images-prompt-enhancer.json)
@@ -223,6 +241,12 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [ming-image-0.1-one-image-edit](02-Image-Editing/Single-Image-Edit/ming-image-0.1-one-image-edit.json)
 - [ming-image-0.1-social-media-pack-from-one-image](02-Image-Editing/Single-Image-Edit/ming-image-0.1-social-media-pack-from-one-image.json)
 - [minimax-h3-one-image-edit-single-frame](02-Image-Editing/Single-Image-Edit/minimax-h3-one-image-edit-single-frame.json)
+- [moss-image-edit-text-in-a-picture](02-Image-Editing/Single-Image-Edit/moss-image-edit-text-in-a-picture.json)
+- [p-h3-image-edit-new-place](02-Image-Editing/Single-Image-Edit/p-h3-image-edit-new-place.json)
+- [p-h3-image-edit-text-in-a-picture](02-Image-Editing/Single-Image-Edit/p-h3-image-edit-text-in-a-picture.json)
+- [p-h3-image-relight-day-to-night](02-Image-Editing/Single-Image-Edit/p-h3-image-relight-day-to-night.json)
+- [p-h3-image-restore-and-colorize](02-Image-Editing/Single-Image-Edit/p-h3-image-restore-and-colorize.json)
+- [p-h3-image-restyle-picture](02-Image-Editing/Single-Image-Edit/p-h3-image-restyle-picture.json)
 - [qwen-image-2.1-one-image-edit-consistency-lora](02-Image-Editing/Single-Image-Edit/qwen-image-2.1-one-image-edit-consistency-lora.json)
 - [qwen-image-2.1-one-image-edit-low-vram](02-Image-Editing/Single-Image-Edit/qwen-image-2.1-one-image-edit-low-vram.json)
 - [qwen-image-2.1-one-image-edit-prompt-enhancer](02-Image-Editing/Single-Image-Edit/qwen-image-2.1-one-image-edit-prompt-enhancer.json)
@@ -257,6 +281,9 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [6-paid-api-51-credits-nano-banana-pro-upscale](03-Image-Enhancement/Upscaling/6-paid-api-51-credits-nano-banana-pro-upscale.json)
 - [7-paid-api-53-credits-recraft-creative-upscale](03-Image-Enhancement/Upscaling/7-paid-api-53-credits-recraft-creative-upscale.json)
 - [8-paid-api-8.5-credits-seedream-4.5-upscale](03-Image-Enhancement/Upscaling/8-paid-api-8.5-credits-seedream-4.5-upscale.json)
+- [moss-image-upscale-2x-keep-picture](03-Image-Enhancement/Upscaling/moss-image-upscale-2x-keep-picture.json)
+- [moss-image-upscale-picture](03-Image-Enhancement/Upscaling/moss-image-upscale-picture.json)
+- [p-h3-image-creative-upscale](03-Image-Enhancement/Upscaling/p-h3-image-creative-upscale.json)
 
 ## 04-Video/Audio-Reactive
 
@@ -264,6 +291,9 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 
 ## 04-Video/Character-Animation-Video-to-Video
 
+- [minimax-h3-cartoon-mascot-swap-reference-video](04-Video/Character-Animation-Video-to-Video/minimax-h3-cartoon-mascot-swap-reference-video.json)
+- [minimax-h3-character-swap-lora-full-hd](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-lora-full-hd.json)
+- [minimax-h3-character-swap-lora](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-lora.json)
 - [minimax-h3-character-swap-motion-guide-check-run08-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-motion-guide-check-run08-api.json)
 - [minimax-h3-character-swap-motion-guide-check-run08-v2-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-motion-guide-check-run08-v2-api.json)
 - [minimax-h3-character-swap-sam3-mdmz-v1](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-mdmz-v1.json)
@@ -283,6 +313,11 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [minimax-h3-character-swap-sam3-run11b-480p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run11b-480p-api.json)
 - [minimax-h3-character-swap-sam3-run11c-480p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run11c-480p-api.json)
 - [minimax-h3-character-swap-sam3-run11c-720p-api](04-Video/Character-Animation-Video-to-Video/minimax-h3-character-swap-sam3-run11c-720p-api.json)
+- [minimax-h3-head-swap-lora](04-Video/Character-Animation-Video-to-Video/minimax-h3-head-swap-lora.json)
+- [minimax-h3-pose-controlnet-motion-transfer](04-Video/Character-Animation-Video-to-Video/minimax-h3-pose-controlnet-motion-transfer.json)
+- [minimax-h3-style-transfer-lora-restyle-video](04-Video/Character-Animation-Video-to-Video/minimax-h3-style-transfer-lora-restyle-video.json)
+- [minimax-h3-vfx-edit-lora-outfit-from-pictures](04-Video/Character-Animation-Video-to-Video/minimax-h3-vfx-edit-lora-outfit-from-pictures.json)
+- [minimax-h3-vfx-edit-lora-video-by-text](04-Video/Character-Animation-Video-to-Video/minimax-h3-vfx-edit-lora-video-by-text.json)
 - [reactor-video-face-swap-api](04-Video/Character-Animation-Video-to-Video/reactor-video-face-swap-api.json)
 - [wan-2.1-scail-2-character-animation-from-driving-video-compact](04-Video/Character-Animation-Video-to-Video/wan-2.1-scail-2-character-animation-from-driving-video-compact.json)
 - [wan-2.1-scail-2-character-animation-from-driving-video-long](04-Video/Character-Animation-Video-to-Video/wan-2.1-scail-2-character-animation-from-driving-video-long.json)
@@ -304,18 +339,22 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 
 ## 04-Video/Image-to-Video
 
+- [flux-2-klein-minimax-h3-outfit-change-spin](04-Video/Image-to-Video/flux-2-klein-minimax-h3-outfit-change-spin.json)
 - [ltx-2-img2video-with-audio](04-Video/Image-to-Video/ltx-2-img2video-with-audio.json)
 - [ltx-2-img2video-with-custom-audio](04-Video/Image-to-Video/ltx-2-img2video-with-custom-audio.json)
 - [ltx-2.5-img2video-with-audio-distilled-2x-upscale](04-Video/Image-to-Video/ltx-2.5-img2video-with-audio-distilled-2x-upscale.json)
 - [minimax-fasth3-img2video-first-frame-8-step](04-Video/Image-to-Video/minimax-fasth3-img2video-first-frame-8-step.json)
 - [minimax-fasth3-img2video-first-last-frame-8-step](04-Video/Image-to-Video/minimax-fasth3-img2video-first-last-frame-8-step.json)
+- [minimax-h3-img2video-ep42](04-Video/Image-to-Video/minimax-h3-img2video-ep42.json)
 - [minimax-h3-img2video-first-frame-speed-lora](04-Video/Image-to-Video/minimax-h3-img2video-first-frame-speed-lora.json)
 - [minimax-h3-img2video-first-frame](04-Video/Image-to-Video/minimax-h3-img2video-first-frame.json)
+- [minimax-h3-img2video-first-last-frame-ep41](04-Video/Image-to-Video/minimax-h3-img2video-first-last-frame-ep41.json)
+- [minimax-h3-img2video-first-last-frame-full-20-step-2-stage-1088](04-Video/Image-to-Video/minimax-h3-img2video-first-last-frame-full-20-step-2-stage-1088.json)
 - [minimax-h3-img2video-first-last-frame-speed-lora](04-Video/Image-to-Video/minimax-h3-img2video-first-last-frame-speed-lora.json)
 - [minimax-h3-img2video-first-last-frame](04-Video/Image-to-Video/minimax-h3-img2video-first-last-frame.json)
 - [minimax-h3-img2video-last-frame](04-Video/Image-to-Video/minimax-h3-img2video-last-frame.json)
+- [minimax-h3-img2video-prompt-control-ep41](04-Video/Image-to-Video/minimax-h3-img2video-prompt-control-ep41.json)
 - [minimax-h3-pika-flex-img2video-first-last-frame-2-stage](04-Video/Image-to-Video/minimax-h3-pika-flex-img2video-first-last-frame-2-stage.json)
-- [minimax-h3-img2video-first-last-frame-full-20-step-2-stage-1088](04-Video/Image-to-Video/minimax-h3-img2video-first-last-frame-full-20-step-2-stage-1088.json)
 - [wan-2.2-img2video-gguf-lightx2v-4-step-lora](04-Video/Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step-lora.json)
 - [wan-2.2-img2video-gguf-lightx2v-4-step](04-Video/Image-to-Video/wan-2.2-img2video-gguf-lightx2v-4-step.json)
 
@@ -332,14 +371,25 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [ltx-2-video2video-voice-dubbing-compact](04-Video/Reference-and-Audio-Sync/ltx-2-video2video-voice-dubbing-compact.json)
 - [ltx-2-video2video-voice-dubbing-runpod-1080p](04-Video/Reference-and-Audio-Sync/ltx-2-video2video-voice-dubbing-runpod-1080p.json)
 - [ltx-2-video2video-voice-dubbing](04-Video/Reference-and-Audio-Sync/ltx-2-video2video-voice-dubbing.json)
+- [minimax-h3-audio-sync-picture-sing-ep41](04-Video/Reference-and-Audio-Sync/minimax-h3-audio-sync-picture-sing-ep41.json)
+- [minimax-h3-audio-sync-picture-talk-ep41](04-Video/Reference-and-Audio-Sync/minimax-h3-audio-sync-picture-talk-ep41.json)
+- [minimax-h3-picture-talk-from-typed-words](04-Video/Reference-and-Audio-Sync/minimax-h3-picture-talk-from-typed-words.json)
+- [minimax-h3-pika-flex-reference-to-video-3-images-2-stage-1088](04-Video/Reference-and-Audio-Sync/minimax-h3-pika-flex-reference-to-video-3-images-2-stage-1088.json)
 - [minimax-h3-reference-image-audio-sync-sing-speed-lora](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-image-audio-sync-sing-speed-lora.json)
 - [minimax-h3-reference-image-audio-sync-sing](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-image-audio-sync-sing.json)
 - [minimax-h3-reference-image-audio-sync-speak-speed-lora](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-image-audio-sync-speak-speed-lora.json)
 - [minimax-h3-reference-image-audio-sync-speak](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-image-audio-sync-speak.json)
 - [minimax-h3-reference-to-video-2-images](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-to-video-2-images.json)
 - [minimax-h3-reference-to-video-3-images](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-to-video-3-images.json)
-- [minimax-h3-pika-flex-reference-to-video-3-images-2-stage-1088](04-Video/Reference-and-Audio-Sync/minimax-h3-pika-flex-reference-to-video-3-images-2-stage-1088.json)
 - [minimax-h3-reference-to-video-audio-character-swap](04-Video/Reference-and-Audio-Sync/minimax-h3-reference-to-video-audio-character-swap.json)
+- [minimax-h3-timeline-act-story-scenes](04-Video/Reference-and-Audio-Sync/minimax-h3-timeline-act-story-scenes.json)
+- [minimax-h3-timeline-act-walk-new-place](04-Video/Reference-and-Audio-Sync/minimax-h3-timeline-act-walk-new-place.json)
+- [minimax-h3-timeline-four-singers](04-Video/Reference-and-Audio-Sync/minimax-h3-timeline-four-singers.json)
+- [minimax-h3-timeline-redo-one-scene-keep](04-Video/Reference-and-Audio-Sync/minimax-h3-timeline-redo-one-scene-keep.json)
+- [minimax-h3-timeline-sing-bigger-size](04-Video/Reference-and-Audio-Sync/minimax-h3-timeline-sing-bigger-size.json)
+- [minimax-h3-timeline-sing-character-walks-in](04-Video/Reference-and-Audio-Sync/minimax-h3-timeline-sing-character-walks-in.json)
+- [minimax-h3-timeline-sing-clean-cuts](04-Video/Reference-and-Audio-Sync/minimax-h3-timeline-sing-clean-cuts.json)
+- [minimax-h3-timeline-sing-scenes](04-Video/Reference-and-Audio-Sync/minimax-h3-timeline-sing-scenes.json)
 - [wan-2.1-infinitetalk-avatar-generator-video2video-basic-single](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-avatar-generator-video2video-basic-single.json)
 - [wan-2.1-infinitetalk-talking-video-easy-extend-3-to-34-seconds](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-talking-video-easy-extend-3-to-34-seconds.json)
 - [wan-2.1-infinitetalk-talking-video-from-audio-10-11-seconds](04-Video/Reference-and-Audio-Sync/wan-2.1-infinitetalk-talking-video-from-audio-10-11-seconds.json)
@@ -354,14 +404,22 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [minimax-fasth3-txt2video-8-step](04-Video/Text-to-Video/minimax-fasth3-txt2video-8-step.json)
 - [minimax-h3-pika-flex-txt2video-2-stage-2k](04-Video/Text-to-Video/minimax-h3-pika-flex-txt2video-2-stage-2k.json)
 - [minimax-h3-pika-flex-txt2video-720p-to-1080p](04-Video/Text-to-Video/minimax-h3-pika-flex-txt2video-720p-to-1080p.json)
+- [minimax-h3-txt2video-2k-ep41](04-Video/Text-to-Video/minimax-h3-txt2video-2k-ep41.json)
 - [minimax-h3-txt2video-low-vram-8gb](04-Video/Text-to-Video/minimax-h3-txt2video-low-vram-8gb.json)
 - [minimax-h3-txt2video-secret-sauce-4k-direct-output](04-Video/Text-to-Video/minimax-h3-txt2video-secret-sauce-4k-direct-output.json)
 - [minimax-h3-txt2video-speed-lora](04-Video/Text-to-Video/minimax-h3-txt2video-speed-lora.json)
 - [minimax-h3-txt2video](04-Video/Text-to-Video/minimax-h3-txt2video.json)
 - [mochi-1-txt2video](04-Video/Text-to-Video/mochi-1-txt2video.json)
 
+## 04-Video/Video-Editing-and-Tools
+
+- [pixaroma-video-tools-join-clips](04-Video/Video-Editing-and-Tools/pixaroma-video-tools-join-clips.json)
+
 ## 04-Video/Video-Upscaling
 
+- [minimax-h3-regenerate-lora-remake-video-2k](04-Video/Video-Upscaling/minimax-h3-regenerate-lora-remake-video-2k.json)
+- [minimax-h3-sharpen-lora-full-hd](04-Video/Video-Upscaling/minimax-h3-sharpen-lora-full-hd.json)
+- [minimax-h3-video-sharpener-refiner-upscale-from-video](04-Video/Video-Upscaling/minimax-h3-video-sharpener-refiner-upscale-from-video.json)
 - [seedvr2-hd-video-upscale](04-Video/Video-Upscaling/seedvr2-hd-video-upscale.json)
 - [seedvr2-video-upscale-1080p-api](04-Video/Video-Upscaling/seedvr2-video-upscale-1080p-api.json)
 - [seedvr2-video-upscale-api-run](04-Video/Video-Upscaling/seedvr2-video-upscale-api-run.json)
@@ -372,7 +430,6 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [seedvr2-video-upscale-duo-api](04-Video/Video-Upscaling/seedvr2-video-upscale-duo-api.json)
 - [seedvr2-video-upscale-toons-api](04-Video/Video-Upscaling/seedvr2-video-upscale-toons-api.json)
 - [seedvr2-video-upscale](04-Video/Video-Upscaling/seedvr2-video-upscale.json)
-- [minimax-h3-video-sharpener-refiner-upscale-from-video](04-Video/Video-Upscaling/minimax-h3-video-sharpener-refiner-upscale-from-video.json)
 
 ## 05-Audio/Music-Generation
 
@@ -480,22 +537,6 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [utility-image-compare-side-by-side](08-Testing-and-Comparison/utility-image-compare-side-by-side.json)
 - [z-image-turbo-xy-plot](08-Testing-and-Comparison/z-image-turbo-xy-plot.json)
 
-## 09-Movie
-
-- [short-film-director-pipeline-krea-minimax-h3-0.7-fixed-storyboard-prompts](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-fixed-storyboard-prompts.json)
-- [short-film-director-pipeline-krea-minimax-h3-0.7-fixed](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-fixed.json)
-- [short-film-director-pipeline-krea-minimax-h3-0.7-hires-16-scenes-heroine](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-hires-16-scenes-heroine.json)
-- [short-film-director-pipeline-krea-minimax-h3-0.7-hires-3-scenes](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-hires-3-scenes.json)
-- [short-film-director-pipeline-krea-minimax-h3-0.7-hires-full-16-scenes](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-hires-full-16-scenes.json)
-- [short-film-director-pipeline-krea-minimax-h3-0.7-overnight](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-overnight.json)
-- [short-film-director-pipeline-krea-minimax-h3-0.7-test-5-scenes-morning-departure](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-test-5-scenes-morning-departure.json)
-- [short-film-director-pipeline-krea-minimax-h3-0.7-test-scene-1](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-test-scene-1.json)
-- [short-film-director-pipeline-krea-minimax-h3-0.7-trial-5-scenes-mcp-run](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-trial-5-scenes-mcp-run.json)
-- [short-film-director-pipeline-krea-minimax-h3-0.7-trial-5-scenes](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-trial-5-scenes.json)
-- [short-film-director-pipeline-krea-minimax-h3-no-review-v2](09-Movie/short-film-director-pipeline-krea-minimax-h3-no-review-v2.json)
-- [short-film-director-pipeline-krea-minimax-h3-no-review](09-Movie/short-film-director-pipeline-krea-minimax-h3-no-review.json)
-- [short-film-director-pipeline-krea-minimax-h3](09-Movie/short-film-director-pipeline-krea-minimax-h3.json)
-
 ## 09-Movie/Short-Film-Projects
 
 - [backyard-goal-0-set-plate-krea-2-api](09-Movie/Short-Film-Projects/backyard-goal-0-set-plate-krea-2-api.json)
@@ -534,6 +575,22 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [toonboy-2-film-minimax-h3-v2-backup](09-Movie/Short-Film-Projects/toonboy-2-film-minimax-h3-v2-backup.json)
 - [toonboy-2-film-minimax-h3](09-Movie/Short-Film-Projects/toonboy-2-film-minimax-h3.json)
 
+## 09-Movie
+
+- [short-film-director-pipeline-krea-minimax-h3-0.7-fixed-storyboard-prompts](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-fixed-storyboard-prompts.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-fixed](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-fixed.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-hires-16-scenes-heroine](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-hires-16-scenes-heroine.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-hires-3-scenes](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-hires-3-scenes.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-hires-full-16-scenes](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-hires-full-16-scenes.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-overnight](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-overnight.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-test-5-scenes-morning-departure](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-test-5-scenes-morning-departure.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-test-scene-1](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-test-scene-1.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-trial-5-scenes-mcp-run](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-trial-5-scenes-mcp-run.json)
+- [short-film-director-pipeline-krea-minimax-h3-0.7-trial-5-scenes](09-Movie/short-film-director-pipeline-krea-minimax-h3-0.7-trial-5-scenes.json)
+- [short-film-director-pipeline-krea-minimax-h3-no-review-v2](09-Movie/short-film-director-pipeline-krea-minimax-h3-no-review-v2.json)
+- [short-film-director-pipeline-krea-minimax-h3-no-review](09-Movie/short-film-director-pipeline-krea-minimax-h3-no-review.json)
+- [short-film-director-pipeline-krea-minimax-h3](09-Movie/short-film-director-pipeline-krea-minimax-h3.json)
+
 ## 10-LLM-and-Prompt-Tools
 
 - [gemma-4-anima-prompt-enhancer](10-LLM-and-Prompt-Tools/gemma-4-anima-prompt-enhancer.json)
@@ -557,6 +614,12 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [flux-2-klein-9b-fp8-multi-step-workflow-example](90-Docs-and-Resources/Learning-and-Node-Demos/flux-2-klein-9b-fp8-multi-step-workflow-example.json)
 - [nodes-explained-01-models-explained-finished-z-image-turbo](90-Docs-and-Resources/Learning-and-Node-Demos/nodes-explained-01-models-explained-finished-z-image-turbo.json)
 - [nodes-explained-01-models-explained-practice-z-image-turbo](90-Docs-and-Resources/Learning-and-Node-Demos/nodes-explained-01-models-explained-practice-z-image-turbo.json)
+- [nodes-explained-02-prompts-explained-finished-z-image-turbo](90-Docs-and-Resources/Learning-and-Node-Demos/nodes-explained-02-prompts-explained-finished-z-image-turbo.json)
+- [nodes-explained-02-prompts-explained-pixaroma-z-image-turbo](90-Docs-and-Resources/Learning-and-Node-Demos/nodes-explained-02-prompts-explained-pixaroma-z-image-turbo.json)
+- [nodes-explained-02-prompts-explained-practice-z-image-turbo](90-Docs-and-Resources/Learning-and-Node-Demos/nodes-explained-02-prompts-explained-practice-z-image-turbo.json)
+- [nodes-explained-03-image-size-explained-finished-z-image-turbo](90-Docs-and-Resources/Learning-and-Node-Demos/nodes-explained-03-image-size-explained-finished-z-image-turbo.json)
+- [nodes-explained-03-image-size-explained-pixaroma-z-image-turbo](90-Docs-and-Resources/Learning-and-Node-Demos/nodes-explained-03-image-size-explained-pixaroma-z-image-turbo.json)
+- [nodes-explained-03-image-size-explained-practice-z-image-turbo](90-Docs-and-Resources/Learning-and-Node-Demos/nodes-explained-03-image-size-explained-practice-z-image-turbo.json)
 - [pixaroma-help-and-resources](90-Docs-and-Resources/Learning-and-Node-Demos/pixaroma-help-and-resources.json)
 - [pixaroma-nodes-change-node-color](90-Docs-and-Resources/Learning-and-Node-Demos/pixaroma-nodes-change-node-color.json)
 - [pixaroma-nodes-labels-ep11](90-Docs-and-Resources/Learning-and-Node-Demos/pixaroma-nodes-labels-ep11.json)
@@ -574,3 +637,42 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [ep16-flux-2-klein-9b-image-to-prompt-to-image-qwen-3.5-pixaroma-original](91-Review-Version-Conflicts/ep16-flux-2-klein-9b-image-to-prompt-to-image-qwen-3.5-pixaroma-original.json)
 - [ep16-flux-2-klein-9b-txt2img-qwen-3.5-prompt-enhancer-pixaroma-original](91-Review-Version-Conflicts/ep16-flux-2-klein-9b-txt2img-qwen-3.5-prompt-enhancer-pixaroma-original.json)
 - [ep20-anima-base-v1.0-anime-txt2img-gemma-4-prompt-enhancer-pixaroma-original](91-Review-Version-Conflicts/ep20-anima-base-v1.0-anime-txt2img-gemma-4-prompt-enhancer-pixaroma-original.json)
+- [fish-s2-multi-speaker-dialogue-tts-ep10-pixaroma-original](91-Review-Version-Conflicts/fish-s2-multi-speaker-dialogue-tts-ep10-pixaroma-original.json)
+- [fish-s2-voice-clone-tts-ep10-pixaroma-original](91-Review-Version-Conflicts/fish-s2-voice-clone-tts-ep10-pixaroma-original.json)
+- [flux-2-klein-9b-kv-fp8-multi-image-edit-3-images-ep09-pixaroma-original](91-Review-Version-Conflicts/flux-2-klein-9b-kv-fp8-multi-image-edit-3-images-ep09-pixaroma-original.json)
+- [flux-2-klein-9b-kv-fp8-multi-image-edit-4-images-ep09-pixaroma-original](91-Review-Version-Conflicts/flux-2-klein-9b-kv-fp8-multi-image-edit-4-images-ep09-pixaroma-original.json)
+- [krea-2-edit-lora-character-and-background-ep30-pixaroma-original](91-Review-Version-Conflicts/krea-2-edit-lora-character-and-background-ep30-pixaroma-original.json)
+- [krea-2-edit-lora-custom-ratio-ep30-pixaroma-original](91-Review-Version-Conflicts/krea-2-edit-lora-custom-ratio-ep30-pixaroma-original.json)
+- [krea-2-edit-lora-ep30-pixaroma-original](91-Review-Version-Conflicts/krea-2-edit-lora-ep30-pixaroma-original.json)
+- [krea-2-image-to-prompt-to-image-ai-prompt-node-ep31-pixaroma-original](91-Review-Version-Conflicts/krea-2-image-to-prompt-to-image-ai-prompt-node-ep31-pixaroma-original.json)
+- [krea-2-image-to-prompt-to-image-ep28-pixaroma-original](91-Review-Version-Conflicts/krea-2-image-to-prompt-to-image-ep28-pixaroma-original.json)
+- [krea-2-int8-image-to-prompt-to-image-ep25-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-image-to-prompt-to-image-ep25-pixaroma-original.json)
+- [krea-2-int8-lora-xy-plot-ep26-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-lora-xy-plot-ep26-pixaroma-original.json)
+- [krea-2-int8-txt2img-extra-pass-ep25-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-txt2img-extra-pass-ep25-pixaroma-original.json)
+- [krea-2-int8-txt2img-extra-pass-image-to-prompt-ep25-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-txt2img-extra-pass-image-to-prompt-ep25-pixaroma-original.json)
+- [krea-2-int8-txt2img-extra-pass-lora-ep26-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-txt2img-extra-pass-lora-ep26-pixaroma-original.json)
+- [krea-2-int8-txt2img-extra-pass-prompt-enhancer-ep25-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-txt2img-extra-pass-prompt-enhancer-ep25-pixaroma-original.json)
+- [krea-2-int8-txt2img-prompt-enhancer-ep25-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-txt2img-prompt-enhancer-ep25-pixaroma-original.json)
+- [krea-2-int8-txt2img-simple-ep25-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-txt2img-simple-ep25-pixaroma-original.json)
+- [krea-2-int8-txt2img-simple-lora-ep26-pixaroma-original](91-Review-Version-Conflicts/krea-2-int8-txt2img-simple-lora-ep26-pixaroma-original.json)
+- [krea-2-outfit-change-outfit-lora-ep30-pixaroma-original](91-Review-Version-Conflicts/krea-2-outfit-change-outfit-lora-ep30-pixaroma-original.json)
+- [krea-2-outfit-transfer-v2-ep30-pixaroma-original](91-Review-Version-Conflicts/krea-2-outfit-transfer-v2-ep30-pixaroma-original.json)
+- [krea-2-txt2img-2k-hi-res-prompt-enhancer-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-2k-hi-res-prompt-enhancer-ep24-pixaroma-original.json)
+- [krea-2-txt2img-2k-hi-res-prompt-enhancer-uncensored-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-2k-hi-res-prompt-enhancer-uncensored-ep24-pixaroma-original.json)
+- [krea-2-txt2img-ai-prompt-enhancer-ep31-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-ai-prompt-enhancer-ep31-pixaroma-original.json)
+- [krea-2-txt2img-ep28-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-ep28-pixaroma-original.json)
+- [krea-2-txt2img-extra-pass-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-extra-pass-ep24-pixaroma-original.json)
+- [krea-2-txt2img-extra-pass-lora-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-extra-pass-lora-ep24-pixaroma-original.json)
+- [krea-2-txt2img-extra-pass-prompt-enhancer-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-extra-pass-prompt-enhancer-ep24-pixaroma-original.json)
+- [krea-2-txt2img-extra-pass-prompt-enhancer-uncensored-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-extra-pass-prompt-enhancer-uncensored-ep24-pixaroma-original.json)
+- [krea-2-txt2img-prompt-enhancer-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-prompt-enhancer-ep24-pixaroma-original.json)
+- [krea-2-txt2img-prompt-enhancer-ep28-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-prompt-enhancer-ep28-pixaroma-original.json)
+- [krea-2-txt2img-prompt-enhancer-uncensored-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-prompt-enhancer-uncensored-ep24-pixaroma-original.json)
+- [krea-2-txt2img-simple-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-simple-ep24-pixaroma-original.json)
+- [krea-2-txt2img-simple-lora-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-simple-lora-ep24-pixaroma-original.json)
+- [krea-2-txt2img-simple-low-vram-ep24-pixaroma-original](91-Review-Version-Conflicts/krea-2-txt2img-simple-low-vram-ep24-pixaroma-original.json)
+- [layerstyle-image-filters-and-color-adjustments-ep08-pixaroma-original](91-Review-Version-Conflicts/layerstyle-image-filters-and-color-adjustments-ep08-pixaroma-original.json)
+- [qwen3-tts-voice-clone-ep07-pixaroma-original](91-Review-Version-Conflicts/qwen3-tts-voice-clone-ep07-pixaroma-original.json)
+- [qwen3-tts-voice-design-dialogue-ep07-pixaroma-original](91-Review-Version-Conflicts/qwen3-tts-voice-design-dialogue-ep07-pixaroma-original.json)
+- [qwen3-tts-voice-design-ep07-pixaroma-original](91-Review-Version-Conflicts/qwen3-tts-voice-design-ep07-pixaroma-original.json)
+- [utility-image-compare-side-by-side-ep08-pixaroma-original](91-Review-Version-Conflicts/utility-image-compare-side-by-side-ep08-pixaroma-original.json)
