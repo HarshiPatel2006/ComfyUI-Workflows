@@ -41,6 +41,8 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 | **Krea 2** (FP8 / INT8) | txt2img, edit LoRA, outfit transfer, storyboards, LoRA XY plot | [01](01-Image-Generation) · [02](02-Image-Editing) · [09](09-Movie) |
 | **Z-Image Turbo** | fast txt2img, ControlNet Union, LoRA, text overlay, character sheets | [01](01-Image-Generation) |
 | **Ming Image 0.1** | logos, posters, infographics, thumbnails, app screens | [01](01-Image-Generation) · [02](02-Image-Editing) |
+| **MOSS Image** | txt2img, text in images, layout with boxes, image-to-prompt, text editing, upscale | [01](01-Image-Generation) · [02](02-Image-Editing) · [03](03-Image-Enhancement) |
+| **P-H3 Image** (MiniMax H3 image LoRA) | txt2img, text in images, character sheets, single- and multi-image edits, outpainting, relight, restore, creative upscale | [01](01-Image-Generation) · [02](02-Image-Editing) · [03](03-Image-Enhancement) |
 | **Stable Diffusion 1.5** (Juggernaut Reborn), Anima, Boogu, ERNIE Image | txt2img, img2img, ControlNet Canny, LoRA, anime | [01](01-Image-Generation) · [02](02-Image-Editing) |
 | **Wan 2.1 / Wan 2.2** (SCAIL 2, InfiniteTalk, Animate) | img2video, character animation, character replacement, talking video, video dubbing | [04](04-Video) |
 | **LTX-2** | img2video with audio, lip-sync to your audio, voice dubbing | [04](04-Video) |
