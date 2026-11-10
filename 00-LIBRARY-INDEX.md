@@ -1,6 +1,6 @@
 # ComfyUI Workflow Library — Index
 
-Plain list of all 568 workflows by folder. The [README](README.md) has descriptions, models and required custom nodes for each one.
+Plain list of all 568 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
 
 Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-image-2.1-one-image-edit-low-vram.json`). `-api` = API format; `epNN` = tutorial episode the variant came from.
 

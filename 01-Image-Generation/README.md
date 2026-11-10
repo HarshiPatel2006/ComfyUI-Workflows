@@ -14,140 +14,140 @@ Text-to-image (txt2img) workflows for FLUX.2 / FLUX.3 Klein, Qwen-Image 2.1, Kre
 
 ### ControlNet-guided generation (Canny, Union)
 
-| Workflow | What it does | Custom nodes needed |
-|---|---|---|
-| [sd15-juggernaut-reborn-txt2img-controlnet-canny](ControlNet-Guided/sd15-juggernaut-reborn-txt2img-controlnet-canny.json) | Text to Image + ControlNet Canny | comfyui_controlnet_aux |
-| [z-image-turbo-txt2img-fp8-aio-controlnet-union](ControlNet-Guided/z-image-turbo-txt2img-fp8-aio-controlnet-union.json) | Text to Image — FP8 AIO + ControlNet Union | comfyui_controlnet_aux, rgthree-comfy |
+| Workflow | What it does | Models used | Custom nodes needed |
+|---|---|---|---|
+| [sd15-juggernaut-reborn-txt2img-controlnet-canny](ControlNet-Guided/sd15-juggernaut-reborn-txt2img-controlnet-canny.json) | Text to Image + ControlNet Canny | `juggernaut_reborn.safetensors`, `control_v11p_sd15_canny_fp16.safetensors` | comfyui_controlnet_aux |
+| [z-image-turbo-txt2img-fp8-aio-controlnet-union](ControlNet-Guided/z-image-turbo-txt2img-fp8-aio-controlnet-union.json) | Text to Image — FP8 AIO + ControlNet Union | `Z-Image-Turbo-Fun-Controlnet-Union.safetensors`, `z-image-turbo-fp8-aio.safetensors` | comfyui_controlnet_aux, rgthree-comfy |
 
 ### Logos, posters, text in images, UI screens and transparent PNGs
 
-| Workflow | What it does | Custom nodes needed |
-|---|---|---|
-| [flux-3-klein-text-in-images](Design-Typography-and-Transparent/flux-3-klein-text-in-images.json) | Text in Images | ComfyUI-Pixaroma |
-| [ming-image-0.1-3d-lettering](Design-Typography-and-Transparent/ming-image-0.1-3d-lettering.json) | 3D Lettering | ComfyUI-Pixaroma |
-| [ming-image-0.1-app-and-website-screens](Design-Typography-and-Transparent/ming-image-0.1-app-and-website-screens.json) | App and Website Screens | ComfyUI-Pixaroma |
-| [ming-image-0.1-event-poster](Design-Typography-and-Transparent/ming-image-0.1-event-poster.json) | Event Poster | ComfyUI-Pixaroma |
-| [ming-image-0.1-game-screens-and-icons](Design-Typography-and-Transparent/ming-image-0.1-game-screens-and-icons.json) | Game Screens and Icons | ComfyUI-Pixaroma |
-| [ming-image-0.1-infographic](Design-Typography-and-Transparent/ming-image-0.1-infographic.json) | Infographic | ComfyUI-Pixaroma |
-| [ming-image-0.1-logo-design](Design-Typography-and-Transparent/ming-image-0.1-logo-design.json) | Logo Design | ComfyUI-Pixaroma |
-| [ming-image-0.1-logo-variations](Design-Typography-and-Transparent/ming-image-0.1-logo-variations.json) | Logo Variations | ComfyUI-Pixaroma |
-| [ming-image-0.1-social-media-post](Design-Typography-and-Transparent/ming-image-0.1-social-media-post.json) | Social Media Post | ComfyUI-Pixaroma |
-| [ming-image-0.1-transparent-png](Design-Typography-and-Transparent/ming-image-0.1-transparent-png.json) | Transparent PNG | ComfyUI-Pixaroma |
-| [ming-image-0.1-youtube-thumbnail](Design-Typography-and-Transparent/ming-image-0.1-youtube-thumbnail.json) | YouTube Thumbnail | ComfyUI-Pixaroma |
-| [pixaroma-nodes-text-overlay](Design-Typography-and-Transparent/pixaroma-nodes-text-overlay.json) | Text Overlay | ComfyUI-Pixaroma |
-| [qwen-image-2.1-transparent-png](Design-Typography-and-Transparent/qwen-image-2.1-transparent-png.json) | Transparent PNG | ComfyUI-Pixaroma |
-| [z-image-turbo-txt2img-text-overlay](Design-Typography-and-Transparent/z-image-turbo-txt2img-text-overlay.json) | Text to Image + Text Overlay | ComfyUI-Pixaroma |
-| [moss-image-text-in-images](Design-Typography-and-Transparent/moss-image-text-in-images.json) | MOSS Image - Words in Pictures (Ep40) | ComfyUI-Pixaroma |
-| [p-h3-image-text-in-images](Design-Typography-and-Transparent/p-h3-image-text-in-images.json) | P-H3 Image - Words in Pictures (Ep42) | ComfyUI-Pixaroma |
+| Workflow | What it does | Models used | Custom nodes needed |
+|---|---|---|---|
+| [flux-3-klein-text-in-images](Design-Typography-and-Transparent/flux-3-klein-text-in-images.json) | Text in Images | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [ming-image-0.1-3d-lettering](Design-Typography-and-Transparent/ming-image-0.1-3d-lettering.json) | 3D Lettering | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [ming-image-0.1-app-and-website-screens](Design-Typography-and-Transparent/ming-image-0.1-app-and-website-screens.json) | App and Website Screens | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [ming-image-0.1-event-poster](Design-Typography-and-Transparent/ming-image-0.1-event-poster.json) | Event Poster | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [ming-image-0.1-game-screens-and-icons](Design-Typography-and-Transparent/ming-image-0.1-game-screens-and-icons.json) | Game Screens and Icons | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [ming-image-0.1-infographic](Design-Typography-and-Transparent/ming-image-0.1-infographic.json) | Infographic | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [ming-image-0.1-logo-design](Design-Typography-and-Transparent/ming-image-0.1-logo-design.json) | Logo Design | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [ming-image-0.1-logo-variations](Design-Typography-and-Transparent/ming-image-0.1-logo-variations.json) | Logo Variations | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [ming-image-0.1-social-media-post](Design-Typography-and-Transparent/ming-image-0.1-social-media-post.json) | Social Media Post | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [ming-image-0.1-transparent-png](Design-Typography-and-Transparent/ming-image-0.1-transparent-png.json) | Transparent PNG | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [ming-image-0.1-youtube-thumbnail](Design-Typography-and-Transparent/ming-image-0.1-youtube-thumbnail.json) | YouTube Thumbnail | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [pixaroma-nodes-text-overlay](Design-Typography-and-Transparent/pixaroma-nodes-text-overlay.json) | Text Overlay | — | ComfyUI-Pixaroma |
+| [qwen-image-2.1-transparent-png](Design-Typography-and-Transparent/qwen-image-2.1-transparent-png.json) | Transparent PNG | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [z-image-turbo-txt2img-text-overlay](Design-Typography-and-Transparent/z-image-turbo-txt2img-text-overlay.json) | Text to Image + Text Overlay | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
+| [moss-image-text-in-images](Design-Typography-and-Transparent/moss-image-text-in-images.json) | MOSS Image - Words in Pictures (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [p-h3-image-text-in-images](Design-Typography-and-Transparent/p-h3-image-text-in-images.json) | P-H3 Image - Words in Pictures (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
 
 ### Text-to-image with LLM prompt enhancers and image-to-prompt-to-image
 
-| Workflow | What it does | Custom nodes needed |
-|---|---|---|
-| [anima-base-v1.0-anime-txt2img-gemma-4-prompt-enhancer](LLM-Prompt-Assisted/anima-base-v1.0-anime-txt2img-gemma-4-prompt-enhancer.json) | Anime Text to Image + Gemma 4 Prompt Enhancer | ComfyUI-Pixaroma |
-| [boogu-image-txt2img-prompt-enhancer](LLM-Prompt-Assisted/boogu-image-txt2img-prompt-enhancer.json) | Text to Image + Prompt Enhancer | ComfyUI-Pixaroma |
-| [flux-2-klein-9b-image-to-prompt-to-image-qwen-3.5](LLM-Prompt-Assisted/flux-2-klein-9b-image-to-prompt-to-image-qwen-3.5.json) | Image to Prompt to Image (Qwen 3.5) | ComfyUI-Pixaroma |
-| [flux-2-klein-9b-txt2img-qwen-3.5-prompt-enhancer](LLM-Prompt-Assisted/flux-2-klein-9b-txt2img-qwen-3.5-prompt-enhancer.json) | Text to Image + Qwen 3.5 Prompt Enhancer | ComfyUI-Pixaroma |
-| [flux-3-klein-image-to-prompt-to-image](LLM-Prompt-Assisted/flux-3-klein-image-to-prompt-to-image.json) | Image to Prompt to Image | ComfyUI-Pixaroma |
-| [flux-3-klein-txt2img-prompt-upsampler](LLM-Prompt-Assisted/flux-3-klein-txt2img-prompt-upsampler.json) | Text to Image + Prompt Upsampler | ComfyUI-Pixaroma |
-| [krea-2-image-to-prompt-to-image-ep31-ai-prompt-node](LLM-Prompt-Assisted/krea-2-image-to-prompt-to-image-ep31-ai-prompt-node.json) | Image to Prompt to Image (Ep31 AI Prompt Node) | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-image-to-prompt-to-image](LLM-Prompt-Assisted/krea-2-image-to-prompt-to-image.json) | Image to Prompt to Image | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-int8-image-to-prompt-to-image](LLM-Prompt-Assisted/krea-2-int8-image-to-prompt-to-image.json) | Image to Prompt to Image | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-int8-txt2img-extra-pass-image-to-prompt](LLM-Prompt-Assisted/krea-2-int8-txt2img-extra-pass-image-to-prompt.json) | Text to Image + Extra Pass + Image to Prompt | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-int8-txt2img-extra-pass-prompt-enhancer](LLM-Prompt-Assisted/krea-2-int8-txt2img-extra-pass-prompt-enhancer.json) | Text to Image + Extra Pass + Prompt Enhancer | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-int8-txt2img-prompt-enhancer](LLM-Prompt-Assisted/krea-2-int8-txt2img-prompt-enhancer.json) | Text to Image + Prompt Enhancer | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-ai-prompt-enhancer-ep31](LLM-Prompt-Assisted/krea-2-txt2img-ai-prompt-enhancer-ep31.json) | Text to Image + AI Prompt Enhancer (Ep31) | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-extra-pass-prompt-enhancer-uncensored](LLM-Prompt-Assisted/krea-2-txt2img-extra-pass-prompt-enhancer-uncensored.json) | Text to Image + Extra Pass + Prompt Enhancer (Uncensored) | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-extra-pass-prompt-enhancer](LLM-Prompt-Assisted/krea-2-txt2img-extra-pass-prompt-enhancer.json) | Text to Image + Extra Pass + Prompt Enhancer | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-prompt-enhancer-ep28](LLM-Prompt-Assisted/krea-2-txt2img-prompt-enhancer-ep28.json) | Text to Image + Prompt Enhancer (Ep28) | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-prompt-enhancer-uncensored](LLM-Prompt-Assisted/krea-2-txt2img-prompt-enhancer-uncensored.json) | Text to Image + Prompt Enhancer (Uncensored) | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-prompt-enhancer](LLM-Prompt-Assisted/krea-2-txt2img-prompt-enhancer.json) | Text to Image + Prompt Enhancer | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [ming-image-0.1-txt2img-prompt-enhancer](LLM-Prompt-Assisted/ming-image-0.1-txt2img-prompt-enhancer.json) | Text to Image + Prompt Enhancer | ComfyUI-Pixaroma |
-| [nunchaku-z-image-turbo-txt2img-qwenvl-gguf-prompt-enhancer](LLM-Prompt-Assisted/nunchaku-z-image-turbo-txt2img-qwenvl-gguf-prompt-enhancer.json) | Z-Image Turbo — Text to Image + QwenVL GGUF Prompt Enhancer | ComfyUI-QwenVL, ComfyUI-nunchaku |
-| [qwen-image-2.1-image-to-prompt-to-image](LLM-Prompt-Assisted/qwen-image-2.1-image-to-prompt-to-image.json) | Image to Prompt to Image | ComfyUI-Pixaroma |
-| [qwen-image-2.1-txt2img-prompt-enhancer](LLM-Prompt-Assisted/qwen-image-2.1-txt2img-prompt-enhancer.json) | Text to Image + Prompt Enhancer | ComfyUI-Pixaroma |
-| [z-image-turbo-image-to-prompt-to-image-gemma-4](LLM-Prompt-Assisted/z-image-turbo-image-to-prompt-to-image-gemma-4.json) | Image to Prompt to Image (Gemma 4) | ComfyUI-Pixaroma |
-| [z-image-turbo-int8-txt2img-ai-prompt-enhancer](LLM-Prompt-Assisted/z-image-turbo-int8-txt2img-ai-prompt-enhancer.json) | Text to Image + AI Prompt Enhancer | ComfyUI-Pixaroma |
-| [z-image-turbo-txt2img-gemma-4-prompt-enhancer-find-and-replace](LLM-Prompt-Assisted/z-image-turbo-txt2img-gemma-4-prompt-enhancer-find-and-replace.json) | Text to Image + Gemma 4 Prompt Enhancer + Find and Replace | ComfyUI-Pixaroma |
-| [z-image-turbo-txt2img-gemma-4-prompt-enhancer](LLM-Prompt-Assisted/z-image-turbo-txt2img-gemma-4-prompt-enhancer.json) | Text to Image + Gemma 4 Prompt Enhancer | ComfyUI-Pixaroma |
-| [moss-image-txt2img-prompt-helper](LLM-Prompt-Assisted/moss-image-txt2img-prompt-helper.json) | MOSS Image - Text to Image + Prompt Helper (Ep40) | ComfyUI-Pixaroma |
-| [moss-image-image-to-prompt-to-image](LLM-Prompt-Assisted/moss-image-image-to-prompt-to-image.json) | MOSS Image - Image to Prompt to Image (Ep40) | ComfyUI-Pixaroma |
-| [p-h3-image-short-idea-prompt-upsampler](LLM-Prompt-Assisted/p-h3-image-short-idea-prompt-upsampler.json) | P-H3 Image - Short Idea with Prompt Upsampler (Ep42) | ComfyUI-Pixaroma |
+| Workflow | What it does | Models used | Custom nodes needed |
+|---|---|---|---|
+| [anima-base-v1.0-anime-txt2img-gemma-4-prompt-enhancer](LLM-Prompt-Assisted/anima-base-v1.0-anime-txt2img-gemma-4-prompt-enhancer.json) | Anime Text to Image + Gemma 4 Prompt Enhancer | `qwen_image_vae.safetensors`, `qwen_3_06b_base.safetensors`, `gemma4_e4b_it_fp8_scaled.safetensors` +1 more | ComfyUI-Pixaroma |
+| [boogu-image-txt2img-prompt-enhancer](LLM-Prompt-Assisted/boogu-image-txt2img-prompt-enhancer.json) | Text to Image + Prompt Enhancer | `ae.safetensors`, `boogu_image_turbo_hotfix_int8_convrot.safetensors`, `qwen3vl_8b_fp8_scaled.safetensors` | ComfyUI-Pixaroma |
+| [flux-2-klein-9b-image-to-prompt-to-image-qwen-3.5](LLM-Prompt-Assisted/flux-2-klein-9b-image-to-prompt-to-image-qwen-3.5.json) | Image to Prompt to Image (Qwen 3.5) | `flux-2-klein-9b-fp8mixed.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` +1 more | ComfyUI-Pixaroma |
+| [flux-2-klein-9b-txt2img-qwen-3.5-prompt-enhancer](LLM-Prompt-Assisted/flux-2-klein-9b-txt2img-qwen-3.5-prompt-enhancer.json) | Text to Image + Qwen 3.5 Prompt Enhancer | `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors`, `qwen3.5_4b_bf16.safetensors` +1 more | ComfyUI-Pixaroma |
+| [flux-3-klein-image-to-prompt-to-image](LLM-Prompt-Assisted/flux-3-klein-image-to-prompt-to-image.json) | Image to Prompt to Image | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` +1 more | ComfyUI-Pixaroma |
+| [flux-3-klein-txt2img-prompt-upsampler](LLM-Prompt-Assisted/flux-3-klein-txt2img-prompt-upsampler.json) | Text to Image + Prompt Upsampler | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` +1 more | ComfyUI-Pixaroma |
+| [krea-2-image-to-prompt-to-image-ep31-ai-prompt-node](LLM-Prompt-Assisted/krea-2-image-to-prompt-to-image-ep31-ai-prompt-node.json) | Image to Prompt to Image (Ep31 AI Prompt Node) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-image-to-prompt-to-image](LLM-Prompt-Assisted/krea-2-image-to-prompt-to-image.json) | Image to Prompt to Image | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-int8-image-to-prompt-to-image](LLM-Prompt-Assisted/krea-2-int8-image-to-prompt-to-image.json) | Image to Prompt to Image | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-int8-txt2img-extra-pass-image-to-prompt](LLM-Prompt-Assisted/krea-2-int8-txt2img-extra-pass-image-to-prompt.json) | Text to Image + Extra Pass + Image to Prompt | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-int8-txt2img-extra-pass-prompt-enhancer](LLM-Prompt-Assisted/krea-2-int8-txt2img-extra-pass-prompt-enhancer.json) | Text to Image + Extra Pass + Prompt Enhancer | `qwen_image_vae.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2_turbo_int8_convrot.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-int8-txt2img-prompt-enhancer](LLM-Prompt-Assisted/krea-2-int8-txt2img-prompt-enhancer.json) | Text to Image + Prompt Enhancer | `qwen_image_vae.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2_turbo_int8_convrot.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-txt2img-ai-prompt-enhancer-ep31](LLM-Prompt-Assisted/krea-2-txt2img-ai-prompt-enhancer-ep31.json) | Text to Image + AI Prompt Enhancer (Ep31) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-txt2img-extra-pass-prompt-enhancer-uncensored](LLM-Prompt-Assisted/krea-2-txt2img-extra-pass-prompt-enhancer-uncensored.json) | Text to Image + Extra Pass + Prompt Enhancer (Uncensored) | `krea2_turbo_fp8_scaled.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors`, `qwen_image_vae.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-txt2img-extra-pass-prompt-enhancer](LLM-Prompt-Assisted/krea-2-txt2img-extra-pass-prompt-enhancer.json) | Text to Image + Extra Pass + Prompt Enhancer | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-txt2img-prompt-enhancer-ep28](LLM-Prompt-Assisted/krea-2-txt2img-prompt-enhancer-ep28.json) | Text to Image + Prompt Enhancer (Ep28) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-txt2img-prompt-enhancer-uncensored](LLM-Prompt-Assisted/krea-2-txt2img-prompt-enhancer-uncensored.json) | Text to Image + Prompt Enhancer (Uncensored) | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-txt2img-prompt-enhancer](LLM-Prompt-Assisted/krea-2-txt2img-prompt-enhancer.json) | Text to Image + Prompt Enhancer | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [ming-image-0.1-txt2img-prompt-enhancer](LLM-Prompt-Assisted/ming-image-0.1-txt2img-prompt-enhancer.json) | Text to Image + Prompt Enhancer | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` +1 more | ComfyUI-Pixaroma |
+| [nunchaku-z-image-turbo-txt2img-qwenvl-gguf-prompt-enhancer](LLM-Prompt-Assisted/nunchaku-z-image-turbo-txt2img-qwenvl-gguf-prompt-enhancer.json) | Z-Image Turbo — Text to Image + QwenVL GGUF Prompt Enhancer | `Qwen3VL-8B-Instruct-Q8_0.gguf`, `svdq-int4_r256-z-image-turbo.safetensors`, `Huihui-Qwen3-4B-abliterated-v2_fp8mixed.safetensors` +1 more | ComfyUI-QwenVL, ComfyUI-nunchaku |
+| [qwen-image-2.1-image-to-prompt-to-image](LLM-Prompt-Assisted/qwen-image-2.1-image-to-prompt-to-image.json) | Image to Prompt to Image | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [qwen-image-2.1-txt2img-prompt-enhancer](LLM-Prompt-Assisted/qwen-image-2.1-txt2img-prompt-enhancer.json) | Text to Image + Prompt Enhancer | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [z-image-turbo-image-to-prompt-to-image-gemma-4](LLM-Prompt-Assisted/z-image-turbo-image-to-prompt-to-image-gemma-4.json) | Image to Prompt to Image (Gemma 4) | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` +1 more | ComfyUI-Pixaroma |
+| [z-image-turbo-int8-txt2img-ai-prompt-enhancer](LLM-Prompt-Assisted/z-image-turbo-int8-txt2img-ai-prompt-enhancer.json) | Text to Image + AI Prompt Enhancer | `ae.safetensors`, `z_image_turbo_int8_convrot.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
+| [z-image-turbo-txt2img-gemma-4-prompt-enhancer-find-and-replace](LLM-Prompt-Assisted/z-image-turbo-txt2img-gemma-4-prompt-enhancer-find-and-replace.json) | Text to Image + Gemma 4 Prompt Enhancer + Find and Replace | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` +1 more | ComfyUI-Pixaroma |
+| [z-image-turbo-txt2img-gemma-4-prompt-enhancer](LLM-Prompt-Assisted/z-image-turbo-txt2img-gemma-4-prompt-enhancer.json) | Text to Image + Gemma 4 Prompt Enhancer | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` +1 more | ComfyUI-Pixaroma |
+| [moss-image-txt2img-prompt-helper](LLM-Prompt-Assisted/moss-image-txt2img-prompt-helper.json) | MOSS Image - Text to Image + Prompt Helper (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [moss-image-image-to-prompt-to-image](LLM-Prompt-Assisted/moss-image-image-to-prompt-to-image.json) | MOSS Image - Image to Prompt to Image (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [p-h3-image-short-idea-prompt-upsampler](LLM-Prompt-Assisted/p-h3-image-short-idea-prompt-upsampler.json) | P-H3 Image - Short Idea with Prompt Upsampler (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors`, `p-h3-image_prompt_upsampler_w4a8.safetensors` | ComfyUI-Pixaroma |
 
 ### Prompt lists, styles and batch variations
 
-| Workflow | What it does | Custom nodes needed |
-|---|---|---|
-| [flux-2-klein-9b-build-a-prompt-from-switches](Prompt-Batching-and-Variations/flux-2-klein-9b-build-a-prompt-from-switches.json) | Build a Prompt from Switches | ComfyUI-Pixaroma |
-| [flux-2-klein-9b-every-prompt-combination-with-brackets](Prompt-Batching-and-Variations/flux-2-klein-9b-every-prompt-combination-with-brackets.json) | Every Prompt Combination with Brackets | ComfyUI-Pixaroma |
-| [flux-2-klein-9b-one-image-per-prompt](Prompt-Batching-and-Variations/flux-2-klein-9b-one-image-per-prompt.json) | One Image per Prompt | ComfyUI-Pixaroma |
-| [flux-2-klein-9b-one-subject-in-many-styles](Prompt-Batching-and-Variations/flux-2-klein-9b-one-subject-in-many-styles.json) | One Subject in Many Styles | ComfyUI-Pixaroma |
-| [flux-2-klein-9b-queue-a-list-of-prompts](Prompt-Batching-and-Variations/flux-2-klein-9b-queue-a-list-of-prompts.json) | Queue a List of Prompts | ComfyUI-Pixaroma |
-| [flux-2-klein-9b-random-prompts-every-run](Prompt-Batching-and-Variations/flux-2-klein-9b-random-prompts-every-run.json) | Random Prompts Every Run | ComfyUI-Pixaroma |
-| [flux-2-klein-9b-short-ideas-into-finished-images-qwen-3.5-ai-prompt](Prompt-Batching-and-Variations/flux-2-klein-9b-short-ideas-into-finished-images-qwen-3.5-ai-prompt.json) | Short Ideas into Finished Images (Qwen 3.5 AI Prompt) | ComfyUI-Pixaroma |
-| [flux-2-klein-9b-short-story-to-storyboard-qwen-3.5-ai-prompt](Prompt-Batching-and-Variations/flux-2-klein-9b-short-story-to-storyboard-qwen-3.5-ai-prompt.json) | Short Story to Storyboard (Qwen 3.5 AI Prompt) | ComfyUI-Pixaroma |
-| [pixaroma-nodes-prompt-multi-from-list](Prompt-Batching-and-Variations/pixaroma-nodes-prompt-multi-from-list.json) | Prompt Multi — From List | ComfyUI-Pixaroma |
-| [pixaroma-nodes-prompt-multi-queue-text](Prompt-Batching-and-Variations/pixaroma-nodes-prompt-multi-queue-text.json) | Prompt Multi — Queue Text | ComfyUI-Pixaroma |
-| [pixaroma-nodes-prompt-pack-line](Prompt-Batching-and-Variations/pixaroma-nodes-prompt-pack-line.json) | Prompt Pack — Line | ComfyUI-Pixaroma |
-| [pixaroma-nodes-prompt-pack-paragraph](Prompt-Batching-and-Variations/pixaroma-nodes-prompt-pack-paragraph.json) | Prompt Pack — Paragraph | ComfyUI-Pixaroma |
-| [pixaroma-nodes-prompt-stack](Prompt-Batching-and-Variations/pixaroma-nodes-prompt-stack.json) | Prompt Stack | ComfyUI-Pixaroma |
-| [z-image-turbo-prompt-multi-queue-text](Prompt-Batching-and-Variations/z-image-turbo-prompt-multi-queue-text.json) | Prompt Multi — Queue Text | ComfyUI-Pixaroma |
-| [z-image-turbo-prompt-pack-line](Prompt-Batching-and-Variations/z-image-turbo-prompt-pack-line.json) | Prompt Pack — Line | ComfyUI-Pixaroma |
-| [z-image-turbo-prompt-pack-paragraph](Prompt-Batching-and-Variations/z-image-turbo-prompt-pack-paragraph.json) | Prompt Pack — Paragraph | ComfyUI-Pixaroma |
-| [z-image-turbo-prompt-stack](Prompt-Batching-and-Variations/z-image-turbo-prompt-stack.json) | Prompt Stack | ComfyUI-Pixaroma |
+| Workflow | What it does | Models used | Custom nodes needed |
+|---|---|---|---|
+| [flux-2-klein-9b-build-a-prompt-from-switches](Prompt-Batching-and-Variations/flux-2-klein-9b-build-a-prompt-from-switches.json) | Build a Prompt from Switches | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [flux-2-klein-9b-every-prompt-combination-with-brackets](Prompt-Batching-and-Variations/flux-2-klein-9b-every-prompt-combination-with-brackets.json) | Every Prompt Combination with Brackets | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [flux-2-klein-9b-one-image-per-prompt](Prompt-Batching-and-Variations/flux-2-klein-9b-one-image-per-prompt.json) | One Image per Prompt | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [flux-2-klein-9b-one-subject-in-many-styles](Prompt-Batching-and-Variations/flux-2-klein-9b-one-subject-in-many-styles.json) | One Subject in Many Styles | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [flux-2-klein-9b-queue-a-list-of-prompts](Prompt-Batching-and-Variations/flux-2-klein-9b-queue-a-list-of-prompts.json) | Queue a List of Prompts | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [flux-2-klein-9b-random-prompts-every-run](Prompt-Batching-and-Variations/flux-2-klein-9b-random-prompts-every-run.json) | Random Prompts Every Run | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [flux-2-klein-9b-short-ideas-into-finished-images-qwen-3.5-ai-prompt](Prompt-Batching-and-Variations/flux-2-klein-9b-short-ideas-into-finished-images-qwen-3.5-ai-prompt.json) | Short Ideas into Finished Images (Qwen 3.5 AI Prompt) | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` +1 more | ComfyUI-Pixaroma |
+| [flux-2-klein-9b-short-story-to-storyboard-qwen-3.5-ai-prompt](Prompt-Batching-and-Variations/flux-2-klein-9b-short-story-to-storyboard-qwen-3.5-ai-prompt.json) | Short Story to Storyboard (Qwen 3.5 AI Prompt) | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` +1 more | ComfyUI-Pixaroma |
+| [pixaroma-nodes-prompt-multi-from-list](Prompt-Batching-and-Variations/pixaroma-nodes-prompt-multi-from-list.json) | Prompt Multi — From List | — | ComfyUI-Pixaroma |
+| [pixaroma-nodes-prompt-multi-queue-text](Prompt-Batching-and-Variations/pixaroma-nodes-prompt-multi-queue-text.json) | Prompt Multi — Queue Text | — | ComfyUI-Pixaroma |
+| [pixaroma-nodes-prompt-pack-line](Prompt-Batching-and-Variations/pixaroma-nodes-prompt-pack-line.json) | Prompt Pack — Line | — | ComfyUI-Pixaroma |
+| [pixaroma-nodes-prompt-pack-paragraph](Prompt-Batching-and-Variations/pixaroma-nodes-prompt-pack-paragraph.json) | Prompt Pack — Paragraph | — | ComfyUI-Pixaroma |
+| [pixaroma-nodes-prompt-stack](Prompt-Batching-and-Variations/pixaroma-nodes-prompt-stack.json) | Prompt Stack | — | ComfyUI-Pixaroma |
+| [z-image-turbo-prompt-multi-queue-text](Prompt-Batching-and-Variations/z-image-turbo-prompt-multi-queue-text.json) | Prompt Multi — Queue Text | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
+| [z-image-turbo-prompt-pack-line](Prompt-Batching-and-Variations/z-image-turbo-prompt-pack-line.json) | Prompt Pack — Line | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
+| [z-image-turbo-prompt-pack-paragraph](Prompt-Batching-and-Variations/z-image-turbo-prompt-pack-paragraph.json) | Prompt Pack — Paragraph | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
+| [z-image-turbo-prompt-stack](Prompt-Batching-and-Variations/z-image-turbo-prompt-stack.json) | Prompt Stack | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
 
 ### Text-to-image (txt2img) generation
 
-| Workflow | What it does | Custom nodes needed |
-|---|---|---|
-| [anima-base-v1.0-anime-txt2img-seedvr2-upscale](Text-to-Image/anima-base-v1.0-anime-txt2img-seedvr2-upscale.json) | Anime Text to Image + SeedVR2 Upscale | ComfyUI-SeedVR2_VideoUpscaler, ComfyUI-Pixaroma |
-| [anima-base-v1.0-anime-txt2img](Text-to-Image/anima-base-v1.0-anime-txt2img.json) | Anime Text to Image | ComfyUI-Pixaroma |
-| [boogu-image-txt2img](Text-to-Image/boogu-image-txt2img.json) | Text to Image | ComfyUI-Pixaroma |
-| [ernie-image-turbo-txt2img-gguf](Text-to-Image/ernie-image-turbo-txt2img-gguf.json) | Text to Image — GGUF | ComfyUI-GGUF, ComfyUI-Pixaroma |
-| [flux-2-klein-4b-fp8-distilled-txt2img-basic](Text-to-Image/flux-2-klein-4b-fp8-distilled-txt2img-basic.json) | Text to Image — Basic | Core only |
-| [flux-2-klein-9b-fp8-distilled-txt2img-basic](Text-to-Image/flux-2-klein-9b-fp8-distilled-txt2img-basic.json) | Text to Image — Basic | Core only |
-| [flux-2-klein-9b-fp8-txt2img-ep16](Text-to-Image/flux-2-klein-9b-fp8-txt2img-ep16.json) | Text to Image (Ep16) | ComfyUI-Pixaroma |
-| [flux-2-klein-9b-txt2img](Text-to-Image/flux-2-klein-9b-txt2img.json) | Text to Image | ComfyUI-Pixaroma |
-| [flux-3-klein-layout-with-boxes](Text-to-Image/flux-3-klein-layout-with-boxes.json) | Layout with Boxes | ComfyUI-Pixaroma |
-| [flux-3-klein-txt2img-z-image-realism-pass](Text-to-Image/flux-3-klein-txt2img-z-image-realism-pass.json) | Text to Image + Z-Image Realism Pass | ComfyUI-Pixaroma |
-| [flux-3-klein-txt2img](Text-to-Image/flux-3-klein-txt2img.json) | Text to Image | ComfyUI-Pixaroma |
-| [krea-2-int8-txt2img-extra-pass-lora](Text-to-Image/krea-2-int8-txt2img-extra-pass-lora.json) | Text to Image + Extra Pass + LoRA | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma, rgthree-comfy |
-| [krea-2-int8-txt2img-extra-pass](Text-to-Image/krea-2-int8-txt2img-extra-pass.json) | Text to Image + Extra Pass | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-int8-txt2img-simple-lora](Text-to-Image/krea-2-int8-txt2img-simple-lora.json) | Text to Image — Simple + LoRA | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma, rgthree-comfy |
-| [krea-2-int8-txt2img-simple](Text-to-Image/krea-2-int8-txt2img-simple.json) | Text to Image — Simple | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-2k-hi-res-prompt-enhancer-uncensored](Text-to-Image/krea-2-txt2img-2k-hi-res-prompt-enhancer-uncensored.json) | Text to Image — 2K Hi-Res + Prompt Enhancer (Uncensored) | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-2k-hi-res-prompt-enhancer](Text-to-Image/krea-2-txt2img-2k-hi-res-prompt-enhancer.json) | Text to Image — 2K Hi-Res + Prompt Enhancer | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-ep28](Text-to-Image/krea-2-txt2img-ep28.json) | Text to Image (Ep28) | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-extra-pass-lora](Text-to-Image/krea-2-txt2img-extra-pass-lora.json) | Text to Image + Extra Pass + LoRA | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma, rgthree-comfy |
-| [krea-2-txt2img-extra-pass](Text-to-Image/krea-2-txt2img-extra-pass.json) | Text to Image + Extra Pass | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-simple-lora](Text-to-Image/krea-2-txt2img-simple-lora.json) | Text to Image — Simple + LoRA | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma, rgthree-comfy |
-| [krea-2-txt2img-simple-low-vram](Text-to-Image/krea-2-txt2img-simple-low-vram.json) | Text to Image — Simple — Low VRAM | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-simple](Text-to-Image/krea-2-txt2img-simple.json) | Text to Image — Simple | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [lens-txt2img](Text-to-Image/lens-txt2img.json) | Text to Image | ComfyUI-Pixaroma |
-| [ming-image-0.1-txt2img](Text-to-Image/ming-image-0.1-txt2img.json) | Text to Image | ComfyUI-Pixaroma |
-| [minimax-h3-txt2img-single-frame](Text-to-Image/minimax-h3-txt2img-single-frame.json) | Text to Image (Single Frame) | ComfyUI-Pixaroma |
-| [nunchaku-flux.1-dev-txt2img](Text-to-Image/nunchaku-flux.1-dev-txt2img.json) | Flux.1 Dev — Text to Image | ComfyUI-GGUF, ComfyUI-nunchaku |
-| [nunchaku-qwen-image-lightning-txt2img](Text-to-Image/nunchaku-qwen-image-lightning-txt2img.json) | Qwen Image Lightning — Text to Image | ComfyUI-nunchaku |
-| [nunchaku-z-image-turbo-txt2img](Text-to-Image/nunchaku-z-image-turbo-txt2img.json) | Z-Image Turbo — Text to Image | ComfyUI-nunchaku |
-| [qwen-image-2.1-txt2img-low-vram](Text-to-Image/qwen-image-2.1-txt2img-low-vram.json) | Text to Image — Low VRAM | ComfyUI-Pixaroma |
-| [qwen-image-2.1-txt2img-turbo](Text-to-Image/qwen-image-2.1-txt2img-turbo.json) | Text to Image — Turbo | ComfyUI-Pixaroma |
-| [qwen-image-2.1-txt2img](Text-to-Image/qwen-image-2.1-txt2img.json) | Text to Image | ComfyUI-Pixaroma |
-| [sd15-juggernaut-reborn-txt2img-lora-starter](Text-to-Image/sd15-juggernaut-reborn-txt2img-lora-starter.json) | SD 1.5 text-to-image with Juggernaut Reborn plus a style LoRA (ComfyUI-Easy-Install starter version) | Core only |
-| [sd15-juggernaut-reborn-txt2img-lora](Text-to-Image/sd15-juggernaut-reborn-txt2img-lora.json) | Text to Image + LoRA | Core only |
-| [sd15-juggernaut-reborn-txt2img](Text-to-Image/sd15-juggernaut-reborn-txt2img.json) | Text to Image | Core only |
-| [z-image-turbo-int8-txt2img](Text-to-Image/z-image-turbo-int8-txt2img.json) | Text to Image | ComfyUI-Pixaroma |
-| [z-image-turbo-txt2img-character-sheet-alt-1](Text-to-Image/z-image-turbo-txt2img-character-sheet-alt-1.json) | Z-Image Turbo character sheet, alternate prompt/settings | Core only |
-| [z-image-turbo-txt2img-character-sheet-alt-2](Text-to-Image/z-image-turbo-txt2img-character-sheet-alt-2.json) | Z-Image Turbo character sheet, alternate prompt/settings | Core only |
-| [z-image-turbo-txt2img-character-sheet](Text-to-Image/z-image-turbo-txt2img-character-sheet.json) | Z-Image Turbo character sheet (based on the official ComfyUI Z-Image template) | Core only |
-| [z-image-turbo-txt2img-fp8-aio-checkpoint](Text-to-Image/z-image-turbo-txt2img-fp8-aio-checkpoint.json) | Text to Image — FP8 AIO Checkpoint | Core only |
-| [z-image-turbo-txt2img-fp8-aio-lora](Text-to-Image/z-image-turbo-txt2img-fp8-aio-lora.json) | Text to Image — FP8 AIO + LoRA | Core only |
-| [z-image-turbo-txt2img-fp8-aio-starter](Text-to-Image/z-image-turbo-txt2img-fp8-aio-starter.json) | Z-Image Turbo text-to-image from one FP8 all-in-one checkpoint (ComfyUI-Easy-Install starter version) | Core only |
-| [z-image-turbo-txt2img-fp8-ep18](Text-to-Image/z-image-turbo-txt2img-fp8-ep18.json) | Text to Image — FP8 (Ep18) | ComfyUI-Pixaroma |
-| [z-image-turbo-txt2img-fp8](Text-to-Image/z-image-turbo-txt2img-fp8.json) | Text to Image — FP8 | Core only |
-| [z-image-turbo-txt2img-gguf](Text-to-Image/z-image-turbo-txt2img-gguf.json) | Text to Image — GGUF | ComfyUI-GGUF |
-| [moss-image-txt2img](Text-to-Image/moss-image-txt2img.json) | MOSS Image - Text to Image (Ep40) | ComfyUI-Pixaroma |
-| [moss-image-txt2img-speed-lora-4-step](Text-to-Image/moss-image-txt2img-speed-lora-4-step.json) | MOSS Image - Fast 4 Steps with a Speed LoRA (Ep40) | ComfyUI-Pixaroma |
-| [moss-image-layout-with-boxes](Text-to-Image/moss-image-layout-with-boxes.json) | MOSS Image - Layout with Boxes (Ep40) | ComfyUI-Pixaroma |
-| [p-h3-image-txt2img](Text-to-Image/p-h3-image-txt2img.json) | P-H3 Image - Text to Image (Ep42) | ComfyUI-Pixaroma |
+| Workflow | What it does | Models used | Custom nodes needed |
+|---|---|---|---|
+| [anima-base-v1.0-anime-txt2img-seedvr2-upscale](Text-to-Image/anima-base-v1.0-anime-txt2img-seedvr2-upscale.json) | Anime Text to Image + SeedVR2 Upscale | `anima-base-v1.0.safetensors`, `qwen_3_06b_base.safetensors`, `qwen_image_vae.safetensors` +2 more | ComfyUI-SeedVR2_VideoUpscaler, ComfyUI-Pixaroma |
+| [anima-base-v1.0-anime-txt2img](Text-to-Image/anima-base-v1.0-anime-txt2img.json) | Anime Text to Image | `anima-base-v1.0.safetensors`, `qwen_3_06b_base.safetensors`, `qwen_image_vae.safetensors` | ComfyUI-Pixaroma |
+| [boogu-image-txt2img](Text-to-Image/boogu-image-txt2img.json) | Text to Image | `ae.safetensors`, `qwen3vl_8b_fp8_scaled.safetensors`, `boogu_image_turbo_hotfix_int8_convrot.safetensors` | ComfyUI-Pixaroma |
+| [ernie-image-turbo-txt2img-gguf](Text-to-Image/ernie-image-turbo-txt2img-gguf.json) | Text to Image — GGUF | `ministral-3-3b.safetensors`, `flux2-vae.safetensors`, `ernie-image-turbo-Q8_0.gguf` | ComfyUI-GGUF, ComfyUI-Pixaroma |
+| [flux-2-klein-4b-fp8-distilled-txt2img-basic](Text-to-Image/flux-2-klein-4b-fp8-distilled-txt2img-basic.json) | Text to Image — Basic | `flux-2-klein-4b-fp8.safetensors`, `qwen_3_4b.safetensors`, `flux2-vae.safetensors` | Core only |
+| [flux-2-klein-9b-fp8-distilled-txt2img-basic](Text-to-Image/flux-2-klein-9b-fp8-distilled-txt2img-basic.json) | Text to Image — Basic | `flux2-vae.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux-2-klein-9b-fp8mixed.safetensors` | Core only |
+| [flux-2-klein-9b-fp8-txt2img-ep16](Text-to-Image/flux-2-klein-9b-fp8-txt2img-ep16.json) | Text to Image (Ep16) | `flux-2-klein-9b-fp8mixed.safetensors`, `flux2-vae.safetensors`, `qwen_3_8b_fp8mixed.safetensors` | ComfyUI-Pixaroma |
+| [flux-2-klein-9b-txt2img](Text-to-Image/flux-2-klein-9b-txt2img.json) | Text to Image | `flux2-vae.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux-2-klein-9b-int8-convrot.safetensors` | ComfyUI-Pixaroma |
+| [flux-3-klein-layout-with-boxes](Text-to-Image/flux-3-klein-layout-with-boxes.json) | Layout with Boxes | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [flux-3-klein-txt2img-z-image-realism-pass](Text-to-Image/flux-3-klein-txt2img-z-image-realism-pass.json) | Text to Image + Z-Image Realism Pass | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` +4 more | ComfyUI-Pixaroma |
+| [flux-3-klein-txt2img](Text-to-Image/flux-3-klein-txt2img.json) | Text to Image | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [krea-2-int8-txt2img-extra-pass-lora](Text-to-Image/krea-2-int8-txt2img-extra-pass-lora.json) | Text to Image + Extra Pass + LoRA | `qwen_image_vae.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2-questpaint26_comfyui.safetensors` +1 more | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma, rgthree-comfy |
+| [krea-2-int8-txt2img-extra-pass](Text-to-Image/krea-2-int8-txt2img-extra-pass.json) | Text to Image + Extra Pass | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-int8-txt2img-simple-lora](Text-to-Image/krea-2-int8-txt2img-simple-lora.json) | Text to Image — Simple + LoRA | `qwen_image_vae.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2_turbo_int8_convrot.safetensors` +1 more | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma, rgthree-comfy |
+| [krea-2-int8-txt2img-simple](Text-to-Image/krea-2-int8-txt2img-simple.json) | Text to Image — Simple | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-txt2img-2k-hi-res-prompt-enhancer-uncensored](Text-to-Image/krea-2-txt2img-2k-hi-res-prompt-enhancer-uncensored.json) | Text to Image — 2K Hi-Res + Prompt Enhancer (Uncensored) | `krea2_turbo_fp8_scaled.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors`, `qwen_image_vae.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-txt2img-2k-hi-res-prompt-enhancer](Text-to-Image/krea-2-txt2img-2k-hi-res-prompt-enhancer.json) | Text to Image — 2K Hi-Res + Prompt Enhancer | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-txt2img-ep28](Text-to-Image/krea-2-txt2img-ep28.json) | Text to Image (Ep28) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-txt2img-extra-pass-lora](Text-to-Image/krea-2-txt2img-extra-pass-lora.json) | Text to Image + Extra Pass + LoRA | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` +1 more | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma, rgthree-comfy |
+| [krea-2-txt2img-extra-pass](Text-to-Image/krea-2-txt2img-extra-pass.json) | Text to Image + Extra Pass | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-txt2img-simple-lora](Text-to-Image/krea-2-txt2img-simple-lora.json) | Text to Image — Simple + LoRA | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` +1 more | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma, rgthree-comfy |
+| [krea-2-txt2img-simple-low-vram](Text-to-Image/krea-2-txt2img-simple-low-vram.json) | Text to Image — Simple — Low VRAM | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [krea-2-txt2img-simple](Text-to-Image/krea-2-txt2img-simple.json) | Text to Image — Simple | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [lens-txt2img](Text-to-Image/lens-txt2img.json) | Text to Image | `lens_bf16.safetensors`, `gpt_oss_20b_nvfp4.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [ming-image-0.1-txt2img](Text-to-Image/ming-image-0.1-txt2img.json) | Text to Image | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [minimax-h3-txt2img-single-frame](Text-to-Image/minimax-h3-txt2img-single-frame.json) | Text to Image (Single Frame) | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `minimax_h3_video_vae_fp16.safetensors` | ComfyUI-Pixaroma |
+| [nunchaku-flux.1-dev-txt2img](Text-to-Image/nunchaku-flux.1-dev-txt2img.json) | Flux.1 Dev — Text to Image | `t5-v1_1-xxl-encoder-Q8_0.gguf`, `clip_l.safetensors`, `ae.safetensors` +1 more | ComfyUI-GGUF, ComfyUI-nunchaku |
+| [nunchaku-qwen-image-lightning-txt2img](Text-to-Image/nunchaku-qwen-image-lightning-txt2img.json) | Qwen Image Lightning — Text to Image | `svdq-int4_r128-qwen-image-lightningv1.1-8steps.safetensors`, `qwen_2.5_vl_7b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors` | ComfyUI-nunchaku |
+| [nunchaku-z-image-turbo-txt2img](Text-to-Image/nunchaku-z-image-turbo-txt2img.json) | Z-Image Turbo — Text to Image | `ae.safetensors`, `svdq-int4_r256-z-image-turbo.safetensors`, `Huihui-Qwen3-4B-abliterated-v2_fp8mixed.safetensors` | ComfyUI-nunchaku |
+| [qwen-image-2.1-txt2img-low-vram](Text-to-Image/qwen-image-2.1-txt2img-low-vram.json) | Text to Image — Low VRAM | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [qwen-image-2.1-txt2img-turbo](Text-to-Image/qwen-image-2.1-txt2img-turbo.json) | Text to Image — Turbo | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` +1 more | ComfyUI-Pixaroma |
+| [qwen-image-2.1-txt2img](Text-to-Image/qwen-image-2.1-txt2img.json) | Text to Image | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [sd15-juggernaut-reborn-txt2img-lora-starter](Text-to-Image/sd15-juggernaut-reborn-txt2img-lora-starter.json) | SD 1.5 text-to-image with Juggernaut Reborn plus a style LoRA (ComfyUI-Easy-Install starter version) | `juggernaut_reborn.safetensors`, `CakeStyle.safetensors` | Core only |
+| [sd15-juggernaut-reborn-txt2img-lora](Text-to-Image/sd15-juggernaut-reborn-txt2img-lora.json) | Text to Image + LoRA | `juggernaut_reborn.safetensors`, `CakeStyle.safetensors` | Core only |
+| [sd15-juggernaut-reborn-txt2img](Text-to-Image/sd15-juggernaut-reborn-txt2img.json) | Text to Image | `juggernaut_reborn.safetensors` | Core only |
+| [z-image-turbo-int8-txt2img](Text-to-Image/z-image-turbo-int8-txt2img.json) | Text to Image | `qwen_3_4b_fp8_mixed.safetensors`, `z_image_turbo_int8_convrot.safetensors`, `ae.safetensors` | ComfyUI-Pixaroma |
+| [z-image-turbo-txt2img-character-sheet-alt-1](Text-to-Image/z-image-turbo-txt2img-character-sheet-alt-1.json) | Z-Image Turbo character sheet, alternate prompt/settings | `z_image_turbo_bf16.safetensors`, `qwen_3_4b.safetensors`, `ae.safetensors` | Core only |
+| [z-image-turbo-txt2img-character-sheet-alt-2](Text-to-Image/z-image-turbo-txt2img-character-sheet-alt-2.json) | Z-Image Turbo character sheet, alternate prompt/settings | `z_image_turbo_bf16.safetensors`, `qwen_3_4b.safetensors`, `ae.safetensors` | Core only |
+| [z-image-turbo-txt2img-character-sheet](Text-to-Image/z-image-turbo-txt2img-character-sheet.json) | Z-Image Turbo character sheet (based on the official ComfyUI Z-Image template) | `qwen_3_4b.safetensors`, `ae.safetensors`, `z_image_turbo_bf16.safetensors` | Core only |
+| [z-image-turbo-txt2img-fp8-aio-checkpoint](Text-to-Image/z-image-turbo-txt2img-fp8-aio-checkpoint.json) | Text to Image — FP8 AIO Checkpoint | `z-image-turbo-fp8-aio.safetensors` | Core only |
+| [z-image-turbo-txt2img-fp8-aio-lora](Text-to-Image/z-image-turbo-txt2img-fp8-aio-lora.json) | Text to Image — FP8 AIO + LoRA | `pixag1rlwh1t3.safetensors`, `z-image-turbo-fp8-aio.safetensors` | Core only |
+| [z-image-turbo-txt2img-fp8-aio-starter](Text-to-Image/z-image-turbo-txt2img-fp8-aio-starter.json) | Z-Image Turbo text-to-image from one FP8 all-in-one checkpoint (ComfyUI-Easy-Install starter version) | `z-image-turbo-fp8-aio.safetensors` | Core only |
+| [z-image-turbo-txt2img-fp8-ep18](Text-to-Image/z-image-turbo-txt2img-fp8-ep18.json) | Text to Image — FP8 (Ep18) | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
+| [z-image-turbo-txt2img-fp8](Text-to-Image/z-image-turbo-txt2img-fp8.json) | Text to Image — FP8 | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | Core only |
+| [z-image-turbo-txt2img-gguf](Text-to-Image/z-image-turbo-txt2img-gguf.json) | Text to Image — GGUF | `z-image-turbo-q4_k_s.gguf`, `qwen-4b-zimage-heretic-q8.gguf`, `ae.safetensors` | ComfyUI-GGUF |
+| [moss-image-txt2img](Text-to-Image/moss-image-txt2img.json) | MOSS Image - Text to Image (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [moss-image-txt2img-speed-lora-4-step](Text-to-Image/moss-image-txt2img-speed-lora-4-step.json) | MOSS Image - Fast 4 Steps with a Speed LoRA (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors`, `moss_image_sft_4step_v2.0.safetensors` | ComfyUI-Pixaroma |
+| [moss-image-layout-with-boxes](Text-to-Image/moss-image-layout-with-boxes.json) | MOSS Image - Layout with Boxes (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [p-h3-image-txt2img](Text-to-Image/p-h3-image-txt2img.json) | P-H3 Image - Text to Image (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
 
-See the [main README](../README.md) for models used, setup steps and the full catalog.
+See the [main README](../README.md) for setup steps, requirements and the other categories, or [`00-LIBRARY-INDEX.md`](../00-LIBRARY-INDEX.md) for the full list of workflows.
