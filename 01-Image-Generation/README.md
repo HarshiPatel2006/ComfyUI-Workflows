@@ -8,9 +8,9 @@ Text-to-image (txt2img) workflows for FLUX.2 / FLUX.3 Klein, Qwen-Image 2.1, Kre
 | [`Design-Typography-and-Transparent/`](Design-Typography-and-Transparent) | Logos, posters, text in images, UI screens and transparent PNGs | 16 |
 | [`LLM-Prompt-Assisted/`](LLM-Prompt-Assisted) | Text-to-image with LLM prompt enhancers and image-to-prompt-to-image | 29 |
 | [`Prompt-Batching-and-Variations/`](Prompt-Batching-and-Variations) | Prompt lists, styles and batch variations | 17 |
-| [`Text-to-Image/`](Text-to-Image) | Text-to-image (txt2img) generation | 49 |
+| [`Text-to-Image/`](Text-to-Image) | Text-to-image (txt2img) generation | 50 |
 
-## Workflows (113)
+## Workflows (114)
 
 ### ControlNet-guided generation (Canny, Union)
 
@@ -129,6 +129,7 @@ Text-to-image (txt2img) workflows for FLUX.2 / FLUX.3 Klein, Qwen-Image 2.1, Kre
 | [nunchaku-flux.1-dev-txt2img](Text-to-Image/nunchaku-flux.1-dev-txt2img.json) | Flux.1 Dev — Text to Image | `t5-v1_1-xxl-encoder-Q8_0.gguf`, `clip_l.safetensors`, `ae.safetensors` +1 more | ComfyUI-GGUF, ComfyUI-nunchaku |
 | [nunchaku-qwen-image-lightning-txt2img](Text-to-Image/nunchaku-qwen-image-lightning-txt2img.json) | Qwen Image Lightning — Text to Image | `svdq-int4_r128-qwen-image-lightningv1.1-8steps.safetensors`, `qwen_2.5_vl_7b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors` | ComfyUI-nunchaku |
 | [nunchaku-z-image-turbo-txt2img](Text-to-Image/nunchaku-z-image-turbo-txt2img.json) | Z-Image Turbo — Text to Image | `ae.safetensors`, `svdq-int4_r256-z-image-turbo.safetensors`, `Huihui-Qwen3-4B-abliterated-v2_fp8mixed.safetensors` | ComfyUI-nunchaku |
+| [official-h3-image-t2i](Text-to-Image/official-h3-image-t2i.json) | MiniMax H3 Image — Text to Image (official ComfyUI template) | `minimax_h3_image_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_int8_convrot.safetensors`, `minimax_h3_image_vae_fp16.safetensors` +1 more | Core only |
 | [qwen-image-2.1-txt2img-low-vram](Text-to-Image/qwen-image-2.1-txt2img-low-vram.json) | Text to Image — Low VRAM | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
 | [qwen-image-2.1-txt2img-turbo](Text-to-Image/qwen-image-2.1-txt2img-turbo.json) | Text to Image — Turbo | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` +1 more | ComfyUI-Pixaroma |
 | [qwen-image-2.1-txt2img](Text-to-Image/qwen-image-2.1-txt2img.json) | Text to Image | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
