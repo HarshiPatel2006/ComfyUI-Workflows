@@ -1,6 +1,6 @@
 # ComfyUI Workflow Library — Index
 
-Plain list of all 568 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
+Plain list of all 569 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
 
 Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-image-2.1-one-image-edit-low-vram.json`). `-api` = API format; `epNN` = tutorial episode the variant came from.
 
@@ -201,6 +201,7 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [flux-2-klein-9b-kv-fp8-multi-image-edit-2-images](02-Image-Editing/Multi-Image-Composition/flux-2-klein-9b-kv-fp8-multi-image-edit-2-images.json)
 - [flux-2-klein-9b-kv-fp8-multi-image-edit-3-images](02-Image-Editing/Multi-Image-Composition/flux-2-klein-9b-kv-fp8-multi-image-edit-3-images.json)
 - [flux-2-klein-9b-kv-fp8-multi-image-edit-4-images](02-Image-Editing/Multi-Image-Composition/flux-2-klein-9b-kv-fp8-multi-image-edit-4-images.json)
+- [h3-image-edit-bbox-refs](02-Image-Editing/Multi-Image-Composition/h3-image-edit-bbox-refs.json)
 - [flux-3-klein-character-in-a-scene](02-Image-Editing/Multi-Image-Composition/flux-3-klein-character-in-a-scene.json)
 - [flux-3-klein-group-photo](02-Image-Editing/Multi-Image-Composition/flux-3-klein-group-photo.json)
 - [flux-3-klein-logo-on-a-product](02-Image-Editing/Multi-Image-Composition/flux-3-klein-logo-on-a-product.json)
