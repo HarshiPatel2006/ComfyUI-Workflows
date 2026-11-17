@@ -1,6 +1,6 @@
 # ComfyUI Workflow Library — Index
 
-Plain list of all 569 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
+Plain list of all 571 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
 
 Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-image-2.1-one-image-edit-low-vram.json`). `-api` = API format; `epNN` = tutorial episode the variant came from.
 
@@ -114,6 +114,7 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [nunchaku-flux.1-dev-txt2img](01-Image-Generation/Text-to-Image/nunchaku-flux.1-dev-txt2img.json)
 - [nunchaku-qwen-image-lightning-txt2img](01-Image-Generation/Text-to-Image/nunchaku-qwen-image-lightning-txt2img.json)
 - [nunchaku-z-image-turbo-txt2img](01-Image-Generation/Text-to-Image/nunchaku-z-image-turbo-txt2img.json)
+- [official-h3-image-t2i](01-Image-Generation/Text-to-Image/official-h3-image-t2i.json)
 - [p-h3-image-txt2img](01-Image-Generation/Text-to-Image/p-h3-image-txt2img.json)
 - [qwen-image-2.1-txt2img-low-vram](01-Image-Generation/Text-to-Image/qwen-image-2.1-txt2img-low-vram.json)
 - [qwen-image-2.1-txt2img-turbo](01-Image-Generation/Text-to-Image/qwen-image-2.1-txt2img-turbo.json)
@@ -243,6 +244,7 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [ming-image-0.1-social-media-pack-from-one-image](02-Image-Editing/Single-Image-Edit/ming-image-0.1-social-media-pack-from-one-image.json)
 - [minimax-h3-one-image-edit-single-frame](02-Image-Editing/Single-Image-Edit/minimax-h3-one-image-edit-single-frame.json)
 - [moss-image-edit-text-in-a-picture](02-Image-Editing/Single-Image-Edit/moss-image-edit-text-in-a-picture.json)
+- [official-h3-image-edit](02-Image-Editing/Single-Image-Edit/official-h3-image-edit.json)
 - [p-h3-image-edit-new-place](02-Image-Editing/Single-Image-Edit/p-h3-image-edit-new-place.json)
 - [p-h3-image-edit-text-in-a-picture](02-Image-Editing/Single-Image-Edit/p-h3-image-edit-text-in-a-picture.json)
 - [p-h3-image-relight-day-to-night](02-Image-Editing/Single-Image-Edit/p-h3-image-relight-day-to-night.json)

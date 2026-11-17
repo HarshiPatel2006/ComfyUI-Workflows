@@ -1,8 +1,8 @@
-# ComfyUI Workflows: 569 Free FLUX, Qwen-Image, Wan, LTX-2, MiniMax H3 and Krea 2 Workflows
+# ComfyUI Workflows: 571 Free FLUX, Qwen-Image, Wan, LTX-2, MiniMax H3 and Krea 2 Workflows
 
-[![Workflows](https://img.shields.io/badge/workflows-569-blue)](#workflow-categories) [![ComfyUI](https://img.shields.io/badge/ComfyUI-workflows-green)](https://github.com/Comfy-Org/ComfyUI) [![Format](https://img.shields.io/badge/format-JSON-lightgrey)](#how-to-use) [![License](https://img.shields.io/badge/license-MIT%20%2B%20original%20terms-purple)](#license)
+[![Workflows](https://img.shields.io/badge/workflows-571-blue)](#workflow-categories) [![ComfyUI](https://img.shields.io/badge/ComfyUI-workflows-green)](https://github.com/Comfy-Org/ComfyUI) [![Format](https://img.shields.io/badge/format-JSON-lightgrey)](#how-to-use) [![License](https://img.shields.io/badge/license-MIT%20%2B%20original%20terms-purple)](#license)
 
-A categorized library of **569 ready-to-use ComfyUI workflows** (`.json`) for **FLUX.2 / FLUX.3 Klein, Qwen-Image, Krea 2, Z-Image Turbo, Wan 2.1 / 2.2, LTX-2, MiniMax H3, SeedVR2** and more. It covers **text-to-image (txt2img)**, **image editing (img2img)**, **inpainting and outpainting**, **background removal**, **image and video upscaling**, **text-to-video and image-to-video**, **lip-sync and talking avatars**, **face swap and character swap**, **text-to-speech and music**, **image-to-3D**, **batch automation** and a complete **AI short-film pipeline**.
+A categorized library of **571 ready-to-use ComfyUI workflows** (`.json`) for **FLUX.2 / FLUX.3 Klein, Qwen-Image, Krea 2, Z-Image Turbo, Wan 2.1 / 2.2, LTX-2, MiniMax H3, SeedVR2** and more. It covers **text-to-image (txt2img)**, **image editing (img2img)**, **inpainting and outpainting**, **background removal**, **image and video upscaling**, **text-to-video and image-to-video**, **lip-sync and talking avatars**, **face swap and character swap**, **text-to-speech and music**, **image-to-3D**, **batch automation** and a complete **AI short-film pipeline**.
 
 Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, install any missing custom nodes with ComfyUI-Manager, add the models, and press **Run**.
 
@@ -26,12 +26,12 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 
 ## Workflow categories
 
-569 workflows: 529 in the normal UI format and 40 in API format (filenames ending in `-api`). Each category README lists every workflow in that folder with what it does, the models it loads and the custom nodes it needs; the version-conflicts folder lists the models and what differs from the library copy. For one flat list of all files, see [`00-LIBRARY-INDEX.md`](00-LIBRARY-INDEX.md).
+571 workflows: 531 in the normal UI format and 40 in API format (filenames ending in `-api`). Each category README lists every workflow in that folder with what it does, the models it loads and the custom nodes it needs; the version-conflicts folder lists the models and what differs from the library copy. For one flat list of all files, see [`00-LIBRARY-INDEX.md`](00-LIBRARY-INDEX.md).
 
 | Category | What is inside | Workflows |
 |---|---|---|
-| [01 · Image Generation](01-Image-Generation/README.md) | Text-to-image with FLUX.2 / FLUX.3 Klein, Qwen-Image 2.1, Krea 2, Z-Image Turbo, Ming Image, MOSS, SD 1.5; ControlNet, LLM prompt enhancers, logos, posters, text in images, transparent PNGs, prompt batches | 113 |
-| [02 · Image Editing](02-Image-Editing/README.md) | Instruction-based editing, multi-image edits, inpainting, outpainting, object removal, background removal, outfit transfer, sketch-to-image | 114 |
+| [01 · Image Generation](01-Image-Generation/README.md) | Text-to-image with FLUX.2 / FLUX.3 Klein, Qwen-Image 2.1, Krea 2, Z-Image Turbo, Ming Image, MOSS, SD 1.5; ControlNet, LLM prompt enhancers, logos, posters, text in images, transparent PNGs, prompt batches | 114 |
+| [02 · Image Editing](02-Image-Editing/README.md) | Instruction-based editing, multi-image edits, inpainting, outpainting, object removal, background removal, outfit transfer, sketch-to-image | 115 |
 | [03 · Image Upscaling and Enhancement](03-Image-Enhancement/README.md) | Image upscaling (SeedVR2, tiled diffusion, creative upscale), filters and color grading | 13 |
 | [04 · AI Video](04-Video/README.md) | Text-to-video, image-to-video, first/last frame, reference-to-video, lip-sync, video dubbing, character animation and swap, video upscaling | 125 |
 | [05 · Audio](05-Audio/README.md) | Text-to-speech, voice cloning, voice design, music and sound effects | 17 |
