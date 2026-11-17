@@ -6,13 +6,14 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 |---|---|---|
 | [`Audio-Reactive/`](Audio-Reactive) | Audio-reactive visuals | 1 |
 | [`Character-Animation-Video-to-Video/`](Character-Animation-Video-to-Video) | Character animation, character replacement, character swap and face swap (video2video) | 45 |
+| [`Hy-Nomas-World-Model/`](Hy-Nomas-World-Model) | Hy-Nomas video world model (Tencent): camera control, interactive drive, start from image | 5 |
 | [`Image-to-Video/`](Image-to-Video) | Image-to-video (img2video), first/last frame | 18 |
 | [`Reference-and-Audio-Sync/`](Reference-and-Audio-Sync) | Reference-to-video, talking video, lip-sync and video dubbing | 38 |
 | [`Text-to-Video/`](Text-to-Video) | Text-to-video (txt2video) | 9 |
 | [`Video-Upscaling/`](Video-Upscaling) | Video upscaling | 13 |
 | [`Video-Editing-and-Tools/`](Video-Editing-and-Tools) | Video editing and clip tools | 1 |
 
-## Workflows (125)
+## Workflows (130)
 
 ### Audio-reactive visuals
 
@@ -69,6 +70,16 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 | [minimax-h3-vfx-edit-lora-video-by-text](Character-Animation-Video-to-Video/minimax-h3-vfx-edit-lora-video-by-text.json) | Minimax H3 - VFX Edit LoRA - Edit a Video by Text (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors`, `minimax_h3_vfx_edit_v1.0_r128.safetensors` | ComfyUI-Pixaroma |
 | [minimax-h3-vfx-edit-lora-outfit-from-pictures](Character-Animation-Video-to-Video/minimax-h3-vfx-edit-lora-outfit-from-pictures.json) | Minimax H3 - VFX Edit LoRA - Change the Outfit from Pictures (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors`, `minimax_h3_vfx_edit_v1.0_r128.safetensors` | ComfyUI-Pixaroma |
 | [minimax-h3-style-transfer-lora-restyle-video](Character-Animation-Video-to-Video/minimax-h3-style-transfer-lora-restyle-video.json) | Minimax H3 - Style Transfer LoRA - Restyle a Video (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors`, `minimax_h3_style_transfer_v1.0_r64.safetensors` | ComfyUI-Pixaroma |
+
+### Hy-Nomas video world model
+
+| Workflow | What it does | Models used | Custom nodes needed |
+|---|---|---|---|
+| [hy-nomas-camera-control](Hy-Nomas-World-Model/hy-nomas-camera-control.json) | Hy-Nomas world model with camera control: segment-by-segment generation steered by camera keys and recording | `hy_nomas_distil_int8.safetensors`, `hy_nomas_pixelumm_fp8.safetensors`, `qwen_2.5_vl_7b_fp8_scaled.safetensors` | ComfyUI-Hy-Nomas |
+| [hy-nomas-drive-interactive](Hy-Nomas-World-Model/hy-nomas-drive-interactive.json) | Hy-Nomas interactive drive: steer the world live from one node | `hy_nomas_distil_int8.safetensors`, `hy_nomas_pixelumm_fp8.safetensors`, `qwen_2.5_vl_7b_fp8_scaled.safetensors` | ComfyUI-Hy-Nomas |
+| [hy-nomas-start-from-image](Hy-Nomas-World-Model/hy-nomas-start-from-image.json) | Hy-Nomas world model started from a loaded image | `hy_nomas_distil_int8.safetensors`, `hy_nomas_pixelumm_fp8.safetensors`, `qwen_2.5_vl_7b_fp8_scaled.safetensors` | ComfyUI-Hy-Nomas |
+| [hy-nomas-world-one-node](Hy-Nomas-World-Model/hy-nomas-world-one-node.json) | Hy-Nomas world model: a whole world in one node | `hy_nomas_distil_int8.safetensors`, `hy_nomas_pixelumm_fp8.safetensors`, `qwen_2.5_vl_7b_fp8_scaled.safetensors` | ComfyUI-Hy-Nomas |
+| [hy-nomas-world-per-segment](Hy-Nomas-World-Model/hy-nomas-world-per-segment.json) | Hy-Nomas world model generated one segment at a time | `hy_nomas_distil_int8.safetensors`, `hy_nomas_pixelumm_fp8.safetensors`, `qwen_2.5_vl_7b_fp8_scaled.safetensors` | ComfyUI-Hy-Nomas |
 
 ### Image-to-video (img2video), first/last frame
 

@@ -1,6 +1,6 @@
 # ComfyUI Workflow Library — Index
 
-Plain list of all 569 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
+Plain list of all 574 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
 
 Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-image-2.1-one-image-edit-low-vram.json`). `-api` = API format; `epNN` = tutorial episode the variant came from.
 
@@ -337,6 +337,14 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [wan-2.2-animate-replace-character-and-background-24fps](04-Video/Character-Animation-Video-to-Video/wan-2.2-animate-replace-character-and-background-24fps.json)
 - [wan-2.2-animate-replace-only-character-16fps](04-Video/Character-Animation-Video-to-Video/wan-2.2-animate-replace-only-character-16fps.json)
 - [wan-2.2-animate-replace-only-character-24fps](04-Video/Character-Animation-Video-to-Video/wan-2.2-animate-replace-only-character-24fps.json)
+
+## 04-Video/Hy-Nomas-World-Model
+
+- [hy-nomas-camera-control](04-Video/Hy-Nomas-World-Model/hy-nomas-camera-control.json)
+- [hy-nomas-drive-interactive](04-Video/Hy-Nomas-World-Model/hy-nomas-drive-interactive.json)
+- [hy-nomas-start-from-image](04-Video/Hy-Nomas-World-Model/hy-nomas-start-from-image.json)
+- [hy-nomas-world-one-node](04-Video/Hy-Nomas-World-Model/hy-nomas-world-one-node.json)
+- [hy-nomas-world-per-segment](04-Video/Hy-Nomas-World-Model/hy-nomas-world-per-segment.json)
 
 ## 04-Video/Image-to-Video
 

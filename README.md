@@ -1,8 +1,8 @@
-# ComfyUI Workflows: 569 Free FLUX, Qwen-Image, Wan, LTX-2, MiniMax H3 and Krea 2 Workflows
+# ComfyUI Workflows: 574 Free FLUX, Qwen-Image, Wan, LTX-2, MiniMax H3 and Krea 2 Workflows
 
-[![Workflows](https://img.shields.io/badge/workflows-569-blue)](#workflow-categories) [![ComfyUI](https://img.shields.io/badge/ComfyUI-workflows-green)](https://github.com/Comfy-Org/ComfyUI) [![Format](https://img.shields.io/badge/format-JSON-lightgrey)](#how-to-use) [![License](https://img.shields.io/badge/license-MIT%20%2B%20original%20terms-purple)](#license)
+[![Workflows](https://img.shields.io/badge/workflows-574-blue)](#workflow-categories) [![ComfyUI](https://img.shields.io/badge/ComfyUI-workflows-green)](https://github.com/Comfy-Org/ComfyUI) [![Format](https://img.shields.io/badge/format-JSON-lightgrey)](#how-to-use) [![License](https://img.shields.io/badge/license-MIT%20%2B%20original%20terms-purple)](#license)
 
-A categorized library of **569 ready-to-use ComfyUI workflows** (`.json`) for **FLUX.2 / FLUX.3 Klein, Qwen-Image, Krea 2, Z-Image Turbo, Wan 2.1 / 2.2, LTX-2, MiniMax H3, SeedVR2** and more. It covers **text-to-image (txt2img)**, **image editing (img2img)**, **inpainting and outpainting**, **background removal**, **image and video upscaling**, **text-to-video and image-to-video**, **lip-sync and talking avatars**, **face swap and character swap**, **text-to-speech and music**, **image-to-3D**, **batch automation** and a complete **AI short-film pipeline**.
+A categorized library of **574 ready-to-use ComfyUI workflows** (`.json`) for **FLUX.2 / FLUX.3 Klein, Qwen-Image, Krea 2, Z-Image Turbo, Wan 2.1 / 2.2, LTX-2, MiniMax H3, SeedVR2** and more. It covers **text-to-image (txt2img)**, **image editing (img2img)**, **inpainting and outpainting**, **background removal**, **image and video upscaling**, **text-to-video and image-to-video**, **lip-sync and talking avatars**, **face swap and character swap**, **text-to-speech and music**, **image-to-3D**, **batch automation** and a complete **AI short-film pipeline**.
 
 Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, install any missing custom nodes with ComfyUI-Manager, add the models, and press **Run**.
 
@@ -26,7 +26,7 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 
 ## Workflow categories
 
-569 workflows: 529 in the normal UI format and 40 in API format (filenames ending in `-api`). Each category README lists every workflow in that folder with what it does, the models it loads and the custom nodes it needs; the version-conflicts folder lists the models and what differs from the library copy. For one flat list of all files, see [`00-LIBRARY-INDEX.md`](00-LIBRARY-INDEX.md).
+574 workflows: 534 in the normal UI format and 40 in API format (filenames ending in `-api`). Each category README lists every workflow in that folder with what it does, the models it loads and the custom nodes it needs; the version-conflicts folder lists the models and what differs from the library copy. For one flat list of all files, see [`00-LIBRARY-INDEX.md`](00-LIBRARY-INDEX.md).
 
 | Category | What is inside | Workflows |
 |---|---|---|
