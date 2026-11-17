@@ -8,11 +8,11 @@ Image-to-image (img2img) and instruction editing: single- and multi-image edits,
 | [`Character-Outfit-and-Pose/`](Character-Outfit-and-Pose) | Outfit transfer, pose and character edits | 12 |
 | [`Compositing-and-Image-Tools/`](Compositing-and-Image-Tools) | Crop, compose, paint, stitch and other image tools | 15 |
 | [`Inpaint-Outpaint-and-Object-Removal/`](Inpaint-Outpaint-and-Object-Removal) | Inpainting, outpainting and object removal | 16 |
-| [`Multi-Image-Composition/`](Multi-Image-Composition) | Multi-image edits and composition | 22 |
+| [`Multi-Image-Composition/`](Multi-Image-Composition) | Multi-image edits and composition | 23 |
 | [`Single-Image-Edit/`](Single-Image-Edit) | Instruction-based single-image editing (img2img) | 34 |
 | [`Sketch-and-3D-to-Image/`](Sketch-and-3D-to-Image) | Sketch-to-image and 3D-render-to-image | 9 |
 
-## Workflows (113)
+## Workflows (114)
 
 ### Background removal and segmentation
 
@@ -93,6 +93,7 @@ Image-to-image (img2img) and instruction editing: single- and multi-image edits,
 | [flux-2-klein-9b-kv-fp8-multi-image-edit-2-images](Multi-Image-Composition/flux-2-klein-9b-kv-fp8-multi-image-edit-2-images.json) | Multi-Image Edit — 2 Images | `flux2-vae.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux-2-klein-9b-kv-fp8.safetensors` | Core only |
 | [flux-2-klein-9b-kv-fp8-multi-image-edit-3-images](Multi-Image-Composition/flux-2-klein-9b-kv-fp8-multi-image-edit-3-images.json) | Multi-Image Edit — 3 Images | `qwen_3_8b_fp8mixed.safetensors`, `flux-2-klein-9b-kv-fp8.safetensors`, `flux2-vae.safetensors` | Core only |
 | [flux-2-klein-9b-kv-fp8-multi-image-edit-4-images](Multi-Image-Composition/flux-2-klein-9b-kv-fp8-multi-image-edit-4-images.json) | Multi-Image Edit — 4 Images | `qwen_3_8b_fp8mixed.safetensors`, `flux-2-klein-9b-kv-fp8.safetensors`, `flux2-vae.safetensors` | Core only |
+| [h3-image-edit-bbox-refs](Multi-Image-Composition/h3-image-edit-bbox-refs.json) | H3 Image Edit - BBox Layout + 4 Reference Images ([how to use](Multi-Image-Composition/h3-image-edit-bbox-refs-README.md)) | `minimax_h3_image_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_int8_convrot.safetensors`, `minimax_h3_image_vae_fp16.safetensors` +1 more | ComfyUI-H3Image-LayoutKit, ComfyUI-KJNodes |
 | [flux-3-klein-character-in-a-scene](Multi-Image-Composition/flux-3-klein-character-in-a-scene.json) | Character in a Scene | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
 | [flux-3-klein-group-photo](Multi-Image-Composition/flux-3-klein-group-photo.json) | Group Photo | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
 | [flux-3-klein-logo-on-a-product](Multi-Image-Composition/flux-3-klein-logo-on-a-product.json) | Logo on a Product | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
