@@ -9,10 +9,10 @@ Image-to-image (img2img) and instruction editing: single- and multi-image edits,
 | [`Compositing-and-Image-Tools/`](Compositing-and-Image-Tools) | Crop, compose, paint, stitch and other image tools | 15 |
 | [`Inpaint-Outpaint-and-Object-Removal/`](Inpaint-Outpaint-and-Object-Removal) | Inpainting, outpainting and object removal | 16 |
 | [`Multi-Image-Composition/`](Multi-Image-Composition) | Multi-image edits and composition | 23 |
-| [`Single-Image-Edit/`](Single-Image-Edit) | Instruction-based single-image editing (img2img) | 34 |
+| [`Single-Image-Edit/`](Single-Image-Edit) | Instruction-based single-image editing (img2img) | 35 |
 | [`Sketch-and-3D-to-Image/`](Sketch-and-3D-to-Image) | Sketch-to-image and 3D-render-to-image | 9 |
 
-## Workflows (114)
+## Workflows (115)
 
 ### Background removal and segmentation
 
@@ -143,6 +143,7 @@ Image-to-image (img2img) and instruction editing: single- and multi-image edits,
 | [qwen-image-2.1-one-image-edit](Single-Image-Edit/qwen-image-2.1-one-image-edit.json) | One Image Edit | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
 | [sd15-juggernaut-reborn-img2img](Single-Image-Edit/sd15-juggernaut-reborn-img2img.json) | Image to Image | `juggernaut_reborn.safetensors` | Core only |
 | [moss-image-edit-text-in-a-picture](Single-Image-Edit/moss-image-edit-text-in-a-picture.json) | MOSS Image - Same Picture, New Words (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [official-h3-image-edit](Single-Image-Edit/official-h3-image-edit.json) | MiniMax H3 Image — One Image Edit (official ComfyUI template) | `minimax_h3_image_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_int8_convrot.safetensors`, `minimax_h3_image_vae_fp16.safetensors` +1 more | Core only |
 | [p-h3-image-edit-new-place](Single-Image-Edit/p-h3-image-edit-new-place.json) | P-H3 Image - Image Edit New Place (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
 | [p-h3-image-relight-day-to-night](Single-Image-Edit/p-h3-image-relight-day-to-night.json) | P-H3 Image - Relight Day to Night (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
 | [p-h3-image-edit-text-in-a-picture](Single-Image-Edit/p-h3-image-edit-text-in-a-picture.json) | P-H3 Image - Edit Text in a Picture (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
