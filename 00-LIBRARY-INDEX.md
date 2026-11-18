@@ -455,6 +455,10 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [woosh-text-and-video-to-sound-effects](05-Audio/Music-Generation/woosh-text-and-video-to-sound-effects.json)
 - [yue2-lyrics-to-song](05-Audio/Music-Generation/yue2-lyrics-to-song.json)
 
+## 05-Audio/Music-Transcription
+
+- [muscriptor-audio-to-midi-transcription](05-Audio/Music-Transcription/muscriptor-audio-to-midi-transcription.json)
+
 ## 05-Audio/Speech-and-Voice-Cloning
 
 - [fish-s2-multi-speaker-dialogue-tts](05-Audio/Speech-and-Voice-Cloning/fish-s2-multi-speaker-dialogue-tts.json)

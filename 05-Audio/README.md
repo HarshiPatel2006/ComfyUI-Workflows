@@ -1,14 +1,15 @@
 # Audio — ComfyUI workflows
 
-Text-to-speech, voice cloning and voice design (Qwen3-TTS, Fish S2, ChatterBox) and music generation (Stable Audio 3, ACE-Step, MiniMax Music 3, YuE 2, Foundation-1) and sound effects (Sony Woosh).
+Text-to-speech, voice cloning and voice design (Qwen3-TTS, Fish S2, ChatterBox) and music generation (Stable Audio 3, ACE-Step, MiniMax Music 3, YuE 2, Foundation-1) sound effects (Sony Woosh) and music transcription to MIDI (MuScriptor).
 
 | Subfolder | What is inside | Workflows |
 |---|---|---|
 | [`Music-Generation/`](Music-Generation) | Music generation | 9 |
+| [`Music-Transcription/`](Music-Transcription) | Audio to MIDI music transcription | 1 |
 | [`Speech-and-Voice-Cloning/`](Speech-and-Voice-Cloning) | Text-to-speech and voice cloning | 11 |
 | [`Stem-Separation/`](Stem-Separation) | Vocal, instrument and drum stem extraction | 1 |
 
-## Workflows (21)
+## Workflows (22)
 
 ### Music generation
 
@@ -24,6 +25,12 @@ Text-to-speech, voice cloning and voice design (Qwen3-TTS, Fish S2, ChatterBox) 
 | [stable-audio-3-text-to-sound-effects-gemma-4](Music-Generation/stable-audio-3-text-to-sound-effects-gemma-4.json) | Text to Sound Effects + Gemma 4 | `stable_audio_3_medium.safetensors`, `t5gemma_b_b_ul2.safetensors`, `gemma4_e4b_it_fp8_scaled.safetensors` | ComfyUI-Pixaroma |
 | [woosh-text-and-video-to-sound-effects](Music-Generation/woosh-text-and-video-to-sound-effects.json) | Text to Sound Effects and Video to Sound Effects (Sony Woosh) | `Woosh-Flow`, `Woosh-VFlow-8s` | ComfyUI-Woosh, ComfyUI-VideoHelperSuite |
 | [yue2-lyrics-to-song](Music-Generation/yue2-lyrics-to-song.json) | Lyrics to Song (YuE 2) with SheetSage melody-to-ABC | `yue2_3b_bf16.safetensors`, `sheetsage2_bf16.safetensors` | — |
+
+### Music transcription
+
+| Workflow | What it does | Models used | Custom nodes needed |
+|---|---|---|---|
+| [muscriptor-audio-to-midi-transcription](Music-Transcription/muscriptor-audio-to-midi-transcription.json) | Audio to MIDI multi-instrument transcription (MuScriptor by Kyutai and Mirelo; example workflow by martyyz-ai). The MuScriptor weights are gated on HuggingFace: accept the CC BY-NC 4.0 licence and log in to HuggingFace; they auto-download on first use | MuScriptor `large` (auto-downloaded by the node pack) | [ComfyUI-MuScriptor](https://github.com/martyyz-ai/ComfyUI-MuScriptor), ComfyUI-Custom-Scripts |
 
 ### Text-to-speech and voice cloning
 
