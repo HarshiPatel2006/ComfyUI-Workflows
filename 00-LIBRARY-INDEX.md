@@ -1,6 +1,6 @@
 # ComfyUI Workflow Library — Index
 
-Plain list of all 619 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
+Plain list of all 692 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
 
 Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-image-2.1-one-image-edit-low-vram.json`). `-api` = API format; `epNN` = tutorial episode the variant came from.
 
@@ -506,10 +506,52 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 
 ## 05-Audio/Speech-and-Voice-Cloning
 
+- [bark-text-to-speech](05-Audio/Speech-and-Voice-Cloning/bark-text-to-speech.json)
+- [chatterbox-dialogue-tts](05-Audio/Speech-and-Voice-Cloning/chatterbox-dialogue-tts.json)
+- [chatterbox-fill-all-modes-incl-turbo](05-Audio/Speech-and-Voice-Cloning/chatterbox-fill-all-modes-incl-turbo.json)
+- [chatterbox-multilingual-tts](05-Audio/Speech-and-Voice-Cloning/chatterbox-multilingual-tts.json)
+- [chatterbox-text-to-speech](05-Audio/Speech-and-Voice-Cloning/chatterbox-text-to-speech.json)
+- [chatterbox-tts-audio-suite-voice-changer](05-Audio/Speech-and-Voice-Cloning/chatterbox-tts-audio-suite-voice-changer.json)
+- [chatterbox-voice-conversion](05-Audio/Speech-and-Voice-Cloning/chatterbox-voice-conversion.json)
+- [chatterbox-wildminder-tts-dialogue-srt-vc](05-Audio/Speech-and-Voice-Cloning/chatterbox-wildminder-tts-dialogue-srt-vc.json)
+- [chattts-text-to-speech](05-Audio/Speech-and-Voice-Cloning/chattts-text-to-speech.json)
+- [cosyvoice-300m-cross-lingual-clone](05-Audio/Speech-and-Voice-Cloning/cosyvoice-300m-cross-lingual-clone.json)
+- [cosyvoice-300m-instruct](05-Audio/Speech-and-Voice-Cloning/cosyvoice-300m-instruct.json)
+- [cosyvoice-300m-sft-preset-speakers](05-Audio/Speech-and-Voice-Cloning/cosyvoice-300m-sft-preset-speakers.json)
+- [cosyvoice-300m-zero-shot-voice-clone](05-Audio/Speech-and-Voice-Cloning/cosyvoice-300m-zero-shot-voice-clone.json)
+- [dia-1.6b-dialogue-tts](05-Audio/Speech-and-Voice-Cloning/dia-1.6b-dialogue-tts.json)
+- [dia-1.6b-safetensors-loader](05-Audio/Speech-and-Voice-Cloning/dia-1.6b-safetensors-loader.json)
+- [dia-1.6b-tts-with-audio-retimer](05-Audio/Speech-and-Voice-Cloning/dia-1.6b-tts-with-audio-retimer.json)
+- [dia-1.6b-voice-clone](05-Audio/Speech-and-Voice-Cloning/dia-1.6b-voice-clone.json)
+- [dia2-tts-and-captions](05-Audio/Speech-and-Voice-Cloning/dia2-tts-and-captions.json)
+- [elevenlabs-api-speech-to-speech](05-Audio/Speech-and-Voice-Cloning/elevenlabs-api-speech-to-speech.json)
+- [elevenlabs-api-text-to-dialogue](05-Audio/Speech-and-Voice-Cloning/elevenlabs-api-text-to-dialogue.json)
+- [elevenlabs-api-text-to-speech](05-Audio/Speech-and-Voice-Cloning/elevenlabs-api-text-to-speech.json)
+- [elevenlabs-api-v4-text-to-dialogue](05-Audio/Speech-and-Voice-Cloning/elevenlabs-api-v4-text-to-dialogue.json)
+- [elevenlabs-api-v4-text-to-speech](05-Audio/Speech-and-Voice-Cloning/elevenlabs-api-v4-text-to-speech.json)
+- [elevenlabs-api-voice-isolation](05-Audio/Speech-and-Voice-Cloning/elevenlabs-api-voice-isolation.json)
+- [f5-tts-speak-like-a-local-translate](05-Audio/Speech-and-Voice-Cloning/f5-tts-speak-like-a-local-translate.json)
+- [f5-tts-tts-audio-suite-speech-editor](05-Audio/Speech-and-Voice-Cloning/f5-tts-tts-audio-suite-speech-editor.json)
+- [f5-tts-tts-audio-suite-srt-phoneme-normalizer](05-Audio/Speech-and-Voice-Cloning/f5-tts-tts-audio-suite-srt-phoneme-normalizer.json)
+- [f5-tts-voice-clone](05-Audio/Speech-and-Voice-Cloning/f5-tts-voice-clone.json)
+- [f5-tts-voice-clone-whisper-auto-transcript](05-Audio/Speech-and-Voice-Cloning/f5-tts-voice-clone-whisper-auto-transcript.json)
+- [fish-audio-api-drama-3-dialogue](05-Audio/Speech-and-Voice-Cloning/fish-audio-api-drama-3-dialogue.json)
+- [fish-audio-api-drama-3-directed](05-Audio/Speech-and-Voice-Cloning/fish-audio-api-drama-3-directed.json)
+- [fish-audio-api-s2-text-to-speech](05-Audio/Speech-and-Voice-Cloning/fish-audio-api-s2-text-to-speech.json)
+- [fish-audio-api-voice-clone-tts](05-Audio/Speech-and-Voice-Cloning/fish-audio-api-voice-clone-tts.json)
 - [fish-s2-multi-speaker-dialogue-tts](05-Audio/Speech-and-Voice-Cloning/fish-s2-multi-speaker-dialogue-tts.json)
+- [fish-s2-pro-tts-audio-suite-srt-characters](05-Audio/Speech-and-Voice-Cloning/fish-s2-pro-tts-audio-suite-srt-characters.json)
 - [fish-s2-text-to-speech](05-Audio/Speech-and-Voice-Cloning/fish-s2-text-to-speech.json)
 - [fish-s2-voice-clone-tts](05-Audio/Speech-and-Voice-Cloning/fish-s2-voice-clone-tts.json)
+- [index-tts2-emotion-control](05-Audio/Speech-and-Voice-Cloning/index-tts2-emotion-control.json)
+- [index-tts2-tts-audio-suite-emotion-srt](05-Audio/Speech-and-Voice-Cloning/index-tts2-tts-audio-suite-emotion-srt.json)
+- [kokoro-82m-text-to-speech](05-Audio/Speech-and-Voice-Cloning/kokoro-82m-text-to-speech.json)
+- [openvoice-tts-and-voice-conversion](05-Audio/Speech-and-Voice-Cloning/openvoice-tts-and-voice-conversion.json)
+- [parler-tts-described-voice](05-Audio/Speech-and-Voice-Cloning/parler-tts-described-voice.json)
+- [qwen3-tts-1038lab-create-your-voice](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-1038lab-create-your-voice.json)
+- [qwen3-tts-1038lab-voice-clone-with-asr](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-1038lab-voice-clone-with-asr.json)
 - [qwen3-tts-custom-voice](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-custom-voice.json)
+- [qwen3-tts-tts-audio-suite-voice-design-asr-srt](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-tts-audio-suite-voice-design-asr-srt.json)
 - [qwen3-tts-voice-clone](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-clone.json)
 - [qwen3-tts-voice-clone-load-saved-voice](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-clone-load-saved-voice.json)
 - [qwen3-tts-voice-clone-save-voice](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-clone-save-voice.json)
@@ -517,6 +559,18 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [qwen3-tts-voice-design](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-design.json)
 - [qwen3-tts-voice-design-dialogue](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-design-dialogue.json)
 - [qwen3-tts-voice-design-save-voice](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-design-save-voice.json)
+- [sesame-csm-1b-context-voice-clone](05-Audio/Speech-and-Voice-Cloning/sesame-csm-1b-context-voice-clone.json)
+- [sesame-csm-1b-dialogue-clone](05-Audio/Speech-and-Voice-Cloning/sesame-csm-1b-dialogue-clone.json)
+- [sesame-csm-1b-saved-speakers-dialogue](05-Audio/Speech-and-Voice-Cloning/sesame-csm-1b-saved-speakers-dialogue.json)
+- [sesame-csm-1b-text-to-speech](05-Audio/Speech-and-Voice-Cloning/sesame-csm-1b-text-to-speech.json)
+- [vibevoice-multi-speaker-podcast](05-Audio/Speech-and-Voice-Cloning/vibevoice-multi-speaker-podcast.json)
+- [vibevoice-pause-tags](05-Audio/Speech-and-Voice-Cloning/vibevoice-pause-tags.json)
+- [vibevoice-single-speaker](05-Audio/Speech-and-Voice-Cloning/vibevoice-single-speaker.json)
+- [vibevoice-tts-audio-suite-srt-characters](05-Audio/Speech-and-Voice-Cloning/vibevoice-tts-audio-suite-srt-characters.json)
+- [vibevoice-wildminder-tts-and-asr](05-Audio/Speech-and-Voice-Cloning/vibevoice-wildminder-tts-and-asr.json)
+- [voxcpm-lora-training](05-Audio/Speech-and-Voice-Cloning/voxcpm-lora-training.json)
+- [voxcpm-tts-and-voice-clone](05-Audio/Speech-and-Voice-Cloning/voxcpm-tts-and-voice-clone.json)
+- [voxcpm2-tts-clone-and-lora](05-Audio/Speech-and-Voice-Cloning/voxcpm2-tts-clone-and-lora.json)
 
 ## 05-Audio/Stem-Separation
 
@@ -524,6 +578,28 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [demucs-htdemucs-4-stem-separation](05-Audio/Stem-Separation/demucs-htdemucs-4-stem-separation.json)
 - [demucs-htdemucs-6s-six-stem-separation](05-Audio/Stem-Separation/demucs-htdemucs-6s-six-stem-separation.json)
 - [demucs-mdx-audio-separator-stem-separation](05-Audio/Stem-Separation/demucs-mdx-audio-separator-stem-separation.json)
+
+## 05-Audio/Speech-to-Text
+
+- [elevenlabs-api-speech-to-text](05-Audio/Speech-to-Text/elevenlabs-api-speech-to-text.json)
+- [faster-whisper-transcribe-to-subtitles](05-Audio/Speech-to-Text/faster-whisper-transcribe-to-subtitles.json)
+- [fish-audio-api-speech-to-text](05-Audio/Speech-to-Text/fish-audio-api-speech-to-text.json)
+- [mega-asr-transcribe](05-Audio/Speech-to-Text/mega-asr-transcribe.json)
+- [nemotron-asr-live-microphone](05-Audio/Speech-to-Text/nemotron-asr-live-microphone.json)
+- [nemotron-asr-transcribe-server](05-Audio/Speech-to-Text/nemotron-asr-transcribe-server.json)
+- [parakeet-tdt-0.6b-v2-subtitles-with-kokoro](05-Audio/Speech-to-Text/parakeet-tdt-0.6b-v2-subtitles-with-kokoro.json)
+- [qwen3-asr-0.6b-subtitles](05-Audio/Speech-to-Text/qwen3-asr-0.6b-subtitles.json)
+- [qwen3-asr-0.6b-transcribe](05-Audio/Speech-to-Text/qwen3-asr-0.6b-transcribe.json)
+- [qwen3-asr-1.7b-transcribe](05-Audio/Speech-to-Text/qwen3-asr-1.7b-transcribe.json)
+- [qwen3-asr-transcribe-with-forced-aligner-config](05-Audio/Speech-to-Text/qwen3-asr-transcribe-with-forced-aligner-config.json)
+- [qwen3-forced-aligner-word-timestamps](05-Audio/Speech-to-Text/qwen3-forced-aligner-word-timestamps.json)
+- [sensevoice-small-asr-and-cosyvoice](05-Audio/Speech-to-Text/sensevoice-small-asr-and-cosyvoice.json)
+- [tts-audio-suite-asr-to-srt-granite-qwen3](05-Audio/Speech-to-Text/tts-audio-suite-asr-to-srt-granite-qwen3.json)
+- [whisper-large-v3-batch-transcribe](05-Audio/Speech-to-Text/whisper-large-v3-batch-transcribe.json)
+- [whisper-large-v3-chinese-subtitles-to-video](05-Audio/Speech-to-Text/whisper-large-v3-chinese-subtitles-to-video.json)
+- [whisper-large-v3-transcribe-audio-or-video](05-Audio/Speech-to-Text/whisper-large-v3-transcribe-audio-or-video.json)
+- [whisper-transcribe-to-srt-vtt](05-Audio/Speech-to-Text/whisper-transcribe-to-srt-vtt.json)
+- [whisper-video-to-subtitles-srt](05-Audio/Speech-to-Text/whisper-video-to-subtitles-srt.json)
 
 ## 06-3D-Generation/Image-to-3D
 
