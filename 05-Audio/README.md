@@ -4,15 +4,16 @@ Text-to-speech, voice cloning and voice design (Qwen3-TTS, Fish S2, ChatterBox) 
 
 | Subfolder | What is inside | Workflows |
 |---|---|---|
-| [`Music-Generation/`](Music-Generation) | Music generation | 6 |
+| [`Music-Generation/`](Music-Generation) | Music generation | 7 |
 | [`Speech-and-Voice-Cloning/`](Speech-and-Voice-Cloning) | Text-to-speech and voice cloning | 11 |
 
-## Workflows (17)
+## Workflows (18)
 
 ### Music generation
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
+| [ace-step-v1.5-lora-training](Music-Generation/ace-step-v1.5-lora-training.json) | LoRA Training (by ZETALVX) | `ace_step_1.5_turbo_aio.safetensors` | fl-acestep-training |
 | [ace-step-v1.5-xl-turbo-text-to-music](Music-Generation/ace-step-v1.5-xl-turbo-text-to-music.json) | Text to Music | `qwen_0.6b_ace15.safetensors`, `qwen_4b_ace15.safetensors`, `ace_1.5_vae.safetensors` +1 more | ComfyUI-Pixaroma |
 | [minimax-music-3-text-to-music](Music-Generation/minimax-music-3-text-to-music.json) | Text to Music | `minimax_music3_dit_int8_convrot.safetensors`, `minimax_music3_text_encoder_pruned_int8_convrot.safetensors`, `minimax_music3_dav.safetensors` | ComfyUI-Pixaroma |
 | [stable-audio-3-image-to-music-gemma-4](Music-Generation/stable-audio-3-image-to-music-gemma-4.json) | Image to Music + Gemma 4 | `stable_audio_3_medium.safetensors`, `t5gemma_b_b_ul2.safetensors`, `gemma4_e4b_it_fp8_scaled.safetensors` | ComfyUI-Pixaroma |

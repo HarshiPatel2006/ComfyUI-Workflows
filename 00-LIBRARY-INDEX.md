@@ -1,6 +1,6 @@
 # ComfyUI Workflow Library — Index
 
-Plain list of all 576 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
+Plain list of all 577 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
 
 Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-image-2.1-one-image-edit-low-vram.json`). `-api` = API format; `epNN` = tutorial episode the variant came from.
 
@@ -444,6 +444,7 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 
 ## 05-Audio/Music-Generation
 
+- [ace-step-v1.5-lora-training](05-Audio/Music-Generation/ace-step-v1.5-lora-training.json)
 - [ace-step-v1.5-xl-turbo-text-to-music](05-Audio/Music-Generation/ace-step-v1.5-xl-turbo-text-to-music.json)
 - [minimax-music-3-text-to-music](05-Audio/Music-Generation/minimax-music-3-text-to-music.json)
 - [stable-audio-3-image-to-music-gemma-4](05-Audio/Music-Generation/stable-audio-3-image-to-music-gemma-4.json)
