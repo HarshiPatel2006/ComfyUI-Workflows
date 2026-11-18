@@ -6,8 +6,9 @@ Text-to-speech, voice cloning and voice design (Qwen3-TTS, Fish S2, ChatterBox) 
 |---|---|---|
 | [`Music-Generation/`](Music-Generation) | Music generation | 6 |
 | [`Speech-and-Voice-Cloning/`](Speech-and-Voice-Cloning) | Text-to-speech and voice cloning | 11 |
+| [`Stem-Separation/`](Stem-Separation) | Vocal, instrument and drum stem extraction | 1 |
 
-## Workflows (17)
+## Workflows (18)
 
 ### Music generation
 
@@ -35,5 +36,11 @@ Text-to-speech, voice cloning and voice design (Qwen3-TTS, Fish S2, ChatterBox) 
 | [qwen3-tts-voice-design-dialogue](Speech-and-Voice-Cloning/qwen3-tts-voice-design-dialogue.json) | Voice Design + Dialogue | — | ComfyUI_LayerStyle, ComfyUI-Qwen-TTS, ComfyUI-Easy-Use |
 | [qwen3-tts-voice-design-save-voice](Speech-and-Voice-Cloning/qwen3-tts-voice-design-save-voice.json) | Voice Design + Save Voice | — | ComfyUI_LayerStyle, ComfyUI-Qwen-TTS, ComfyUI-Easy-Use |
 | [qwen3-tts-voice-design](Speech-and-Voice-Cloning/qwen3-tts-voice-design.json) | Voice Design | — | ComfyUI_LayerStyle, ComfyUI-Qwen-TTS, ComfyUI-Easy-Use |
+
+### Stem separation
+
+| Workflow | What it does | Models used | Custom nodes needed |
+|---|---|---|---|
+| [demucs-mdx-audio-separator-stem-separation](Stem-Separation/demucs-mdx-audio-separator-stem-separation.json) | Demucs + MDX + Audio Separator stem extraction: vocals, instruments and percussion from any track (by ZETALVX) | — | audio-separation, audio-separation-nodes-comfyui |
 
 See the [main README](../README.md) for setup steps, requirements and the other categories, or [`00-LIBRARY-INDEX.md`](../00-LIBRARY-INDEX.md) for the full list of workflows.
