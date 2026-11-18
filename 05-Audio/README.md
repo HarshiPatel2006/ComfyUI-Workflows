@@ -1,14 +1,14 @@
 # Audio — ComfyUI workflows
 
-Text-to-speech, voice cloning and voice design (Qwen3-TTS, Fish S2, ChatterBox) and music generation (Stable Audio 3, ACE-Step, MiniMax Music 3, YuE 2) and sound effects (Sony Woosh).
+Text-to-speech, voice cloning and voice design (Qwen3-TTS, Fish S2, ChatterBox) and music generation (Stable Audio 3, ACE-Step, MiniMax Music 3, YuE 2, Foundation-1) and sound effects (Sony Woosh).
 
 | Subfolder | What is inside | Workflows |
 |---|---|---|
-| [`Music-Generation/`](Music-Generation) | Music generation | 8 |
+| [`Music-Generation/`](Music-Generation) | Music generation | 9 |
 | [`Speech-and-Voice-Cloning/`](Speech-and-Voice-Cloning) | Text-to-speech and voice cloning | 11 |
 | [`Stem-Separation/`](Stem-Separation) | Vocal, instrument and drum stem extraction | 1 |
 
-## Workflows (20)
+## Workflows (21)
 
 ### Music generation
 
@@ -16,6 +16,7 @@ Text-to-speech, voice cloning and voice design (Qwen3-TTS, Fish S2, ChatterBox) 
 |---|---|---|---|
 | [ace-step-v1.5-lora-training](Music-Generation/ace-step-v1.5-lora-training.json) | LoRA Training (by ZETALVX) | `ace_step_1.5_turbo_aio.safetensors` | fl-acestep-training |
 | [ace-step-v1.5-xl-turbo-text-to-music](Music-Generation/ace-step-v1.5-xl-turbo-text-to-music.json) | Text to Music | `qwen_0.6b_ace15.safetensors`, `qwen_4b_ace15.safetensors`, `ace_1.5_vae.safetensors` +1 more | ComfyUI-Pixaroma |
+| [foundation-1-text-to-music-loops](Music-Generation/foundation-1-text-to-music-loops.json) | Text to Music Loops and Samples (Foundation-1) that follow key, bar count and BPM (node pack by Saganaki22) | `Foundation_1.safetensors` (auto-downloaded by the node pack) | ComfyUI-Foundation-1 |
 | [minimax-music-3-text-to-music](Music-Generation/minimax-music-3-text-to-music.json) | Text to Music | `minimax_music3_dit_int8_convrot.safetensors`, `minimax_music3_text_encoder_pruned_int8_convrot.safetensors`, `minimax_music3_dav.safetensors` | ComfyUI-Pixaroma |
 | [stable-audio-3-image-to-music-gemma-4](Music-Generation/stable-audio-3-image-to-music-gemma-4.json) | Image to Music + Gemma 4 | `stable_audio_3_medium.safetensors`, `t5gemma_b_b_ul2.safetensors`, `gemma4_e4b_it_fp8_scaled.safetensors` | ComfyUI-Pixaroma |
 | [stable-audio-3-text-to-music-gemma-4-prompt-enhancer](Music-Generation/stable-audio-3-text-to-music-gemma-4-prompt-enhancer.json) | Text to Music + Gemma 4 Prompt Enhancer | `stable_audio_3_medium.safetensors`, `t5gemma_b_b_ul2.safetensors`, `gemma4_e4b_it_fp8_scaled.safetensors` | ComfyUI-Pixaroma |
