@@ -34,7 +34,7 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 | [02 · Image Editing](02-Image-Editing/README.md) | Instruction-based editing, multi-image edits, inpainting, outpainting, object removal, background removal, outfit transfer, sketch-to-image | 115 |
 | [03 · Image Upscaling and Enhancement](03-Image-Enhancement/README.md) | Image upscaling (SeedVR2, tiled diffusion, creative upscale), filters and color grading | 13 |
 | [04 · AI Video](04-Video/README.md) | Text-to-video, image-to-video, first/last frame, reference-to-video, lip-sync, video dubbing, character animation and swap, video upscaling | 125 |
-| [05 · Audio](05-Audio/README.md) | Text-to-speech, voice cloning, voice design, music and sound effects | 19 |
+| [05 · Audio](05-Audio/README.md) | Text-to-speech, voice cloning, voice design, music and sound effects | 20 |
 | [06 · 3D Generation](06-3D-Generation/README.md) | Image-to-3D and multi-view-to-3D with Trellis 2, Pixal3D, SAM3D Body | 13 |
 | [07 · Batch Processing and Automation](07-Batch-and-Automation/README.md) | Batch-process a folder of images, loops, switches, logic and math | 44 |
 | [08 · Testing and Comparison](08-Testing-and-Comparison/README.md) | XY plots, sampler and LoRA comparisons, image compare | 8 |
