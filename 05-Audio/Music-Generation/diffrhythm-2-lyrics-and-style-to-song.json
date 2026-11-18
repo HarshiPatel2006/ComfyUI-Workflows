@@ -1,0 +1,213 @@
+{
+  "id": "fc6fb22d-a537-421d-ac5b-38df8c49efaf",
+  "revision": 0,
+  "last_node_id": 5,
+  "last_link_id": 3,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        380,
+        320
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "[start]\n[intro]\n[verse]\nCity lights are fading slow\nI keep walking where the rivers go\n[chorus]\nHold on, hold on to the night\nWe are burning, burning bright\n[outro]\n[end]"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "LoadAudio",
+      "pos": [
+        0,
+        380
+      ],
+      "size": [
+        320,
+        140
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            2
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "reference_song.flac",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 3,
+      "type": "DiffRhythm2Node",
+      "pos": [
+        450,
+        0
+      ],
+      "size": [
+        360,
+        330
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "歌词",
+          "type": "STRING",
+          "link": 1
+        },
+        {
+          "name": "参考音乐",
+          "type": "AUDIO",
+          "shape": 7,
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "DiffRhythm2Node"
+      },
+      "widgets_values": [
+        "Pop, electronic, female vocals, uplifting, 120 BPM",
+        210,
+        20,
+        2.0,
+        0,
+        "randomize",
+        true
+      ]
+    },
+    {
+      "id": 4,
+      "type": "SaveAudio",
+      "pos": [
+        870,
+        0
+      ],
+      "size": [
+        320,
+        120
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 3
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudio"
+      },
+      "widgets_values": [
+        "audio/diffrhythm2"
+      ]
+    },
+    {
+      "id": 5,
+      "type": "MarkdownNote",
+      "pos": [
+        450,
+        400
+      ],
+      "size": [
+        420,
+        300
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "MarkdownNote"
+      },
+      "widgets_values": [
+        "## DiffRhythm 2: lyrics and style to song\n\n- Write lyrics with section tags: [start] [intro] [verse] [chorus] [bridge] [inst] [solo] [outro] [end]\n- Style prompt (音乐风格提示词) in the DiffRhythm2 node, max length (歌曲最大长度) up to 210 s by default\n- To copy the style of a song instead, un-bypass **Load Audio** (Ctrl+B) and pick the reference.\n\nWeights auto-download on first run to `models/TTS/DiffRhythm/` (ASLP-lab/DiffRhythm2, MuQ-MuLan-large, xlm-roberta-base). Needs `espeak-ng` installed on the system. Licence Apache-2.0."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      3,
+      0,
+      "STRING"
+    ],
+    [
+      2,
+      2,
+      0,
+      3,
+      1,
+      "AUDIO"
+    ],
+    [
+      3,
+      3,
+      0,
+      4,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        0,
+        0
+      ]
+    }
+  },
+  "version": 0.4
+}
