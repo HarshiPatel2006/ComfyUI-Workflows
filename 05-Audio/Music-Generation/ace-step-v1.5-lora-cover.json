@@ -20,12 +20,38 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "link": 3
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
         }
       ],
-      "outputs": [],
+      "outputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.12.3",
@@ -38,7 +64,10 @@
       },
       "widgets_values": [
         "output/acestep_cover"
-      ]
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "output/acestep_cover"
+      }
     },
     {
       "id": 4,
@@ -56,12 +85,20 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "source",
           "name": "source",
           "type": "*",
           "link": 7
         }
       ],
-      "outputs": [],
+      "outputs": [
+        {
+          "localized_name": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
       "properties": {
         "cnr_id": "comfy-core",
         "ver": "0.12.3",
@@ -72,11 +109,8 @@
           "input_ue_unconnectable": {}
         }
       },
-      "widgets_values": [
-        null,
-        null,
-        null
-      ]
+      "widgets_values": [],
+      "widgets_values_named": {}
     },
     {
       "id": 5,
@@ -92,9 +126,29 @@
       "flags": {},
       "order": 0,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "lora_path",
+          "name": "lora_path",
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_path"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "strength",
+          "name": "strength",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "lora_info",
           "name": "lora_info",
           "type": "ACE_STEP_LORA_INFO",
           "slot_index": 0,
@@ -116,7 +170,11 @@
       "widgets_values": [
         "loras/ACE-Step-v1.5-chinese-new-year-LoRA",
         1
-      ]
+      ],
+      "widgets_values_named": {
+        "lora_path": "loras/ACE-Step-v1.5-chinese-new-year-LoRA",
+        "strength": 1
+      }
     },
     {
       "id": 2,
@@ -134,19 +192,212 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "src_audio",
           "name": "src_audio",
           "type": "AUDIO",
           "link": 1
         },
         {
+          "localized_name": "lora_info",
           "name": "lora_info",
           "shape": 7,
           "type": "ACE_STEP_LORA_INFO",
           "link": 6
+        },
+        {
+          "localized_name": "caption",
+          "name": "caption",
+          "type": "STRING",
+          "widget": {
+            "name": "caption"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "checkpoint_dir",
+          "name": "checkpoint_dir",
+          "type": "COMBO",
+          "widget": {
+            "name": "checkpoint_dir"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "config_path",
+          "name": "config_path",
+          "type": "COMBO",
+          "widget": {
+            "name": "config_path"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lm_model_path",
+          "name": "lm_model_path",
+          "type": "COMBO",
+          "widget": {
+            "name": "lm_model_path"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_cover_strength",
+          "name": "audio_cover_strength",
+          "type": "FLOAT",
+          "widget": {
+            "name": "audio_cover_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "batch_size",
+          "name": "batch_size",
+          "type": "INT",
+          "widget": {
+            "name": "batch_size"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "inference_steps",
+          "name": "inference_steps",
+          "type": "INT",
+          "widget": {
+            "name": "inference_steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_scale",
+          "name": "guidance_scale",
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "device",
+          "name": "device",
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lyrics",
+          "name": "lyrics",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "lyrics"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "vocal_language",
+          "name": "vocal_language",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "vocal_language"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "instrumental",
+          "name": "instrumental",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "instrumental"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "bpm",
+          "name": "bpm",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "bpm"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "keyscale",
+          "name": "keyscale",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "keyscale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "timesignature",
+          "name": "timesignature",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "timesignature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "use_adg",
+          "name": "use_adg",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_adg"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "thinking",
+          "name": "thinking",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "thinking"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_format",
+          "name": "audio_format",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "audio_format"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "instruction",
+          "name": "instruction",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "instruction"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "slot_index": 0,
@@ -155,14 +406,14 @@
           ]
         },
         {
+          "localized_name": "audio_path",
           "name": "audio_path",
           "type": "STRING",
           "slot_index": 1,
-          "links": [
-            4
-          ]
+          "links": []
         },
         {
+          "localized_name": "metadata",
           "name": "metadata",
           "type": "STRING",
           "slot_index": 2,
@@ -196,14 +447,37 @@
         "",
         "auto",
         false,
-        false,
         0,
+        "",
         "",
         false,
         false,
         "flac",
         ""
-      ]
+      ],
+      "widgets_values_named": {
+        "caption": "jazz piano arrangement with swing feel",
+        "checkpoint_dir": "Ace-Step1.5",
+        "config_path": "acestep-v15-turbo",
+        "lm_model_path": "acestep-5Hz-lm-1.7B",
+        "audio_cover_strength": 0.5,
+        "batch_size": 1,
+        "seed": 1,
+        "control_after_generate": "fixed",
+        "inference_steps": 8,
+        "guidance_scale": 7,
+        "device": "auto",
+        "lyrics": "",
+        "vocal_language": "auto",
+        "instrumental": false,
+        "bpm": 0,
+        "keyscale": "",
+        "timesignature": "",
+        "use_adg": false,
+        "thinking": false,
+        "audio_format": "flac",
+        "instruction": ""
+      }
     },
     {
       "id": 1,
@@ -219,9 +493,38 @@
       "flags": {},
       "order": 1,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "AUDIOUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "AUDIO",
           "name": "AUDIO",
           "type": "AUDIO",
           "slot_index": 0,
@@ -234,9 +537,7 @@
           "shape": 3,
           "type": "STRING",
           "slot_index": 1,
-          "links": [
-            2
-          ]
+          "links": []
         }
       ],
       "properties": {
@@ -251,9 +552,12 @@
       },
       "widgets_values": [
         "好运来.mp3",
-        null,
         null
-      ]
+      ],
+      "widgets_values_named": {
+        "audio": "好运来.mp3",
+        "upload": null
+      }
     }
   ],
   "links": [

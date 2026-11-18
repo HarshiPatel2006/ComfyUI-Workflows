@@ -20,19 +20,52 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "link": 24
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "format",
+          "name": "format",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "links": null
         }
       ],
-      "properties": {},
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.43.0",
+        "Node name for S&R": "SaveAudioAdvanced"
+      },
       "widgets_values": [
         "audio/yue2",
         "flac"
@@ -108,9 +141,29 @@
       "flags": {},
       "order": 2,
       "mode": 2,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "clip",
+          "name": "clip",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "mert2",
+          "name": "mert2",
+          "type": "COMBO",
+          "widget": {
+            "name": "mert2"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "clip",
           "name": "clip",
           "type": "CLIP",
           "links": [
@@ -119,6 +172,8 @@
         }
       ],
       "properties": {
+        "cnr_id": "ComfyUI_YuE",
+        "ver": "212634ab5be0faa08c623c8fa62425166aea6bc0",
         "Node name for S&R": "YUE_SM_Clip"
       },
       "widgets_values": [
@@ -146,11 +201,13 @@
       "mode": 2,
       "inputs": [
         {
+          "localized_name": "clip",
           "name": "clip",
           "type": "CLIP",
           "link": 13
         },
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "link": 14
@@ -158,6 +215,7 @@
       ],
       "outputs": [
         {
+          "localized_name": "abc_file",
           "name": "abc_file",
           "type": "STRING",
           "links": [
@@ -166,6 +224,8 @@
         }
       ],
       "properties": {
+        "cnr_id": "ComfyUI_YuE",
+        "ver": "212634ab5be0faa08c623c8fa62425166aea6bc0",
         "Node name for S&R": "YUE_SM_Cond"
       }
     },
@@ -183,9 +243,38 @@
       "flags": {},
       "order": 3,
       "mode": 2,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "AUDIOUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "AUDIO",
           "name": "AUDIO",
           "type": "AUDIO",
           "links": [
@@ -194,11 +283,12 @@
         }
       ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.43.0",
         "Node name for S&R": "LoadAudio"
       },
       "widgets_values": [
         "002.WAV",
-        null,
         null
       ],
       "widgets_values_named": {
@@ -222,6 +312,7 @@
       "mode": 2,
       "inputs": [
         {
+          "localized_name": "source",
           "name": "source",
           "type": "*",
           "link": 15
@@ -229,12 +320,15 @@
       ],
       "outputs": [
         {
+          "localized_name": "STRING",
           "name": "STRING",
           "type": "STRING",
           "links": null
         }
       ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.43.0",
         "Node name for S&R": "PreviewAny"
       },
       "widgets_values": [],
@@ -258,7 +352,7 @@
       "outputs": [],
       "properties": {},
       "widgets_values": [
-        "##### 三种基本功能 ######\n\n1.只写风格和歌词，cot选 off关闭，abc files留空，最基本的歌曲生成\n\n2.cover 复刻能力，要先用 clip和cond 节点 复刻原歌曲的abc，然后填写你写的新对应的风格和歌词，选择melody格式。注意有abc文件时， 只能选melody 或者full（if use cover mode use melody only）\n\n3.改谱精修，你或者agent来修改一个已有的abc谱子，而谱子，可以是你推理后生成的，也可以是开启plan模式生成的，这个谱子你编辑后，再给模型生成，如果环境变量不变，就可以达到自由的自定义生成你想要的歌曲（专业级），当然如果你没有音乐天赋，直接让大模型的agent帮你去改最好，官方也提供了skill"
+        "##### English #####\nabc_file: leave empty for plain lyrics-to-song, or pick an .abc score with the upload button for score / cover mode. The pack (as of Nov 2026) marks that upload widget as not serialized, so the ComfyUI frontend never sends abc_file and every run stops with \"Required input is missing\". Fix: in custom_nodes/ComfyUI_YuE/js/simple.js remove the two serialize = false settings of the abc_upload widget (see the 05-Audio README). only_plan = false renders audio; true returns only the ABC plan. For cover mode un-bypass the Clip / Cond / Load Audio nodes and use cot = melody.\n\n##### 三种基本功能 ######\n\n1.只写风格和歌词，cot选 off关闭，abc files留空，最基本的歌曲生成\n\n2.cover 复刻能力，要先用 clip和cond 节点 复刻原歌曲的abc，然后填写你写的新对应的风格和歌词，选择melody格式。注意有abc文件时， 只能选melody 或者full（if use cover mode use melody only）\n\n3.改谱精修，你或者agent来修改一个已有的abc谱子，而谱子，可以是你推理后生成的，也可以是开启plan模式生成的，这个谱子你编辑后，再给模型生成，如果环境变量不变，就可以达到自由的自定义生成你想要的歌曲（专业级），当然如果你没有音乐天赋，直接让大模型的agent帮你去改最好，官方也提供了skill"
       ],
       "widgets_values_named": {
         "text": "##### 三种基本功能 ######\n\n1.只写风格和歌词，cot选 off关闭，abc files留空，最基本的歌曲生成\n\n2.cover 复刻能力，要先用 clip和cond 节点 复刻原歌曲的abc，然后填写你写的新对应的风格和歌词，选择melody格式。注意有abc文件时， 只能选melody 或者full（if use cover mode use melody only）\n\n3.改谱精修，你或者agent来修改一个已有的abc谱子，而谱子，可以是你推理后生成的，也可以是开启plan模式生成的，这个谱子你编辑后，再给模型生成，如果环境变量不变，就可以达到自由的自定义生成你想要的歌曲（专业级），当然如果你没有音乐天赋，直接让大模型的agent帮你去改最好，官方也提供了skill"
@@ -280,9 +374,20 @@
       "flags": {},
       "order": 5,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "diffusion_models",
+          "name": "diffusion_models",
+          "type": "COMBO",
+          "widget": {
+            "name": "diffusion_models"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "links": [
@@ -291,6 +396,8 @@
         }
       ],
       "properties": {
+        "cnr_id": "ComfyUI_YuE",
+        "ver": "212634ab5be0faa08c623c8fa62425166aea6bc0",
         "Node name for S&R": "YUE_SM_Model"
       },
       "widgets_values": [
@@ -314,9 +421,20 @@
       "flags": {},
       "order": 6,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "vae",
           "name": "vae",
           "type": "VAE",
           "links": [
@@ -325,6 +443,8 @@
         }
       ],
       "properties": {
+        "cnr_id": "ComfyUI_YuE",
+        "ver": "212634ab5be0faa08c623c8fa62425166aea6bc0",
         "Node name for S&R": "YUE_SM_Vae"
       },
       "widgets_values": [
@@ -350,18 +470,75 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "link": 22
         },
         {
+          "localized_name": "vae",
           "name": "vae",
           "type": "VAE",
           "link": 23
+        },
+        {
+          "localized_name": "style",
+          "name": "style",
+          "type": "STRING",
+          "widget": {
+            "name": "style"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lyrics",
+          "name": "lyrics",
+          "type": "STRING",
+          "widget": {
+            "name": "lyrics"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cot",
+          "name": "cot",
+          "type": "COMBO",
+          "widget": {
+            "name": "cot"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "only_plan",
+          "name": "only_plan",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "only_plan"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "abc_file",
+          "name": "abc_file",
+          "type": "ABC_UPLOAD",
+          "widget": {
+            "name": "abc_file"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "links": [
@@ -370,6 +547,8 @@
         }
       ],
       "properties": {
+        "cnr_id": "ComfyUI_YuE",
+        "ver": "212634ab5be0faa08c623c8fa62425166aea6bc0",
         "Node name for S&R": "YUE_SM_Sampler"
       },
       "widgets_values": [
@@ -378,8 +557,7 @@
         "full",
         1452144020,
         "randomize",
-        true,
-        "E:\\ComfyUI313\\ComfyUI\\output\\yue_sm_temp\\score-jazz.abc",
+        false,
         ""
       ],
       "widgets_values_named": {
@@ -388,9 +566,7 @@
         "cot": "full",
         "seed": 1452144020,
         "control_after_generate": "randomize",
-        "only_plan": true,
-        "abc_file": "E:\\ComfyUI313\\ComfyUI\\output\\yue_sm_temp\\score-jazz.abc",
-        "path-button": ""
+        "only_plan": false
       }
     }
   ],

@@ -1,4 +1,6 @@
 {
+  "id": "3069bd5e-da82-4a18-9703-edd788f67121",
+  "revision": 0,
   "last_node_id": 4,
   "last_link_id": 5,
   "nodes": [
@@ -9,39 +11,73 @@
         50,
         100
       ],
-      "size": {
-        "0": 315,
-        "1": 130
-      },
+      "size": [
+        315,
+        156
+      ],
       "flags": {},
       "order": 0,
       "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "AUDIOUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
-          "name": "audio",
+          "localized_name": "AUDIO",
+          "name": "AUDIO",
           "type": "AUDIO",
+          "slot_index": 0,
           "links": [
             1
-          ],
-          "shape": 3,
-          "slot_index": 0
+          ]
         },
         {
           "name": "audio_path",
-          "type": "STRING",
-          "links": [
-            2
-          ],
           "shape": 3,
-          "slot_index": 1
+          "type": "STRING",
+          "slot_index": 1,
+          "links": []
         }
       ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.43.0",
         "Node name for S&R": "LoadAudio"
       },
       "widgets_values": [
-        "input/original_song.mp3"
-      ]
+        "input/original_song.mp3",
+        ""
+      ],
+      "widgets_values_named": {
+        "audio": "input/original_song.mp3",
+        "upload": ""
+      }
     },
     {
       "id": 2,
@@ -50,50 +86,248 @@
         400,
         100
       ],
-      "size": {
-        "0": 400,
-        "1": 650
-      },
+      "size": [
+        400,
+        668
+      ],
       "flags": {},
       "order": 1,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "src_audio",
           "name": "src_audio",
           "type": "AUDIO",
           "link": 1
+        },
+        {
+          "localized_name": "lora_info",
+          "name": "lora_info",
+          "shape": 7,
+          "type": "ACE_STEP_LORA_INFO",
+          "link": null
+        },
+        {
+          "localized_name": "caption",
+          "name": "caption",
+          "type": "STRING",
+          "widget": {
+            "name": "caption"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "checkpoint_dir",
+          "name": "checkpoint_dir",
+          "type": "COMBO",
+          "widget": {
+            "name": "checkpoint_dir"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "config_path",
+          "name": "config_path",
+          "type": "COMBO",
+          "widget": {
+            "name": "config_path"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lm_model_path",
+          "name": "lm_model_path",
+          "type": "COMBO",
+          "widget": {
+            "name": "lm_model_path"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_cover_strength",
+          "name": "audio_cover_strength",
+          "type": "FLOAT",
+          "widget": {
+            "name": "audio_cover_strength"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "batch_size",
+          "name": "batch_size",
+          "type": "INT",
+          "widget": {
+            "name": "batch_size"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "inference_steps",
+          "name": "inference_steps",
+          "type": "INT",
+          "widget": {
+            "name": "inference_steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_scale",
+          "name": "guidance_scale",
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "device",
+          "name": "device",
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lyrics",
+          "name": "lyrics",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "lyrics"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "vocal_language",
+          "name": "vocal_language",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "vocal_language"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "instrumental",
+          "name": "instrumental",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "instrumental"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "bpm",
+          "name": "bpm",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "bpm"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "keyscale",
+          "name": "keyscale",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "keyscale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "timesignature",
+          "name": "timesignature",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "timesignature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "use_adg",
+          "name": "use_adg",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_adg"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "thinking",
+          "name": "thinking",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "thinking"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_format",
+          "name": "audio_format",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "audio_format"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "instruction",
+          "name": "instruction",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "instruction"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
+          "slot_index": 0,
           "links": [
             3
-          ],
-          "shape": 3,
-          "slot_index": 0
+          ]
         },
         {
+          "localized_name": "audio_path",
           "name": "audio_path",
           "type": "STRING",
-          "links": [
-            4
-          ],
-          "shape": 3,
-          "slot_index": 1
+          "slot_index": 1,
+          "links": []
         },
         {
+          "localized_name": "metadata",
           "name": "metadata",
           "type": "STRING",
+          "slot_index": 2,
           "links": [
             5
-          ],
-          "shape": 3,
-          "slot_index": 2
+          ]
         }
       ],
       "properties": {
+        "aux_id": "kana112233/ComfyUI-kaola-ace-step",
+        "ver": "cb0d0fc6723864201020624931d9cbb2ff0cbc66",
         "Node name for S&R": "ACE_STEP_Cover"
       },
       "widgets_values": [
@@ -106,7 +340,7 @@
         42,
         "fixed",
         8,
-        7.0,
+        7,
         "auto",
         "",
         "auto",
@@ -117,9 +351,31 @@
         false,
         true,
         "flac",
-        null,
         ""
-      ]
+      ],
+      "widgets_values_named": {
+        "caption": "jazz piano arrangement with swing feel",
+        "checkpoint_dir": "Ace-Step1.5",
+        "config_path": "acestep-v15-turbo",
+        "lm_model_path": "acestep-5Hz-lm-1.7B",
+        "audio_cover_strength": 0.5,
+        "batch_size": 1,
+        "seed": 42,
+        "control_after_generate": "fixed",
+        "inference_steps": 8,
+        "guidance_scale": 7,
+        "device": "auto",
+        "lyrics": "",
+        "vocal_language": "auto",
+        "instrumental": false,
+        "bpm": 0,
+        "keyscale": "",
+        "timesignature": "",
+        "use_adg": false,
+        "thinking": true,
+        "audio_format": "flac",
+        "instruction": ""
+      }
     },
     {
       "id": 3,
@@ -128,26 +384,58 @@
         850,
         100
       ],
-      "size": {
-        "0": 315,
-        "1": 130
-      },
+      "size": [
+        315,
+        130
+      ],
       "flags": {},
       "order": 2,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "link": 3
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
         }
       ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.43.0",
         "Node name for S&R": "SaveAudio"
       },
       "widgets_values": [
         "output/acestep_cover"
-      ]
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "output/acestep_cover"
+      }
     },
     {
       "id": 4,
@@ -156,23 +444,36 @@
         850,
         270
       ],
-      "size": {
-        "0": 400,
-        "1": 200
-      },
+      "size": [
+        400,
+        200
+      ],
       "flags": {},
       "order": 3,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "source",
           "name": "source",
           "type": "*",
           "link": 5
         }
       ],
+      "outputs": [
+        {
+          "localized_name": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.43.0",
         "Node name for S&R": "PreviewAny"
-      }
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
     }
   ],
   "links": [
@@ -203,6 +504,14 @@
   ],
   "groups": [],
   "config": {},
-  "extra": {},
+  "extra": {
+    "ds": {
+      "scale": 1.1711065573770492,
+      "offset": [
+        163.33333333333337,
+        440.20417760279963
+      ]
+    }
+  },
   "version": 0.4
 }

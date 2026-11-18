@@ -68,6 +68,9 @@
       "widgets_values": [
         "This is a technique that uses the merge model for music creation and the SFT model for refinement.\n\n**Model Links**\n\n**Merge**\n\n- [acestep_v1.5_merge_sft_turbo_ta_0.5.safetensors](https://huggingface.co/Aryanne/acestep-v15-test-merges/blob/main/acestep_v1.5_merge_sft_turbo_ta_0.5.safetensors)\n\n\n**SFT**\n\n- [model.safetensors](https://huggingface.co/ACE-Step/acestep-v15-sft/blob/main/model.safetensors)\n"
       ],
+      "widgets_values_named": {
+        "text": "This is a technique that uses the merge model for music creation and the SFT model for refinement.\n\n**Model Links**\n\n**Merge**\n\n- [acestep_v1.5_merge_sft_turbo_ta_0.5.safetensors](https://huggingface.co/Aryanne/acestep-v15-test-merges/blob/main/acestep_v1.5_merge_sft_turbo_ta_0.5.safetensors)\n\n\n**SFT**\n\n- [model.safetensors](https://huggingface.co/ACE-Step/acestep-v15-sft/blob/main/model.safetensors)\n"
+      },
       "color": "#432",
       "bgcolor": "#653"
     },
@@ -80,38 +83,211 @@
       ],
       "size": [
         400,
-        592
+        636
       ],
       "flags": {},
       "order": 4,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "clip",
           "name": "clip",
           "type": "CLIP",
           "link": 889
         },
         {
+          "localized_name": "task",
+          "name": "task",
+          "shape": 7,
+          "type": "ACESTEP_SFT_TASK",
+          "link": null
+        },
+        {
+          "localized_name": "style_tags",
           "name": "style_tags",
           "shape": 7,
           "type": "STRING",
           "link": null
         },
         {
+          "localized_name": "style_bpm",
           "name": "style_bpm",
           "shape": 7,
           "type": "INT",
           "link": null
         },
         {
+          "localized_name": "style_keyscale",
           "name": "style_keyscale",
           "shape": 7,
           "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "caption",
+          "name": "caption",
+          "type": "STRING",
+          "widget": {
+            "name": "caption"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lyrics",
+          "name": "lyrics",
+          "type": "STRING",
+          "widget": {
+            "name": "lyrics"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "instrumental",
+          "name": "instrumental",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "instrumental"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "duration",
+          "name": "duration",
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "bpm",
+          "name": "bpm",
+          "type": "INT",
+          "widget": {
+            "name": "bpm"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "timesignature",
+          "name": "timesignature",
+          "type": "COMBO",
+          "widget": {
+            "name": "timesignature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "language",
+          "name": "language",
+          "type": "COMBO",
+          "widget": {
+            "name": "language"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "keyscale",
+          "name": "keyscale",
+          "type": "COMBO",
+          "widget": {
+            "name": "keyscale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "generate_audio_codes",
+          "name": "generate_audio_codes",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "generate_audio_codes"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lm_cfg_scale",
+          "name": "lm_cfg_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lm_cfg_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lm_temperature",
+          "name": "lm_temperature",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lm_temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lm_top_p",
+          "name": "lm_top_p",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lm_top_p"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lm_top_k",
+          "name": "lm_top_k",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "lm_top_k"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lm_min_p",
+          "name": "lm_min_p",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lm_min_p"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lm_negative_prompt",
+          "name": "lm_negative_prompt",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "lm_negative_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lm_codes_strength",
+          "name": "lm_codes_strength",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lm_codes_strength"
+          },
           "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "positive",
           "name": "positive",
           "type": "CONDITIONING",
           "links": [
@@ -119,6 +295,7 @@
           ]
         },
         {
+          "localized_name": "negative",
           "name": "negative",
           "type": "CONDITIONING",
           "links": [
@@ -148,8 +325,29 @@
         0.9,
         0,
         0,
-        ""
-      ]
+        "",
+        1
+      ],
+      "widgets_values_named": {
+        "caption": "",
+        "lyrics": "",
+        "instrumental": false,
+        "seed": 0,
+        "control_after_generate": "fixed",
+        "duration": 164.6,
+        "bpm": 134,
+        "timesignature": "4",
+        "language": "pt",
+        "keyscale": "G minor",
+        "generate_audio_codes": true,
+        "lm_cfg_scale": 2,
+        "lm_temperature": 0.85,
+        "lm_top_p": 0.9,
+        "lm_top_k": 0,
+        "lm_min_p": 0,
+        "lm_negative_prompt": "",
+        "lm_codes_strength": 1
+      }
     },
     {
       "id": 207,
@@ -165,9 +363,47 @@
       "flags": {},
       "order": 2,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "diffusion_model",
+          "name": "diffusion_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "diffusion_model"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "text_encoder_1",
+          "name": "text_encoder_1",
+          "type": "COMBO",
+          "widget": {
+            "name": "text_encoder_1"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "text_encoder_2",
+          "name": "text_encoder_2",
+          "type": "COMBO",
+          "widget": {
+            "name": "text_encoder_2"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "vae_name",
+          "name": "vae_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "links": [
@@ -175,6 +411,7 @@
           ]
         },
         {
+          "localized_name": "clip",
           "name": "clip",
           "type": "CLIP",
           "links": [
@@ -182,6 +419,7 @@
           ]
         },
         {
+          "localized_name": "vae",
           "name": "vae",
           "type": "VAE",
           "links": [
@@ -195,11 +433,17 @@
         "Node name for S&R": "AceStepSFTModelLoader"
       },
       "widgets_values": [
-        "Audio\\acestep_v1.5_sft_xl.safetensors",
-        "Audio\\qwen_0.6b_ace15.safetensors",
-        "Audio\\qwen_4b_ace15.safetensors",
-        "Audio\\ace_1.5_vae.safetensors"
-      ]
+        "acestep_v1.5_xl_sft_bf16.safetensors",
+        "qwen_0.6b_ace15.safetensors",
+        "qwen_4b_ace15.safetensors",
+        "ace_1.5_vae.safetensors"
+      ],
+      "widgets_values_named": {
+        "diffusion_model": "acestep_v1.5_xl_sft_bf16.safetensors",
+        "text_encoder_1": "qwen_0.6b_ace15.safetensors",
+        "text_encoder_2": "qwen_4b_ace15.safetensors",
+        "vae_name": "ace_1.5_vae.safetensors"
+      }
     },
     {
       "id": 205,
@@ -210,67 +454,490 @@
       ],
       "size": [
         337.197265625,
-        878
+        1158
       ],
       "flags": {},
       "order": 10,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "link": 900
         },
         {
+          "localized_name": "positive",
           "name": "positive",
           "type": "CONDITIONING",
           "link": 905
         },
         {
+          "localized_name": "negative",
           "name": "negative",
           "type": "CONDITIONING",
           "link": 906
         },
         {
+          "localized_name": "vae",
           "name": "vae",
           "shape": 7,
           "type": "VAE",
           "link": 901
         },
         {
+          "localized_name": "latent_or_audio",
           "name": "latent_or_audio",
           "shape": 7,
           "type": "AUDIO,LATENT",
           "link": 908
+        },
+        {
+          "localized_name": "task",
+          "name": "task",
+          "shape": 7,
+          "type": "ACESTEP_SFT_TASK",
+          "link": null
+        },
+        {
+          "localized_name": "reference_audio",
+          "name": "reference_audio",
+          "shape": 7,
+          "type": "AUDIO,LATENT",
+          "link": null
+        },
+        {
+          "localized_name": "voice_profile",
+          "name": "voice_profile",
+          "shape": 7,
+          "type": "ACESTEP_VOICE_PROFILE",
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "steps",
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "sampler_name",
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "scheduler",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "denoise",
+          "name": "denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "denoise"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "duration",
+          "name": "duration",
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "infer_method",
+          "name": "infer_method",
+          "type": "COMBO",
+          "widget": {
+            "name": "infer_method"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_mode",
+          "name": "guidance_mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "guidance_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "batch_size",
+          "name": "batch_size",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "batch_size"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "latent_shift",
+          "name": "latent_shift",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "latent_shift"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "latent_rescale",
+          "name": "latent_rescale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "latent_rescale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "fade_in_duration",
+          "name": "fade_in_duration",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "fade_in_duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "fade_out_duration",
+          "name": "fade_out_duration",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "fade_out_duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "use_tiled_vae",
+          "name": "use_tiled_vae",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_tiled_vae"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "unload_models_after_generate",
+          "name": "unload_models_after_generate",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "unload_models_after_generate"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "voice_boost",
+          "name": "voice_boost",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "voice_boost"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "apg_eta",
+          "name": "apg_eta",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "apg_eta"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "apg_momentum",
+          "name": "apg_momentum",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "apg_momentum"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "apg_norm_threshold",
+          "name": "apg_norm_threshold",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "apg_norm_threshold"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_interval",
+          "name": "guidance_interval",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_interval"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_schedule",
+          "name": "guidance_schedule",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "guidance_schedule"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "min_guidance_scale",
+          "name": "min_guidance_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "min_guidance_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_scale_text",
+          "name": "guidance_scale_text",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_scale_text"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_scale_lyric",
+          "name": "guidance_scale_lyric",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_scale_lyric"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "omega_scale",
+          "name": "omega_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "omega_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "erg_scale",
+          "name": "erg_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "erg_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg_interval_start",
+          "name": "cfg_interval_start",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_interval_start"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg_interval_end",
+          "name": "cfg_interval_end",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_interval_end"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "shift",
+          "name": "shift",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "shift"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "noise_source",
+          "name": "noise_source",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "noise_source"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "timbre_cls_token",
+          "name": "timbre_cls_token",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "timbre_cls_token"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_rescale",
+          "name": "guidance_rescale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_rescale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "schedule_precision",
+          "name": "schedule_precision",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "schedule_precision"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "apg_norm_rms",
+          "name": "apg_norm_rms",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "apg_norm_rms"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "reference_xl_attention",
+          "name": "reference_xl_attention",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "reference_xl_attention"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "reference_guidance_scale",
+          "name": "reference_guidance_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "reference_guidance_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "reference_timbre_repeats",
+          "name": "reference_timbre_repeats",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "reference_timbre_repeats"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "decode_audio",
+          "name": "decode_audio",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "decode_audio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "precompute_conditioning",
+          "name": "precompute_conditioning",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "precompute_conditioning"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "links": null
         },
         {
+          "localized_name": "vae",
           "name": "vae",
           "type": "VAE",
           "links": null
         },
         {
+          "localized_name": "positive",
           "name": "positive",
           "type": "CONDITIONING",
           "links": null
         },
         {
+          "localized_name": "negative",
           "name": "negative",
           "type": "CONDITIONING",
           "links": null
         },
         {
+          "localized_name": "latent",
           "name": "latent",
           "type": "LATENT",
           "links": null
         },
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "links": [
@@ -314,8 +981,61 @@
         0,
         0,
         1,
-        3
-      ]
+        3,
+        "official",
+        true,
+        0,
+        "float32",
+        0,
+        true,
+        1,
+        1,
+        true,
+        true
+      ],
+      "widgets_values_named": {
+        "seed": 0,
+        "control_after_generate": "randomize",
+        "steps": 50,
+        "cfg": 7,
+        "sampler_name": "euler",
+        "scheduler": "normal",
+        "denoise": 1,
+        "duration": 60,
+        "infer_method": "ode",
+        "guidance_mode": "apg",
+        "batch_size": 1,
+        "latent_shift": 0,
+        "latent_rescale": 1,
+        "fade_in_duration": 0,
+        "fade_out_duration": 0,
+        "use_tiled_vae": true,
+        "unload_models_after_generate": false,
+        "voice_boost": 0,
+        "apg_eta": 0,
+        "apg_momentum": -0.75,
+        "apg_norm_threshold": 2.5,
+        "guidance_interval": 0.5,
+        "guidance_schedule": "normal",
+        "min_guidance_scale": 3,
+        "guidance_scale_text": -1,
+        "guidance_scale_lyric": -1,
+        "omega_scale": 0,
+        "erg_scale": 0,
+        "cfg_interval_start": 0,
+        "cfg_interval_end": 1,
+        "shift": 3,
+        "noise_source": "official",
+        "timbre_cls_token": true,
+        "guidance_rescale": 0,
+        "schedule_precision": "float32",
+        "apg_norm_rms": 0,
+        "reference_xl_attention": true,
+        "reference_guidance_scale": 1,
+        "reference_timbre_repeats": 1,
+        "decode_audio": true,
+        "precompute_conditioning": true
+      }
     },
     {
       "id": 204,
@@ -326,42 +1046,460 @@
       ],
       "size": [
         337.197265625,
-        878
+        1158
       ],
       "flags": {},
       "order": 8,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "link": 899
         },
         {
+          "localized_name": "positive",
           "name": "positive",
           "type": "CONDITIONING",
           "link": 903
         },
         {
+          "localized_name": "negative",
           "name": "negative",
           "type": "CONDITIONING",
           "link": 904
         },
         {
+          "localized_name": "vae",
           "name": "vae",
           "shape": 7,
           "type": "VAE",
           "link": 902
         },
         {
+          "localized_name": "latent_or_audio",
           "name": "latent_or_audio",
           "shape": 7,
           "type": "AUDIO,LATENT",
           "link": 907
+        },
+        {
+          "localized_name": "task",
+          "name": "task",
+          "shape": 7,
+          "type": "ACESTEP_SFT_TASK",
+          "link": null
+        },
+        {
+          "localized_name": "reference_audio",
+          "name": "reference_audio",
+          "shape": 7,
+          "type": "AUDIO,LATENT",
+          "link": null
+        },
+        {
+          "localized_name": "voice_profile",
+          "name": "voice_profile",
+          "shape": 7,
+          "type": "ACESTEP_VOICE_PROFILE",
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "steps",
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "sampler_name",
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "scheduler",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "denoise",
+          "name": "denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "denoise"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "duration",
+          "name": "duration",
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "infer_method",
+          "name": "infer_method",
+          "type": "COMBO",
+          "widget": {
+            "name": "infer_method"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_mode",
+          "name": "guidance_mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "guidance_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "batch_size",
+          "name": "batch_size",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "batch_size"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "latent_shift",
+          "name": "latent_shift",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "latent_shift"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "latent_rescale",
+          "name": "latent_rescale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "latent_rescale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "fade_in_duration",
+          "name": "fade_in_duration",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "fade_in_duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "fade_out_duration",
+          "name": "fade_out_duration",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "fade_out_duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "use_tiled_vae",
+          "name": "use_tiled_vae",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_tiled_vae"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "unload_models_after_generate",
+          "name": "unload_models_after_generate",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "unload_models_after_generate"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "voice_boost",
+          "name": "voice_boost",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "voice_boost"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "apg_eta",
+          "name": "apg_eta",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "apg_eta"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "apg_momentum",
+          "name": "apg_momentum",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "apg_momentum"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "apg_norm_threshold",
+          "name": "apg_norm_threshold",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "apg_norm_threshold"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_interval",
+          "name": "guidance_interval",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_interval"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_schedule",
+          "name": "guidance_schedule",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "guidance_schedule"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "min_guidance_scale",
+          "name": "min_guidance_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "min_guidance_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_scale_text",
+          "name": "guidance_scale_text",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_scale_text"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_scale_lyric",
+          "name": "guidance_scale_lyric",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_scale_lyric"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "omega_scale",
+          "name": "omega_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "omega_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "erg_scale",
+          "name": "erg_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "erg_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg_interval_start",
+          "name": "cfg_interval_start",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_interval_start"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg_interval_end",
+          "name": "cfg_interval_end",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_interval_end"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "shift",
+          "name": "shift",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "shift"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "noise_source",
+          "name": "noise_source",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "noise_source"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "timbre_cls_token",
+          "name": "timbre_cls_token",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "timbre_cls_token"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_rescale",
+          "name": "guidance_rescale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_rescale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "schedule_precision",
+          "name": "schedule_precision",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "schedule_precision"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "apg_norm_rms",
+          "name": "apg_norm_rms",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "apg_norm_rms"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "reference_xl_attention",
+          "name": "reference_xl_attention",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "reference_xl_attention"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "reference_guidance_scale",
+          "name": "reference_guidance_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "reference_guidance_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "reference_timbre_repeats",
+          "name": "reference_timbre_repeats",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "reference_timbre_repeats"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "decode_audio",
+          "name": "decode_audio",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "decode_audio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "precompute_conditioning",
+          "name": "precompute_conditioning",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "precompute_conditioning"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "links": [
@@ -369,6 +1507,7 @@
           ]
         },
         {
+          "localized_name": "vae",
           "name": "vae",
           "type": "VAE",
           "links": [
@@ -376,6 +1515,7 @@
           ]
         },
         {
+          "localized_name": "positive",
           "name": "positive",
           "type": "CONDITIONING",
           "links": [
@@ -383,6 +1523,7 @@
           ]
         },
         {
+          "localized_name": "negative",
           "name": "negative",
           "type": "CONDITIONING",
           "links": [
@@ -390,6 +1531,7 @@
           ]
         },
         {
+          "localized_name": "latent",
           "name": "latent",
           "type": "LATENT",
           "links": [
@@ -397,6 +1539,7 @@
           ]
         },
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "links": [
@@ -440,8 +1583,61 @@
         0,
         0,
         1,
-        3
-      ]
+        3,
+        "official",
+        true,
+        0,
+        "float32",
+        0,
+        true,
+        1,
+        1,
+        true,
+        true
+      ],
+      "widgets_values_named": {
+        "seed": 0,
+        "control_after_generate": "randomize",
+        "steps": 50,
+        "cfg": 7,
+        "sampler_name": "euler",
+        "scheduler": "normal",
+        "denoise": 1,
+        "duration": 60,
+        "infer_method": "ode",
+        "guidance_mode": "apg",
+        "batch_size": 1,
+        "latent_shift": 0,
+        "latent_rescale": 1,
+        "fade_in_duration": 0,
+        "fade_out_duration": 0,
+        "use_tiled_vae": true,
+        "unload_models_after_generate": false,
+        "voice_boost": 0,
+        "apg_eta": 0,
+        "apg_momentum": -0.75,
+        "apg_norm_threshold": 2.5,
+        "guidance_interval": 0.5,
+        "guidance_schedule": "normal",
+        "min_guidance_scale": 3,
+        "guidance_scale_text": -1,
+        "guidance_scale_lyric": -1,
+        "omega_scale": 0,
+        "erg_scale": 0,
+        "cfg_interval_start": 0,
+        "cfg_interval_end": 1,
+        "shift": 3,
+        "noise_source": "official",
+        "timbre_cls_token": true,
+        "guidance_rescale": 0,
+        "schedule_precision": "float32",
+        "apg_norm_rms": 0,
+        "reference_xl_attention": true,
+        "reference_guidance_scale": 1,
+        "reference_timbre_repeats": 1,
+        "decode_audio": true,
+        "precompute_conditioning": true
+      }
     },
     {
       "id": 209,
@@ -459,6 +1655,7 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "link": 910
@@ -469,8 +1666,7 @@
         "aux_id": "jeankassio/ComfyUI-AceStep_SFT",
         "ver": "d8b7c6728354ebf651fefd4a283d47e325eb50a2",
         "Node name for S&R": "AceStepSFTPreviewAudio"
-      },
-      "widgets_values": []
+      }
     },
     {
       "id": 202,
@@ -481,42 +1677,460 @@
       ],
       "size": [
         337.197265625,
-        878
+        1158
       ],
       "flags": {},
       "order": 5,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "link": 890
         },
         {
+          "localized_name": "positive",
           "name": "positive",
           "type": "CONDITIONING",
           "link": 891
         },
         {
+          "localized_name": "negative",
           "name": "negative",
           "type": "CONDITIONING",
           "link": 892
         },
         {
+          "localized_name": "vae",
           "name": "vae",
           "shape": 7,
           "type": "VAE",
           "link": 893
         },
         {
+          "localized_name": "latent_or_audio",
           "name": "latent_or_audio",
           "shape": 7,
           "type": "AUDIO,LATENT",
+          "link": null
+        },
+        {
+          "localized_name": "task",
+          "name": "task",
+          "shape": 7,
+          "type": "ACESTEP_SFT_TASK",
+          "link": null
+        },
+        {
+          "localized_name": "reference_audio",
+          "name": "reference_audio",
+          "shape": 7,
+          "type": "AUDIO,LATENT",
+          "link": null
+        },
+        {
+          "localized_name": "voice_profile",
+          "name": "voice_profile",
+          "shape": 7,
+          "type": "ACESTEP_VOICE_PROFILE",
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "steps",
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "sampler_name",
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "scheduler",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "denoise",
+          "name": "denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "denoise"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "duration",
+          "name": "duration",
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "infer_method",
+          "name": "infer_method",
+          "type": "COMBO",
+          "widget": {
+            "name": "infer_method"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_mode",
+          "name": "guidance_mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "guidance_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "batch_size",
+          "name": "batch_size",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "batch_size"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "latent_shift",
+          "name": "latent_shift",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "latent_shift"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "latent_rescale",
+          "name": "latent_rescale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "latent_rescale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "fade_in_duration",
+          "name": "fade_in_duration",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "fade_in_duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "fade_out_duration",
+          "name": "fade_out_duration",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "fade_out_duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "use_tiled_vae",
+          "name": "use_tiled_vae",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_tiled_vae"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "unload_models_after_generate",
+          "name": "unload_models_after_generate",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "unload_models_after_generate"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "voice_boost",
+          "name": "voice_boost",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "voice_boost"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "apg_eta",
+          "name": "apg_eta",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "apg_eta"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "apg_momentum",
+          "name": "apg_momentum",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "apg_momentum"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "apg_norm_threshold",
+          "name": "apg_norm_threshold",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "apg_norm_threshold"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_interval",
+          "name": "guidance_interval",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_interval"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_schedule",
+          "name": "guidance_schedule",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "guidance_schedule"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "min_guidance_scale",
+          "name": "min_guidance_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "min_guidance_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_scale_text",
+          "name": "guidance_scale_text",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_scale_text"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_scale_lyric",
+          "name": "guidance_scale_lyric",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_scale_lyric"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "omega_scale",
+          "name": "omega_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "omega_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "erg_scale",
+          "name": "erg_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "erg_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg_interval_start",
+          "name": "cfg_interval_start",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_interval_start"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg_interval_end",
+          "name": "cfg_interval_end",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_interval_end"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "shift",
+          "name": "shift",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "shift"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "noise_source",
+          "name": "noise_source",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "noise_source"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "timbre_cls_token",
+          "name": "timbre_cls_token",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "timbre_cls_token"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_rescale",
+          "name": "guidance_rescale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_rescale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "schedule_precision",
+          "name": "schedule_precision",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "schedule_precision"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "apg_norm_rms",
+          "name": "apg_norm_rms",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "apg_norm_rms"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "reference_xl_attention",
+          "name": "reference_xl_attention",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "reference_xl_attention"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "reference_guidance_scale",
+          "name": "reference_guidance_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "reference_guidance_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "reference_timbre_repeats",
+          "name": "reference_timbre_repeats",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "reference_timbre_repeats"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "decode_audio",
+          "name": "decode_audio",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "decode_audio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "precompute_conditioning",
+          "name": "precompute_conditioning",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "precompute_conditioning"
+          },
           "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "links": [
@@ -524,6 +2138,7 @@
           ]
         },
         {
+          "localized_name": "vae",
           "name": "vae",
           "type": "VAE",
           "links": [
@@ -531,6 +2146,7 @@
           ]
         },
         {
+          "localized_name": "positive",
           "name": "positive",
           "type": "CONDITIONING",
           "links": [
@@ -538,6 +2154,7 @@
           ]
         },
         {
+          "localized_name": "negative",
           "name": "negative",
           "type": "CONDITIONING",
           "links": [
@@ -545,6 +2162,7 @@
           ]
         },
         {
+          "localized_name": "latent",
           "name": "latent",
           "type": "LATENT",
           "links": [
@@ -552,6 +2170,7 @@
           ]
         },
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "links": [
@@ -595,8 +2214,61 @@
         0,
         0,
         1,
-        3
-      ]
+        3,
+        "official",
+        true,
+        0,
+        "float32",
+        0,
+        true,
+        1,
+        1,
+        true,
+        true
+      ],
+      "widgets_values_named": {
+        "seed": 0,
+        "control_after_generate": "randomize",
+        "steps": 50,
+        "cfg": 7,
+        "sampler_name": "euler",
+        "scheduler": "normal",
+        "denoise": 1,
+        "duration": 60,
+        "infer_method": "ode",
+        "guidance_mode": "apg",
+        "batch_size": 1,
+        "latent_shift": 0,
+        "latent_rescale": 1,
+        "fade_in_duration": 0,
+        "fade_out_duration": 0,
+        "use_tiled_vae": true,
+        "unload_models_after_generate": false,
+        "voice_boost": 0,
+        "apg_eta": 0,
+        "apg_momentum": -0.75,
+        "apg_norm_threshold": 2.5,
+        "guidance_interval": 0.5,
+        "guidance_schedule": "normal",
+        "min_guidance_scale": 3,
+        "guidance_scale_text": -1,
+        "guidance_scale_lyric": -1,
+        "omega_scale": 0,
+        "erg_scale": 0,
+        "cfg_interval_start": 0,
+        "cfg_interval_end": 1,
+        "shift": 3,
+        "noise_source": "official",
+        "timbre_cls_token": true,
+        "guidance_rescale": 0,
+        "schedule_precision": "float32",
+        "apg_norm_rms": 0,
+        "reference_xl_attention": true,
+        "reference_guidance_scale": 1,
+        "reference_timbre_repeats": 1,
+        "decode_audio": true,
+        "precompute_conditioning": true
+      }
     },
     {
       "id": 203,
@@ -607,42 +2279,460 @@
       ],
       "size": [
         337.197265625,
-        878
+        1158
       ],
       "flags": {},
       "order": 6,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "link": 894
         },
         {
+          "localized_name": "positive",
           "name": "positive",
           "type": "CONDITIONING",
           "link": 896
         },
         {
+          "localized_name": "negative",
           "name": "negative",
           "type": "CONDITIONING",
           "link": 897
         },
         {
+          "localized_name": "vae",
           "name": "vae",
           "shape": 7,
           "type": "VAE",
           "link": 895
         },
         {
+          "localized_name": "latent_or_audio",
           "name": "latent_or_audio",
           "shape": 7,
           "type": "AUDIO,LATENT",
           "link": 898
+        },
+        {
+          "localized_name": "task",
+          "name": "task",
+          "shape": 7,
+          "type": "ACESTEP_SFT_TASK",
+          "link": null
+        },
+        {
+          "localized_name": "reference_audio",
+          "name": "reference_audio",
+          "shape": 7,
+          "type": "AUDIO,LATENT",
+          "link": null
+        },
+        {
+          "localized_name": "voice_profile",
+          "name": "voice_profile",
+          "shape": 7,
+          "type": "ACESTEP_VOICE_PROFILE",
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "steps",
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "sampler_name",
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "scheduler",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "denoise",
+          "name": "denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "denoise"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "duration",
+          "name": "duration",
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "infer_method",
+          "name": "infer_method",
+          "type": "COMBO",
+          "widget": {
+            "name": "infer_method"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_mode",
+          "name": "guidance_mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "guidance_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "batch_size",
+          "name": "batch_size",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "batch_size"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "latent_shift",
+          "name": "latent_shift",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "latent_shift"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "latent_rescale",
+          "name": "latent_rescale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "latent_rescale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "fade_in_duration",
+          "name": "fade_in_duration",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "fade_in_duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "fade_out_duration",
+          "name": "fade_out_duration",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "fade_out_duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "use_tiled_vae",
+          "name": "use_tiled_vae",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_tiled_vae"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "unload_models_after_generate",
+          "name": "unload_models_after_generate",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "unload_models_after_generate"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "voice_boost",
+          "name": "voice_boost",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "voice_boost"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "apg_eta",
+          "name": "apg_eta",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "apg_eta"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "apg_momentum",
+          "name": "apg_momentum",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "apg_momentum"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "apg_norm_threshold",
+          "name": "apg_norm_threshold",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "apg_norm_threshold"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_interval",
+          "name": "guidance_interval",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_interval"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_schedule",
+          "name": "guidance_schedule",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "guidance_schedule"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "min_guidance_scale",
+          "name": "min_guidance_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "min_guidance_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_scale_text",
+          "name": "guidance_scale_text",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_scale_text"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_scale_lyric",
+          "name": "guidance_scale_lyric",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_scale_lyric"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "omega_scale",
+          "name": "omega_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "omega_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "erg_scale",
+          "name": "erg_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "erg_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg_interval_start",
+          "name": "cfg_interval_start",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_interval_start"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg_interval_end",
+          "name": "cfg_interval_end",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_interval_end"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "shift",
+          "name": "shift",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "shift"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "noise_source",
+          "name": "noise_source",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "noise_source"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "timbre_cls_token",
+          "name": "timbre_cls_token",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "timbre_cls_token"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_rescale",
+          "name": "guidance_rescale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_rescale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "schedule_precision",
+          "name": "schedule_precision",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "schedule_precision"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "apg_norm_rms",
+          "name": "apg_norm_rms",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "apg_norm_rms"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "reference_xl_attention",
+          "name": "reference_xl_attention",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "reference_xl_attention"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "reference_guidance_scale",
+          "name": "reference_guidance_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "reference_guidance_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "reference_timbre_repeats",
+          "name": "reference_timbre_repeats",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "reference_timbre_repeats"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "decode_audio",
+          "name": "decode_audio",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "decode_audio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "precompute_conditioning",
+          "name": "precompute_conditioning",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "precompute_conditioning"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "links": [
@@ -650,6 +2740,7 @@
           ]
         },
         {
+          "localized_name": "vae",
           "name": "vae",
           "type": "VAE",
           "links": [
@@ -657,6 +2748,7 @@
           ]
         },
         {
+          "localized_name": "positive",
           "name": "positive",
           "type": "CONDITIONING",
           "links": [
@@ -664,6 +2756,7 @@
           ]
         },
         {
+          "localized_name": "negative",
           "name": "negative",
           "type": "CONDITIONING",
           "links": [
@@ -671,6 +2764,7 @@
           ]
         },
         {
+          "localized_name": "latent",
           "name": "latent",
           "type": "LATENT",
           "links": [
@@ -678,6 +2772,7 @@
           ]
         },
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "links": [
@@ -721,8 +2816,61 @@
         0,
         0,
         1,
-        3
-      ]
+        3,
+        "official",
+        true,
+        0,
+        "float32",
+        0,
+        true,
+        1,
+        1,
+        true,
+        true
+      ],
+      "widgets_values_named": {
+        "seed": 0,
+        "control_after_generate": "randomize",
+        "steps": 50,
+        "cfg": 7,
+        "sampler_name": "euler",
+        "scheduler": "normal",
+        "denoise": 1,
+        "duration": 60,
+        "infer_method": "ode",
+        "guidance_mode": "apg",
+        "batch_size": 1,
+        "latent_shift": 0,
+        "latent_rescale": 1,
+        "fade_in_duration": 0,
+        "fade_out_duration": 0,
+        "use_tiled_vae": true,
+        "unload_models_after_generate": false,
+        "voice_boost": 0,
+        "apg_eta": 0,
+        "apg_momentum": -0.75,
+        "apg_norm_threshold": 2.5,
+        "guidance_interval": 0.5,
+        "guidance_schedule": "normal",
+        "min_guidance_scale": 3,
+        "guidance_scale_text": -1,
+        "guidance_scale_lyric": -1,
+        "omega_scale": 0,
+        "erg_scale": 0,
+        "cfg_interval_start": 0,
+        "cfg_interval_end": 1,
+        "shift": 3,
+        "noise_source": "official",
+        "timbre_cls_token": true,
+        "guidance_rescale": 0,
+        "schedule_precision": "float32",
+        "apg_norm_rms": 0,
+        "reference_xl_attention": true,
+        "reference_guidance_scale": 1,
+        "reference_timbre_repeats": 1,
+        "decode_audio": true,
+        "precompute_conditioning": true
+      }
     },
     {
       "id": 211,
@@ -740,6 +2888,7 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "link": 912
@@ -750,8 +2899,7 @@
         "aux_id": "jeankassio/ComfyUI-AceStep_SFT",
         "ver": "d8b7c6728354ebf651fefd4a283d47e325eb50a2",
         "Node name for S&R": "AceStepSFTPreviewAudio"
-      },
-      "widgets_values": []
+      }
     },
     {
       "id": 212,
@@ -769,6 +2917,7 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "link": 911
@@ -779,8 +2928,7 @@
         "aux_id": "jeankassio/ComfyUI-AceStep_SFT",
         "ver": "d8b7c6728354ebf651fefd4a283d47e325eb50a2",
         "Node name for S&R": "AceStepSFTPreviewAudio"
-      },
-      "widgets_values": []
+      }
     },
     {
       "id": 210,
@@ -791,16 +2939,55 @@
       ],
       "size": [
         432.4446393982438,
-        106
+        130
       ],
       "flags": {},
       "order": 12,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "link": 909
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "format",
+          "name": "format",
+          "type": "COMBO",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "quality",
+          "name": "quality",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "quality"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "Save Metadata",
+          "name": "save_metadata",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_metadata"
+          },
+          "link": null
         }
       ],
       "outputs": [],
@@ -812,8 +2999,15 @@
       "widgets_values": [
         "audio/AceStep",
         "flac",
-        "V0"
-      ]
+        "V0",
+        true
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/AceStep",
+        "format": "flac",
+        "quality": "V0",
+        "save_metadata": true
+      }
     },
     {
       "id": 206,
@@ -831,18 +3025,48 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "link": 887
         },
         {
+          "localized_name": "clip",
           "name": "clip",
           "type": "CLIP",
           "link": 888
+        },
+        {
+          "localized_name": "lora_name",
+          "name": "lora_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "strength_model",
+          "name": "strength_model",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_model"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "strength_clip",
+          "name": "strength_clip",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_clip"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL",
           "links": [
@@ -850,6 +3074,7 @@
           ]
         },
         {
+          "localized_name": "clip",
           "name": "clip",
           "type": "CLIP",
           "links": [
@@ -863,10 +3088,15 @@
         "Node name for S&R": "AceStepSFTLoraLoader"
       },
       "widgets_values": [
-        "01-Melhores\\final_comfyui.safetensors",
+        "ACE-Step-v1.5-chinese-new-year-LoRA/adapter_model.safetensors",
         0.9,
         1
-      ]
+      ],
+      "widgets_values_named": {
+        "lora_name": "ACE-Step-v1.5-chinese-new-year-LoRA/adapter_model.safetensors",
+        "strength_model": 0.9,
+        "strength_clip": 1
+      }
     }
   ],
   "links": [

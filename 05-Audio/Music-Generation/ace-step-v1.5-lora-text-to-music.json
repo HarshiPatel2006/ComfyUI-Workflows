@@ -1,252 +1,548 @@
 {
-    "id": "15946583-9ddd-4884-9e1e-622c9cc71b5a",
-    "revision": 0,
-    "last_node_id": 4,
-    "last_link_id": 4,
-    "nodes": [
+  "id": "15946583-9ddd-4884-9e1e-622c9cc71b5a",
+  "revision": 0,
+  "last_node_id": 4,
+  "last_link_id": 4,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "SaveAudio",
+      "pos": [
+        500,
+        200
+      ],
+      "size": [
+        315,
+        130
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
         {
-            "id": 2,
-            "type": "SaveAudio",
-            "pos": [
-                500,
-                200
-            ],
-            "size": [
-                315,
-                130
-            ],
-            "flags": {},
-            "order": 2,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "audio",
-                    "type": "AUDIO",
-                    "link": 1
-                }
-            ],
-            "outputs": [],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.12.3",
-                "Node name for S&R": "SaveAudio",
-                "ue_properties": {
-                    "widget_ue_connectable": {},
-                    "version": "7.5.2",
-                    "input_ue_unconnectable": {}
-                }
-            },
-            "widgets_values": [
-                "output/acestep"
-            ]
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 1
         },
         {
-            "id": 3,
-            "type": "PreviewAny",
-            "pos": [
-                500,
-                400
-            ],
-            "size": [
-                400,
-                200
-            ],
-            "flags": {},
-            "order": 3,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "source",
-                    "type": "*",
-                    "link": 3
-                }
-            ],
-            "outputs": [],
-            "properties": {
-                "cnr_id": "comfy-core",
-                "ver": "0.12.3",
-                "Node name for S&R": "PreviewAny",
-                "ue_properties": {
-                    "widget_ue_connectable": {},
-                    "version": "7.5.2",
-                    "input_ue_unconnectable": {}
-                }
-            },
-            "widgets_values": [
-                null,
-                null,
-                false
-            ]
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
         },
         {
-            "id": 4,
-            "type": "ACE_STEP_LoRALoader",
-            "pos": [
-                50,
-                50
-            ],
-            "size": [
-                315,
-                82
-            ],
-            "flags": {},
-            "order": 0,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "lora_info",
-                    "type": "ACE_STEP_LORA_INFO",
-                    "slot_index": 0,
-                    "links": [
-                        4
-                    ]
-                }
-            ],
-            "properties": {
-                "aux_id": "kana112233/ComfyUI-kaola-ace-step",
-                "ver": "e8d79867943640092157f17d57ae18b39c08604b",
-                "Node name for S&R": "ACE_STEP_LoRALoader",
-                "ue_properties": {
-                    "widget_ue_connectable": {},
-                    "version": "7.5.2",
-                    "input_ue_unconnectable": {}
-                }
-            },
-            "widgets_values": [
-                "loras/ACE-Step-v1.5-chinese-new-year-LoRA",
-                1
-            ]
-        },
-        {
-            "id": 1,
-            "type": "ACE_STEP_TextToMusic",
-            "pos": [
-                50,
-                200
-            ],
-            "size": [
-                400,
-                700
-            ],
-            "flags": {},
-            "order": 1,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "lora_info",
-                    "shape": 7,
-                    "type": "ACE_STEP_LORA_INFO",
-                    "link": 4
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "audio",
-                    "type": "AUDIO",
-                    "slot_index": 0,
-                    "links": [
-                        1
-                    ]
-                },
-                {
-                    "name": "audio_path",
-                    "type": "STRING",
-                    "slot_index": 1,
-                    "links": [
-                        2
-                    ]
-                },
-                {
-                    "name": "metadata",
-                    "type": "STRING",
-                    "slot_index": 2,
-                    "links": [
-                        3
-                    ]
-                }
-            ],
-            "properties": {
-                "aux_id": "kana112233/ComfyUI-kaola-ace-step",
-                "ver": "e8d79867943640092157f17d57ae18b39c08604b",
-                "Node name for S&R": "ACE_STEP_TextToMusic",
-                "ue_properties": {
-                    "widget_ue_connectable": {},
-                    "version": "7.5.2",
-                    "input_ue_unconnectable": {}
-                }
-            },
-            "widgets_values": [
-                "upbeat electronic dance music with heavy bass and synthesizer leads",
-                "Ace-Step1.5",
-                "acestep-v15-turbo",
-                "acestep-5Hz-lm-1.7B",
-                30,
-                2,
-                42,
-                "fixed",
-                8,
-                "auto",
-                "",
-                0,
-                "",
-                "",
-                "unknown",
-                false,
-                7,
-                1,
-                true,
-                0,
-                "None",
-                false,
-                "flac"
-            ]
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
         }
-    ],
-    "links": [
-        [
-            1,
-            1,
-            0,
-            2,
-            0,
-            "AUDIO"
-        ],
-        [
-            3,
-            1,
-            2,
-            3,
-            0,
-            "STRING"
-        ],
-        [
-            4,
-            4,
-            0,
-            1,
-            0,
-            "ACE_STEP_LORA_INFO"
-        ]
-    ],
-    "groups": [],
-    "config": {},
-    "extra": {
-        "workflowRendererVersion": "LG",
-        "ue_links": [],
-        "links_added_by_ue": [],
-        "ds": {
-            "scale": 1.0610764609500014,
-            "offset": [
-                271.090377782448,
-                68.41084690212477
-            ]
-        },
-        "frontendVersion": "1.38.13",
-        "VHS_latentpreview": false,
-        "VHS_latentpreviewrate": 0,
-        "VHS_MetadataImage": true,
-        "VHS_KeepIntermediate": true
+      ],
+      "outputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.12.3",
+        "Node name for S&R": "SaveAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "output/acestep"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "output/acestep"
+      }
     },
-    "version": 0.4
+    {
+      "id": 3,
+      "type": "PreviewAny",
+      "pos": [
+        500,
+        400
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "source",
+          "name": "source",
+          "type": "*",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "STRING",
+          "name": "STRING",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.12.3",
+        "Node name for S&R": "PreviewAny",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 4,
+      "type": "ACE_STEP_LoRALoader",
+      "pos": [
+        50,
+        50
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "lora_path",
+          "name": "lora_path",
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_path"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "strength",
+          "name": "strength",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "lora_info",
+          "name": "lora_info",
+          "type": "ACE_STEP_LORA_INFO",
+          "slot_index": 0,
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "kana112233/ComfyUI-kaola-ace-step",
+        "ver": "e8d79867943640092157f17d57ae18b39c08604b",
+        "Node name for S&R": "ACE_STEP_LoRALoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "loras/ACE-Step-v1.5-chinese-new-year-LoRA",
+        1
+      ],
+      "widgets_values_named": {
+        "lora_path": "loras/ACE-Step-v1.5-chinese-new-year-LoRA",
+        "strength": 1
+      }
+    },
+    {
+      "id": 1,
+      "type": "ACE_STEP_TextToMusic",
+      "pos": [
+        50,
+        200
+      ],
+      "size": [
+        400,
+        700
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "lora_info",
+          "name": "lora_info",
+          "shape": 7,
+          "type": "ACE_STEP_LORA_INFO",
+          "link": 4
+        },
+        {
+          "localized_name": "caption",
+          "name": "caption",
+          "type": "STRING",
+          "widget": {
+            "name": "caption"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "checkpoint_dir",
+          "name": "checkpoint_dir",
+          "type": "COMBO",
+          "widget": {
+            "name": "checkpoint_dir"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "config_path",
+          "name": "config_path",
+          "type": "COMBO",
+          "widget": {
+            "name": "config_path"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lm_model_path",
+          "name": "lm_model_path",
+          "type": "COMBO",
+          "widget": {
+            "name": "lm_model_path"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "duration",
+          "name": "duration",
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "batch_size",
+          "name": "batch_size",
+          "type": "INT",
+          "widget": {
+            "name": "batch_size"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "inference_steps",
+          "name": "inference_steps",
+          "type": "INT",
+          "widget": {
+            "name": "inference_steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "device",
+          "name": "device",
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lyrics",
+          "name": "lyrics",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "lyrics"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "bpm",
+          "name": "bpm",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "bpm"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "keyscale",
+          "name": "keyscale",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "keyscale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "timesignature",
+          "name": "timesignature",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "timesignature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "vocal_language",
+          "name": "vocal_language",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "vocal_language"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "instrumental",
+          "name": "instrumental",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "instrumental"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_scale",
+          "name": "guidance_scale",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "shift",
+          "name": "shift",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "shift"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "thinking",
+          "name": "thinking",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "thinking"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lm_temperature",
+          "name": "lm_temperature",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "lm_temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "quantization",
+          "name": "quantization",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "quantization"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "compile_model",
+          "name": "compile_model",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "compile_model"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_format",
+          "name": "audio_format",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "audio_format"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "slot_index": 0,
+          "links": [
+            1
+          ]
+        },
+        {
+          "localized_name": "audio_path",
+          "name": "audio_path",
+          "type": "STRING",
+          "slot_index": 1,
+          "links": []
+        },
+        {
+          "localized_name": "metadata",
+          "name": "metadata",
+          "type": "STRING",
+          "slot_index": 2,
+          "links": [
+            3
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "kana112233/ComfyUI-kaola-ace-step",
+        "ver": "e8d79867943640092157f17d57ae18b39c08604b",
+        "Node name for S&R": "ACE_STEP_TextToMusic",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "upbeat electronic dance music with heavy bass and synthesizer leads",
+        "Ace-Step1.5",
+        "acestep-v15-turbo",
+        "acestep-5Hz-lm-1.7B",
+        30,
+        1,
+        42,
+        "fixed",
+        8,
+        "auto",
+        "",
+        0,
+        "",
+        "",
+        "unknown",
+        false,
+        7,
+        1,
+        true,
+        0.85,
+        "None",
+        false,
+        "flac"
+      ],
+      "widgets_values_named": {
+        "caption": "upbeat electronic dance music with heavy bass and synthesizer leads",
+        "checkpoint_dir": "Ace-Step1.5",
+        "config_path": "acestep-v15-turbo",
+        "lm_model_path": "acestep-5Hz-lm-1.7B",
+        "duration": 30,
+        "batch_size": 1,
+        "seed": 42,
+        "control_after_generate": "fixed",
+        "inference_steps": 8,
+        "device": "auto",
+        "lyrics": "",
+        "bpm": 0,
+        "keyscale": "",
+        "timesignature": "",
+        "vocal_language": "unknown",
+        "instrumental": false,
+        "guidance_scale": 7,
+        "shift": 1,
+        "thinking": true,
+        "lm_temperature": 0.85,
+        "quantization": "None",
+        "compile_model": false,
+        "audio_format": "flac"
+      }
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "AUDIO"
+    ],
+    [
+      3,
+      1,
+      2,
+      3,
+      0,
+      "STRING"
+    ],
+    [
+      4,
+      4,
+      0,
+      1,
+      0,
+      "ACE_STEP_LORA_INFO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "ds": {
+      "scale": 1.0610764609500014,
+      "offset": [
+        271.090377782448,
+        68.41084690212477
+      ]
+    },
+    "frontendVersion": "1.38.13",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
 }

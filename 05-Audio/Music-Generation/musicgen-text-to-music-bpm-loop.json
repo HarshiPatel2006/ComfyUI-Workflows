@@ -5,8 +5,14 @@
     {
       "id": 1,
       "type": "BPMDurationInput",
-      "pos": [100, 100],
-      "size": [300, 150],
+      "pos": [
+        100,
+        100
+      ],
+      "size": [
+        300,
+        150
+      ],
       "flags": {},
       "order": 0,
       "mode": 0,
@@ -15,7 +21,10 @@
         {
           "name": "duration",
           "type": "FLOAT",
-          "links": [1, 5],
+          "links": [
+            1,
+            5
+          ],
           "slot_index": 0
         },
         {
@@ -37,8 +46,14 @@
     {
       "id": 2,
       "type": "HuggingFaceMusicGen",
-      "pos": [100, 300],
-      "size": [400, 500],
+      "pos": [
+        100,
+        300
+      ],
+      "size": [
+        400,
+        500
+      ],
       "flags": {},
       "order": 1,
       "mode": 0,
@@ -51,7 +66,7 @@
         {
           "name": "conditioning_audio",
           "type": "AUDIO",
-          "link": 4
+          "link": null
         },
         {
           "name": "duration",
@@ -63,7 +78,9 @@
         {
           "name": "audio",
           "type": "AUDIO",
-          "links": [2],
+          "links": [
+            2
+          ],
           "slot_index": 0
         },
         {
@@ -93,8 +110,14 @@
     {
       "id": 3,
       "type": "LoopingAudioPreview",
-      "pos": [600, 300],
-      "size": [400, 230],
+      "pos": [
+        600,
+        300
+      ],
+      "size": [
+        400,
+        230
+      ],
       "flags": {},
       "order": 2,
       "mode": 0,
@@ -109,13 +132,15 @@
         {
           "name": "looped_preview",
           "type": "AUDIO",
-          "links": [3],
+          "links": [
+            3
+          ],
           "slot_index": 0
         },
         {
           "name": "conditioning_audio",
           "type": "AUDIO",
-          "links": [4],
+          "links": null,
           "slot_index": 1
         },
         {
@@ -139,8 +164,14 @@
     {
       "id": 4,
       "type": "SaveAudioStandalone",
-      "pos": [1100, 300],
-      "size": [315, 150],
+      "pos": [
+        1100,
+        300
+      ],
+      "size": [
+        315,
+        150
+      ],
       "flags": {},
       "order": 3,
       "mode": 0,
@@ -170,15 +201,40 @@
     }
   ],
   "links": [
-    [1, 1, 0, 2, 2, "FLOAT"],
-    [2, 2, 0, 3, 0, "AUDIO"],
-    [3, 3, 0, 4, 0, "AUDIO"],
-    [4, 3, 1, 2, 1, "AUDIO"]
+    [
+      1,
+      1,
+      0,
+      2,
+      2,
+      "FLOAT"
+    ],
+    [
+      2,
+      2,
+      0,
+      3,
+      0,
+      "AUDIO"
+    ],
+    [
+      3,
+      3,
+      0,
+      4,
+      0,
+      "AUDIO"
+    ]
   ],
   "groups": [
     {
       "title": "Live Looping Setup - Auto-generates seamless loops using previous loop as conditioning",
-      "bounding": [50, 20, 1420, 850],
+      "bounding": [
+        50,
+        20,
+        1420,
+        850
+      ],
       "color": "#3f789e",
       "font_size": 24,
       "locked": false
@@ -188,7 +244,10 @@
   "extra": {
     "ds": {
       "scale": 1.0,
-      "offset": [0, 0]
+      "offset": [
+        0,
+        0
+      ]
     }
   },
   "version": 0.4

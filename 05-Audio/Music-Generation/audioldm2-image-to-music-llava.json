@@ -1,6 +1,8 @@
 {
-  "last_node_id": 43,
-  "last_link_id": 54,
+  "id": "47b3474e-739d-4fa1-9a3f-2014000885bc",
+  "revision": 0,
+  "last_node_id": 44,
+  "last_link_id": 55,
   "nodes": [
     {
       "id": 31,
@@ -9,29 +11,57 @@
         439.6340175903321,
         172.3240056098938
       ],
-      "size": {
-        "0": 315,
-        "1": 58
-      },
+      "size": [
+        315,
+        82
+      ],
       "flags": {},
       "order": 0,
       "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "clip_name",
+          "name": "clip_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "handler",
+          "name": "handler",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "handler"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "clip",
           "name": "clip",
           "type": "CUSTOM",
           "links": [
             37
-          ],
-          "shape": 3
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfyui_vlm_nodes",
+        "ver": "3f9612774e862f94d1dfbe3a1b36375a52870382",
         "Node name for S&R": "LlavaClipLoader"
       },
       "widgets_values": [
-        "mistrallava16clip.gguf"
-      ]
+        "mmproj-mistral7b-f16.gguf",
+        "LLaVA 1.6"
+      ],
+      "widgets_values_named": {
+        "clip_name": "mmproj-mistral7b-f16.gguf",
+        "handler": "LLaVA 1.6"
+      }
     },
     {
       "id": 35,
@@ -40,30 +70,88 @@
         1145.0176354455555,
         158.27893214202888
       ],
-      "size": {
-        "0": 378.79046630859375,
-        "1": 186.27911376953125
-      },
+      "size": [
+        378.79046630859375,
+        196
+      ],
       "flags": {},
       "order": 1,
       "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "input_text",
+          "name": "input_text",
+          "type": "STRING",
+          "widget": {
+            "name": "input_text"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "trim_edges",
+          "name": "trim_edges",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "trim_edges"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "normalize_newlines",
+          "name": "normalize_newlines",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "normalize_newlines"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
-          "name": "STRING",
+          "localized_name": "text",
+          "name": "text",
           "type": "STRING",
+          "slot_index": 0,
           "links": [
             41
-          ],
-          "shape": 3,
-          "slot_index": 0
+          ]
+        },
+        {
+          "localized_name": "characters",
+          "name": "characters",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "words",
+          "name": "words",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "lines",
+          "name": "lines",
+          "type": "INT",
+          "links": null
         }
       ],
       "properties": {
+        "cnr_id": "comfyui_vlm_nodes",
+        "ver": "3f9612774e862f94d1dfbe3a1b36375a52870382",
         "Node name for S&R": "SimpleText"
       },
       "widgets_values": [
-        "You are an advanced AI that shortens descriptions into sentences.\n\nExample 1: Birds singing sweetly in a blooming garden\nExample 2: A modern synthesizer creating futuristic soundscapes\nExample 3: The vibrant beat of Brazilian samba drums"
+        "You are an advanced AI that shortens descriptions into sentences.\n\nExample 1: Birds singing sweetly in a blooming garden\nExample 2: A modern synthesizer creating futuristic soundscapes\nExample 3: The vibrant beat of Brazilian samba drums",
+        false,
+        false
       ],
+      "widgets_values_named": {
+        "input_text": "You are an advanced AI that shortens descriptions into sentences.\n\nExample 1: Birds singing sweetly in a blooming garden\nExample 2: A modern synthesizer creating futuristic soundscapes\nExample 3: The vibrant beat of Brazilian samba drums",
+        "trim_edges": false,
+        "normalize_newlines": false
+      },
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -74,30 +162,88 @@
         439.6340175903321,
         452.3240056098937
       ],
-      "size": {
-        "0": 318.79754638671875,
-        "1": 82.05603790283203
-      },
+      "size": [
+        318.79754638671875,
+        196
+      ],
       "flags": {},
       "order": 2,
       "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "input_text",
+          "name": "input_text",
+          "type": "STRING",
+          "widget": {
+            "name": "input_text"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "trim_edges",
+          "name": "trim_edges",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "trim_edges"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "normalize_newlines",
+          "name": "normalize_newlines",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "normalize_newlines"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
-          "name": "STRING",
+          "localized_name": "text",
+          "name": "text",
           "type": "STRING",
+          "slot_index": 0,
           "links": [
             38
-          ],
-          "shape": 3,
-          "slot_index": 0
+          ]
+        },
+        {
+          "localized_name": "characters",
+          "name": "characters",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "words",
+          "name": "words",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "lines",
+          "name": "lines",
+          "type": "INT",
+          "links": null
         }
       ],
       "properties": {
+        "cnr_id": "comfyui_vlm_nodes",
+        "ver": "3f9612774e862f94d1dfbe3a1b36375a52870382",
         "Node name for S&R": "SimpleText"
       },
       "widgets_values": [
-        "describe this image in short, concisely"
+        "describe this image in short, concisely",
+        false,
+        false
       ],
+      "widgets_values_named": {
+        "input_text": "describe this image in short, concisely",
+        "trim_edges": false,
+        "normalize_newlines": false
+      },
       "color": "#232",
       "bgcolor": "#353"
     },
@@ -108,30 +254,88 @@
         647.6433994140625,
         1010.9179632824712
       ],
-      "size": {
-        "0": 318.79754638671875,
-        "1": 82.05603790283203
-      },
+      "size": [
+        318.79754638671875,
+        196
+      ],
       "flags": {},
       "order": 3,
       "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "input_text",
+          "name": "input_text",
+          "type": "STRING",
+          "widget": {
+            "name": "input_text"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "trim_edges",
+          "name": "trim_edges",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "trim_edges"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "normalize_newlines",
+          "name": "normalize_newlines",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "normalize_newlines"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
-          "name": "STRING",
+          "localized_name": "text",
+          "name": "text",
           "type": "STRING",
+          "slot_index": 0,
           "links": [
             45
-          ],
-          "shape": 3,
-          "slot_index": 0
+          ]
+        },
+        {
+          "localized_name": "characters",
+          "name": "characters",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "words",
+          "name": "words",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "lines",
+          "name": "lines",
+          "type": "INT",
+          "links": null
         }
       ],
       "properties": {
+        "cnr_id": "comfyui_vlm_nodes",
+        "ver": "3f9612774e862f94d1dfbe3a1b36375a52870382",
         "Node name for S&R": "SimpleText"
       },
       "widgets_values": [
-        "Low quality, average quality."
+        "Low quality, average quality.",
+        false,
+        false
       ],
+      "widgets_values_named": {
+        "input_text": "Low quality, average quality.",
+        "trim_edges": false,
+        "normalize_newlines": false
+      },
       "color": "#322",
       "bgcolor": "#533"
     },
@@ -142,55 +346,70 @@
         769.6340175903323,
         182.3240056098938
       ],
-      "size": {
-        "0": 315,
-        "1": 102
-      },
+      "size": [
+        315,
+        132
+      ],
       "flags": {},
-      "order": 6,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "image",
           "name": "image",
           "type": "IMAGE",
-          "link": 39,
-          "slot_index": 0
+          "link": 39
         },
         {
+          "localized_name": "model",
           "name": "model",
           "type": "CUSTOM",
-          "link": 36,
-          "slot_index": 1
+          "link": 36
         },
         {
+          "localized_name": "prompt",
           "name": "prompt",
           "type": "STRING",
-          "link": 38,
           "widget": {
             "name": "prompt"
           },
-          "slot_index": 2
+          "link": 38
+        },
+        {
+          "localized_name": "temperature",
+          "name": "temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "STRING",
           "name": "STRING",
           "type": "STRING",
+          "slot_index": 0,
           "links": [
             42,
             43
-          ],
-          "shape": 3,
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfyui_vlm_nodes",
+        "ver": "3f9612774e862f94d1dfbe3a1b36375a52870382",
         "Node name for S&R": "LLavaSamplerSimple"
       },
       "widgets_values": [
         "",
         0.1
-      ]
+      ],
+      "widgets_values_named": {
+        "prompt": "",
+        "temperature": 0.1
+      }
     },
     {
       "id": 36,
@@ -199,38 +418,67 @@
         774,
         325
       ],
-      "size": {
-        "0": 303.2503967285156,
-        "1": 156.48916625976562
-      },
+      "size": [
+        303.2503967285156,
+        222
+      ],
       "flags": {},
-      "order": 8,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "text",
           "name": "text",
           "type": "STRING",
-          "link": 43,
           "widget": {
             "name": "text"
-          }
+          },
+          "link": 43
         }
       ],
       "outputs": [
         {
-          "name": "STRING",
+          "localized_name": "text",
+          "name": "text",
           "type": "STRING",
-          "links": null,
-          "shape": 3
+          "links": null
+        },
+        {
+          "localized_name": "characters",
+          "name": "characters",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "words",
+          "name": "words",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "lines",
+          "name": "lines",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "stats_json",
+          "name": "stats_json",
+          "type": "STRING",
+          "links": null
         }
       ],
       "properties": {
+        "cnr_id": "comfyui_vlm_nodes",
+        "ver": "3f9612774e862f94d1dfbe3a1b36375a52870382",
         "Node name for S&R": "ViewText"
       },
       "widgets_values": [
-        "",
-        " The image shows a group of dancers performing on stage. They are dressed in colorful costumes with vibrant patterns and shades of green, yellow, and pink. The dancers appear to be in motion, suggesting they are dancing. The lighting is dim, which highlights the performers and creates a dramatic atmosphere. There is no visible text or branding in the image. The style of the image is a candid photograph capturing a live performance. "
-      ]
+        ""
+      ],
+      "widgets_values_named": {
+        "text": ""
+      }
     },
     {
       "id": 30,
@@ -239,41 +487,169 @@
         439.6340175903321,
         272.3240056098937
       ],
-      "size": {
-        "0": 315,
-        "1": 130
-      },
+      "size": [
+        315,
+        298
+      ],
       "flags": {},
-      "order": 5,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "clip",
           "name": "clip",
           "type": "CUSTOM",
-          "link": 37,
-          "slot_index": 0
+          "link": 37
+        },
+        {
+          "localized_name": "ckpt_name",
+          "name": "ckpt_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "ckpt_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_ctx",
+          "name": "max_ctx",
+          "type": "INT",
+          "widget": {
+            "name": "max_ctx"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "gpu_layers",
+          "name": "gpu_layers",
+          "type": "INT",
+          "widget": {
+            "name": "gpu_layers"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "n_threads",
+          "name": "n_threads",
+          "type": "INT",
+          "widget": {
+            "name": "n_threads"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "n_batch",
+          "name": "n_batch",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "n_batch"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "n_ubatch",
+          "name": "n_ubatch",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "n_ubatch"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "flash_attention",
+          "name": "flash_attention",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "flash_attention"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "use_mmap",
+          "name": "use_mmap",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_mmap"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "split_mode",
+          "name": "split_mode",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "split_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "main_gpu",
+          "name": "main_gpu",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "main_gpu"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "tensor_split",
+          "name": "tensor_split",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "tensor_split"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "CUSTOM",
           "links": [
             36,
             40
-          ],
-          "shape": 3
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfyui_vlm_nodes",
+        "ver": "3f9612774e862f94d1dfbe3a1b36375a52870382",
         "Node name for S&R": "LLava Loader Simple"
       },
       "widgets_values": [
-        "llava-v1.6-mistral-7b.Q5_K_M.gguf",
+        "ggml-mistral-7b-q_5_k.gguf",
         2048,
         100,
-        2
-      ]
+        2,
+        512,
+        512,
+        "Auto",
+        true,
+        "Layer",
+        0,
+        ""
+      ],
+      "widgets_values_named": {
+        "ckpt_name": "ggml-mistral-7b-q_5_k.gguf",
+        "max_ctx": 2048,
+        "gpu_layers": 100,
+        "n_threads": 2,
+        "n_batch": 512,
+        "n_ubatch": 512,
+        "flash_attention": "Auto",
+        "use_mmap": true,
+        "split_mode": "Layer",
+        "main_gpu": 0,
+        "tensor_split": ""
+      }
     },
     {
       "id": 33,
@@ -282,36 +658,62 @@
         100,
         172
       ],
-      "size": {
-        "0": 328.0104675292969,
-        "1": 361.09918212890625
-      },
+      "size": [
+        328.0104675292969,
+        361.09918212890625
+      ],
       "flags": {},
       "order": 4,
       "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "IMAGEUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "IMAGE",
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
             39
-          ],
-          "shape": 3
+          ]
         },
         {
+          "localized_name": "MASK",
           "name": "MASK",
           "type": "MASK",
-          "links": null,
-          "shape": 3
+          "links": null
         }
       ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.43.0",
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
         "412342132.PNG",
         "image"
-      ]
+      ],
+      "widgets_values_named": {
+        "image": "412342132.PNG",
+        "upload": "image"
+      }
     },
     {
       "id": 34,
@@ -320,51 +722,126 @@
         1536,
         193
       ],
-      "size": {
-        "0": 315,
-        "1": 298
-      },
+      "size": [
+        315,
+        358
+      ],
       "flags": {},
-      "order": 7,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "CUSTOM",
-          "link": 40,
-          "slot_index": 0
+          "link": 40
         },
         {
+          "localized_name": "system_msg",
+          "name": "system_msg",
+          "type": "STRING",
+          "widget": {
+            "name": "system_msg"
+          },
+          "link": 41
+        },
+        {
+          "localized_name": "prompt",
           "name": "prompt",
           "type": "STRING",
-          "link": 42,
           "widget": {
             "name": "prompt"
           },
-          "slot_index": 1
+          "link": 42
         },
         {
-          "name": "system_msg",
-          "type": "STRING",
-          "link": 41,
+          "localized_name": "max_tokens",
+          "name": "max_tokens",
+          "type": "INT",
           "widget": {
-            "name": "system_msg"
-          }
+            "name": "max_tokens"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "temperature",
+          "name": "temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "top_p",
+          "name": "top_p",
+          "type": "FLOAT",
+          "widget": {
+            "name": "top_p"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "top_k",
+          "name": "top_k",
+          "type": "INT",
+          "widget": {
+            "name": "top_k"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "frequency_penalty",
+          "name": "frequency_penalty",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frequency_penalty"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "presence_penalty",
+          "name": "presence_penalty",
+          "type": "FLOAT",
+          "widget": {
+            "name": "presence_penalty"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "repeat_penalty",
+          "name": "repeat_penalty",
+          "type": "FLOAT",
+          "widget": {
+            "name": "repeat_penalty"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "STRING",
           "name": "STRING",
           "type": "STRING",
+          "slot_index": 0,
           "links": [
             44,
             48
-          ],
-          "shape": 3,
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfyui_vlm_nodes",
+        "ver": "3f9612774e862f94d1dfbe3a1b36375a52870382",
         "Node name for S&R": "LLMSampler"
       },
       "widgets_values": [
@@ -379,7 +856,20 @@
         1.1,
         617,
         "randomize"
-      ]
+      ],
+      "widgets_values_named": {
+        "system_msg": "You are an assistant who perfectly describes images.",
+        "prompt": "",
+        "max_tokens": 512,
+        "temperature": 0.1,
+        "top_p": 0.95,
+        "top_k": 40,
+        "frequency_penalty": 0,
+        "presence_penalty": 0,
+        "repeat_penalty": 1.1,
+        "seed": 617,
+        "control_after_generate": "randomize"
+      }
     },
     {
       "id": 40,
@@ -388,38 +878,67 @@
         1162,
         399
       ],
-      "size": {
-        "0": 345.2934265136719,
-        "1": 106.57048034667969
-      },
+      "size": [
+        345.2934265136719,
+        222
+      ],
       "flags": {},
-      "order": 10,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "text",
           "name": "text",
           "type": "STRING",
-          "link": 48,
           "widget": {
             "name": "text"
-          }
+          },
+          "link": 48
         }
       ],
       "outputs": [
         {
-          "name": "STRING",
+          "localized_name": "text",
+          "name": "text",
           "type": "STRING",
-          "links": null,
-          "shape": 3
+          "links": null
+        },
+        {
+          "localized_name": "characters",
+          "name": "characters",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "words",
+          "name": "words",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "lines",
+          "name": "lines",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "localized_name": "stats_json",
+          "name": "stats_json",
+          "type": "STRING",
+          "links": null
         }
       ],
       "properties": {
+        "cnr_id": "comfyui_vlm_nodes",
+        "ver": "3f9612774e862f94d1dfbe3a1b36375a52870382",
         "Node name for S&R": "ViewText"
       },
       "widgets_values": [
-        "",
-        " Dancers in colorful costumes performing on stage under dim lighting. "
-      ]
+        ""
+      ],
+      "widgets_values_named": {
+        "text": ""
+      }
     },
     {
       "id": 43,
@@ -433,43 +952,67 @@
         130
       ],
       "flags": {},
-      "order": 11,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "wave_form",
           "name": "wave_form",
-          "type": "COMBO",
-          "link": 53,
-          "widget": {
-            "name": "wave_form"
-          }
+          "type": "*",
+          "link": 53
         },
         {
+          "localized_name": "mode",
+          "name": "mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "volume",
+          "name": "volume",
+          "type": "FLOAT",
+          "widget": {
+            "name": "volume"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "sample_rate",
           "name": "sample_rate",
           "type": "INT",
-          "link": 54,
           "widget": {
             "name": "sample_rate"
-          }
+          },
+          "link": 54
         }
       ],
       "outputs": [
         {
+          "localized_name": "*",
           "name": "*",
+          "shape": 6,
           "type": "*",
-          "links": null,
-          "shape": 6
+          "links": null
         }
       ],
       "properties": {
+        "cnr_id": "comfyui_vlm_nodes",
+        "ver": "3f9612774e862f94d1dfbe3a1b36375a52870382",
         "Node name for S&R": "PlayMusic"
       },
       "widgets_values": [
         "always",
         0.5,
-        null,
-        0
-      ]
+        null
+      ],
+      "widgets_values_named": {
+        "mode": "always",
+        "volume": 0.5,
+        "sample_rate": null
+      }
     },
     {
       "id": 37,
@@ -478,53 +1021,148 @@
         666,
         725
       ],
-      "size": {
-        "0": 315,
-        "1": 222
-      },
+      "size": [
+        315,
+        422
+      ],
       "flags": {},
-      "order": 9,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "text",
           "name": "text",
           "type": "STRING",
-          "link": 44,
           "widget": {
             "name": "text"
-          }
+          },
+          "link": 44
         },
         {
+          "localized_name": "negative_prompt",
           "name": "negative_prompt",
           "type": "STRING",
-          "link": 45,
           "widget": {
             "name": "negative_prompt"
           },
-          "slot_index": 1
+          "link": 45
+        },
+        {
+          "localized_name": "duration",
+          "name": "duration",
+          "type": "INT",
+          "widget": {
+            "name": "duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "guidance_scale",
+          "name": "guidance_scale",
+          "type": "FLOAT",
+          "widget": {
+            "name": "guidance_scale"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "n_candidates",
+          "name": "n_candidates",
+          "type": "INT",
+          "widget": {
+            "name": "n_candidates"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "sample_rate",
+          "name": "sample_rate",
+          "type": "INT",
+          "widget": {
+            "name": "sample_rate"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "extension",
+          "name": "extension",
+          "type": "COMBO",
+          "widget": {
+            "name": "extension"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "steps",
+          "name": "steps",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cpu_offload",
+          "name": "cpu_offload",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "cpu_offload"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "unload_after",
+          "name": "unload_after",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "unload_after"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "wave_form",
           "name": "wave_form",
           "type": "*",
+          "slot_index": 0,
           "links": [
             53
-          ],
-          "shape": 3,
-          "slot_index": 0
+          ]
         },
         {
+          "localized_name": "sample_rate",
           "name": "sample_rate",
           "type": "INT",
+          "slot_index": 1,
           "links": [
             54
-          ],
-          "shape": 3,
-          "slot_index": 1
+          ]
+        },
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            55
+          ]
         }
       ],
       "properties": {
+        "cnr_id": "comfyui_vlm_nodes",
+        "ver": "3f9612774e862f94d1dfbe3a1b36375a52870382",
         "Node name for S&R": "AudioLDM2Node"
       },
       "widgets_values": [
@@ -536,8 +1174,85 @@
         "randomize",
         3,
         16000,
-        "mp3"
-      ]
+        "wav",
+        100,
+        true,
+        false
+      ],
+      "widgets_values_named": {
+        "text": "",
+        "negative_prompt": "",
+        "duration": 10,
+        "guidance_scale": 3.5,
+        "seed": 995,
+        "control_after_generate": "randomize",
+        "n_candidates": 3,
+        "sample_rate": 16000,
+        "extension": "wav",
+        "steps": 100,
+        "cpu_offload": true,
+        "unload_after": false
+      }
+    },
+    {
+      "id": 44,
+      "type": "SaveAudio",
+      "pos": [
+        1041,
+        985
+      ],
+      "size": [
+        329.2798828125,
+        112
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 55
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.43.0",
+        "Node name for S&R": "SaveAudio"
+      },
+      "widgets_values": [
+        "audio/audioldm2"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/audioldm2"
+      }
     }
   ],
   "links": [
@@ -582,22 +1297,6 @@
       "CUSTOM"
     ],
     [
-      41,
-      35,
-      0,
-      34,
-      2,
-      "STRING"
-    ],
-    [
-      42,
-      29,
-      0,
-      34,
-      1,
-      "STRING"
-    ],
-    [
       43,
       29,
       0,
@@ -638,16 +1337,41 @@
       "COMBO"
     ],
     [
+      42,
+      29,
+      0,
+      34,
+      2,
+      "STRING"
+    ],
+    [
+      41,
+      35,
+      0,
+      34,
+      1,
+      "STRING"
+    ],
+    [
       54,
       37,
       1,
       43,
-      1,
+      3,
       "INT"
+    ],
+    [
+      55,
+      37,
+      2,
+      44,
+      0,
+      "AUDIO"
     ]
   ],
   "groups": [
     {
+      "id": 1,
       "title": "VLM",
       "bounding": [
         90,
@@ -656,10 +1380,10 @@
         446
       ],
       "color": "#3f789e",
-      "font_size": 24,
-      "locked": false
+      "flags": {}
     },
     {
+      "id": 2,
       "title": "LLM",
       "bounding": [
         1135,
@@ -668,10 +1392,10 @@
         491
       ],
       "color": "#a1309b",
-      "font_size": 24,
-      "locked": false
+      "flags": {}
     },
     {
+      "id": 3,
       "title": "Sound",
       "bounding": [
         638,
@@ -680,11 +1404,18 @@
         436
       ],
       "color": "#b58b2a",
-      "font_size": 24,
-      "locked": false
+      "flags": {}
     }
   ],
   "config": {},
-  "extra": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8067476002258611,
+      "offset": [
+        205.16666666666674,
+        623.5633682007259
+      ]
+    }
+  },
   "version": 0.4
 }

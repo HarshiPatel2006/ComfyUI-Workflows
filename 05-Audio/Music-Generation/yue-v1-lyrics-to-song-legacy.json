@@ -1,4 +1,6 @@
 {
+  "id": "ff8ed40e-907a-4712-ba12-932b70c69810",
+  "revision": 0,
   "last_node_id": 16,
   "last_link_id": 23,
   "nodes": [
@@ -18,39 +20,77 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "stage1_set",
           "name": "stage1_set",
           "type": "STAGE_SET",
           "link": 10
         },
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL_YUE_B",
           "link": 23
+        },
+        {
+          "localized_name": "vocal_decoder_ckpt",
+          "name": "vocal_decoder_ckpt",
+          "type": "COMBO",
+          "widget": {
+            "name": "vocal_decoder_ckpt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "inst_decoder_ckpt",
+          "name": "inst_decoder_ckpt",
+          "type": "COMBO",
+          "widget": {
+            "name": "inst_decoder_ckpt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "rescale",
+          "name": "rescale",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "rescale"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
+          "slot_index": 0,
           "links": [
             13
-          ],
-          "slot_index": 0
+          ]
         },
         {
+          "localized_name": "string",
           "name": "string",
           "type": "STRING",
           "links": null
         }
       ],
       "properties": {
+        "aux_id": "smthemex/ComfyUI_YuE",
+        "ver": "d560498b0948ac34fa515945f48006f9693087dc",
         "Node name for S&R": "YUE_Stage_B_Sampler"
       },
       "widgets_values": [
         "decoder_131000.pth",
         "decoder_151000.pth",
-        4
-      ]
+        true
+      ],
+      "widgets_values_named": {
+        "vocal_decoder_ckpt": "decoder_131000.pth",
+        "inst_decoder_ckpt": "decoder_151000.pth",
+        "rescale": true
+      }
     },
     {
       "id": 8,
@@ -68,30 +108,143 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL_YUE_A",
           "link": 21
+        },
+        {
+          "localized_name": "genres_prompt",
+          "name": "genres_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "genres_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lyrics_prompt",
+          "name": "lyrics_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "lyrics_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "run_n_segment",
+          "name": "run_n_segment",
+          "type": "INT",
+          "widget": {
+            "name": "run_n_segment"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "repetition_penalty",
+          "name": "repetition_penalty",
+          "type": "FLOAT",
+          "widget": {
+            "name": "repetition_penalty"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "prompt_start_time",
+          "name": "prompt_start_time",
+          "type": "FLOAT",
+          "widget": {
+            "name": "prompt_start_time"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "prompt_end_time",
+          "name": "prompt_end_time",
+          "type": "FLOAT",
+          "widget": {
+            "name": "prompt_end_time"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_new_tokens",
+          "name": "max_new_tokens",
+          "type": "INT",
+          "widget": {
+            "name": "max_new_tokens"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "use_dual_tracks_prompt",
+          "name": "use_dual_tracks_prompt",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_dual_tracks_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "use_audio_prompt",
+          "name": "use_audio_prompt",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_audio_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "offload_model",
+          "name": "offload_model",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "offload_model"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "stage1_no_guidance",
+          "name": "stage1_no_guidance",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "stage1_no_guidance"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "stage1_set",
           "name": "stage1_set",
           "type": "STAGE_SET",
+          "slot_index": 0,
           "links": [
             10
-          ],
-          "slot_index": 0
+          ]
         },
         {
+          "localized_name": "info",
           "name": "info",
           "type": "quantization_model",
+          "slot_index": 1,
           "links": [
             22
-          ],
-          "slot_index": 1
+          ]
         }
       ],
       "properties": {
+        "aux_id": "smthemex/ComfyUI_YuE",
+        "ver": "d560498b0948ac34fa515945f48006f9693087dc",
         "Node name for S&R": "YUE_Stage_A_Sampler"
       },
       "widgets_values": [
@@ -104,11 +257,26 @@
         0,
         30,
         3000,
-        true,
-        true,
+        false,
+        false,
         true,
         true
-      ]
+      ],
+      "widgets_values_named": {
+        "genres_prompt": "inspiring female uplifting pop airy vocal electronic bright vocal vocal.",
+        "lyrics_prompt": "[verse]\nStaring at the sunset, colors paint the sky.\nThoughts of you keep swirling, can't deny.\nI know I let you down, I made mistakes.\nBut I'm here to mend the heart I didn't break.\n\n[chorus]\nEvery road you take, I'll be one step behind.\nEvery dream you chase, I'm reaching for the light.\nYou can't fight this feeling now.\nI won't back down.\nYou know you can't deny it now.\n I won't back down \n\n[verse]\nThey might say I'm foolish, chasing after you.\nBut they don't feel this love the way we do.\nMy heart beats only for you, can't you see?\nI won't let you slip away from me. \n\n[chorus]\nEvery road you take, I'll be one step behind.\nEvery dream you chase, I'm reaching for the light.\nYou can't fight this feeling now.\nI won't back down.\nYou know you can't deny it now.\n I won't back down \n\n[bridge]\nNo, I won't back down, won't turn around.\nUntil you're back where you belong.\nI'll cross the oceans wide, stand by your side.\nTogether we are strong. \n\n[outro]\nEvery road you take, I'll be one step behind.\nEvery dream you chase, love's the tie that binds.\nYou can't fight this feeling now.\nI won't back down.",
+        "seed": 1698056329,
+        "control_after_generate": "randomize",
+        "run_n_segment": 2,
+        "repetition_penalty": 1.1,
+        "prompt_start_time": 0,
+        "prompt_end_time": 30,
+        "max_new_tokens": 3000,
+        "use_dual_tracks_prompt": false,
+        "use_audio_prompt": false,
+        "offload_model": true,
+        "stage1_no_guidance": true
+      }
     },
     {
       "id": 15,
@@ -124,9 +292,74 @@
       "flags": {},
       "order": 0,
       "mode": 0,
-      "inputs": [],
+      "inputs": [
+        {
+          "localized_name": "stage_A_repo",
+          "name": "stage_A_repo",
+          "type": "STRING",
+          "widget": {
+            "name": "stage_A_repo"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "xcodec_ckpt",
+          "name": "xcodec_ckpt",
+          "type": "COMBO",
+          "widget": {
+            "name": "xcodec_ckpt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "quantization_model",
+          "name": "quantization_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "quantization_model"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "use_mmgp",
+          "name": "use_mmgp",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_mmgp"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "stage1_cache_size",
+          "name": "stage1_cache_size",
+          "type": "INT",
+          "widget": {
+            "name": "stage1_cache_size"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "exllamav2_cache_mode",
+          "name": "exllamav2_cache_mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "exllamav2_cache_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "mmgp_profile",
+          "name": "mmgp_profile",
+          "type": "COMBO",
+          "widget": {
+            "name": "mmgp_profile"
+          },
+          "link": null
+        }
+      ],
       "outputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL_YUE_A",
           "links": [
@@ -135,17 +368,28 @@
         }
       ],
       "properties": {
+        "aux_id": "smthemex/ComfyUI_YuE",
+        "ver": "d560498b0948ac34fa515945f48006f9693087dc",
         "Node name for S&R": "YUE_Stage_A_Loader"
       },
       "widgets_values": [
-        "F:/test/ComfyUI/models/diffusers/Alissonerdx/YuE-s1-7B-anneal-zh-icl-int8",
+        "Alissonerdx/YuE-s1-7B-anneal-en-cot-int8",
         "ckpt_00360000.pth",
         "int8",
         false,
         16384,
         "FP16",
         2
-      ]
+      ],
+      "widgets_values_named": {
+        "stage_A_repo": "Alissonerdx/YuE-s1-7B-anneal-en-cot-int8",
+        "xcodec_ckpt": "ckpt_00360000.pth",
+        "quantization_model": "int8",
+        "use_mmgp": false,
+        "stage1_cache_size": 16384,
+        "exllamav2_cache_mode": "FP16",
+        "mmgp_profile": 2
+      }
     },
     {
       "id": 16,
@@ -163,31 +407,87 @@
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "info",
           "name": "info",
           "type": "quantization_model",
           "link": 22
+        },
+        {
+          "localized_name": "stage_B_repo",
+          "name": "stage_B_repo",
+          "type": "STRING",
+          "widget": {
+            "name": "stage_B_repo"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "stage2_cache_size",
+          "name": "stage2_cache_size",
+          "type": "INT",
+          "widget": {
+            "name": "stage2_cache_size"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "stage2_batch_size",
+          "name": "stage2_batch_size",
+          "type": "INT",
+          "widget": {
+            "name": "stage2_batch_size"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "exllamav2_cache_mode",
+          "name": "exllamav2_cache_mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "exllamav2_cache_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "use_mmgp",
+          "name": "use_mmgp",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_mmgp"
+          },
+          "link": null
         }
       ],
       "outputs": [
         {
+          "localized_name": "model",
           "name": "model",
           "type": "MODEL_YUE_B",
+          "slot_index": 0,
           "links": [
             23
-          ],
-          "slot_index": 0
+          ]
         }
       ],
       "properties": {
+        "aux_id": "smthemex/ComfyUI_YuE",
+        "ver": "d560498b0948ac34fa515945f48006f9693087dc",
         "Node name for S&R": "YUE_Stage_B_Loader"
       },
       "widgets_values": [
-        "F:/test/ComfyUI/models/diffusers/Alissonerdx/YuE-s2-1B-general-int8",
+        "m-a-p/YuE-s2-1B-general",
         8192,
         2,
         "FP16",
         false
-      ]
+      ],
+      "widgets_values_named": {
+        "stage_B_repo": "m-a-p/YuE-s2-1B-general",
+        "stage2_cache_size": 8192,
+        "stage2_batch_size": 2,
+        "exllamav2_cache_mode": "FP16",
+        "use_mmgp": false
+      }
     },
     {
       "id": 5,
@@ -198,25 +498,43 @@
       ],
       "size": [
         315,
-        76
+        88
       ],
       "flags": {},
       "order": 4,
       "mode": 0,
       "inputs": [
         {
+          "localized_name": "audio",
           "name": "audio",
           "type": "AUDIO",
           "link": 13
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
         }
       ],
-      "outputs": [],
+      "outputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
       "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.43.0",
         "Node name for S&R": "PreviewAudio"
       },
-      "widgets_values": [
-        null
-      ]
+      "widgets_values": [],
+      "widgets_values_named": {}
     }
   ],
   "links": [

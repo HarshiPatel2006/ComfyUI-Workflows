@@ -1,152 +1,359 @@
 {
-    "last_node_id": 10,
-    "last_link_id": 10,
-    "nodes": [
+  "id": "59f3d163-4244-4464-9073-3e2c10e6e6e7",
+  "revision": 0,
+  "last_node_id": 10,
+  "last_link_id": 10,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "ACE_STEP_Repaint",
+      "pos": [
+        400,
+        200
+      ],
+      "size": [
+        400,
+        440
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
         {
-            "id": 1,
-            "type": "ACE_STEP_Repaint",
-            "pos": [
-                400,
-                200
-            ],
-            "size": {
-                "0": 400,
-                "1": 350
-            },
-            "flags": {},
-            "order": 1,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "src_audio",
-                    "type": "AUDIO",
-                    "link": 1
-                }
-            ],
-            "outputs": [
-                {
-                    "name": "audio",
-                    "type": "AUDIO",
-                    "links": [
-                        2
-                    ],
-                    "slot_index": 0
-                },
-                {
-                    "name": "audio_path",
-                    "type": "STRING",
-                    "links": null,
-                    "slot_index": 1
-                },
-                {
-                    "name": "metadata",
-                    "type": "STRING",
-                    "links": null,
-                    "slot_index": 2
-                }
-            ],
-            "properties": {
-                "Node name for S&R": "ACE_STEP_Repaint"
-            },
-            "widgets_values": [
-                "A beautiful piano solo segment replacing the original audio",
-                0.0,
-                5.0,
-                "Ace-Step1.5",
-                "acestep-v15-turbo",
-                "acestep-5Hz-lm-1.7B",
-                -1,
-                "randomize",
-                8,
-                "auto",
-                true,
-                "None",
-                false,
-                "flac"
-            ]
+          "localized_name": "src_audio",
+          "name": "src_audio",
+          "type": "AUDIO",
+          "link": 1
         },
         {
-            "id": 2,
-            "type": "LoadAudio",
-            "pos": [
-                50,
-                200
-            ],
-            "size": {
-                "0": 315,
-                "1": 124
-            },
-            "flags": {},
-            "order": 0,
-            "mode": 0,
-            "inputs": [],
-            "outputs": [
-                {
-                    "name": "audio",
-                    "type": "AUDIO",
-                    "links": [
-                        1
-                    ],
-                    "shape": 3,
-                    "slot_index": 0
-                }
-            ],
-            "properties": {
-                "Node name for S&R": "LoadAudio"
-            },
-            "widgets_values": [
-                "example.wav",
-                "upload"
-            ]
+          "localized_name": "caption",
+          "name": "caption",
+          "type": "STRING",
+          "widget": {
+            "name": "caption"
+          },
+          "link": null
         },
         {
-            "id": 3,
-            "type": "PreviewAudio",
-            "pos": [
-                850,
-                200
-            ],
-            "size": {
-                "0": 300,
-                "1": 100
-            },
-            "flags": {},
-            "order": 2,
-            "mode": 0,
-            "inputs": [
-                {
-                    "name": "audio",
-                    "type": "AUDIO",
-                    "link": 2
-                }
-            ],
-            "outputs": [],
-            "properties": {
-                "Node name for S&R": "PreviewAudio"
-            },
-            "widgets_values": []
+          "localized_name": "repainting_start",
+          "name": "repainting_start",
+          "type": "FLOAT",
+          "widget": {
+            "name": "repainting_start"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "repainting_end",
+          "name": "repainting_end",
+          "type": "FLOAT",
+          "widget": {
+            "name": "repainting_end"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "checkpoint_dir",
+          "name": "checkpoint_dir",
+          "type": "COMBO",
+          "widget": {
+            "name": "checkpoint_dir"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "config_path",
+          "name": "config_path",
+          "type": "COMBO",
+          "widget": {
+            "name": "config_path"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lm_model_path",
+          "name": "lm_model_path",
+          "type": "COMBO",
+          "widget": {
+            "name": "lm_model_path"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "inference_steps",
+          "name": "inference_steps",
+          "type": "INT",
+          "widget": {
+            "name": "inference_steps"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "device",
+          "name": "device",
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "thinking",
+          "name": "thinking",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "thinking"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "quantization",
+          "name": "quantization",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "quantization"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "compile_model",
+          "name": "compile_model",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "compile_model"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audio_format",
+          "name": "audio_format",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "audio_format"
+          },
+          "link": null
         }
+      ],
+      "outputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "slot_index": 0,
+          "links": [
+            2
+          ]
+        },
+        {
+          "localized_name": "audio_path",
+          "name": "audio_path",
+          "type": "STRING",
+          "slot_index": 1,
+          "links": null
+        },
+        {
+          "localized_name": "metadata",
+          "name": "metadata",
+          "type": "STRING",
+          "slot_index": 2,
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "kana112233/ComfyUI-kaola-ace-step",
+        "ver": "cb0d0fc6723864201020624931d9cbb2ff0cbc66",
+        "Node name for S&R": "ACE_STEP_Repaint"
+      },
+      "widgets_values": [
+        "A beautiful piano solo segment replacing the original audio",
+        0,
+        5,
+        "Ace-Step1.5",
+        "acestep-v15-turbo",
+        "acestep-5Hz-lm-1.7B",
+        -1,
+        "randomize",
+        8,
+        "auto",
+        true,
+        "None",
+        false,
+        "flac"
+      ],
+      "widgets_values_named": {
+        "caption": "A beautiful piano solo segment replacing the original audio",
+        "repainting_start": 0,
+        "repainting_end": 5,
+        "checkpoint_dir": "Ace-Step1.5",
+        "config_path": "acestep-v15-turbo",
+        "lm_model_path": "acestep-5Hz-lm-1.7B",
+        "seed": -1,
+        "control_after_generate": "randomize",
+        "inference_steps": 8,
+        "device": "auto",
+        "thinking": true,
+        "quantization": "None",
+        "compile_model": false,
+        "audio_format": "flac"
+      }
+    },
+    {
+      "id": 2,
+      "type": "LoadAudio",
+      "pos": [
+        50,
+        200
+      ],
+      "size": [
+        315,
+        136
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "AUDIOUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "slot_index": 0,
+          "links": [
+            1
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.43.0",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "example.wav",
+        "upload"
+      ],
+      "widgets_values_named": {
+        "audio": "example.wav",
+        "upload": "upload"
+      }
+    },
+    {
+      "id": 3,
+      "type": "PreviewAudio",
+      "pos": [
+        850,
+        200
+      ],
+      "size": [
+        300,
+        100
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 2
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.43.0",
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      1,
+      0,
+      "AUDIO"
     ],
-    "links": [
-        [
-            1,
-            2,
-            0,
-            1,
-            0,
-            "AUDIO"
-        ],
-        [
-            2,
-            1,
-            0,
-            3,
-            0,
-            "AUDIO"
-        ]
-    ],
-    "groups": [],
-    "config": {},
-    "extra": {},
-    "version": 0.4
+    [
+      2,
+      1,
+      0,
+      3,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.2756696428571428,
+      "offset": [
+        146.66666666666674,
+        420.5153105861767
+      ]
+    }
+  },
+  "version": 0.4
 }
