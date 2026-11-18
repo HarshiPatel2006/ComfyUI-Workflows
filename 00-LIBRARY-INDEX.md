@@ -450,6 +450,7 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [stable-audio-3-text-to-music-gemma-4-prompt-enhancer](05-Audio/Music-Generation/stable-audio-3-text-to-music-gemma-4-prompt-enhancer.json)
 - [stable-audio-3-text-to-music](05-Audio/Music-Generation/stable-audio-3-text-to-music.json)
 - [stable-audio-3-text-to-sound-effects-gemma-4](05-Audio/Music-Generation/stable-audio-3-text-to-sound-effects-gemma-4.json)
+- [yue2-lyrics-to-song](05-Audio/Music-Generation/yue2-lyrics-to-song.json)
 
 ## 05-Audio/Speech-and-Voice-Cloning
 

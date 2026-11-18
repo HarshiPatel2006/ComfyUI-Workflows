@@ -1,14 +1,14 @@
 # Audio — ComfyUI workflows
 
-Text-to-speech, voice cloning and voice design (Qwen3-TTS, Fish S2, ChatterBox) and music generation (Stable Audio 3, ACE-Step, MiniMax Music 3).
+Text-to-speech, voice cloning and voice design (Qwen3-TTS, Fish S2, ChatterBox) and music generation (Stable Audio 3, ACE-Step, MiniMax Music 3, YuE 2).
 
 | Subfolder | What is inside | Workflows |
 |---|---|---|
-| [`Music-Generation/`](Music-Generation) | Music generation | 6 |
+| [`Music-Generation/`](Music-Generation) | Music generation | 7 |
 | [`Speech-and-Voice-Cloning/`](Speech-and-Voice-Cloning) | Text-to-speech and voice cloning | 11 |
 | [`Stem-Separation/`](Stem-Separation) | Vocal, instrument and drum stem extraction | 1 |
 
-## Workflows (18)
+## Workflows (19)
 
 ### Music generation
 
@@ -20,6 +20,7 @@ Text-to-speech, voice cloning and voice design (Qwen3-TTS, Fish S2, ChatterBox) 
 | [stable-audio-3-text-to-music-gemma-4-prompt-enhancer](Music-Generation/stable-audio-3-text-to-music-gemma-4-prompt-enhancer.json) | Text to Music + Gemma 4 Prompt Enhancer | `stable_audio_3_medium.safetensors`, `t5gemma_b_b_ul2.safetensors`, `gemma4_e4b_it_fp8_scaled.safetensors` | ComfyUI-Pixaroma |
 | [stable-audio-3-text-to-music](Music-Generation/stable-audio-3-text-to-music.json) | Text to Music | `t5gemma_b_b_ul2.safetensors`, `stable_audio_3_medium.safetensors` | ComfyUI-Pixaroma |
 | [stable-audio-3-text-to-sound-effects-gemma-4](Music-Generation/stable-audio-3-text-to-sound-effects-gemma-4.json) | Text to Sound Effects + Gemma 4 | `stable_audio_3_medium.safetensors`, `t5gemma_b_b_ul2.safetensors`, `gemma4_e4b_it_fp8_scaled.safetensors` | ComfyUI-Pixaroma |
+| [yue2-lyrics-to-song](Music-Generation/yue2-lyrics-to-song.json) | Lyrics to Song (YuE 2) with SheetSage melody-to-ABC | `yue2_3b_bf16.safetensors`, `sheetsage2_bf16.safetensors` | — |
 
 ### Text-to-speech and voice cloning
 
