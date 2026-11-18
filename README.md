@@ -1,8 +1,8 @@
-# ComfyUI Workflows: 576 Free FLUX, Qwen-Image, Wan, LTX-2, MiniMax H3 and Krea 2 Workflows
+# ComfyUI Workflows: 577 Free FLUX, Qwen-Image, Wan, LTX-2, MiniMax H3 and Krea 2 Workflows
 
-[![Workflows](https://img.shields.io/badge/workflows-576-blue)](#workflow-categories) [![ComfyUI](https://img.shields.io/badge/ComfyUI-workflows-green)](https://github.com/Comfy-Org/ComfyUI) [![Format](https://img.shields.io/badge/format-JSON-lightgrey)](#how-to-use) [![License](https://img.shields.io/badge/license-MIT%20%2B%20original%20terms-purple)](#license)
+[![Workflows](https://img.shields.io/badge/workflows-577-blue)](#workflow-categories) [![ComfyUI](https://img.shields.io/badge/ComfyUI-workflows-green)](https://github.com/Comfy-Org/ComfyUI) [![Format](https://img.shields.io/badge/format-JSON-lightgrey)](#how-to-use) [![License](https://img.shields.io/badge/license-MIT%20%2B%20original%20terms-purple)](#license)
 
-A categorized library of **576 ready-to-use ComfyUI workflows** (`.json`) for **FLUX.2 / FLUX.3 Klein, Qwen-Image, Krea 2, Z-Image Turbo, Wan 2.1 / 2.2, LTX-2, MiniMax H3, SeedVR2** and more. It covers **text-to-image (txt2img)**, **image editing (img2img)**, **inpainting and outpainting**, **background removal**, **image and video upscaling**, **text-to-video and image-to-video**, **lip-sync and talking avatars**, **face swap and character swap**, **text-to-speech and music**, **image-to-3D**, **batch automation** and a complete **AI short-film pipeline**.
+A categorized library of **577 ready-to-use ComfyUI workflows** (`.json`) for **FLUX.2 / FLUX.3 Klein, Qwen-Image, Krea 2, Z-Image Turbo, Wan 2.1 / 2.2, LTX-2, MiniMax H3, SeedVR2** and more. It covers **text-to-image (txt2img)**, **image editing (img2img)**, **inpainting and outpainting**, **background removal**, **image and video upscaling**, **text-to-video and image-to-video**, **lip-sync and talking avatars**, **face swap and character swap**, **text-to-speech and music**, **image-to-3D**, **batch automation** and a complete **AI short-film pipeline**.
 
 Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, install any missing custom nodes with ComfyUI-Manager, add the models, and press **Run**.
 
@@ -26,7 +26,7 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 
 ## Workflow categories
 
-576 workflows: 536 in the normal UI format and 40 in API format (filenames ending in `-api`). Each category README lists every workflow in that folder with what it does, the models it loads and the custom nodes it needs; the version-conflicts folder lists the models and what differs from the library copy. For one flat list of all files, see [`00-LIBRARY-INDEX.md`](00-LIBRARY-INDEX.md).
+577 workflows: 537 in the normal UI format and 40 in API format (filenames ending in `-api`). Each category README lists every workflow in that folder with what it does, the models it loads and the custom nodes it needs; the version-conflicts folder lists the models and what differs from the library copy. For one flat list of all files, see [`00-LIBRARY-INDEX.md`](00-LIBRARY-INDEX.md).
 
 | Category | What is inside | Workflows |
 |---|---|---|
@@ -34,7 +34,7 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 | [02 · Image Editing](02-Image-Editing/README.md) | Instruction-based editing, multi-image edits, inpainting, outpainting, object removal, background removal, outfit transfer, sketch-to-image | 115 |
 | [03 · Image Upscaling and Enhancement](03-Image-Enhancement/README.md) | Image upscaling (SeedVR2, tiled diffusion, creative upscale), filters and color grading | 13 |
 | [04 · AI Video](04-Video/README.md) | Text-to-video, image-to-video, first/last frame, reference-to-video, lip-sync, video dubbing, character animation and swap, video upscaling | 125 |
-| [05 · Audio](05-Audio/README.md) | Text-to-speech, voice cloning, voice design, music and sound effects | 17 |
+| [05 · Audio](05-Audio/README.md) | Text-to-speech, voice cloning, voice design, music and sound effects | 18 |
 | [06 · 3D Generation](06-3D-Generation/README.md) | Image-to-3D and multi-view-to-3D with Trellis 2, Pixal3D, SAM3D Body | 13 |
 | [07 · Batch Processing and Automation](07-Batch-and-Automation/README.md) | Batch-process a folder of images, loops, switches, logic and math | 44 |
 | [08 · Testing and Comparison](08-Testing-and-Comparison/README.md) | XY plots, sampler and LoRA comparisons, image compare | 8 |

@@ -1,6 +1,6 @@
 # ComfyUI Workflow Library — Index
 
-Plain list of all 576 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
+Plain list of all 577 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
 
 Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-image-2.1-one-image-edit-low-vram.json`). `-api` = API format; `epNN` = tutorial episode the variant came from.
 
@@ -464,6 +464,10 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [qwen3-tts-voice-design-dialogue](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-design-dialogue.json)
 - [qwen3-tts-voice-design-save-voice](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-design-save-voice.json)
 - [qwen3-tts-voice-design](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-design.json)
+
+## 05-Audio/Stem-Separation
+
+- [demucs-mdx-audio-separator-stem-separation](05-Audio/Stem-Separation/demucs-mdx-audio-separator-stem-separation.json)
 
 ## 06-3D-Generation/Image-to-3D
 
