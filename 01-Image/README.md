@@ -40,6 +40,13 @@ All image workflows in the library: **453 workflows** in four categories. Each c
 | | [Transparent-Layers](Image-Specialized-and-Supporting/Transparent-Layers) | 6 |
 | | [Virtual-Try-On](Image-Specialized-and-Supporting/Virtual-Try-On) | 6 |
 
+## Naming and folder convention
+
+- **Folders:** `<Category>/<Task>/`. A task folder with more than 8 workflows is split into model-family subfolders (`FLUX-2/`, `Qwen-Image/`, `Z-Image/`, `SDXL/`, `SD15/` ...); a family with only one workflow in that folder goes to `Other/`. Smaller task folders stay flat.
+- **Inside a model-family folder** the folder already names the model and the task folder names the task, so files carry only what tells siblings apart: `<variant>[-<size>][-<precision>][-<feature>].json`, for example `Text-to-Image/FLUX-2/klein-9b-fp8.json`, `Text-to-Image/Z-Image/turbo-fp8-aio-lora.json`, `Single-Image-Edit/Qwen-Image/v21-turbo.json`. The plain default of a family is `base.json`; a `-nunchaku` suffix marks Nunchaku-quantised builds.
+- **In flat folders and `Other/`** the model stays in the name: `<model>-<task>[-<key-variant>].json`, for example `birefnet-remove-background.json`.
+- **Always:** lowercase kebab-case (`a-z`, `0-9`, single hyphens), at most 60 characters, no source prefixes, list numbers or episode tags unless they are the only difference between two siblings. Version dots are dropped (`sd3.5` -> `sd35`, Qwen-Image 2.1 -> `v21`, `qwen-3.5` -> `qwen35`).
+
 ## Model coverage
 
 Built from the four category READMEs. "Covered" means at least one workflow in `01-Image` loads the model.
