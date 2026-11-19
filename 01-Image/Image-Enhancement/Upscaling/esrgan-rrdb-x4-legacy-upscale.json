@@ -1,0 +1,184 @@
+{
+  "last_node_id": 14,
+  "last_link_id": 16,
+  "nodes": [
+    {
+      "id": 10,
+      "type": "LoadImage",
+      "pos": [
+        560,
+        200
+      ],
+      "size": {
+        "0": 315,
+        "1": 314
+      },
+      "flags": {},
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            15
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "slot_index": 1
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "example.png",
+        "image"
+      ],
+      "order": 0
+    },
+    {
+      "id": 13,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        600,
+        50
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            14
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "RRDB_ESRGAN_x4.pth"
+      ],
+      "order": 1
+    },
+    {
+      "id": 14,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        980,
+        150
+      ],
+      "size": {
+        "0": 241.79998779296875,
+        "1": 46
+      },
+      "flags": {},
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 14
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            16
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {},
+      "order": 2
+    },
+    {
+      "id": 9,
+      "type": "SaveImage",
+      "pos": [
+        1300,
+        150
+      ],
+      "size": {
+        "0": 455.9945373535156,
+        "1": 553.0919189453125
+      },
+      "flags": {},
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 16
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ],
+      "order": 3
+    },
+    {
+      "id": 11,
+      "type": "Note",
+      "pos": [
+        560,
+        560
+      ],
+      "size": {
+        "0": 420,
+        "1": 160
+      },
+      "flags": {},
+      "mode": 0,
+      "properties": {},
+      "widgets_values": [
+        "Graph: official ComfyUI upscale_models example (comfyanonymous/ComfyUI_examples), upscale branch fed by Load Image. Put the checkpoint in models/upscale_models. Original ESRGAN RRDB x4 (legacy baseline). Weights: https://github.com/xinntao/ESRGAN#test-models Not runtime-tested."
+      ],
+      "order": 4
+    }
+  ],
+  "links": [
+    [
+      14,
+      13,
+      0,
+      14,
+      0,
+      "UPSCALE_MODEL"
+    ],
+    [
+      15,
+      10,
+      0,
+      14,
+      1,
+      "IMAGE"
+    ],
+    [
+      16,
+      14,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

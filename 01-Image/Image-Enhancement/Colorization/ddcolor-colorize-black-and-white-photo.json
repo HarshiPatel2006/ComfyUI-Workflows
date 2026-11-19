@@ -1,0 +1,39 @@
+{
+  "2": {
+    "inputs": {
+      "image": "input.jpg",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "5": {
+    "inputs": {
+      "filename_prefix": "AIPG_Image",
+      "images": [
+        "6",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  },
+  "6": {
+    "inputs": {
+      "model_input_size": 512,
+      "checkpoint": "ddcolor_artistic.pth",
+      "image": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "DDColor_Colorize",
+    "_meta": {
+      "title": "DDColor_Colorize"
+    }
+  }
+}
