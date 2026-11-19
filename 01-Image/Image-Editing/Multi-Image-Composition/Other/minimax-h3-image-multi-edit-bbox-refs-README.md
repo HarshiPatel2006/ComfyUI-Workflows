@@ -1,4 +1,4 @@
-# H3 Image Edit - BBox Layout + 4 Reference Images (`h3-image-edit-bbox-refs.json`)
+# H3 Image Edit - BBox Layout + 4 Reference Images (`minimax-h3-image-multi-edit-bbox-refs.json`)
 
 Agent guide. Read it fully before touching the graph or calling the API.
 

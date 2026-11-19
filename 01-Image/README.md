@@ -40,6 +40,13 @@ All image workflows in the library: **453 workflows** in four categories. Each c
 | | [Transparent-Layers](Image-Specialized-and-Supporting/Transparent-Layers) | 6 |
 | | [Virtual-Try-On](Image-Specialized-and-Supporting/Virtual-Try-On) | 6 |
 
+## Naming and folder convention
+
+- **File names:** lowercase kebab-case `<model>-<task>[-<key-variant>].json`, for example `flux2-klein-9b-multi-edit-2-images.json`, `z-image-turbo-txt2img-fp8-aio-controlnet-union.json`, `sd15-juggernaut-txt2img-lora.json`. Only `a-z`, `0-9` and single hyphens; at most 60 characters; no source prefixes (`official-`, `pixaroma-nodes-`), list numbers or episode tags unless they are the only thing that tells two siblings apart.
+- **Model tokens** are spelled one way everywhere: `flux1`, `flux2`, `flux3`, `qwen-image-21` (Qwen-Image 2.1), `qwen-image-2512`, `minimax-h3-image`, `p-h3-image`, `ming-image`, `boogu-image`, `sd15`, `sdxl`, `sd35`, `z-image-turbo`, `krea-2`. Version dots are dropped (`sd3.5` -> `sd35`, `qwen-3.5` -> `qwen35`, `gemma-4` -> `gemma4`).
+- **Task words:** `txt2img`, `img2img`, `edit` (one input image), `multi-edit-<n>-images`, `img2prompt2img`, `inpaint`, `outpaint`, `upscale`.
+- **Folders:** `<Category>/<Task>/`. A task folder with more than 8 workflows is split into model-family subfolders (`FLUX-2/`, `Qwen-Image/`, `Z-Image/`, `SDXL/`, `SD15/` ...); families with a single workflow in that folder go to `Other/`. Smaller task folders stay flat.
+
 ## Model coverage
 
 Built from the four category READMEs. "Covered" means at least one workflow in `01-Image` loads the model.
