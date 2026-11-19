@@ -1,42 +1,68 @@
 # AI Video — ComfyUI workflows
 
-All video workflows in the library: **239 workflows** in five categories — text-to-video, image-to-video, reference-to-video, long-form generation and world models; video editing, control and character animation; talking avatars, lip-sync and audio-reactive video; video upscaling and frame interpolation; and supporting vision (depth, pose, segmentation). Each category README lists every workflow with what it does, the models it loads and the custom nodes it needs, and — for the Open-Source Video Model Atlas additions (Nov 2026) — the source, model download, code licence and weight licence. The atlas additions were checked to be valid ComfyUI workflow JSON for their model and task; they have **not** been runtime-tested.
+All video workflows in the library: **239 workflows** in three categories — text-to-video, image-to-video, reference-to-video, long-form generation and world models; video editing, control and character animation; talking avatars, lip-sync and audio-reactive video; video upscaling and frame interpolation; and supporting vision (depth, pose, segmentation). Each category README lists every workflow with what it does, the models it loads and the custom nodes it needs, and — for the Open-Source Video Model Atlas additions (Nov 2026) — the source, model download, code licence and weight licence. The atlas additions were checked to be valid ComfyUI workflow JSON for their model and task; they have **not** been runtime-tested.
 
 ## Folders
 
-| Category | Subfolder | Workflows |
+| Category | What is inside | Model folders | Workflows |
+|---|---|---|---|
+| **[Generation](Generation/README.md)** | Workflows that create a new video: text-to-video, image-to-video, first / last frame, reference-to-video, long-form generation, world models, talking avatars from a picture and audio, and audio-reactive visuals. | [AnimateDiff](Generation/AnimateDiff), [Capybara](Generation/Capybara), [CogVideoX](Generation/CogVideoX), [Cosmos](Generation/Cosmos), [DynamiCrafter](Generation/DynamiCrafter), [EchoMimic](Generation/EchoMimic), [FramePack](Generation/FramePack), [Hallo](Generation/Hallo), [HunyuanVideo](Generation/HunyuanVideo), [HY-Nomas](Generation/HY-Nomas), [Kandinsky](Generation/Kandinsky), [LivePortrait](Generation/LivePortrait), [LongCat-Video](Generation/LongCat-Video), [LTX-2](Generation/LTX-2), [LTX-Video](Generation/LTX-Video), [MAGI-1](Generation/MAGI-1), [MiniMax-H3](Generation/MiniMax-H3), [Mochi-1](Generation/Mochi-1), [Pyramid-Flow](Generation/Pyramid-Flow), [SkyReels](Generation/SkyReels), [Sonic](Generation/Sonic), [SVD](Generation/SVD), [ToonCrafter](Generation/ToonCrafter), [Wan-2.1](Generation/Wan-2.1), [Wan-2.2](Generation/Wan-2.2), [Other](Generation/Other) | 127 |
+| **[Editing](Editing/README.md)** | Workflows that change or analyse an existing video: VACE and instruction edits, inpaint / outpaint, object and subtitle removal, relighting, camera and motion control, character / head / face swap, motion transfer, lip-sync and dubbing, and supporting vision (depth, normals, pose, line art, segmentation). | [Animate-Anyone](Editing/Animate-Anyone), [AnimateDiff](Editing/AnimateDiff), [Capybara](Editing/Capybara), [Champ](Editing/Champ), [Depth-Anything](Editing/Depth-Anything), [DubSync](Editing/DubSync), [DWPose](Editing/DWPose), [LatentSync](Editing/LatentSync), [LivePortrait](Editing/LivePortrait), [LTX-2](Editing/LTX-2), [MimicMotion](Editing/MimicMotion), [MiniMax-H3](Editing/MiniMax-H3), [MusePose](Editing/MusePose), [MuseTalk](Editing/MuseTalk), [NormalCrafter](Editing/NormalCrafter), [ProPainter](Editing/ProPainter), [ReActor](Editing/ReActor), [SAM-2](Editing/SAM-2), [SAM-3](Editing/SAM-3), [SDPose](Editing/SDPose), [Video-Depth-Anything](Editing/Video-Depth-Anything), [VOID](Editing/VOID), [Wan-2.1](Editing/Wan-2.1), [Wan-2.2](Editing/Wan-2.2), [Wan-Animate-2](Editing/Wan-Animate-2), [Wan-Move](Editing/Wan-Move), [Wav2Lip](Editing/Wav2Lip), [Other](Editing/Other) | 91 |
+| **[Enhancement](Enhancement/README.md)** | Video upscaling, super-resolution and refinement, and frame interpolation. | [FILM](Enhancement/FILM), [FlashVSR](Enhancement/FlashVSR), [GIMM-VFI](Enhancement/GIMM-VFI), [MiniMax-H3](Enhancement/MiniMax-H3), [NVIDIA-RTX-VSR](Enhancement/NVIDIA-RTX-VSR), [RelayVSR](Enhancement/RelayVSR), [SeedVR2](Enhancement/SeedVR2), [Wan-2.2](Enhancement/Wan-2.2) | 21 |
+| **Total** | | | **239** |
+
+### Finding a task
+
+| Task (file name prefix) | Where | Model folders |
 |---|---|---|
-| [Video-Generation](Video-Generation/README.md) | | 84 |
-| | [Text-to-Video](Video-Generation/Text-to-Video) | 23 |
-| | [Image-to-Video](Video-Generation/Image-to-Video) | 41 |
-| | [Reference-to-Video](Video-Generation/Reference-to-Video) | 8 |
-| | [Long-Form-Generation](Video-Generation/Long-Form-Generation) | 7 |
-| | [World-Models](Video-Generation/World-Models) | 5 |
-| [Video-Editing-and-Control](Video-Editing-and-Control/README.md) | | 65 |
-| | [Video-Editing-and-Tools](Video-Editing-and-Control/Video-Editing-and-Tools) | 14 |
-| | [Character-Animation-Video-to-Video](Video-Editing-and-Control/Character-Animation-Video-to-Video) | 51 |
-| [Talking-Avatar-and-Audio](Talking-Avatar-and-Audio/README.md) | | 60 |
-| | [Talking-Avatar-and-Lip-Sync](Talking-Avatar-and-Audio/Talking-Avatar-and-Lip-Sync) | 54 |
-| | [Audio-Reactive](Talking-Avatar-and-Audio/Audio-Reactive) | 6 |
-| [Video-Enhancement](Video-Enhancement/README.md) | | 21 |
-| | [Video-Upscaling](Video-Enhancement/Video-Upscaling) | 18 |
-| | [Frame-Interpolation](Video-Enhancement/Frame-Interpolation) | 3 |
-| [Supporting-Vision](Supporting-Vision/README.md) | | 9 |
-| | [Depth-and-Normals](Supporting-Vision/Depth-and-Normals) | 4 |
-| | [Pose-and-Line-Art](Supporting-Vision/Pose-and-Line-Art) | 3 |
-| | [Segmentation](Supporting-Vision/Segmentation) | 2 |
-| **Total** | | **239** |
+| `audio-reactive` | [Generation](Generation/README.md) | [AnimateDiff](Generation/README.md#animatediff), [LivePortrait](Generation/README.md#liveportrait), [Wan-2.1](Generation/README.md#wan-21), [Other](Generation/README.md#other) |
+| `audio-reactive` | [Editing](Editing/README.md) | [AnimateDiff](Editing/README.md#animatediff) |
+| `camera-control` | [Editing](Editing/README.md) | [Wan-2.2](Editing/README.md#wan-22) |
+| `camera-rerender` | [Editing](Editing/README.md) | [Wan-2.1](Editing/README.md#wan-21) |
+| `character-swap` | [Editing](Editing/README.md) | [MiniMax-H3](Editing/README.md#minimax-h3), [Wan-2.1](Editing/README.md#wan-21), [Wan-2.2](Editing/README.md#wan-22) |
+| `depth-map` | [Editing](Editing/README.md) | [Depth-Anything](Editing/README.md#depth-anything), [Video-Depth-Anything](Editing/README.md#video-depth-anything) |
+| `edit` | [Editing](Editing/README.md) | [Capybara](Editing/README.md#capybara) |
+| `expression-retarget` | [Editing](Editing/README.md) | [LivePortrait](Editing/README.md#liveportrait) |
+| `expression-transfer` | [Editing](Editing/README.md) | [Wan-2.1](Editing/README.md#wan-21) |
+| `face-swap` | [Editing](Editing/README.md) | [ReActor](Editing/README.md#reactor) |
+| `frame-interpolation` | [Enhancement](Enhancement/README.md) | [FILM](Enhancement/README.md#film), [GIMM-VFI](Enhancement/README.md#gimm-vfi) |
+| `head-swap` | [Editing](Editing/README.md) | [MiniMax-H3](Editing/README.md#minimax-h3) |
+| `img2video` | [Generation](Generation/README.md) | [AnimateDiff](Generation/README.md#animatediff), [Capybara](Generation/README.md#capybara), [CogVideoX](Generation/README.md#cogvideox), [DynamiCrafter](Generation/README.md#dynamicrafter), [HunyuanVideo](Generation/README.md#hunyuanvideo), [Kandinsky](Generation/README.md#kandinsky), [LTX-2](Generation/README.md#ltx-2), [LTX-Video](Generation/README.md#ltx-video), [MiniMax-H3](Generation/README.md#minimax-h3), [Pyramid-Flow](Generation/README.md#pyramid-flow), [SVD](Generation/README.md#svd), [ToonCrafter](Generation/README.md#tooncrafter), [Wan-2.1](Generation/README.md#wan-21), [Wan-2.2](Generation/README.md#wan-22) |
+| `inpaint` | [Editing](Editing/README.md) | [Wan-2.1](Editing/README.md#wan-21) |
+| `lineart-extraction` | [Editing](Editing/README.md) | [Other](Editing/README.md#other) |
+| `lip-sync` | [Editing](Editing/README.md) | [DubSync](Editing/README.md#dubsync), [LatentSync](Editing/README.md#latentsync), [LTX-2](Editing/README.md#ltx-2), [MuseTalk](Editing/README.md#musetalk), [Wan-2.1](Editing/README.md#wan-21), [Wav2Lip](Editing/README.md#wav2lip) |
+| `long-video` | [Generation](Generation/README.md) | [FramePack](Generation/README.md#framepack), [LongCat-Video](Generation/README.md#longcat-video), [MAGI-1](Generation/README.md#magi-1), [SkyReels](Generation/README.md#skyreels), [Wan-2.2](Generation/README.md#wan-22) |
+| `motion-control` | [Editing](Editing/README.md) | [Wan-Move](Editing/README.md#wan-move) |
+| `motion-transfer` | [Editing](Editing/README.md) | [Animate-Anyone](Editing/README.md#animate-anyone), [Champ](Editing/README.md#champ), [MimicMotion](Editing/README.md#mimicmotion), [MiniMax-H3](Editing/README.md#minimax-h3), [MusePose](Editing/README.md#musepose), [Wan-2.1](Editing/README.md#wan-21), [Wan-Animate-2](Editing/README.md#wan-animate-2) |
+| `normal-map` | [Editing](Editing/README.md) | [NormalCrafter](Editing/README.md#normalcrafter) |
+| `object-and-interaction-removal` | [Editing](Editing/README.md) | [VOID](Editing/README.md#void) |
+| `object-removal` | [Editing](Editing/README.md) | [LTX-2](Editing/README.md#ltx-2), [ProPainter](Editing/README.md#propainter) |
+| `outpaint` | [Editing](Editing/README.md) | [Wan-2.1](Editing/README.md#wan-21) |
+| `pixaroma` | [Editing](Editing/README.md) | [Other](Editing/README.md#other) |
+| `portrait-animation` | [Generation](Generation/README.md) | [LivePortrait](Generation/README.md#liveportrait) |
+| `pose-keypoints` | [Editing](Editing/README.md) | [DWPose](Editing/README.md#dwpose), [SDPose](Editing/README.md#sdpose) |
+| `ref2video` | [Generation](Generation/README.md) | [MiniMax-H3](Generation/README.md#minimax-h3), [SkyReels](Generation/README.md#skyreels), [Wan-2.1](Generation/README.md#wan-21) |
+| `relight` | [Editing](Editing/README.md) | [Wan-2.2](Editing/README.md#wan-22) |
+| `segment` | [Editing](Editing/README.md) | [SAM-2](Editing/README.md#sam-2), [SAM-3](Editing/README.md#sam-3) |
+| `style-transfer` | [Editing](Editing/README.md) | [MiniMax-H3](Editing/README.md#minimax-h3) |
+| `talking-avatar` | [Generation](Generation/README.md) | [EchoMimic](Generation/README.md#echomimic), [Hallo](Generation/README.md#hallo), [Kandinsky](Generation/README.md#kandinsky), [LongCat-Video](Generation/README.md#longcat-video), [LTX-2](Generation/README.md#ltx-2), [MiniMax-H3](Generation/README.md#minimax-h3), [SkyReels](Generation/README.md#skyreels), [Sonic](Generation/README.md#sonic), [Wan-2.1](Generation/README.md#wan-21), [Wan-2.2](Generation/README.md#wan-22) |
+| `txt2img2video` | [Generation](Generation/README.md) | [SVD](Generation/README.md#svd) |
+| `txt2video` | [Generation](Generation/README.md) | [CogVideoX](Generation/README.md#cogvideox), [Cosmos](Generation/README.md#cosmos), [HunyuanVideo](Generation/README.md#hunyuanvideo), [Kandinsky](Generation/README.md#kandinsky), [LTX-2](Generation/README.md#ltx-2), [LTX-Video](Generation/README.md#ltx-video), [MiniMax-H3](Generation/README.md#minimax-h3), [Mochi-1](Generation/README.md#mochi-1), [Pyramid-Flow](Generation/README.md#pyramid-flow), [Wan-2.1](Generation/README.md#wan-21), [Wan-2.2](Generation/README.md#wan-22) |
+| `upscale` | [Enhancement](Enhancement/README.md) | [FlashVSR](Enhancement/README.md#flashvsr), [MiniMax-H3](Enhancement/README.md#minimax-h3), [NVIDIA-RTX-VSR](Enhancement/README.md#nvidia-rtx-vsr), [RelayVSR](Enhancement/README.md#relayvsr), [SeedVR2](Enhancement/README.md#seedvr2), [Wan-2.2](Enhancement/README.md#wan-22) |
+| `v2v` | [Editing](Editing/README.md) | [Wan-2.1](Editing/README.md#wan-21), [Wan-2.2](Editing/README.md#wan-22) |
+| `vfx-edit` | [Editing](Editing/README.md) | [MiniMax-H3](Editing/README.md#minimax-h3) |
+| `video2world` | [Generation](Generation/README.md) | [Cosmos](Generation/README.md#cosmos) |
+| `voice-dubbing` | [Editing](Editing/README.md) | [LTX-2](Editing/README.md#ltx-2) |
+| `world-model` | [Generation](Generation/README.md) | [HY-Nomas](Generation/README.md#hy-nomas) |
 
 Atlas coverage, entry by entry: [COVERAGE.md](COVERAGE.md).
 
 ## Naming and folder convention
 
-Same convention as [01-Image](../01-Image/README.md#naming-and-folder-convention).
-
-- **Folders:** `<Category>/<Task>/`. A task folder with more than 8 workflows is split into model-family subfolders (`MiniMax-H3/`, `Wan-2.1/`, `Wan-2.2/`, `LTX-2/`, `LTX-Video/`, `HunyuanVideo/`, `Kandinsky/`, `CogVideoX/`, `Cosmos/`, `SeedVR2/`, `DubSync/`, `EchoMimic/`, `Hallo/`, `LivePortrait/` ...); a family with only one workflow in that folder goes to `Other/`. Smaller task folders stay flat.
-- **Inside a model-family folder** the folder already names the model and the task folder names the task, so files carry only what tells siblings apart: `<variant>[-<size>][-<precision>][-<feature>].json`, for example `Image-to-Video/Wan-2.2/14b-first-last-frame.json`, `Text-to-Video/MiniMax-H3/speed-lora.json`, `Video-Upscaling/SeedVR2/1080p-api.json`. The plain default of a family is `base.json`; sub-versions inside a family folder are `v<digits>` (`LTX-2/v25-...` for LTX-2.5, `HunyuanVideo/v15-...` for 1.5); MiniMax FastH3 and Pika-H3-Flex builds live in `MiniMax-H3/` with a `fasth3-` or `pika-flex-` prefix; `-api` marks API-format (prompt) exports.
-- **In flat folders and `Other/`** the model stays in the name: `<model>-<task>[-<key-variant>].json`, for example `Reference-to-Video/wan-21-phantom-14b-multi-subject.json`.
-- **Always:** lowercase kebab-case (`a-z`, `0-9`, single hyphens), at most 60 characters, no source prefixes, list numbers or episode tags unless they are the only difference between two siblings (`first-last-frame-ep41.json`, `character-swap-sam3-run05-480p-api.json`). Version dots are dropped (`wan-2.1` -> `wan-21`, `1.3b` -> `13b`, `0.9.5` -> `v095`).
+- **Folders:** exactly three levels, `<section>/<Category>/<Model>/<file>.json`. Image and Video use the categories `Generation` (creates a new image or video), `Editing` (changes or analyses an existing one) and `Enhancement` (Image: upscaling only; Video: upscaling and frame interpolation). Audio uses `Music` and `Speech`. A model folder holds only workflow files, however many there are; there are no task subfolders.
+- **Model folders** are TitleCase with hyphens and use one spelling across all sections (`Krea-2`, `FLUX-2`, `Qwen-Image`, `Wan-2.2`, `LTX-2`, `MiniMax-H3`, `ACE-Step-1.5`, `Qwen3-TTS`, `Whisper` ...). Generic, utility and multi-model workflows go in `Other/`.
+- **File names** carry the task, because there is no task folder: `<task>[-<variant>][-<size>][-<precision>][-<feature>].json`, for example `Generation/Krea-2/txt2img-simple-int8-lora.json`, `Editing/Krea-2/outfit-transfer-v2.json`, `Enhancement/SeedVR2/upscale-7b-int8-native.json`. The model name is not repeated in the file name. Names are lowercase kebab-case and unique inside their folder; `-api` marks API-format graphs and `epNN` the tutorial episode a variant came from.
+- **Common task prefixes:** `txt2img`, `img2img`, `img2prompt2img`, `controlnet`, `edit`, `multi-edit`, `inpaint`, `outpaint`, `object-removal`, `remove-background`, `outfit-change`, `relight`, `identity`, `reference`, `try-on`, `segment`, `depth-map`, `upscale`; `txt2video`, `img2video`, `ref2video`, `long-video`, `talking-avatar`, `lip-sync`, `character-swap`, `motion-transfer`, `frame-interpolation`; `txt2music`, `lyrics2song`, `cover`, `stem-split`, `tts`, `voice-clone`, `voice-design`, `voice-conversion`, `stt`, `subtitles`.
 
 ## Model families
 

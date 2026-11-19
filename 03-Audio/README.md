@@ -2,45 +2,63 @@
 
 229 ComfyUI workflows for music and speech: song and instrumental generation, covers and editing, sound effects, singing voices, music analysis and transcription, stem separation, text-to-speech and voice cloning, voice conversion, speech clean-up, speech-to-text and subtitles, speech translation and forced alignment.
 
-Workflows are grouped by **what they do**. Each workflow has one folder; the two large speech folders keep one subfolder per model family. Every category README has a table per subcategory with the workflow link, what it does, the models and custom nodes it needs, and the licence, VRAM and test notes that were recorded for it.
+Workflows are grouped into two categories, **Music** and **Speech**, and inside each category into one folder per model (Speech mixes TTS, voice-conversion and speech-to-text models, one folder each). Each file name starts with the task (`tts-`, `voice-clone-`, `stt-`, `txt2music-`, `stem-split-` ...). Every category README has one table per model folder with the workflow link, what it does, the models and custom nodes it needs, and the licence, VRAM and test notes that were recorded for it.
 
 ## Folders
 
-| Category | Subfolder | What is inside | Workflows |
+| Category | What is inside | Model folders | Workflows |
 |---|---|---|---|
-| **[Music](Music/README.md)** (80) | [`Text-to-Music-and-Songs/`](Music/Text-to-Music-and-Songs) | Text, lyrics, style or image to full songs, instrumentals, loops and general audio | 37 |
-| | [`Covers-Remixing-and-Editing/`](Music/Covers-Remixing-and-Editing) | Covers, style transfer, repaint, extend, add tracks, edit sections | 15 |
-| | [`Music-LoRA-and-Training/`](Music/Music-LoRA-and-Training) | Generate with a music LoRA, or train one | 4 |
-| | [`Sound-Effects-and-Ambience/`](Music/Sound-Effects-and-Ambience) | Text- and video-to-sound effects and foley | 3 |
-| | [`Singing-Voice-Synthesis/`](Music/Singing-Voice-Synthesis) | Melody / lyrics to a sung vocal, re-singing, lyric editing | 3 |
-| | [`Music-Analysis-and-Captioning/`](Music/Music-Analysis-and-Captioning) | Describe and caption music (genre, BPM, key, tags) | 3 |
-| | [`Music-Transcription-and-MIDI/`](Music/Music-Transcription-and-MIDI) | Audio to MIDI, ABC score and sung lyrics | 5 |
-| | [`Stem-Separation/`](Music/Stem-Separation) | Vocal, instrument and drum stem extraction | 10 |
-| **[Speech](Speech/README.md)** (149) | [`Text-to-Speech-and-Voice-Cloning/`](Speech/Text-to-Speech-and-Voice-Cloning/README.md) | Text-to-speech, voice cloning, voice design, multi-speaker dialogue, speech editing; one subfolder per model family | 110 |
-| | [`Voice-Conversion/`](Speech/Voice-Conversion) | Speech-to-speech voice conversion and voice changers | 7 |
-| | [`Speech-Enhancement-and-Cleanup/`](Speech/Speech-Enhancement-and-Cleanup) | Denoise, enhance, isolate a speaker | 5 |
-| | [`Speech-to-Text-and-Subtitles/`](Speech/Speech-to-Text-and-Subtitles/README.md) | Speech recognition, subtitles, diarisation; one subfolder per model family | 22 |
-| | [`Speech-Translation/`](Speech/Speech-Translation) | Speech-to-speech and transcribe-translate-revoice | 2 |
-| | [`Forced-Alignment/`](Speech/Forced-Alignment) | Align a script, SRT or lyric file to audio with word timestamps | 3 |
+| **[Music](Music/README.md)** | Songs, instrumentals and general audio from text, lyrics or images; covers, remixing and section edits; music LoRAs; sound effects; singing voice; music captioning and transcription to MIDI / ABC / lyrics; stem separation. | [ACE-Step-1](Music/ACE-Step-1), [ACE-Step-1.5](Music/ACE-Step-1.5), [AudioLDM2](Music/AudioLDM2), [AudioX](Music/AudioX), [Basic-Pitch](Music/Basic-Pitch), [Demucs](Music/Demucs), [DiffRhythm](Music/DiffRhythm), [Foundation-1](Music/Foundation-1), [HeartMuLa](Music/HeartMuLa), [MiniMax-Music](Music/MiniMax-Music), [MulaCover](Music/MulaCover), [MuScriptor](Music/MuScriptor), [Music-Flamingo](Music/Music-Flamingo), [MusicGen](Music/MusicGen), [Pika](Music/Pika), [RoFormer](Music/RoFormer), [SheetSage](Music/SheetSage), [SongBloom](Music/SongBloom), [SongGeneration](Music/SongGeneration), [Sonilo](Music/Sonilo), [SoulX-Singer](Music/SoulX-Singer), [Stable-Audio](Music/Stable-Audio), [Woosh](Music/Woosh), [YuE](Music/YuE), [Other](Music/Other) | 80 |
+| **[Speech](Speech/README.md)** | Text-to-speech, voice cloning, voice design and dialogue; voice conversion; speech enhancement and voice isolation; speech-to-text, subtitles and diarisation; speech translation; forced alignment. | [Bark](Speech/Bark), [Chatterbox](Speech/Chatterbox), [ChatTTS](Speech/ChatTTS), [ClearVoice](Speech/ClearVoice), [CosyVoice](Speech/CosyVoice), [Dia](Speech/Dia), [DramaBox](Speech/DramaBox), [ElevenLabs](Speech/ElevenLabs), [F5-TTS](Speech/F5-TTS), [FireRedTTS](Speech/FireRedTTS), [Fish-Speech](Speech/Fish-Speech), [FunASR](Speech/FunASR), [GPT-SoVITS](Speech/GPT-SoVITS), [Hibiki](Speech/Hibiki), [Higgs-Audio](Speech/Higgs-Audio), [IndexTTS](Speech/IndexTTS), [Kani-TTS](Speech/Kani-TTS), [Kitten-TTS](Speech/Kitten-TTS), [Kokoro](Speech/Kokoro), [Kyutai](Speech/Kyutai), [MARS5](Speech/MARS5), [MaskGCT](Speech/MaskGCT), [Maya](Speech/Maya), [Mega-ASR](Speech/Mega-ASR), [MeloTTS](Speech/MeloTTS), [MisoTTS](Speech/MisoTTS), [MOSS](Speech/MOSS), [Nemotron](Speech/Nemotron), [NeuTTS](Speech/NeuTTS), [OmniVoice](Speech/OmniVoice), [OpenVoice](Speech/OpenVoice), [Orpheus](Speech/Orpheus), [Parakeet](Speech/Parakeet), [Parler-TTS](Speech/Parler-TTS), [Qwen3-ASR](Speech/Qwen3-ASR), [Qwen3-TTS](Speech/Qwen3-TTS), [RVC](Speech/RVC), [Seed-VC](Speech/Seed-VC), [SenseVoice](Speech/SenseVoice), [Sesame-CSM](Speech/Sesame-CSM), [Spark-TTS](Speech/Spark-TTS), [Step-Audio](Speech/Step-Audio), [Supertonic](Speech/Supertonic), [VibeVoice](Speech/VibeVoice), [VoiceBridge](Speech/VoiceBridge), [VoxCPM](Speech/VoxCPM), [VoxLock](Speech/VoxLock), [Whisper](Speech/Whisper), [ZipVoice](Speech/ZipVoice), [Zonos](Speech/Zonos), [Other](Speech/Other) | 149 |
 | **Total** | | | **229** |
 
 ### Finding a task
 
-| I want to… | Look in |
-|---|---|
-| Make a song or instrumental from text / lyrics | [Music → Text to music and full songs](Music/README.md#text-to-music-and-full-songs) |
-| Cover, remix, extend or repaint a song | [Music → Covers, remixing and editing](Music/README.md#covers-remixing-and-editing) |
-| Train or use a music LoRA | [Music → Music LoRA and fine-tuning](Music/README.md#music-lora-and-fine-tuning) |
-| Make sound effects or foley | [Music → Sound effects and ambience](Music/README.md#sound-effects-and-ambience) |
-| Synthesise or re-sing a vocal | [Music → Singing voice synthesis](Music/README.md#singing-voice-synthesis) |
-| Caption or analyse a song, transcribe to MIDI / ABC / lyrics | [Music analysis](Music/README.md#music-analysis-and-captioning), [Music transcription](Music/README.md#music-transcription-lyrics-and-midi) |
-| Split vocals and instruments | [Music → Stem separation](Music/README.md#stem-separation-and-vocal-extraction) |
-| Text-to-speech, voice cloning, voice design, dialogue | [Text-to-Speech README](Speech/Text-to-Speech-and-Voice-Cloning/README.md) (with a find-by-task index) |
-| Change one voice into another | [Speech → Voice conversion](Speech/README.md#voice-conversion) |
-| Clean up or isolate speech | [Speech → Speech enhancement and clean-up](Speech/README.md#speech-enhancement-and-clean-up) |
-| Transcribe, subtitle or diarise speech | [Speech-to-Text README](Speech/Speech-to-Text-and-Subtitles/README.md) |
-| Translate speech | [Speech → Speech translation](Speech/README.md#speech-translation) |
-| Get word timestamps for a known script | [Speech → Forced alignment](Speech/README.md#forced-alignment) |
+| Task (file name prefix) | Where | Model folders |
+|---|---|---|
+| `add-tracks` | [Music](Music/README.md) | [ACE-Step-1.5](Music/README.md#ace-step-15) |
+| `audio2abc` | [Music](Music/README.md) | [SheetSage](Music/README.md#sheetsage) |
+| `audio2audio` | [Music](Music/README.md) | [ACE-Step-1](Music/README.md#ace-step-1), [ACE-Step-1.5](Music/README.md#ace-step-15) |
+| `audio2midi` | [Music](Music/README.md) | [Basic-Pitch](Music/README.md#basic-pitch), [MuScriptor](Music/README.md#muscriptor) |
+| `caption` | [Music](Music/README.md) | [ACE-Step-1.5](Music/README.md#ace-step-15) |
+| `caption-song-analysis` | [Music](Music/README.md) | [Music-Flamingo](Music/README.md#music-flamingo) |
+| `caption-understand-audio` | [Music](Music/README.md) | [ACE-Step-1.5](Music/README.md#ace-step-15) |
+| `cover` | [Music](Music/README.md) | [ACE-Step-1.5](Music/README.md#ace-step-15), [DiffRhythm](Music/README.md#diffrhythm), [MulaCover](Music/README.md#mulacover), [YuE](Music/README.md#yue) |
+| `extend-complete` | [Music](Music/README.md) | [ACE-Step-1.5](Music/README.md#ace-step-15) |
+| `forced-alignment` | [Speech](Speech/README.md) | [Qwen3-ASR](Speech/README.md#qwen3-asr), [Other](Speech/README.md#other) |
+| `img2music` | [Music](Music/README.md) | [AudioLDM2](Music/README.md#audioldm2), [Stable-Audio](Music/README.md#stable-audio) |
+| `lora-training` | [Music](Music/README.md) | [ACE-Step-1.5](Music/README.md#ace-step-15) |
+| `lyrics-transcribe` | [Music](Music/README.md) | [ACE-Step-1.5](Music/README.md#ace-step-15), [HeartMuLa](Music/README.md#heartmula) |
+| `lyrics2song` | [Music](Music/README.md) | [ACE-Step-1.5](Music/README.md#ace-step-15), [DiffRhythm](Music/README.md#diffrhythm), [HeartMuLa](Music/README.md#heartmula), [SongBloom](Music/README.md#songbloom), [SongGeneration](Music/README.md#songgeneration), [YuE](Music/README.md#yue) |
+| `remix` | [Music](Music/README.md) | [Demucs](Music/README.md#demucs), [MulaCover](Music/README.md#mulacover) |
+| `repaint-section` | [Music](Music/README.md) | [ACE-Step-1.5](Music/README.md#ace-step-15), [DiffRhythm](Music/README.md#diffrhythm) |
+| `singing-voice` | [Music](Music/README.md) | [SoulX-Singer](Music/README.md#soulx-singer) |
+| `sound-effects` | [Music](Music/README.md) | [AudioX](Music/README.md#audiox), [Stable-Audio](Music/README.md#stable-audio), [Woosh](Music/README.md#woosh) |
+| `speech-edit` | [Speech](Speech/README.md) | [F5-TTS](Speech/README.md#f5-tts), [Step-Audio](Speech/README.md#step-audio) |
+| `speech-enhance` | [Speech](Speech/README.md) | [ClearVoice](Speech/README.md#clearvoice), [Other](Speech/README.md#other) |
+| `speech-translation` | [Speech](Speech/README.md) | [Hibiki](Speech/README.md#hibiki), [VoiceBridge](Speech/README.md#voicebridge) |
+| `stem-split` | [Music](Music/README.md) | [ACE-Step-1.5](Music/README.md#ace-step-15), [Demucs](Music/README.md#demucs), [RoFormer](Music/README.md#roformer), [Other](Music/README.md#other) |
+| `stt` | [Speech](Speech/README.md) | [ElevenLabs](Speech/README.md#elevenlabs), [Fish-Speech](Speech/README.md#fish-speech), [Mega-ASR](Speech/README.md#mega-asr), [MOSS](Speech/README.md#moss), [Nemotron](Speech/README.md#nemotron), [Qwen3-ASR](Speech/README.md#qwen3-asr), [SenseVoice](Speech/README.md#sensevoice), [Whisper](Speech/README.md#whisper) |
+| `style-transfer` | [Music](Music/README.md) | [HeartMuLa](Music/README.md#heartmula), [SongGeneration](Music/README.md#songgeneration) |
+| `subtitles` | [Speech](Speech/README.md) | [FunASR](Speech/README.md#funasr), [Parakeet](Speech/README.md#parakeet), [Qwen3-ASR](Speech/README.md#qwen3-asr), [Whisper](Speech/README.md#whisper), [Other](Speech/README.md#other) |
+| `tts` | [Speech](Speech/README.md) | [Bark](Speech/README.md#bark), [Chatterbox](Speech/README.md#chatterbox), [ChatTTS](Speech/README.md#chattts), [CosyVoice](Speech/README.md#cosyvoice), [Dia](Speech/README.md#dia), [DramaBox](Speech/README.md#dramabox), [ElevenLabs](Speech/README.md#elevenlabs), [F5-TTS](Speech/README.md#f5-tts), [FireRedTTS](Speech/README.md#fireredtts), [Fish-Speech](Speech/README.md#fish-speech), [GPT-SoVITS](Speech/README.md#gpt-sovits), [Higgs-Audio](Speech/README.md#higgs-audio), [IndexTTS](Speech/README.md#indextts), [Kani-TTS](Speech/README.md#kani-tts), [Kitten-TTS](Speech/README.md#kitten-tts), [Kokoro](Speech/README.md#kokoro), [Kyutai](Speech/README.md#kyutai), [MaskGCT](Speech/README.md#maskgct), [Maya](Speech/README.md#maya), [MeloTTS](Speech/README.md#melotts), [MisoTTS](Speech/README.md#misotts), [OmniVoice](Speech/README.md#omnivoice), [Orpheus](Speech/README.md#orpheus), [Parler-TTS](Speech/README.md#parler-tts), [Qwen3-TTS](Speech/README.md#qwen3-tts), [Sesame-CSM](Speech/README.md#sesame-csm), [Supertonic](Speech/README.md#supertonic), [VibeVoice](Speech/README.md#vibevoice), [ZipVoice](Speech/README.md#zipvoice), [Zonos](Speech/README.md#zonos) |
+| `tts-and-voice-clone` | [Speech](Speech/README.md) | [VoxCPM](Speech/README.md#voxcpm) |
+| `tts-and-voice-conversion` | [Speech](Speech/README.md) | [OpenVoice](Speech/README.md#openvoice) |
+| `tts-dialogue` | [Speech](Speech/README.md) | [Chatterbox](Speech/README.md#chatterbox), [ElevenLabs](Speech/README.md#elevenlabs), [Fish-Speech](Speech/README.md#fish-speech), [IndexTTS](Speech/README.md#indextts), [MOSS](Speech/README.md#moss), [Sesame-CSM](Speech/README.md#sesame-csm), [VibeVoice](Speech/README.md#vibevoice) |
+| `txt2audio` | [Music](Music/README.md) | [Stable-Audio](Music/README.md#stable-audio) |
+| `txt2music` | [Music](Music/README.md) | [ACE-Step-1](Music/README.md#ace-step-1), [ACE-Step-1.5](Music/README.md#ace-step-15), [AudioX](Music/README.md#audiox), [Foundation-1](Music/README.md#foundation-1), [MiniMax-Music](Music/README.md#minimax-music), [MusicGen](Music/README.md#musicgen), [Pika](Music/README.md#pika), [Sonilo](Music/README.md#sonilo), [Stable-Audio](Music/README.md#stable-audio) |
+| `voice-clone` | [Speech](Speech/README.md) | [CosyVoice](Speech/README.md#cosyvoice), [Dia](Speech/README.md#dia), [F5-TTS](Speech/README.md#f5-tts), [Fish-Speech](Speech/README.md#fish-speech), [Higgs-Audio](Speech/README.md#higgs-audio), [IndexTTS](Speech/README.md#indextts), [MARS5](Speech/README.md#mars5), [Maya](Speech/README.md#maya), [MOSS](Speech/README.md#moss), [NeuTTS](Speech/README.md#neutts), [Orpheus](Speech/README.md#orpheus), [Qwen3-TTS](Speech/README.md#qwen3-tts), [Sesame-CSM](Speech/README.md#sesame-csm), [Spark-TTS](Speech/README.md#spark-tts), [Step-Audio](Speech/README.md#step-audio), [VoxCPM](Speech/README.md#voxcpm), [Zonos](Speech/README.md#zonos) |
+| `voice-conversion` | [Speech](Speech/README.md) | [Chatterbox](Speech/README.md#chatterbox), [ElevenLabs](Speech/README.md#elevenlabs), [RVC](Speech/README.md#rvc), [Seed-VC](Speech/README.md#seed-vc) |
+| `voice-design` | [Speech](Speech/README.md) | [MOSS](Speech/README.md#moss), [Qwen3-TTS](Speech/README.md#qwen3-tts), [Zonos](Speech/README.md#zonos), [Other](Speech/README.md#other) |
+| `voice-isolation` | [Speech](Speech/README.md) | [ElevenLabs](Speech/README.md#elevenlabs), [VoxLock](Speech/README.md#voxlock) |
+| `voice-training` | [Speech](Speech/README.md) | [GPT-SoVITS](Speech/README.md#gpt-sovits), [RVC](Speech/README.md#rvc), [VoxCPM](Speech/README.md#voxcpm) |
+
+## Naming and folder convention
+
+- **Folders:** exactly three levels, `<section>/<Category>/<Model>/<file>.json`. Image and Video use the categories `Generation` (creates a new image or video), `Editing` (changes or analyses an existing one) and `Enhancement` (Image: upscaling only; Video: upscaling and frame interpolation). Audio uses `Music` and `Speech`. A model folder holds only workflow files, however many there are; there are no task subfolders.
+- **Model folders** are TitleCase with hyphens and use one spelling across all sections (`Krea-2`, `FLUX-2`, `Qwen-Image`, `Wan-2.2`, `LTX-2`, `MiniMax-H3`, `ACE-Step-1.5`, `Qwen3-TTS`, `Whisper` ...). Generic, utility and multi-model workflows go in `Other/`.
+- **File names** carry the task, because there is no task folder: `<task>[-<variant>][-<size>][-<precision>][-<feature>].json`, for example `Generation/Krea-2/txt2img-simple-int8-lora.json`, `Editing/Krea-2/outfit-transfer-v2.json`, `Enhancement/SeedVR2/upscale-7b-int8-native.json`. The model name is not repeated in the file name. Names are lowercase kebab-case and unique inside their folder; `-api` marks API-format graphs and `epNN` the tutorial episode a variant came from.
+- **Common task prefixes:** `txt2img`, `img2img`, `img2prompt2img`, `controlnet`, `edit`, `multi-edit`, `inpaint`, `outpaint`, `object-removal`, `remove-background`, `outfit-change`, `relight`, `identity`, `reference`, `try-on`, `segment`, `depth-map`, `upscale`; `txt2video`, `img2video`, `ref2video`, `long-video`, `talking-avatar`, `lip-sync`, `character-swap`, `motion-transfer`, `frame-interpolation`; `txt2music`, `lyrics2song`, `cover`, `stem-split`, `tts`, `voice-clone`, `voice-design`, `voice-conversion`, `stt`, `subtitles`.
 
 ## Model coverage
 
