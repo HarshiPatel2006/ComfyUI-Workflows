@@ -29,6 +29,15 @@ All video workflows in the library: **239 workflows** in five categories — tex
 
 Atlas coverage, entry by entry: [COVERAGE.md](COVERAGE.md).
 
+## Naming and folder convention
+
+Same convention as [01-Image](../01-Image/README.md#naming-and-folder-convention).
+
+- **Folders:** `<Category>/<Task>/`. A task folder with more than 8 workflows is split into model-family subfolders (`MiniMax-H3/`, `Wan-2.1/`, `Wan-2.2/`, `LTX-2/`, `LTX-Video/`, `HunyuanVideo/`, `Kandinsky/`, `CogVideoX/`, `Cosmos/`, `SeedVR2/`, `DubSync/`, `EchoMimic/`, `Hallo/`, `LivePortrait/` ...); a family with only one workflow in that folder goes to `Other/`. Smaller task folders stay flat.
+- **Inside a model-family folder** the folder already names the model and the task folder names the task, so files carry only what tells siblings apart: `<variant>[-<size>][-<precision>][-<feature>].json`, for example `Image-to-Video/Wan-2.2/14b-first-last-frame.json`, `Text-to-Video/MiniMax-H3/speed-lora.json`, `Video-Upscaling/SeedVR2/1080p-api.json`. The plain default of a family is `base.json`; sub-versions inside a family folder are `v<digits>` (`LTX-2/v25-...` for LTX-2.5, `HunyuanVideo/v15-...` for 1.5); MiniMax FastH3 and Pika-H3-Flex builds live in `MiniMax-H3/` with a `fasth3-` or `pika-flex-` prefix; `-api` marks API-format (prompt) exports.
+- **In flat folders and `Other/`** the model stays in the name: `<model>-<task>[-<key-variant>].json`, for example `Reference-to-Video/wan-21-phantom-14b-multi-subject.json`.
+- **Always:** lowercase kebab-case (`a-z`, `0-9`, single hyphens), at most 60 characters, no source prefixes, list numbers or episode tags unless they are the only difference between two siblings (`first-last-frame-ep41.json`, `character-swap-sam3-run05-480p-api.json`). Version dots are dropped (`wan-2.1` -> `wan-21`, `1.3b` -> `13b`, `0.9.5` -> `v095`).
+
 ## Model families
 
 - **Foundation and image-to-video:** Wan 2.1 / 2.2 (T2V, I2V, FLF2V, TI2V 5B, Wan-Alpha, GGUF + Lightx2v), LTX-Video 0.9.x, LTX-2 / 2.3 / 2.5 (with audio), MiniMax H3 / FastH3 / Pika-H3-Flex, HunyuanVideo and HunyuanVideo 1.5, Kandinsky 5 Lite and Kandinsky 6, CogVideoX, Mochi 1, Cosmos 1 and Cosmos-Predict2, Pyramid Flow, Stable Video Diffusion, DynamiCrafter, ToonCrafter, AnimateDiff / AnimateLCM, Capybara, Causal Forcing.
