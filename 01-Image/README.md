@@ -1,51 +1,84 @@
 # Image — ComfyUI workflows
 
-All image workflows in the library: **453 workflows** in four categories. Each category README lists every workflow with what it does, the models it loads, the custom nodes it needs and, for the Open-Source Image Model Atlas additions (Nov 2026), the original source, model download link and licence. The atlas additions were checked to be valid ComfyUI workflow JSON for their model and task; they have **not** been runtime-tested.
+All image workflows in the library: **453 workflows** in three categories. Each category README lists every workflow with what it does, the models it loads, the custom nodes it needs and, for the Open-Source Image Model Atlas additions (Nov 2026), the original source, model download link and licence. The atlas additions were checked to be valid ComfyUI workflow JSON for their model and task; they have **not** been runtime-tested.
 
 ## Folders
 
-| Category | Subfolder | Workflows |
+| Category | What is inside | Model folders | Workflows |
+|---|---|---|---|
+| **[Generation](Generation/README.md)** | Workflows that create a new image: text-to-image, ControlNet- and layout-guided generation, LLM prompt enhancers and image-to-prompt-to-image, prompt batches, character sheets, design (logos, posters, text in images) and transparent PNGs. | [Anima](Generation/Anima), [AuraFlow](Generation/AuraFlow), [Boogu](Generation/Boogu), [Chroma](Generation/Chroma), [ERNIE-Image](Generation/ERNIE-Image), [FLUX-1](Generation/FLUX-1), [FLUX-2](Generation/FLUX-2), [FLUX-3](Generation/FLUX-3), [GLIGEN](Generation/GLIGEN), [HiDream](Generation/HiDream), [HunyuanImage](Generation/HunyuanImage), [Janus-Pro](Generation/Janus-Pro), [Kandinsky](Generation/Kandinsky), [Kolors](Generation/Kolors), [Krea-2](Generation/Krea-2), [LayerDiffusion](Generation/LayerDiffusion), [Lens](Generation/Lens), [LongCat-Image](Generation/LongCat-Image), [Lumina-Image-2](Generation/Lumina-Image-2), [Ming-Image](Generation/Ming-Image), [MiniMax-H3](Generation/MiniMax-H3), [MOSS-Image](Generation/MOSS-Image), [P-H3](Generation/P-H3), [PixArt-Alpha](Generation/PixArt-Alpha), [Qwen-Image](Generation/Qwen-Image), [Sana](Generation/Sana), [SD15](Generation/SD15), [SD3](Generation/SD3), [SDXL](Generation/SDXL), [Stable-Cascade](Generation/Stable-Cascade), [Z-Image](Generation/Z-Image), [Other](Generation/Other) | 178 |
+| **[Editing](Editing/README.md)** | Workflows that change or analyse an existing image: instruction edits, multi-image edits, inpaint / outpaint / object removal, outfit and pose changes, sketch- and 3D-to-image, relighting, identity and reference adapters, restoration (face, denoise, low-light, colorization), filters, background removal, segmentation, depth, pose, captioning / OCR, LayerDiffusion layers and virtual try-on. | [Anima](Editing/Anima), [AnyDoor](Editing/AnyDoor), [BiRefNet](Editing/BiRefNet), [Boogu](Editing/Boogu), [CatVTON](Editing/CatVTON), [CodeFormer](Editing/CodeFormer), [DDColor](Editing/DDColor), [Depth-Anything](Editing/Depth-Anything), [DiffBIR](Editing/DiffBIR), [DWPose](Editing/DWPose), [FIBO](Editing/FIBO), [Florence-2](Editing/Florence-2), [FLUX-1](Editing/FLUX-1), [FLUX-2](Editing/FLUX-2), [FLUX-3](Editing/FLUX-3), [GFPGAN](Editing/GFPGAN), [GPEN](Editing/GPEN), [Grounding-DINO](Editing/Grounding-DINO), [HiDream](Editing/HiDream), [IC-Light](Editing/IC-Light), [IDM-VTON](Editing/IDM-VTON), [InstantID](Editing/InstantID), [InstructPix2Pix](Editing/InstructPix2Pix), [IP-Adapter](Editing/IP-Adapter), [Kolors](Editing/Kolors), [Krea-2](Editing/Krea-2), [LaMa](Editing/LaMa), [LayerDiffusion](Editing/LayerDiffusion), [Leffa](Editing/Leffa), [LongCat-Image](Editing/LongCat-Image), [MagicQuill](Editing/MagicQuill), [Marigold](Editing/Marigold), [MiDaS](Editing/MiDaS), [Ming-Image](Editing/Ming-Image), [MiniMax-H3](Editing/MiniMax-H3), [MOSS-Image](Editing/MOSS-Image), [NAFNet](Editing/NAFNet), [OmniGen](Editing/OmniGen), [OOTDiffusion](Editing/OOTDiffusion), [P-H3](Editing/P-H3), [Paint-by-Example](Editing/Paint-by-Example), [PhotoMaker](Editing/PhotoMaker), [PowerPaint](Editing/PowerPaint), [PuLID](Editing/PuLID), [Qwen-Image](Editing/Qwen-Image), [Restormer](Editing/Restormer), [Retinexformer](Editing/Retinexformer), [RMBG](Editing/RMBG), [SAM-3](Editing/SAM-3), [SCUNet](Editing/SCUNet), [SD15](Editing/SD15), [SDXL](Editing/SDXL), [Stable-Cascade](Editing/Stable-Cascade), [StoryMaker](Editing/StoryMaker), [WD14-Tagger](Editing/WD14-Tagger), [Other](Editing/Other) | 243 |
+| **[Enhancement](Enhancement/README.md)** | Image upscaling only: GAN / transformer upscale models, SeedVR2, tiled-diffusion and creative upscalers, diffusion super-resolution (SUPIR, CCSR, StableSR, DiffBIR) and paid API upscalers. | [CCSR](Enhancement/CCSR), [DiffBIR](Enhancement/DiffBIR), [FLUX-1](Enhancement/FLUX-1), [MOSS-Image](Enhancement/MOSS-Image), [P-H3](Enhancement/P-H3), [Paid-API](Enhancement/Paid-API), [Real-ESRGAN](Enhancement/Real-ESRGAN), [SeedVR2](Enhancement/SeedVR2), [StableSR](Enhancement/StableSR), [SUPIR](Enhancement/SUPIR), [Z-Image](Enhancement/Z-Image), [Other](Enhancement/Other) | 32 |
+| **Total** | | | **453** |
+
+### Finding a task
+
+| Task (file name prefix) | Where | Model folders |
 |---|---|---|
-| [Image-Generation](Image-Generation/README.md) | | 202 |
-| | [ControlNet-Guided](Image-Generation/ControlNet-Guided) | 15 |
-| | [Design-Typography-and-Transparent](Image-Generation/Design-Typography-and-Transparent) | 16 |
-| | [Edit-Inpaint-and-Reference](Image-Generation/Edit-Inpaint-and-Reference) | 34 |
-| | [LLM-Prompt-Assisted](Image-Generation/LLM-Prompt-Assisted) | 29 |
-| | [Prompt-Batching-and-Variations](Image-Generation/Prompt-Batching-and-Variations) | 17 |
-| | [Text-to-Image](Image-Generation/Text-to-Image) | 91 |
-| [Image-Editing](Image-Editing/README.md) | | 176 |
-| | [Background-Removal](Image-Editing/Background-Removal) | 5 |
-| | [Character-Outfit-and-Pose](Image-Editing/Character-Outfit-and-Pose) | 12 |
-| | [Compositing-and-Image-Tools](Image-Editing/Compositing-and-Image-Tools) | 15 |
-| | [ControlNet-and-Adapters](Image-Editing/ControlNet-and-Adapters) | 9 |
-| | [Inpaint-Outpaint-and-Object-Removal](Image-Editing/Inpaint-Outpaint-and-Object-Removal) | 28 |
-| | [Multi-Image-Composition](Image-Editing/Multi-Image-Composition) | 27 |
-| | [Reference-and-Identity](Image-Editing/Reference-and-Identity) | 25 |
-| | [Relighting](Image-Editing/Relighting) | 5 |
-| | [Single-Image-Edit](Image-Editing/Single-Image-Edit) | 41 |
-| | [Sketch-and-3D-to-Image](Image-Editing/Sketch-and-3D-to-Image) | 9 |
-| [Image-Enhancement](Image-Enhancement/README.md) | | 44 |
-| | [Colorization](Image-Enhancement/Colorization) | 1 |
-| | [Denoise-Deblur-and-Low-Light](Image-Enhancement/Denoise-Deblur-and-Low-Light) | 4 |
-| | [Diffusion-Restoration](Image-Enhancement/Diffusion-Restoration) | 9 |
-| | [Face-Restoration](Image-Enhancement/Face-Restoration) | 3 |
-| | [Filters-and-Color-Grading](Image-Enhancement/Filters-and-Color-Grading) | 2 |
-| | [Upscaling](Image-Enhancement/Upscaling) | 25 |
-| [Image-Specialized-and-Supporting](Image-Specialized-and-Supporting/README.md) | | 31 |
-| | [Background-Removal](Image-Specialized-and-Supporting/Background-Removal) | 1 |
-| | [Captioning-OCR-and-Tagging](Image-Specialized-and-Supporting/Captioning-OCR-and-Tagging) | 5 |
-| | [Depth-Estimation](Image-Specialized-and-Supporting/Depth-Estimation) | 7 |
-| | [Pose-Estimation](Image-Specialized-and-Supporting/Pose-Estimation) | 1 |
-| | [Segmentation-and-Detection](Image-Specialized-and-Supporting/Segmentation-and-Detection) | 5 |
-| | [Transparent-Layers](Image-Specialized-and-Supporting/Transparent-Layers) | 6 |
-| | [Virtual-Try-On](Image-Specialized-and-Supporting/Virtual-Try-On) | 6 |
+| `3d-to-image` | [Editing](Editing/README.md) | [FLUX-2](Editing/README.md#flux-2) |
+| `caption` | [Editing](Editing/README.md) | [Florence-2](Editing/README.md#florence-2) |
+| `character-sheet` | [Generation](Generation/README.md) | [Z-Image](Generation/README.md#z-image) |
+| `character-sheet` | [Editing](Editing/README.md) | [FLUX-2](Editing/README.md#flux-2), [FLUX-3](Editing/README.md#flux-3), [P-H3](Editing/README.md#p-h3), [Qwen-Image](Editing/README.md#qwen-image) |
+| `character-turnaround` | [Editing](Editing/README.md) | [FLUX-2](Editing/README.md#flux-2) |
+| `colorize` | [Editing](Editing/README.md) | [DDColor](Editing/README.md#ddcolor) |
+| `controlnet` | [Generation](Generation/README.md) | [Anima](Generation/README.md#anima), [FLUX-1](Generation/README.md#flux-1), [MOSS-Image](Generation/README.md#moss-image), [Qwen-Image](Generation/README.md#qwen-image), [SD15](Generation/README.md#sd15), [SD3](Generation/README.md#sd3), [SDXL](Generation/README.md#sdxl), [Stable-Cascade](Generation/README.md#stable-cascade), [Z-Image](Generation/README.md#z-image) |
+| `denoise` | [Editing](Editing/README.md) | [DiffBIR](Editing/README.md#diffbir), [NAFNet](Editing/README.md#nafnet), [Restormer](Editing/README.md#restormer), [SCUNet](Editing/README.md#scunet) |
+| `depth-map` | [Editing](Editing/README.md) | [Depth-Anything](Editing/README.md#depth-anything), [Marigold](Editing/README.md#marigold), [MiDaS](Editing/README.md#midas) |
+| `design` | [Generation](Generation/README.md) | [Ming-Image](Generation/README.md#ming-image) |
+| `document-vqa` | [Editing](Editing/README.md) | [Florence-2](Editing/README.md#florence-2) |
+| `edit` | [Editing](Editing/README.md) | [Boogu](Editing/README.md#boogu), [FIBO](Editing/README.md#fibo), [FLUX-1](Editing/README.md#flux-1), [FLUX-2](Editing/README.md#flux-2), [FLUX-3](Editing/README.md#flux-3), [HiDream](Editing/README.md#hidream), [InstructPix2Pix](Editing/README.md#instructpix2pix), [Krea-2](Editing/README.md#krea-2), [LongCat-Image](Editing/README.md#longcat-image), [MagicQuill](Editing/README.md#magicquill), [Ming-Image](Editing/README.md#ming-image), [MiniMax-H3](Editing/README.md#minimax-h3), [MOSS-Image](Editing/README.md#moss-image), [OmniGen](Editing/README.md#omnigen), [P-H3](Editing/README.md#p-h3), [Qwen-Image](Editing/README.md#qwen-image) |
+| `face-restore` | [Editing](Editing/README.md) | [CodeFormer](Editing/README.md#codeformer), [DiffBIR](Editing/README.md#diffbir), [GFPGAN](Editing/README.md#gfpgan), [GPEN](Editing/README.md#gpen) |
+| `filters` | [Editing](Editing/README.md) | [Other](Editing/README.md#other) |
+| `identity` | [Editing](Editing/README.md) | [InstantID](Editing/README.md#instantid), [IP-Adapter](Editing/README.md#ip-adapter), [PhotoMaker](Editing/README.md#photomaker), [PuLID](Editing/README.md#pulid), [StoryMaker](Editing/README.md#storymaker) |
+| `image-blend` | [Editing](Editing/README.md) | [Other](Editing/README.md#other) |
+| `image-combiner` | [Editing](Editing/README.md) | [Other](Editing/README.md#other) |
+| `image-scale` | [Editing](Editing/README.md) | [Other](Editing/README.md#other) |
+| `image-stitch` | [Editing](Editing/README.md) | [Other](Editing/README.md#other) |
+| `image-transformation` | [Editing](Editing/README.md) | [Other](Editing/README.md#other) |
+| `img2img` | [Editing](Editing/README.md) | [Kolors](Editing/README.md#kolors), [SD15](Editing/README.md#sd15), [Stable-Cascade](Editing/README.md#stable-cascade) |
+| `img2prompt2img` | [Generation](Generation/README.md) | [FLUX-2](Generation/README.md#flux-2), [FLUX-3](Generation/README.md#flux-3), [Krea-2](Generation/README.md#krea-2), [MOSS-Image](Generation/README.md#moss-image), [Qwen-Image](Generation/README.md#qwen-image), [Z-Image](Generation/README.md#z-image) |
+| `inpaint` | [Editing](Editing/README.md) | [Anima](Editing/README.md#anima), [FLUX-1](Editing/README.md#flux-1), [FLUX-2](Editing/README.md#flux-2), [FLUX-3](Editing/README.md#flux-3), [Kolors](Editing/README.md#kolors), [P-H3](Editing/README.md#p-h3), [Qwen-Image](Editing/README.md#qwen-image), [SD15](Editing/README.md#sd15), [SDXL](Editing/README.md#sdxl), [Stable-Cascade](Editing/README.md#stable-cascade) |
+| `layers` | [Editing](Editing/README.md) | [LayerDiffusion](Editing/README.md#layerdiffusion) |
+| `layout` | [Generation](Generation/README.md) | [GLIGEN](Generation/README.md#gligen) |
+| `low-light-enhance` | [Editing](Editing/README.md) | [Retinexformer](Editing/README.md#retinexformer) |
+| `multi-edit` | [Editing](Editing/README.md) | [FLUX-2](Editing/README.md#flux-2), [FLUX-3](Editing/README.md#flux-3), [Ming-Image](Editing/README.md#ming-image), [MiniMax-H3](Editing/README.md#minimax-h3), [OmniGen](Editing/README.md#omnigen), [P-H3](Editing/README.md#p-h3), [Qwen-Image](Editing/README.md#qwen-image) |
+| `object-detection` | [Editing](Editing/README.md) | [Florence-2](Editing/README.md#florence-2) |
+| `object-insertion` | [Editing](Editing/README.md) | [AnyDoor](Editing/README.md#anydoor), [Paint-by-Example](Editing/README.md#paint-by-example) |
+| `object-removal` | [Editing](Editing/README.md) | [LaMa](Editing/README.md#lama), [PowerPaint](Editing/README.md#powerpaint) |
+| `ocr` | [Editing](Editing/README.md) | [Florence-2](Editing/README.md#florence-2) |
+| `outfit-change` | [Editing](Editing/README.md) | [FLUX-3](Editing/README.md#flux-3), [Krea-2](Editing/README.md#krea-2), [P-H3](Editing/README.md#p-h3), [Qwen-Image](Editing/README.md#qwen-image) |
+| `outfit-transfer` | [Editing](Editing/README.md) | [Krea-2](Editing/README.md#krea-2) |
+| `outpaint` | [Editing](Editing/README.md) | [FLUX-1](Editing/README.md#flux-1), [FLUX-2](Editing/README.md#flux-2), [FLUX-3](Editing/README.md#flux-3), [P-H3](Editing/README.md#p-h3), [PowerPaint](Editing/README.md#powerpaint), [Qwen-Image](Editing/README.md#qwen-image), [SD15](Editing/README.md#sd15) |
+| `paint-guided-edit` | [Editing](Editing/README.md) | [FLUX-2](Editing/README.md#flux-2) |
+| `paint-to-image` | [Editing](Editing/README.md) | [FLUX-2](Editing/README.md#flux-2) |
+| `pixaroma` | [Editing](Editing/README.md) | [Other](Editing/README.md#other) |
+| `point-cloud` | [Editing](Editing/README.md) | [Depth-Anything](Editing/README.md#depth-anything) |
+| `pose-change` | [Editing](Editing/README.md) | [Qwen-Image](Editing/README.md#qwen-image) |
+| `pose-keypoints` | [Editing](Editing/README.md) | [DWPose](Editing/README.md#dwpose) |
+| `prompt-batch` | [Generation](Generation/README.md) | [FLUX-2](Generation/README.md#flux-2), [Z-Image](Generation/README.md#z-image), [Other](Generation/README.md#other) |
+| `reference` | [Editing](Editing/README.md) | [IP-Adapter](Editing/README.md#ip-adapter) |
+| `relight` | [Editing](Editing/README.md) | [FLUX-3](Editing/README.md#flux-3), [IC-Light](Editing/README.md#ic-light), [P-H3](Editing/README.md#p-h3), [Qwen-Image](Editing/README.md#qwen-image) |
+| `remove-background` | [Editing](Editing/README.md) | [BiRefNet](Editing/README.md#birefnet), [Qwen-Image](Editing/README.md#qwen-image), [RMBG](Editing/README.md#rmbg), [SAM-3](Editing/README.md#sam-3), [Other](Editing/README.md#other) |
+| `restore` | [Editing](Editing/README.md) | [FLUX-3](Editing/README.md#flux-3) |
+| `restore-and-colorize` | [Editing](Editing/README.md) | [P-H3](Editing/README.md#p-h3) |
+| `restyle` | [Editing](Editing/README.md) | [FLUX-3](Editing/README.md#flux-3), [Ming-Image](Editing/README.md#ming-image), [P-H3](Editing/README.md#p-h3) |
+| `segment` | [Editing](Editing/README.md) | [Florence-2](Editing/README.md#florence-2), [Grounding-DINO](Editing/README.md#grounding-dino), [SAM-3](Editing/README.md#sam-3) |
+| `sketch-to-image` | [Editing](Editing/README.md) | [Ming-Image](Editing/README.md#ming-image), [Qwen-Image](Editing/README.md#qwen-image) |
+| `style-reference` | [Editing](Editing/README.md) | [Krea-2](Editing/README.md#krea-2) |
+| `t2i-adapter` | [Generation](Generation/README.md) | [SD15](Generation/README.md#sd15) |
+| `tag` | [Editing](Editing/README.md) | [WD14-Tagger](Editing/README.md#wd14-tagger) |
+| `text-edit` | [Editing](Editing/README.md) | [FLUX-3](Editing/README.md#flux-3), [MOSS-Image](Editing/README.md#moss-image), [P-H3](Editing/README.md#p-h3) |
+| `try-on` | [Editing](Editing/README.md) | [CatVTON](Editing/README.md#catvton), [IDM-VTON](Editing/README.md#idm-vton), [Leffa](Editing/README.md#leffa), [OOTDiffusion](Editing/README.md#ootdiffusion) |
+| `txt2img` | [Generation](Generation/README.md) | [Anima](Generation/README.md#anima), [AuraFlow](Generation/README.md#auraflow), [Boogu](Generation/README.md#boogu), [Chroma](Generation/README.md#chroma), [ERNIE-Image](Generation/README.md#ernie-image), [FLUX-1](Generation/README.md#flux-1), [FLUX-2](Generation/README.md#flux-2), [FLUX-3](Generation/README.md#flux-3), [HiDream](Generation/README.md#hidream), [HunyuanImage](Generation/README.md#hunyuanimage), [Janus-Pro](Generation/README.md#janus-pro), [Kandinsky](Generation/README.md#kandinsky), [Kolors](Generation/README.md#kolors), [Krea-2](Generation/README.md#krea-2), [LayerDiffusion](Generation/README.md#layerdiffusion), [Lens](Generation/README.md#lens), [LongCat-Image](Generation/README.md#longcat-image), [Lumina-Image-2](Generation/README.md#lumina-image-2), [Ming-Image](Generation/README.md#ming-image), [MiniMax-H3](Generation/README.md#minimax-h3), [MOSS-Image](Generation/README.md#moss-image), [P-H3](Generation/README.md#p-h3), [PixArt-Alpha](Generation/README.md#pixart-alpha), [Qwen-Image](Generation/README.md#qwen-image), [Sana](Generation/README.md#sana), [SD15](Generation/README.md#sd15), [SD3](Generation/README.md#sd3), [SDXL](Generation/README.md#sdxl), [Stable-Cascade](Generation/README.md#stable-cascade), [Z-Image](Generation/README.md#z-image) |
+| `upscale` | [Enhancement](Enhancement/README.md) | [CCSR](Enhancement/README.md#ccsr), [DiffBIR](Enhancement/README.md#diffbir), [FLUX-1](Enhancement/README.md#flux-1), [MOSS-Image](Enhancement/README.md#moss-image), [P-H3](Enhancement/README.md#p-h3), [Paid-API](Enhancement/README.md#paid-api), [Real-ESRGAN](Enhancement/README.md#real-esrgan), [SeedVR2](Enhancement/README.md#seedvr2), [StableSR](Enhancement/README.md#stablesr), [SUPIR](Enhancement/README.md#supir), [Z-Image](Enhancement/README.md#z-image), [Other](Enhancement/README.md#other) |
+| `variation` | [Editing](Editing/README.md) | [FLUX-1](Editing/README.md#flux-1), [SDXL](Editing/README.md#sdxl), [Stable-Cascade](Editing/README.md#stable-cascade) |
 
 ## Naming and folder convention
 
-- **Folders:** `<Category>/<Task>/`. A task folder with more than 8 workflows is split into model-family subfolders (`FLUX-2/`, `Qwen-Image/`, `Z-Image/`, `SDXL/`, `SD15/` ...); a family with only one workflow in that folder goes to `Other/`. Smaller task folders stay flat.
-- **Inside a model-family folder** the folder already names the model and the task folder names the task, so files carry only what tells siblings apart: `<variant>[-<size>][-<precision>][-<feature>].json`, for example `Text-to-Image/FLUX-2/klein-9b-fp8.json`, `Text-to-Image/Z-Image/turbo-fp8-aio-lora.json`, `Single-Image-Edit/Qwen-Image/v21-turbo.json`. The plain default of a family is `base.json`; a `-nunchaku` suffix marks Nunchaku-quantised builds.
-- **In flat folders and `Other/`** the model stays in the name: `<model>-<task>[-<key-variant>].json`, for example `birefnet-remove-background.json`.
-- **Always:** lowercase kebab-case (`a-z`, `0-9`, single hyphens), at most 60 characters, no source prefixes, list numbers or episode tags unless they are the only difference between two siblings. Version dots are dropped (`sd3.5` -> `sd35`, Qwen-Image 2.1 -> `v21`, `qwen-3.5` -> `qwen35`).
+- **Folders:** exactly three levels, `<section>/<Category>/<Model>/<file>.json`. Image and Video use the categories `Generation` (creates a new image or video), `Editing` (changes or analyses an existing one) and `Enhancement` (Image: upscaling only; Video: upscaling and frame interpolation). Audio uses `Music` and `Speech`. A model folder holds only workflow files, however many there are; there are no task subfolders.
+- **Model folders** are TitleCase with hyphens and use one spelling across all sections (`Krea-2`, `FLUX-2`, `Qwen-Image`, `Wan-2.2`, `LTX-2`, `MiniMax-H3`, `ACE-Step-1.5`, `Qwen3-TTS`, `Whisper` ...). Generic, utility and multi-model workflows go in `Other/`.
+- **File names** carry the task, because there is no task folder: `<task>[-<variant>][-<size>][-<precision>][-<feature>].json`, for example `Generation/Krea-2/txt2img-simple-int8-lora.json`, `Editing/Krea-2/outfit-transfer-v2.json`, `Enhancement/SeedVR2/upscale-7b-int8-native.json`. The model name is not repeated in the file name. Names are lowercase kebab-case and unique inside their folder; `-api` marks API-format graphs and `epNN` the tutorial episode a variant came from.
+- **Common task prefixes:** `txt2img`, `img2img`, `img2prompt2img`, `controlnet`, `edit`, `multi-edit`, `inpaint`, `outpaint`, `object-removal`, `remove-background`, `outfit-change`, `relight`, `identity`, `reference`, `try-on`, `segment`, `depth-map`, `upscale`; `txt2video`, `img2video`, `ref2video`, `long-video`, `talking-avatar`, `lip-sync`, `character-swap`, `motion-transfer`, `frame-interpolation`; `txt2music`, `lyrics2song`, `cover`, `stem-split`, `tts`, `voice-clone`, `voice-design`, `voice-conversion`, `stt`, `subtitles`.
 
 ## Model coverage
 

@@ -26,14 +26,13 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 
 ## Workflow categories
 
-1109 workflows: 1066 in the normal UI format and 43 in API format (40 with filenames ending in `-api`, plus three upstream API-format graphs). The image categories have an [overview with folder counts and model coverage](01-Image/README.md). Each category README lists every workflow in that folder with what it does, the models it loads and the custom nodes it needs; the version-conflicts folder lists the models and what differs from the library copy. For one flat list of all files, see [`00-LIBRARY-INDEX.md`](00-LIBRARY-INDEX.md).
+1109 workflows: 1066 in the normal UI format and 43 in API format (40 with filenames ending in `-api`, plus three upstream API-format graphs). Image, Video and Audio are organised as `<section>/<Category>/<Model>/` (for example `01-Image/Generation/Krea-2/`); each section has an overview with folder counts and model coverage ([Image](01-Image/README.md), [Video](02-Video/README.md), [Audio](03-Audio/README.md)). Each category README lists every workflow in that folder with what it does, the models it loads and the custom nodes it needs; the version-conflicts folder lists the models and what differs from the library copy. For one flat list of all files, see [`00-LIBRARY-INDEX.md`](00-LIBRARY-INDEX.md).
 
 | Category | What is inside | Workflows |
 |---|---|---|
-| [01a · Image Generation](01-Image/Image-Generation/README.md) | Text-to-image with FLUX.1 / FLUX.2 / FLUX.3 Klein, Qwen-Image, Krea 2, Z-Image, HiDream, Chroma, SDXL, SD 3.5, Stable Cascade, Sana, Kolors and more; edit / inpaint / reference variants, ControlNet, LLM prompt enhancers, logos, posters, text in images, transparent PNGs, prompt batches | 202 |
-| [01b · Image Editing](01-Image/Image-Editing/README.md) | Instruction-based editing, multi-image edits, inpainting, outpainting, object removal, background removal, outfit transfer, sketch-to-image, ControlNet / T2I-Adapter / GLIGEN control, IP-Adapter / InstantID / PuLID / PhotoMaker identity, IC-Light relighting | 176 |
-| [01c · Image Upscaling and Enhancement](01-Image/Image-Enhancement/README.md) | Image upscaling (Real-ESRGAN, SwinIR, HAT, DAT, SeedVR2, tiled diffusion, creative upscale), diffusion restoration (SUPIR, CCSR, StableSR, DiffBIR), face restoration, denoise / low-light, colorization, filters and color grading | 44 |
-| [01d · Image Specialized and Supporting](01-Image/Image-Specialized-and-Supporting/README.md) | Virtual try-on, LayerDiffusion transparent layers, segmentation and detection, captioning / OCR / tagging, depth and pose estimation | 31 |
+| [01a · Image Generation](01-Image/Generation/README.md) | Workflows that create a new image: text-to-image with FLUX.1 / FLUX.2 / FLUX.3 Klein, Qwen-Image, Krea 2, Z-Image, HiDream, Chroma, SDXL, SD 3.5, Stable Cascade, Sana, Kolors and more; ControlNet and layout control, LLM prompt enhancers, prompt batches, character sheets, logos, posters, text in images, transparent PNGs | 178 |
+| [01b · Image Editing](01-Image/Editing/README.md) | Workflows that change or analyse an existing image: instruction and multi-image edits, inpainting, outpainting, object and background removal, outfit and pose changes, sketch-to-image, IP-Adapter / InstantID / PuLID / PhotoMaker identity, IC-Light relighting, face / denoise / low-light restoration, colorization, filters, virtual try-on, LayerDiffusion layers, segmentation, captioning / OCR, depth and pose | 243 |
+| [01c · Image Enhancement](01-Image/Enhancement/README.md) | Image upscaling only: Real-ESRGAN, SwinIR, HAT, DAT, SeedVR2, SUPIR, CCSR, StableSR, DiffBIR, tiled diffusion, creative and paid API upscalers | 32 |
 | [02 · AI Video](02-Video/README.md) | Text-to-video and image-to-video (Wan, LTX-2.5, MiniMax H3, HunyuanVideo, Kandinsky 6, CogVideoX), reference-to-video, long-form generation, world models, video editing and control (VACE, object removal, camera / motion control), character animation and swap, talking avatars, lip-sync and dubbing, audio-reactive video, video upscaling, frame interpolation, video depth / pose / segmentation; [atlas coverage tracker](02-Video/COVERAGE.md) | 239 |
 | [03 · Audio](03-Audio/README.md) | Text-to-speech, voice cloning, voice design, music generation, covers and editing, sound effects, music transcription and analysis, stem separation, voice conversion, speech-to-text, subtitles, diarisation and forced alignment | 229 |
 | [04 · 3D Generation](04-3D-Generation/README.md) | Image-to-3D and multi-view-to-3D with Trellis 2, Pixal3D, SAM3D Body | 13 |
@@ -48,30 +47,30 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 
 | Model family | Tasks covered | Folders |
 |---|---|---|
-| **FLUX.2 Klein** (4B / 9B, FP8, INT8, KV) | txt2img, image edit, multi-image edit, inpainting, outpainting, batch edits, XY plots | [01a](01-Image/Image-Generation) · [01b](01-Image/Image-Editing) · [05](05-Batch-and-Automation) · [06](06-Testing-and-Comparison) |
-| **FLUX.3 Klein** | txt2img, text in images, image editing, prompt upsampling | [01a](01-Image/Image-Generation) · [01b](01-Image/Image-Editing) |
-| **FLUX.1 dev / Qwen-Image / Z-Image (Nunchaku)** | fast 4-bit txt2img, tiled diffusion upscale | [01a](01-Image/Image-Generation) · [01c](01-Image/Image-Enhancement) |
-| **Qwen-Image 2.1** | txt2img, image editing, transparent PNG, image-to-prompt | [01a](01-Image/Image-Generation) · [01b](01-Image/Image-Editing) |
-| **Krea 2** (FP8 / INT8) | txt2img, edit LoRA, outfit transfer, storyboards, LoRA XY plot | [01a](01-Image/Image-Generation) · [01b](01-Image/Image-Editing) · [07](07-Movie) |
-| **Z-Image Turbo** | fast txt2img, ControlNet Union, LoRA, text overlay, character sheets | [01a](01-Image/Image-Generation) |
-| **Ming Image 0.1** | logos, posters, infographics, thumbnails, app screens | [01a](01-Image/Image-Generation) · [01b](01-Image/Image-Editing) |
-| **MOSS Image** | txt2img, text in images, layout with boxes, image-to-prompt, text editing, upscale | [01a](01-Image/Image-Generation) · [01b](01-Image/Image-Editing) · [01c](01-Image/Image-Enhancement) |
-| **P-H3 Image** (MiniMax H3 image LoRA) | txt2img, text in images, character sheets, single- and multi-image edits, outpainting, relight, restore, creative upscale | [01a](01-Image/Image-Generation) · [01b](01-Image/Image-Editing) · [01c](01-Image/Image-Enhancement) |
-| **Stable Diffusion 1.5** (Juggernaut Reborn), Anima, Boogu, ERNIE Image | txt2img, img2img, ControlNet Canny, LoRA, anime | [01a](01-Image/Image-Generation) · [01b](01-Image/Image-Editing) |
+| **FLUX.2 Klein** (4B / 9B, FP8, INT8, KV) | txt2img, image edit, multi-image edit, inpainting, outpainting, batch edits, XY plots | [01a](01-Image/Generation) · [01b](01-Image/Editing) · [05](05-Batch-and-Automation) · [06](06-Testing-and-Comparison) |
+| **FLUX.3 Klein** | txt2img, text in images, image editing, prompt upsampling | [01a](01-Image/Generation) · [01b](01-Image/Editing) |
+| **FLUX.1 dev / Qwen-Image / Z-Image (Nunchaku)** | fast 4-bit txt2img, tiled diffusion upscale | [01a](01-Image/Generation) · [01c](01-Image/Enhancement) |
+| **Qwen-Image 2.1** | txt2img, image editing, transparent PNG, image-to-prompt | [01a](01-Image/Generation) · [01b](01-Image/Editing) |
+| **Krea 2** (FP8 / INT8) | txt2img, edit LoRA, outfit transfer, storyboards, LoRA XY plot | [01a](01-Image/Generation) · [01b](01-Image/Editing) · [07](07-Movie) |
+| **Z-Image Turbo** | fast txt2img, ControlNet Union, LoRA, text overlay, character sheets | [01a](01-Image/Generation) |
+| **Ming Image 0.1** | logos, posters, infographics, thumbnails, app screens | [01a](01-Image/Generation) · [01b](01-Image/Editing) |
+| **MOSS Image** | txt2img, text in images, layout with boxes, image-to-prompt, text editing, upscale | [01a](01-Image/Generation) · [01b](01-Image/Editing) · [01c](01-Image/Enhancement) |
+| **P-H3 Image** (MiniMax H3 image LoRA) | txt2img, text in images, character sheets, single- and multi-image edits, outpainting, relight, restore, creative upscale | [01a](01-Image/Generation) · [01b](01-Image/Editing) · [01c](01-Image/Enhancement) |
+| **Stable Diffusion 1.5** (Juggernaut Reborn), Anima, Boogu, ERNIE Image | txt2img, img2img, ControlNet Canny, LoRA, anime | [01a](01-Image/Generation) · [01b](01-Image/Editing) |
 | **Wan 2.1 / Wan 2.2** (SCAIL 2, InfiniteTalk, Animate) | img2video, character animation, character replacement, talking video, video dubbing | [02](02-Video) |
 | **LTX-2** | img2video with audio, lip-sync to your audio, voice dubbing | [02](02-Video) |
 | **MiniMax H3 / FastH3** | txt2video, img2video (first / last frame), reference-to-video with audio, character swap, short films | [02](02-Video) · [07](07-Movie) · [08](08-LLM-and-Prompt-Tools) |
-| **SeedVR2** | image upscale, video upscale | [01c](01-Image/Image-Enhancement) · [02](02-Video) |
+| **SeedVR2** | image upscale, video upscale | [01c](01-Image/Enhancement) · [02](02-Video) |
 | **Trellis 2, Pixal3D, SAM3D Body** | image-to-3D, multi-view-to-3D, PBR textures, 3D body | [04](04-3D-Generation) |
 | **Qwen3-TTS, Fish S2, Chatterbox, F5-TTS, VibeVoice, IndexTTS-2 / 2.5, OmniVoice, MOSS-TTS, Higgs Audio v3, CosyVoice 2 / 3, Orpheus, Zonos, Maya3 (Indic), Dia, Kokoro, RVC, Seed-VC** | text-to-speech, voice cloning, voice design, dialogue, voice conversion | [03](03-Audio) |
 | **Whisper, Qwen3-ASR, Parakeet, SenseVoice, FunASR, MOSS-Transcribe-Diarize, Hibiki** | speech-to-text, subtitles, diarisation, speech translation, forced alignment | [03](03-Audio) |
 | **Stable Audio 3 / Open, ACE-Step 1.5 / XL, YuE 2, HeartMuLa, MuLaCover, SongGeneration (LeVo 2), DiffRhythm 1 / 2, MusicGen, AudioLDM 2, MiniMax Music 3, SongBloom, AudioX, SoulX-Singer, Music Flamingo, Basic Pitch, Mel-Band / BS-RoFormer** | text-to-music, lyrics-to-song, covers, repaint, extend, LoRA, singing voice synthesis, stem separation (Demucs, RoFormer, MDX ensembles), audio-to-ABC / MIDI | [03](03-Audio) |
 | **Gemma 4, Qwen 3.5, Qwen3-VL** | prompt enhancer, image / video / audio to prompt | [08](08-LLM-and-Prompt-Tools) |
-| **FLUX.1, HiDream, Chroma, HunyuanImage 2.1, SDXL / SD 3.5, Stable Cascade, Sana, PixArt, Kolors, Lumina, AuraFlow, LongCat, Fibo, Kandinsky 5, Janus-Pro** | txt2img, editing, inpaint / outpaint, ControlNet, image reference | [01a](01-Image/Image-Generation) |
-| **BrushNet, PowerPaint, OmniGen / OmniGen2, IC-Light, ControlNet v1.1 / XL, IP-Adapter, InstantID, PuLID, PhotoMaker** | inpainting, object insertion, instruction edits, relighting, structural control, identity | [01b](01-Image/Image-Editing) |
-| **Real-ESRGAN, SwinIR, HAT, DAT, SUPIR, CCSR, StableSR, DiffBIR, CodeFormer, GFPGAN, DDColor** | upscaling, restoration, face restoration, denoise, colorization | [01c](01-Image/Image-Enhancement) |
-| **CatVTON, IDM-VTON, LayerDiffusion, Grounding DINO + SAM, Florence-2, Depth Anything, Marigold, DWPose** | virtual try-on, transparent layers, segmentation, captioning / OCR, depth, pose | [01-Image](01-Image/Image-Specialized-and-Supporting) |
-| **BiRefNet, SAM3, RMBG, LaMa, ReActor** | background removal, segmentation, object removal, face swap | [01b](01-Image/Image-Editing) · [02](02-Video) |
+| **FLUX.1, HiDream, Chroma, HunyuanImage 2.1, SDXL / SD 3.5, Stable Cascade, Sana, PixArt, Kolors, Lumina, AuraFlow, LongCat, Fibo, Kandinsky 5, Janus-Pro** | txt2img, editing, inpaint / outpaint, ControlNet, image reference | [01a](01-Image/Generation) |
+| **BrushNet, PowerPaint, OmniGen / OmniGen2, IC-Light, ControlNet v1.1 / XL, IP-Adapter, InstantID, PuLID, PhotoMaker** | inpainting, object insertion, instruction edits, relighting, structural control, identity | [01b](01-Image/Editing) |
+| **Real-ESRGAN, SwinIR, HAT, DAT, SUPIR, CCSR, StableSR, DiffBIR, CodeFormer, GFPGAN, DDColor** | upscaling, restoration, face restoration, denoise, colorization | [01c](01-Image/Enhancement) |
+| **CatVTON, IDM-VTON, LayerDiffusion, Grounding DINO + SAM, Florence-2, Depth Anything, Marigold, DWPose** | virtual try-on, transparent layers, segmentation, captioning / OCR, depth, pose | [01-Image](01-Image/Editing) |
+| **BiRefNet, SAM3, RMBG, LaMa, ReActor** | background removal, segmentation, object removal, face swap | [01b](01-Image/Editing) · [02](02-Video) |
 
 ## How to use
 
@@ -189,12 +188,9 @@ Workflows marked *PAID API* use ComfyUI partner nodes (for example Nano Banana P
 
 ```text
 ComfyUI-Workflows/
-├── 01-Image/Image-Generation/                  # Image Generation
-├── 01-Image/Image-Editing/                     # Image Editing
-├── 01-Image/Image-Enhancement/                 # Image Upscaling and Enhancement
-├── 01-Image/Image-Specialized-and-Supporting/  # Try-on, layers, segmentation, captioning, depth, pose
-├── 02-Video/                             # AI Video: generation, editing and control, avatars, enhancement, supporting vision
-├── 03-Audio/                             # Audio
+├── 01-Image/{Generation,Editing,Enhancement}/<Model>/   # Image, one folder per model
+├── 02-Video/{Generation,Editing,Enhancement}/<Model>/   # AI Video, one folder per model
+├── 03-Audio/{Music,Speech}/<Model>/                     # Audio, one folder per model
 ├── 04-3D-Generation/                     # 3D Generation
 ├── 05-Batch-and-Automation/              # Batch Processing and Automation
 ├── 06-Testing-and-Comparison/            # Testing and Comparison
@@ -206,7 +202,7 @@ ComfyUI-Workflows/
 └── README.md
 ```
 
-Filenames follow `model-task-variant.json` in lowercase kebab-case, for example `extra-pass-lora.json` or `gguf-lightx2v-4-step.json`. Common abbreviations: `txt2img` (text-to-image), `img2img` (image-to-image), `img2video` (image-to-video), `txt2video` (text-to-video), `video2video` (video-to-video). A trailing `-api` means API format; `epNN` marks the tutorial episode a variant came from; `-starter` marks a beginner version.
+In `01-Image`, `02-Video` and `03-Audio` the model folder names the model, so file names start with the task: `<task>[-<variant>][-<size>][-<precision>][-<feature>].json` in lowercase kebab-case, for example `01-Image/Generation/Krea-2/txt2img-simple-int8-lora.json` or `02-Video/Generation/Wan-2.2/img2video-gguf-lightx2v-4-step.json` (details in the [Image naming convention](01-Image/README.md#naming-and-folder-convention)). Other folders use `model-task-variant.json`. Common abbreviations: `txt2img` (text-to-image), `img2img` (image-to-image), `img2video` (image-to-video), `txt2video` (text-to-video), `ref2video` (reference-to-video), `v2v` (video-to-video), `tts` (text-to-speech), `stt` (speech-to-text). A trailing `-api` means API format; `epNN` marks the tutorial episode a variant came from; `-starter` marks a beginner version.
 
 Each category folder has its own `README.md` listing every workflow with what it does, the models it loads and the custom nodes it needs. The version-conflicts folder lists the models and what differs from the library copy instead.
 
@@ -215,7 +211,7 @@ Each category folder has its own `README.md` listing every workflow with what it
 Contributions are welcome: new workflows, fixes, better descriptions and model links.
 
 1. Fork the repo and create a branch.
-2. Put the workflow in the folder that matches its main job, and name it `model-task-variant.json` in kebab-case.
+2. Put the workflow in the folder that matches its main job. In Image, Video and Audio that is `<section>/<Category>/<Model>/`, named `<task>[-<variant>].json`; elsewhere name it `model-task-variant.json` in kebab-case.
 3. Before committing, open the JSON and remove anything private: API keys or tokens in node inputs, and personal file paths (for example `C:\Users\<you>\…`).
 4. Add a note inside the workflow with model download links, and add a row to the table in that folder's `README.md` and to [`00-LIBRARY-INDEX.md`](00-LIBRARY-INDEX.md).
 5. Open a pull request describing what the workflow does and what it needs.
