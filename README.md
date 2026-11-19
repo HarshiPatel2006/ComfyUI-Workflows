@@ -1,8 +1,8 @@
-# ComfyUI Workflows: 711 Free FLUX, Qwen-Image, Wan, LTX-2, MiniMax H3 and Krea 2 Workflows
+# ComfyUI Workflows: 776 Free FLUX, Qwen-Image, Wan, LTX-2, MiniMax H3 and Krea 2 Workflows
 
-[![Workflows](https://img.shields.io/badge/workflows-711-blue)](#workflow-categories) [![ComfyUI](https://img.shields.io/badge/ComfyUI-workflows-green)](https://github.com/Comfy-Org/ComfyUI) [![Format](https://img.shields.io/badge/format-JSON-lightgrey)](#how-to-use) [![License](https://img.shields.io/badge/license-MIT%20%2B%20original%20terms-purple)](#license)
+[![Workflows](https://img.shields.io/badge/workflows-776-blue)](#workflow-categories) [![ComfyUI](https://img.shields.io/badge/ComfyUI-workflows-green)](https://github.com/Comfy-Org/ComfyUI) [![Format](https://img.shields.io/badge/format-JSON-lightgrey)](#how-to-use) [![License](https://img.shields.io/badge/license-MIT%20%2B%20original%20terms-purple)](#license)
 
-A categorized library of **711 ready-to-use ComfyUI workflows** (`.json`) for **FLUX.2 / FLUX.3 Klein, Qwen-Image, Krea 2, Z-Image Turbo, Wan 2.1 / 2.2, LTX-2, MiniMax H3, SeedVR2** and more. It covers **text-to-image (txt2img)**, **image editing (img2img)**, **inpainting and outpainting**, **background removal**, **image and video upscaling**, **text-to-video and image-to-video**, **lip-sync and talking avatars**, **face swap and character swap**, **text-to-speech, voice cloning, speech-to-text and music**, **image-to-3D**, **batch automation** and a complete **AI short-film pipeline**.
+A categorized library of **776 ready-to-use ComfyUI workflows** (`.json`) for **FLUX.2 / FLUX.3 Klein, Qwen-Image, Krea 2, Z-Image Turbo, Wan 2.1 / 2.2, LTX-2, MiniMax H3, SeedVR2** and more. It covers **text-to-image (txt2img)**, **image editing (img2img)**, **inpainting and outpainting**, **background removal**, **image and video upscaling**, **text-to-video and image-to-video**, **lip-sync and talking avatars**, **face swap and character swap**, **text-to-speech, voice cloning, speech-to-text and music**, **image-to-3D**, **batch automation** and a complete **AI short-film pipeline**.
 
 Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, install any missing custom nodes with ComfyUI-Manager, add the models, and press **Run**.
 
@@ -26,7 +26,7 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 
 ## Workflow categories
 
-711 workflows: 671 in the normal UI format and 40 in API format (filenames ending in `-api`). Each category README lists every workflow in that folder with what it does, the models it loads and the custom nodes it needs; the version-conflicts folder lists the models and what differs from the library copy. For one flat list of all files, see [`00-LIBRARY-INDEX.md`](00-LIBRARY-INDEX.md).
+776 workflows: 736 in the normal UI format and 40 in API format (filenames ending in `-api`). Each category README lists every workflow in that folder with what it does, the models it loads and the custom nodes it needs; the version-conflicts folder lists the models and what differs from the library copy. For one flat list of all files, see [`00-LIBRARY-INDEX.md`](00-LIBRARY-INDEX.md).
 
 | Category | What is inside | Workflows |
 |---|---|---|
@@ -34,7 +34,7 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 | [02 · Image Editing](01-Image/Image-Editing/README.md) | Instruction-based editing, multi-image edits, inpainting, outpainting, object removal, background removal, outfit transfer, sketch-to-image | 115 |
 | [03 · Image Upscaling and Enhancement](01-Image/Image-Enhancement/README.md) | Image upscaling (SeedVR2, tiled diffusion, creative upscale), filters and color grading | 13 |
 | [04 · AI Video](04-Video/README.md) | Text-to-video, image-to-video, first/last frame, reference-to-video, lip-sync, video dubbing, character animation and swap, video upscaling | 125 |
-| [05 · Audio](05-Audio/README.md) | Text-to-speech, voice cloning, voice design, music generation, covers and editing, sound effects, music transcription and analysis, stem separation, speech-to-text, subtitles and forced alignment | 160 |
+| [05 · Audio](05-Audio/README.md) | Text-to-speech, voice cloning, voice design, music generation, covers and editing, sound effects, music transcription and analysis, stem separation, voice conversion, speech-to-text, subtitles, diarisation and forced alignment | 225 |
 | [06 · 3D Generation](06-3D-Generation/README.md) | Image-to-3D and multi-view-to-3D with Trellis 2, Pixal3D, SAM3D Body | 13 |
 | [07 · Batch Processing and Automation](07-Batch-and-Automation/README.md) | Batch-process a folder of images, loops, switches, logic and math | 44 |
 | [08 · Testing and Comparison](08-Testing-and-Comparison/README.md) | XY plots, sampler and LoRA comparisons, image compare | 8 |
@@ -62,8 +62,8 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 | **MiniMax H3 / FastH3** | txt2video, img2video (first / last frame), reference-to-video with audio, character swap, short films | [04](04-Video) · [09](09-Movie) · [10](10-LLM-and-Prompt-Tools) |
 | **SeedVR2** | image upscale, video upscale | [03](01-Image/Image-Enhancement) · [04](04-Video) |
 | **Trellis 2, Pixal3D, SAM3D Body** | image-to-3D, multi-view-to-3D, PBR textures, 3D body | [06](06-3D-Generation) |
-| **Qwen3-TTS, Fish S2, Chatterbox, F5-TTS, VibeVoice, IndexTTS-2, Dia, Kokoro** | text-to-speech, voice cloning, voice design, dialogue | [05](05-Audio) |
-| **Whisper, Qwen3-ASR, Parakeet, SenseVoice** | speech-to-text, subtitles, forced alignment | [05](05-Audio) |
+| **Qwen3-TTS, Fish S2, Chatterbox, F5-TTS, VibeVoice, IndexTTS-2 / 2.5, OmniVoice, MOSS-TTS, Higgs Audio v3, CosyVoice 2 / 3, Orpheus, Zonos, Maya3 (Indic), Dia, Kokoro, RVC, Seed-VC** | text-to-speech, voice cloning, voice design, dialogue, voice conversion | [05](05-Audio) |
+| **Whisper, Qwen3-ASR, Parakeet, SenseVoice, FunASR, MOSS-Transcribe-Diarize, Hibiki** | speech-to-text, subtitles, diarisation, speech translation, forced alignment | [05](05-Audio) |
 | **Stable Audio 3 / Open, ACE-Step 1.5 / XL, YuE 2, HeartMuLa, MuLaCover, SongGeneration (LeVo 2), DiffRhythm 1 / 2, MusicGen, AudioLDM 2, MiniMax Music 3, SongBloom, AudioX, SoulX-Singer, Music Flamingo, Basic Pitch, Mel-Band / BS-RoFormer** | text-to-music, lyrics-to-song, covers, repaint, extend, LoRA, singing voice synthesis, stem separation (Demucs, RoFormer, MDX ensembles), audio-to-ABC / MIDI | [05](05-Audio) |
 | **Gemma 4, Qwen 3.5, Qwen3-VL** | prompt enhancer, image / video / audio to prompt | [10](10-LLM-and-Prompt-Tools) |
 | **BiRefNet, SAM3, RMBG, LaMa, ReActor** | background removal, segmentation, object removal, face swap | [02](01-Image/Image-Editing) · [04](04-Video) |

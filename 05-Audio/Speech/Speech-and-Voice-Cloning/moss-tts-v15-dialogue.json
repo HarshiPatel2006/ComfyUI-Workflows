@@ -1,0 +1,532 @@
+{
+  "id": "24aa41d6-3c20-4b37-b044-ea6ffdbd47f6",
+  "revision": 0,
+  "last_node_id": 90,
+  "last_link_id": 95,
+  "nodes": [
+    {
+      "id": 46,
+      "type": "LoadAudio",
+      "pos": [
+        -3996.6119535669905,
+        1912.3921848235873
+      ],
+      "size": [
+        270,
+        152
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            89
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "女生1.mp3",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 83,
+      "type": "MossTTSGenerate",
+      "pos": [
+        -3408.483994550042,
+        2136.5155007659873
+      ],
+      "size": [
+        400,
+        433.3125
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "moss_tts_model",
+          "type": "MOSS_TTS_MODEL",
+          "link": 90
+        },
+        {
+          "name": "reference_audio_tensor",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 89
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            91
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MossTTSGenerate",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "宇宙就是一座黑暗森林，每个文明都是带枪的猎人，像幽灵般潜行于林间，轻轻拨开挡路的树枝，竭力不让脚步发出一点儿声音，连呼吸都小心翼翼……他必须小心，因为林中到处都有与他一样潜行的猎人。如果他发现了别的生命，不管是不是猎人，不管是天使还是魔鬼，不管是娇嫩的婴儿还是步履蹒跚的老人，也不管是天仙般的少女还是天神般的男孩，能做的只有一件事：开枪消灭之。在这片森林中，他人就是地狱，就是永恒的威胁，任何暴露自己存在的生命都将很快被消灭。这就是宇宙文明的图景，这就是对费米悖论的解释。",
+        "",
+        "Chinese",
+        "",
+        "",
+        0,
+        4096,
+        1033227289509158,
+        "randomize"
+      ]
+    },
+    {
+      "id": 84,
+      "type": "MossTTSDialogue",
+      "pos": [
+        -3389.2239449381423,
+        2794.9909166450448
+      ],
+      "size": [
+        400,
+        574.65625
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "moss_tts_model",
+          "type": "MOSS_TTS_MODEL",
+          "link": 95
+        },
+        {
+          "name": "speaker_a_ref",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 92
+        },
+        {
+          "name": "speaker_b_ref",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 93
+        },
+        {
+          "name": "speaker_c_ref",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "name": "speaker_d_ref",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "dialogue_audio",
+          "type": "AUDIO",
+          "links": [
+            94
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MossTTSDialogue",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "女生a:你好\n女生b：你好呀\n女生a:今天天气不错，去散步不\n女生b：不了，今天我还要加班",
+        "女生a",
+        "女生b",
+        "",
+        "",
+        0.6,
+        "Chinese",
+        "",
+        1024
+      ]
+    },
+    {
+      "id": 85,
+      "type": "MossTTSAudioSave",
+      "pos": [
+        -2704.911600446286,
+        2278.651337958665
+      ],
+      "size": [
+        275.390625,
+        202.65625
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 91
+        }
+      ],
+      "outputs": [
+        {
+          "name": "filepath",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MossTTSAudioSave",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "moss_tts",
+        "wav",
+        ""
+      ]
+    },
+    {
+      "id": 86,
+      "type": "MossTTSModelLoader",
+      "pos": [
+        -3901.8984008046245,
+        2283.7276178584043
+      ],
+      "size": [
+        278.75,
+        303.96875
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 2,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "moss_tts_model",
+          "type": "MOSS_TTS_MODEL",
+          "links": [
+            90
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MossTTSModelLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "[extra] moss-tts-v1.5",
+        "",
+        "",
+        "cuda",
+        "bfloat16",
+        false,
+        false
+      ]
+    },
+    {
+      "id": 87,
+      "type": "LoadAudio",
+      "pos": [
+        -4069.9541985447595,
+        3221.2863841682893
+      ],
+      "size": [
+        270,
+        152
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            92
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "女生1.mp3",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 88,
+      "type": "LoadAudio",
+      "pos": [
+        -3774.261483233463,
+        3224.570057041916
+      ],
+      "size": [
+        270,
+        152
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            93
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "女生b.mp3",
+        null,
+        null
+      ]
+    },
+    {
+      "id": 89,
+      "type": "MossTTSAudioSave",
+      "pos": [
+        -2845.8315551339033,
+        2925.753155418883
+      ],
+      "size": [
+        275.390625,
+        202.65625
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 94
+        }
+      ],
+      "outputs": [
+        {
+          "name": "filepath",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MossTTSAudioSave",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        }
+      },
+      "widgets_values": [
+        "moss_tts",
+        "wav",
+        ""
+      ]
+    },
+    {
+      "id": 90,
+      "type": "MossTTSModelLoader",
+      "pos": [
+        -3968.9320837104515,
+        2801.75943628831
+      ],
+      "size": [
+        278.75,
+        303.96875
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "moss_tts_model",
+          "type": "MOSS_TTS_MODEL",
+          "links": [
+            95
+          ]
+        }
+      ],
+      "properties": {
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.8"
+        },
+        "Node name for S&R": "MossTTSModelLoader"
+      },
+      "widgets_values": [
+        "[extra] moss-tts-v1.5",
+        "",
+        "",
+        "cuda",
+        "bfloat16",
+        false,
+        false
+      ]
+    }
+  ],
+  "links": [
+    [
+      89,
+      46,
+      0,
+      83,
+      1,
+      "AUDIO"
+    ],
+    [
+      90,
+      86,
+      0,
+      83,
+      0,
+      "MOSS_TTS_MODEL"
+    ],
+    [
+      91,
+      83,
+      0,
+      85,
+      0,
+      "AUDIO"
+    ],
+    [
+      92,
+      87,
+      0,
+      84,
+      1,
+      "AUDIO"
+    ],
+    [
+      93,
+      88,
+      0,
+      84,
+      2,
+      "AUDIO"
+    ],
+    [
+      94,
+      84,
+      0,
+      89,
+      0,
+      "AUDIO"
+    ],
+    [
+      95,
+      90,
+      0,
+      84,
+      0,
+      "MOSS_TTS_MODEL"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "voiceclone",
+      "bounding": [
+        -4127.745188283819,
+        1771.7730247786396,
+        1777.2017932636595,
+        840.5282545788209
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "multi person dialogue",
+      "bounding": [
+        -4118.844439107612,
+        2697.50677818249,
+        1764.2694625910858,
+        713.7623776665719
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "ds": {
+      "scale": 1.0834705943388472,
+      "offset": [
+        4267.11427588876,
+        -2579.636260865752
+      ]
+    },
+    "links_added_by_ue": [],
+    "frontendVersion": "1.43.18",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

@@ -1,0 +1,751 @@
+{
+  "id": "94dca699-4678-4600-b46d-69a7ff16338e",
+  "revision": 0,
+  "last_node_id": 32,
+  "last_link_id": 71,
+  "nodes": [
+    {
+      "id": 22,
+      "type": "AudioSeparation",
+      "pos": [
+        -24.833106725717943,
+        64.1364039774202
+      ],
+      "size": [
+        270,
+        166
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 35
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Bass",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "Drums",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "Other",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "Vocals",
+          "type": "AUDIO",
+          "links": [
+            68
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "audio-separation-nodes-comfyui",
+        "ver": "2.0.0",
+        "Node name for S&R": "AudioSeparation",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "linear",
+        10,
+        0.1
+      ]
+    },
+    {
+      "id": 13,
+      "type": "VHS_VideoInfo",
+      "pos": [
+        -22.556693042201648,
+        428.59431905367853
+      ],
+      "size": [
+        233.455078125,
+        206
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "source_fps🟨",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "source_frame_count🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "source_duration🟨",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "source_width🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "source_height🟨",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "loaded_fps🟦",
+          "type": "FLOAT",
+          "links": [
+            20,
+            29
+          ]
+        },
+        {
+          "name": "loaded_frame_count🟦",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "loaded_duration🟦",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "loaded_width🟦",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "loaded_height🟦",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "1.7.9",
+        "Node name for S&R": "VHS_VideoInfo",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": {}
+    },
+    {
+      "id": 16,
+      "type": "VideoSrtOverlay",
+      "pos": [
+        1319.0396789510867,
+        39.71615766219352
+      ],
+      "size": [
+        400,
+        448
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 27
+        },
+        {
+          "name": "srt_string",
+          "type": "STRING",
+          "widget": {
+            "name": "srt_string"
+          },
+          "link": 70
+        },
+        {
+          "name": "fps",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images_with_subtitle",
+          "type": "IMAGE",
+          "links": [
+            30
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-Audio-Srt-Aligner",
+        "ver": "b6d6dc0624e461d18c0267281e99a547b0fa8c27",
+        "Node name for S&R": "VideoSrtOverlay",
+        "aux_id": "ahkimkoo/ComfyUI-Audio-Srt-Aligner",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "srt_string": true,
+            "fps": true
+          },
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "",
+        "Alibaba-PuHuiTi-Medium.otf",
+        50,
+        "#FFFFFF",
+        "#000000",
+        2,
+        "#000000",
+        2,
+        2,
+        2,
+        "fade",
+        300,
+        300,
+        0.7,
+        0.2,
+        24
+      ]
+    },
+    {
+      "id": 11,
+      "type": "VHS_LoadVideo",
+      "pos": [
+        -376.6217810595102,
+        -65.52780344943018
+      ],
+      "size": [
+        260.4306640625,
+        760.7823730468749
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            27
+          ]
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            21,
+            35
+          ]
+        },
+        {
+          "name": "video_info",
+          "type": "VHS_VIDEOINFO",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "1.7.9",
+        "Node name for S&R": "VHS_LoadVideo",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": {
+        "video": "combined_132116_44705.mp4",
+        "force_rate": 16,
+        "custom_width": 240,
+        "custom_height": 0,
+        "frame_load_cap": 0,
+        "skip_first_frames": 0,
+        "select_every_nth": 1,
+        "format": "AnimateDiff",
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "combined_132116_44705.mp4",
+            "type": "input",
+            "format": "video/mp4",
+            "force_rate": 16,
+            "custom_width": 0,
+            "custom_height": 0,
+            "frame_load_cap": 0,
+            "skip_first_frames": 0,
+            "select_every_nth": 1
+          }
+        }
+      }
+    },
+    {
+      "id": 23,
+      "type": "PreviewAudio",
+      "pos": [
+        291.4719131282987,
+        589.7001166734623
+      ],
+      "size": [
+        445.9667481343206,
+        120.81763573002104
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 71
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.20.1",
+        "Node name for S&R": "PreviewAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 3,
+      "type": "Light-Tool: ShowText",
+      "pos": [
+        769.9468944396408,
+        -65.51715199090795
+      ],
+      "size": [
+        416.5045016660272,
+        920.4749731370053
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "*",
+          "link": 69
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "预览 SRT 字幕",
+      "properties": {
+        "cnr_id": "comfyui-light-tool",
+        "ver": "1.4.9",
+        "Node name for S&R": "Light-Tool: ShowText",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 32,
+      "type": "AudioSrtAligner",
+      "pos": [
+        296.23227853876176,
+        -37.424837524770034
+      ],
+      "size": [
+        436.45326595022857,
+        459.4565171224658
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 68
+        }
+      ],
+      "outputs": [
+        {
+          "name": "srt_string",
+          "type": "STRING",
+          "links": [
+            69,
+            70
+          ]
+        },
+        {
+          "name": "detected_language",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "srt_entries",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "coverage",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "audio_out",
+          "type": "AUDIO",
+          "links": [
+            71
+          ]
+        }
+      ],
+      "title": "Audio SRT Aligner（文稿校对字幕）",
+      "properties": {
+        "cnr_id": "ComfyUI-Audio-Srt-Aligner",
+        "ver": "9c1735c1578e561d88d82bddbae63c16424c7a4e",
+        "Node name for S&R": "AudioSrtAligner",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        "咿呀\n阿苏耶\n\n银针绣入黎明的雾\n彩线缝补岁月的路\n太阳历书翻动沉睡的史诗\n我们在虎脊背上画出蓝图\n莫问远古的秘密传给谁\n你看那羊角纹里绽放繁华\n\n火塘煨香苦涩的茶\n汗水洗净额头的疤\n我不问你从哪片谷底走出来\n只要弦子柔拨动了牵挂\n莫说这一生还要走多远\n只要火不熄灭心就有家\n\n哎阿苏耶\n不需要剧本不需要沉默\n哎阿苏耶\n把胸口的灰烬统统抖落\n听弦子在响\n\n左脚踩！右脚跳！\n大地的脉搏缓缓摇。\n弦子柔！调子高！\n灵魂在晚霞里轻声欢笑。\n火把吻过了众山的腰\n一路火光一路歌谣。\n\n黑虎巡山守在每一个胸口\n金色太阳映在我们的背后\n千年咕遮停不下的节奏\n端起杆杆酒敬天地敬不朽。\n\n左脚踩！右脚跳！\n一圈一圈别迟到。\n调子暖！意境傲！\n云散日出就在今朝。\n万把红火连成飞天的龙\n一路火光一路歌谣。\n\n阿苏耶……\n火不熄。\n歌不老。",
+        "small",
+        "zh",
+        "Qwen3 ASR+LIS",
+        5,
+        12,
+        "float16",
+        "roformer"
+      ],
+      "color": "#233",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 21,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": [
+        -380.5889651994336,
+        -276.75414663665276
+      ],
+      "size": [
+        453.1411246045416,
+        103.43363239493556
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "",
+        "showNav": true,
+        "showAllGraphs": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      }
+    },
+    {
+      "id": 8,
+      "type": "VHS_VideoCombine",
+      "pos": [
+        1851.6420533328198,
+        -66.03828630107023
+      ],
+      "size": [
+        330.3051618303575,
+        912.1912033279227
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 30
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 21
+        },
+        {
+          "name": "meta_batch",
+          "shape": 7,
+          "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "shape": 7,
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "frame_rate",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frame_rate"
+          },
+          "link": 20
+        }
+      ],
+      "outputs": [
+        {
+          "name": "Filenames",
+          "type": "VHS_FILENAMES",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-videohelpersuite",
+        "ver": "1.7.9",
+        "Node name for S&R": "VHS_VideoCombine",
+        "ue_properties": {
+          "widget_ue_connectable": {
+            "frame_rate": true
+          },
+          "version": "7.5.2",
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": {
+        "frame_rate": 8,
+        "loop_count": 0,
+        "filename_prefix": "AnimateDiff",
+        "format": "video/h264-mp4",
+        "pix_fmt": "yuv420p",
+        "crf": 19,
+        "save_metadata": false,
+        "trim_to_audio": false,
+        "pingpong": false,
+        "save_output": true,
+        "videopreview": {
+          "hidden": false,
+          "paused": false,
+          "params": {
+            "filename": "AnimateDiff_00032-audio.mp4",
+            "subfolder": "",
+            "type": "output",
+            "format": "video/h264-mp4",
+            "frame_rate": 25,
+            "workflow": "AnimateDiff_00032.png",
+            "fullpath": "/home/jovyan/work/python/ComfyUI/output/AnimateDiff_00032-audio.mp4"
+          }
+        }
+      }
+    }
+  ],
+  "links": [
+    [
+      18,
+      11,
+      3,
+      13,
+      0,
+      "VHS_VIDEOINFO"
+    ],
+    [
+      20,
+      13,
+      5,
+      8,
+      4,
+      "FLOAT"
+    ],
+    [
+      21,
+      11,
+      2,
+      8,
+      1,
+      "AUDIO"
+    ],
+    [
+      27,
+      11,
+      0,
+      16,
+      0,
+      "IMAGE"
+    ],
+    [
+      29,
+      13,
+      5,
+      16,
+      2,
+      "FLOAT"
+    ],
+    [
+      30,
+      16,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      35,
+      11,
+      2,
+      22,
+      0,
+      "AUDIO"
+    ],
+    [
+      68,
+      22,
+      3,
+      32,
+      0,
+      "AUDIO"
+    ],
+    [
+      69,
+      32,
+      0,
+      3,
+      0,
+      "STRING"
+    ],
+    [
+      70,
+      32,
+      0,
+      16,
+      1,
+      "STRING"
+    ],
+    [
+      71,
+      32,
+      4,
+      23,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "文稿校对字幕生成",
+      "bounding": [
+        -386.6217810595101,
+        -145.25516138317687,
+        1589.569340022991,
+        1004.0749731370053
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "阶段二：字幕合成到图像",
+      "bounding": [
+        1264.9065269123112,
+        -141.41114595551738,
+        1032.3458346987393,
+        1014.4111200162257
+      ],
+      "color": "#a1a1a1",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.30735605491428186,
+      "offset": [
+        1654.0972805065462,
+        1048.15834773573
+      ]
+    },
+    "frontendVersion": "1.37.11",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "workflowRendererVersion": "LG",
+    "ue_links": [],
+    "links_added_by_ue": []
+  },
+  "version": 0.4
+}

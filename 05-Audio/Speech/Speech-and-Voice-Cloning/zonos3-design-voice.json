@@ -1,0 +1,340 @@
+{
+  "id": "2d799cf7-ae10-49c7-8ae7-030f5b0c4d1a",
+  "revision": 0,
+  "last_node_id": 6,
+  "last_link_id": 5,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "MarkdownNote",
+      "pos": [
+        -460,
+        0
+      ],
+      "size": [
+        420,
+        520
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "How to use",
+      "properties": {},
+      "widgets_values": [
+        "## Design a Voice — ZONOS3-Mini\n\n1. **First run:** just press Run. ZONOS3 downloads its voice server and model (about 1.7 GB, once) into `ComfyUI/models/zonos3` and starts by itself. Windows with an NVIDIA GPU.\n2. Pick a base voice in **ZONOS3 Voice**, or try a **preset** in Voice Design.\n3. Move the sliders: **Who** (gender, age, pitch, intonation), **Texture**, **Room**, **Delivery** and **Mood**. They stop where Zyphra measured the voice still sounds like the same person.\n4. Press **Run**.\n\n**Tips**\n- Mood and delivery are a nudge, not a guarantee: try two or three seeds.\n- Go easy when stacking Delivery and Mood: Liveliness, Happy and Chatty together raise the pitch a lot, so a deep voice can end up sounding like someone else.\n- *steer_hold* relaxes mood and delivery after ~4 seconds so long reads don't drift louder. Set 1 to keep them constant.\n- Want a cross between two voices? Swap **ZONOS3 Voice** for **ZONOS3 Voice Blend**."
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ZONOS3Server",
+      "pos": [
+        0,
+        0
+      ],
+      "size": [
+        360,
+        200
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "server",
+          "type": "ZONOS3_SERVER",
+          "links": [
+            1,
+            2
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZONOS3Server",
+        "aux_id": "claudianeodev/ComfyUI-ZONOS3",
+        "cnr_id": "comfyui-zonos3",
+        "ver": "1.2.1"
+      },
+      "widgets_values": [
+        "http://127.0.0.1:1919",
+        "",
+        "",
+        "gpu",
+        600,
+        "",
+        true
+      ]
+    },
+    {
+      "id": 3,
+      "type": "ZONOS3Voice",
+      "pos": [
+        0,
+        260
+      ],
+      "size": [
+        360,
+        110
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "server",
+          "type": "ZONOS3_SERVER",
+          "link": 1
+        },
+        {
+          "name": "clone_audio",
+          "type": "AUDIO",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "voice",
+          "type": "ZONOS3_VOICE",
+          "links": [
+            3
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZONOS3Voice",
+        "aux_id": "claudianeodev/ComfyUI-ZONOS3",
+        "cnr_id": "comfyui-zonos3",
+        "ver": "1.2.1"
+      },
+      "widgets_values": [
+        "Thaddeus (English, male, announcer)",
+        "voice profile (stable)"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "ZONOS3VoiceDesign",
+      "pos": [
+        420,
+        0
+      ],
+      "size": [
+        360,
+        860
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "design",
+          "type": "ZONOS3_DESIGN",
+          "links": [
+            4
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZONOS3VoiceDesign",
+        "aux_id": "claudianeodev/ComfyUI-ZONOS3",
+        "cnr_id": "comfyui-zonos3",
+        "ver": "1.2.1"
+      },
+      "widgets_values": [
+        "none",
+        0.0,
+        -0.5,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.5,
+        0.0,
+        0.0,
+        1.5,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        "none",
+        1.0,
+        0.35
+      ]
+    },
+    {
+      "id": 5,
+      "type": "ZONOS3TextToSpeech",
+      "pos": [
+        840,
+        0
+      ],
+      "size": [
+        420,
+        340
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "server",
+          "type": "ZONOS3_SERVER",
+          "link": 2
+        },
+        {
+          "name": "voice",
+          "type": "ZONOS3_VOICE",
+          "link": 3
+        },
+        {
+          "name": "design",
+          "type": "ZONOS3_DESIGN",
+          "link": 4,
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            5
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZONOS3TextToSpeech",
+        "aux_id": "claudianeodev/ComfyUI-ZONOS3",
+        "cnr_id": "comfyui-zonos3",
+        "ver": "1.2.1"
+      },
+      "widgets_values": [
+        "Welcome back! Today we're making a brand new voice from scratch: no recording, no studio, just a few sliders.",
+        "US English (en_us)",
+        7,
+        "fixed",
+        true,
+        0.75
+      ]
+    },
+    {
+      "id": 6,
+      "type": "SaveAudioMP3",
+      "pos": [
+        1320,
+        0
+      ],
+      "size": [
+        360,
+        136
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 5
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "name": "quality",
+          "type": "COMBO",
+          "widget": {
+            "name": "quality"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveAudioMP3"
+      },
+      "widgets_values": [
+        "audio/ZONOS3/design",
+        "320k"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      0,
+      3,
+      0,
+      "ZONOS3_SERVER"
+    ],
+    [
+      2,
+      2,
+      0,
+      5,
+      0,
+      "ZONOS3_SERVER"
+    ],
+    [
+      3,
+      3,
+      0,
+      5,
+      1,
+      "ZONOS3_VOICE"
+    ],
+    [
+      4,
+      4,
+      0,
+      5,
+      2,
+      "ZONOS3_DESIGN"
+    ],
+    [
+      5,
+      5,
+      0,
+      6,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.75,
+      "offset": [
+        60,
+        60
+      ]
+    }
+  },
+  "version": 0.4
+}
