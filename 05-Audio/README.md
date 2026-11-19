@@ -1,17 +1,20 @@
 # Audio — ComfyUI workflows
 
-Text-to-speech, voice cloning and voice design (Qwen3-TTS, Fish S2, Chatterbox, CosyVoice, Kokoro, Parler-TTS, OpenVoice, F5-TTS, Bark, ChatTTS, Dia, Sesame CSM, VibeVoice, IndexTTS-2, VoxCPM, ElevenLabs and Fish Audio API); speech-to-text, subtitles and forced alignment (Whisper, faster-whisper, Qwen3-ASR, Parakeet, Nemotron, SenseVoice); full-song and instrumental music generation (ACE-Step 1.5 / XL, YuE 2, YuE v1, HeartMuLa, MuLaCover, Tencent SongGeneration / LeVo 2, DiffRhythm, DiffRhythm 2, Stable Audio 3, Stable Audio Open, MusicGen, AudioLDM 2, MiniMax Music 3, Foundation-1); sound effects (Sony Woosh); music analysis, transcription to MIDI / ABC (MuScriptor, SheetSage2, ACE-Step) and stem separation (Demucs v4).
+Text-to-speech, voice cloning and voice design (Qwen3-TTS, Fish S2, Chatterbox, CosyVoice, Kokoro, Parler-TTS, OpenVoice, F5-TTS, Bark, ChatTTS, Dia, Sesame CSM, VibeVoice, IndexTTS-2, VoxCPM, ElevenLabs and Fish Audio API); speech-to-text, subtitles and forced alignment (Whisper, faster-whisper, Qwen3-ASR, Parakeet, Nemotron, SenseVoice); full-song and instrumental music generation (ACE-Step 1.5 / XL, YuE 2, YuE v1, HeartMuLa, MuLaCover, Tencent SongGeneration / LeVo 2, DiffRhythm, DiffRhythm 2, Stable Audio 3, Stable Audio Open, MusicGen, AudioLDM 2, MiniMax Music 3, Foundation-1); sound effects (Sony Woosh); singing-voice synthesis (SoulX-Singer); music analysis (ACE-Step, Music Flamingo); transcription to MIDI / ABC (MuScriptor, SheetSage2, Basic Pitch) and stem separation (Demucs v4, Mel-Band / BS-RoFormer, MDX, ensembles).
 
 | Subfolder | What is inside | Workflows |
 |---|---|---|
-| [`Music-Generation/`](Music-Generation) | Music generation, covers, editing, LoRA, sound effects | 48 |
-| [`Music-Analysis/`](Music-Analysis) | Describe and caption music (genre, BPM, key, tags) | 2 |
-| [`Music-Transcription/`](Music-Transcription) | Audio to MIDI, ABC score and lyrics | 3 |
+| [`Music-Generation/`](Music-Generation) | Music generation, covers, editing, LoRA, sound effects | 56 |
+| [`Music-Analysis/`](Music-Analysis) | Describe and caption music (genre, BPM, key, tags) | 3 |
+| [`Music-Transcription/`](Music-Transcription) | Audio to MIDI, ABC score and lyrics | 4 |
 | [`Speech-and-Voice-Cloning/`](Speech-and-Voice-Cloning) | Text-to-speech and voice cloning | 65 |
 | [`Speech-to-Text/`](Speech-to-Text) | Speech-to-text, subtitles and forced alignment | 19 |
-| [`Stem-Separation/`](Stem-Separation) | Vocal, instrument and drum stem extraction | 4 |
+| [`Stem-Separation/`](Stem-Separation) | Vocal, instrument and drum stem extraction | 10 |
+| [`Singing-Voice-Synthesis/`](Singing-Voice-Synthesis) | Singing voice synthesis, vocal re-synthesis and lyric editing | 3 |
 
-## Workflows (141)
+## Workflows (160)
+
+**New in the November 2026 music-model update:** 19 workflows added from the open-source music model encyclopedia (19 November 2026 snapshot). They are published example workflows (or official Comfy-Org templates) saved unmodified; they were only checked as loadable ComfyUI JSON (every link resolves, every custom node type confirmed in the named pack) and are marked **not tested**. Several still contain the author's demo audio / video file names in Load nodes; replace them with your own files.
 
 **Test column:** every music workflow added in November 2026 was queued through the ComfyUI API on one PC (RTX 5060 Ti 16 GB, 32 GB RAM, Linux, ComfyUI 0.43, frontend 1.57, PyTorch 2.11 + CUDA 13, transformers 5.22) with short, low-step renders, and the output files were checked for real audio. **Passed** = ran unchanged. **Fixed** = needed a change to the workflow file (already applied here) and/or to the node pack (see [Node-pack fixes for transformers 5](#node-pack-fixes-for-transformers-5)). Most packs were written for transformers 4; on a ComfyUI that already uses transformers 5 they fail until patched.
 
@@ -38,6 +41,18 @@ Licence column: **Commercial** = weights may be used commercially, **Non-commerc
 | ComfyUI_VLM_nodes | [github.com/gokayfem/ComfyUI_VLM_nodes](https://github.com/gokayfem/ComfyUI_VLM_nodes) |
 | ComfyUI_AudioTools | [github.com/lum3on/ComfyUI_AudioTools](https://github.com/lum3on/ComfyUI_AudioTools) |
 | ComfyUI-Demucs-AudioSeparator | [github.com/Meisoftcoltd/ComfyUI-Demucs-AudioSeparator](https://github.com/Meisoftcoltd/ComfyUI-Demucs-AudioSeparator) |
+| ComfyUI-SongBloom (rakib91221) | [github.com/rakib91221/ComfyUI-SongBloom](https://github.com/rakib91221/ComfyUI-SongBloom) (no licence declared; its workflow also uses `SoundFlow_*` fade / trim nodes from a separate SoundFlow pack that could not be verified) |
+| SongBloom_ComfyUI (xuchenxu168) | [github.com/xuchenxu168/SongBloom_ComfyUI](https://github.com/xuchenxu168/SongBloom_ComfyUI) (Apache-2.0; also needs ComfyUI-Easy-Use) |
+| ComfyUI-AudioX (aiimagestudio) | [github.com/aiimagestudio/ComfyUI-AudioX](https://github.com/aiimagestudio/ComfyUI-AudioX) (MIT; needs ComfyUI-VideoHelperSuite) |
+| ComfyUI-StableAudioX (lum3on) | [github.com/lum3on/ComfyUI-StableAudioX](https://github.com/lum3on/ComfyUI-StableAudioX) (licence not declared; needs rgthree-comfy) |
+| ComfyUI-JK-HeartMuLa | [github.com/Crono141/ComfyUI-JK-HeartMuLa](https://github.com/Crono141/ComfyUI-JK-HeartMuLa) (Apache-2.0) |
+| comfyui-musicflamingo | [github.com/C0untFloyd/comfyui-musicflamingo](https://github.com/C0untFloyd/comfyui-musicflamingo) (MIT; needs rgthree-comfy) |
+| ComfyUI-SoulX-Singer | [github.com/Saganaki22/ComfyUI-SoulX-Singer](https://github.com/Saganaki22/ComfyUI-SoulX-Singer) (Apache-2.0) |
+| ComfyUI-kaola-soulX-Singer | [github.com/kana112233/ComfyUI-kaola-soulX-Singer](https://github.com/kana112233/ComfyUI-kaola-soulX-Singer) (no licence declared; needs NumPy 2.x) |
+| ComfyUI-MIDI-Edit | [github.com/ahkimkoo/ComfyUI-MIDI-Edit](https://github.com/ahkimkoo/ComfyUI-MIDI-Edit) (MIT; the workflow also uses rgthree-comfy, ComfyUI-Easy-Use, ComfyUI-KJNodes, a MelBandRoFormer pack, an audio-utility pack and an LLM pack that were not individually verified) |
+| audio-separation-nodes-comfyui | [github.com/christian-byrne/audio-separation-nodes-comfyui](https://github.com/christian-byrne/audio-separation-nodes-comfyui) (MIT) |
+| ComfyUI-MelBandRoFormer | [github.com/kijai/ComfyUI-MelBandRoFormer](https://github.com/kijai/ComfyUI-MelBandRoFormer) (licence not declared) |
+| ComfyUI-Custom-Nodes ("One Solo Studios" stem tools) | [github.com/ArtisticMusician/ComfyUI-Custom-Nodes](https://github.com/ArtisticMusician/ComfyUI-Custom-Nodes) (MIT; `pip install audio-separator basic-pitch`; model weights download on first use) |
 
 ### Music generation
 
@@ -123,11 +138,25 @@ The official repo is currently offline and the weight licence could not be verif
 | [foundation-1-text-to-music-loops](Music-Generation/foundation-1-text-to-music-loops.json) | Text to Music Loops and Samples (Foundation-1) that follow key, bar count and BPM (node pack by Saganaki22) | `Foundation_1.safetensors` (auto-downloaded by the node pack) | ComfyUI-Foundation-1 | — | see model card | — (earlier library workflow, not part of this test) |
 | [woosh-text-and-video-to-sound-effects](Music-Generation/woosh-text-and-video-to-sound-effects.json) | Text to Sound Effects and Video to Sound Effects (Sony Woosh) | `Woosh-Flow`, `Woosh-VFlow-8s` | ComfyUI-Woosh, ComfyUI-VideoHelperSuite | — | see model card | — (earlier library workflow, not part of this test) |
 
+#### More song and audio generation (added November 2026, not tested)
+
+| Workflow | What it does | Models used | Custom nodes needed | VRAM | Licence | Test |
+|---|---|---|---|---|---|---|
+| [ace-step-v1-instrumental-text-to-music](Music-Generation/ace-step-v1-instrumental-text-to-music.json) | Legacy ACE-Step v1 (3.5B) instrumental text to music with core nodes only (official Comfy-Org template) | [`ace_step_v1_3.5b.safetensors`](https://huggingface.co/Comfy-Org/ACE-Step_ComfyUI_repackaged) → `models/checkpoints/` | core | ~8–12 GB (estimate) | Commercial (Apache-2.0) | not tested |
+| [songbloom-lyrics-and-audio-prompt-to-song](Music-Generation/songbloom-lyrics-and-audio-prompt-to-song.json) | SongBloom: lyrics + a short style audio prompt to a full song up to 150 s, with lyric processor and optional DeepSeek lyric formatter (needs your own DeepSeek API key; the field is empty) | `songbloom_full_150s_dpo` from [fredconex/SongBloom-safetensors](https://huggingface.co/fredconex/SongBloom-safetensors) → `models/checkpoints/` | SongBloom_ComfyUI (xuchenxu168), ComfyUI-Easy-Use | not stated (likely 12 GB+) | Check the [SongBloom model card](https://github.com/tencent-ailab/SongBloom); pack Apache-2.0 | not tested |
+| [songbloom-fredconex-style-150s-song](Music-Generation/songbloom-fredconex-style-150s-song.json) | SongBloom full-length song (150 s model) from lyrics and a 10 s audio prompt, with fade / trim helpers | `songbloom_full_150s.safetensors` (or the `_dpo` file) from [fredconex/SongBloom-safetensors](https://huggingface.co/fredconex/SongBloom-safetensors) → `models/checkpoints/` | ComfyUI-SongBloom (rakib91221) + the SoundFlow fade / trim nodes | not stated | Check the SongBloom model card; pack has no licence | not tested |
+| [audiox-text-to-music-and-audio](Music-Generation/audiox-text-to-music-and-audio.json) | AudioX unified model: text to music and text to sound, with a prompt helper | [`HKUSTAudio/AudioX`](https://huggingface.co/HKUSTAudio/AudioX) `model.ckpt` + `config.json` → `models/diffusion_models/` | ComfyUI-StableAudioX, rgthree-comfy | 16 GB+ (pack README) | AudioX is CC-BY-NC per the report: non-commercial | not tested |
+| [audiox-video-and-image-to-audio](Music-Generation/audiox-video-and-image-to-audio.json) | AudioX: score or sound a video or a set of images (background music / foley) | [`HKUSTAudio/AudioX-MAF`](https://huggingface.co/HKUSTAudio/AudioX-MAF) → `models/AudioX/` | ComfyUI-AudioX, ComfyUI-VideoHelperSuite | not stated | Non-commercial (check the model card) | not tested |
+| [heartmula-muq-mulan-style-transfer](Music-Generation/heartmula-muq-mulan-style-transfer.json) | HeartMuLa song generation conditioned on a MuQ-MuLan style embedding from a reference clip (experimental) | HeartMuLa-oss-3B + HeartCodec-oss → `models/HeartMuLa/`; [OpenMuQ/MuQ-MuLan-large](https://huggingface.co/OpenMuQ/MuQ-MuLan-large) (auto-download) | ComfyUI-JK-HeartMuLa | not stated | Non-commercial (MuQ-MuLan is CC BY-NC 4.0) | not tested |
+| [pika-api-text-to-music](Music-Generation/pika-api-text-to-music.json) | Pika text to music through the Comfy API node (paid credits, Comfy account, no local model) | none (cloud) | core API nodes | none | Service terms | not tested |
+| [sonilo-music-1.5-api-text-to-music](Music-Generation/sonilo-music-1.5-api-text-to-music.json) | Sonilo Music 1.5 through the Comfy API node (paid credits, no local model) | none (cloud) | core API nodes | none | Service terms | not tested |
+
 ### Music analysis
 
 | Workflow | What it does | Models used | Custom nodes needed | VRAM | Licence | Test |
 |---|---|---|---|---|---|---|
 | [ace-step-v1.5-understand-audio](Music-Analysis/ace-step-v1.5-understand-audio.json) | Understand a song: caption, lyrics, BPM, key, time signature, duration (reusable as a prompt) | `Ace-Step1.5` | ComfyUI-kaola-ace-step | 6 GB+ | Commercial | Fixed: same patches; caption, BPM, key and lyrics returned |
+| [music-flamingo-song-analysis](Music-Analysis/music-flamingo-song-analysis.json) | NVIDIA Music Flamingo audio-language model: describe a song (genre, key, tempo, structure, lyric themes) | [`nvidia/music-flamingo-hf`](https://huggingface.co/nvidia/music-flamingo-hf) (pre-quantised variants in `models/checkpoints/musicflamingo/`) | comfyui-musicflamingo, rgthree-comfy | ~15 GB fp16, ~8 GB 8-bit, ~4.5 GB 4-bit | NVIDIA licence ("other" on Hugging Face): verify before commercial use | not tested |
 
 ### Music transcription
 
@@ -135,6 +164,17 @@ The official repo is currently offline and the weight licence could not be verif
 |---|---|---|---|---|---|---|
 | [muscriptor-audio-to-midi-transcription](Music-Transcription/muscriptor-audio-to-midi-transcription.json) | Audio to MIDI multi-instrument transcription (MuScriptor by Kyutai and Mirelo; example workflow by martyyz-ai). The MuScriptor weights are gated on HuggingFace: accept the CC BY-NC 4.0 licence and log in to HuggingFace; they auto-download on first use | MuScriptor `large` (auto-downloaded by the node pack) | [ComfyUI-MuScriptor](https://github.com/martyyz-ai/ComfyUI-MuScriptor), ComfyUI-Custom-Scripts | — | Non-commercial | — (earlier library workflow, not part of this test) |
 | [sheetsage2-audio-to-abc-melody-and-chords](Music-Transcription/sheetsage2-audio-to-abc-melody-and-chords.json) | SheetSage2: transcribe a song's melody (and melody + chords) to an ABC score; open it in an ABC editor to export MIDI. Built for this library from core nodes | [`sheetsage2_bf16.safetensors`](https://huggingface.co/Comfy-Org/YuE2/resolve/main/audio_encoders/sheetsage2_bf16.safetensors) → `audio_encoders` | core | ~4 GB | Non-commercial (CC BY-NC 4.0) | Passed: ABC for melody and full |
+| [stem-split-and-basic-pitch-audio-to-midi](Music-Transcription/stem-split-and-basic-pitch-audio-to-midi.json) | Split a song into stems (Roformer / Demucs 6-stem / drum pieces) and transcribe the stems to MIDI with Spotify Basic Pitch | audio-separator models and Basic Pitch (download on first use) | One Solo Studios stem tools (ArtisticMusician/ComfyUI-Custom-Nodes) | not stated | Basic Pitch Apache-2.0; check each separator checkpoint | not tested |
+
+### Singing voice synthesis
+
+Music-only vocal synthesis (melody / lyrics to a sung vocal), kept apart from the text-to-speech workflows below. Consent for the voice you clone still applies.
+
+| Workflow | What it does | Models used | Custom nodes needed | VRAM | Licence | Test |
+|---|---|---|---|---|---|---|
+| [soulx-singer-zero-shot-singing-voice-synthesis](Singing-Voice-Synthesis/soulx-singer-zero-shot-singing-voice-synthesis.json) | SoulX-Singer zero-shot singing voice synthesis and conversion: sing a target melody and lyrics in the timbre of a reference vocal, simple and advanced nodes (example workflow by Saganaki22) | [Soul-AILab/SoulX-Singer](https://huggingface.co/Soul-AILab/SoulX-Singer) + [SoulX-Singer-Preprocess](https://huggingface.co/Soul-AILab/SoulX-Singer-Preprocess) (auto-download, ~6 GB bf16) → `models/SoulX-Singer/` | ComfyUI-SoulX-Singer | not stated | Commercial (Apache-2.0 model and pack) | not tested |
+| [soulx-singer-preprocess-and-generate-kaola](Singing-Voice-Synthesis/soulx-singer-preprocess-and-generate-kaola.json) | SoulX-Singer with an explicit preprocessing step (prompt and target metadata extraction) before generation | SoulX-Singer + SoulX-Singer-Preprocess → `models/soulx-singer/` and `models/soulx-singer/SoulX-Singer-Preprocess/` | ComfyUI-kaola-soulX-Singer (needs NumPy 2.x, may conflict with other packs) | not stated | Model Apache-2.0; pack has no licence | not tested |
+| [vocal-to-midi-lyric-edit-and-soulx-resing](Singing-Voice-Synthesis/vocal-to-midi-lyric-edit-and-soulx-resing.json) | Transcribe a sung vocal to MIDI, replace the lyrics or correct the pitch, and re-sing it with SoulX-Singer. A large graph (80 nodes) with many third-party nodes; several are not verified, see the pack table | SoulX-Singer (~2.6 GB), SoulX-Singer-Preprocess (~7 GB) and ct-transformer-punc → `models/` | ComfyUI-MIDI-Edit plus its helper packs | not stated | Model Apache-2.0; pack MIT | not tested |
 
 ### Text-to-speech and voice cloning
 
@@ -285,6 +325,12 @@ No published ComfyUI workflow exists for these models, so the library has no wor
 | [demucs-htdemucs-6s-six-stem-separation](Stem-Separation/demucs-htdemucs-6s-six-stem-separation.json) | Demucs v4 6 stems: vocals, drums, bass, other, guitar, piano, plus an instrumental mix. Built for this library from the pack's separator node | `htdemucs_6s` (auto-download to `models/demucs/`) | ComfyUI-Demucs-AudioSeparator | ~4 GB (cpu option) | Commercial (MIT) | Passed: 6 stems + instrumental |
 | [demucs-mdx-audio-separator-stem-separation](Stem-Separation/demucs-mdx-audio-separator-stem-separation.json) | Demucs + MDX + Audio Separator stem extraction: vocals, instruments and percussion from any track (by ZETALVX) | — | audio-separation, audio-separation-nodes-comfyui | ~4 GB | Commercial (MIT) | — (earlier library workflow, not part of this test) |
 | [ace-step-v1.5-extract-stems](Stem-Separation/ace-step-v1.5-extract-stems.json) | ACE-Step extraction: pull a single track (vocals, drums, bass…) out of a mix generatively | `Ace-Step1.5` | ComfyUI-kaola-ace-step | 6 GB+ | Commercial | Fixed: same patches; vocals from a 30 s clip, 20 steps |
+| [melband-roformer-vocals-instrumental-split](Stem-Separation/melband-roformer-vocals-instrumental-split.json) | Mel-Band RoFormer vocals / instrumental split (Kijai's example workflow) | [`MelBandRoformer_fp16.safetensors`](https://huggingface.co/Kijai/MelBandRoFormer_comfy) → `models/diffusion_models/MelRoFormer/` | ComfyUI-MelBandRoFormer | not stated | Check the model card (derived from a community vocal model); pack licence not declared | not tested |
+| [bs-roformer-vocal-split-mel-roformer-denoise](Stem-Separation/bs-roformer-vocal-split-mel-roformer-denoise.json) | BS-RoFormer (Viperx 1297) vocal split followed by a Mel-RoFormer denoise pass | `BS-Roformer-Viperx-1297`, `Mel-Roformer-Denoise-Aufr33` (auto-download through audio-separator) | One Solo Studios stem tools | not stated | Mixed community checkpoints: check each | not tested |
+| [roformer-ensemble-vocals-instrumental-uvr-cleanup](Stem-Separation/roformer-ensemble-vocals-instrumental-uvr-cleanup.json) | Vocal / instrumental split with an ensemble of splitters and UVR cleanup | audio-separator models (auto-download) | One Solo Studios stem tools | not stated | Mixed community checkpoints | not tested |
+| [stem-ensemble-recipes-roformer-mdx-demucs-6s](Stem-Separation/stem-ensemble-recipes-roformer-mdx-demucs-6s.json) | Ensemble recipes that combine Roformer, MDX and Demucs 6-stem models for cleaner stems | audio-separator models (auto-download) | One Solo Studios stem tools | not stated | Mixed community checkpoints | not tested |
+| [stem-chain-drum-pieces-and-sam-audio](Stem-Separation/stem-chain-drum-pieces-and-sam-audio.json) | Chained separation: stems, then drum pieces (kick / snare / toms / hats, MDX23C DrumSep) and text-prompted extraction with SAM-Audio | audio-separator models, SAM-Audio small (likely gated on Hugging Face) | One Solo Studios stem tools | not stated | Mixed; check each | not tested |
+| [demucs-stems-tempo-match-remix](Stem-Separation/demucs-stems-tempo-match-remix.json) | Demucs 4-stem separation, tempo matching and remix, with an extra Stable-Audio-style generation chain (christian-byrne example) | torchaudio Hybrid Demucs (auto-download) + a Stable Audio checkpoint | audio-separation-nodes-comfyui | not stated | check the models | not tested |
 
 ## Included but not working on the test PC
 
@@ -341,5 +387,16 @@ Models from the November 2026 open-source music model report that have no workin
 | HeartMuLa 7B | Larger HeartMuLa | Announced, not released | [github.com/HeartMuLa](https://github.com/HeartMuLa) |
 | SongGeneration v2-medium / v2-fast | Smaller LeVo 2 variants | Announced, not released | [huggingface.co/tencent/SongGeneration](https://huggingface.co/tencent/SongGeneration) |
 | DiffRhythm 2 song extension and instrumental mode | Extend songs, instrumentals | Listed as TODO upstream | [github.com/xiaomi-research/diffrhythm2](https://github.com/xiaomi-research/diffrhythm2) |
+| InspireMusic / InspireSong | Text-to-music and song generation (FunAudioLLM) | A node pack exists ([ComfyUI-InspireMusic](https://github.com/fq393/ComfyUI-InspireMusic), one text-to-music node) but ships no example workflow, so none is included | [github.com/FunAudioLLM/InspireMusic](https://github.com/FunAudioLLM/InspireMusic) |
+| Muse, SegTune, JAM, Shao (Khala), VersBand, LaDA-Band, FastSAG | Newer open full-song and vocal-to-accompaniment research models | No ComfyUI node pack found | see the source index of the music-model report |
+| AURA, AFTER, Instruct-MusicGen, MusiConGen, MelodyFlow, MG2 | Conversational / real-time / controlled music editing | No ComfyUI node pack found | see the source index of the music-model report |
+| Magenta RealTime 2 | Real-time live music generation | Needs a streaming runtime bridge; no ComfyUI node found | [github.com/magenta](https://github.com/magenta) |
+| VampNet, Musika, Jukebox, Dance Diffusion, Moûsai, RAVE, DDSP, GANSynth, NSynth | Masked-token, neural-synthesis and legacy audio models | No audio ComfyUI pack found (the ComfyUI-RAVE pack is a video model; ComfyUI-DDSP-SVC is voice conversion) | [github.com/magenta/ddsp](https://github.com/magenta/ddsp) |
+| DiffSinger, YingMusic-Singer / Plus, NNSVS, TCSinger, StyleSinger, VISinger2 and other SVS research models | Singing voice synthesis | No ComfyUI node pack found (only SoulX-Singer is covered above) | [github.com/openvpi/DiffSinger](https://github.com/openvpi/DiffSinger) |
+| NotaGen, ChatMusician, Music Transformer, MusicVAE, Composer's Assistant 2 and other symbolic models | ABC / MIDI composition | No ComfyUI node pack found; MIDI rendering exists only inside video-effects packs | [github.com/ElectricAlexis/NotaGen](https://github.com/ElectricAlexis/NotaGen) |
+| MT3, Onsets & Frames, piano_transcription_inference, Omnizart | Multi-instrument and piano transcription | No ComfyUI node pack found (Basic Pitch is covered above through the stem-and-MIDI workflow; a standalone [ComfyUI-basic-pitch](https://github.com/DoctorDiffusion/ComfyUI-basic-pitch) pack exists without a workflow) | [github.com/magenta/mt3](https://github.com/magenta/mt3) |
+| CREPE, SPICE, BeatNet, madmom, GAME (singing to MIDI) | Pitch, beat and singing-note estimation | No ComfyUI node pack found with a workflow (a ComfyUI_SOME sing-to-MIDI pack was seen but not verified) | [github.com/openvpi/GAME](https://github.com/openvpi/GAME) |
+| MOSS-Music Instruct / Thinking, CLaMP 2 / 3, GaMMA, MU-LLaMA, MusiLingo, HeartCLAP | Music understanding, captioning and retrieval | No ComfyUI node pack found (Music Flamingo and the ACE-Step analyzers are covered above) | [github.com/OpenMOSS](https://github.com/OpenMOSS) |
+| SCNet, Spleeter, Open-Unmix, BandIt | Source separation | No dedicated ComfyUI pack found | [github.com/starrytong/SCNet](https://github.com/starrytong/SCNet) |
 
 See the [main README](../README.md) for setup steps, requirements and the other categories, or [`00-LIBRARY-INDEX.md`](../00-LIBRARY-INDEX.md) for the full list of workflows.

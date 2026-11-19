@@ -1,0 +1,2260 @@
+{
+  "id": "47c5d538-73e6-4a0a-bb3b-4bf39bcb3877",
+  "revision": 0,
+  "last_node_id": 144,
+  "last_link_id": 215,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "StemSplitter",
+      "pos": [
+        907.3996175576008,
+        -5.538521557105923
+      ],
+      "size": [
+        294.4746187464202,
+        126.7986744136198
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 184
+        }
+      ],
+      "outputs": [
+        {
+          "name": "stem_1",
+          "type": "AUDIO",
+          "links": [
+            181
+          ]
+        },
+        {
+          "name": "stem_2",
+          "type": "AUDIO",
+          "links": [
+            182
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "StemSplitter"
+      },
+      "widgets_values": [
+        "Roformer Model: BS-Roformer-Viperx-1297",
+        ""
+      ],
+      "widgets_values_named": {
+        "model": "Roformer Model: BS-Roformer-Viperx-1297",
+        "oss_logo": ""
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 5,
+      "type": "StemSplitter",
+      "pos": [
+        1598.0439032196061,
+        -249.26242496723705
+      ],
+      "size": [
+        270,
+        112
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 10
+        }
+      ],
+      "outputs": [
+        {
+          "name": "stem_1",
+          "type": "AUDIO",
+          "links": [
+            65
+          ]
+        },
+        {
+          "name": "stem_2",
+          "type": "AUDIO",
+          "links": [
+            66
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "StemSplitter"
+      },
+      "widgets_values": [
+        "Roformer Model: MelBand Roformer | Vocals by Kimberley Jensen",
+        ""
+      ],
+      "widgets_values_named": {
+        "model": "Roformer Model: MelBand Roformer | Vocals by Kimberley Jensen",
+        "oss_logo": ""
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 9,
+      "type": "StemSplitter6",
+      "pos": [
+        1302.8366097116404,
+        76.35166960138253
+      ],
+      "size": [
+        225.84909488067072,
+        189.9999530823307
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 182
+        }
+      ],
+      "outputs": [
+        {
+          "name": "vocals",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "drums",
+          "type": "AUDIO",
+          "links": [
+            67,
+            170
+          ]
+        },
+        {
+          "name": "bass",
+          "type": "AUDIO",
+          "links": [
+            68
+          ]
+        },
+        {
+          "name": "guitar",
+          "type": "AUDIO",
+          "links": [
+            71
+          ]
+        },
+        {
+          "name": "piano",
+          "type": "AUDIO",
+          "links": [
+            72
+          ]
+        },
+        {
+          "name": "other",
+          "type": "AUDIO",
+          "links": [
+            73
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "StemSplitter6"
+      },
+      "widgets_values": [
+        "Demucs v4: htdemucs_6s",
+        ""
+      ],
+      "widgets_values_named": {
+        "model": "Demucs v4: htdemucs_6s",
+        "oss_logo": ""
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 10,
+      "type": "StemSplitterFX",
+      "pos": [
+        1301.0237297239867,
+        -147.0088254412498
+      ],
+      "size": [
+        225,
+        110.00002668226975
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 181
+        }
+      ],
+      "outputs": [
+        {
+          "name": "processed",
+          "type": "AUDIO",
+          "links": [
+            10
+          ]
+        },
+        {
+          "name": "removed",
+          "type": "AUDIO",
+          "links": [
+            64
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "StemSplitterFX"
+      },
+      "widgets_values": [
+        "Roformer Model: MelBand Roformer | De-Reverb by anvuew",
+        ""
+      ],
+      "widgets_values_named": {
+        "model": "Roformer Model: MelBand Roformer | De-Reverb by anvuew",
+        "oss_logo": ""
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 32,
+      "type": "PrimitiveString",
+      "pos": [
+        129.11454405837176,
+        -928.6293984975383
+      ],
+      "size": [
+        408.5140922453257,
+        84.63496696230555
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            166
+          ]
+        }
+      ],
+      "title": "Output Folder Name",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.39.2",
+        "Node name for S&R": "PrimitiveString"
+      },
+      "widgets_values": [
+        "audio"
+      ],
+      "widgets_values_named": {
+        "value": "audio"
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 34,
+      "type": "PrimitiveString",
+      "pos": [
+        129.11454405837176,
+        -675.1404398469332
+      ],
+      "size": [
+        410.8758791521239,
+        73.87200334351223
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            198
+          ]
+        }
+      ],
+      "title": "Project Name:",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.39.2",
+        "Node name for S&R": "PrimitiveString"
+      },
+      "widgets_values": [
+        "StruckByLightning2"
+      ],
+      "widgets_values_named": {
+        "value": "StruckByLightning2"
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 48,
+      "type": "Increment",
+      "pos": [
+        129.11454405837176,
+        -432.41444481512144
+      ],
+      "size": [
+        225,
+        173.9999794731984
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "STRING",
+          "links": [
+            200
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "Increment"
+      },
+      "widgets_values": [
+        "increment",
+        11,
+        2,
+        1,
+        ""
+      ],
+      "widgets_values_named": {
+        "mode": "increment",
+        "starting_number": 11,
+        "padding": 2,
+        "step": 1,
+        "oss_logo": ""
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 63,
+      "type": "StemSave",
+      "pos": [
+        2006.1322297235783,
+        -486.3381181784745
+      ],
+      "size": [
+        541.4508910995402,
+        546
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio_1",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 64
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 179
+        },
+        {
+          "name": "audio_2",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 65
+        },
+        {
+          "name": "audio_3",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 66
+        },
+        {
+          "name": "audio_4",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 67
+        },
+        {
+          "name": "audio_5",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 68
+        },
+        {
+          "name": "audio_6",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 71
+        },
+        {
+          "name": "audio_7",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 72
+        },
+        {
+          "name": "audio_8",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 73
+        },
+        {
+          "name": "audio_9",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "stem_1",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "stem_2",
+          "type": "AUDIO",
+          "links": [
+            125
+          ]
+        },
+        {
+          "name": "stem_3",
+          "type": "AUDIO",
+          "links": [
+            126
+          ]
+        },
+        {
+          "name": "stem_4",
+          "type": "AUDIO",
+          "links": [
+            127
+          ]
+        },
+        {
+          "name": "stem_5",
+          "type": "AUDIO",
+          "links": [
+            128
+          ]
+        },
+        {
+          "name": "stem_6",
+          "type": "AUDIO",
+          "links": [
+            129
+          ]
+        },
+        {
+          "name": "stem_7",
+          "type": "AUDIO",
+          "links": [
+            130
+          ]
+        },
+        {
+          "name": "stem_8",
+          "type": "AUDIO",
+          "links": [
+            131
+          ]
+        },
+        {
+          "name": "stem_9",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "StemSave"
+      },
+      "widgets_values": [
+        "audio/StruckByLightning2_0010/",
+        false,
+        "Removed Reverb",
+        "Vox_main",
+        "Vox_backing",
+        "Drums",
+        "Bass",
+        "guitar",
+        "piano",
+        "other",
+        "stem_9",
+        "stem_10",
+        "stem_11",
+        "stem_12",
+        "stem_13",
+        "stem_14",
+        "stem_15",
+        "stem_16",
+        "stem_17",
+        "stem_18",
+        "stem_19",
+        "stem_20",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/StruckByLightning2_0010/",
+        "timestamp": false,
+        "name_1": "Removed Reverb",
+        "name_2": "Vox_main",
+        "name_3": "Vox_backing",
+        "name_4": "Drums",
+        "name_5": "Bass",
+        "name_6": "guitar",
+        "name_7": "piano",
+        "name_8": "other",
+        "name_9": "stem_9",
+        "name_10": "stem_10",
+        "name_11": "stem_11",
+        "name_12": "stem_12",
+        "name_13": "stem_13",
+        "name_14": "stem_14",
+        "name_15": "stem_15",
+        "name_16": "stem_16",
+        "name_17": "stem_17",
+        "name_18": "stem_18",
+        "name_19": "stem_19",
+        "name_20": "stem_20",
+        "float32": "",
+        "stemsave_row_1": "",
+        "stemsave_row_2": "",
+        "stemsave_row_3": "",
+        "stemsave_row_4": "",
+        "stemsave_row_5": "",
+        "stemsave_row_6": "",
+        "stemsave_row_7": "",
+        "stemsave_row_8": "",
+        "stemsave_row_9": "",
+        "stemsave_row_10": "",
+        "stemsave_row_11": "",
+        "stemsave_row_12": "",
+        "stemsave_row_13": "",
+        "stemsave_row_14": "",
+        "stemsave_row_15": "",
+        "stemsave_row_16": "",
+        "stemsave_row_17": "",
+        "stemsave_row_18": "",
+        "stemsave_row_19": "",
+        "stemsave_row_20": "",
+        "oss_logo": "",
+        "Save as...": ""
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 82,
+      "type": "Reroute",
+      "pos": [
+        2181.374048041088,
+        -795.2109942335194
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "*",
+          "links": []
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 83,
+      "type": "Audio2MIDI",
+      "pos": [
+        2983.118450135096,
+        -941.0718776951593
+      ],
+      "size": [
+        287.75,
+        202
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 125
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 209
+        }
+      ],
+      "outputs": [
+        {
+          "name": "midi",
+          "type": "MIDI",
+          "links": null
+        },
+        {
+          "name": "midi_path",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "Audio2MIDI"
+      },
+      "widgets_values": [
+        "audio/StruckByLightning2_0010/MIDI/",
+        false,
+        0.5,
+        0.3,
+        127.7,
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/StruckByLightning2_0010/MIDI/",
+        "timestamp": false,
+        "onset_threshold": 0.5,
+        "frame_threshold": 0.3,
+        "minimum_note_length": 127.7,
+        "oss_logo": "",
+        "Save as...": ""
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 84,
+      "type": "Audio2MIDI",
+      "pos": [
+        2983.118450135096,
+        -631.2071038734495
+      ],
+      "size": [
+        287.75,
+        202
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 126
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 210
+        }
+      ],
+      "outputs": [
+        {
+          "name": "midi",
+          "type": "MIDI",
+          "links": []
+        },
+        {
+          "name": "midi_path",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "Audio2MIDI"
+      },
+      "widgets_values": [
+        "audio/StruckByLightning2_0010/MIDI/",
+        false,
+        0.5,
+        0.3,
+        127.7,
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/StruckByLightning2_0010/MIDI/",
+        "timestamp": false,
+        "onset_threshold": 0.5,
+        "frame_threshold": 0.3,
+        "minimum_note_length": 127.7,
+        "oss_logo": "",
+        "Save as...": ""
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 85,
+      "type": "Audio2MIDI",
+      "pos": [
+        2983.118450135096,
+        -321.3423300517396
+      ],
+      "size": [
+        287.75,
+        202
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 127
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 211
+        }
+      ],
+      "outputs": [
+        {
+          "name": "midi",
+          "type": "MIDI",
+          "links": []
+        },
+        {
+          "name": "midi_path",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "Audio2MIDI"
+      },
+      "widgets_values": [
+        "audio/StruckByLightning2_0010/MIDI/",
+        false,
+        0.5,
+        0.3,
+        127.7,
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/StruckByLightning2_0010/MIDI/",
+        "timestamp": false,
+        "onset_threshold": 0.5,
+        "frame_threshold": 0.3,
+        "minimum_note_length": 127.7,
+        "oss_logo": "",
+        "Save as...": ""
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 86,
+      "type": "Audio2MIDI",
+      "pos": [
+        2983.118450135096,
+        -11.47755623002979
+      ],
+      "size": [
+        287.75,
+        202
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 128
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 212
+        }
+      ],
+      "outputs": [
+        {
+          "name": "midi",
+          "type": "MIDI",
+          "links": []
+        },
+        {
+          "name": "midi_path",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "Audio2MIDI"
+      },
+      "widgets_values": [
+        "audio/StruckByLightning2_0010/MIDI/",
+        false,
+        0.5,
+        0.3,
+        127.7,
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/StruckByLightning2_0010/MIDI/",
+        "timestamp": false,
+        "onset_threshold": 0.5,
+        "frame_threshold": 0.3,
+        "minimum_note_length": 127.7,
+        "oss_logo": "",
+        "Save as...": ""
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 87,
+      "type": "Audio2MIDI",
+      "pos": [
+        2983.118450135096,
+        608.2519914133899
+      ],
+      "size": [
+        287.75,
+        202
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 130
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 214
+        }
+      ],
+      "outputs": [
+        {
+          "name": "midi",
+          "type": "MIDI",
+          "links": []
+        },
+        {
+          "name": "midi_path",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "Audio2MIDI"
+      },
+      "widgets_values": [
+        "audio/StruckByLightning2_0010/MIDI/",
+        false,
+        0.5,
+        0.3,
+        127.7,
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/StruckByLightning2_0010/MIDI/",
+        "timestamp": false,
+        "onset_threshold": 0.5,
+        "frame_threshold": 0.3,
+        "minimum_note_length": 127.7,
+        "oss_logo": "",
+        "Save as...": ""
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 88,
+      "type": "Audio2MIDI",
+      "pos": [
+        2983.118450135096,
+        298.38721759168004
+      ],
+      "size": [
+        287.75,
+        202
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 129
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 213
+        }
+      ],
+      "outputs": [
+        {
+          "name": "midi",
+          "type": "MIDI",
+          "links": []
+        },
+        {
+          "name": "midi_path",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "Audio2MIDI"
+      },
+      "widgets_values": [
+        "audio/StruckByLightning2_0010/MIDI/",
+        false,
+        0.5,
+        0.3,
+        127.7,
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/StruckByLightning2_0010/MIDI/",
+        "timestamp": false,
+        "onset_threshold": 0.5,
+        "frame_threshold": 0.3,
+        "minimum_note_length": 127.7,
+        "oss_logo": "",
+        "Save as...": ""
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 89,
+      "type": "Audio2MIDI",
+      "pos": [
+        2983.118450135096,
+        918.1167652350997
+      ],
+      "size": [
+        287.75,
+        202
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 131
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 215
+        }
+      ],
+      "outputs": [
+        {
+          "name": "midi",
+          "type": "MIDI",
+          "links": []
+        },
+        {
+          "name": "midi_path",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "Audio2MIDI"
+      },
+      "widgets_values": [
+        "audio/StruckByLightning2_0010/MIDI/",
+        false,
+        0.5,
+        0.3,
+        127.7,
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/StruckByLightning2_0010/MIDI/",
+        "timestamp": false,
+        "onset_threshold": 0.5,
+        "frame_threshold": 0.3,
+        "minimum_note_length": 127.7,
+        "oss_logo": "",
+        "Save as...": ""
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 91,
+      "type": "PrimitiveString",
+      "pos": [
+        2036.1341146442448,
+        -891.2996252811781
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            204
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.39.2",
+        "Node name for S&R": "PrimitiveString"
+      },
+      "widgets_values": [
+        "MIDI/"
+      ],
+      "widgets_values_named": {
+        "value": "MIDI/"
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 126,
+      "type": "TextMerge",
+      "pos": [
+        678.1663381957401,
+        -715.2369093614228
+      ],
+      "size": [
+        268.86978218141587,
+        182
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_1",
+          "shape": 7,
+          "type": "STRING",
+          "link": 166
+        },
+        {
+          "name": "text_2",
+          "type": "STRING",
+          "link": 195
+        },
+        {
+          "name": "text_3",
+          "type": "STRING",
+          "link": 198
+        },
+        {
+          "name": "text_4",
+          "type": "STRING",
+          "link": 199
+        },
+        {
+          "name": "text_5",
+          "type": "STRING",
+          "link": 200
+        },
+        {
+          "name": "text_6",
+          "type": "STRING",
+          "link": 201
+        },
+        {
+          "name": "text_7",
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            179,
+            186,
+            203
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "TextMerge"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "delimiter": "",
+        "oss_logo": ""
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 127,
+      "type": "StemSplitterDrums",
+      "pos": [
+        1582.8537371361945,
+        317.5105451101117
+      ],
+      "size": [
+        270,
+        162
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 170
+        }
+      ],
+      "outputs": [
+        {
+          "name": "kick",
+          "type": "AUDIO",
+          "links": [
+            171
+          ]
+        },
+        {
+          "name": "snare",
+          "type": "AUDIO",
+          "links": [
+            172
+          ]
+        },
+        {
+          "name": "toms",
+          "type": "AUDIO",
+          "links": [
+            173
+          ]
+        },
+        {
+          "name": "hi_hat",
+          "type": "AUDIO",
+          "links": [
+            174
+          ]
+        },
+        {
+          "name": "ride",
+          "type": "AUDIO",
+          "links": [
+            175
+          ]
+        },
+        {
+          "name": "crash",
+          "type": "AUDIO",
+          "links": [
+            176
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "StemSplitterDrums"
+      },
+      "widgets_values": [
+        "MDX23C Model: MDX23C DrumSep by aufr33-jarredou",
+        ""
+      ],
+      "widgets_values_named": {
+        "model": "MDX23C Model: MDX23C DrumSep by aufr33-jarredou",
+        "oss_logo": ""
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 128,
+      "type": "StemSave",
+      "pos": [
+        2002.507480909173,
+        487.38959243075044
+      ],
+      "size": [
+        541.4508910995402,
+        450
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio_1",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 171
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": 202
+        },
+        {
+          "name": "audio_2",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 172
+        },
+        {
+          "name": "audio_3",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 173
+        },
+        {
+          "name": "audio_4",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 174
+        },
+        {
+          "name": "audio_5",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 175
+        },
+        {
+          "name": "audio_6",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 176
+        },
+        {
+          "name": "audio_7",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "stem_1",
+          "type": "AUDIO",
+          "links": []
+        },
+        {
+          "name": "stem_2",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "stem_3",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "stem_4",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "stem_5",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "stem_6",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "name": "stem_7",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "StemSave"
+      },
+      "widgets_values": [
+        "audio/StruckByLightning2_0010/drums/",
+        false,
+        "Kick",
+        "Snare",
+        "Toms",
+        "Hi-hat",
+        "Ride",
+        "crash",
+        "piano",
+        "other",
+        "stem_9",
+        "stem_10",
+        "stem_11",
+        "stem_12",
+        "stem_13",
+        "stem_14",
+        "stem_15",
+        "stem_16",
+        "stem_17",
+        "stem_18",
+        "stem_19",
+        "stem_20",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/StruckByLightning2_0010/drums/",
+        "timestamp": false,
+        "name_1": "Kick",
+        "name_2": "Snare",
+        "name_3": "Toms",
+        "name_4": "Hi-hat",
+        "name_5": "Ride",
+        "name_6": "crash",
+        "name_7": "piano",
+        "name_8": "other",
+        "name_9": "stem_9",
+        "name_10": "stem_10",
+        "name_11": "stem_11",
+        "name_12": "stem_12",
+        "name_13": "stem_13",
+        "name_14": "stem_14",
+        "name_15": "stem_15",
+        "name_16": "stem_16",
+        "name_17": "stem_17",
+        "name_18": "stem_18",
+        "name_19": "stem_19",
+        "name_20": "stem_20",
+        "float32": "",
+        "stemsave_row_1": "",
+        "stemsave_row_2": "",
+        "stemsave_row_3": "",
+        "stemsave_row_4": "",
+        "stemsave_row_5": "",
+        "stemsave_row_6": "",
+        "stemsave_row_7": "",
+        "stemsave_row_8": "",
+        "stemsave_row_9": "",
+        "stemsave_row_10": "",
+        "stemsave_row_11": "",
+        "stemsave_row_12": "",
+        "stemsave_row_13": "",
+        "stemsave_row_14": "",
+        "stemsave_row_15": "",
+        "stemsave_row_16": "",
+        "stemsave_row_17": "",
+        "stemsave_row_18": "",
+        "stemsave_row_19": "",
+        "stemsave_row_20": "",
+        "oss_logo": "",
+        "Save as...": ""
+      },
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 129,
+      "type": "AudioLoader",
+      "pos": [
+        129.11454405837176,
+        -5.349733932579511
+      ],
+      "size": [
+        661.8439319254029,
+        182.77086168595207
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            184
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "AudioLoader"
+      },
+      "widgets_values": [
+        "My Luck-002.mp3",
+        "",
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "audio": "My Luck-002.mp3",
+        "oss_logo": "",
+        "ossPlayer": "",
+        "Upload...": ""
+      },
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 130,
+      "type": "TextMerge",
+      "pos": [
+        1582.1105708598247,
+        560.0139662662076
+      ],
+      "size": [
+        268.86978218141587,
+        102
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_1",
+          "shape": 7,
+          "type": "STRING",
+          "link": 186
+        },
+        {
+          "name": "text_2",
+          "type": "STRING",
+          "link": 187
+        },
+        {
+          "name": "text_3",
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            202
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "TextMerge"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "delimiter": "",
+        "oss_logo": ""
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 131,
+      "type": "PrimitiveString",
+      "pos": [
+        1112.6556694325795,
+        579.1049647228189
+      ],
+      "size": [
+        389.75258004317857,
+        78.85457301584132
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            187
+          ]
+        }
+      ],
+      "title": "Project Name: (use - or _ after name)",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.39.2",
+        "Node name for S&R": "PrimitiveString"
+      },
+      "widgets_values": [
+        "drums/"
+      ],
+      "widgets_values_named": {
+        "value": "drums/"
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 137,
+      "type": "PrimitiveString",
+      "pos": [
+        129.11454405837176,
+        -798.3760979442441
+      ],
+      "size": [
+        225,
+        77.61732450632228
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            195
+          ]
+        }
+      ],
+      "title": "Output Folder Name",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.39.2",
+        "Node name for S&R": "PrimitiveString"
+      },
+      "widgets_values": [
+        "/"
+      ],
+      "widgets_values_named": {
+        "value": "/"
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 138,
+      "type": "PrimitiveString",
+      "pos": [
+        129.11454405837176,
+        -555.6501029124323
+      ],
+      "size": [
+        225,
+        77.61732450632228
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            199
+          ]
+        }
+      ],
+      "title": "Output Folder Name",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.39.2",
+        "Node name for S&R": "PrimitiveString"
+      },
+      "widgets_values": [
+        "_"
+      ],
+      "widgets_values_named": {
+        "value": "_"
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 139,
+      "type": "PrimitiveString",
+      "pos": [
+        129.11454405837176,
+        -212.79613175093436
+      ],
+      "size": [
+        225,
+        77.61732450632228
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            201
+          ]
+        }
+      ],
+      "title": "Output Folder Name",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.39.2",
+        "Node name for S&R": "PrimitiveString"
+      },
+      "widgets_values": [
+        "/"
+      ],
+      "widgets_values_named": {
+        "value": "/"
+      },
+      "color": "#332922",
+      "bgcolor": "#593930"
+    },
+    {
+      "id": 141,
+      "type": "TextMerge",
+      "pos": [
+        2356.9723347675513,
+        -911.5562761276359
+      ],
+      "size": [
+        268.86978218141587,
+        102
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_1",
+          "shape": 7,
+          "type": "STRING",
+          "link": 203
+        },
+        {
+          "name": "text_2",
+          "type": "STRING",
+          "link": 204
+        },
+        {
+          "name": "text_3",
+          "type": "STRING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "links": [
+            209,
+            210,
+            211,
+            212,
+            213,
+            214,
+            215
+          ]
+        }
+      ],
+      "properties": {
+        "aux_id": "ArtisticMusician/ComfyUI-Custom-Nodes",
+        "ver": "a3e2a55eec90fbbf1e0d1ee5d93d59639a7491d1",
+        "Node name for S&R": "TextMerge"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ],
+      "widgets_values_named": {
+        "delimiter": "",
+        "oss_logo": ""
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 144,
+      "type": "Note",
+      "pos": [
+        -924.9797030184823,
+        -946.856526961079
+      ],
+      "size": [
+        725.1106126038497,
+        1286.602165869575
+      ],
+      "flags": {
+        "pinned": true
+      },
+      "order": 10,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "StemSplitter - which model for which job\n========================================\n\nStemSplitter   -  1 model in, 2 stems out\n  1 Vocals / Instrumental\n      BS-Roformer-Viperx-1297  -  best instrumental score\n      MelBand Roformer | Vocals by Kimberley Jensen  -  best vocals score\n  2 Lead / Backing\n      Mel-Roformer-Karaoke-Aufr33-Viperx  -  newest karaoke model\n      5_HP-Karaoke-UVR  -  classic karaoke, VR arch\n  3 Drums\n      kuielab_a_drums  -  old; Demucs is better\n      kuielab_b_drums  -  old; Demucs is better\n  4 Bass\n      kuielab_a_bass  -  old; Demucs is better\n      kuielab_b_bass  -  old; Demucs is better\n  8 Brass / wind\n      17_HP-Wind_Inst-UVR  -  only wind model; stem_2 = woodwinds\n  9 Other\n      kuielab_a_other  -  old; Demucs is better\n      kuielab_b_other  -  old; Demucs is better\n\nStemSplitter4  -  1 model in, 4 stems out\n  3-9 separate stems\n      htdemucs  -  the standard one\n      htdemucs_ft  -  fine-tuned, best quality, slower\n\nStemSplitter6  -  1 model in, 6 stems out\n  5 Guitar / 6 Piano\n      htdemucs_6s  -  the only model that gives guitar and piano\n\nStemSplitterFX -  1 model in, cleaned + removed out\n  10 Dereverb\n      MelBand Roformer | De-Reverb by anvuew  -  highest scoring\n      MelBand Roformer | De-Reverb Less Aggressive by anvuew  -  less aggressive\n  11 Denoise\n      Mel-Roformer-Denoise-Aufr33  -  highest scoring\n      Mel-Roformer-Denoise-Aufr33-Aggr  -  more aggressive\n  12 De-echo\n      UVR-De-Echo-Normal by FoxJoy  -  normal\n      UVR-De-Echo-Aggressive by FoxJoy  -  stronger\nWhich node for which process\n----------------------------\n  1 Vocals / Instrumental    StemSplitter\n  2 Lead / Backing vocals    StemSplitter    (the karaoke models)\n  3 Drums                    StemSplitter4   Demucs beats the kuielab models\n  4 Bass                     StemSplitter4\n  5 Guitar                   StemSplitter6   only htdemucs_6s does this\n  6 Piano                    StemSplitter6   only htdemucs_6s does this\n  7 Strings                  nothing in the library does this\n  8 Brass / wind             StemSplitter    woodwinds only; no brass model exists\n  9 Other                    StemSplitter4\n 10 Dereverb                 StemSplitterFX\n 11 Denoise                  StemSplitterFX\n 12 De-echo                  StemSplitterFX\n\nWhere there is no choice, because the library has nothing to give\n  5 Guitar, 6 Piano   htdemucs_6s is the only model that produces them\n  7 Strings           nothing at all\n  8 Brass             only a woodwind model; nothing brass-specific\n\nNamed by the guide but not usable here\n  Waves Clarity, Accentize DeRoom2, DX Revive, iZotope RX,\n  Acon DeVerberate, LALAL.AI  - commercial, no headless build\n  DeepFilterNet               - not installed\n\nModel weights are downloaded into  ComfyUI/models/audio_separator/\n"
+      ],
+      "widgets_values_named": {
+        "text": "StemSplitter - which model for which job\n========================================\n\nStemSplitter   -  1 model in, 2 stems out\n  1 Vocals / Instrumental\n      BS-Roformer-Viperx-1297  -  best instrumental score\n      MelBand Roformer | Vocals by Kimberley Jensen  -  best vocals score\n  2 Lead / Backing\n      Mel-Roformer-Karaoke-Aufr33-Viperx  -  newest karaoke model\n      5_HP-Karaoke-UVR  -  classic karaoke, VR arch\n  3 Drums\n      kuielab_a_drums  -  old; Demucs is better\n      kuielab_b_drums  -  old; Demucs is better\n  4 Bass\n      kuielab_a_bass  -  old; Demucs is better\n      kuielab_b_bass  -  old; Demucs is better\n  8 Brass / wind\n      17_HP-Wind_Inst-UVR  -  only wind model; stem_2 = woodwinds\n  9 Other\n      kuielab_a_other  -  old; Demucs is better\n      kuielab_b_other  -  old; Demucs is better\n\nStemSplitter4  -  1 model in, 4 stems out\n  3-9 separate stems\n      htdemucs  -  the standard one\n      htdemucs_ft  -  fine-tuned, best quality, slower\n\nStemSplitter6  -  1 model in, 6 stems out\n  5 Guitar / 6 Piano\n      htdemucs_6s  -  the only model that gives guitar and piano\n\nStemSplitterFX -  1 model in, cleaned + removed out\n  10 Dereverb\n      MelBand Roformer | De-Reverb by anvuew  -  highest scoring\n      MelBand Roformer | De-Reverb Less Aggressive by anvuew  -  less aggressive\n  11 Denoise\n      Mel-Roformer-Denoise-Aufr33  -  highest scoring\n      Mel-Roformer-Denoise-Aufr33-Aggr  -  more aggressive\n  12 De-echo\n      UVR-De-Echo-Normal by FoxJoy  -  normal\n      UVR-De-Echo-Aggressive by FoxJoy  -  stronger\nWhich node for which process\n----------------------------\n  1 Vocals / Instrumental    StemSplitter\n  2 Lead / Backing vocals    StemSplitter    (the karaoke models)\n  3 Drums                    StemSplitter4   Demucs beats the kuielab models\n  4 Bass                     StemSplitter4\n  5 Guitar                   StemSplitter6   only htdemucs_6s does this\n  6 Piano                    StemSplitter6   only htdemucs_6s does this\n  7 Strings                  nothing in the library does this\n  8 Brass / wind             StemSplitter    woodwinds only; no brass model exists\n  9 Other                    StemSplitter4\n 10 Dereverb                 StemSplitterFX\n 11 Denoise                  StemSplitterFX\n 12 De-echo                  StemSplitterFX\n\nWhere there is no choice, because the library has nothing to give\n  5 Guitar, 6 Piano   htdemucs_6s is the only model that produces them\n  7 Strings           nothing at all\n  8 Brass             only a woodwind model; nothing brass-specific\n\nNamed by the guide but not usable here\n  Waves Clarity, Accentize DeRoom2, DX Revive, iZotope RX,\n  Acon DeVerberate, LALAL.AI  - commercial, no headless build\n  DeepFilterNet               - not installed\n\nModel weights are downloaded into  ComfyUI/models/audio_separator/\n"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    }
+  ],
+  "links": [
+    [
+      10,
+      10,
+      0,
+      5,
+      0,
+      "AUDIO"
+    ],
+    [
+      125,
+      63,
+      1,
+      83,
+      0,
+      "AUDIO"
+    ],
+    [
+      126,
+      63,
+      2,
+      84,
+      0,
+      "AUDIO"
+    ],
+    [
+      127,
+      63,
+      3,
+      85,
+      0,
+      "AUDIO"
+    ],
+    [
+      128,
+      63,
+      4,
+      86,
+      0,
+      "AUDIO"
+    ],
+    [
+      129,
+      63,
+      5,
+      88,
+      0,
+      "AUDIO"
+    ],
+    [
+      130,
+      63,
+      6,
+      87,
+      0,
+      "AUDIO"
+    ],
+    [
+      131,
+      63,
+      7,
+      89,
+      0,
+      "AUDIO"
+    ],
+    [
+      64,
+      10,
+      1,
+      63,
+      0,
+      "AUDIO"
+    ],
+    [
+      65,
+      5,
+      0,
+      63,
+      2,
+      "AUDIO"
+    ],
+    [
+      66,
+      5,
+      1,
+      63,
+      3,
+      "AUDIO"
+    ],
+    [
+      67,
+      9,
+      1,
+      63,
+      4,
+      "AUDIO"
+    ],
+    [
+      68,
+      9,
+      2,
+      63,
+      5,
+      "AUDIO"
+    ],
+    [
+      71,
+      9,
+      3,
+      63,
+      6,
+      "AUDIO"
+    ],
+    [
+      72,
+      9,
+      4,
+      63,
+      7,
+      "AUDIO"
+    ],
+    [
+      73,
+      9,
+      5,
+      63,
+      8,
+      "AUDIO"
+    ],
+    [
+      170,
+      9,
+      1,
+      127,
+      0,
+      "AUDIO"
+    ],
+    [
+      171,
+      127,
+      0,
+      128,
+      0,
+      "AUDIO"
+    ],
+    [
+      172,
+      127,
+      1,
+      128,
+      2,
+      "AUDIO"
+    ],
+    [
+      173,
+      127,
+      2,
+      128,
+      3,
+      "AUDIO"
+    ],
+    [
+      174,
+      127,
+      3,
+      128,
+      4,
+      "AUDIO"
+    ],
+    [
+      175,
+      127,
+      4,
+      128,
+      5,
+      "AUDIO"
+    ],
+    [
+      176,
+      127,
+      5,
+      128,
+      6,
+      "AUDIO"
+    ],
+    [
+      179,
+      126,
+      0,
+      63,
+      1,
+      "STRING"
+    ],
+    [
+      181,
+      1,
+      0,
+      10,
+      0,
+      "AUDIO"
+    ],
+    [
+      182,
+      1,
+      1,
+      9,
+      0,
+      "AUDIO"
+    ],
+    [
+      184,
+      129,
+      0,
+      1,
+      0,
+      "AUDIO"
+    ],
+    [
+      186,
+      126,
+      0,
+      130,
+      0,
+      "STRING"
+    ],
+    [
+      187,
+      131,
+      0,
+      130,
+      1,
+      "STRING"
+    ],
+    [
+      166,
+      32,
+      0,
+      126,
+      0,
+      "STRING"
+    ],
+    [
+      195,
+      137,
+      0,
+      126,
+      1,
+      "STRING"
+    ],
+    [
+      198,
+      34,
+      0,
+      126,
+      2,
+      "STRING"
+    ],
+    [
+      199,
+      138,
+      0,
+      126,
+      3,
+      "STRING"
+    ],
+    [
+      200,
+      48,
+      0,
+      126,
+      4,
+      "STRING"
+    ],
+    [
+      201,
+      139,
+      0,
+      126,
+      5,
+      "STRING"
+    ],
+    [
+      202,
+      130,
+      0,
+      128,
+      1,
+      "STRING"
+    ],
+    [
+      203,
+      126,
+      0,
+      141,
+      0,
+      "STRING"
+    ],
+    [
+      204,
+      91,
+      0,
+      141,
+      1,
+      "STRING"
+    ],
+    [
+      209,
+      141,
+      0,
+      83,
+      1,
+      "STRING"
+    ],
+    [
+      210,
+      141,
+      0,
+      84,
+      1,
+      "STRING"
+    ],
+    [
+      211,
+      141,
+      0,
+      85,
+      1,
+      "STRING"
+    ],
+    [
+      212,
+      141,
+      0,
+      86,
+      1,
+      "STRING"
+    ],
+    [
+      213,
+      141,
+      0,
+      88,
+      1,
+      "STRING"
+    ],
+    [
+      214,
+      141,
+      0,
+      87,
+      1,
+      "STRING"
+    ],
+    [
+      215,
+      141,
+      0,
+      89,
+      1,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.35584102738367446,
+      "offset": [
+        2290.2054009674785,
+        1726.7592312718086
+      ]
+    },
+    "frontendVersion": "1.55.18",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
