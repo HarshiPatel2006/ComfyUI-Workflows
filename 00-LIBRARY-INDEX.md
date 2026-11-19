@@ -1,6 +1,6 @@
 # ComfyUI Workflow Library — Index
 
-Plain list of all 995 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
+Plain list of all 1001 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
 
 Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-image-2.1-one-image-edit-low-vram.json`). `-api` = API format; `epNN` = tutorial episode the variant came from.
 
@@ -620,6 +620,7 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [minimax-h3-pika-flex-txt2video-2-stage-2k](04-Video/Text-to-Video/minimax-h3-pika-flex-txt2video-2-stage-2k.json)
 - [minimax-h3-pika-flex-txt2video-720p-to-1080p](04-Video/Text-to-Video/minimax-h3-pika-flex-txt2video-720p-to-1080p.json)
 - [minimax-h3-txt2video-2k-ep41](04-Video/Text-to-Video/minimax-h3-txt2video-2k-ep41.json)
+- [minimax-h3-txt2video-8-step-lora](04-Video/Text-to-Video/minimax-h3-txt2video-8-step-lora.json)
 - [minimax-h3-txt2video-low-vram-8gb](04-Video/Text-to-Video/minimax-h3-txt2video-low-vram-8gb.json)
 - [minimax-h3-txt2video-secret-sauce-4k-direct-output](04-Video/Text-to-Video/minimax-h3-txt2video-secret-sauce-4k-direct-output.json)
 - [minimax-h3-txt2video-speed-lora](04-Video/Text-to-Video/minimax-h3-txt2video-speed-lora.json)
@@ -672,8 +673,12 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [ace-step-v1.5-turbo-text-to-music-1.7b-lm](05-Audio/Music/Music-Generation/ace-step-v1.5-turbo-text-to-music-1.7b-lm.json)
 - [ace-step-v1.5-turbo-text-to-music-4b-lm](05-Audio/Music/Music-Generation/ace-step-v1.5-turbo-text-to-music-4b-lm.json)
 - [ace-step-v1.5-turbo-text-to-music-all-in-one](05-Audio/Music/Music-Generation/ace-step-v1.5-turbo-text-to-music-all-in-one.json)
+- [ace-step-v1.5-xl-base-audio-to-audio](05-Audio/Music/Music-Generation/ace-step-v1.5-xl-base-audio-to-audio.json)
+- [ace-step-v1.5-xl-base-cover-reference-timbre](05-Audio/Music/Music-Generation/ace-step-v1.5-xl-base-cover-reference-timbre.json)
+- [ace-step-v1.5-xl-base-text-to-music-minimal](05-Audio/Music/Music-Generation/ace-step-v1.5-xl-base-text-to-music-minimal.json)
 - [ace-step-v1.5-xl-base-text-to-music](05-Audio/Music/Music-Generation/ace-step-v1.5-xl-base-text-to-music.json)
 - [ace-step-v1.5-xl-sft-text-to-music](05-Audio/Music/Music-Generation/ace-step-v1.5-xl-sft-text-to-music.json)
+- [ace-step-v1.5-xl-turbo-audio-to-audio](05-Audio/Music/Music-Generation/ace-step-v1.5-xl-turbo-audio-to-audio.json)
 - [ace-step-v1.5-xl-turbo-text-to-music](05-Audio/Music/Music-Generation/ace-step-v1.5-xl-turbo-text-to-music.json)
 - [audioldm2-image-to-music-llava](05-Audio/Music/Music-Generation/audioldm2-image-to-music-llava.json)
 - [audiox-text-to-music-and-audio](05-Audio/Music/Music-Generation/audiox-text-to-music-and-audio.json)
@@ -923,6 +928,7 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 
 ## 07-Batch-and-Automation/Folder-Batch-Processing
 
+- [4x-ultrasharp-upscale-all-images-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/4x-ultrasharp-upscale-all-images-in-a-folder.json)
 - [birefnet-remove-the-background-from-all-images-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/birefnet-remove-the-background-from-all-images-in-a-folder.json)
 - [flux-2-klein-9b-before-and-after-grid-for-all-images-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/flux-2-klein-9b-before-and-after-grid-for-all-images-in-a-folder.json)
 - [flux-2-klein-9b-coloring-pages-from-all-images-in-a-folder](07-Batch-and-Automation/Folder-Batch-Processing/flux-2-klein-9b-coloring-pages-from-all-images-in-a-folder.json)
