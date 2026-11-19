@@ -30,29 +30,29 @@ The "Upscale model" workflows use the upscale branch of the official ComfyUI [up
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [moss-image-upscale-2x-keep-picture](Upscaling/MOSS-Image/moss-image-upscale-2x-keep-picture.json) | MOSS Image - Upscale 2x, Keep the Picture (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
-| [moss-image-upscale-picture](Upscaling/MOSS-Image/moss-image-upscale-picture.json) | MOSS Image - Upscale a Picture (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors`, `4x_NMKD-Siax_200k.pth` | ComfyUI-Pixaroma |
+| [2x-keep-picture](Upscaling/MOSS-Image/2x-keep-picture.json) | MOSS Image - Upscale 2x, Keep the Picture (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [picture](Upscaling/MOSS-Image/picture.json) | MOSS Image - Upscale a Picture (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors`, `4x_NMKD-Siax_200k.pth` | ComfyUI-Pixaroma |
 
 **Paid-API**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [nano-banana-pro-upscale-paid-api](Upscaling/Paid-API/nano-banana-pro-upscale-paid-api.json) | Nano Banana Pro — Upscale | — | rgthree-comfy |
-| [recraft-creative-upscale-paid-api](Upscaling/Paid-API/recraft-creative-upscale-paid-api.json) | Recraft — Creative Upscale | — | rgthree-comfy |
-| [seedream-45-upscale-paid-api](Upscaling/Paid-API/seedream-45-upscale-paid-api.json) | SeeDream 4.5 — Upscale | — | rgthree-comfy |
+| [nano-banana-pro](Upscaling/Paid-API/nano-banana-pro.json) | Nano Banana Pro — Upscale | — | rgthree-comfy |
+| [recraft-creative](Upscaling/Paid-API/recraft-creative.json) | Recraft — Creative Upscale | — | rgthree-comfy |
+| [seedream-45](Upscaling/Paid-API/seedream-45.json) | SeeDream 4.5 — Upscale | — | rgthree-comfy |
 
 **SeedVR2**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [seedvr2-upscale](Upscaling/SeedVR2/seedvr2-upscale.json) | Upscale | `ema_vae_fp16.safetensors`, `seedvr2_ema_7b_fp8_e4m3fn_mixed_block35_fp16.safetensors` | ComfyUI-SeedVR2_VideoUpscaler, rgthree-comfy |
+| [base](Upscaling/SeedVR2/base.json) | Upscale | `ema_vae_fp16.safetensors`, `seedvr2_ema_7b_fp8_e4m3fn_mixed_block35_fp16.safetensors` | ComfyUI-SeedVR2_VideoUpscaler, rgthree-comfy |
 
 **Universal-Upscale**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [universal-upscale-no-model](Upscaling/Universal-Upscale/universal-upscale-no-model.json) | Upscale Simple (No Model) | — | rgthree-comfy |
-| [universal-upscale-4x-nmkd-siax](Upscaling/Universal-Upscale/universal-upscale-4x-nmkd-siax.json) | Upscale with 4x Model (NMKD-Siax) | `4x_NMKD-Siax_200k.pth` | rgthree-comfy |
+| [no-model](Upscaling/Universal-Upscale/no-model.json) | Upscale Simple (No Model) | — | rgthree-comfy |
+| [4x-nmkd-siax](Upscaling/Universal-Upscale/4x-nmkd-siax.json) | Upscale with 4x Model (NMKD-Siax) | `4x_NMKD-Siax_200k.pth` | rgthree-comfy |
 
 **Other**
 
@@ -70,17 +70,17 @@ The "Upscale model" workflows use the upscale branch of the official ComfyUI [up
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence |
 |---|---|---|---|---|---|---|
-| [real-esrgan-x4plus-image-upscale](Upscaling/Real-ESRGAN/real-esrgan-x4plus-image-upscale.json) | Real-ESRGAN x4plus | Faithful 4x photo upscale | [ComfyUI example](https://comfyanonymous.github.io/ComfyUI_examples/upscale_models/) (adapted) | [RealESRGAN_x4plus.pth](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth) | none | BSD-3-Clause |
-| [real-esrgan-x4plus-anime-6b-image-upscale](Upscaling/Real-ESRGAN/real-esrgan-x4plus-anime-6b-image-upscale.json) | Real-ESRGAN x4plus-anime-6B | 4x anime / line art | ComfyUI example (adapted) | [RealESRGAN_x4plus_anime_6B.pth](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth) | none | BSD-3-Clause |
-| [real-esrgan-animevideo-v3-frame-upscale](Upscaling/Real-ESRGAN/real-esrgan-animevideo-v3-frame-upscale.json) | Real-ESRGAN AnimeVideo-v3 | Fast compact 4x for anime frames | ComfyUI example (adapted) | [realesr-animevideov3.pth](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-animevideov3.pth) | none | BSD-3-Clause |
+| [x4plus-image](Upscaling/Real-ESRGAN/x4plus-image.json) | Real-ESRGAN x4plus | Faithful 4x photo upscale | [ComfyUI example](https://comfyanonymous.github.io/ComfyUI_examples/upscale_models/) (adapted) | [RealESRGAN_x4plus.pth](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth) | none | BSD-3-Clause |
+| [x4plus-anime-6b-image](Upscaling/Real-ESRGAN/x4plus-anime-6b-image.json) | Real-ESRGAN x4plus-anime-6B | 4x anime / line art | ComfyUI example (adapted) | [RealESRGAN_x4plus_anime_6B.pth](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.2.4/RealESRGAN_x4plus_anime_6B.pth) | none | BSD-3-Clause |
+| [animevideo-v3-frame](Upscaling/Real-ESRGAN/animevideo-v3-frame.json) | Real-ESRGAN AnimeVideo-v3 | Fast compact 4x for anime frames | ComfyUI example (adapted) | [realesr-animevideov3.pth](https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-animevideov3.pth) | none | BSD-3-Clause |
 
 **SeedVR2**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence |
 |---|---|---|---|---|---|---|
-| [seedvr2-3b-int8-native-image-upscale-low-vram](Upscaling/SeedVR2/seedvr2-3b-int8-native-image-upscale-low-vram.json) | SeedVR2 3B int8 (native nodes) | Low-VRAM one-step restore/upscale | [Comfy-Org template](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/utility_seedvr2_3b_int8_upscale_image.json) | [Comfy-Org/SeedVR2](https://huggingface.co/Comfy-Org/SeedVR2) | none (recent ComfyUI) | Apache-2.0 |
-| [seedvr2-7b-int8-native-image-upscale](Upscaling/SeedVR2/seedvr2-7b-int8-native-image-upscale.json) | SeedVR2 7B int8 (native nodes) | Higher-quality restore/upscale | [Comfy-Org template](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/utility_seedvr2_7b_int8_upscale_image.json) | [Comfy-Org/SeedVR2](https://huggingface.co/Comfy-Org/SeedVR2) | none (recent ComfyUI) | Apache-2.0 |
-| [seedvr2-3b-fp8-simple-image-upscale-low-vram](Upscaling/SeedVR2/seedvr2-3b-fp8-simple-image-upscale-low-vram.json) | SeedVR2 3B fp8 | Low-VRAM upscale with the community node | [numz example](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler/tree/main/example_workflows) | [numz/SeedVR2_comfyUI](https://huggingface.co/numz/SeedVR2_comfyUI) | ComfyUI-SeedVR2_VideoUpscaler | Apache-2.0 |
+| [3b-int8-native-image-low-vram](Upscaling/SeedVR2/3b-int8-native-image-low-vram.json) | SeedVR2 3B int8 (native nodes) | Low-VRAM one-step restore/upscale | [Comfy-Org template](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/utility_seedvr2_3b_int8_upscale_image.json) | [Comfy-Org/SeedVR2](https://huggingface.co/Comfy-Org/SeedVR2) | none (recent ComfyUI) | Apache-2.0 |
+| [7b-int8-native-image](Upscaling/SeedVR2/7b-int8-native-image.json) | SeedVR2 7B int8 (native nodes) | Higher-quality restore/upscale | [Comfy-Org template](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/utility_seedvr2_7b_int8_upscale_image.json) | [Comfy-Org/SeedVR2](https://huggingface.co/Comfy-Org/SeedVR2) | none (recent ComfyUI) | Apache-2.0 |
+| [3b-fp8-simple-image-low-vram](Upscaling/SeedVR2/3b-fp8-simple-image-low-vram.json) | SeedVR2 3B fp8 | Low-VRAM upscale with the community node | [numz example](https://github.com/numz/ComfyUI-SeedVR2_VideoUpscaler/tree/main/example_workflows) | [numz/SeedVR2_comfyUI](https://huggingface.co/numz/SeedVR2_comfyUI) | ComfyUI-SeedVR2_VideoUpscaler | Apache-2.0 |
 
 **Other**
 
@@ -101,17 +101,17 @@ The "Upscale model" workflows use the upscale branch of the official ComfyUI [up
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence |
 |---|---|---|---|---|---|---|
-| [diffbir-blind-super-resolution](Diffusion-Restoration/DiffBIR/diffbir-blind-super-resolution.json) | DiffBIR v2 | Blind SR | [jtscmw01 example](https://github.com/jtscmw01/ComfyUI-DiffBIR/tree/main/example_workflows) | [lxq007/DiffBIR-v2](https://huggingface.co/lxq007/DiffBIR-v2) + table in node README | ComfyUI-DiffBIR | Apache-2.0 |
-| [diffbir-blind-face-restoration](Diffusion-Restoration/DiffBIR/diffbir-blind-face-restoration.json) | DiffBIR v2 | Blind face restoration | jtscmw01 example | DiffBIR-v2 + face_swinir_v1 | ComfyUI-DiffBIR | Apache-2.0 |
-| [diffbir-blind-image-denoise](Diffusion-Restoration/DiffBIR/diffbir-blind-image-denoise.json) | DiffBIR v2 | Blind denoise | jtscmw01 example | DiffBIR-v2 + scunet_color_real_psnr | ComfyUI-DiffBIR | Apache-2.0 |
+| [blind-super-resolution](Diffusion-Restoration/DiffBIR/blind-super-resolution.json) | DiffBIR v2 | Blind SR | [jtscmw01 example](https://github.com/jtscmw01/ComfyUI-DiffBIR/tree/main/example_workflows) | [lxq007/DiffBIR-v2](https://huggingface.co/lxq007/DiffBIR-v2) + table in node README | ComfyUI-DiffBIR | Apache-2.0 |
+| [blind-face-restoration](Diffusion-Restoration/DiffBIR/blind-face-restoration.json) | DiffBIR v2 | Blind face restoration | jtscmw01 example | DiffBIR-v2 + face_swinir_v1 | ComfyUI-DiffBIR | Apache-2.0 |
+| [blind-image-denoise](Diffusion-Restoration/DiffBIR/blind-image-denoise.json) | DiffBIR v2 | Blind denoise | jtscmw01 example | DiffBIR-v2 + scunet_color_real_psnr | ComfyUI-DiffBIR | Apache-2.0 |
 
 **StableSR**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence |
 |---|---|---|---|---|---|---|
-| [stablesr-upscale-color-fix](Diffusion-Restoration/StableSR/stablesr-upscale-color-fix.json) | StableSR 768v | SD 2.1 SR with colour fix | [gameltb example](https://github.com/gameltb/Comfyui-StableSR/tree/main/examples) | [Iceclear/StableSR](https://huggingface.co/Iceclear/StableSR) | Comfyui-StableSR | S-Lab licence (non-commercial) |
-| [stablesr-ultimate-sd-upscale-tiled](Diffusion-Restoration/StableSR/stablesr-ultimate-sd-upscale-tiled.json) | StableSR 768v | Tiled large-image SR | gameltb example | Iceclear/StableSR | Comfyui-StableSR, ComfyUI_UltimateSDUpscale | S-Lab licence (non-commercial) |
-| [stablesr-sd-turbo-fast-upscale](Diffusion-Restoration/StableSR/stablesr-sd-turbo-fast-upscale.json) | StableSR + SD-Turbo | Fast few-step SR with ToDo | gameltb example | Iceclear/StableSR, [sd-turbo](https://huggingface.co/stabilityai/sd-turbo) | Comfyui-StableSR, [comfy-todo](https://github.com/ethansmith2000/comfy-todo) | S-Lab; SD-Turbo non-commercial |
+| [upscale-color-fix](Diffusion-Restoration/StableSR/upscale-color-fix.json) | StableSR 768v | SD 2.1 SR with colour fix | [gameltb example](https://github.com/gameltb/Comfyui-StableSR/tree/main/examples) | [Iceclear/StableSR](https://huggingface.co/Iceclear/StableSR) | Comfyui-StableSR | S-Lab licence (non-commercial) |
+| [ultimate-sd-upscale-tiled](Diffusion-Restoration/StableSR/ultimate-sd-upscale-tiled.json) | StableSR 768v | Tiled large-image SR | gameltb example | Iceclear/StableSR | Comfyui-StableSR, ComfyUI_UltimateSDUpscale | S-Lab licence (non-commercial) |
+| [sd-turbo-fast-upscale](Diffusion-Restoration/StableSR/sd-turbo-fast-upscale.json) | StableSR + SD-Turbo | Fast few-step SR with ToDo | gameltb example | Iceclear/StableSR, [sd-turbo](https://huggingface.co/stabilityai/sd-turbo) | Comfyui-StableSR, [comfy-todo](https://github.com/ethansmith2000/comfy-todo) | S-Lab; SD-Turbo non-commercial |
 
 **Other**
 

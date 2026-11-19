@@ -206,7 +206,7 @@ ComfyUI-Workflows/
 └── README.md
 ```
 
-Filenames follow `model-task-variant.json` in lowercase kebab-case, for example `krea-2-txt2img-extra-pass-lora.json` or `wan-2.2-img2video-gguf-lightx2v-4-step.json`. Common abbreviations: `txt2img` (text-to-image), `img2img` (image-to-image), `img2video` (image-to-video), `txt2video` (text-to-video), `video2video` (video-to-video). A trailing `-api` means API format; `epNN` marks the tutorial episode a variant came from; `-starter` marks a beginner version.
+Filenames follow `model-task-variant.json` in lowercase kebab-case, for example `extra-pass-lora.json` or `wan-2.2-img2video-gguf-lightx2v-4-step.json`. Common abbreviations: `txt2img` (text-to-image), `img2img` (image-to-image), `img2video` (image-to-video), `txt2video` (text-to-video), `video2video` (video-to-video). A trailing `-api` means API format; `epNN` marks the tutorial episode a variant came from; `-starter` marks a beginner version.
 
 Each category folder has its own `README.md` listing every workflow with what it does, the models it loads and the custom nodes it needs. The version-conflicts folder lists the models and what differs from the library copy instead.
 

@@ -30,16 +30,16 @@ The tables below list the original 114 workflows; the 88 workflows added from th
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [ming-image-3d-lettering](Design-Typography-and-Transparent/Ming-Image/ming-image-3d-lettering.json) | 3D Lettering | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
-| [ming-image-app-and-website-screens](Design-Typography-and-Transparent/Ming-Image/ming-image-app-and-website-screens.json) | App and Website Screens | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
-| [ming-image-event-poster](Design-Typography-and-Transparent/Ming-Image/ming-image-event-poster.json) | Event Poster | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
-| [ming-image-game-screens-and-icons](Design-Typography-and-Transparent/Ming-Image/ming-image-game-screens-and-icons.json) | Game Screens and Icons | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
-| [ming-image-infographic](Design-Typography-and-Transparent/Ming-Image/ming-image-infographic.json) | Infographic | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
-| [ming-image-logo-design](Design-Typography-and-Transparent/Ming-Image/ming-image-logo-design.json) | Logo Design | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
-| [ming-image-logo-variations](Design-Typography-and-Transparent/Ming-Image/ming-image-logo-variations.json) | Logo Variations | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
-| [ming-image-social-media-post](Design-Typography-and-Transparent/Ming-Image/ming-image-social-media-post.json) | Social Media Post | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
-| [ming-image-transparent-png](Design-Typography-and-Transparent/Ming-Image/ming-image-transparent-png.json) | Transparent PNG | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
-| [ming-image-youtube-thumbnail](Design-Typography-and-Transparent/Ming-Image/ming-image-youtube-thumbnail.json) | YouTube Thumbnail | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [3d-lettering](Design-Typography-and-Transparent/Ming-Image/3d-lettering.json) | 3D Lettering | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [app-and-website-screens](Design-Typography-and-Transparent/Ming-Image/app-and-website-screens.json) | App and Website Screens | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [event-poster](Design-Typography-and-Transparent/Ming-Image/event-poster.json) | Event Poster | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [game-screens-and-icons](Design-Typography-and-Transparent/Ming-Image/game-screens-and-icons.json) | Game Screens and Icons | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [infographic](Design-Typography-and-Transparent/Ming-Image/infographic.json) | Infographic | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [logo-design](Design-Typography-and-Transparent/Ming-Image/logo-design.json) | Logo Design | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [logo-variations](Design-Typography-and-Transparent/Ming-Image/logo-variations.json) | Logo Variations | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [social-media-post](Design-Typography-and-Transparent/Ming-Image/social-media-post.json) | Social Media Post | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [transparent-png](Design-Typography-and-Transparent/Ming-Image/transparent-png.json) | Transparent PNG | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [youtube-thumbnail](Design-Typography-and-Transparent/Ming-Image/youtube-thumbnail.json) | YouTube Thumbnail | `ming_image_0.1_design_int8_convrot.safetensors`, `ming_image_0.1_ling_mini_2.0_int8_convrot.safetensors`, `ming_image_vae_bf16.safetensors` | ComfyUI-Pixaroma |
 
 **Other**
 
@@ -58,56 +58,56 @@ The tables below list the original 114 workflows; the 88 workflows added from th
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [flux2-klein-9b-img2prompt2img-qwen35](LLM-Prompt-Assisted/FLUX-2/flux2-klein-9b-img2prompt2img-qwen35.json) | Image to Prompt to Image (Qwen 3.5) | `flux-2-klein-9b-fp8mixed.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` +1 more | ComfyUI-Pixaroma |
-| [flux2-klein-9b-txt2img-qwen35-prompt-enhancer](LLM-Prompt-Assisted/FLUX-2/flux2-klein-9b-txt2img-qwen35-prompt-enhancer.json) | Text to Image + Qwen 3.5 Prompt Enhancer | `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors`, `qwen3.5_4b_bf16.safetensors` +1 more | ComfyUI-Pixaroma |
+| [klein-9b-img2prompt2img-qwen35](LLM-Prompt-Assisted/FLUX-2/klein-9b-img2prompt2img-qwen35.json) | Image to Prompt to Image (Qwen 3.5) | `flux-2-klein-9b-fp8mixed.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` +1 more | ComfyUI-Pixaroma |
+| [klein-9b-qwen35-prompt-enhancer](LLM-Prompt-Assisted/FLUX-2/klein-9b-qwen35-prompt-enhancer.json) | Text to Image + Qwen 3.5 Prompt Enhancer | `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors`, `qwen3.5_4b_bf16.safetensors` +1 more | ComfyUI-Pixaroma |
 
 **FLUX-3**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [flux3-klein-img2prompt2img](LLM-Prompt-Assisted/FLUX-3/flux3-klein-img2prompt2img.json) | Image to Prompt to Image | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` +1 more | ComfyUI-Pixaroma |
-| [flux3-klein-txt2img-prompt-upsampler](LLM-Prompt-Assisted/FLUX-3/flux3-klein-txt2img-prompt-upsampler.json) | Text to Image + Prompt Upsampler | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` +1 more | ComfyUI-Pixaroma |
+| [klein-img2prompt2img](LLM-Prompt-Assisted/FLUX-3/klein-img2prompt2img.json) | Image to Prompt to Image | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` +1 more | ComfyUI-Pixaroma |
+| [klein-prompt-upsampler](LLM-Prompt-Assisted/FLUX-3/klein-prompt-upsampler.json) | Text to Image + Prompt Upsampler | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` +1 more | ComfyUI-Pixaroma |
 
 **Krea-2**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [krea-2-img2prompt2img-ep31](LLM-Prompt-Assisted/Krea-2/krea-2-img2prompt2img-ep31.json) | Image to Prompt to Image (Ep31 AI Prompt Node) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-img2prompt2img](LLM-Prompt-Assisted/Krea-2/krea-2-img2prompt2img.json) | Image to Prompt to Image | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-int8-img2prompt2img](LLM-Prompt-Assisted/Krea-2/krea-2-int8-img2prompt2img.json) | Image to Prompt to Image | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-int8-txt2img-extra-pass-image-to-prompt](LLM-Prompt-Assisted/Krea-2/krea-2-int8-txt2img-extra-pass-image-to-prompt.json) | Text to Image + Extra Pass + Image to Prompt | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-int8-txt2img-extra-pass-prompt-enhancer](LLM-Prompt-Assisted/Krea-2/krea-2-int8-txt2img-extra-pass-prompt-enhancer.json) | Text to Image + Extra Pass + Prompt Enhancer | `qwen_image_vae.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2_turbo_int8_convrot.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-int8-txt2img-prompt-enhancer](LLM-Prompt-Assisted/Krea-2/krea-2-int8-txt2img-prompt-enhancer.json) | Text to Image + Prompt Enhancer | `qwen_image_vae.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2_turbo_int8_convrot.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-prompt-enhancer-ep31](LLM-Prompt-Assisted/Krea-2/krea-2-txt2img-prompt-enhancer-ep31.json) | Text to Image + AI Prompt Enhancer (Ep31) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-extra-pass-prompt-enhancer-uncensored](LLM-Prompt-Assisted/Krea-2/krea-2-txt2img-extra-pass-prompt-enhancer-uncensored.json) | Text to Image + Extra Pass + Prompt Enhancer (Uncensored) | `krea2_turbo_fp8_scaled.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors`, `qwen_image_vae.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-extra-pass-prompt-enhancer](LLM-Prompt-Assisted/Krea-2/krea-2-txt2img-extra-pass-prompt-enhancer.json) | Text to Image + Extra Pass + Prompt Enhancer | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-prompt-enhancer-ep28](LLM-Prompt-Assisted/Krea-2/krea-2-txt2img-prompt-enhancer-ep28.json) | Text to Image + Prompt Enhancer (Ep28) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-prompt-enhancer-uncensored](LLM-Prompt-Assisted/Krea-2/krea-2-txt2img-prompt-enhancer-uncensored.json) | Text to Image + Prompt Enhancer (Uncensored) | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-prompt-enhancer](LLM-Prompt-Assisted/Krea-2/krea-2-txt2img-prompt-enhancer.json) | Text to Image + Prompt Enhancer | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [img2prompt2img-ep31](LLM-Prompt-Assisted/Krea-2/img2prompt2img-ep31.json) | Image to Prompt to Image (Ep31 AI Prompt Node) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [img2prompt2img](LLM-Prompt-Assisted/Krea-2/img2prompt2img.json) | Image to Prompt to Image | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [int8-img2prompt2img](LLM-Prompt-Assisted/Krea-2/int8-img2prompt2img.json) | Image to Prompt to Image | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [int8-extra-pass-image-to-prompt](LLM-Prompt-Assisted/Krea-2/int8-extra-pass-image-to-prompt.json) | Text to Image + Extra Pass + Image to Prompt | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [int8-extra-pass-prompt-enhancer](LLM-Prompt-Assisted/Krea-2/int8-extra-pass-prompt-enhancer.json) | Text to Image + Extra Pass + Prompt Enhancer | `qwen_image_vae.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2_turbo_int8_convrot.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [int8-prompt-enhancer](LLM-Prompt-Assisted/Krea-2/int8-prompt-enhancer.json) | Text to Image + Prompt Enhancer | `qwen_image_vae.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2_turbo_int8_convrot.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [prompt-enhancer-ep31](LLM-Prompt-Assisted/Krea-2/prompt-enhancer-ep31.json) | Text to Image + AI Prompt Enhancer (Ep31) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [extra-pass-prompt-enhancer-uncensored](LLM-Prompt-Assisted/Krea-2/extra-pass-prompt-enhancer-uncensored.json) | Text to Image + Extra Pass + Prompt Enhancer (Uncensored) | `krea2_turbo_fp8_scaled.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors`, `qwen_image_vae.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [extra-pass-prompt-enhancer](LLM-Prompt-Assisted/Krea-2/extra-pass-prompt-enhancer.json) | Text to Image + Extra Pass + Prompt Enhancer | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [prompt-enhancer-ep28](LLM-Prompt-Assisted/Krea-2/prompt-enhancer-ep28.json) | Text to Image + Prompt Enhancer (Ep28) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [prompt-enhancer-uncensored](LLM-Prompt-Assisted/Krea-2/prompt-enhancer-uncensored.json) | Text to Image + Prompt Enhancer (Uncensored) | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [prompt-enhancer](LLM-Prompt-Assisted/Krea-2/prompt-enhancer.json) | Text to Image + Prompt Enhancer | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
 
 **MOSS-Image**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [moss-image-txt2img-prompt-helper](LLM-Prompt-Assisted/MOSS-Image/moss-image-txt2img-prompt-helper.json) | MOSS Image - Text to Image + Prompt Helper (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
-| [moss-image-img2prompt2img](LLM-Prompt-Assisted/MOSS-Image/moss-image-img2prompt2img.json) | MOSS Image - Image to Prompt to Image (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [prompt-helper](LLM-Prompt-Assisted/MOSS-Image/prompt-helper.json) | MOSS Image - Text to Image + Prompt Helper (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [img2prompt2img](LLM-Prompt-Assisted/MOSS-Image/img2prompt2img.json) | MOSS Image - Image to Prompt to Image (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
 
 **Qwen-Image**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [qwen-image-21-img2prompt2img](LLM-Prompt-Assisted/Qwen-Image/qwen-image-21-img2prompt2img.json) | Image to Prompt to Image | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
-| [qwen-image-21-txt2img-prompt-enhancer](LLM-Prompt-Assisted/Qwen-Image/qwen-image-21-txt2img-prompt-enhancer.json) | Text to Image + Prompt Enhancer | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [v21-img2prompt2img](LLM-Prompt-Assisted/Qwen-Image/v21-img2prompt2img.json) | Image to Prompt to Image | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [v21-prompt-enhancer](LLM-Prompt-Assisted/Qwen-Image/v21-prompt-enhancer.json) | Text to Image + Prompt Enhancer | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
 
 **Z-Image**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [nunchaku-z-image-turbo-txt2img-qwenvl-prompt-enhancer](LLM-Prompt-Assisted/Z-Image/nunchaku-z-image-turbo-txt2img-qwenvl-prompt-enhancer.json) | Z-Image Turbo — Text to Image + QwenVL GGUF Prompt Enhancer | `Qwen3VL-8B-Instruct-Q8_0.gguf`, `svdq-int4_r256-z-image-turbo.safetensors`, `Huihui-Qwen3-4B-abliterated-v2_fp8mixed.safetensors` +1 more | ComfyUI-QwenVL, ComfyUI-nunchaku |
-| [z-image-turbo-img2prompt2img-gemma4](LLM-Prompt-Assisted/Z-Image/z-image-turbo-img2prompt2img-gemma4.json) | Image to Prompt to Image (Gemma 4) | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` +1 more | ComfyUI-Pixaroma |
-| [z-image-turbo-int8-txt2img-prompt-enhancer](LLM-Prompt-Assisted/Z-Image/z-image-turbo-int8-txt2img-prompt-enhancer.json) | Text to Image + AI Prompt Enhancer | `ae.safetensors`, `z_image_turbo_int8_convrot.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
-| [z-image-turbo-txt2img-gemma4-prompt-enhancer-replace](LLM-Prompt-Assisted/Z-Image/z-image-turbo-txt2img-gemma4-prompt-enhancer-replace.json) | Text to Image + Gemma 4 Prompt Enhancer + Find and Replace | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` +1 more | ComfyUI-Pixaroma |
-| [z-image-turbo-txt2img-gemma4-prompt-enhancer](LLM-Prompt-Assisted/Z-Image/z-image-turbo-txt2img-gemma4-prompt-enhancer.json) | Text to Image + Gemma 4 Prompt Enhancer | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` +1 more | ComfyUI-Pixaroma |
+| [turbo-qwenvl-prompt-enhancer-nunchaku](LLM-Prompt-Assisted/Z-Image/turbo-qwenvl-prompt-enhancer-nunchaku.json) | Z-Image Turbo — Text to Image + QwenVL GGUF Prompt Enhancer | `Qwen3VL-8B-Instruct-Q8_0.gguf`, `svdq-int4_r256-z-image-turbo.safetensors`, `Huihui-Qwen3-4B-abliterated-v2_fp8mixed.safetensors` +1 more | ComfyUI-QwenVL, ComfyUI-nunchaku |
+| [turbo-img2prompt2img-gemma4](LLM-Prompt-Assisted/Z-Image/turbo-img2prompt2img-gemma4.json) | Image to Prompt to Image (Gemma 4) | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` +1 more | ComfyUI-Pixaroma |
+| [turbo-int8-prompt-enhancer](LLM-Prompt-Assisted/Z-Image/turbo-int8-prompt-enhancer.json) | Text to Image + AI Prompt Enhancer | `ae.safetensors`, `z_image_turbo_int8_convrot.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
+| [turbo-gemma4-prompt-enhancer-replace](LLM-Prompt-Assisted/Z-Image/turbo-gemma4-prompt-enhancer-replace.json) | Text to Image + Gemma 4 Prompt Enhancer + Find and Replace | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` +1 more | ComfyUI-Pixaroma |
+| [turbo-gemma4-prompt-enhancer](LLM-Prompt-Assisted/Z-Image/turbo-gemma4-prompt-enhancer.json) | Text to Image + Gemma 4 Prompt Enhancer | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` +1 more | ComfyUI-Pixaroma |
 
 **Other**
 
@@ -124,33 +124,33 @@ The tables below list the original 114 workflows; the 88 workflows added from th
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [flux2-klein-9b-build-a-prompt-from-switches](Prompt-Batching-and-Variations/FLUX-2/flux2-klein-9b-build-a-prompt-from-switches.json) | Build a Prompt from Switches | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
-| [flux2-klein-9b-prompt-combinations-brackets](Prompt-Batching-and-Variations/FLUX-2/flux2-klein-9b-prompt-combinations-brackets.json) | Every Prompt Combination with Brackets | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
-| [flux2-klein-9b-one-image-per-prompt](Prompt-Batching-and-Variations/FLUX-2/flux2-klein-9b-one-image-per-prompt.json) | One Image per Prompt | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
-| [flux2-klein-9b-one-subject-in-many-styles](Prompt-Batching-and-Variations/FLUX-2/flux2-klein-9b-one-subject-in-many-styles.json) | One Subject in Many Styles | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
-| [flux2-klein-9b-queue-a-list-of-prompts](Prompt-Batching-and-Variations/FLUX-2/flux2-klein-9b-queue-a-list-of-prompts.json) | Queue a List of Prompts | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
-| [flux2-klein-9b-random-prompts-every-run](Prompt-Batching-and-Variations/FLUX-2/flux2-klein-9b-random-prompts-every-run.json) | Random Prompts Every Run | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
-| [flux2-klein-9b-short-ideas-to-images-qwen35](Prompt-Batching-and-Variations/FLUX-2/flux2-klein-9b-short-ideas-to-images-qwen35.json) | Short Ideas into Finished Images (Qwen 3.5 AI Prompt) | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` +1 more | ComfyUI-Pixaroma |
-| [flux2-klein-9b-story-to-storyboard-qwen35](Prompt-Batching-and-Variations/FLUX-2/flux2-klein-9b-story-to-storyboard-qwen35.json) | Short Story to Storyboard (Qwen 3.5 AI Prompt) | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` +1 more | ComfyUI-Pixaroma |
+| [klein-9b-build-a-prompt-from-switches](Prompt-Batching-and-Variations/FLUX-2/klein-9b-build-a-prompt-from-switches.json) | Build a Prompt from Switches | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [klein-9b-prompt-combinations-brackets](Prompt-Batching-and-Variations/FLUX-2/klein-9b-prompt-combinations-brackets.json) | Every Prompt Combination with Brackets | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [klein-9b-one-image-per-prompt](Prompt-Batching-and-Variations/FLUX-2/klein-9b-one-image-per-prompt.json) | One Image per Prompt | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [klein-9b-one-subject-in-many-styles](Prompt-Batching-and-Variations/FLUX-2/klein-9b-one-subject-in-many-styles.json) | One Subject in Many Styles | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [klein-9b-queue-a-list-of-prompts](Prompt-Batching-and-Variations/FLUX-2/klein-9b-queue-a-list-of-prompts.json) | Queue a List of Prompts | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [klein-9b-random-prompts-every-run](Prompt-Batching-and-Variations/FLUX-2/klein-9b-random-prompts-every-run.json) | Random Prompts Every Run | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [klein-9b-short-ideas-to-images-qwen35](Prompt-Batching-and-Variations/FLUX-2/klein-9b-short-ideas-to-images-qwen35.json) | Short Ideas into Finished Images (Qwen 3.5 AI Prompt) | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` +1 more | ComfyUI-Pixaroma |
+| [klein-9b-story-to-storyboard-qwen35](Prompt-Batching-and-Variations/FLUX-2/klein-9b-story-to-storyboard-qwen35.json) | Short Story to Storyboard (Qwen 3.5 AI Prompt) | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` +1 more | ComfyUI-Pixaroma |
 
 **Pixaroma-Nodes**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [pixaroma-prompt-multi-from-list](Prompt-Batching-and-Variations/Pixaroma-Nodes/pixaroma-prompt-multi-from-list.json) | Prompt Multi — From List | — | ComfyUI-Pixaroma |
-| [pixaroma-prompt-multi-queue-text](Prompt-Batching-and-Variations/Pixaroma-Nodes/pixaroma-prompt-multi-queue-text.json) | Prompt Multi — Queue Text | — | ComfyUI-Pixaroma |
-| [pixaroma-prompt-pack-line](Prompt-Batching-and-Variations/Pixaroma-Nodes/pixaroma-prompt-pack-line.json) | Prompt Pack — Line | — | ComfyUI-Pixaroma |
-| [pixaroma-prompt-pack-paragraph](Prompt-Batching-and-Variations/Pixaroma-Nodes/pixaroma-prompt-pack-paragraph.json) | Prompt Pack — Paragraph | — | ComfyUI-Pixaroma |
-| [pixaroma-prompt-stack](Prompt-Batching-and-Variations/Pixaroma-Nodes/pixaroma-prompt-stack.json) | Prompt Stack | — | ComfyUI-Pixaroma |
+| [prompt-multi-from-list](Prompt-Batching-and-Variations/Pixaroma-Nodes/prompt-multi-from-list.json) | Prompt Multi — From List | — | ComfyUI-Pixaroma |
+| [prompt-multi-queue-text](Prompt-Batching-and-Variations/Pixaroma-Nodes/prompt-multi-queue-text.json) | Prompt Multi — Queue Text | — | ComfyUI-Pixaroma |
+| [prompt-pack-line](Prompt-Batching-and-Variations/Pixaroma-Nodes/prompt-pack-line.json) | Prompt Pack — Line | — | ComfyUI-Pixaroma |
+| [prompt-pack-paragraph](Prompt-Batching-and-Variations/Pixaroma-Nodes/prompt-pack-paragraph.json) | Prompt Pack — Paragraph | — | ComfyUI-Pixaroma |
+| [prompt-stack](Prompt-Batching-and-Variations/Pixaroma-Nodes/prompt-stack.json) | Prompt Stack | — | ComfyUI-Pixaroma |
 
 **Z-Image**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [z-image-turbo-prompt-multi-queue-text](Prompt-Batching-and-Variations/Z-Image/z-image-turbo-prompt-multi-queue-text.json) | Prompt Multi — Queue Text | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
-| [z-image-turbo-prompt-pack-line](Prompt-Batching-and-Variations/Z-Image/z-image-turbo-prompt-pack-line.json) | Prompt Pack — Line | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
-| [z-image-turbo-prompt-pack-paragraph](Prompt-Batching-and-Variations/Z-Image/z-image-turbo-prompt-pack-paragraph.json) | Prompt Pack — Paragraph | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
-| [z-image-turbo-prompt-stack](Prompt-Batching-and-Variations/Z-Image/z-image-turbo-prompt-stack.json) | Prompt Stack | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
+| [turbo-prompt-multi-queue-text](Prompt-Batching-and-Variations/Z-Image/turbo-prompt-multi-queue-text.json) | Prompt Multi — Queue Text | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
+| [turbo-prompt-pack-line](Prompt-Batching-and-Variations/Z-Image/turbo-prompt-pack-line.json) | Prompt Pack — Line | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
+| [turbo-prompt-pack-paragraph](Prompt-Batching-and-Variations/Z-Image/turbo-prompt-pack-paragraph.json) | Prompt Pack — Paragraph | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
+| [turbo-prompt-stack](Prompt-Batching-and-Variations/Z-Image/turbo-prompt-stack.json) | Prompt Stack | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
 
 ### Text-to-image (txt2img) generation
 
@@ -158,102 +158,102 @@ The tables below list the original 114 workflows; the 88 workflows added from th
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [anima-base-anime-txt2img-seedvr2-upscale](Text-to-Image/Anima/anima-base-anime-txt2img-seedvr2-upscale.json) | Anime Text to Image + SeedVR2 Upscale | `anima-base-v1.0.safetensors`, `qwen_3_06b_base.safetensors`, `qwen_image_vae.safetensors` +2 more | ComfyUI-SeedVR2_VideoUpscaler, ComfyUI-Pixaroma |
-| [anima-base-anime-txt2img](Text-to-Image/Anima/anima-base-anime-txt2img.json) | Anime Text to Image | `anima-base-v1.0.safetensors`, `qwen_3_06b_base.safetensors`, `qwen_image_vae.safetensors` | ComfyUI-Pixaroma |
+| [base-anime-seedvr2-upscale](Text-to-Image/Anima/base-anime-seedvr2-upscale.json) | Anime Text to Image + SeedVR2 Upscale | `anima-base-v1.0.safetensors`, `qwen_3_06b_base.safetensors`, `qwen_image_vae.safetensors` +2 more | ComfyUI-SeedVR2_VideoUpscaler, ComfyUI-Pixaroma |
+| [base-anime](Text-to-Image/Anima/base-anime.json) | Anime Text to Image | `anima-base-v1.0.safetensors`, `qwen_3_06b_base.safetensors`, `qwen_image_vae.safetensors` | ComfyUI-Pixaroma |
 
 **ERNIE-Image**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [ernie-image-turbo-txt2img-gguf](Text-to-Image/ERNIE-Image/ernie-image-turbo-txt2img-gguf.json) | Text to Image — GGUF | `ministral-3-3b.safetensors`, `flux2-vae.safetensors`, `ernie-image-turbo-Q8_0.gguf` | ComfyUI-GGUF, ComfyUI-Pixaroma |
+| [turbo-gguf](Text-to-Image/ERNIE-Image/turbo-gguf.json) | Text to Image — GGUF | `ministral-3-3b.safetensors`, `flux2-vae.safetensors`, `ernie-image-turbo-Q8_0.gguf` | ComfyUI-GGUF, ComfyUI-Pixaroma |
 
 **FLUX-1**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [nunchaku-flux1-dev-txt2img](Text-to-Image/FLUX-1/nunchaku-flux1-dev-txt2img.json) | Flux.1 Dev — Text to Image | `t5-v1_1-xxl-encoder-Q8_0.gguf`, `clip_l.safetensors`, `ae.safetensors` +1 more | ComfyUI-GGUF, ComfyUI-nunchaku |
+| [dev-nunchaku](Text-to-Image/FLUX-1/dev-nunchaku.json) | Flux.1 Dev — Text to Image | `t5-v1_1-xxl-encoder-Q8_0.gguf`, `clip_l.safetensors`, `ae.safetensors` +1 more | ComfyUI-GGUF, ComfyUI-nunchaku |
 
 **FLUX-2**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [flux2-klein-4b-fp8-distill-txt2img-basic](Text-to-Image/FLUX-2/flux2-klein-4b-fp8-distill-txt2img-basic.json) | Text to Image — Basic | `flux-2-klein-4b-fp8.safetensors`, `qwen_3_4b.safetensors`, `flux2-vae.safetensors` | Core only |
-| [flux2-klein-9b-fp8-distill-txt2img-basic](Text-to-Image/FLUX-2/flux2-klein-9b-fp8-distill-txt2img-basic.json) | Text to Image — Basic | `flux2-vae.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux-2-klein-9b-fp8mixed.safetensors` | Core only |
-| [flux2-klein-9b-fp8-txt2img](Text-to-Image/FLUX-2/flux2-klein-9b-fp8-txt2img.json) | Text to Image (Ep16) | `flux-2-klein-9b-fp8mixed.safetensors`, `flux2-vae.safetensors`, `qwen_3_8b_fp8mixed.safetensors` | ComfyUI-Pixaroma |
-| [flux2-klein-9b-txt2img](Text-to-Image/FLUX-2/flux2-klein-9b-txt2img.json) | Text to Image | `flux2-vae.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux-2-klein-9b-int8-convrot.safetensors` | ComfyUI-Pixaroma |
+| [klein-4b-fp8-distill-basic](Text-to-Image/FLUX-2/klein-4b-fp8-distill-basic.json) | Text to Image — Basic | `flux-2-klein-4b-fp8.safetensors`, `qwen_3_4b.safetensors`, `flux2-vae.safetensors` | Core only |
+| [klein-9b-fp8-distill-basic](Text-to-Image/FLUX-2/klein-9b-fp8-distill-basic.json) | Text to Image — Basic | `flux2-vae.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux-2-klein-9b-fp8mixed.safetensors` | Core only |
+| [klein-9b-fp8](Text-to-Image/FLUX-2/klein-9b-fp8.json) | Text to Image (Ep16) | `flux-2-klein-9b-fp8mixed.safetensors`, `flux2-vae.safetensors`, `qwen_3_8b_fp8mixed.safetensors` | ComfyUI-Pixaroma |
+| [klein-9b](Text-to-Image/FLUX-2/klein-9b.json) | Text to Image | `flux2-vae.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux-2-klein-9b-int8-convrot.safetensors` | ComfyUI-Pixaroma |
 
 **FLUX-3**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [flux3-klein-layout-with-boxes](Text-to-Image/FLUX-3/flux3-klein-layout-with-boxes.json) | Layout with Boxes | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
-| [flux3-klein-txt2img-z-image-realism-pass](Text-to-Image/FLUX-3/flux3-klein-txt2img-z-image-realism-pass.json) | Text to Image + Z-Image Realism Pass | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` +4 more | ComfyUI-Pixaroma |
-| [flux3-klein-txt2img](Text-to-Image/FLUX-3/flux3-klein-txt2img.json) | Text to Image | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [klein-layout-with-boxes](Text-to-Image/FLUX-3/klein-layout-with-boxes.json) | Layout with Boxes | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
+| [klein-z-image-realism-pass](Text-to-Image/FLUX-3/klein-z-image-realism-pass.json) | Text to Image + Z-Image Realism Pass | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` +4 more | ComfyUI-Pixaroma |
+| [klein](Text-to-Image/FLUX-3/klein.json) | Text to Image | `flux3-image-klein-int8-convrot.safetensors`, `qwen3vl_4b_int8_convrot.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
 
 **Krea-2**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [krea-2-int8-txt2img-extra-pass-lora](Text-to-Image/Krea-2/krea-2-int8-txt2img-extra-pass-lora.json) | Text to Image + Extra Pass + LoRA | `qwen_image_vae.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2-questpaint26_comfyui.safetensors` +1 more | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma, rgthree-comfy |
-| [krea-2-int8-txt2img-extra-pass](Text-to-Image/Krea-2/krea-2-int8-txt2img-extra-pass.json) | Text to Image + Extra Pass | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-int8-txt2img-simple-lora](Text-to-Image/Krea-2/krea-2-int8-txt2img-simple-lora.json) | Text to Image — Simple + LoRA | `qwen_image_vae.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2_turbo_int8_convrot.safetensors` +1 more | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma, rgthree-comfy |
-| [krea-2-int8-txt2img-simple](Text-to-Image/Krea-2/krea-2-int8-txt2img-simple.json) | Text to Image — Simple | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-2k-prompt-enhancer-uncensored](Text-to-Image/Krea-2/krea-2-txt2img-2k-prompt-enhancer-uncensored.json) | Text to Image — 2K Hi-Res + Prompt Enhancer (Uncensored) | `krea2_turbo_fp8_scaled.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors`, `qwen_image_vae.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-2k-prompt-enhancer](Text-to-Image/Krea-2/krea-2-txt2img-2k-prompt-enhancer.json) | Text to Image — 2K Hi-Res + Prompt Enhancer | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img](Text-to-Image/Krea-2/krea-2-txt2img.json) | Text to Image (Ep28) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-extra-pass-lora](Text-to-Image/Krea-2/krea-2-txt2img-extra-pass-lora.json) | Text to Image + Extra Pass + LoRA | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` +1 more | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma, rgthree-comfy |
-| [krea-2-txt2img-extra-pass](Text-to-Image/Krea-2/krea-2-txt2img-extra-pass.json) | Text to Image + Extra Pass | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-simple-lora](Text-to-Image/Krea-2/krea-2-txt2img-simple-lora.json) | Text to Image — Simple + LoRA | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` +1 more | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma, rgthree-comfy |
-| [krea-2-txt2img-simple-low-vram](Text-to-Image/Krea-2/krea-2-txt2img-simple-low-vram.json) | Text to Image — Simple — Low VRAM | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
-| [krea-2-txt2img-simple](Text-to-Image/Krea-2/krea-2-txt2img-simple.json) | Text to Image — Simple | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [int8-extra-pass-lora](Text-to-Image/Krea-2/int8-extra-pass-lora.json) | Text to Image + Extra Pass + LoRA | `qwen_image_vae.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2-questpaint26_comfyui.safetensors` +1 more | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma, rgthree-comfy |
+| [int8-extra-pass](Text-to-Image/Krea-2/int8-extra-pass.json) | Text to Image + Extra Pass | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [int8-simple-lora](Text-to-Image/Krea-2/int8-simple-lora.json) | Text to Image — Simple + LoRA | `qwen_image_vae.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors`, `krea2_turbo_int8_convrot.safetensors` +1 more | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma, rgthree-comfy |
+| [int8-simple](Text-to-Image/Krea-2/int8-simple.json) | Text to Image — Simple | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [2k-prompt-enhancer-uncensored](Text-to-Image/Krea-2/2k-prompt-enhancer-uncensored.json) | Text to Image — 2K Hi-Res + Prompt Enhancer (Uncensored) | `krea2_turbo_fp8_scaled.safetensors`, `Huihui-Qwen3-VL-4B-Instruct-abliterated-fp8_scaled.safetensors`, `qwen_image_vae.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [2k-prompt-enhancer](Text-to-Image/Krea-2/2k-prompt-enhancer.json) | Text to Image — 2K Hi-Res + Prompt Enhancer | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [base](Text-to-Image/Krea-2/base.json) | Text to Image (Ep28) | `qwen_image_vae.safetensors`, `krea2_turbo_int8_convrot.safetensors`, `qwen3-vl-4b-heretic_int8.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [extra-pass-lora](Text-to-Image/Krea-2/extra-pass-lora.json) | Text to Image + Extra Pass + LoRA | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` +1 more | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma, rgthree-comfy |
+| [extra-pass](Text-to-Image/Krea-2/extra-pass.json) | Text to Image + Extra Pass | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [simple-lora](Text-to-Image/Krea-2/simple-lora.json) | Text to Image — Simple + LoRA | `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors`, `qwen3vl_4b_fp8_scaled.safetensors` +1 more | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma, rgthree-comfy |
+| [simple-low-vram](Text-to-Image/Krea-2/simple-low-vram.json) | Text to Image — Simple — Low VRAM | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
+| [simple](Text-to-Image/Krea-2/simple.json) | Text to Image — Simple | `qwen3vl_4b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors`, `krea2_turbo_fp8_scaled.safetensors` | ComfyUI-Krea2T-Enhancer, ComfyUI-Pixaroma |
 
 **MiniMax-H3**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [minimax-h3-image-txt2img-single-frame](Text-to-Image/MiniMax-H3/minimax-h3-image-txt2img-single-frame.json) | Text to Image (Single Frame) | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `minimax_h3_video_vae_fp16.safetensors` | ComfyUI-Pixaroma |
-| [minimax-h3-image-txt2img](Text-to-Image/MiniMax-H3/minimax-h3-image-txt2img.json) | MiniMax H3 Image — Text to Image (official ComfyUI template) | `minimax_h3_image_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_int8_convrot.safetensors`, `minimax_h3_image_vae_fp16.safetensors` +1 more | Core only |
+| [single-frame](Text-to-Image/MiniMax-H3/single-frame.json) | Text to Image (Single Frame) | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `minimax_h3_video_vae_fp16.safetensors` | ComfyUI-Pixaroma |
+| [base](Text-to-Image/MiniMax-H3/base.json) | MiniMax H3 Image — Text to Image (official ComfyUI template) | `minimax_h3_image_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_int8_convrot.safetensors`, `minimax_h3_image_vae_fp16.safetensors` +1 more | Core only |
 
 **MOSS-Image**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [moss-image-txt2img](Text-to-Image/MOSS-Image/moss-image-txt2img.json) | MOSS Image - Text to Image (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
-| [moss-image-txt2img-speed-lora-4-step](Text-to-Image/MOSS-Image/moss-image-txt2img-speed-lora-4-step.json) | MOSS Image - Fast 4 Steps with a Speed LoRA (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors`, `moss_image_sft_4step_v2.0.safetensors` | ComfyUI-Pixaroma |
-| [moss-image-layout-with-boxes](Text-to-Image/MOSS-Image/moss-image-layout-with-boxes.json) | MOSS Image - Layout with Boxes (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [default](Text-to-Image/MOSS-Image/default.json) | MOSS Image - Text to Image (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
+| [speed-lora-4-step](Text-to-Image/MOSS-Image/speed-lora-4-step.json) | MOSS Image - Fast 4 Steps with a Speed LoRA (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors`, `moss_image_sft_4step_v2.0.safetensors` | ComfyUI-Pixaroma |
+| [layout-with-boxes](Text-to-Image/MOSS-Image/layout-with-boxes.json) | MOSS Image - Layout with Boxes (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors` | ComfyUI-Pixaroma |
 
 **Qwen-Image**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [nunchaku-qwen-image-lightning-txt2img](Text-to-Image/Qwen-Image/nunchaku-qwen-image-lightning-txt2img.json) | Qwen Image Lightning — Text to Image | `svdq-int4_r128-qwen-image-lightningv1.1-8steps.safetensors`, `qwen_2.5_vl_7b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors` | ComfyUI-nunchaku |
-| [qwen-image-21-txt2img-low-vram](Text-to-Image/Qwen-Image/qwen-image-21-txt2img-low-vram.json) | Text to Image — Low VRAM | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
-| [qwen-image-21-txt2img-turbo](Text-to-Image/Qwen-Image/qwen-image-21-txt2img-turbo.json) | Text to Image — Turbo | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` +1 more | ComfyUI-Pixaroma |
-| [qwen-image-21-txt2img](Text-to-Image/Qwen-Image/qwen-image-21-txt2img.json) | Text to Image | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [lightning-nunchaku](Text-to-Image/Qwen-Image/lightning-nunchaku.json) | Qwen Image Lightning — Text to Image | `svdq-int4_r128-qwen-image-lightningv1.1-8steps.safetensors`, `qwen_2.5_vl_7b_fp8_scaled.safetensors`, `qwen_image_vae.safetensors` | ComfyUI-nunchaku |
+| [v21-low-vram](Text-to-Image/Qwen-Image/v21-low-vram.json) | Text to Image — Low VRAM | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
+| [v21-turbo](Text-to-Image/Qwen-Image/v21-turbo.json) | Text to Image — Turbo | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` +1 more | ComfyUI-Pixaroma |
+| [v21](Text-to-Image/Qwen-Image/v21.json) | Text to Image | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
 
 **SD15**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [sd15-juggernaut-txt2img-lora-starter](Text-to-Image/SD15/sd15-juggernaut-txt2img-lora-starter.json) | SD 1.5 text-to-image with Juggernaut Reborn plus a style LoRA (ComfyUI-Easy-Install starter version) | `juggernaut_reborn.safetensors`, `CakeStyle.safetensors` | Core only |
-| [sd15-juggernaut-txt2img-lora](Text-to-Image/SD15/sd15-juggernaut-txt2img-lora.json) | Text to Image + LoRA | `juggernaut_reborn.safetensors`, `CakeStyle.safetensors` | Core only |
-| [sd15-juggernaut-txt2img](Text-to-Image/SD15/sd15-juggernaut-txt2img.json) | Text to Image | `juggernaut_reborn.safetensors` | Core only |
+| [juggernaut-lora-starter](Text-to-Image/SD15/juggernaut-lora-starter.json) | SD 1.5 text-to-image with Juggernaut Reborn plus a style LoRA (ComfyUI-Easy-Install starter version) | `juggernaut_reborn.safetensors`, `CakeStyle.safetensors` | Core only |
+| [juggernaut-lora](Text-to-Image/SD15/juggernaut-lora.json) | Text to Image + LoRA | `juggernaut_reborn.safetensors`, `CakeStyle.safetensors` | Core only |
+| [juggernaut](Text-to-Image/SD15/juggernaut.json) | Text to Image | `juggernaut_reborn.safetensors` | Core only |
 
 **Z-Image**
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
-| [nunchaku-z-image-turbo-txt2img](Text-to-Image/Z-Image/nunchaku-z-image-turbo-txt2img.json) | Z-Image Turbo — Text to Image | `ae.safetensors`, `svdq-int4_r256-z-image-turbo.safetensors`, `Huihui-Qwen3-4B-abliterated-v2_fp8mixed.safetensors` | ComfyUI-nunchaku |
-| [z-image-turbo-int8-txt2img](Text-to-Image/Z-Image/z-image-turbo-int8-txt2img.json) | Text to Image | `qwen_3_4b_fp8_mixed.safetensors`, `z_image_turbo_int8_convrot.safetensors`, `ae.safetensors` | ComfyUI-Pixaroma |
-| [z-image-turbo-txt2img-character-sheet-alt-1](Text-to-Image/Z-Image/z-image-turbo-txt2img-character-sheet-alt-1.json) | Z-Image Turbo character sheet, alternate prompt/settings | `z_image_turbo_bf16.safetensors`, `qwen_3_4b.safetensors`, `ae.safetensors` | Core only |
-| [z-image-turbo-txt2img-character-sheet-alt-2](Text-to-Image/Z-Image/z-image-turbo-txt2img-character-sheet-alt-2.json) | Z-Image Turbo character sheet, alternate prompt/settings | `z_image_turbo_bf16.safetensors`, `qwen_3_4b.safetensors`, `ae.safetensors` | Core only |
-| [z-image-turbo-txt2img-character-sheet](Text-to-Image/Z-Image/z-image-turbo-txt2img-character-sheet.json) | Z-Image Turbo character sheet (based on the official ComfyUI Z-Image template) | `qwen_3_4b.safetensors`, `ae.safetensors`, `z_image_turbo_bf16.safetensors` | Core only |
-| [z-image-turbo-txt2img-fp8-aio-checkpoint](Text-to-Image/Z-Image/z-image-turbo-txt2img-fp8-aio-checkpoint.json) | Text to Image — FP8 AIO Checkpoint | `z-image-turbo-fp8-aio.safetensors` | Core only |
-| [z-image-turbo-txt2img-fp8-aio-lora](Text-to-Image/Z-Image/z-image-turbo-txt2img-fp8-aio-lora.json) | Text to Image — FP8 AIO + LoRA | `pixag1rlwh1t3.safetensors`, `z-image-turbo-fp8-aio.safetensors` | Core only |
-| [z-image-turbo-txt2img-fp8-aio-starter](Text-to-Image/Z-Image/z-image-turbo-txt2img-fp8-aio-starter.json) | Z-Image Turbo text-to-image from one FP8 all-in-one checkpoint (ComfyUI-Easy-Install starter version) | `z-image-turbo-fp8-aio.safetensors` | Core only |
-| [z-image-turbo-txt2img-fp8-ep18](Text-to-Image/Z-Image/z-image-turbo-txt2img-fp8-ep18.json) | Text to Image — FP8 (Ep18) | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
-| [z-image-turbo-txt2img-fp8](Text-to-Image/Z-Image/z-image-turbo-txt2img-fp8.json) | Text to Image — FP8 | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | Core only |
-| [z-image-turbo-txt2img-gguf](Text-to-Image/Z-Image/z-image-turbo-txt2img-gguf.json) | Text to Image — GGUF | `z-image-turbo-q4_k_s.gguf`, `qwen-4b-zimage-heretic-q8.gguf`, `ae.safetensors` | ComfyUI-GGUF |
+| [turbo-nunchaku](Text-to-Image/Z-Image/turbo-nunchaku.json) | Z-Image Turbo — Text to Image | `ae.safetensors`, `svdq-int4_r256-z-image-turbo.safetensors`, `Huihui-Qwen3-4B-abliterated-v2_fp8mixed.safetensors` | ComfyUI-nunchaku |
+| [turbo-int8](Text-to-Image/Z-Image/turbo-int8.json) | Text to Image | `qwen_3_4b_fp8_mixed.safetensors`, `z_image_turbo_int8_convrot.safetensors`, `ae.safetensors` | ComfyUI-Pixaroma |
+| [turbo-character-sheet-alt-1](Text-to-Image/Z-Image/turbo-character-sheet-alt-1.json) | Z-Image Turbo character sheet, alternate prompt/settings | `z_image_turbo_bf16.safetensors`, `qwen_3_4b.safetensors`, `ae.safetensors` | Core only |
+| [turbo-character-sheet-alt-2](Text-to-Image/Z-Image/turbo-character-sheet-alt-2.json) | Z-Image Turbo character sheet, alternate prompt/settings | `z_image_turbo_bf16.safetensors`, `qwen_3_4b.safetensors`, `ae.safetensors` | Core only |
+| [turbo-character-sheet](Text-to-Image/Z-Image/turbo-character-sheet.json) | Z-Image Turbo character sheet (based on the official ComfyUI Z-Image template) | `qwen_3_4b.safetensors`, `ae.safetensors`, `z_image_turbo_bf16.safetensors` | Core only |
+| [turbo-fp8-aio-checkpoint](Text-to-Image/Z-Image/turbo-fp8-aio-checkpoint.json) | Text to Image — FP8 AIO Checkpoint | `z-image-turbo-fp8-aio.safetensors` | Core only |
+| [turbo-fp8-aio-lora](Text-to-Image/Z-Image/turbo-fp8-aio-lora.json) | Text to Image — FP8 AIO + LoRA | `pixag1rlwh1t3.safetensors`, `z-image-turbo-fp8-aio.safetensors` | Core only |
+| [turbo-fp8-aio-starter](Text-to-Image/Z-Image/turbo-fp8-aio-starter.json) | Z-Image Turbo text-to-image from one FP8 all-in-one checkpoint (ComfyUI-Easy-Install starter version) | `z-image-turbo-fp8-aio.safetensors` | Core only |
+| [turbo-fp8-ep18](Text-to-Image/Z-Image/turbo-fp8-ep18.json) | Text to Image — FP8 (Ep18) | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | ComfyUI-Pixaroma |
+| [turbo-fp8](Text-to-Image/Z-Image/turbo-fp8.json) | Text to Image — FP8 | `z-image-turbo_fp8_scaled_e5m2_KJ.safetensors`, `ae.safetensors`, `qwen_3_4b_fp8_mixed.safetensors` | Core only |
+| [turbo-gguf](Text-to-Image/Z-Image/turbo-gguf.json) | Text to Image — GGUF | `z-image-turbo-q4_k_s.gguf`, `qwen-4b-zimage-heretic-q8.gguf`, `ae.safetensors` | ComfyUI-GGUF |
 
 **Other**
 
@@ -276,93 +276,93 @@ Collected for the "Image Generation" entries (IMG-001 to IMG-085) of the *Open-S
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [chroma1-hd-txt2img](Text-to-Image/Chroma/chroma1-hd-txt2img.json) | Chroma 1 (HD) | Text to image with Chroma1-HD (FP8-mixed) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_chroma_text_to_image.json) | [link](https://huggingface.co/lodestones/Chroma1-HD) | - | Apache-2.0 | not runtime-tested |
-| [chroma1-radiance-txt2img](Text-to-Image/Chroma/chroma1-radiance-txt2img.json) | Chroma 1 (Radiance) | Pixel-space (no VAE) text to image with Chroma1-Radiance | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_chroma1_radiance_text_to_image.json) | [link](https://huggingface.co/lodestones/Chroma1-Radiance) | - | Apache-2.0 | not runtime-tested |
+| [hd](Text-to-Image/Chroma/hd.json) | Chroma 1 (HD) | Text to image with Chroma1-HD (FP8-mixed) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_chroma_text_to_image.json) | [link](https://huggingface.co/lodestones/Chroma1-HD) | - | Apache-2.0 | not runtime-tested |
+| [radiance](Text-to-Image/Chroma/radiance.json) | Chroma 1 (Radiance) | Pixel-space (no VAE) text to image with Chroma1-Radiance | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_chroma1_radiance_text_to_image.json) | [link](https://huggingface.co/lodestones/Chroma1-Radiance) | - | Apache-2.0 | not runtime-tested |
 
 **ERNIE-Image**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [ernie-image-txt2img-prompt-enhancer](Text-to-Image/ERNIE-Image/ernie-image-txt2img-prompt-enhancer.json) | ERNIE Image | Full ERNIE Image text to image with built-in prompt enhancer | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_ernie_image.json) | [link](https://huggingface.co/Comfy-Org/ERNIE-Image/resolve/main/diffusion_models/ernie-image.safetensors) | - | Check ERNIE Image model card | not runtime-tested |
+| [prompt-enhancer](Text-to-Image/ERNIE-Image/prompt-enhancer.json) | ERNIE Image | Full ERNIE Image text to image with built-in prompt enhancer | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_ernie_image.json) | [link](https://huggingface.co/Comfy-Org/ERNIE-Image/resolve/main/diffusion_models/ernie-image.safetensors) | - | Check ERNIE Image model card | not runtime-tested |
 
 **FLUX-1**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [flux1-dev-txt2img](Text-to-Image/FLUX-1/flux1-dev-txt2img.json) | FLUX.1 [dev] | Official full-precision text to image (separate UNet, CLIP-L, T5, VAE) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_dev_checkpoint_example.json) | [link](https://huggingface.co/Comfy-Org/flux1-dev) | - | FLUX.1 [dev] Non-Commercial | not runtime-tested |
-| [flux1-schnell-fp8-txt2img](Text-to-Image/FLUX-1/flux1-schnell-fp8-txt2img.json) | FLUX.1 [schnell] | Fast 4-step text to image, single FP8 checkpoint (low VRAM) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_schnell.json) | [link](https://huggingface.co/Comfy-Org/flux1-schnell) | - | Apache-2.0 | not runtime-tested |
-| [flux1-schnell-txt2img-full](Text-to-Image/FLUX-1/flux1-schnell-txt2img-full.json) | FLUX.1 [schnell] | Text to image with separate full-precision UNet, CLIP-L/T5 and VAE | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_schnell_full_text_to_image.json) | [link](https://huggingface.co/Comfy-Org/flux1-schnell) | - | Apache-2.0 | not runtime-tested |
+| [dev](Text-to-Image/FLUX-1/dev.json) | FLUX.1 [dev] | Official full-precision text to image (separate UNet, CLIP-L, T5, VAE) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_dev_checkpoint_example.json) | [link](https://huggingface.co/Comfy-Org/flux1-dev) | - | FLUX.1 [dev] Non-Commercial | not runtime-tested |
+| [schnell-fp8](Text-to-Image/FLUX-1/schnell-fp8.json) | FLUX.1 [schnell] | Fast 4-step text to image, single FP8 checkpoint (low VRAM) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_schnell.json) | [link](https://huggingface.co/Comfy-Org/flux1-schnell) | - | Apache-2.0 | not runtime-tested |
+| [schnell-full](Text-to-Image/FLUX-1/schnell-full.json) | FLUX.1 [schnell] | Text to image with separate full-precision UNet, CLIP-L/T5 and VAE | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_schnell_full_text_to_image.json) | [link](https://huggingface.co/Comfy-Org/flux1-schnell) | - | Apache-2.0 | not runtime-tested |
 
 **FLUX-2**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [flux2-dev-txt2img-turbo-lora](Text-to-Image/FLUX-2/flux2-dev-txt2img-turbo-lora.json) | FLUX.2 [dev] | Text to image, FP8-mixed 32B model with Turbo LoRA and small decoder | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_flux2_text_to_image.json) | [link](https://huggingface.co/Comfy-Org/flux2-dev) | - | FLUX.2 [dev] Non-Commercial | not runtime-tested |
-| [flux2-klein-4b-and-4b-base-txt2img](Text-to-Image/FLUX-2/flux2-klein-4b-and-4b-base-txt2img.json) | FLUX.2 [klein] 4B / 4B Base | Text to image comparing distilled 4B and tunable 4B Base side by side | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_flux2_klein_text_to_image.json) | [link](https://huggingface.co/Comfy-Org/flux2-klein) | - | Apache-2.0 | not runtime-tested |
-| [flux2-klein-9b-base-fp8-txt2img](Text-to-Image/FLUX-2/flux2-klein-9b-base-fp8-txt2img.json) | FLUX.2 [klein] 9B Base | Text to image with the tunable 9B Base (FP8) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_flux2_text_to_image_9b.json) | [link](https://huggingface.co/black-forest-labs/FLUX.2-klein-base-9b-fp8) | - | FLUX Non-Commercial (9B) | not runtime-tested |
+| [dev-turbo-lora](Text-to-Image/FLUX-2/dev-turbo-lora.json) | FLUX.2 [dev] | Text to image, FP8-mixed 32B model with Turbo LoRA and small decoder | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_flux2_text_to_image.json) | [link](https://huggingface.co/Comfy-Org/flux2-dev) | - | FLUX.2 [dev] Non-Commercial | not runtime-tested |
+| [klein-4b-and-4b-base](Text-to-Image/FLUX-2/klein-4b-and-4b-base.json) | FLUX.2 [klein] 4B / 4B Base | Text to image comparing distilled 4B and tunable 4B Base side by side | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_flux2_klein_text_to_image.json) | [link](https://huggingface.co/Comfy-Org/flux2-klein) | - | Apache-2.0 | not runtime-tested |
+| [klein-9b-base-fp8](Text-to-Image/FLUX-2/klein-9b-base-fp8.json) | FLUX.2 [klein] 9B Base | Text to image with the tunable 9B Base (FP8) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_flux2_text_to_image_9b.json) | [link](https://huggingface.co/black-forest-labs/FLUX.2-klein-base-9b-fp8) | - | FLUX Non-Commercial (9B) | not runtime-tested |
 
 **FLUX-3**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [flux3-klein-base-txt2img](Text-to-Image/FLUX-3/flux3-klein-base-txt2img.json) | FLUX.3 Image Klein Base | Text to image with the tunable Base checkpoint (INT8) + prompt upsampler | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_flux3_klein_t2i.json) | [link](https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy) | - | Check FLUX.3 Klein licence on model card | not runtime-tested |
+| [klein-base](Text-to-Image/FLUX-3/klein-base.json) | FLUX.3 Image Klein Base | Text to image with the tunable Base checkpoint (INT8) + prompt upsampler | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_flux3_klein_t2i.json) | [link](https://huggingface.co/black-forest-labs/flux-3-image-klein-comfy) | - | Check FLUX.3 Klein licence on model card | not runtime-tested |
 
 **HiDream**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [hidream-i1-dev-txt2img](Text-to-Image/HiDream/hidream-i1-dev-txt2img.json) | HiDream-I1 Dev | Distilled HiDream-I1 text to image (~28 steps) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/hidream_i1_dev.json) | [link](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI) | - | MIT (Llama 3.1 encoder: Llama licence) | not runtime-tested |
-| [hidream-i1-fast-txt2img](Text-to-Image/HiDream/hidream-i1-fast-txt2img.json) | HiDream-I1 Fast | Fast HiDream-I1 text to image (~16 steps) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/hidream_i1_fast.json) | [link](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI) | - | MIT (Llama 3.1 encoder: Llama licence) | not runtime-tested |
-| [hidream-i1-full-txt2img](Text-to-Image/HiDream/hidream-i1-full-txt2img.json) | HiDream-I1 Full | Highest-quality HiDream-I1 text to image (FP8, 50 steps) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/hidream_i1_full.json) | [link](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI) | - | MIT (Llama 3.1 encoder: Llama licence) | not runtime-tested |
+| [i1-dev](Text-to-Image/HiDream/i1-dev.json) | HiDream-I1 Dev | Distilled HiDream-I1 text to image (~28 steps) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/hidream_i1_dev.json) | [link](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI) | - | MIT (Llama 3.1 encoder: Llama licence) | not runtime-tested |
+| [i1-fast](Text-to-Image/HiDream/i1-fast.json) | HiDream-I1 Fast | Fast HiDream-I1 text to image (~16 steps) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/hidream_i1_fast.json) | [link](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI) | - | MIT (Llama 3.1 encoder: Llama licence) | not runtime-tested |
+| [i1-full](Text-to-Image/HiDream/i1-full.json) | HiDream-I1 Full | Highest-quality HiDream-I1 text to image (FP8, 50 steps) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/hidream_i1_full.json) | [link](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI) | - | MIT (Llama 3.1 encoder: Llama licence) | not runtime-tested |
 
 **MOSS-Image**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [moss-image-base-layout-with-boxes](Text-to-Image/MOSS-Image/moss-image-base-layout-with-boxes.json) | MOSS-Image Base | Layout control with bounding boxes on the Base checkpoint | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_moss_image_base_t2i_bboxes.json) | [link](https://huggingface.co/Comfy-Org/MOSS-Image/resolve/main/diffusion_models/moss_image_base_int8_convrot.safetensors) | - | Check MOSS-Image model card | not runtime-tested |
-| [moss-image-base-txt2img](Text-to-Image/MOSS-Image/moss-image-base-txt2img.json) | MOSS-Image Base | Text to image with the Base (pre-SFT) checkpoint | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_moss_image_base_t2i.json) | [link](https://huggingface.co/Comfy-Org/MOSS-Image/resolve/main/diffusion_models/moss_image_base_int8_convrot.safetensors) | - | Check MOSS-Image model card | not runtime-tested |
+| [base-layout-with-boxes](Text-to-Image/MOSS-Image/base-layout-with-boxes.json) | MOSS-Image Base | Layout control with bounding boxes on the Base checkpoint | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_moss_image_base_t2i_bboxes.json) | [link](https://huggingface.co/Comfy-Org/MOSS-Image/resolve/main/diffusion_models/moss_image_base_int8_convrot.safetensors) | - | Check MOSS-Image model card | not runtime-tested |
+| [base-model](Text-to-Image/MOSS-Image/base-model.json) | MOSS-Image Base | Text to image with the Base (pre-SFT) checkpoint | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_moss_image_base_t2i.json) | [link](https://huggingface.co/Comfy-Org/MOSS-Image/resolve/main/diffusion_models/moss_image_base_int8_convrot.safetensors) | - | Check MOSS-Image model card | not runtime-tested |
 
 **Qwen-Image**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [qwen-image-2512-txt2img](Text-to-Image/Qwen-Image/qwen-image-2512-txt2img.json) | Qwen-Image-2512 | Text to image with Qwen-Image-2512 (FP8) and Lightning 4-step LoRA | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_Image_2512.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI) | - | Apache-2.0 | not runtime-tested |
-| [qwen-image-2512-txt2img-2-step-turbo-lora](Text-to-Image/Qwen-Image/qwen-image-2512-txt2img-2-step-turbo-lora.json) | Qwen-Image-2512 | 2-step text to image with the Wuli Turbo LoRA | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_2512_with_2steps_lora.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI) | - | Apache-2.0 (check LoRA card) | not runtime-tested |
-| [qwen-image-txt2img](Text-to-Image/Qwen-Image/qwen-image-txt2img.json) | Qwen-Image (20B) | Original Qwen-Image text to image (FP8) with optional Lightning 8-step LoRA | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI) | - | Apache-2.0 | not runtime-tested |
+| [2512](Text-to-Image/Qwen-Image/2512.json) | Qwen-Image-2512 | Text to image with Qwen-Image-2512 (FP8) and Lightning 4-step LoRA | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_Image_2512.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI) | - | Apache-2.0 | not runtime-tested |
+| [2512-2-step-turbo-lora](Text-to-Image/Qwen-Image/2512-2-step-turbo-lora.json) | Qwen-Image-2512 | 2-step text to image with the Wuli Turbo LoRA | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_2512_with_2steps_lora.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI) | - | Apache-2.0 (check LoRA card) | not runtime-tested |
+| [base](Text-to-Image/Qwen-Image/base.json) | Qwen-Image (20B) | Original Qwen-Image text to image (FP8) with optional Lightning 8-step LoRA | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI) | - | Apache-2.0 | not runtime-tested |
 
 **Sana**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [sana-15-4b8-txt2img](Text-to-Image/Sana/sana-15-4b8-txt2img.json) | Sana 1.5 | Text to image with SANA 1.5 4.8B | [source](https://github.com/NVlabs/Sana/tree/main/asset/docs/ComfyUI) | [link](https://huggingface.co/Efficient-Large-Model/SANA1.5_4.8B_1024px) | ComfyUI_ExtraModels (Efficient-Large-Model fork) | NVIDIA Sana licence (non-commercial) | not runtime-tested |
-| [sana-1b6-4k-txt2img](Text-to-Image/Sana/sana-1b6-4k-txt2img.json) | Sana 1.6B (4K) | Native 4K text to image with Sana 1600M 4K | [source](https://github.com/NVlabs/Sana/tree/main/asset/docs/ComfyUI) | [link](https://huggingface.co/Efficient-Large-Model/Sana_1600M_4Kpx_BF16) | ComfyUI_ExtraModels (Efficient-Large-Model fork) | NVIDIA Sana licence (non-commercial) | not runtime-tested |
-| [sana-1b6-txt2img](Text-to-Image/Sana/sana-1b6-txt2img.json) | Sana 1.6B | Text to image with Sana 1600M 1024px | [source](https://github.com/NVlabs/Sana/tree/main/asset/docs/ComfyUI) | [link](https://huggingface.co/Efficient-Large-Model/Sana_1600M_1024px_BF16) | ComfyUI_ExtraModels (Efficient-Large-Model fork) | NVIDIA Sana licence (non-commercial) | not runtime-tested |
+| [v15-4b8](Text-to-Image/Sana/v15-4b8.json) | Sana 1.5 | Text to image with SANA 1.5 4.8B | [source](https://github.com/NVlabs/Sana/tree/main/asset/docs/ComfyUI) | [link](https://huggingface.co/Efficient-Large-Model/SANA1.5_4.8B_1024px) | ComfyUI_ExtraModels (Efficient-Large-Model fork) | NVIDIA Sana licence (non-commercial) | not runtime-tested |
+| [1b6-4k](Text-to-Image/Sana/1b6-4k.json) | Sana 1.6B (4K) | Native 4K text to image with Sana 1600M 4K | [source](https://github.com/NVlabs/Sana/tree/main/asset/docs/ComfyUI) | [link](https://huggingface.co/Efficient-Large-Model/Sana_1600M_4Kpx_BF16) | ComfyUI_ExtraModels (Efficient-Large-Model fork) | NVIDIA Sana licence (non-commercial) | not runtime-tested |
+| [1b6](Text-to-Image/Sana/1b6.json) | Sana 1.6B | Text to image with Sana 1600M 1024px | [source](https://github.com/NVlabs/Sana/tree/main/asset/docs/ComfyUI) | [link](https://huggingface.co/Efficient-Large-Model/Sana_1600M_1024px_BF16) | ComfyUI_ExtraModels (Efficient-Large-Model fork) | NVIDIA Sana licence (non-commercial) | not runtime-tested |
 
 **SD3**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [sd3-medium-txt2img](Text-to-Image/SD3/sd3-medium-txt2img.json) | Stable Diffusion 3 Medium | Text to image, all-in-one SD3 Medium checkpoint with T5 FP8 | [source](https://github.com/comfyanonymous/ComfyUI_examples/tree/master/sd3) | [link](https://huggingface.co/stabilityai/stable-diffusion-3-medium) | - | Stability AI Community | not runtime-tested |
-| [sd35-large-fp8-txt2img](Text-to-Image/SD3/sd35-large-fp8-txt2img.json) | Stable Diffusion 3.5 Large | Text to image with SD3.5 Large FP8 all-in-one checkpoint | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/sd3.5_simple_example.json) | [link](https://huggingface.co/Comfy-Org/stable-diffusion-3.5-fp8) | - | Stability AI Community | not runtime-tested |
+| [medium](Text-to-Image/SD3/medium.json) | Stable Diffusion 3 Medium | Text to image, all-in-one SD3 Medium checkpoint with T5 FP8 | [source](https://github.com/comfyanonymous/ComfyUI_examples/tree/master/sd3) | [link](https://huggingface.co/stabilityai/stable-diffusion-3-medium) | - | Stability AI Community | not runtime-tested |
+| [large-fp8](Text-to-Image/SD3/large-fp8.json) | Stable Diffusion 3.5 Large | Text to image with SD3.5 Large FP8 all-in-one checkpoint | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/sd3.5_simple_example.json) | [link](https://huggingface.co/Comfy-Org/stable-diffusion-3.5-fp8) | - | Stability AI Community | not runtime-tested |
 
 **SDXL**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [sdxl-base-plus-refiner-txt2img](Text-to-Image/SDXL/sdxl-base-plus-refiner-txt2img.json) | SDXL Base 1.0 + Refiner 1.0 | Base then refiner two-stage SDXL text to image | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/sdxl_simple_example.json) | [link](https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0) | - | CreativeML OpenRAIL++-M | not runtime-tested |
-| [sdxl-base-txt2img](Text-to-Image/SDXL/sdxl-base-txt2img.json) | SDXL Base 1.0 | Basic SDXL base text to image | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_sdxl_simple.json) | [link](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) | - | CreativeML OpenRAIL++-M | not runtime-tested |
-| [sdxl-hyper-1step-unet-txt2img](Text-to-Image/SDXL/sdxl-hyper-1step-unet-txt2img.json) | SDXL Hyper (Hyper-SD) | 1-step text to image with Hyper-SDXL UNet and TCD-style scheduler | [source](https://huggingface.co/ByteDance/Hyper-SD/tree/main/comfyui) | [link](https://huggingface.co/ByteDance/Hyper-SD) | ComfyUI-HyperSDXL1StepUnetScheduler (see Hyper-SD repo) | Check Hyper-SD model card | not runtime-tested |
-| [sdxl-hyper-2step-lora-txt2img](Text-to-Image/SDXL/sdxl-hyper-2step-lora-txt2img.json) | SDXL Hyper (Hyper-SD) | Few-step Hyper-SDXL LoRA on SDXL base | [source](https://huggingface.co/ByteDance/Hyper-SD/tree/main/comfyui) | [link](https://huggingface.co/ByteDance/Hyper-SD) | - | Check Hyper-SD model card | not runtime-tested |
-| [sdxl-lightning-4step-lora-txt2img](Text-to-Image/SDXL/sdxl-lightning-4step-lora-txt2img.json) | SDXL-Lightning | 4-step Lightning LoRA on SDXL base (works with SDXL fine-tunes) | [source](https://huggingface.co/ByteDance/SDXL-Lightning/tree/main/comfyui) | [link](https://huggingface.co/ByteDance/SDXL-Lightning) | - | OpenRAIL++ | not runtime-tested |
-| [sdxl-lightning-4step-unet-txt2img](Text-to-Image/SDXL/sdxl-lightning-4step-unet-txt2img.json) | SDXL-Lightning | 4-step text to image with the full Lightning checkpoint | [source](https://huggingface.co/ByteDance/SDXL-Lightning/tree/main/comfyui) | [link](https://huggingface.co/ByteDance/SDXL-Lightning) | - | OpenRAIL++ | not runtime-tested |
-| [sdxl-turbo-txt2img](Text-to-Image/SDXL/sdxl-turbo-txt2img.json) | SDXL Turbo | 1-step text to image with SDXL Turbo | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/sdxlturbo_example.json) | [link](https://huggingface.co/stabilityai/sdxl-turbo) | - | Stability AI Community / research | not runtime-tested |
+| [base-plus-refiner](Text-to-Image/SDXL/base-plus-refiner.json) | SDXL Base 1.0 + Refiner 1.0 | Base then refiner two-stage SDXL text to image | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/sdxl_simple_example.json) | [link](https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0) | - | CreativeML OpenRAIL++-M | not runtime-tested |
+| [base](Text-to-Image/SDXL/base.json) | SDXL Base 1.0 | Basic SDXL base text to image | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_sdxl_simple.json) | [link](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0) | - | CreativeML OpenRAIL++-M | not runtime-tested |
+| [hyper-1step-unet](Text-to-Image/SDXL/hyper-1step-unet.json) | SDXL Hyper (Hyper-SD) | 1-step text to image with Hyper-SDXL UNet and TCD-style scheduler | [source](https://huggingface.co/ByteDance/Hyper-SD/tree/main/comfyui) | [link](https://huggingface.co/ByteDance/Hyper-SD) | ComfyUI-HyperSDXL1StepUnetScheduler (see Hyper-SD repo) | Check Hyper-SD model card | not runtime-tested |
+| [hyper-2step-lora](Text-to-Image/SDXL/hyper-2step-lora.json) | SDXL Hyper (Hyper-SD) | Few-step Hyper-SDXL LoRA on SDXL base | [source](https://huggingface.co/ByteDance/Hyper-SD/tree/main/comfyui) | [link](https://huggingface.co/ByteDance/Hyper-SD) | - | Check Hyper-SD model card | not runtime-tested |
+| [lightning-4step-lora](Text-to-Image/SDXL/lightning-4step-lora.json) | SDXL-Lightning | 4-step Lightning LoRA on SDXL base (works with SDXL fine-tunes) | [source](https://huggingface.co/ByteDance/SDXL-Lightning/tree/main/comfyui) | [link](https://huggingface.co/ByteDance/SDXL-Lightning) | - | OpenRAIL++ | not runtime-tested |
+| [lightning-4step-unet](Text-to-Image/SDXL/lightning-4step-unet.json) | SDXL-Lightning | 4-step text to image with the full Lightning checkpoint | [source](https://huggingface.co/ByteDance/SDXL-Lightning/tree/main/comfyui) | [link](https://huggingface.co/ByteDance/SDXL-Lightning) | - | OpenRAIL++ | not runtime-tested |
+| [turbo](Text-to-Image/SDXL/turbo.json) | SDXL Turbo | 1-step text to image with SDXL Turbo | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/sdxlturbo_example.json) | [link](https://huggingface.co/stabilityai/sdxl-turbo) | - | Stability AI Community / research | not runtime-tested |
 
 **Z-Image**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [z-image-base-int8-txt2img](Text-to-Image/Z-Image/z-image-base-int8-txt2img.json) | Z-Image (Base) | Low-VRAM INT8 text to image with Z-Image base | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_z_image_int8.json) | [link](https://huggingface.co/Comfy-Org/z_image) | - | Apache-2.0 | not runtime-tested |
-| [z-image-base-txt2img](Text-to-Image/Z-Image/z-image-base-txt2img.json) | Z-Image (Base) | Text to image with the non-distilled Z-Image base (BF16) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_z_image.json) | [link](https://huggingface.co/Comfy-Org/z_image) | - | Apache-2.0 | not runtime-tested |
+| [base-int8](Text-to-Image/Z-Image/base-int8.json) | Z-Image (Base) | Low-VRAM INT8 text to image with Z-Image base | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_z_image_int8.json) | [link](https://huggingface.co/Comfy-Org/z_image) | - | Apache-2.0 | not runtime-tested |
+| [base](Text-to-Image/Z-Image/base.json) | Z-Image (Base) | Text to image with the non-distilled Z-Image base (BF16) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_z_image.json) | [link](https://huggingface.co/Comfy-Org/z_image) | - | Apache-2.0 | not runtime-tested |
 
 **Other**
 
@@ -384,32 +384,32 @@ Collected for the "Image Generation" entries (IMG-001 to IMG-085) of the *Open-S
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [anima-lllite-any-control](ControlNet-Guided/Anima/anima-lllite-any-control.json) | Anima | ControlNet-LLLite "any" control to image (anime) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_anima_lllite_any_control_to_image.json) | [link](https://huggingface.co/circlestone-labs/Anima) | - | Check Anima model card (non-commercial terms) | not runtime-tested |
-| [anima-lllite-depth-control](ControlNet-Guided/Anima/anima-lllite-depth-control.json) | Anima | Depth (Depth Anything 3) LLLite control to image | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_anima_lllite_depth_control_to_image.json) | [link](https://huggingface.co/circlestone-labs/Anima) | - | Check Anima model card (non-commercial terms) | not runtime-tested |
+| [lllite-any-control](ControlNet-Guided/Anima/lllite-any-control.json) | Anima | ControlNet-LLLite "any" control to image (anime) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_anima_lllite_any_control_to_image.json) | [link](https://huggingface.co/circlestone-labs/Anima) | - | Check Anima model card (non-commercial terms) | not runtime-tested |
+| [lllite-depth-control](ControlNet-Guided/Anima/lllite-depth-control.json) | Anima | Depth (Depth Anything 3) LLLite control to image | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_anima_lllite_depth_control_to_image.json) | [link](https://huggingface.co/circlestone-labs/Anima) | - | Check Anima model card (non-commercial terms) | not runtime-tested |
 
 **FLUX-1**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [flux1-canny-dev](ControlNet-Guided/FLUX-1/flux1-canny-dev.json) | FLUX.1 [dev] (Canny) | Canny-edge controlled generation with FLUX.1 Canny dev | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_canny_model_example.json) | [link](https://huggingface.co/black-forest-labs/FLUX.1-Canny-dev) | - | FLUX.1 [dev] Non-Commercial | not runtime-tested |
-| [flux1-depth-dev-lora](ControlNet-Guided/FLUX-1/flux1-depth-dev-lora.json) | FLUX.1 [dev] (Depth LoRA) | Depth-controlled generation with FLUX.1 Depth LoRA | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_depth_lora_example.json) | [link](https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev-lora) | - | FLUX.1 [dev] Non-Commercial | not runtime-tested |
+| [canny-dev](ControlNet-Guided/FLUX-1/canny-dev.json) | FLUX.1 [dev] (Canny) | Canny-edge controlled generation with FLUX.1 Canny dev | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_canny_model_example.json) | [link](https://huggingface.co/black-forest-labs/FLUX.1-Canny-dev) | - | FLUX.1 [dev] Non-Commercial | not runtime-tested |
+| [depth-dev-lora](ControlNet-Guided/FLUX-1/depth-dev-lora.json) | FLUX.1 [dev] (Depth LoRA) | Depth-controlled generation with FLUX.1 Depth LoRA | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_depth_lora_example.json) | [link](https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev-lora) | - | FLUX.1 [dev] Non-Commercial | not runtime-tested |
 
 **Qwen-Image**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [qwen-image-2512-fun-controlnet-union](ControlNet-Guided/Qwen-Image/qwen-image-2512-fun-controlnet-union.json) | Qwen-Image-2512 | Fun ControlNet Union on Qwen-Image-2512 | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_Image_2512_controlnet.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_2512_fp8_e4m3fn.safetensors) | - | Apache-2.0 | not runtime-tested |
-| [qwen-image-canny-diffsynth-patch](ControlNet-Guided/Qwen-Image/qwen-image-canny-diffsynth-patch.json) | Qwen-Image | Canny control via DiffSynth model patch | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_controlnet_patch.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image-DiffSynth-ControlNets) | - | Apache-2.0 | not runtime-tested |
-| [qwen-image-instantx-controlnet-union](ControlNet-Guided/Qwen-Image/qwen-image-instantx-controlnet-union.json) | Qwen-Image | InstantX ControlNet Union (canny/depth/pose) with Lotus depth | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_instantx_controlnet.json) | [link](https://huggingface.co/InstantX/Qwen-Image-ControlNet-Union) | - | Apache-2.0 | not runtime-tested |
-| [qwen-image-union-control-lora](ControlNet-Guided/Qwen-Image/qwen-image-union-control-lora.json) | Qwen-Image | DiffSynth Union control LoRA | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_union_control_lora.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image-DiffSynth-ControlNets) | - | Apache-2.0 | not runtime-tested |
+| [2512-fun-controlnet-union](ControlNet-Guided/Qwen-Image/2512-fun-controlnet-union.json) | Qwen-Image-2512 | Fun ControlNet Union on Qwen-Image-2512 | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_Image_2512_controlnet.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image_ComfyUI/resolve/main/split_files/diffusion_models/qwen_image_2512_fp8_e4m3fn.safetensors) | - | Apache-2.0 | not runtime-tested |
+| [canny-diffsynth-patch](ControlNet-Guided/Qwen-Image/canny-diffsynth-patch.json) | Qwen-Image | Canny control via DiffSynth model patch | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_controlnet_patch.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image-DiffSynth-ControlNets) | - | Apache-2.0 | not runtime-tested |
+| [instantx-controlnet-union](ControlNet-Guided/Qwen-Image/instantx-controlnet-union.json) | Qwen-Image | InstantX ControlNet Union (canny/depth/pose) with Lotus depth | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_instantx_controlnet.json) | [link](https://huggingface.co/InstantX/Qwen-Image-ControlNet-Union) | - | Apache-2.0 | not runtime-tested |
+| [union-control-lora](ControlNet-Guided/Qwen-Image/union-control-lora.json) | Qwen-Image | DiffSynth Union control LoRA | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_union_control_lora.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image-DiffSynth-ControlNets) | - | Apache-2.0 | not runtime-tested |
 
 **SD3**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [sd35-large-blur-controlnet](ControlNet-Guided/SD3/sd35-large-blur-controlnet.json) | Stable Diffusion 3.5 Large | Blur ControlNet (tile-like re-detailing) on SD3.5 Large | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/sd3.5_large_blur.json) | [link](https://huggingface.co/stabilityai/stable-diffusion-3.5-controlnets) | - | Stability AI Community | not runtime-tested |
-| [sd35-large-canny-controlnet](ControlNet-Guided/SD3/sd35-large-canny-controlnet.json) | Stable Diffusion 3.5 Large | Canny ControlNet on SD3.5 Large | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/sd3.5_large_canny_controlnet_example.json) | [link](https://huggingface.co/stabilityai/stable-diffusion-3.5-controlnets) | - | Stability AI Community | not runtime-tested |
-| [sd35-large-depth-controlnet](ControlNet-Guided/SD3/sd35-large-depth-controlnet.json) | Stable Diffusion 3.5 Large | Depth ControlNet on SD3.5 Large (Lotus depth) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/sd3.5_large_depth.json) | [link](https://huggingface.co/stabilityai/stable-diffusion-3.5-controlnets) | - | Stability AI Community | not runtime-tested |
+| [large-blur-controlnet](ControlNet-Guided/SD3/large-blur-controlnet.json) | Stable Diffusion 3.5 Large | Blur ControlNet (tile-like re-detailing) on SD3.5 Large | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/sd3.5_large_blur.json) | [link](https://huggingface.co/stabilityai/stable-diffusion-3.5-controlnets) | - | Stability AI Community | not runtime-tested |
+| [large-canny-controlnet](ControlNet-Guided/SD3/large-canny-controlnet.json) | Stable Diffusion 3.5 Large | Canny ControlNet on SD3.5 Large | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/sd3.5_large_canny_controlnet_example.json) | [link](https://huggingface.co/stabilityai/stable-diffusion-3.5-controlnets) | - | Stability AI Community | not runtime-tested |
+| [large-depth-controlnet](ControlNet-Guided/SD3/large-depth-controlnet.json) | Stable Diffusion 3.5 Large | Depth ControlNet on SD3.5 Large (Lotus depth) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/sd3.5_large_depth.json) | [link](https://huggingface.co/stabilityai/stable-diffusion-3.5-controlnets) | - | Stability AI Community | not runtime-tested |
 
 **Other**
 
@@ -424,69 +424,69 @@ Collected for the "Image Generation" entries (IMG-001 to IMG-085) of the *Open-S
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [boogu-image-edit-fp8](Edit-Inpaint-and-Reference/Boogu/boogu-image-edit-fp8.json) | Boogu Image 0.1 Edit | Single-reference editing with the full (non-Turbo) Edit model | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_boogu_image_0_1_edit.json) | [link](https://huggingface.co/Comfy-Org/Boogu-Image/resolve/main/diffusion_models/boogu_image_edit_fp8_scaled.safetensors) | - | Check Boogu model card | not runtime-tested |
-| [boogu-image-edit-int8-low-vram](Edit-Inpaint-and-Reference/Boogu/boogu-image-edit-int8-low-vram.json) | Boogu Image 0.1 Edit | Low-VRAM INT8 variant of Boogu Edit | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_boogu_image_0_1_edit_int8.json) | [link](https://huggingface.co/Comfy-Org/Boogu-Image/resolve/main/diffusion_models/boogu_image_edit_int8_convrot.safetensors) | - | Check Boogu model card | not runtime-tested |
+| [edit-fp8](Edit-Inpaint-and-Reference/Boogu/edit-fp8.json) | Boogu Image 0.1 Edit | Single-reference editing with the full (non-Turbo) Edit model | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_boogu_image_0_1_edit.json) | [link](https://huggingface.co/Comfy-Org/Boogu-Image/resolve/main/diffusion_models/boogu_image_edit_fp8_scaled.safetensors) | - | Check Boogu model card | not runtime-tested |
+| [edit-int8-low-vram](Edit-Inpaint-and-Reference/Boogu/edit-int8-low-vram.json) | Boogu Image 0.1 Edit | Low-VRAM INT8 variant of Boogu Edit | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_boogu_image_0_1_edit_int8.json) | [link](https://huggingface.co/Comfy-Org/Boogu-Image/resolve/main/diffusion_models/boogu_image_edit_int8_convrot.safetensors) | - | Check Boogu model card | not runtime-tested |
 
 **FIBO**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [fibo-2-dev-edit-prompt-enhancer](Edit-Inpaint-and-Reference/FIBO/fibo-2-dev-edit-prompt-enhancer.json) | Fibo 2.0 Dev | Structured (JSON-prompt) editing with VLM prompt enhancer | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_fibo2_edit_dev_pe.json) | [link](https://huggingface.co/Comfy-Org/Fibo-2.0/resolve/main/diffusion_models/fibo2_dev_int8_convrot.safetensors) | - | Check Bria Fibo licence | not runtime-tested |
-| [fibo-2-edit-turbo-prompt-enhancer](Edit-Inpaint-and-Reference/FIBO/fibo-2-edit-turbo-prompt-enhancer.json) | Fibo 2.0 Edit Turbo | Fast structured editing with VLM prompt enhancer | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_fibo2_edit_turbo_pe.json) | [link](https://huggingface.co/Comfy-Org/Fibo-2.0/resolve/main/diffusion_models/fibo2_edit_turbo_int8_convrot.safetensors) | - | Check Bria Fibo licence | not runtime-tested |
+| [dev-edit-prompt-enhancer](Edit-Inpaint-and-Reference/FIBO/dev-edit-prompt-enhancer.json) | Fibo 2.0 Dev | Structured (JSON-prompt) editing with VLM prompt enhancer | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_fibo2_edit_dev_pe.json) | [link](https://huggingface.co/Comfy-Org/Fibo-2.0/resolve/main/diffusion_models/fibo2_dev_int8_convrot.safetensors) | - | Check Bria Fibo licence | not runtime-tested |
+| [edit-turbo-prompt-enhancer](Edit-Inpaint-and-Reference/FIBO/edit-turbo-prompt-enhancer.json) | Fibo 2.0 Edit Turbo | Fast structured editing with VLM prompt enhancer | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_fibo2_edit_turbo_pe.json) | [link](https://huggingface.co/Comfy-Org/Fibo-2.0/resolve/main/diffusion_models/fibo2_edit_turbo_int8_convrot.safetensors) | - | Check Bria Fibo licence | not runtime-tested |
 
 **FLUX-1**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [flux1-dev-redux-image-variation](Edit-Inpaint-and-Reference/FLUX-1/flux1-dev-redux-image-variation.json) | FLUX.1 [dev] (Redux) | Image variation / reference prompting with Redux + SigCLIP | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_redux_model_example.json) | [link](https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev) | - | FLUX.1 [dev] Non-Commercial | not runtime-tested |
-| [flux1-fill-dev-inpaint](Edit-Inpaint-and-Reference/FLUX-1/flux1-fill-dev-inpaint.json) | FLUX.1 Fill [dev] | Mask inpainting with FLUX.1 Fill | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_fill_inpaint_example.json) | [link](https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev) | - | FLUX.1 [dev] Non-Commercial | not runtime-tested |
-| [flux1-fill-dev-outpaint](Edit-Inpaint-and-Reference/FLUX-1/flux1-fill-dev-outpaint.json) | FLUX.1 Fill [dev] | Outpainting / canvas extension with FLUX.1 Fill | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_fill_outpaint_example.json) | [link](https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev) | - | FLUX.1 [dev] Non-Commercial | not runtime-tested |
-| [flux1-kontext-dev-edit](Edit-Inpaint-and-Reference/FLUX-1/flux1-kontext-dev-edit.json) | FLUX.1 Kontext [dev] | Instruction edit keeping identity/layout (FP8) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_kontext_dev_basic.json) | [link](https://huggingface.co/Comfy-Org/flux1-kontext-dev_ComfyUI) | - | FLUX.1 [dev] Non-Commercial | not runtime-tested |
+| [dev-redux-image-variation](Edit-Inpaint-and-Reference/FLUX-1/dev-redux-image-variation.json) | FLUX.1 [dev] (Redux) | Image variation / reference prompting with Redux + SigCLIP | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_redux_model_example.json) | [link](https://huggingface.co/black-forest-labs/FLUX.1-Redux-dev) | - | FLUX.1 [dev] Non-Commercial | not runtime-tested |
+| [fill-dev-inpaint](Edit-Inpaint-and-Reference/FLUX-1/fill-dev-inpaint.json) | FLUX.1 Fill [dev] | Mask inpainting with FLUX.1 Fill | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_fill_inpaint_example.json) | [link](https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev) | - | FLUX.1 [dev] Non-Commercial | not runtime-tested |
+| [fill-dev-outpaint](Edit-Inpaint-and-Reference/FLUX-1/fill-dev-outpaint.json) | FLUX.1 Fill [dev] | Outpainting / canvas extension with FLUX.1 Fill | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_fill_outpaint_example.json) | [link](https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev) | - | FLUX.1 [dev] Non-Commercial | not runtime-tested |
+| [kontext-dev-edit](Edit-Inpaint-and-Reference/FLUX-1/kontext-dev-edit.json) | FLUX.1 Kontext [dev] | Instruction edit keeping identity/layout (FP8) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/flux_kontext_dev_basic.json) | [link](https://huggingface.co/Comfy-Org/flux1-kontext-dev_ComfyUI) | - | FLUX.1 [dev] Non-Commercial | not runtime-tested |
 
 **FLUX-2**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [flux2-dev-fp8-multi-reference-low-vram](Edit-Inpaint-and-Reference/FLUX-2/flux2-dev-fp8-multi-reference-low-vram.json) | FLUX.2 [dev] | Two-reference editing with FP8 Mistral encoder (lower VRAM) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_flux2_fp8.json) | [link](https://huggingface.co/Comfy-Org/flux2-dev) | - | FLUX.2 [dev] Non-Commercial | not runtime-tested |
-| [flux2-dev-reference-edit](Edit-Inpaint-and-Reference/FLUX-2/flux2-dev-reference-edit.json) | FLUX.2 [dev] | Text to image / edit with one reference image (Turbo LoRA) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_flux2.json) | [link](https://huggingface.co/Comfy-Org/flux2-dev) | - | FLUX.2 [dev] Non-Commercial | not runtime-tested |
-| [flux2-klein-4b-base-image-edit](Edit-Inpaint-and-Reference/FLUX-2/flux2-klein-4b-base-image-edit.json) | FLUX.2 [klein] 4B Base | Image edit with the tunable 4B Base (FP8) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_flux2_klein_image_edit_4b_base.json) | [link](https://huggingface.co/black-forest-labs/FLUX.2-klein-base-4b-fp8) | - | Apache-2.0 | not runtime-tested |
-| [flux2-klein-9b-base-image-edit](Edit-Inpaint-and-Reference/FLUX-2/flux2-klein-9b-base-image-edit.json) | FLUX.2 [klein] 9B Base | Image edit with the tunable 9B Base (FP8) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_flux2_klein_image_edit_9b_base.json) | [link](https://huggingface.co/black-forest-labs/FLUX.2-klein-base-9b-fp8) | - | FLUX Non-Commercial (9B) | not runtime-tested |
+| [dev-fp8-multi-reference-low-vram](Edit-Inpaint-and-Reference/FLUX-2/dev-fp8-multi-reference-low-vram.json) | FLUX.2 [dev] | Two-reference editing with FP8 Mistral encoder (lower VRAM) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_flux2_fp8.json) | [link](https://huggingface.co/Comfy-Org/flux2-dev) | - | FLUX.2 [dev] Non-Commercial | not runtime-tested |
+| [dev-reference-edit](Edit-Inpaint-and-Reference/FLUX-2/dev-reference-edit.json) | FLUX.2 [dev] | Text to image / edit with one reference image (Turbo LoRA) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_flux2.json) | [link](https://huggingface.co/Comfy-Org/flux2-dev) | - | FLUX.2 [dev] Non-Commercial | not runtime-tested |
+| [klein-4b-base-image-edit](Edit-Inpaint-and-Reference/FLUX-2/klein-4b-base-image-edit.json) | FLUX.2 [klein] 4B Base | Image edit with the tunable 4B Base (FP8) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_flux2_klein_image_edit_4b_base.json) | [link](https://huggingface.co/black-forest-labs/FLUX.2-klein-base-4b-fp8) | - | Apache-2.0 | not runtime-tested |
+| [klein-9b-base-image-edit](Edit-Inpaint-and-Reference/FLUX-2/klein-9b-base-image-edit.json) | FLUX.2 [klein] 9B Base | Image edit with the tunable 9B Base (FP8) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_flux2_klein_image_edit_9b_base.json) | [link](https://huggingface.co/black-forest-labs/FLUX.2-klein-base-9b-fp8) | - | FLUX Non-Commercial (9B) | not runtime-tested |
 
 **HiDream**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [hidream-e1-edit](Edit-Inpaint-and-Reference/HiDream/hidream-e1-edit.json) | HiDream-E1 | Instruction image editing (E1 Full) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/hidream_e1_full.json) | [link](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI) | - | MIT (Llama 3.1 encoder: Llama licence) | not runtime-tested |
-| [hidream-e11-edit](Edit-Inpaint-and-Reference/HiDream/hidream-e11-edit.json) | HiDream-E1.1 | Improved instruction editing (E1.1) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/hidream_e1_1.json) | [link](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI) | - | MIT (Llama 3.1 encoder: Llama licence) | not runtime-tested |
-| [hidream-o1-dev-fp8-edit-personalize](Edit-Inpaint-and-Reference/HiDream/hidream-o1-dev-fp8-edit-personalize.json) | HiDream-O1 (Dev) | Faster FP8 Dev variant of O1 editing/personalization | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_hidream_o1_dev.json) | [link](https://huggingface.co/Comfy-Org/HiDream-O1-Image/resolve/main/checkpoints/hidream_o1_image_dev_fp8_scaled.safetensors) | - | Check HiDream-O1 model card | not runtime-tested |
-| [hidream-o1-edit-personalize](Edit-Inpaint-and-Reference/HiDream/hidream-o1-edit-personalize.json) | HiDream-O1 | Editing + subject personalization from a reference | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_hidream_o1.json) | [link](https://huggingface.co/Comfy-Org/HiDream-O1-Image/resolve/main/checkpoints/hidream_o1_image_bf16.safetensors) | - | Check HiDream-O1 model card | not runtime-tested |
+| [e1-edit](Edit-Inpaint-and-Reference/HiDream/e1-edit.json) | HiDream-E1 | Instruction image editing (E1 Full) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/hidream_e1_full.json) | [link](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI) | - | MIT (Llama 3.1 encoder: Llama licence) | not runtime-tested |
+| [e11-edit](Edit-Inpaint-and-Reference/HiDream/e11-edit.json) | HiDream-E1.1 | Improved instruction editing (E1.1) | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/hidream_e1_1.json) | [link](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI) | - | MIT (Llama 3.1 encoder: Llama licence) | not runtime-tested |
+| [o1-dev-fp8-edit-personalize](Edit-Inpaint-and-Reference/HiDream/o1-dev-fp8-edit-personalize.json) | HiDream-O1 (Dev) | Faster FP8 Dev variant of O1 editing/personalization | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_hidream_o1_dev.json) | [link](https://huggingface.co/Comfy-Org/HiDream-O1-Image/resolve/main/checkpoints/hidream_o1_image_dev_fp8_scaled.safetensors) | - | Check HiDream-O1 model card | not runtime-tested |
+| [o1-edit-personalize](Edit-Inpaint-and-Reference/HiDream/o1-edit-personalize.json) | HiDream-O1 | Editing + subject personalization from a reference | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_hidream_o1.json) | [link](https://huggingface.co/Comfy-Org/HiDream-O1-Image/resolve/main/checkpoints/hidream_o1_image_bf16.safetensors) | - | Check HiDream-O1 model card | not runtime-tested |
 
 **Kolors**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [kolors-img2img](Edit-Inpaint-and-Reference/Kolors/kolors-img2img.json) | Kolors | Image to image with Kolors | [source](https://github.com/kijai/ComfyUI-KwaiKolorsWrapper/tree/main/examples) | [link](https://huggingface.co/Kwai-Kolors/Kolors) | ComfyUI-KwaiKolorsWrapper | Kolors licence (commercial use needs registration) | not runtime-tested |
-| [kolors-inpainting](Edit-Inpaint-and-Reference/Kolors/kolors-inpainting.json) | Kolors Inpainting | Mask inpainting with Kolors-Inpainting UNet | [source](https://github.com/MinusZoneAI/ComfyUI-Kolors-MZ/tree/main/examples) | [link](https://huggingface.co/Kwai-Kolors/Kolors-Inpainting) | ComfyUI-Kolors-MZ | Kolors licence (commercial use needs registration) | not runtime-tested |
+| [img2img](Edit-Inpaint-and-Reference/Kolors/img2img.json) | Kolors | Image to image with Kolors | [source](https://github.com/kijai/ComfyUI-KwaiKolorsWrapper/tree/main/examples) | [link](https://huggingface.co/Kwai-Kolors/Kolors) | ComfyUI-KwaiKolorsWrapper | Kolors licence (commercial use needs registration) | not runtime-tested |
+| [inpainting](Edit-Inpaint-and-Reference/Kolors/inpainting.json) | Kolors Inpainting | Mask inpainting with Kolors-Inpainting UNet | [source](https://github.com/MinusZoneAI/ComfyUI-Kolors-MZ/tree/main/examples) | [link](https://huggingface.co/Kwai-Kolors/Kolors-Inpainting) | ComfyUI-Kolors-MZ | Kolors licence (commercial use needs registration) | not runtime-tested |
 
 **Qwen-Image**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [qwen-image-edit](Edit-Inpaint-and-Reference/Qwen-Image/qwen-image-edit.json) | Qwen-Image-Edit | Original Qwen-Image-Edit instruction editing + Lightning 4-step | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_edit.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI) | - | Apache-2.0 | not runtime-tested |
-| [qwen-image-edit-2509](Edit-Inpaint-and-Reference/Qwen-Image/qwen-image-edit-2509.json) | Qwen-Image-Edit-2509 | Multi-image instruction editing + Lightning 4-step | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_edit_2509.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI) | - | Apache-2.0 | not runtime-tested |
-| [qwen-image-edit-2509-relight-lora](Edit-Inpaint-and-Reference/Qwen-Image/qwen-image-edit-2509-relight-lora.json) | Qwen-Image-Edit-2509 | Relighting with the Relight LoRA | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_edit_2509_relight.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI) | - | Apache-2.0 (check LoRA card) | not runtime-tested |
-| [qwen-image-edit-2511](Edit-Inpaint-and-Reference/Qwen-Image/qwen-image-edit-2511.json) | Qwen-Image-Edit-2511 | Instruction editing (FP8-mixed) + Lightning 4-step | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_edit_2511.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI) | - | Apache-2.0 | not runtime-tested |
-| [qwen-image-edit-2511-int8-low-vram](Edit-Inpaint-and-Reference/Qwen-Image/qwen-image-edit-2511-int8-low-vram.json) | Qwen-Image-Edit-2511 | Low-VRAM INT8 instruction editing | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_edit_2511_int8.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI) | - | Apache-2.0 | not runtime-tested |
-| [qwen-image-instantx-inpainting-controlnet](Edit-Inpaint-and-Reference/Qwen-Image/qwen-image-instantx-inpainting-controlnet.json) | Qwen-Image | Mask inpainting with InstantX Inpainting ControlNet | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_instantx_inpainting_controlnet.json) | [link](https://huggingface.co/InstantX/Qwen-Image-ControlNet-Inpainting) | - | Apache-2.0 | not runtime-tested |
+| [edit](Edit-Inpaint-and-Reference/Qwen-Image/edit.json) | Qwen-Image-Edit | Original Qwen-Image-Edit instruction editing + Lightning 4-step | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_edit.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI) | - | Apache-2.0 | not runtime-tested |
+| [edit-2509](Edit-Inpaint-and-Reference/Qwen-Image/edit-2509.json) | Qwen-Image-Edit-2509 | Multi-image instruction editing + Lightning 4-step | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_edit_2509.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI) | - | Apache-2.0 | not runtime-tested |
+| [edit-2509-relight-lora](Edit-Inpaint-and-Reference/Qwen-Image/edit-2509-relight-lora.json) | Qwen-Image-Edit-2509 | Relighting with the Relight LoRA | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_edit_2509_relight.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI) | - | Apache-2.0 (check LoRA card) | not runtime-tested |
+| [edit-2511](Edit-Inpaint-and-Reference/Qwen-Image/edit-2511.json) | Qwen-Image-Edit-2511 | Instruction editing (FP8-mixed) + Lightning 4-step | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_edit_2511.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI) | - | Apache-2.0 | not runtime-tested |
+| [edit-2511-int8-low-vram](Edit-Inpaint-and-Reference/Qwen-Image/edit-2511-int8-low-vram.json) | Qwen-Image-Edit-2511 | Low-VRAM INT8 instruction editing | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_edit_2511_int8.json) | [link](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI) | - | Apache-2.0 | not runtime-tested |
+| [instantx-inpainting-controlnet](Edit-Inpaint-and-Reference/Qwen-Image/instantx-inpainting-controlnet.json) | Qwen-Image | Mask inpainting with InstantX Inpainting ControlNet | [source](https://github.com/Comfy-Org/workflow_templates/blob/main/templates/image_qwen_image_instantx_inpainting_controlnet.json) | [link](https://huggingface.co/InstantX/Qwen-Image-ControlNet-Inpainting) | - | Apache-2.0 | not runtime-tested |
 
 **Stable-Cascade**
 
 | Workflow | Model | Purpose | Source | Model download | Custom nodes | Licence | Tested |
 |---|---|---|---|---|---|---|---|
-| [stable-cascade-image-remix](Edit-Inpaint-and-Reference/Stable-Cascade/stable-cascade-image-remix.json) | Stable Cascade | Image variations/remix from one image (unCLIP) | [source](https://github.com/comfyanonymous/ComfyUI_examples/tree/master/stable_cascade) | [link](https://huggingface.co/stabilityai/stable-cascade) | - | Stability non-commercial research | not runtime-tested |
-| [stable-cascade-image-remix-multiple](Edit-Inpaint-and-Reference/Stable-Cascade/stable-cascade-image-remix-multiple.json) | Stable Cascade | Mix several images into one | [source](https://github.com/comfyanonymous/ComfyUI_examples/tree/master/stable_cascade) | [link](https://huggingface.co/stabilityai/stable-cascade) | - | Stability non-commercial research | not runtime-tested |
-| [stable-cascade-img2img](Edit-Inpaint-and-Reference/Stable-Cascade/stable-cascade-img2img.json) | Stable Cascade | Image to image | [source](https://github.com/comfyanonymous/ComfyUI_examples/tree/master/stable_cascade) | [link](https://huggingface.co/stabilityai/stable-cascade) | - | Stability non-commercial research | not runtime-tested |
-| [stable-cascade-inpaint-controlnet](Edit-Inpaint-and-Reference/Stable-Cascade/stable-cascade-inpaint-controlnet.json) | Stable Cascade | Inpainting ControlNet for Stable Cascade | [source](https://github.com/comfyanonymous/ComfyUI_examples/tree/master/stable_cascade) | [link](https://huggingface.co/stabilityai/stable-cascade) | - | Stability non-commercial research | not runtime-tested |
+| [image-remix](Edit-Inpaint-and-Reference/Stable-Cascade/image-remix.json) | Stable Cascade | Image variations/remix from one image (unCLIP) | [source](https://github.com/comfyanonymous/ComfyUI_examples/tree/master/stable_cascade) | [link](https://huggingface.co/stabilityai/stable-cascade) | - | Stability non-commercial research | not runtime-tested |
+| [image-remix-multiple](Edit-Inpaint-and-Reference/Stable-Cascade/image-remix-multiple.json) | Stable Cascade | Mix several images into one | [source](https://github.com/comfyanonymous/ComfyUI_examples/tree/master/stable_cascade) | [link](https://huggingface.co/stabilityai/stable-cascade) | - | Stability non-commercial research | not runtime-tested |
+| [img2img](Edit-Inpaint-and-Reference/Stable-Cascade/img2img.json) | Stable Cascade | Image to image | [source](https://github.com/comfyanonymous/ComfyUI_examples/tree/master/stable_cascade) | [link](https://huggingface.co/stabilityai/stable-cascade) | - | Stability non-commercial research | not runtime-tested |
+| [inpaint-controlnet](Edit-Inpaint-and-Reference/Stable-Cascade/inpaint-controlnet.json) | Stable Cascade | Inpainting ControlNet for Stable Cascade | [source](https://github.com/comfyanonymous/ComfyUI_examples/tree/master/stable_cascade) | [link](https://huggingface.co/stabilityai/stable-cascade) | - | Stability non-commercial research | not runtime-tested |
 
 **Other**
 
