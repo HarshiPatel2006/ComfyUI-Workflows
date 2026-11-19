@@ -2,7 +2,7 @@
 
 Talking avatars from a picture and an audio track, lip-sync and dubbing of existing video, portrait animation from a driving video, MiniMax H3 audio sync and timelines, and audio-reactive visuals.
 
-[← 04-Video overview](../README.md) · [Atlas coverage tracker](../COVERAGE.md)
+[← 02-Video overview](../README.md) · [Atlas coverage tracker](../COVERAGE.md)
 
 | Subfolder | What is inside | Workflows |
 |---|---|---|
@@ -129,7 +129,7 @@ Entries of the Open-Source Video Model Atlas for this category that did not get 
 | Kandinsky Video 6 | Kandinsky 6 Lite Distilled 3B | equivalent already exists | Lite Distilled loads in the Kandinsky 6 example graphs |
 | Kandinsky Video 6 | Kandinsky 6 Pro 29B | equivalent already exists | Pro (non-distilled) loads in the Kandinsky 6 example graphs |
 | MultiTalk | MultiTalk multi-person dialogue | equivalent already exists | [`wan-2.1-infinitetalk-two-speaker-conversation`](Talking-Avatar-and-Lip-Sync/wan-2.1-infinitetalk-two-speaker-conversation.json) (InfiniteTalk multi supersedes MultiTalk in maintained nodes) |
-| MultiTalk | MultiTalk single speaker singing | equivalent already exists | InfiniteTalk/H3 singing files in 04-Video/Reference-and-Audio-Sync |
+| MultiTalk | MultiTalk single speaker singing | equivalent already exists | InfiniteTalk/H3 singing files in 02-Video/Reference-and-Audio-Sync |
 | Wav2Lip | Wav2Lip GAN | equivalent already exists | checkpoint choice inside the same Wav2Lip workflow |
 | MuseTalk | MuseTalk 1.5 | equivalent already exists | same node/graph as MuseTalk 1.0 file; checkpoint swap only |
 | EchoMimic | EchoMimic V2 Accelerated | equivalent already exists | accelerated checkpoint of V2 / V3 flash variants; not a new capability |

@@ -2,7 +2,7 @@
 
 Editing existing video (VACE, inpainting, outpainting, object and subtitle removal, relighting, instruction edits, clip tools), structure / camera / trajectory control, and character animation: pose and motion transfer, character replacement and swap, face swap, restyle.
 
-[← 04-Video overview](../README.md) · [Atlas coverage tracker](../COVERAGE.md)
+[← 02-Video overview](../README.md) · [Atlas coverage tracker](../COVERAGE.md)
 
 | Subfolder | What is inside | Workflows |
 |---|---|---|
