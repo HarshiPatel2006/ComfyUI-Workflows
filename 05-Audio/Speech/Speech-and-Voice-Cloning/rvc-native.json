@@ -1,0 +1,442 @@
+{
+  "id": "5877bdda-2019-4746-93ac-0aa9f6330f25",
+  "revision": 0,
+  "last_node_id": 12,
+  "last_link_id": 16,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "RVCLoaderPitch",
+      "pos": [
+        -320.62243828741583,
+        635.8502790056825
+      ],
+      "size": [
+        305.4,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "pitch",
+          "type": "RVC_PITCH",
+          "links": [
+            13
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RVCLoaderPitch"
+      },
+      "widgets_values": [
+        "rmvpe.safetensors"
+      ],
+      "widgets_values_named": {
+        "rvc_name": "rmvpe.safetensors"
+      }
+    },
+    {
+      "id": 3,
+      "type": "RVCLoaderHubert",
+      "pos": [
+        -303.27775503507166,
+        490.0255675114188
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "hubert",
+          "type": "RVC_HUBERT",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RVCLoaderHubert"
+      },
+      "widgets_values": [
+        "hubert_base.safetensors"
+      ],
+      "widgets_values_named": {
+        "rvc_name": "hubert_base.safetensors"
+      }
+    },
+    {
+      "id": 5,
+      "type": "RVCLoaderVoice",
+      "pos": [
+        -294.4620972221087,
+        346.1237541007001
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "voice",
+          "type": "RVC_VOICE",
+          "links": [
+            11
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RVCLoaderVoice"
+      },
+      "widgets_values": [
+        "Ben10OMNIVERSE.pth"
+      ],
+      "widgets_values_named": {
+        "rvc_name": "Ben10OMNIVERSE.pth"
+      }
+    },
+    {
+      "id": 6,
+      "type": "LoadAudio",
+      "pos": [
+        -587.1510121944708,
+        821.1760598328701
+      ],
+      "size": [
+        361.85352964693766,
+        137.99874455498605
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            7
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "156550__acclivity__a-dream-within-a-dream.wav",
+        ""
+      ],
+      "widgets_values_named": {
+        "audio": "156550__acclivity__a-dream-within-a-dream.wav",
+        "upload": ""
+      }
+    },
+    {
+      "id": 8,
+      "type": "TrimAudioDuration",
+      "pos": [
+        -193.22350947653428,
+        849.8593379331907
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            14
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TrimAudioDuration"
+      },
+      "widgets_values": [
+        0,
+        60
+      ],
+      "widgets_values_named": {
+        "start_index": 0,
+        "duration": 60
+      }
+    },
+    {
+      "id": 9,
+      "type": "RVCLoaderIndex",
+      "pos": [
+        289.19436348704744,
+        839.4561101568353
+      ],
+      "size": [
+        833.2640800236225,
+        110.00312755054748
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "index",
+          "type": "RVC_INDEX",
+          "links": [
+            15
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RVCLoaderIndex"
+      },
+      "widgets_values": [
+        "added_IVF256_Flat_nprobe_1_Ben10OMNIVERSE_v2.npy"
+      ],
+      "widgets_values_named": {
+        "rvc_name": "added_IVF256_Flat_nprobe_1_Ben10OMNIVERSE_v2.npy"
+      }
+    },
+    {
+      "id": 10,
+      "type": "SaveAudioAdvanced",
+      "pos": [
+        605.3886898061864,
+        417.59449455803184
+      ],
+      "size": [
+        444.6603039946841,
+        136
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "audio/ComfyUI",
+        "flac"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/ComfyUI",
+        "format": "flac"
+      }
+    },
+    {
+      "id": 11,
+      "type": "MarkdownNote",
+      "pos": [
+        -784.6214530800015,
+        389.7498879026374
+      ],
+      "size": [
+        372.2548581899431,
+        256.60496394909813
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "## Model Links\n\n**RVC Model Weights**\n\n- [fcpe.safetensors](https://huggingface.co/Aero-Ex/ComfyUI-RVC/resolve/main/rvc/fcpe.safetensors)\n- [hubert_base.safetensors](https://huggingface.co/Aero-Ex/ComfyUI-RVC/resolve/main/rvc/hubert_base.safetensors)\n- [rmvpe.safetensors)](https://huggingface.co/Aero-Ex/ComfyUI-RVC/resolve/main/rvc/rmvpe.safetensors)\n\n**Model Storage Location**\n\nPut all files in ComfyUI/models/rvc/"
+      ],
+      "widgets_values_named": {
+        "text": "## Model Links\n\n**RVC Model Weights**\n\n- [fcpe.safetensors](https://huggingface.co/Aero-Ex/ComfyUI-RVC/resolve/main/rvc/fcpe.safetensors)\n- [hubert_base.safetensors](https://huggingface.co/Aero-Ex/ComfyUI-RVC/resolve/main/rvc/hubert_base.safetensors)\n- [rmvpe.safetensors)](https://huggingface.co/Aero-Ex/ComfyUI-RVC/resolve/main/rvc/rmvpe.safetensors)\n\n**Model Storage Location**\n\nPut all files in ComfyUI/models/rvc/"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 12,
+      "type": "RVCConvert",
+      "pos": [
+        142.35446358062526,
+        375.5415721067948
+      ],
+      "size": [
+        270,
+        326
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "voice",
+          "type": "RVC_VOICE",
+          "link": 11
+        },
+        {
+          "name": "hubert",
+          "type": "RVC_HUBERT",
+          "link": 12
+        },
+        {
+          "name": "pitch",
+          "type": "RVC_PITCH",
+          "link": 13
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 14
+        },
+        {
+          "name": "pitch_model_b",
+          "shape": 7,
+          "type": "RVC_PITCH",
+          "link": null
+        },
+        {
+          "name": "index",
+          "shape": 7,
+          "type": "RVC_INDEX",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            16
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RVCConvert"
+      },
+      "widgets_values": [
+        1,
+        0,
+        0.75,
+        0.33,
+        1,
+        0,
+        967012150372844,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "f0_up_key": 1,
+        "speaker_id": 0,
+        "index_rate": 0.75,
+        "protect": 0.33,
+        "rms_mix_rate": 1,
+        "resample_sr": 0,
+        "seed": 967012150372844,
+        "control_after_generate": "randomize"
+      }
+    }
+  ],
+  "links": [
+    [
+      7,
+      6,
+      0,
+      8,
+      0,
+      "AUDIO"
+    ],
+    [
+      11,
+      5,
+      0,
+      12,
+      0,
+      "RVC_VOICE"
+    ],
+    [
+      12,
+      3,
+      0,
+      12,
+      1,
+      "RVC_HUBERT"
+    ],
+    [
+      13,
+      1,
+      0,
+      12,
+      2,
+      "RVC_PITCH"
+    ],
+    [
+      14,
+      8,
+      0,
+      12,
+      3,
+      "AUDIO"
+    ],
+    [
+      15,
+      9,
+      0,
+      12,
+      5,
+      "RVC_INDEX"
+    ],
+    [
+      16,
+      12,
+      0,
+      10,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6059646756970197,
+      "offset": [
+        913.0212587665344,
+        182.50404697003887
+      ]
+    },
+    "frontendVersion": "1.55.17",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

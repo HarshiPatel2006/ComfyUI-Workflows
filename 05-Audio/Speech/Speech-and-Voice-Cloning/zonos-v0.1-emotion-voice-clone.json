@@ -1,0 +1,211 @@
+{
+  "last_node_id": 24,
+  "last_link_id": 35,
+  "nodes": [
+    {
+      "id": 22,
+      "type": "ZonosEmotion",
+      "pos": [
+        379.0770263671875,
+        285.5378112792969
+      ],
+      "size": [
+        309.4161071777344,
+        226
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "EMOTION",
+          "type": "EMOTION",
+          "links": [
+            34
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZonosEmotion"
+      },
+      "widgets_values": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0.02,
+        0.1,
+        0.2
+      ]
+    },
+    {
+      "id": 24,
+      "type": "ZonosGenerate",
+      "pos": [
+        730,
+        80
+      ],
+      "size": [
+        403.350341796875,
+        576.3200073242188
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sample_audio",
+          "type": "AUDIO",
+          "shape": 7,
+          "link": 35
+        },
+        {
+          "name": "prefix_audio",
+          "type": "AUDIO",
+          "shape": 7,
+          "link": null
+        },
+        {
+          "name": "emotion",
+          "type": "EMOTION",
+          "shape": 7,
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            32
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ZonosGenerate"
+      },
+      "widgets_values": [
+        "Hey there! This is pretty cool right?",
+        580,
+        "randomize",
+        "Zyphra/Zonos-v0.1-transformer",
+        "en-us",
+        2,
+        0.15,
+        1,
+        true,
+        "No, all that stuff, like you could have all the money in the world, all the followers, everything. It's just doesn't really make you happy.",
+        true
+      ]
+    },
+    {
+      "id": 13,
+      "type": "PreviewAudio",
+      "pos": [
+        1170,
+        150
+      ],
+      "size": [
+        341.8027648925781,
+        83.81747436523438
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 32
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 12,
+      "type": "LoadAudio",
+      "pos": [
+        370,
+        110
+      ],
+      "size": [
+        315,
+        124
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            35
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "voice.wav",
+        "",
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      32,
+      24,
+      0,
+      13,
+      0,
+      "AUDIO"
+    ],
+    [
+      34,
+      22,
+      0,
+      24,
+      2,
+      "EMOTION"
+    ],
+    [
+      35,
+      12,
+      0,
+      24,
+      0,
+      "AUDIO"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.8954302432552389,
+      "offset": [
+        -372.4289014982393,
+        84.20236382125421
+      ]
+    },
+    "node_versions": {
+      "ComfyUI-Zonos": "a327fccca542a548d75b30a82d75662b53f3d479",
+      "comfy-core": "0.3.14"
+    }
+  },
+  "version": 0.4
+}
