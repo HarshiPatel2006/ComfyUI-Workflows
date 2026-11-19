@@ -32,4 +32,4 @@ Image upscaling (SeedVR2, tiled diffusion, 4x ESRGAN-style models, paid API upsc
 | [moss-image-upscale-picture](Upscaling/moss-image-upscale-picture.json) | MOSS Image - Upscale a Picture (Ep40) | `moss_image_sft_int8_convrot.safetensors`, `qwen3.5_9b_w4a8_gptq.safetensors`, `flux2-vae_small.safetensors`, `4x_NMKD-Siax_200k.pth` | ComfyUI-Pixaroma |
 | [p-h3-image-creative-upscale](Upscaling/p-h3-image-creative-upscale.json) | P-H3 Image - Creative Upscale (Ep42) | `minimax_h3_fl2va_pruned_int8_convrot.safetensors`, `p-h3-image_lora_bf16.safetensors`, `p-h3-image_text_encoder_int8_convrot.safetensors`, `p-h3-image_vae_int8_convrot.safetensors` | ComfyUI-Pixaroma |
 
-See the [main README](../README.md) for setup steps, requirements and the other categories, or [`00-LIBRARY-INDEX.md`](../00-LIBRARY-INDEX.md) for the full list of workflows.
+See the [main README](../../README.md) for setup steps, requirements and the other categories, or [`00-LIBRARY-INDEX.md`](../../00-LIBRARY-INDEX.md) for the full list of workflows.

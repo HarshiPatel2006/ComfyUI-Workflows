@@ -164,4 +164,4 @@ Image-to-image (img2img) and instruction editing: single- and multi-image edits,
 | [qwen-image-2.1-sketch-to-image-consistency-lora](Sketch-and-3D-to-Image/qwen-image-2.1-sketch-to-image-consistency-lora.json) | Sketch to Image + Consistency LoRA | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` +1 more | ComfyUI-Pixaroma |
 | [qwen-image-2.1-sketch-to-image](Sketch-and-3D-to-Image/qwen-image-2.1-sketch-to-image.json) | Sketch to Image | `qwen_image_2.1_int8_convrot.safetensors`, `qwen3vl_8b_int8_convrot.safetensors`, `qwen_image_2.1_vae_bf16.safetensors` | ComfyUI-Pixaroma |
 
-See the [main README](../README.md) for setup steps, requirements and the other categories, or [`00-LIBRARY-INDEX.md`](../00-LIBRARY-INDEX.md) for the full list of workflows.
+See the [main README](../../README.md) for setup steps, requirements and the other categories, or [`00-LIBRARY-INDEX.md`](../../00-LIBRARY-INDEX.md) for the full list of workflows.
