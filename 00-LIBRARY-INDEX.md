@@ -1,6 +1,6 @@
 # ComfyUI Workflow Library — Index
 
-Plain list of all 692 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
+Plain list of all 711 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
 
 Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-image-2.1-one-image-edit-low-vram.json`). `-api` = API format; `epNN` = tutorial episode the variant came from.
 
@@ -446,10 +446,12 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 
 - [ace-step-v1.5-audio-captioner](05-Audio/Music-Analysis/ace-step-v1.5-audio-captioner.json)
 - [ace-step-v1.5-understand-audio](05-Audio/Music-Analysis/ace-step-v1.5-understand-audio.json)
+- [music-flamingo-song-analysis](05-Audio/Music-Analysis/music-flamingo-song-analysis.json)
 
 ## 05-Audio/Music-Generation
 
 - [ace-step-v1-audio-to-audio-editing](05-Audio/Music-Generation/ace-step-v1-audio-to-audio-editing.json)
+- [ace-step-v1-instrumental-text-to-music](05-Audio/Music-Generation/ace-step-v1-instrumental-text-to-music.json)
 - [ace-step-v1.5-complete-and-extend](05-Audio/Music-Generation/ace-step-v1.5-complete-and-extend.json)
 - [ace-step-v1.5-cover](05-Audio/Music-Generation/ace-step-v1.5-cover.json)
 - [ace-step-v1.5-create-sample-to-music](05-Audio/Music-Generation/ace-step-v1.5-create-sample-to-music.json)
@@ -470,6 +472,8 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [ace-step-v1.5-xl-sft-text-to-music](05-Audio/Music-Generation/ace-step-v1.5-xl-sft-text-to-music.json)
 - [ace-step-v1.5-xl-turbo-text-to-music](05-Audio/Music-Generation/ace-step-v1.5-xl-turbo-text-to-music.json)
 - [audioldm2-image-to-music-llava](05-Audio/Music-Generation/audioldm2-image-to-music-llava.json)
+- [audiox-text-to-music-and-audio](05-Audio/Music-Generation/audiox-text-to-music-and-audio.json)
+- [audiox-video-and-image-to-audio](05-Audio/Music-Generation/audiox-video-and-image-to-audio.json)
 - [diffrhythm-2-lyrics-and-style-to-song](05-Audio/Music-Generation/diffrhythm-2-lyrics-and-style-to-song.json)
 - [diffrhythm-edit-song-sections](05-Audio/Music-Generation/diffrhythm-edit-song-sections.json)
 - [diffrhythm-lyrics-and-style-to-song](05-Audio/Music-Generation/diffrhythm-lyrics-and-style-to-song.json)
@@ -478,13 +482,18 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [heartmula-fl-text-to-song](05-Audio/Music-Generation/heartmula-fl-text-to-song.json)
 - [heartmula-lyrics-and-style-to-song](05-Audio/Music-Generation/heartmula-lyrics-and-style-to-song.json)
 - [heartmula-lyrics-transcriber](05-Audio/Music-Generation/heartmula-lyrics-transcriber.json)
+- [heartmula-muq-mulan-style-transfer](05-Audio/Music-Generation/heartmula-muq-mulan-style-transfer.json)
 - [minimax-music-3-text-to-music](05-Audio/Music-Generation/minimax-music-3-text-to-music.json)
 - [mulacover-audio-remix](05-Audio/Music-Generation/mulacover-audio-remix.json)
 - [mulacover-cover-from-reference-or-midi](05-Audio/Music-Generation/mulacover-cover-from-reference-or-midi.json)
 - [musicgen-text-to-music-bpm-loop](05-Audio/Music-Generation/musicgen-text-to-music-bpm-loop.json)
+- [pika-api-text-to-music](05-Audio/Music-Generation/pika-api-text-to-music.json)
+- [songbloom-fredconex-style-150s-song](05-Audio/Music-Generation/songbloom-fredconex-style-150s-song.json)
+- [songbloom-lyrics-and-audio-prompt-to-song](05-Audio/Music-Generation/songbloom-lyrics-and-audio-prompt-to-song.json)
 - [songgeneration-levo-2-easy-fp4](05-Audio/Music-Generation/songgeneration-levo-2-easy-fp4.json)
 - [songgeneration-levo-2-lyrics-to-song](05-Audio/Music-Generation/songgeneration-levo-2-lyrics-to-song.json)
 - [songgeneration-levo-style-transfer](05-Audio/Music-Generation/songgeneration-levo-style-transfer.json)
+- [sonilo-music-1.5-api-text-to-music](05-Audio/Music-Generation/sonilo-music-1.5-api-text-to-music.json)
 - [stable-audio-3-image-to-music-gemma-4](05-Audio/Music-Generation/stable-audio-3-image-to-music-gemma-4.json)
 - [stable-audio-3-medium-base-text-to-music](05-Audio/Music-Generation/stable-audio-3-medium-base-text-to-music.json)
 - [stable-audio-3-text-to-music](05-Audio/Music-Generation/stable-audio-3-text-to-music.json)
@@ -503,6 +512,13 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [ace-step-v1.5-lyrics-transcriber](05-Audio/Music-Transcription/ace-step-v1.5-lyrics-transcriber.json)
 - [muscriptor-audio-to-midi-transcription](05-Audio/Music-Transcription/muscriptor-audio-to-midi-transcription.json)
 - [sheetsage2-audio-to-abc-melody-and-chords](05-Audio/Music-Transcription/sheetsage2-audio-to-abc-melody-and-chords.json)
+- [stem-split-and-basic-pitch-audio-to-midi](05-Audio/Music-Transcription/stem-split-and-basic-pitch-audio-to-midi.json)
+
+## 05-Audio/Singing-Voice-Synthesis
+
+- [soulx-singer-preprocess-and-generate-kaola](05-Audio/Singing-Voice-Synthesis/soulx-singer-preprocess-and-generate-kaola.json)
+- [soulx-singer-zero-shot-singing-voice-synthesis](05-Audio/Singing-Voice-Synthesis/soulx-singer-zero-shot-singing-voice-synthesis.json)
+- [vocal-to-midi-lyric-edit-and-soulx-resing](05-Audio/Singing-Voice-Synthesis/vocal-to-midi-lyric-edit-and-soulx-resing.json)
 
 ## 05-Audio/Speech-and-Voice-Cloning
 
@@ -575,9 +591,15 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 ## 05-Audio/Stem-Separation
 
 - [ace-step-v1.5-extract-stems](05-Audio/Stem-Separation/ace-step-v1.5-extract-stems.json)
+- [bs-roformer-vocal-split-mel-roformer-denoise](05-Audio/Stem-Separation/bs-roformer-vocal-split-mel-roformer-denoise.json)
 - [demucs-htdemucs-4-stem-separation](05-Audio/Stem-Separation/demucs-htdemucs-4-stem-separation.json)
 - [demucs-htdemucs-6s-six-stem-separation](05-Audio/Stem-Separation/demucs-htdemucs-6s-six-stem-separation.json)
 - [demucs-mdx-audio-separator-stem-separation](05-Audio/Stem-Separation/demucs-mdx-audio-separator-stem-separation.json)
+- [demucs-stems-tempo-match-remix](05-Audio/Stem-Separation/demucs-stems-tempo-match-remix.json)
+- [melband-roformer-vocals-instrumental-split](05-Audio/Stem-Separation/melband-roformer-vocals-instrumental-split.json)
+- [roformer-ensemble-vocals-instrumental-uvr-cleanup](05-Audio/Stem-Separation/roformer-ensemble-vocals-instrumental-uvr-cleanup.json)
+- [stem-chain-drum-pieces-and-sam-audio](05-Audio/Stem-Separation/stem-chain-drum-pieces-and-sam-audio.json)
+- [stem-ensemble-recipes-roformer-mdx-demucs-6s](05-Audio/Stem-Separation/stem-ensemble-recipes-roformer-mdx-demucs-6s.json)
 
 ## 05-Audio/Speech-to-Text
 
