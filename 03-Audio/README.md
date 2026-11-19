@@ -44,7 +44,7 @@ Workflows are grouped by **what they do**. Each workflow has one folder; the two
 
 ## Model coverage
 
-Built from the category READMEs and the workflow files. "Covered" means at least one workflow in `05-Audio` loads the model; the number in brackets is how many workflows use that family as their main model. Families with several workflows usually cover several variants or modes (listed in the category README).
+Built from the category READMEs and the workflow files. "Covered" means at least one workflow in `03-Audio` loads the model; the number in brackets is how many workflows use that family as their main model. Families with several workflows usually cover several variants or modes (listed in the category README).
 
 ### Covered
 

@@ -2,7 +2,7 @@
 
 Video super-resolution and refinement (SeedVR2, FlashVSR, RelayVSR, Wan 2.2 refine, MiniMax H3 sharpen / regenerate, NVIDIA RTX Video) and frame interpolation (FILM, GIMM-VFI).
 
-[← 04-Video overview](../README.md) · [Atlas coverage tracker](../COVERAGE.md)
+[← 02-Video overview](../README.md) · [Atlas coverage tracker](../COVERAGE.md)
 
 | Subfolder | What is inside | Workflows |
 |---|---|---|

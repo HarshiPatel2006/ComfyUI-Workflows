@@ -1,6 +1,6 @@
 # Open-Source Video Model Atlas — coverage tracker
 
-[← 04-Video overview](README.md)
+[← 02-Video overview](README.md)
 
 Final disposition of every entry in the *Open-Source Video Model Atlas* research document (117 pages, 92 model families, 237 named model / checkpoint / variant / supporting entries). Built from the four collection slices (PRs #25–#28) and resolved at integration: where slices disagreed, the strongest supported disposition wins (new workflow > useful variation > already present > equivalent exists > unconfirmed > none) and the other view is kept in [`coverage-final.tsv` notes](#how-conflicts-were-resolved). No workflow was runtime-tested.
 
@@ -137,10 +137,10 @@ Final disposition of every entry in the *Open-Source Video Model Atlas* research
 | 6 | LTX 2.x | LTX-2.3 Distilled | equivalent already exists | as LTX-2.3 Dev / IA2V template and DubIt IC-LoRA (Lightricks) duplicate existing LTX-2 A2V/dubbing files; Lightricks JSONs need full LTX licence copy -> linked in README |
 | 6 | LTX 2.x | LTX-2.5 Dev 22B | new workflow collected | [`ltx-2.5-txt2video-with-audio`](Video-Generation/Text-to-Video/ltx-2.5-txt2video-with-audio.json); [`ltx-2.5-img2video-first-last-frame-with-audio`](Video-Generation/Image-to-Video/ltx-2.5-img2video-first-last-frame-with-audio.json); [`ltx-2.5-dfr-img2video-detailing-keyframes-temporal-x2`](Video-Generation/Image-to-Video/ltx-2.5-dfr-img2video-detailing-keyframes-temporal-x2.json) |
 | 6 | LTX 2.x | LTX-2.5 Distilled 22B | already present | [`ltx-2.5-img2video-with-audio-distilled-2x-upscale`](Video-Generation/Image-to-Video/ltx-2.5-img2video-with-audio-distilled-2x-upscale.json) / Image-to-Video/ltx-2.5-img2video-with-audio-distilled-2x-upscale.json (other slice) |
-| 7 | MiniMax H3 | MiniMax H3 33B | already present | `Video-Generation/Text-to-Video/minimax-h3-txt2video*.json`, `Video-Generation/Image-to-Video/minimax-h3-img2video*.json` / 04-Video/Reference-and-Audio-Sync/minimax-h3-audio-sync-*, minimax-h3-reference-image-audio-sync-*, minimax-h3-timeline-* (15 files) |
+| 7 | MiniMax H3 | MiniMax H3 33B | already present | `Video-Generation/Text-to-Video/minimax-h3-txt2video*.json`, `Video-Generation/Image-to-Video/minimax-h3-img2video*.json` / 02-Video/Reference-and-Audio-Sync/minimax-h3-audio-sync-*, minimax-h3-reference-image-audio-sync-*, minimax-h3-timeline-* (15 files) |
 | 7 | MiniMax H3 | MiniMax FastH3 | already present | [`minimax-fasth3-txt2video-8-step`](Video-Generation/Text-to-Video/minimax-fasth3-txt2video-8-step.json), `Video-Generation/Image-to-Video/minimax-fasth3-img2video-*.json` |
 | 7 | MiniMax H3 | MiniMax H3 reference conditioning | useful variation added | [`minimax-h3-multiframe-reference-keyframe-guides`](Video-Generation/Reference-to-Video/minimax-h3-multiframe-reference-keyframe-guides.json) (existing: minimax-h3-reference-to-video-2/3-images) |
-| 7 | MiniMax H3 | MiniMax H3 Turbo LoRA (community) | already present | [`minimax-h3-txt2video-8-step-lora`](Video-Generation/Text-to-Video/minimax-h3-txt2video-8-step-lora.json), *-speed-lora.json / speed-lora variants in 04-Video/Reference-and-Audio-Sync and Character-Animation-Video-to-Video |
+| 7 | MiniMax H3 | MiniMax H3 Turbo LoRA (community) | already present | [`minimax-h3-txt2video-8-step-lora`](Video-Generation/Text-to-Video/minimax-h3-txt2video-8-step-lora.json), *-speed-lora.json / speed-lora variants in 02-Video/Reference-and-Audio-Sync and Character-Animation-Video-to-Video |
 | 12 | Kandinsky Video 6 | Kandinsky 6 Lite 3B | equivalent already exists | Lite loads in the Kandinsky 6 example graphs (model selector) |
 | 12 | Kandinsky Video 6 | Kandinsky 6 Lite Distilled 3B | equivalent already exists | Lite Distilled loads in the Kandinsky 6 example graphs |
 | 12 | Kandinsky Video 6 | Kandinsky 6 Pro 29B | equivalent already exists | Pro (non-distilled) loads in the Kandinsky 6 example graphs |
@@ -158,7 +158,7 @@ Final disposition of every entry in the *Open-Source Video Model Atlas* research
 | 33 | InfiniteTalk | InfiniteTalk V2V video dubbing | already present | `Talking-Avatar-and-Audio/Talking-Avatar-and-Lip-Sync/wan-2.1-infinitetalk-video-dubbing-video2video*.json` |
 | 33 | InfiniteTalk | InfiniteTalk unlimited-chunk extension | already present | `Talking-Avatar-and-Audio/Talking-Avatar-and-Lip-Sync/wan-2.1-infinitetalk-talking-video-*-extend-3-to-34-seconds.json` |
 | 34 | MultiTalk | MultiTalk multi-person dialogue | equivalent already exists | [`wan-2.1-infinitetalk-two-speaker-conversation`](Talking-Avatar-and-Audio/Talking-Avatar-and-Lip-Sync/wan-2.1-infinitetalk-two-speaker-conversation.json) (InfiniteTalk multi supersedes MultiTalk in maintained nodes) |
-| 34 | MultiTalk | MultiTalk single speaker singing | equivalent already exists | InfiniteTalk/H3 singing files in 04-Video/Reference-and-Audio-Sync |
+| 34 | MultiTalk | MultiTalk single speaker singing | equivalent already exists | InfiniteTalk/H3 singing files in 02-Video/Reference-and-Audio-Sync |
 | 35 | LivePortrait | LivePortrait portrait retargeting | new workflow collected | [`liveportrait-video-to-video-expression-retarget`](Talking-Avatar-and-Audio/Talking-Avatar-and-Lip-Sync/liveportrait-video-to-video-expression-retarget.json) |
 | 35 | LivePortrait | LivePortrait video-driven animation | new workflow collected | [`liveportrait-animate-image-from-driving-video`](Talking-Avatar-and-Audio/Talking-Avatar-and-Lip-Sync/liveportrait-animate-image-from-driving-video.json) |
 | 35 | LivePortrait | LivePortrait animals / community branch | no suitable ComfyUI workflow | no separate ComfyUI workflow |

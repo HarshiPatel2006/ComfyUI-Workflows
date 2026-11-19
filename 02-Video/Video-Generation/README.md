@@ -2,7 +2,7 @@
 
 Text-to-video, image-to-video, first/last frame, reference-to-video, long-form generation and world models, including models that generate audio with the video (LTX-2.x, Kandinsky 6, MiniMax H3).
 
-[← 04-Video overview](../README.md) · [Atlas coverage tracker](../COVERAGE.md)
+[← 02-Video overview](../README.md) · [Atlas coverage tracker](../COVERAGE.md)
 
 | Subfolder | What is inside | Workflows |
 |---|---|---|

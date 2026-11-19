@@ -30,17 +30,17 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 
 | Category | What is inside | Workflows |
 |---|---|---|
-| [01 · Image Generation](01-Image/Image-Generation/README.md) | Text-to-image with FLUX.1 / FLUX.2 / FLUX.3 Klein, Qwen-Image, Krea 2, Z-Image, HiDream, Chroma, SDXL, SD 3.5, Stable Cascade, Sana, Kolors and more; edit / inpaint / reference variants, ControlNet, LLM prompt enhancers, logos, posters, text in images, transparent PNGs, prompt batches | 202 |
-| [02 · Image Editing](01-Image/Image-Editing/README.md) | Instruction-based editing, multi-image edits, inpainting, outpainting, object removal, background removal, outfit transfer, sketch-to-image, ControlNet / T2I-Adapter / GLIGEN control, IP-Adapter / InstantID / PuLID / PhotoMaker identity, IC-Light relighting | 176 |
-| [03 · Image Upscaling and Enhancement](01-Image/Image-Enhancement/README.md) | Image upscaling (Real-ESRGAN, SwinIR, HAT, DAT, SeedVR2, tiled diffusion, creative upscale), diffusion restoration (SUPIR, CCSR, StableSR, DiffBIR), face restoration, denoise / low-light, colorization, filters and color grading | 44 |
-| [03b · Image Specialized and Supporting](01-Image/Image-Specialized-and-Supporting/README.md) | Virtual try-on, LayerDiffusion transparent layers, segmentation and detection, captioning / OCR / tagging, depth and pose estimation | 31 |
-| [04 · AI Video](04-Video/README.md) | Text-to-video and image-to-video (Wan, LTX-2.5, MiniMax H3, HunyuanVideo, Kandinsky 6, CogVideoX), reference-to-video, long-form generation, world models, video editing and control (VACE, object removal, camera / motion control), character animation and swap, talking avatars, lip-sync and dubbing, audio-reactive video, video upscaling, frame interpolation, video depth / pose / segmentation; [atlas coverage tracker](04-Video/COVERAGE.md) | 239 |
-| [05 · Audio](05-Audio/README.md) | Text-to-speech, voice cloning, voice design, music generation, covers and editing, sound effects, music transcription and analysis, stem separation, voice conversion, speech-to-text, subtitles, diarisation and forced alignment | 229 |
-| [06 · 3D Generation](06-3D-Generation/README.md) | Image-to-3D and multi-view-to-3D with Trellis 2, Pixal3D, SAM3D Body | 13 |
-| [07 · Batch Processing and Automation](07-Batch-and-Automation/README.md) | Batch-process a folder of images, loops, switches, logic and math | 45 |
-| [08 · Testing and Comparison](08-Testing-and-Comparison/README.md) | XY plots, sampler and LoRA comparisons, image compare | 8 |
-| [09 · AI Short Film Pipeline](09-Movie/README.md) | Krea 2 storyboard + MiniMax H3 short-film director pipeline and real project files | 48 |
-| [10 · LLM and Prompt Tools](10-LLM-and-Prompt-Tools/README.md) | Prompt enhancers and image / video / audio to prompt with Gemma 4, Qwen 3.5, Qwen3-VL | 15 |
+| [01a · Image Generation](01-Image/Image-Generation/README.md) | Text-to-image with FLUX.1 / FLUX.2 / FLUX.3 Klein, Qwen-Image, Krea 2, Z-Image, HiDream, Chroma, SDXL, SD 3.5, Stable Cascade, Sana, Kolors and more; edit / inpaint / reference variants, ControlNet, LLM prompt enhancers, logos, posters, text in images, transparent PNGs, prompt batches | 202 |
+| [01b · Image Editing](01-Image/Image-Editing/README.md) | Instruction-based editing, multi-image edits, inpainting, outpainting, object removal, background removal, outfit transfer, sketch-to-image, ControlNet / T2I-Adapter / GLIGEN control, IP-Adapter / InstantID / PuLID / PhotoMaker identity, IC-Light relighting | 176 |
+| [01c · Image Upscaling and Enhancement](01-Image/Image-Enhancement/README.md) | Image upscaling (Real-ESRGAN, SwinIR, HAT, DAT, SeedVR2, tiled diffusion, creative upscale), diffusion restoration (SUPIR, CCSR, StableSR, DiffBIR), face restoration, denoise / low-light, colorization, filters and color grading | 44 |
+| [01d · Image Specialized and Supporting](01-Image/Image-Specialized-and-Supporting/README.md) | Virtual try-on, LayerDiffusion transparent layers, segmentation and detection, captioning / OCR / tagging, depth and pose estimation | 31 |
+| [02 · AI Video](02-Video/README.md) | Text-to-video and image-to-video (Wan, LTX-2.5, MiniMax H3, HunyuanVideo, Kandinsky 6, CogVideoX), reference-to-video, long-form generation, world models, video editing and control (VACE, object removal, camera / motion control), character animation and swap, talking avatars, lip-sync and dubbing, audio-reactive video, video upscaling, frame interpolation, video depth / pose / segmentation; [atlas coverage tracker](02-Video/COVERAGE.md) | 239 |
+| [03 · Audio](03-Audio/README.md) | Text-to-speech, voice cloning, voice design, music generation, covers and editing, sound effects, music transcription and analysis, stem separation, voice conversion, speech-to-text, subtitles, diarisation and forced alignment | 229 |
+| [04 · 3D Generation](04-3D-Generation/README.md) | Image-to-3D and multi-view-to-3D with Trellis 2, Pixal3D, SAM3D Body | 13 |
+| [05 · Batch Processing and Automation](05-Batch-and-Automation/README.md) | Batch-process a folder of images, loops, switches, logic and math | 45 |
+| [06 · Testing and Comparison](06-Testing-and-Comparison/README.md) | XY plots, sampler and LoRA comparisons, image compare | 8 |
+| [07 · AI Short Film Pipeline](07-Movie/README.md) | Krea 2 storyboard + MiniMax H3 short-film director pipeline and real project files | 48 |
+| [08 · LLM and Prompt Tools](08-LLM-and-Prompt-Tools/README.md) | Prompt enhancers and image / video / audio to prompt with Gemma 4, Qwen 3.5, Qwen3-VL | 15 |
 | [90 · Docs and Resources](90-Docs-and-Resources/README.md) | Learning workflows, node demos, LoRA conversion, tutorial episode resources | 15 |
 | [91 · Version Conflicts](91-Review-Version-Conflicts/README.md) | Original versions of workflows whose library copy differs, kept for comparison | 44 |
 
@@ -48,30 +48,30 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 
 | Model family | Tasks covered | Folders |
 |---|---|---|
-| **FLUX.2 Klein** (4B / 9B, FP8, INT8, KV) | txt2img, image edit, multi-image edit, inpainting, outpainting, batch edits, XY plots | [01](01-Image/Image-Generation) · [02](01-Image/Image-Editing) · [07](07-Batch-and-Automation) · [08](08-Testing-and-Comparison) |
-| **FLUX.3 Klein** | txt2img, text in images, image editing, prompt upsampling | [01](01-Image/Image-Generation) · [02](01-Image/Image-Editing) |
-| **FLUX.1 dev / Qwen-Image / Z-Image (Nunchaku)** | fast 4-bit txt2img, tiled diffusion upscale | [01](01-Image/Image-Generation) · [03](01-Image/Image-Enhancement) |
-| **Qwen-Image 2.1** | txt2img, image editing, transparent PNG, image-to-prompt | [01](01-Image/Image-Generation) · [02](01-Image/Image-Editing) |
-| **Krea 2** (FP8 / INT8) | txt2img, edit LoRA, outfit transfer, storyboards, LoRA XY plot | [01](01-Image/Image-Generation) · [02](01-Image/Image-Editing) · [09](09-Movie) |
-| **Z-Image Turbo** | fast txt2img, ControlNet Union, LoRA, text overlay, character sheets | [01](01-Image/Image-Generation) |
-| **Ming Image 0.1** | logos, posters, infographics, thumbnails, app screens | [01](01-Image/Image-Generation) · [02](01-Image/Image-Editing) |
-| **MOSS Image** | txt2img, text in images, layout with boxes, image-to-prompt, text editing, upscale | [01](01-Image/Image-Generation) · [02](01-Image/Image-Editing) · [03](01-Image/Image-Enhancement) |
-| **P-H3 Image** (MiniMax H3 image LoRA) | txt2img, text in images, character sheets, single- and multi-image edits, outpainting, relight, restore, creative upscale | [01](01-Image/Image-Generation) · [02](01-Image/Image-Editing) · [03](01-Image/Image-Enhancement) |
-| **Stable Diffusion 1.5** (Juggernaut Reborn), Anima, Boogu, ERNIE Image | txt2img, img2img, ControlNet Canny, LoRA, anime | [01](01-Image/Image-Generation) · [02](01-Image/Image-Editing) |
-| **Wan 2.1 / Wan 2.2** (SCAIL 2, InfiniteTalk, Animate) | img2video, character animation, character replacement, talking video, video dubbing | [04](04-Video) |
-| **LTX-2** | img2video with audio, lip-sync to your audio, voice dubbing | [04](04-Video) |
-| **MiniMax H3 / FastH3** | txt2video, img2video (first / last frame), reference-to-video with audio, character swap, short films | [04](04-Video) · [09](09-Movie) · [10](10-LLM-and-Prompt-Tools) |
-| **SeedVR2** | image upscale, video upscale | [03](01-Image/Image-Enhancement) · [04](04-Video) |
-| **Trellis 2, Pixal3D, SAM3D Body** | image-to-3D, multi-view-to-3D, PBR textures, 3D body | [06](06-3D-Generation) |
-| **Qwen3-TTS, Fish S2, Chatterbox, F5-TTS, VibeVoice, IndexTTS-2 / 2.5, OmniVoice, MOSS-TTS, Higgs Audio v3, CosyVoice 2 / 3, Orpheus, Zonos, Maya3 (Indic), Dia, Kokoro, RVC, Seed-VC** | text-to-speech, voice cloning, voice design, dialogue, voice conversion | [05](05-Audio) |
-| **Whisper, Qwen3-ASR, Parakeet, SenseVoice, FunASR, MOSS-Transcribe-Diarize, Hibiki** | speech-to-text, subtitles, diarisation, speech translation, forced alignment | [05](05-Audio) |
-| **Stable Audio 3 / Open, ACE-Step 1.5 / XL, YuE 2, HeartMuLa, MuLaCover, SongGeneration (LeVo 2), DiffRhythm 1 / 2, MusicGen, AudioLDM 2, MiniMax Music 3, SongBloom, AudioX, SoulX-Singer, Music Flamingo, Basic Pitch, Mel-Band / BS-RoFormer** | text-to-music, lyrics-to-song, covers, repaint, extend, LoRA, singing voice synthesis, stem separation (Demucs, RoFormer, MDX ensembles), audio-to-ABC / MIDI | [05](05-Audio) |
-| **Gemma 4, Qwen 3.5, Qwen3-VL** | prompt enhancer, image / video / audio to prompt | [10](10-LLM-and-Prompt-Tools) |
-| **FLUX.1, HiDream, Chroma, HunyuanImage 2.1, SDXL / SD 3.5, Stable Cascade, Sana, PixArt, Kolors, Lumina, AuraFlow, LongCat, Fibo, Kandinsky 5, Janus-Pro** | txt2img, editing, inpaint / outpaint, ControlNet, image reference | [01](01-Image/Image-Generation) |
-| **BrushNet, PowerPaint, OmniGen / OmniGen2, IC-Light, ControlNet v1.1 / XL, IP-Adapter, InstantID, PuLID, PhotoMaker** | inpainting, object insertion, instruction edits, relighting, structural control, identity | [02](01-Image/Image-Editing) |
-| **Real-ESRGAN, SwinIR, HAT, DAT, SUPIR, CCSR, StableSR, DiffBIR, CodeFormer, GFPGAN, DDColor** | upscaling, restoration, face restoration, denoise, colorization | [03](01-Image/Image-Enhancement) |
+| **FLUX.2 Klein** (4B / 9B, FP8, INT8, KV) | txt2img, image edit, multi-image edit, inpainting, outpainting, batch edits, XY plots | [01a](01-Image/Image-Generation) · [01b](01-Image/Image-Editing) · [05](05-Batch-and-Automation) · [06](06-Testing-and-Comparison) |
+| **FLUX.3 Klein** | txt2img, text in images, image editing, prompt upsampling | [01a](01-Image/Image-Generation) · [01b](01-Image/Image-Editing) |
+| **FLUX.1 dev / Qwen-Image / Z-Image (Nunchaku)** | fast 4-bit txt2img, tiled diffusion upscale | [01a](01-Image/Image-Generation) · [01c](01-Image/Image-Enhancement) |
+| **Qwen-Image 2.1** | txt2img, image editing, transparent PNG, image-to-prompt | [01a](01-Image/Image-Generation) · [01b](01-Image/Image-Editing) |
+| **Krea 2** (FP8 / INT8) | txt2img, edit LoRA, outfit transfer, storyboards, LoRA XY plot | [01a](01-Image/Image-Generation) · [01b](01-Image/Image-Editing) · [07](07-Movie) |
+| **Z-Image Turbo** | fast txt2img, ControlNet Union, LoRA, text overlay, character sheets | [01a](01-Image/Image-Generation) |
+| **Ming Image 0.1** | logos, posters, infographics, thumbnails, app screens | [01a](01-Image/Image-Generation) · [01b](01-Image/Image-Editing) |
+| **MOSS Image** | txt2img, text in images, layout with boxes, image-to-prompt, text editing, upscale | [01a](01-Image/Image-Generation) · [01b](01-Image/Image-Editing) · [01c](01-Image/Image-Enhancement) |
+| **P-H3 Image** (MiniMax H3 image LoRA) | txt2img, text in images, character sheets, single- and multi-image edits, outpainting, relight, restore, creative upscale | [01a](01-Image/Image-Generation) · [01b](01-Image/Image-Editing) · [01c](01-Image/Image-Enhancement) |
+| **Stable Diffusion 1.5** (Juggernaut Reborn), Anima, Boogu, ERNIE Image | txt2img, img2img, ControlNet Canny, LoRA, anime | [01a](01-Image/Image-Generation) · [01b](01-Image/Image-Editing) |
+| **Wan 2.1 / Wan 2.2** (SCAIL 2, InfiniteTalk, Animate) | img2video, character animation, character replacement, talking video, video dubbing | [02](02-Video) |
+| **LTX-2** | img2video with audio, lip-sync to your audio, voice dubbing | [02](02-Video) |
+| **MiniMax H3 / FastH3** | txt2video, img2video (first / last frame), reference-to-video with audio, character swap, short films | [02](02-Video) · [07](07-Movie) · [08](08-LLM-and-Prompt-Tools) |
+| **SeedVR2** | image upscale, video upscale | [01c](01-Image/Image-Enhancement) · [02](02-Video) |
+| **Trellis 2, Pixal3D, SAM3D Body** | image-to-3D, multi-view-to-3D, PBR textures, 3D body | [04](04-3D-Generation) |
+| **Qwen3-TTS, Fish S2, Chatterbox, F5-TTS, VibeVoice, IndexTTS-2 / 2.5, OmniVoice, MOSS-TTS, Higgs Audio v3, CosyVoice 2 / 3, Orpheus, Zonos, Maya3 (Indic), Dia, Kokoro, RVC, Seed-VC** | text-to-speech, voice cloning, voice design, dialogue, voice conversion | [03](03-Audio) |
+| **Whisper, Qwen3-ASR, Parakeet, SenseVoice, FunASR, MOSS-Transcribe-Diarize, Hibiki** | speech-to-text, subtitles, diarisation, speech translation, forced alignment | [03](03-Audio) |
+| **Stable Audio 3 / Open, ACE-Step 1.5 / XL, YuE 2, HeartMuLa, MuLaCover, SongGeneration (LeVo 2), DiffRhythm 1 / 2, MusicGen, AudioLDM 2, MiniMax Music 3, SongBloom, AudioX, SoulX-Singer, Music Flamingo, Basic Pitch, Mel-Band / BS-RoFormer** | text-to-music, lyrics-to-song, covers, repaint, extend, LoRA, singing voice synthesis, stem separation (Demucs, RoFormer, MDX ensembles), audio-to-ABC / MIDI | [03](03-Audio) |
+| **Gemma 4, Qwen 3.5, Qwen3-VL** | prompt enhancer, image / video / audio to prompt | [08](08-LLM-and-Prompt-Tools) |
+| **FLUX.1, HiDream, Chroma, HunyuanImage 2.1, SDXL / SD 3.5, Stable Cascade, Sana, PixArt, Kolors, Lumina, AuraFlow, LongCat, Fibo, Kandinsky 5, Janus-Pro** | txt2img, editing, inpaint / outpaint, ControlNet, image reference | [01a](01-Image/Image-Generation) |
+| **BrushNet, PowerPaint, OmniGen / OmniGen2, IC-Light, ControlNet v1.1 / XL, IP-Adapter, InstantID, PuLID, PhotoMaker** | inpainting, object insertion, instruction edits, relighting, structural control, identity | [01b](01-Image/Image-Editing) |
+| **Real-ESRGAN, SwinIR, HAT, DAT, SUPIR, CCSR, StableSR, DiffBIR, CodeFormer, GFPGAN, DDColor** | upscaling, restoration, face restoration, denoise, colorization | [01c](01-Image/Image-Enhancement) |
 | **CatVTON, IDM-VTON, LayerDiffusion, Grounding DINO + SAM, Florence-2, Depth Anything, Marigold, DWPose** | virtual try-on, transparent layers, segmentation, captioning / OCR, depth, pose | [01-Image](01-Image/Image-Specialized-and-Supporting) |
-| **BiRefNet, SAM3, RMBG, LaMa, ReActor** | background removal, segmentation, object removal, face swap | [02](01-Image/Image-Editing) · [04](04-Video) |
+| **BiRefNet, SAM3, RMBG, LaMa, ReActor** | background removal, segmentation, object removal, face swap | [01b](01-Image/Image-Editing) · [02](02-Video) |
 
 ## How to use
 
@@ -193,13 +193,13 @@ ComfyUI-Workflows/
 ├── 01-Image/Image-Editing/                     # Image Editing
 ├── 01-Image/Image-Enhancement/                 # Image Upscaling and Enhancement
 ├── 01-Image/Image-Specialized-and-Supporting/  # Try-on, layers, segmentation, captioning, depth, pose
-├── 04-Video/                             # AI Video: generation, editing and control, avatars, enhancement, supporting vision
-├── 05-Audio/                             # Audio
-├── 06-3D-Generation/                     # 3D Generation
-├── 07-Batch-and-Automation/              # Batch Processing and Automation
-├── 08-Testing-and-Comparison/            # Testing and Comparison
-├── 09-Movie/                             # AI Short Film Pipeline
-├── 10-LLM-and-Prompt-Tools/              # LLM and Prompt Tools
+├── 02-Video/                             # AI Video: generation, editing and control, avatars, enhancement, supporting vision
+├── 03-Audio/                             # Audio
+├── 04-3D-Generation/                     # 3D Generation
+├── 05-Batch-and-Automation/              # Batch Processing and Automation
+├── 06-Testing-and-Comparison/            # Testing and Comparison
+├── 07-Movie/                             # AI Short Film Pipeline
+├── 08-LLM-and-Prompt-Tools/              # LLM and Prompt Tools
 ├── 90-Docs-and-Resources/                # Docs and Resources
 ├── 91-Review-Version-Conflicts/          # Version Conflicts
 ├── 00-LIBRARY-INDEX.md                    # plain list of every workflow

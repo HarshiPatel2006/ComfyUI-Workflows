@@ -2,7 +2,7 @@
 
 Per-frame analysis that feeds the control and editing workflows: video depth and normals, pose and line-art extraction, and video segmentation. These are not generation models.
 
-[← 04-Video overview](../README.md) · [Atlas coverage tracker](../COVERAGE.md)
+[← 02-Video overview](../README.md) · [Atlas coverage tracker](../COVERAGE.md)
 
 | Subfolder | What is inside | Workflows |
 |---|---|---|
