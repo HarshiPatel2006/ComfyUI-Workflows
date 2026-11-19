@@ -1,0 +1,567 @@
+{
+  "last_node_id": 24,
+  "last_link_id": 26,
+  "nodes": [
+    {
+      "id": 10,
+      "type": "MZ_KolorsUNETLoaderV2",
+      "pos": [
+        105,
+        100
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            12
+          ],
+          "shape": 3,
+          "label": "model",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MZ_KolorsUNETLoaderV2"
+      },
+      "widgets_values": [
+        "Kolors-Inpainting.safetensors"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "MZ_ChatGLM3Loader",
+      "pos": [
+        105,
+        215
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "chatglm3_model",
+          "type": "CHATGLM3MODEL",
+          "links": [
+            13,
+            14
+          ],
+          "shape": 3,
+          "label": "chatglm3_model",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MZ_ChatGLM3Loader"
+      },
+      "widgets_values": [
+        "chatglm3-4bit.safetensors"
+      ]
+    },
+    {
+      "id": 20,
+      "type": "VAELoader",
+      "pos": [
+        105,
+        325
+      ],
+      "size": [
+        315,
+        60
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            20,
+            24
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "sdxl.vae.safetensors"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "LoadImage",
+      "pos": [
+        105,
+        425
+      ],
+      "size": [
+        315,
+        315
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            21
+          ],
+          "shape": 3,
+          "label": "å¾å",
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "shape": 3,
+          "label": "é®ç½©"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "3.png",
+        "image"
+      ]
+    },
+    {
+      "id": 24,
+      "type": "LoadImageMask",
+      "pos": [
+        105,
+        785
+      ],
+      "size": [
+        315,
+        320
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            26
+          ],
+          "shape": 3,
+          "label": "é®ç½©"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImageMask"
+      },
+      "widgets_values": [
+        "3_mask.png",
+        "red",
+        "image"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "MZ_ChatGLM3_V2",
+      "pos": [
+        485,
+        100
+      ],
+      "size": [
+        385,
+        170
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "chatglm3_model",
+          "type": "CHATGLM3MODEL",
+          "link": 13,
+          "label": "chatglm3_model"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            15
+          ],
+          "shape": 3,
+          "label": "CONDITIONING",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MZ_ChatGLM3_V2"
+      },
+      "widgets_values": [
+        "ç©¿çç¾å°å¥³æå£«çè¡£æï¼ä¸ä»¶ç±»ä¼¼äºæ°´ææé£æ ¼çè¡£æï¼åæ¬ä¸ä¸ªç½è²ç´§èº«ä¸è¡£ï¼åè¸æ­éä¸ä¸ªå¤§å¤§ççº¢è²è´è¶ç»ãè¡£æçé¢å­é¨ååèè²ï¼å¹¶ä¸æç½è²æ¡çº¹ãå¥¹è¿ç©¿çä¸æ¡èè²ç¾è¤¶è£ï¼è¶é«æ¸ï¼è¾ç·æ¸²æï¼é«çº§è´¨æï¼32kï¼é«åè¾¨çï¼æå¥½çè´¨éï¼è¶çº§ç»èï¼æ¯æ·±"
+      ]
+    },
+    {
+      "id": 17,
+      "type": "MZ_ChatGLM3_V2",
+      "pos": [
+        480,
+        325
+      ],
+      "size": [
+        390,
+        185
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "chatglm3_model",
+          "type": "CHATGLM3MODEL",
+          "link": 14,
+          "label": "chatglm3_model"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            16
+          ],
+          "shape": 3,
+          "label": "CONDITIONING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MZ_ChatGLM3_V2"
+      },
+      "widgets_values": [
+        "nsfwï¼è¸é¨é´å½±ï¼ä½åè¾¨çï¼jpegä¼ªå½±ãæ¨¡ç³ãç³ç³ï¼é»è¸ï¼éè¹ç¯"
+      ]
+    },
+    {
+      "id": 18,
+      "type": "VAEEncodeForInpaint",
+      "pos": [
+        485,
+        555
+      ],
+      "size": [
+        385,
+        185
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 21,
+          "label": "å¾å",
+          "slot_index": 0
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 20,
+          "label": "VAE",
+          "slot_index": 1
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 26,
+          "label": "é®ç½©",
+          "slot_index": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            17
+          ],
+          "shape": 3,
+          "label": "Latent"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncodeForInpaint"
+      },
+      "widgets_values": [
+        0
+      ]
+    },
+    {
+      "id": 13,
+      "type": "KSampler",
+      "pos": [
+        905,
+        100
+      ],
+      "size": [
+        395,
+        640
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 12,
+          "label": "æ¨¡å"
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 15,
+          "label": "æ­£é¢æ¡ä»¶"
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 16,
+          "label": "è´é¢æ¡ä»¶",
+          "slot_index": 2
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 17,
+          "label": "Latent",
+          "slot_index": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            23
+          ],
+          "shape": 3,
+          "label": "Latent",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        484043905221764,
+        "randomize",
+        25,
+        4.98,
+        "euler",
+        "ddim_uniform",
+        1
+      ]
+    },
+    {
+      "id": 23,
+      "type": "PreviewImage",
+      "pos": [
+        1325,
+        205
+      ],
+      "size": [
+        445,
+        535
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 25,
+          "label": "å¾å"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      }
+    },
+    {
+      "id": 22,
+      "type": "VAEDecode",
+      "pos": [
+        1320,
+        100
+      ],
+      "size": [
+        450,
+        50
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 23,
+          "label": "Latent"
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 24,
+          "label": "VAE",
+          "slot_index": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            25
+          ],
+          "shape": 3,
+          "label": "å¾å",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    }
+  ],
+  "links": [
+    [
+      12,
+      10,
+      0,
+      13,
+      0,
+      "MODEL"
+    ],
+    [
+      13,
+      15,
+      0,
+      16,
+      0,
+      "CHATGLM3MODEL"
+    ],
+    [
+      14,
+      15,
+      0,
+      17,
+      0,
+      "CHATGLM3MODEL"
+    ],
+    [
+      15,
+      16,
+      0,
+      13,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      16,
+      17,
+      0,
+      13,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      17,
+      18,
+      0,
+      13,
+      3,
+      "LATENT"
+    ],
+    [
+      20,
+      20,
+      0,
+      18,
+      1,
+      "VAE"
+    ],
+    [
+      21,
+      21,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ],
+    [
+      23,
+      13,
+      0,
+      22,
+      0,
+      "LATENT"
+    ],
+    [
+      24,
+      20,
+      0,
+      22,
+      1,
+      "VAE"
+    ],
+    [
+      25,
+      22,
+      0,
+      23,
+      0,
+      "IMAGE"
+    ],
+    [
+      26,
+      24,
+      0,
+      18,
+      2,
+      "MASK"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workspace_info": {
+      "id": "TKSZ5XMzonRsm7MzObd2l"
+    },
+    "ds": {
+      "scale": 1,
+      "offset": [
+        -5,
+        0
+      ]
+    }
+  },
+  "version": 0.4
+}
