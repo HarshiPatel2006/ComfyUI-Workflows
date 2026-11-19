@@ -1,0 +1,1090 @@
+{
+  "id": "895466b0-6554-42a7-973e-bb4c0ed1c11d",
+  "revision": 0,
+  "last_node_id": 60,
+  "last_link_id": 55,
+  "nodes": [
+    {
+      "id": 49,
+      "type": "FL_SongGen_Generate",
+      "pos": [
+        381.63535216917626,
+        2083.214115560385
+      ],
+      "size": [
+        418.7797327502444,
+        349.3799188855969
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "SONGGEN_MODEL",
+          "link": 31
+        },
+        {
+          "localized_name": "lyrics",
+          "name": "lyrics",
+          "type": "STRING",
+          "widget": {
+            "name": "lyrics"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "description",
+          "name": "description",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "description"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "duration",
+          "name": "duration",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "temperature",
+          "name": "temperature",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg_coef",
+          "name": "cfg_coef",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_coef"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "top_k",
+          "name": "top_k",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "top_k"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "gen_type",
+          "name": "gen_type",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "gen_type"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "mixed_audio",
+          "name": "mixed_audio",
+          "type": "AUDIO",
+          "links": [
+            32
+          ]
+        },
+        {
+          "localized_name": "vocal_audio",
+          "name": "vocal_audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "localized_name": "bgm_audio",
+          "name": "bgm_audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_fl-songgen",
+        "ver": "892fcb4a83d15eedce6cdd7260107fa50375c18d",
+        "Node name for S&R": "FL_SongGen_Generate",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.2.2"
+        }
+      },
+      "widgets_values": [
+        "[intro-short] ; [verse] Hello world.This is a test ; [chorus] Singing along.Making music ; [outro-short]",
+        "",
+        60,
+        0.9,
+        1.5,
+        50,
+        "mixed",
+        1359924258,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "lyrics": "[intro-short] ; [verse] Hello world.This is a test ; [chorus] Singing along.Making music ; [outro-short]",
+        "description": "",
+        "duration": 60,
+        "temperature": 0.9,
+        "cfg_coef": 1.5,
+        "top_k": 50,
+        "gen_type": "mixed",
+        "seed": 1359924258,
+        "control_after_generate": "randomize"
+      },
+      "color": "#16727c",
+      "bgcolor": "#4F0074"
+    },
+    {
+      "id": 51,
+      "type": "FL_SongGen_AutoStyle",
+      "pos": [
+        387.78251630982925,
+        1691.9261990139128
+      ],
+      "size": [
+        400,
+        320
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "SONGGEN_MODEL",
+          "link": 36
+        },
+        {
+          "localized_name": "lyrics",
+          "name": "lyrics",
+          "type": "STRING",
+          "widget": {
+            "name": "lyrics"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "auto_style",
+          "name": "auto_style",
+          "type": "COMBO",
+          "widget": {
+            "name": "auto_style"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "duration",
+          "name": "duration",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "temperature",
+          "name": "temperature",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg_coef",
+          "name": "cfg_coef",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_coef"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "top_k",
+          "name": "top_k",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "top_k"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "gen_type",
+          "name": "gen_type",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "gen_type"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "mixed_audio",
+          "name": "mixed_audio",
+          "type": "AUDIO",
+          "links": [
+            37
+          ]
+        },
+        {
+          "localized_name": "vocal_audio",
+          "name": "vocal_audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "localized_name": "bgm_audio",
+          "name": "bgm_audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_fl-songgen",
+        "ver": "892fcb4a83d15eedce6cdd7260107fa50375c18d",
+        "Node name for S&R": "FL_SongGen_AutoStyle",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.2.2"
+        }
+      },
+      "widgets_values": [
+        "[intro-short] ; [verse] Hello world.This is a test ; [chorus] Singing along.Making music ; [outro-short]",
+        "Pop",
+        60,
+        0.9,
+        1.5,
+        50,
+        "mixed",
+        1751839565,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "lyrics": "[intro-short] ; [verse] Hello world.This is a test ; [chorus] Singing along.Making music ; [outro-short]",
+        "auto_style": "Pop",
+        "duration": 60,
+        "temperature": 0.9,
+        "cfg_coef": 1.5,
+        "top_k": 50,
+        "gen_type": "mixed",
+        "seed": 1751839565,
+        "control_after_generate": "randomize"
+      },
+      "color": "#16727c",
+      "bgcolor": "#4F0074"
+    },
+    {
+      "id": 35,
+      "type": "LoadAudio",
+      "pos": [
+        -467.0620358243836,
+        2501.0338483088763
+      ],
+      "size": [
+        388.97738415585627,
+        136
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "AUDIOUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            53
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1",
+        "Node name for S&R": "LoadAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.2.2"
+        }
+      },
+      "widgets_values": [
+        "2 - mhm.wav",
+        null
+      ],
+      "widgets_values_named": {
+        "audio": "2 - mhm.wav",
+        "upload": null
+      }
+    },
+    {
+      "id": 58,
+      "type": "PreviewAudio",
+      "pos": [
+        -5.092309332080579,
+        2637.458331315209
+      ],
+      "size": [
+        296.7029611900731,
+        88
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 54
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.6.0",
+        "Node name for S&R": "PreviewAudio",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 44,
+      "type": "FL_SongGen_ModelLoader",
+      "pos": [
+        -134.4928377960563,
+        2082.276327155916
+      ],
+      "size": [
+        289.38316656724857,
+        106
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model_variant",
+          "name": "model_variant",
+          "type": "COMBO",
+          "widget": {
+            "name": "model_variant"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "memory_mode",
+          "name": "memory_mode",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "memory_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "force_reload",
+          "name": "force_reload",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "force_reload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "SONGGEN_MODEL",
+          "links": [
+            31,
+            36,
+            50
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_fl-songgen",
+        "ver": "98858e9293419192f668cd0bc716d49b9dc59146",
+        "Node name for S&R": "FL_SongGen_ModelLoader",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.2.2"
+        }
+      },
+      "widgets_values": [
+        "songgeneration_base_new",
+        "low",
+        false
+      ],
+      "widgets_values_named": {
+        "model_variant": "songgeneration_base_new",
+        "memory_mode": "low",
+        "force_reload": false
+      },
+      "color": "#16727c",
+      "bgcolor": "#4F0074"
+    },
+    {
+      "id": 52,
+      "type": "SaveAudioMP3",
+      "pos": [
+        843.0243736800232,
+        1692.2503603589764
+      ],
+      "size": [
+        479.97202945611434,
+        136
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 37
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "quality",
+          "name": "quality",
+          "type": "COMBO",
+          "widget": {
+            "name": "quality"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1",
+        "Node name for S&R": "SaveAudioMP3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.2.2"
+        }
+      },
+      "widgets_values": [
+        "audio/ComfyUI",
+        "V0"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/ComfyUI",
+        "quality": "V0"
+      }
+    },
+    {
+      "id": 46,
+      "type": "SaveAudioMP3",
+      "pos": [
+        843.5853781666052,
+        2084.1071096375917
+      ],
+      "size": [
+        479.97202945611434,
+        136
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 32
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "quality",
+          "name": "quality",
+          "type": "COMBO",
+          "widget": {
+            "name": "quality"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1",
+        "Node name for S&R": "SaveAudioMP3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.2.2"
+        }
+      },
+      "widgets_values": [
+        "audio/ComfyUI",
+        "V0"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/ComfyUI",
+        "quality": "V0"
+      }
+    },
+    {
+      "id": 56,
+      "type": "SaveAudioMP3",
+      "pos": [
+        868.9873343603814,
+        2491.7513171650994
+      ],
+      "size": [
+        479.97202945611434,
+        136
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 52
+        },
+        {
+          "localized_name": "filename_prefix",
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "quality",
+          "name": "quality",
+          "type": "COMBO",
+          "widget": {
+            "name": "quality"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.5.1",
+        "Node name for S&R": "SaveAudioMP3",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.2.2"
+        }
+      },
+      "widgets_values": [
+        "audio/ComfyUI",
+        "V0"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "audio/ComfyUI",
+        "quality": "V0"
+      }
+    },
+    {
+      "id": 59,
+      "type": "FL_SongGen_StyleTransfer",
+      "pos": [
+        357.7715830980706,
+        2491.09955914179
+      ],
+      "size": [
+        400,
+        320
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "SONGGEN_MODEL",
+          "link": 50
+        },
+        {
+          "localized_name": "reference_audio",
+          "name": "reference_audio",
+          "type": "AUDIO",
+          "link": 55
+        },
+        {
+          "localized_name": "lyrics",
+          "name": "lyrics",
+          "type": "STRING",
+          "widget": {
+            "name": "lyrics"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "description",
+          "name": "description",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "description"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "duration",
+          "name": "duration",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "temperature",
+          "name": "temperature",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg_coef",
+          "name": "cfg_coef",
+          "shape": 7,
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_coef"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "top_k",
+          "name": "top_k",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "top_k"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "gen_type",
+          "name": "gen_type",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "gen_type"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seed",
+          "name": "seed",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "mixed_audio",
+          "name": "mixed_audio",
+          "type": "AUDIO",
+          "links": [
+            52
+          ]
+        },
+        {
+          "localized_name": "vocal_audio",
+          "name": "vocal_audio",
+          "type": "AUDIO",
+          "links": null
+        },
+        {
+          "localized_name": "bgm_audio",
+          "name": "bgm_audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui_fl-songgen",
+        "ver": "4a183c82a79077107a8cef92043ada51661c70bb",
+        "Node name for S&R": "FL_SongGen_StyleTransfer",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {}
+        }
+      },
+      "widgets_values": [
+        "[intro-short] ; [verse] Hello world.This is a test ; [chorus] Singing along.Making music ; [outro-short]",
+        "",
+        60,
+        0.9,
+        1.5,
+        71,
+        "mixed",
+        -1,
+        "randomize"
+      ],
+      "widgets_values_named": {
+        "lyrics": "[intro-short] ; [verse] Hello world.This is a test ; [chorus] Singing along.Making music ; [outro-short]",
+        "description": "",
+        "duration": 60,
+        "temperature": 0.9,
+        "cfg_coef": 1.5,
+        "top_k": 71,
+        "gen_type": "mixed",
+        "seed": -1,
+        "control_after_generate": "randomize"
+      },
+      "color": "#16727c",
+      "bgcolor": "#4F0074"
+    },
+    {
+      "id": 60,
+      "type": "AudioCrop",
+      "pos": [
+        -17.138159413017092,
+        2510.051632514627
+      ],
+      "size": [
+        271.665625,
+        82
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 53
+        },
+        {
+          "localized_name": "start_time",
+          "name": "start_time",
+          "type": "STRING",
+          "widget": {
+            "name": "start_time"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "end_time",
+          "name": "end_time",
+          "type": "STRING",
+          "widget": {
+            "name": "end_time"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            54,
+            55
+          ]
+        }
+      ],
+      "title": "Crop reference (3-10 s works best)",
+      "properties": {
+        "cnr_id": "audio-separation-nodes-comfyui",
+        "ver": "ac339561973f0c1e56db2f9d40f11b0fddda6763",
+        "Node name for S&R": "AudioCrop"
+      },
+      "widgets_values": [
+        "1:05",
+        "1:15"
+      ],
+      "widgets_values_named": {
+        "start_time": "1:05",
+        "end_time": "1:15"
+      }
+    }
+  ],
+  "links": [
+    [
+      31,
+      44,
+      0,
+      49,
+      0,
+      "SONGGEN_MODEL"
+    ],
+    [
+      32,
+      49,
+      0,
+      46,
+      0,
+      "AUDIO"
+    ],
+    [
+      36,
+      44,
+      0,
+      51,
+      0,
+      "SONGGEN_MODEL"
+    ],
+    [
+      37,
+      51,
+      0,
+      52,
+      0,
+      "AUDIO"
+    ],
+    [
+      50,
+      44,
+      0,
+      59,
+      0,
+      "SONGGEN_MODEL"
+    ],
+    [
+      52,
+      59,
+      0,
+      56,
+      0,
+      "AUDIO"
+    ],
+    [
+      53,
+      35,
+      0,
+      60,
+      0,
+      "AUDIO"
+    ],
+    [
+      54,
+      60,
+      0,
+      58,
+      0,
+      "AUDIO"
+    ],
+    [
+      55,
+      60,
+      0,
+      59,
+      1,
+      "AUDIO"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "Group",
+      "bounding": [
+        -486.8959776321367,
+        1608.3261990139129,
+        1852.6966398811703,
+        1209.414354410944
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "ds": {
+      "scale": 0.5997117742579999,
+      "offset": [
+        821.383559936399,
+        -1482.8990621570752
+      ]
+    },
+    "frontendVersion": "1.33.13",
+    "VHS_latentpreview": true,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

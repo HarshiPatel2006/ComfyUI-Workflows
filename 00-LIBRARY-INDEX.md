@@ -1,6 +1,6 @@
 # ComfyUI Workflow Library — Index
 
-Plain list of all 577 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
+Plain list of all 619 workflows by folder. Each category folder's `README.md` has descriptions, models and required custom nodes for each one.
 
 Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-image-2.1-one-image-edit-low-vram.json`). `-api` = API format; `epNN` = tutorial episode the variant came from.
 
@@ -442,25 +442,67 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [seedvr2-video-upscale-toons-api](04-Video/Video-Upscaling/seedvr2-video-upscale-toons-api.json)
 - [seedvr2-video-upscale](04-Video/Video-Upscaling/seedvr2-video-upscale.json)
 
+## 05-Audio/Music-Analysis
+
+- [ace-step-v1.5-audio-captioner](05-Audio/Music-Analysis/ace-step-v1.5-audio-captioner.json)
+- [ace-step-v1.5-understand-audio](05-Audio/Music-Analysis/ace-step-v1.5-understand-audio.json)
+
 ## 05-Audio/Music-Generation
 
+- [ace-step-v1-audio-to-audio-editing](05-Audio/Music-Generation/ace-step-v1-audio-to-audio-editing.json)
+- [ace-step-v1.5-complete-and-extend](05-Audio/Music-Generation/ace-step-v1.5-complete-and-extend.json)
+- [ace-step-v1.5-cover](05-Audio/Music-Generation/ace-step-v1.5-cover.json)
+- [ace-step-v1.5-create-sample-to-music](05-Audio/Music-Generation/ace-step-v1.5-create-sample-to-music.json)
+- [ace-step-v1.5-lego-add-tracks](05-Audio/Music-Generation/ace-step-v1.5-lego-add-tracks.json)
+- [ace-step-v1.5-lora-cover](05-Audio/Music-Generation/ace-step-v1.5-lora-cover.json)
+- [ace-step-v1.5-lora-text-to-music](05-Audio/Music-Generation/ace-step-v1.5-lora-text-to-music.json)
 - [ace-step-v1.5-lora-training](05-Audio/Music-Generation/ace-step-v1.5-lora-training.json)
+- [ace-step-v1.5-lyrics-to-song](05-Audio/Music-Generation/ace-step-v1.5-lyrics-to-song.json)
+- [ace-step-v1.5-repaint-section](05-Audio/Music-Generation/ace-step-v1.5-repaint-section.json)
+- [ace-step-v1.5-sft-merge-lora-text-to-music](05-Audio/Music-Generation/ace-step-v1.5-sft-merge-lora-text-to-music.json)
+- [ace-step-v1.5-simple-mode](05-Audio/Music-Generation/ace-step-v1.5-simple-mode.json)
+- [ace-step-v1.5-text-to-music-official-api-server](05-Audio/Music-Generation/ace-step-v1.5-text-to-music-official-api-server.json)
+- [ace-step-v1.5-text-to-music-qwen3.5-local-prompt-writer](05-Audio/Music-Generation/ace-step-v1.5-text-to-music-qwen3.5-local-prompt-writer.json)
+- [ace-step-v1.5-turbo-text-to-music-1.7b-lm](05-Audio/Music-Generation/ace-step-v1.5-turbo-text-to-music-1.7b-lm.json)
+- [ace-step-v1.5-turbo-text-to-music-4b-lm](05-Audio/Music-Generation/ace-step-v1.5-turbo-text-to-music-4b-lm.json)
+- [ace-step-v1.5-turbo-text-to-music-all-in-one](05-Audio/Music-Generation/ace-step-v1.5-turbo-text-to-music-all-in-one.json)
+- [ace-step-v1.5-xl-base-text-to-music](05-Audio/Music-Generation/ace-step-v1.5-xl-base-text-to-music.json)
+- [ace-step-v1.5-xl-sft-text-to-music](05-Audio/Music-Generation/ace-step-v1.5-xl-sft-text-to-music.json)
 - [ace-step-v1.5-xl-turbo-text-to-music](05-Audio/Music-Generation/ace-step-v1.5-xl-turbo-text-to-music.json)
+- [audioldm2-image-to-music-llava](05-Audio/Music-Generation/audioldm2-image-to-music-llava.json)
+- [diffrhythm-2-lyrics-and-style-to-song](05-Audio/Music-Generation/diffrhythm-2-lyrics-and-style-to-song.json)
+- [diffrhythm-edit-song-sections](05-Audio/Music-Generation/diffrhythm-edit-song-sections.json)
+- [diffrhythm-lyrics-and-style-to-song](05-Audio/Music-Generation/diffrhythm-lyrics-and-style-to-song.json)
+- [diffrhythm-reference-audio-style-to-song](05-Audio/Music-Generation/diffrhythm-reference-audio-style-to-song.json)
 - [foundation-1-text-to-music-loops](05-Audio/Music-Generation/foundation-1-text-to-music-loops.json)
 - [heartmula-fl-text-to-song](05-Audio/Music-Generation/heartmula-fl-text-to-song.json)
 - [heartmula-lyrics-and-style-to-song](05-Audio/Music-Generation/heartmula-lyrics-and-style-to-song.json)
 - [heartmula-lyrics-transcriber](05-Audio/Music-Generation/heartmula-lyrics-transcriber.json)
 - [minimax-music-3-text-to-music](05-Audio/Music-Generation/minimax-music-3-text-to-music.json)
+- [mulacover-audio-remix](05-Audio/Music-Generation/mulacover-audio-remix.json)
+- [mulacover-cover-from-reference-or-midi](05-Audio/Music-Generation/mulacover-cover-from-reference-or-midi.json)
+- [musicgen-text-to-music-bpm-loop](05-Audio/Music-Generation/musicgen-text-to-music-bpm-loop.json)
+- [songgeneration-levo-2-easy-fp4](05-Audio/Music-Generation/songgeneration-levo-2-easy-fp4.json)
+- [songgeneration-levo-2-lyrics-to-song](05-Audio/Music-Generation/songgeneration-levo-2-lyrics-to-song.json)
+- [songgeneration-levo-style-transfer](05-Audio/Music-Generation/songgeneration-levo-style-transfer.json)
 - [stable-audio-3-image-to-music-gemma-4](05-Audio/Music-Generation/stable-audio-3-image-to-music-gemma-4.json)
-- [stable-audio-3-text-to-music-gemma-4-prompt-enhancer](05-Audio/Music-Generation/stable-audio-3-text-to-music-gemma-4-prompt-enhancer.json)
+- [stable-audio-3-medium-base-text-to-music](05-Audio/Music-Generation/stable-audio-3-medium-base-text-to-music.json)
 - [stable-audio-3-text-to-music](05-Audio/Music-Generation/stable-audio-3-text-to-music.json)
+- [stable-audio-3-text-to-music-gemma-4-prompt-enhancer](05-Audio/Music-Generation/stable-audio-3-text-to-music-gemma-4-prompt-enhancer.json)
 - [stable-audio-3-text-to-sound-effects-gemma-4](05-Audio/Music-Generation/stable-audio-3-text-to-sound-effects-gemma-4.json)
+- [stable-audio-open-1.0-text-to-audio](05-Audio/Music-Generation/stable-audio-open-1.0-text-to-audio.json)
 - [woosh-text-and-video-to-sound-effects](05-Audio/Music-Generation/woosh-text-and-video-to-sound-effects.json)
+- [yue-v1-lyrics-to-song-legacy](05-Audio/Music-Generation/yue-v1-lyrics-to-song-legacy.json)
 - [yue2-lyrics-to-song](05-Audio/Music-Generation/yue2-lyrics-to-song.json)
+- [yue2-lyrics-to-song-and-cover-smthemex](05-Audio/Music-Generation/yue2-lyrics-to-song-and-cover-smthemex.json)
+- [yue2-music-cover](05-Audio/Music-Generation/yue2-music-cover.json)
+- [yue2-score-editor-to-song](05-Audio/Music-Generation/yue2-score-editor-to-song.json)
 
 ## 05-Audio/Music-Transcription
 
+- [ace-step-v1.5-lyrics-transcriber](05-Audio/Music-Transcription/ace-step-v1.5-lyrics-transcriber.json)
 - [muscriptor-audio-to-midi-transcription](05-Audio/Music-Transcription/muscriptor-audio-to-midi-transcription.json)
+- [sheetsage2-audio-to-abc-melody-and-chords](05-Audio/Music-Transcription/sheetsage2-audio-to-abc-melody-and-chords.json)
 
 ## 05-Audio/Speech-and-Voice-Cloning
 
@@ -468,16 +510,19 @@ Filename pattern: `model-task-variant.json` in kebab-case (for example `qwen-ima
 - [fish-s2-text-to-speech](05-Audio/Speech-and-Voice-Cloning/fish-s2-text-to-speech.json)
 - [fish-s2-voice-clone-tts](05-Audio/Speech-and-Voice-Cloning/fish-s2-voice-clone-tts.json)
 - [qwen3-tts-custom-voice](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-custom-voice.json)
+- [qwen3-tts-voice-clone](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-clone.json)
 - [qwen3-tts-voice-clone-load-saved-voice](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-clone-load-saved-voice.json)
 - [qwen3-tts-voice-clone-save-voice](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-clone-save-voice.json)
 - [qwen3-tts-voice-clone-saved-multi-voice-dialogue](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-clone-saved-multi-voice-dialogue.json)
-- [qwen3-tts-voice-clone](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-clone.json)
+- [qwen3-tts-voice-design](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-design.json)
 - [qwen3-tts-voice-design-dialogue](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-design-dialogue.json)
 - [qwen3-tts-voice-design-save-voice](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-design-save-voice.json)
-- [qwen3-tts-voice-design](05-Audio/Speech-and-Voice-Cloning/qwen3-tts-voice-design.json)
 
 ## 05-Audio/Stem-Separation
 
+- [ace-step-v1.5-extract-stems](05-Audio/Stem-Separation/ace-step-v1.5-extract-stems.json)
+- [demucs-htdemucs-4-stem-separation](05-Audio/Stem-Separation/demucs-htdemucs-4-stem-separation.json)
+- [demucs-htdemucs-6s-six-stem-separation](05-Audio/Stem-Separation/demucs-htdemucs-6s-six-stem-separation.json)
 - [demucs-mdx-audio-separator-stem-separation](05-Audio/Stem-Separation/demucs-mdx-audio-separator-stem-separation.json)
 
 ## 06-3D-Generation/Image-to-3D

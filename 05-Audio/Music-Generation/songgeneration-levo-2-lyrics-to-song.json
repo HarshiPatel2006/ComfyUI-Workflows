@@ -1,0 +1,1208 @@
+{
+  "id": "f7a5247b-ed1b-466d-91df-de458a19772c",
+  "revision": 0,
+  "last_node_id": 32,
+  "last_link_id": 43,
+  "nodes": [
+    {
+      "id": 14,
+      "type": "SongGeneration_Sampler",
+      "pos": [
+        1981.21533203125,
+        320.8858337402344
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "cond",
+          "name": "cond",
+          "type": "SongGeneration_Cond",
+          "link": 32
+        },
+        {
+          "localized_name": "save_separate",
+          "name": "save_separate",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_separate"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            21
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "songgeneration",
+        "ver": "daace52551c88cb3b84a033dd8474e7b6a75853a",
+        "Node name for S&R": "SongGeneration_Sampler"
+      },
+      "widgets_values": [
+        false
+      ],
+      "widgets_values_named": {
+        "save_separate": false
+      }
+    },
+    {
+      "id": 22,
+      "type": "LoadAudio",
+      "pos": [
+        2464.4304199218736,
+        200.87908935546878
+      ],
+      "size": [
+        270,
+        136
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 2,
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "COMBO",
+          "widget": {
+            "name": "audio"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "choose file to upload",
+          "name": "upload",
+          "type": "AUDIOUPLOAD",
+          "widget": {
+            "name": "upload"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "AUDIO",
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            27
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.43.0",
+        "Node name for S&R": "LoadAudio"
+      },
+      "widgets_values": [
+        "AnimateDiff_00003.mp4",
+        null
+      ],
+      "widgets_values_named": {
+        "audio": "AnimateDiff_00003.mp4",
+        "upload": null
+      }
+    },
+    {
+      "id": 19,
+      "type": "SongGeneration_Sampler",
+      "pos": [
+        3308.067919921873,
+        352.8729309082033
+      ],
+      "size": [
+        210,
+        94.09999999999991
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 2,
+      "inputs": [
+        {
+          "localized_name": "cond",
+          "name": "cond",
+          "type": "SongGeneration_Cond",
+          "link": 37
+        },
+        {
+          "localized_name": "save_separate",
+          "name": "save_separate",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "save_separate"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            26
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "songgeneration",
+        "ver": "daace52551c88cb3b84a033dd8474e7b6a75853a",
+        "Node name for S&R": "SongGeneration_Sampler"
+      },
+      "widgets_values": [
+        false
+      ],
+      "widgets_values_named": {
+        "save_separate": false
+      }
+    },
+    {
+      "id": 20,
+      "type": "PreviewAudio",
+      "pos": [
+        3317.7927246093764,
+        511.1040710449216
+      ],
+      "size": [
+        210,
+        107.79999999999995
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 2,
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 26
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.43.0",
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 21,
+      "type": "SongGeneration_Stage1",
+      "pos": [
+        2532.941132812497,
+        415.92678344726545
+      ],
+      "size": [
+        496.41757812499964,
+        347.5
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 2,
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 27
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seperate_model",
+          "name": "seperate_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "seperate_model"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "prompt_pt",
+          "name": "prompt_pt",
+          "type": "COMBO",
+          "widget": {
+            "name": "prompt_pt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "auto_prompt_audio_type",
+          "name": "auto_prompt_audio_type",
+          "type": "COMBO",
+          "widget": {
+            "name": "auto_prompt_audio_type"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "model_1rvq",
+          "name": "model_1rvq",
+          "type": "COMBO",
+          "widget": {
+            "name": "model_1rvq"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "demucs_pt",
+          "name": "demucs_pt",
+          "type": "COMBO",
+          "widget": {
+            "name": "demucs_pt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lyric",
+          "name": "lyric",
+          "type": "STRING",
+          "widget": {
+            "name": "lyric"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "cond",
+          "name": "cond",
+          "type": "SongGeneration_Cond",
+          "links": [
+            36
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "songgeneration",
+        "ver": "daace52551c88cb3b84a033dd8474e7b6a75853a",
+        "Node name for S&R": "SongGeneration_Stage1"
+      },
+      "widgets_values": [
+        "autoencoder_music_1320k.ckpt",
+        "model_2.safetensors",
+        "new_auto_prompt.pt",
+        "Pop",
+        "model_2_fixed.safetensors",
+        "htdemucs.pth",
+        "[intro-short] ;\n [verse]\n 雪花舞动在无尽的天际.情缘如同雪花般轻轻逝去.希望与真挚.永不磨灭.你的忧虑.随风而逝 ;\n [chorus]\n 我怀抱着守护这片梦境.在这世界中寻找爱与虚幻.苦辣酸甜.我们一起品尝.在雪的光芒中.紧紧相拥 ;\n [inst-short] ;\n [verse]\n雪花再次在风中飘扬.情愿如同雪花般消失无踪.希望与真挚.永不消失.在痛苦与喧嚣中.你找到解脱 ;\n [chorus]\n 我环绕着守护这片梦境.在这世界中感受爱与虚假.苦辣酸甜.我们一起分享.在白银的光芒中.我们同在 ;\n [outro-short]"
+      ],
+      "widgets_values_named": {
+        "vae": "autoencoder_music_1320k.ckpt",
+        "seperate_model": "model_2.safetensors",
+        "prompt_pt": "new_auto_prompt.pt",
+        "auto_prompt_audio_type": "Pop",
+        "model_1rvq": "model_2_fixed.safetensors",
+        "demucs_pt": "htdemucs.pth",
+        "lyric": "[intro-short] ;\n [verse]\n 雪花舞动在无尽的天际.情缘如同雪花般轻轻逝去.希望与真挚.永不磨灭.你的忧虑.随风而逝 ;\n [chorus]\n 我怀抱着守护这片梦境.在这世界中寻找爱与虚幻.苦辣酸甜.我们一起品尝.在雪的光芒中.紧紧相拥 ;\n [inst-short] ;\n [verse]\n雪花再次在风中飘扬.情愿如同雪花般消失无踪.希望与真挚.永不消失.在痛苦与喧嚣中.你找到解脱 ;\n [chorus]\n 我环绕着守护这片梦境.在这世界中感受爱与虚假.苦辣酸甜.我们一起分享.在白银的光芒中.我们同在 ;\n [outro-short]"
+      }
+    },
+    {
+      "id": 23,
+      "type": "Note",
+      "pos": [
+        2131.3876953125,
+        -117.82566833496094
+      ],
+      "size": [
+        697.4249877929688,
+        185.1282958984375
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "rename model.pt if  use large model.pt to  large_model.pt  如果使用large模型，修改模型名字加入large，不然识别不到\nrename model.pt if  use new base model.pt to  new_model.pt 如果使用new模型，修改模型名字加入new，不然识别不到\nrename model.pt if  use full model.pt to  full_model.pt 如果使用full模型，修改模型名字加入full，不然识别不到\nrename model.pt if  use v2 model.pt to  large_model_v2.pt 如果使用v2 large模型，修改模型名字加入large，不然识别不到\nnot rename model.pt if  use origin base model.pt \n\n"
+      ],
+      "widgets_values_named": {
+        "text": "rename model.pt if  use large model.pt to  large_model.pt  如果使用large模型，修改模型名字加入large，不然识别不到\nrename model.pt if  use new base model.pt to  new_model.pt 如果使用new模型，修改模型名字加入new，不然识别不到\nrename model.pt if  use full model.pt to  full_model.pt 如果使用full模型，修改模型名字加入full，不然识别不到\nrename model.pt if  use v2 model.pt to  large_model_v2.pt 如果使用v2 large模型，修改模型名字加入large，不然识别不到\nnot rename model.pt if  use origin base model.pt \n\n"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 28,
+      "type": "SongGeneration_Stage1",
+      "pos": [
+        1235.7934392521302,
+        516.4515763108676
+      ],
+      "size": [
+        432.06611570247924,
+        419.43801652892546
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        },
+        {
+          "localized_name": "vae",
+          "name": "vae",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "seperate_model",
+          "name": "seperate_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "seperate_model"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "prompt_pt",
+          "name": "prompt_pt",
+          "type": "COMBO",
+          "widget": {
+            "name": "prompt_pt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "auto_prompt_audio_type",
+          "name": "auto_prompt_audio_type",
+          "type": "COMBO",
+          "widget": {
+            "name": "auto_prompt_audio_type"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "model_1rvq",
+          "name": "model_1rvq",
+          "type": "COMBO",
+          "widget": {
+            "name": "model_1rvq"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "demucs_pt",
+          "name": "demucs_pt",
+          "type": "COMBO",
+          "widget": {
+            "name": "demucs_pt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "lyric",
+          "name": "lyric",
+          "type": "STRING",
+          "widget": {
+            "name": "lyric"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "cond",
+          "name": "cond",
+          "type": "SongGeneration_Cond",
+          "links": [
+            39
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "songgeneration",
+        "ver": "daace52551c88cb3b84a033dd8474e7b6a75853a",
+        "Node name for S&R": "SongGeneration_Stage1"
+      },
+      "widgets_values": [
+        "autoencoder_music_1320k.ckpt",
+        "model_2.safetensors",
+        "new_auto_prompt.pt",
+        "Pop",
+        "none",
+        "none",
+        "[intro-short] ;\n[verse]\n在那遥远的爵士乡.有位迷人的姑娘.行人经过她的窗.总为她驻足凝望.她的微笑如夜曲悠扬.温暖中带着一丝忧伤 ;\n[chorus]\n她的眼神如星闪亮.带我坠入梦境徜徉.我愿放下手中诗行.只为她轻声歌唱.日日守候在那街角.盼她一次温柔回望.我不过是远方的风.偶然路过她的乐章.却把心跳谱成了音符.在每一个夜晚反复回响;\n[inst-medium];\n[verse]\n我愿化身为那月光.静静陪在她的身旁 ;\n[bridge]\n任那晚风轻拂梦想.心事只对她默默讲.岁月是位沉默的乐手.将青涩吹奏成沧桑.我的歌谣褪了颜色.却还在老地方.为她播放 ;\n[chorus]\n在那遥远的城市一方.时光深处藏着一位好姑娘.夜色披上霓虹衣裳.迷路的人啊.都向着那扇窗凝望.那光芒.是温柔的故乡;\n[outro-medium]"
+      ],
+      "widgets_values_named": {
+        "vae": "autoencoder_music_1320k.ckpt",
+        "seperate_model": "model_2.safetensors",
+        "prompt_pt": "new_auto_prompt.pt",
+        "auto_prompt_audio_type": "Pop",
+        "model_1rvq": "none",
+        "demucs_pt": "none",
+        "lyric": "[intro-short] ;\n[verse]\n在那遥远的爵士乡.有位迷人的姑娘.行人经过她的窗.总为她驻足凝望.她的微笑如夜曲悠扬.温暖中带着一丝忧伤 ;\n[chorus]\n她的眼神如星闪亮.带我坠入梦境徜徉.我愿放下手中诗行.只为她轻声歌唱.日日守候在那街角.盼她一次温柔回望.我不过是远方的风.偶然路过她的乐章.却把心跳谱成了音符.在每一个夜晚反复回响;\n[inst-medium];\n[verse]\n我愿化身为那月光.静静陪在她的身旁 ;\n[bridge]\n任那晚风轻拂梦想.心事只对她默默讲.岁月是位沉默的乐手.将青涩吹奏成沧桑.我的歌谣褪了颜色.却还在老地方.为她播放 ;\n[chorus]\n在那遥远的城市一方.时光深处藏着一位好姑娘.夜色披上霓虹衣裳.迷路的人啊.都向着那扇窗凝望.那光芒.是温柔的故乡;\n[outro-medium]"
+      }
+    },
+    {
+      "id": 25,
+      "type": "SongGeneration_Stage2",
+      "pos": [
+        3074.755886468576,
+        351.8483435275507
+      ],
+      "size": [
+        210,
+        320
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 2,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "SongGeneration_Audiolm",
+          "link": 42
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "type": "SongGeneration_Cfg",
+          "link": 43
+        },
+        {
+          "localized_name": "cond",
+          "name": "cond",
+          "type": "SongGeneration_Cond",
+          "link": 36
+        },
+        {
+          "localized_name": "gen_type",
+          "name": "gen_type",
+          "type": "COMBO",
+          "widget": {
+            "name": "gen_type"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "description",
+          "name": "description",
+          "type": "STRING",
+          "widget": {
+            "name": "description"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg_coef",
+          "name": "cfg_coef",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_coef"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "temp",
+          "name": "temp",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temp"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "top_k",
+          "name": "top_k",
+          "type": "INT",
+          "widget": {
+            "name": "top_k"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "top_p",
+          "name": "top_p",
+          "type": "FLOAT",
+          "widget": {
+            "name": "top_p"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "record_tokens",
+          "name": "record_tokens",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "record_tokens"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "record_window",
+          "name": "record_window",
+          "type": "INT",
+          "widget": {
+            "name": "record_window"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "cond",
+          "name": "cond",
+          "type": "SongGeneration_Cond",
+          "links": [
+            37
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "songgeneration",
+        "ver": "daace52551c88cb3b84a033dd8474e7b6a75853a",
+        "Node name for S&R": "SongGeneration_Stage2"
+      },
+      "widgets_values": [
+        "mixed",
+        "female, dark, pop, sad, piano and drums, the bpm is 125",
+        1.5,
+        0.8,
+        50,
+        0,
+        true,
+        50
+      ],
+      "widgets_values_named": {
+        "gen_type": "mixed",
+        "description": "female, dark, pop, sad, piano and drums, the bpm is 125",
+        "cfg_coef": 1.5,
+        "temp": 0.8,
+        "top_k": 50,
+        "top_p": 0,
+        "record_tokens": true,
+        "record_window": 50
+      }
+    },
+    {
+      "id": 31,
+      "type": "SongGeneration_Loader",
+      "pos": [
+        2771.9203645755065,
+        196.66740312377726
+      ],
+      "size": [
+        270,
+        174
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 2,
+      "inputs": [
+        {
+          "localized_name": "infer_model",
+          "name": "infer_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "infer_model"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "gguf",
+          "name": "gguf",
+          "type": "COMBO",
+          "widget": {
+            "name": "gguf"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "version",
+          "name": "version",
+          "type": "COMBO",
+          "widget": {
+            "name": "version"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "use_flash_attn",
+          "name": "use_flash_attn",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_flash_attn"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "offload_audiolm",
+          "name": "offload_audiolm",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "offload_audiolm"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "SongGeneration_Audiolm",
+          "links": [
+            42
+          ]
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "type": "SongGeneration_Cfg",
+          "links": [
+            43
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "songgeneration",
+        "ver": "daace52551c88cb3b84a033dd8474e7b6a75853a",
+        "Node name for S&R": "SongGeneration_Loader"
+      },
+      "widgets_values": [
+        "large_v2_model.pt",
+        "none",
+        "v2",
+        false,
+        true
+      ],
+      "widgets_values_named": {
+        "infer_model": "large_v2_model.pt",
+        "gguf": "none",
+        "version": "v2",
+        "use_flash_attn": false,
+        "offload_audiolm": true
+      }
+    },
+    {
+      "id": 24,
+      "type": "SongGeneration_Stage2",
+      "pos": [
+        1705.4000424685778,
+        344.45150152755116
+      ],
+      "size": [
+        258.39999999999964,
+        320
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "SongGeneration_Audiolm",
+          "link": 40
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "type": "SongGeneration_Cfg",
+          "link": 41
+        },
+        {
+          "localized_name": "cond",
+          "name": "cond",
+          "type": "SongGeneration_Cond",
+          "link": 39
+        },
+        {
+          "localized_name": "gen_type",
+          "name": "gen_type",
+          "type": "COMBO",
+          "widget": {
+            "name": "gen_type"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "description",
+          "name": "description",
+          "type": "STRING",
+          "widget": {
+            "name": "description"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "cfg_coef",
+          "name": "cfg_coef",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg_coef"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "temp",
+          "name": "temp",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temp"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "top_k",
+          "name": "top_k",
+          "type": "INT",
+          "widget": {
+            "name": "top_k"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "top_p",
+          "name": "top_p",
+          "type": "FLOAT",
+          "widget": {
+            "name": "top_p"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "record_tokens",
+          "name": "record_tokens",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "record_tokens"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "record_window",
+          "name": "record_window",
+          "type": "INT",
+          "widget": {
+            "name": "record_window"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "cond",
+          "name": "cond",
+          "type": "SongGeneration_Cond",
+          "links": [
+            32
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "songgeneration",
+        "ver": "daace52551c88cb3b84a033dd8474e7b6a75853a",
+        "Node name for S&R": "SongGeneration_Stage2"
+      },
+      "widgets_values": [
+        "mixed",
+        "male,  pop, sad, piano and drums, the bpm is 125",
+        1.5,
+        0.9,
+        50,
+        0,
+        true,
+        50
+      ],
+      "widgets_values_named": {
+        "gen_type": "mixed",
+        "description": "male,  pop, sad, piano and drums, the bpm is 125",
+        "cfg_coef": 1.5,
+        "temp": 0.9,
+        "top_k": 50,
+        "top_p": 0,
+        "record_tokens": true,
+        "record_window": 50
+      }
+    },
+    {
+      "id": 29,
+      "type": "Note",
+      "pos": [
+        1998.789382915805,
+        590.0000638964441
+      ],
+      "size": [
+        290.57680845412506,
+        103.53719008264477
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "offload_audiolm将降低gpu占用，当然，推理时长也自然就翻倍了\n\n显存够大的情况下，top_k=5000 否则设置为50\nif big Vram top_=5000 else 50 \n"
+      ],
+      "widgets_values_named": {
+        "text": "offload_audiolm将降低gpu占用，当然，推理时长也自然就翻倍了\n\n显存够大的情况下，top_k=5000 否则设置为50\nif big Vram top_=5000 else 50 \n"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 30,
+      "type": "SongGeneration_Loader",
+      "pos": [
+        1305.9981582118708,
+        257.14493766923204
+      ],
+      "size": [
+        316.36363636363626,
+        175.81818181818187
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "infer_model",
+          "name": "infer_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "infer_model"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "gguf",
+          "name": "gguf",
+          "type": "COMBO",
+          "widget": {
+            "name": "gguf"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "version",
+          "name": "version",
+          "type": "COMBO",
+          "widget": {
+            "name": "version"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "use_flash_attn",
+          "name": "use_flash_attn",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "use_flash_attn"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "offload_audiolm",
+          "name": "offload_audiolm",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "offload_audiolm"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "SongGeneration_Audiolm",
+          "links": [
+            40
+          ]
+        },
+        {
+          "localized_name": "cfg",
+          "name": "cfg",
+          "type": "SongGeneration_Cfg",
+          "links": [
+            41
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "songgeneration",
+        "ver": "daace52551c88cb3b84a033dd8474e7b6a75853a",
+        "Node name for S&R": "SongGeneration_Loader"
+      },
+      "widgets_values": [
+        "none",
+        "SongGeneration-v2-large-Q6_K.gguf",
+        "v2",
+        false,
+        false
+      ],
+      "widgets_values_named": {
+        "infer_model": "none",
+        "gguf": "SongGeneration-v2-large-Q6_K.gguf",
+        "version": "v2",
+        "use_flash_attn": false,
+        "offload_audiolm": false
+      }
+    },
+    {
+      "id": 32,
+      "type": "Note",
+      "pos": [
+        1048.3348374612601,
+        318.636427532808
+      ],
+      "size": [
+        242.3949902723068,
+        102.62809917355384
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "提供Q8_0和Q6_K的gguf，用gguf时 12G以上显存 关闭卸载 12G以下看情况"
+      ],
+      "widgets_values_named": {
+        "text": "提供Q8_0和Q6_K的gguf，用gguf时 12G以上显存 关闭卸载 12G以下看情况"
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 16,
+      "type": "PreviewAudio",
+      "pos": [
+        1984.6220898437502,
+        457.57100952148437
+      ],
+      "size": [
+        270,
+        88
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 21
+        },
+        {
+          "localized_name": "audioUI",
+          "name": "audioUI",
+          "type": "AUDIO_UI",
+          "widget": {
+            "name": "audioUI"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "audio",
+          "name": "audio",
+          "type": "AUDIO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.43.0",
+        "Node name for S&R": "PreviewAudio"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    }
+  ],
+  "links": [
+    [
+      21,
+      14,
+      0,
+      16,
+      0,
+      "AUDIO"
+    ],
+    [
+      26,
+      19,
+      0,
+      20,
+      0,
+      "AUDIO"
+    ],
+    [
+      27,
+      22,
+      0,
+      21,
+      0,
+      "AUDIO"
+    ],
+    [
+      32,
+      24,
+      0,
+      14,
+      0,
+      "SongGeneration_Cond"
+    ],
+    [
+      36,
+      21,
+      0,
+      25,
+      2,
+      "SongGeneration_Cond"
+    ],
+    [
+      37,
+      25,
+      0,
+      19,
+      0,
+      "SongGeneration_Cond"
+    ],
+    [
+      39,
+      28,
+      0,
+      24,
+      2,
+      "SongGeneration_Cond"
+    ],
+    [
+      40,
+      30,
+      0,
+      24,
+      0,
+      "SongGeneration_Audiolm"
+    ],
+    [
+      41,
+      30,
+      1,
+      24,
+      1,
+      "SongGeneration_Cfg"
+    ],
+    [
+      42,
+      31,
+      0,
+      25,
+      0,
+      "SongGeneration_Audiolm"
+    ],
+    [
+      43,
+      31,
+      1,
+      25,
+      1,
+      "SongGeneration_Cfg"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "infer prompt pt",
+      "bounding": [
+        1010.257080078125,
+        135.5015411376953,
+        1365.45166015625,
+        826.6909790039062
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "infer audio",
+      "bounding": [
+        2410.936767578125,
+        139.90402221679688,
+        1365.45166015625,
+        826.6909790039062
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.2100000000000004,
+      "offset": [
+        -940.9301425939482,
+        -168.78846139106417
+      ]
+    },
+    "frontendVersion": "1.39.19",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true,
+    "workflowRendererVersion": "LG"
+  },
+  "version": 0.4
+}
