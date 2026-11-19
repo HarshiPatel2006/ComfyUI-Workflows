@@ -5,10 +5,10 @@ Process whole folders of images, loops, switches, logic and math nodes for autom
 | Subfolder | What is inside | Workflows |
 |---|---|---|
 | [`Control-Logic-and-Math/`](Control-Logic-and-Math) | Switches, logic and math | 7 |
-| [`Folder-Batch-Processing/`](Folder-Batch-Processing) | Batch-process a folder of images | 30 |
+| [`Folder-Batch-Processing/`](Folder-Batch-Processing) | Batch-process a folder of images | 31 |
 | [`Loops/`](Loops) | Loops | 7 |
 
-## Workflows (44)
+## Workflows (45)
 
 ### Switches, logic and math
 
@@ -26,6 +26,7 @@ Process whole folders of images, loops, switches, logic and math nodes for autom
 
 | Workflow | What it does | Models used | Custom nodes needed |
 |---|---|---|---|
+| [4x-ultrasharp-upscale-all-images-in-a-folder](Folder-Batch-Processing/4x-ultrasharp-upscale-all-images-in-a-folder.json) | Upscale up to 16 images from a folder 4x with UltraSharp (set the folder path in the loader; from captain's local ComfyUI, not re-tested) | `4x-UltraSharp.pth` | ComfyUI-VideoHelperSuite |
 | [birefnet-remove-the-background-from-all-images-in-a-folder](Folder-Batch-Processing/birefnet-remove-the-background-from-all-images-in-a-folder.json) | Remove the Background from All Images in a Folder | `birefnet.safetensors` | ComfyUI-Pixaroma |
 | [flux-2-klein-9b-before-and-after-grid-for-all-images-in-a-folder](Folder-Batch-Processing/flux-2-klein-9b-before-and-after-grid-for-all-images-in-a-folder.json) | Before and After Grid for All Images in a Folder | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |
 | [flux-2-klein-9b-coloring-pages-from-all-images-in-a-folder](Folder-Batch-Processing/flux-2-klein-9b-coloring-pages-from-all-images-in-a-folder.json) | Coloring Pages from All Images in a Folder | `flux-2-klein-9b-int8-convrot.safetensors`, `qwen_3_8b_fp8mixed.safetensors`, `flux2-vae.safetensors` | ComfyUI-Pixaroma |

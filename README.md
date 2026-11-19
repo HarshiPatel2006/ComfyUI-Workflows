@@ -1,8 +1,8 @@
-# ComfyUI Workflows: 995 Free FLUX, Qwen-Image, Wan, LTX-2, MiniMax H3 and Krea 2 Workflows
+# ComfyUI Workflows: 1001 Free FLUX, Qwen-Image, Wan, LTX-2, MiniMax H3 and Krea 2 Workflows
 
-[![Workflows](https://img.shields.io/badge/workflows-995-blue)](#workflow-categories) [![ComfyUI](https://img.shields.io/badge/ComfyUI-workflows-green)](https://github.com/Comfy-Org/ComfyUI) [![Format](https://img.shields.io/badge/format-JSON-lightgrey)](#how-to-use) [![License](https://img.shields.io/badge/license-MIT%20%2B%20original%20terms-purple)](#license)
+[![Workflows](https://img.shields.io/badge/workflows-1001-blue)](#workflow-categories) [![ComfyUI](https://img.shields.io/badge/ComfyUI-workflows-green)](https://github.com/Comfy-Org/ComfyUI) [![Format](https://img.shields.io/badge/format-JSON-lightgrey)](#how-to-use) [![License](https://img.shields.io/badge/license-MIT%20%2B%20original%20terms-purple)](#license)
 
-A categorized library of **995 ready-to-use ComfyUI workflows** (`.json`) for **FLUX.2 / FLUX.3 Klein, Qwen-Image, Krea 2, Z-Image Turbo, Wan 2.1 / 2.2, LTX-2, MiniMax H3, SeedVR2** and more. It covers **text-to-image (txt2img)**, **image editing (img2img)**, **inpainting and outpainting**, **background removal**, **image and video upscaling**, **text-to-video and image-to-video**, **lip-sync and talking avatars**, **face swap and character swap**, **text-to-speech, voice cloning, speech-to-text and music**, **image-to-3D**, **batch automation** and a complete **AI short-film pipeline**.
+A categorized library of **1001 ready-to-use ComfyUI workflows** (`.json`) for **FLUX.2 / FLUX.3 Klein, Qwen-Image, Krea 2, Z-Image Turbo, Wan 2.1 / 2.2, LTX-2, MiniMax H3, SeedVR2** and more. It covers **text-to-image (txt2img)**, **image editing (img2img)**, **inpainting and outpainting**, **background removal**, **image and video upscaling**, **text-to-video and image-to-video**, **lip-sync and talking avatars**, **face swap and character swap**, **text-to-speech, voice cloning, speech-to-text and music**, **image-to-3D**, **batch automation** and a complete **AI short-film pipeline**.
 
 Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, install any missing custom nodes with ComfyUI-Manager, add the models, and press **Run**.
 
@@ -26,7 +26,7 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 
 ## Workflow categories
 
-995 workflows: 952 in the normal UI format and 43 in API format (40 with filenames ending in `-api`, plus three upstream API-format graphs). The image categories have an [overview with folder counts and model coverage](01-Image/README.md). Each category README lists every workflow in that folder with what it does, the models it loads and the custom nodes it needs; the version-conflicts folder lists the models and what differs from the library copy. For one flat list of all files, see [`00-LIBRARY-INDEX.md`](00-LIBRARY-INDEX.md).
+1001 workflows: 958 in the normal UI format and 43 in API format (40 with filenames ending in `-api`, plus three upstream API-format graphs). The image categories have an [overview with folder counts and model coverage](01-Image/README.md). Each category README lists every workflow in that folder with what it does, the models it loads and the custom nodes it needs; the version-conflicts folder lists the models and what differs from the library copy. For one flat list of all files, see [`00-LIBRARY-INDEX.md`](00-LIBRARY-INDEX.md).
 
 | Category | What is inside | Workflows |
 |---|---|---|
@@ -34,10 +34,10 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 | [02 · Image Editing](01-Image/Image-Editing/README.md) | Instruction-based editing, multi-image edits, inpainting, outpainting, object removal, background removal, outfit transfer, sketch-to-image, ControlNet / T2I-Adapter / GLIGEN control, IP-Adapter / InstantID / PuLID / PhotoMaker identity, IC-Light relighting | 176 |
 | [03 · Image Upscaling and Enhancement](01-Image/Image-Enhancement/README.md) | Image upscaling (Real-ESRGAN, SwinIR, HAT, DAT, SeedVR2, tiled diffusion, creative upscale), diffusion restoration (SUPIR, CCSR, StableSR, DiffBIR), face restoration, denoise / low-light, colorization, filters and color grading | 44 |
 | [03b · Image Specialized and Supporting](01-Image/Image-Specialized-and-Supporting/README.md) | Virtual try-on, LayerDiffusion transparent layers, segmentation and detection, captioning / OCR / tagging, depth and pose estimation | 31 |
-| [04 · AI Video](04-Video/README.md) | Text-to-video, image-to-video, first/last frame, reference-to-video, lip-sync, video dubbing, character animation and swap, video upscaling | 130 |
-| [05 · Audio](05-Audio/README.md) | Text-to-speech, voice cloning, voice design, music generation, covers and editing, sound effects, music transcription and analysis, stem separation, voice conversion, speech-to-text, subtitles, diarisation and forced alignment | 225 |
+| [04 · AI Video](04-Video/README.md) | Text-to-video, image-to-video, first/last frame, reference-to-video, lip-sync, video dubbing, character animation and swap, video upscaling | 131 |
+| [05 · Audio](05-Audio/README.md) | Text-to-speech, voice cloning, voice design, music generation, covers and editing, sound effects, music transcription and analysis, stem separation, voice conversion, speech-to-text, subtitles, diarisation and forced alignment | 229 |
 | [06 · 3D Generation](06-3D-Generation/README.md) | Image-to-3D and multi-view-to-3D with Trellis 2, Pixal3D, SAM3D Body | 13 |
-| [07 · Batch Processing and Automation](07-Batch-and-Automation/README.md) | Batch-process a folder of images, loops, switches, logic and math | 44 |
+| [07 · Batch Processing and Automation](07-Batch-and-Automation/README.md) | Batch-process a folder of images, loops, switches, logic and math | 45 |
 | [08 · Testing and Comparison](08-Testing-and-Comparison/README.md) | XY plots, sampler and LoRA comparisons, image compare | 8 |
 | [09 · AI Short Film Pipeline](09-Movie/README.md) | Krea 2 storyboard + MiniMax H3 short-film director pipeline and real project files | 48 |
 | [10 · LLM and Prompt Tools](10-LLM-and-Prompt-Tools/README.md) | Prompt enhancers and image / video / audio to prompt with Gemma 4, Qwen 3.5, Qwen3-VL | 15 |
@@ -141,8 +141,8 @@ Workflows marked *PAID API* use ComfyUI partner nodes (for example Nano Banana P
 
 | Custom node pack | Used by | Link |
 |---|---|---|
-| ComfyUI-Pixaroma | 355 workflows | [github.com/pixaroma/ComfyUI-Pixaroma](https://github.com/pixaroma/ComfyUI-Pixaroma) |
-| ComfyUI-VideoHelperSuite | 55 workflows | [github.com/Kosinkadink/ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite) |
+| ComfyUI-Pixaroma | 357 workflows | [github.com/pixaroma/ComfyUI-Pixaroma](https://github.com/pixaroma/ComfyUI-Pixaroma) |
+| ComfyUI-VideoHelperSuite | 56 workflows | [github.com/Kosinkadink/ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite) |
 | rgthree-comfy | 59 workflows | [github.com/rgthree/rgthree-comfy](https://github.com/rgthree/rgthree-comfy) |
 | ComfyUI-KJNodes | 50 workflows | [github.com/kijai/ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes) |
 | comfyui-krea2edit | 38 workflows | [github.com/lbouaraba/comfyui-krea2edit](https://github.com/lbouaraba/comfyui-krea2edit) |

@@ -9,11 +9,11 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 | [`Hy-Nomas-World-Model/`](Hy-Nomas-World-Model) | Hy-Nomas video world model (Tencent): camera control, interactive drive, start from image | 5 |
 | [`Image-to-Video/`](Image-to-Video) | Image-to-video (img2video), first/last frame | 18 |
 | [`Reference-and-Audio-Sync/`](Reference-and-Audio-Sync) | Reference-to-video, talking video, lip-sync and video dubbing | 38 |
-| [`Text-to-Video/`](Text-to-Video) | Text-to-video (txt2video) | 9 |
+| [`Text-to-Video/`](Text-to-Video) | Text-to-video (txt2video) | 10 |
 | [`Video-Upscaling/`](Video-Upscaling) | Video upscaling | 13 |
 | [`Video-Editing-and-Tools/`](Video-Editing-and-Tools) | Video editing and clip tools | 1 |
 
-## Workflows (130)
+## Workflows (131)
 
 ### Audio-reactive visuals
 
@@ -157,6 +157,7 @@ Text-to-video (txt2video), image-to-video (img2video), video-to-video, talking v
 | [minimax-h3-txt2video-low-vram-8gb](Text-to-Video/minimax-h3-txt2video-low-vram-8gb.json) | Text to Video — Low VRAM 8GB | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_fp16.safetensors`, `minimax_h3_fl2va_pruned_int8_convrot.safetensors` +1 more | ComfyUI_LayerStyle, ComfyUI-Pixaroma |
 | [minimax-h3-txt2video-secret-sauce-4k-direct-output](Text-to-Video/minimax-h3-txt2video-secret-sauce-4k-direct-output.json) | Text to Video — Secret Sauce 4K Direct Output | `qwen3vl_32b_minimax_h3_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `taeh3.safetensors` +9 more | ComfyUI-MemoryCleaner, ComfyUI-KJNodes, ComfyUI-VideoHelperSuite, rgthree-comfy, ComfyUI-MiniMaxH3-TimelineDirector, ComfyUI_Comfyroll_CustomNodes, ComfyUI-MiniMaxH3-Unified, H3SigmaRefiner (unknown source), RH_DLSS5Enhance (unknown source) |
 | [minimax-h3-txt2video-speed-lora](Text-to-Video/minimax-h3-txt2video-speed-lora.json) | Text to Video + Speed LoRA | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_fp16.safetensors`, `minimax_h3_audio_vae_fp32.safetensors` +2 more | ComfyUI-Pixaroma |
+| [minimax-h3-txt2video-8-step-lora](Text-to-Video/minimax-h3-txt2video-8-step-lora.json) | Text to Video + 8-step speed LoRA (W6A8 model, int8 video VAE) (from captain's local ComfyUI, not re-tested) | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_fl2va_pruned_w6a8.safetensors`, `minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors` +2 more | ComfyUI-Pixaroma |
 | [minimax-h3-txt2video](Text-to-Video/minimax-h3-txt2video.json) | Text to Video | `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_fp16.safetensors`, `minimax_h3_fl2va_pruned_int8_convrot.safetensors` +1 more | ComfyUI-Pixaroma |
 | [mochi-1-txt2video](Text-to-Video/mochi-1-txt2video.json) | Text to Video — Genmo Mochi 1 | `dit.safetensors`, `t5xxl_fp16.safetensors`, `decoder.safetensors` | — |
 | [minimax-h3-txt2video-2k-ep41](Text-to-Video/minimax-h3-txt2video-2k-ep41.json) | Bonus - Minimax H3 - Text to Video in 2K (Ep41) | `minimax_h3_ref2va_pruned_int8_convrot.safetensors`, `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors`, `minimax_h3_video_vae_int8_convrot.safetensors`, `minimax_h3_audio_vae_fp32.safetensors`, `minimax_h3_DMAD_4step_full_lora_avg_rank_39_bf16.safetensors`, `open_h3_regenerate_2k_comfy_swiglu_fixed.safetensors`, `minimax_h3_latent_upscaler_3d_conv_v1_fp16.safetensors` | ComfyUI-Pixaroma |
