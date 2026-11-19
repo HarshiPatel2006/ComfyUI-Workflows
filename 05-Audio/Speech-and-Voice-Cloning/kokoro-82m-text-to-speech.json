@@ -1,0 +1,237 @@
+{
+ "last_node_id": 5,
+ "last_link_id": 6,
+ "nodes": [
+  {
+   "id": 1,
+   "type": "KokoroSpeaker",
+   "pos": [
+    3019.098876953125,
+    -58.389801025390625
+   ],
+   "size": [
+    315,
+    58
+   ],
+   "flags": {},
+   "order": 0,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "speaker",
+     "type": "KOKORO_SPEAKER",
+     "links": [
+      4
+     ],
+     "slot_index": 0
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "KokoroSpeaker"
+   },
+   "widgets_values": [
+    "af_jessica"
+   ]
+  },
+  {
+   "id": 2,
+   "type": "KokoroSpeaker",
+   "pos": [
+    3015.138427734375,
+    66.13015747070312
+   ],
+   "size": [
+    315,
+    58
+   ],
+   "flags": {},
+   "order": 1,
+   "mode": 0,
+   "inputs": [],
+   "outputs": [
+    {
+     "name": "speaker",
+     "type": "KOKORO_SPEAKER",
+     "links": [
+      5
+     ],
+     "slot_index": 0
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "KokoroSpeaker"
+   },
+   "widgets_values": [
+    "af_sky"
+   ]
+  },
+  {
+   "id": 3,
+   "type": "KokoroSpeakerCombiner",
+   "pos": [
+    3450.518798828125,
+    -32.64978790283203
+   ],
+   "size": [
+    315,
+    78
+   ],
+   "flags": {},
+   "order": 2,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "speaker_a",
+     "type": "KOKORO_SPEAKER",
+     "link": 4
+    },
+    {
+     "name": "speaker_b",
+     "type": "KOKORO_SPEAKER",
+     "link": 5
+    }
+   ],
+   "outputs": [
+    {
+     "name": "speaker",
+     "type": "KOKORO_SPEAKER",
+     "links": [
+      3
+     ],
+     "slot_index": 0
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "KokoroSpeakerCombiner"
+   },
+   "widgets_values": [
+    0.5
+   ]
+  },
+  {
+   "id": 5,
+   "type": "PreviewAudio",
+   "pos": [
+    3885.45751953125,
+    -38.369808197021484
+   ],
+   "size": [
+    315,
+    76
+   ],
+   "flags": {},
+   "order": 4,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "audio",
+     "type": "AUDIO",
+     "link": 6
+    }
+   ],
+   "outputs": [],
+   "properties": {
+    "Node name for S&R": "PreviewAudio"
+   },
+   "widgets_values": [
+    null
+   ]
+  },
+  {
+   "id": 4,
+   "type": "KokoroGenerator",
+   "pos": [
+    3453.78515625,
+    99.03588104248047
+   ],
+   "size": [
+    400,
+    200
+   ],
+   "flags": {},
+   "order": 3,
+   "mode": 0,
+   "inputs": [
+    {
+     "name": "speaker",
+     "type": "KOKORO_SPEAKER",
+     "link": 3
+    }
+   ],
+   "outputs": [
+    {
+     "name": "audio",
+     "type": "AUDIO",
+     "links": [
+      6
+     ],
+     "slot_index": 0
+    }
+   ],
+   "properties": {
+    "Node name for S&R": "KokoroGenerator"
+   },
+   "widgets_values": [
+    "i am now going to show you how to install comfy UI, its very simple and fast.",
+    0.88,
+    "English"
+   ]
+  }
+ ],
+ "links": [
+  [
+   3,
+   3,
+   0,
+   4,
+   0,
+   "KOKORO_SPEAKER"
+  ],
+  [
+   4,
+   1,
+   0,
+   3,
+   0,
+   "KOKORO_SPEAKER"
+  ],
+  [
+   5,
+   2,
+   0,
+   3,
+   1,
+   "KOKORO_SPEAKER"
+  ],
+  [
+   6,
+   4,
+   0,
+   5,
+   0,
+   "AUDIO"
+  ]
+ ],
+ "groups": [],
+ "config": {},
+ "extra": {
+  "ds": {
+   "scale": 1,
+   "offset": [
+    -2915.138427734375,
+    158.38980102539062
+   ]
+  },
+  "node_versions": {
+   "comfyui-kokoro": "743120d2e5eec4eb4503205f9f4a93d9b997d7f6",
+   "comfy-core": "0.3.12"
+  },
+  "VHS_latentpreview": false,
+  "VHS_latentpreviewrate": 0,
+  "workspace_info": {
+   "id": "dMK_03qIT8BT3bZVnt3bf"
+  }
+ },
+ "version": 0.4
+}
