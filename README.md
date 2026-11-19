@@ -30,9 +30,9 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 
 | Category | What is inside | Workflows |
 |---|---|---|
-| [01 · Image Generation](01-Image-Generation/README.md) | Text-to-image with FLUX.2 / FLUX.3 Klein, Qwen-Image 2.1, Krea 2, Z-Image Turbo, Ming Image, MOSS, SD 1.5; ControlNet, LLM prompt enhancers, logos, posters, text in images, transparent PNGs, prompt batches | 114 |
-| [02 · Image Editing](02-Image-Editing/README.md) | Instruction-based editing, multi-image edits, inpainting, outpainting, object removal, background removal, outfit transfer, sketch-to-image | 115 |
-| [03 · Image Upscaling and Enhancement](03-Image-Enhancement/README.md) | Image upscaling (SeedVR2, tiled diffusion, creative upscale), filters and color grading | 13 |
+| [01 · Image Generation](01-Image/Image-Generation/README.md) | Text-to-image with FLUX.2 / FLUX.3 Klein, Qwen-Image 2.1, Krea 2, Z-Image Turbo, Ming Image, MOSS, SD 1.5; ControlNet, LLM prompt enhancers, logos, posters, text in images, transparent PNGs, prompt batches | 114 |
+| [02 · Image Editing](01-Image/Image-Editing/README.md) | Instruction-based editing, multi-image edits, inpainting, outpainting, object removal, background removal, outfit transfer, sketch-to-image | 115 |
+| [03 · Image Upscaling and Enhancement](01-Image/Image-Enhancement/README.md) | Image upscaling (SeedVR2, tiled diffusion, creative upscale), filters and color grading | 13 |
 | [04 · AI Video](04-Video/README.md) | Text-to-video, image-to-video, first/last frame, reference-to-video, lip-sync, video dubbing, character animation and swap, video upscaling | 125 |
 | [05 · Audio](05-Audio/README.md) | Text-to-speech, voice cloning, voice design, music generation, covers and editing, sound effects, music transcription and analysis, stem separation, speech-to-text, subtitles and forced alignment | 160 |
 | [06 · 3D Generation](06-3D-Generation/README.md) | Image-to-3D and multi-view-to-3D with Trellis 2, Pixal3D, SAM3D Body | 13 |
@@ -47,26 +47,26 @@ Every workflow is a standalone ComfyUI file: drag it onto the ComfyUI canvas, in
 
 | Model family | Tasks covered | Folders |
 |---|---|---|
-| **FLUX.2 Klein** (4B / 9B, FP8, INT8, KV) | txt2img, image edit, multi-image edit, inpainting, outpainting, batch edits, XY plots | [01](01-Image-Generation) · [02](02-Image-Editing) · [07](07-Batch-and-Automation) · [08](08-Testing-and-Comparison) |
-| **FLUX.3 Klein** | txt2img, text in images, image editing, prompt upsampling | [01](01-Image-Generation) · [02](02-Image-Editing) |
-| **FLUX.1 dev / Qwen-Image / Z-Image (Nunchaku)** | fast 4-bit txt2img, tiled diffusion upscale | [01](01-Image-Generation) · [03](03-Image-Enhancement) |
-| **Qwen-Image 2.1** | txt2img, image editing, transparent PNG, image-to-prompt | [01](01-Image-Generation) · [02](02-Image-Editing) |
-| **Krea 2** (FP8 / INT8) | txt2img, edit LoRA, outfit transfer, storyboards, LoRA XY plot | [01](01-Image-Generation) · [02](02-Image-Editing) · [09](09-Movie) |
-| **Z-Image Turbo** | fast txt2img, ControlNet Union, LoRA, text overlay, character sheets | [01](01-Image-Generation) |
-| **Ming Image 0.1** | logos, posters, infographics, thumbnails, app screens | [01](01-Image-Generation) · [02](02-Image-Editing) |
-| **MOSS Image** | txt2img, text in images, layout with boxes, image-to-prompt, text editing, upscale | [01](01-Image-Generation) · [02](02-Image-Editing) · [03](03-Image-Enhancement) |
-| **P-H3 Image** (MiniMax H3 image LoRA) | txt2img, text in images, character sheets, single- and multi-image edits, outpainting, relight, restore, creative upscale | [01](01-Image-Generation) · [02](02-Image-Editing) · [03](03-Image-Enhancement) |
-| **Stable Diffusion 1.5** (Juggernaut Reborn), Anima, Boogu, ERNIE Image | txt2img, img2img, ControlNet Canny, LoRA, anime | [01](01-Image-Generation) · [02](02-Image-Editing) |
+| **FLUX.2 Klein** (4B / 9B, FP8, INT8, KV) | txt2img, image edit, multi-image edit, inpainting, outpainting, batch edits, XY plots | [01](01-Image/Image-Generation) · [02](01-Image/Image-Editing) · [07](07-Batch-and-Automation) · [08](08-Testing-and-Comparison) |
+| **FLUX.3 Klein** | txt2img, text in images, image editing, prompt upsampling | [01](01-Image/Image-Generation) · [02](01-Image/Image-Editing) |
+| **FLUX.1 dev / Qwen-Image / Z-Image (Nunchaku)** | fast 4-bit txt2img, tiled diffusion upscale | [01](01-Image/Image-Generation) · [03](01-Image/Image-Enhancement) |
+| **Qwen-Image 2.1** | txt2img, image editing, transparent PNG, image-to-prompt | [01](01-Image/Image-Generation) · [02](01-Image/Image-Editing) |
+| **Krea 2** (FP8 / INT8) | txt2img, edit LoRA, outfit transfer, storyboards, LoRA XY plot | [01](01-Image/Image-Generation) · [02](01-Image/Image-Editing) · [09](09-Movie) |
+| **Z-Image Turbo** | fast txt2img, ControlNet Union, LoRA, text overlay, character sheets | [01](01-Image/Image-Generation) |
+| **Ming Image 0.1** | logos, posters, infographics, thumbnails, app screens | [01](01-Image/Image-Generation) · [02](01-Image/Image-Editing) |
+| **MOSS Image** | txt2img, text in images, layout with boxes, image-to-prompt, text editing, upscale | [01](01-Image/Image-Generation) · [02](01-Image/Image-Editing) · [03](01-Image/Image-Enhancement) |
+| **P-H3 Image** (MiniMax H3 image LoRA) | txt2img, text in images, character sheets, single- and multi-image edits, outpainting, relight, restore, creative upscale | [01](01-Image/Image-Generation) · [02](01-Image/Image-Editing) · [03](01-Image/Image-Enhancement) |
+| **Stable Diffusion 1.5** (Juggernaut Reborn), Anima, Boogu, ERNIE Image | txt2img, img2img, ControlNet Canny, LoRA, anime | [01](01-Image/Image-Generation) · [02](01-Image/Image-Editing) |
 | **Wan 2.1 / Wan 2.2** (SCAIL 2, InfiniteTalk, Animate) | img2video, character animation, character replacement, talking video, video dubbing | [04](04-Video) |
 | **LTX-2** | img2video with audio, lip-sync to your audio, voice dubbing | [04](04-Video) |
 | **MiniMax H3 / FastH3** | txt2video, img2video (first / last frame), reference-to-video with audio, character swap, short films | [04](04-Video) · [09](09-Movie) · [10](10-LLM-and-Prompt-Tools) |
-| **SeedVR2** | image upscale, video upscale | [03](03-Image-Enhancement) · [04](04-Video) |
+| **SeedVR2** | image upscale, video upscale | [03](01-Image/Image-Enhancement) · [04](04-Video) |
 | **Trellis 2, Pixal3D, SAM3D Body** | image-to-3D, multi-view-to-3D, PBR textures, 3D body | [06](06-3D-Generation) |
 | **Qwen3-TTS, Fish S2, Chatterbox, F5-TTS, VibeVoice, IndexTTS-2, Dia, Kokoro** | text-to-speech, voice cloning, voice design, dialogue | [05](05-Audio) |
 | **Whisper, Qwen3-ASR, Parakeet, SenseVoice** | speech-to-text, subtitles, forced alignment | [05](05-Audio) |
 | **Stable Audio 3 / Open, ACE-Step 1.5 / XL, YuE 2, HeartMuLa, MuLaCover, SongGeneration (LeVo 2), DiffRhythm 1 / 2, MusicGen, AudioLDM 2, MiniMax Music 3, SongBloom, AudioX, SoulX-Singer, Music Flamingo, Basic Pitch, Mel-Band / BS-RoFormer** | text-to-music, lyrics-to-song, covers, repaint, extend, LoRA, singing voice synthesis, stem separation (Demucs, RoFormer, MDX ensembles), audio-to-ABC / MIDI | [05](05-Audio) |
 | **Gemma 4, Qwen 3.5, Qwen3-VL** | prompt enhancer, image / video / audio to prompt | [10](10-LLM-and-Prompt-Tools) |
-| **BiRefNet, SAM3, RMBG, LaMa, ReActor** | background removal, segmentation, object removal, face swap | [02](02-Image-Editing) · [04](04-Video) |
+| **BiRefNet, SAM3, RMBG, LaMa, ReActor** | background removal, segmentation, object removal, face swap | [02](01-Image/Image-Editing) · [04](04-Video) |
 
 ## How to use
 
@@ -184,9 +184,9 @@ Workflows marked *PAID API* use ComfyUI partner nodes (for example Nano Banana P
 
 ```text
 ComfyUI-Workflows/
-├── 01-Image-Generation/                  # Image Generation
-├── 02-Image-Editing/                     # Image Editing
-├── 03-Image-Enhancement/                 # Image Upscaling and Enhancement
+├── 01-Image/Image-Generation/                  # Image Generation
+├── 01-Image/Image-Editing/                     # Image Editing
+├── 01-Image/Image-Enhancement/                 # Image Upscaling and Enhancement
 ├── 04-Video/                             # AI Video
 ├── 05-Audio/                             # Audio
 ├── 06-3D-Generation/                     # 3D Generation
